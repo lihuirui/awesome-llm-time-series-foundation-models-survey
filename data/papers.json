@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-24",
-  "total_included": 43,
+  "total_included": 57,
   "papers": [
     {
       "id": "arxiv:2401.03955",
@@ -26,7 +26,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "ekambaram2024ttm",
@@ -84,7 +84,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "jin2023largemodels",
@@ -130,7 +130,7 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "zhou2023onefitsall",
@@ -182,7 +182,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "liu2024timer",
@@ -210,6 +210,53 @@
       "url": "https://arxiv.org/abs/2402.02368"
     },
     {
+      "id": "arxiv:2308.08469",
+      "arxiv_id": "2308.08469",
+      "title": "LLM4TS: Aligning Pre-Trained LLMs as Data-Efficient Time-Series Forecasters",
+      "authors": [
+        "Ching Chang",
+        "Wei-Yao Wang",
+        "Wen-Chih Peng",
+        "Tien-Fu Chen"
+      ],
+      "release_date": "2023-08-16",
+      "summary": "Multivariate time-series forecasting is vital in various domains, e.g., economic planning and weather prediction. Deep train-from-scratch models have exhibited effective performance yet require large amounts of data, which limits real-world applicability. Recently, researchers have leveraged the representation learning transferability of pre-trained Large Language Models (LLMs) to handle limited non-linguistic datasets effectively. However, incorporating LLMs with time-series data presents challenges of limited adaptation due to different compositions between time-series and linguistic data, and the inability to process multi-scale temporal information. To tackle these challenges, we propose LLM4TS, a framework for time-series forecasting with pre-trained LLMs. LLM4TS consists of a two-stage fine-tuning strategy: the time-series alignment stage to align LLMs with the nuances of time-series data, and the forecasting fine-tuning stage for downstream time-series forecasting tasks. Furthermore, our framework features a novel two-level aggregation method that integrates multi-scale temporal data within pre-trained LLMs, enhancing their ability to interpret time-specific information. In experiments across 7 time-series forecasting datasets, LLM4TS is superior to existing state-of-the-art methods compared with trained-from-scratch models in full-shot scenarios, and also achieves the highest rank in few-shot scenarios. In addition, evaluations compared with different unsupervised representation learning approaches highlight LLM4TS's effectiveness with representation learning in forecasting tasks. Ablation studies further validate each component's contribution to LLM4TS and underscore the essential role of utilizing LLM's pre-trained weights for optimal performance. The code is available at https://github.com/blacksnail789521/LLM4TS.",
+      "comment": "Accepted for publication in ACM Transactions on Intelligent Systems and Technology (TIST) 2025. The final published version will be available at https://doi.org/10.1145/3719207",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "chang2023llm4ts",
+      "group": "NYCU",
+      "paradigm": "LLM4TS",
+      "architecture": "Two-Stage Fine-Tuned Transformer (GPT-2 Backbone)",
+      "tokenization": "Non-overlapping Patch Partitioning + Normalization",
+      "prediction_head": "Linear Flattening Head",
+      "params": "124M",
+      "pretrain_corpus": "Self-Supervised Masked Reconstruction + Forecast Tuning",
+      "tasks": [
+        "Few-Shot Forecasting",
+        "Zero-Shot Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2023",
+      "code_url": "https://github.com/blacksnail789521/LLM4TS",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2308.08469",
+      "url": "https://arxiv.org/abs/2308.08469"
+    },
+    {
       "id": "arxiv:2310.07820",
       "arxiv_id": "2310.07820",
       "title": "Large Language Models Are Zero-Shot Time Series Forecasters",
@@ -227,7 +274,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "gruver2023llmtime",
@@ -255,6 +302,51 @@
       "url": "https://arxiv.org/abs/2310.07820"
     },
     {
+      "id": "arxiv:2311.01933",
+      "arxiv_id": "2311.01933",
+      "title": "ForecastPFN: Synthetically-Trained Zero-Shot Forecasting",
+      "authors": [
+        "Samuel Dooley",
+        "Gurnoor Singh Khurana",
+        "Chirag Mohapatra",
+        "Siddartha Naidu",
+        "Colin White"
+      ],
+      "release_date": "2023-11-03",
+      "summary": "The vast majority of time-series forecasting approaches require a substantial training dataset. However, many real-life forecasting applications have very little initial observations, sometimes just 40 or fewer. Thus, the applicability of most forecasting methods is restricted in data-sparse commercial applications. While there is recent work in the setting of very limited initial data (so-called `zero-shot' forecasting), its performance is inconsistent depending on the data used for pretraining. In this work, we take a different approach and devise ForecastPFN, the first zero-shot forecasting model trained purely on a novel synthetic data distribution. ForecastPFN is a prior-data fitted network, trained to approximate Bayesian inference, which can make predictions on a new time series dataset in a single forward pass. Through extensive experiments, we show that zero-shot predictions made by ForecastPFN are more accurate and faster compared to state-of-the-art forecasting methods, even when the other methods are allowed to train on hundreds of additional in-distribution data points.",
+      "comment": null,
+      "journal_ref": "Thirty-seventh Conference on Neural Information Processing Systems, 2023",
+      "matched_queries": [
+        "Q1_native_tsfm"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "dooley2023forecastpfn",
+      "group": "Abacus.AI / CMU",
+      "paradigm": "Native TSFM",
+      "architecture": "Prior-Data Fitted Network (Transformer PFN)",
+      "tokenization": "Coordinate & Value Feature Tokens",
+      "prediction_head": "Direct Bayesian Predictive Distribution Head",
+      "params": "10M",
+      "pretrain_corpus": "Synthetic Bayesian Priors (1M Prior Processes)",
+      "tasks": [
+        "Zero-shot Probabilistic Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "NeurIPS 2023",
+      "code_url": "https://github.com/abacusai/ForecastPFN",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2311.01933",
+      "url": "https://arxiv.org/abs/2311.01933"
+    },
+    {
       "id": "arxiv:2310.04948",
       "arxiv_id": "2310.04948",
       "title": "TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting",
@@ -276,7 +368,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "cao2023tempo",
@@ -304,6 +396,99 @@
       "url": "https://arxiv.org/abs/2310.04948"
     },
     {
+      "id": "arxiv:2210.08964",
+      "arxiv_id": "2210.08964",
+      "title": "PromptCast: A New Prompt-based Learning Paradigm for Time Series Forecasting",
+      "authors": [
+        "Hao Xue",
+        "Flora D. Salim"
+      ],
+      "release_date": "2022-09-20",
+      "summary": "This paper presents a new perspective on time series forecasting. In existing time series forecasting methods, the models take a sequence of numerical values as input and yield numerical values as output. The existing SOTA models are largely based on the Transformer architecture, modified with multiple encoding mechanisms to incorporate the context and semantics around the historical data. Inspired by the successes of pre-trained language foundation models, we pose a question about whether these models can also be adapted to solve time-series forecasting. Thus, we propose a new forecasting paradigm: prompt-based time series forecasting (PromptCast). In this novel task, the numerical input and output are transformed into prompts and the forecasting task is framed in a sentence-to-sentence manner, making it possible to directly apply language models for forecasting purposes. To support and facilitate the research of this task, we also present a large-scale dataset (PISA) that includes three real-world forecasting scenarios. We evaluate different SOTA numerical-based forecasting methods and language generation models. The benchmark results with various forecasting settings demonstrate the proposed PromptCast with language generation models is a promising research direction. Additionally, in comparison to conventional numerical-based forecasting, PromptCast shows a much better generalization ability under the zero-shot setting.",
+      "comment": "TKDE Accepted Version",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "xue2022promptcast",
+      "group": "UNSW",
+      "paradigm": "LLM4TS",
+      "architecture": "Encoder-Decoder Language Model (T5 / BART)",
+      "tokenization": "Natural Language Prompting (Text-to-Text String Casting)",
+      "prediction_head": "Autoregressive Vocabulary Generation Head",
+      "params": "220M to 770M",
+      "pretrain_corpus": "PISA Benchmark Prompts",
+      "tasks": [
+        "Zero-shot Forecasting",
+        "Contextual Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "IEEE TKDE 2023",
+      "code_url": "https://github.com/HaoUNSW/PISA",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2210.08964",
+      "url": "https://arxiv.org/abs/2210.08964"
+    },
+    {
+      "id": "arxiv:2310.09751",
+      "arxiv_id": "2310.09751",
+      "title": "UniTime: A Language-Empowered Unified Model for Cross-Domain Time Series Forecasting",
+      "authors": [
+        "Xu Liu",
+        "Junfeng Hu",
+        "Yuan Li",
+        "Shizhe Diao",
+        "Yuxuan Liang",
+        "Bryan Hooi",
+        "Roger Zimmermann"
+      ],
+      "release_date": "2023-10-15",
+      "summary": "Multivariate time series forecasting plays a pivotal role in contemporary web technologies. In contrast to conventional methods that involve creating dedicated models for specific time series application domains, this research advocates for a unified model paradigm that transcends domain boundaries. However, learning an effective cross-domain model presents the following challenges. First, various domains exhibit disparities in data characteristics, e.g., the number of variables, posing hurdles for existing models that impose inflexible constraints on these factors. Second, the model may encounter difficulties in distinguishing data from various domains, leading to suboptimal performance in our assessments. Third, the diverse convergence rates of time series domains can also result in compromised empirical performance. To address these issues, we propose UniTime for effective cross-domain time series learning. Concretely, UniTime can flexibly adapt to data with varying characteristics. It also uses domain instructions and a Language-TS Transformer to offer identification information and align two modalities. In addition, UniTime employs masking to alleviate domain convergence speed imbalance issues. Our extensive experiments demonstrate the effectiveness of UniTime in advancing state-of-the-art forecasting performance and zero-shot transferability.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "liu2024unitime",
+      "group": "Beihang / NTU",
+      "paradigm": "LLM4TS",
+      "architecture": "Language-Time Series Transformer",
+      "tokenization": "Dynamic Patching + Domain Instruction Tokens",
+      "prediction_head": "Unified Cross-Domain Forecast Head",
+      "params": "not reported",
+      "pretrain_corpus": "Multi-Domain Corpora (11 Public Datasets)",
+      "tasks": [
+        "Cross-Domain Forecasting",
+        "Zero-shot Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "WWW 2024",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2310.09751",
+      "url": "https://arxiv.org/abs/2310.09751"
+    },
+    {
       "id": "arxiv:2310.10688",
       "arxiv_id": "2310.10688",
       "title": "A decoder-only foundation model for time-series forecasting",
@@ -321,7 +506,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "das2024timesfm",
@@ -375,7 +560,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "jin2023timellm",
@@ -434,7 +619,7 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "rasul2023lagllama",
@@ -485,7 +670,7 @@
       "matched_queries": [
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "yue2024timemmd",
@@ -531,7 +716,7 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "wang2024timemixer",
@@ -578,7 +763,7 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "woo2024moirai",
@@ -626,7 +811,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "goswami2024moment",
@@ -675,7 +860,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "liu2024autotimes",
@@ -722,7 +907,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "zhou2024units",
@@ -786,7 +971,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "ansari2024chronos",
@@ -814,6 +999,55 @@
       "url": "https://arxiv.org/abs/2403.07815"
     },
     {
+      "id": "arxiv:2403.07300",
+      "arxiv_id": "2403.07300",
+      "title": "CALF: Aligning LLMs for Time Series Forecasting via Cross-modal Fine-Tuning",
+      "authors": [
+        "Peiyuan Liu",
+        "Hang Guo",
+        "Tao Dai",
+        "Naiqi Li",
+        "Jigang Bao",
+        "Xudong Ren",
+        "Yong Jiang",
+        "Shu-Tao Xia"
+      ],
+      "release_date": "2024-03-12",
+      "summary": "Deep learning (e.g., Transformer) has been widely and successfully used in multivariate time series forecasting (MTSF). Unlike existing methods that focus on training models from a single modal of time series input, large language models (LLMs) based MTSF methods with cross-modal text and time series input have recently shown great superiority, especially with limited temporal data. However, current LLM-based MTSF methods usually focus on adapting and fine-tuning LLMs, while neglecting the distribution discrepancy between textual and temporal input tokens, thus leading to sub-optimal performance. To address this issue, we propose a novel Cross-Modal LLM Fine-Tuning (CALF) framework for MTSF by reducing the distribution discrepancy between textual and temporal data, which mainly consists of the temporal target branch with temporal input and the textual source branch with aligned textual input. To reduce the distribution discrepancy, we develop the cross-modal match module to first align cross-modal input distributions. Additionally, to minimize the modality distribution gap in both feature and output spaces, feature regularization loss is developed to align the intermediate features between the two branches for better weight updates, while output consistency loss is introduced to allow the output representations of both branches to correspond effectively. Thanks to the modality alignment, CALF establishes state-of-the-art performance for both long-term and short-term forecasting tasks with low computational complexity, and exhibiting favorable few-shot and zero-shot abilities similar to that in LLMs. Code is available at https://github.com/Hank0626/LLaTA.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "liu2024calf",
+      "group": "Tsinghua / DAMO",
+      "paradigm": "LLM4TS",
+      "architecture": "Cross-Modal Aligned LLM with Dual Low-Rank Adaptation",
+      "tokenization": "Patch-based Tokenizer + Text Instruction Tokens",
+      "prediction_head": "Linear Projection Head with Cross-Modal Contrastive Loss",
+      "params": "not reported",
+      "pretrain_corpus": "Pretrained LLaMA / GPT-2 Backbones",
+      "tasks": [
+        "Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "KDD 2024",
+      "code_url": "https://github.com/Hank0626/CALF",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2403.07300",
+      "url": "https://arxiv.org/abs/2403.07300"
+    },
+    {
       "id": "arxiv:2402.19072",
       "arxiv_id": "2402.19072",
       "title": "TimeXer: Empowering Transformers for Time Series Forecasting with Exogenous Variables",
@@ -835,7 +1069,7 @@
       "matched_queries": [
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "wang2024timexer",
@@ -883,7 +1117,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "wu2024s2ipllm",
@@ -931,7 +1165,7 @@
       "matched_queries": [
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "chen2024timecma",
@@ -982,7 +1216,7 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "woo2024moiraimoe",
@@ -1029,7 +1263,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "liu2024timerxl",
@@ -1057,6 +1291,106 @@
       "url": "https://arxiv.org/abs/2410.04803"
     },
     {
+      "id": "arxiv:2502.04395",
+      "arxiv_id": "2502.04395",
+      "title": "Time-VLM: Exploring Multimodal Vision-Language Models for Augmented Time Series Forecasting",
+      "authors": [
+        "Siru Zhong",
+        "Weilin Ruan",
+        "Ming Jin",
+        "Huan Li",
+        "Qingsong Wen",
+        "Yuxuan Liang"
+      ],
+      "release_date": "2025-02-06",
+      "summary": "Recent advancements in time series forecasting have explored augmenting models with text or vision modalities to improve accuracy. While text provides contextual understanding, it often lacks fine-grained temporal details. Conversely, vision captures intricate temporal patterns but lacks semantic context, limiting the complementary potential of these modalities. To address this, we propose \\method, a novel multimodal framework that leverages pre-trained Vision-Language Models (VLMs) to bridge temporal, visual, and textual modalities for enhanced forecasting. Our framework comprises three key components: (1) a Retrieval-Augmented Learner, which extracts enriched temporal features through memory bank interactions; (2) a Vision-Augmented Learner, which encodes time series as informative images; and (3) a Text-Augmented Learner, which generates contextual textual descriptions. These components collaborate with frozen pre-trained VLMs to produce multimodal embeddings, which are then fused with temporal features for final prediction. Extensive experiments demonstrate that Time-VLM achieves superior performance, particularly in few-shot and zero-shot scenarios, thereby establishing a new direction for multimodal time series forecasting. Code is available at https://github.com/CityMind-Lab/ICML25-TimeVLM.",
+      "comment": "20 pages",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "zhong2025timevlm",
+      "group": "Ming Jin / Monash",
+      "paradigm": "LLM4TS",
+      "architecture": "Multimodal Vision-Language Architecture (Qwen-VL / CLIP)",
+      "tokenization": "Gramian Angular Field / Plot Rendering + Text Prompts",
+      "prediction_head": "Autoregressive Visual-Language Predictor",
+      "params": "7B",
+      "pretrain_corpus": "Time-Vision Multimodal Benchmarks",
+      "tasks": [
+        "Multimodal Forecasting",
+        "Visual Time Series Reasoning"
+      ],
+      "open_weights": true,
+      "venue": "ICML 2025",
+      "code_url": "https://github.com/CityMind-Lab/ICML25-TimeVLM",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2502.04395",
+      "url": "https://arxiv.org/abs/2502.04395"
+    },
+    {
+      "id": "arxiv:2412.03104",
+      "arxiv_id": "2412.03104",
+      "title": "ChatTS: Aligning Time Series with LLMs via Synthetic Data for Enhanced Understanding and Reasoning",
+      "authors": [
+        "Zhe Xie",
+        "Zeyan Li",
+        "Xiao He",
+        "Longlong Xu",
+        "Xidao Wen",
+        "Tieying Zhang",
+        "Jianjun Chen",
+        "Rui Shi",
+        "Dan Pei"
+      ],
+      "release_date": "2024-12-04",
+      "summary": "Understanding time series is crucial for its application in real-world scenarios. Recently, large language models (LLMs) have been increasingly applied to time series tasks, leveraging their strong language capabilities to enhance various applications. However, research on multimodal LLMs (MLLMs) for time series understanding and reasoning remains limited, primarily due to the scarcity of high-quality datasets that align time series with textual information. This paper introduces ChatTS, a novel MLLM designed for time series analysis. ChatTS treats time series as a modality, similar to how vision MLLMs process images, enabling it to perform both understanding and reasoning with time series. To address the scarcity of training data, we propose an attribute-based method for generating synthetic time series with detailed attribute descriptions. We further introduce Time Series Evol-Instruct, a novel approach that generates diverse time series Q&As, enhancing the model's reasoning capabilities. To the best of our knowledge, ChatTS is the first TS-MLLM that takes multivariate time series as input for understanding and reasoning, which is fine-tuned exclusively on synthetic datasets. We evaluate its performance using benchmark datasets with real-world data, including six alignment tasks and four reasoning tasks. Our results show that ChatTS significantly outperforms existing vision-based MLLMs (e.g., GPT-4o) and text/agent-based LLMs, achieving a 46.0% improvement in alignment tasks and a 25.8% improvement in reasoning tasks. We have open-sourced the source code, model checkpoint and datasets at https://github.com/NetManAIOps/ChatTS.",
+      "comment": "accepted by VLDB' 25",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "xie2024chatts",
+      "group": "Tsinghua / NetMan",
+      "paradigm": "LLM4TS",
+      "architecture": "Instruction-Tuned Multimodal LLM (ChatTS)",
+      "tokenization": "Quantized Patch Encodings + Synthetic Instruction Dialogues",
+      "prediction_head": "Autoregressive Conversational & Metric Output Head",
+      "params": "8B",
+      "pretrain_corpus": "Synthetic Conversational Temporal Corpus (SynTS-100K)",
+      "tasks": [
+        "Temporal Reasoning",
+        "Anomaly Attribution",
+        "Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2024",
+      "code_url": "https://github.com/NetManAIOps/ChatTS",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2412.03104",
+      "url": "https://arxiv.org/abs/2412.03104"
+    },
+    {
       "id": "arxiv:2410.10393",
       "arxiv_id": "2410.10393",
       "title": "GIFT-Eval: A Benchmark For General Time Series Forecasting Model Evaluation",
@@ -1078,7 +1412,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "salesforce2024gifteval",
@@ -1127,7 +1461,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "shi2024timemoe",
@@ -1176,7 +1510,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "jin2025timemqa",
@@ -1225,7 +1559,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "chen2024visionts",
@@ -1270,7 +1604,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "muller2025tabpfnts",
@@ -1320,7 +1654,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "thuml2025sundial",
@@ -1367,7 +1701,7 @@
       "comment": "Accepted by the 13th International Conference on Learning Representations (ICLR 2025)",
       "journal_ref": null,
       "matched_queries": [],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "wang2024timemixerplus",
@@ -1416,7 +1750,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "das2024incontext",
@@ -1465,7 +1799,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "zhang2024chattime",
@@ -1516,7 +1850,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "zhang2025kairos",
@@ -1562,7 +1896,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "gong2025rethinkingeval",
@@ -1590,6 +1924,63 @@
       "url": "https://arxiv.org/abs/2510.13654"
     },
     {
+      "id": "arxiv:2510.03255",
+      "arxiv_id": "2510.03255",
+      "title": "SciTS: Scientific Time Series Understanding and Generation with LLMs",
+      "authors": [
+        "Wen Wu",
+        "Ziyang Zhang",
+        "Liwei Liu",
+        "Xuenan Xu",
+        "Jimin Zhuang",
+        "Ke Fan",
+        "Qitan Lv",
+        "Junlin Liu",
+        "Chen Zhang",
+        "Zheqi Yuan",
+        "Siyuan Hou",
+        "Tianyi Lin",
+        "Kai Chen",
+        "Bowen Zhou",
+        "Chao Zhang"
+      ],
+      "release_date": "2025-09-26",
+      "summary": "The scientific reasoning ability of large language models (LLMs) has recently attracted significant attention. Time series, as a fundamental modality in scientific data, presents unique challenges that are often overlooked in current multimodal LLMs, which either encode numerical sequences as text or convert them into images. Such approaches may be insufficient for comprehensive scientific time series understanding and generation. Existing unified time series models typically specialise in either forecasting or analysis, and their effectiveness on non-periodic, heterogeneous scientific signals remains unclear. To address these gaps, we introduce SciTS, a benchmark spanning 12 scientific domains and 43 tasks, with over 50k+ instances, both univariate and multivariate signals ranging from $10^0$ to $10^7$ in length and up to 10~MHz in frequency. We benchmark 17 models, including text-only LLMs, multimodal LLMs, and unified time series models, and find that general-purpose LLMs exhibit stronger generalisability than specialised time series models, while representing time series as text or images limits their performance due to excessively long sequences and loss of numerical precision, respectively. We then introduce TimeOmni, a framework that equips LLMs with the ability to understand and generate time series while remaining compatible with general-purpose LLM training. This work fills a gap in both dedicated benchmarks and modelling frameworks for scientific time series, paving the way for LLMs to understand and generate complex temporal scientific data.",
+      "comment": "Accepted to ICLR 2026",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "wu2025scits",
+      "group": "Wuhan Univ / Shanghai AI Lab",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Universal Benchmark & Unified TimeOmni Framework",
+      "tokenization": "Unified High-Frequency Sampling + Dual Discrete/Continuous Tokens",
+      "prediction_head": "Multi-Task Unified Regression and Generation Head",
+      "params": "not reported",
+      "pretrain_corpus": "SciTS-Bench (12 Domains, 43 Tasks, >50K Instances)",
+      "tasks": [
+        "Scientific Benchmark",
+        "Scientific TS Understanding & Generation"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2510.03255",
+      "url": "https://arxiv.org/abs/2510.03255"
+    },
+    {
       "id": "arxiv:2509.24803",
       "arxiv_id": "2509.24803",
       "title": "TimeOmni-1: Incentivizing Complex Reasoning with Time Series in Large Language Models",
@@ -1613,7 +2004,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "jin2025timeomni",
@@ -1678,7 +2069,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "raj2025opentslm",
@@ -1707,6 +2098,110 @@
       "url": "https://arxiv.org/abs/2510.02410"
     },
     {
+      "id": "arxiv:2512.11251",
+      "arxiv_id": "2512.11251",
+      "title": "Insight Miner: A Time Series Analysis Dataset for Cross-Domain Alignment with Natural Language",
+      "authors": [
+        "Yunkai Zhang",
+        "Yawen Zhang",
+        "Ming Zheng",
+        "Kezhen Chen",
+        "Chongyang Gao",
+        "Ruian Ge",
+        "Siyuan Teng",
+        "Amine Jelloul",
+        "Jinmeng Rao",
+        "Xiaoyuan Guo",
+        "Chiang-Wei Fang",
+        "Zeyu Zheng",
+        "Jie Yang"
+      ],
+      "release_date": "2025-12-12",
+      "summary": "Time-series data is critical across many scientific and industrial domains, including environmental analysis, agriculture, transportation, and finance. However, mining insights from this data typically requires deep domain expertise, a process that is both time-consuming and labor-intensive. In this paper, we propose \\textbf{Insight Miner}, a large-scale multimodal model (LMM) designed to generate high-quality, comprehensive time-series descriptions enriched with domain-specific knowledge. To facilitate this, we introduce \\textbf{TS-Insights}\\footnote{Available at \\href{https://huggingface.co/datasets/zhykoties/time-series-language-alignment}{https://huggingface.co/datasets/zhykoties/time-series-language-alignment}.}, the first general-domain dataset for time series and language alignment. TS-Insights contains 100k time-series windows sampled from 20 forecasting datasets. We construct this dataset using a novel \\textbf{agentic workflow}, where we use statistical tools to extract features from raw time series before synthesizing them into coherent trend descriptions with GPT-4. Following instruction tuning on TS-Insights, Insight Miner outperforms state-of-the-art multimodal models, such as LLaVA \\citep{liu2023llava} and GPT-4, in generating time-series descriptions and insights. Our findings suggest a promising direction for leveraging LMMs in time series analysis, and serve as a foundational step toward enabling LLMs to interpret time series as a native input modality.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q2_llm4ts"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "zhang2025insightminer",
+      "group": "HKUST / MSRA",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Cross-Domain Alignment Dataset & Evaluation Pipeline",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "InsightMiner Corpus (1.2M Multi-Domain TS-Text Pairs)",
+      "tasks": [
+        "Cross-Domain Alignment Benchmark",
+        "Evaluation"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2512.11251",
+      "url": "https://arxiv.org/abs/2512.11251"
+    },
+    {
+      "id": "arxiv:2505.23719",
+      "arxiv_id": "2505.23719",
+      "title": "TiRex: Zero-Shot Forecasting Across Long and Short Horizons with Enhanced In-Context Learning",
+      "authors": [
+        "Andreas Auer",
+        "Patrick Podest",
+        "Daniel Klotz",
+        "Sebastian Böck",
+        "Günter Klambauer",
+        "Sepp Hochreiter"
+      ],
+      "release_date": "2025-05-29",
+      "summary": "In-context learning, the ability of large language models to perform tasks using only examples provided in the prompt, has recently been adapted for time series forecasting. This paradigm enables zero-shot prediction, where past values serve as context for forecasting future values, making powerful forecasting tools accessible to non-experts and increasing the performance when training data are scarce. Most existing zero-shot forecasting approaches rely on transformer architectures, which, despite their success in language, often fall short of expectations in time series forecasting, where recurrent models like LSTMs frequently have the edge. Conversely, while LSTMs are well-suited for time series modeling due to their state-tracking capabilities, they lack strong in-context learning abilities. We introduce TiRex that closes this gap by leveraging xLSTM, an enhanced LSTM with competitive in-context learning skills. Unlike transformers, state-space models, or parallelizable RNNs such as RWKV, TiRex retains state-tracking, a critical property for long-horizon forecasting. To further facilitate its state-tracking ability, we propose a training-time masking strategy called CPM. TiRex sets a new state of the art in zero-shot time series forecasting on the HuggingFace benchmarks GiftEval and Chronos-ZS, outperforming significantly larger models including TabPFN-TS (Prior Labs), Chronos Bolt (Amazon), TimesFM (Google), and Moirai (Salesforce) across both short- and long-term forecasts.",
+      "comment": "presented at NeurIPS 2025",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "auer2025tirex",
+      "group": "JKU Linz / ELLIS",
+      "paradigm": "Native TSFM",
+      "architecture": "Decoder-only In-Context Transformer",
+      "tokenization": "Dual-Horizon Dynamic Patching",
+      "prediction_head": "Continuous Distributional Head",
+      "params": "150M",
+      "pretrain_corpus": "Curated Multi-Resolution Temporal Corpus (50B tokens)",
+      "tasks": [
+        "Zero-shot Forecasting",
+        "Long-Horizon Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2505.23719",
+      "url": "https://arxiv.org/abs/2505.23719"
+    },
+    {
       "id": "arxiv:2506.11029",
       "arxiv_id": "2506.11029",
       "title": "Output Scaling: YingLong-Delayed Chain of Thought in a Large Pretrained Time Series Forecasting Model",
@@ -1726,7 +2221,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "liu2025yinglong",
@@ -1754,6 +2249,55 @@
       "url": "https://arxiv.org/abs/2506.11029"
     },
     {
+      "id": "arxiv:2512.14253",
+      "arxiv_id": "2512.14253",
+      "title": "FLAME: Flow Enhanced Legendre Memory Models for General Time Series Forecasting",
+      "authors": [
+        "Xingjian Wu",
+        "Hanyin Cheng",
+        "Xiangfei Qiu",
+        "Zhengyu Li",
+        "Jilin Hu",
+        "Chenjuan Guo",
+        "Bin Yang"
+      ],
+      "release_date": "2025-12-16",
+      "summary": "In this work, we introduce FLAME, a family of extremely lightweight and capable Time Series Foundation Models, which support both deterministic and probabilistic forecasting via generative probabilistic modeling, thus ensuring both efficiency and robustness. FLAME utilizes the Legendre Memory for strong generalization capabilities. Through adapting variants of Legendre Memory, i.e., translated Legendre (LegT) and scaled Legendre (LegS), in the Encoding and Decoding phases, FLAME can effectively capture the inherent inductive bias within data and make efficient long-range inferences. To enhance the accuracy of probabilistic forecasting while keeping efficient, FLAME adopts a Normalization Flow based forecasting head, which can model the arbitrarily intricate distributions over the forecasting horizon in a generative manner. Comprehensive experiments on well-recognized benchmarks, including TSFM-Bench and ProbTS, demonstrate the consistent state-of-the-art zero-shot performance of FLAME on both deterministic and probabilistic forecasting tasks.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "wu2025flame",
+      "group": "Zhejiang Univ / Westlake",
+      "paradigm": "Native TSFM",
+      "architecture": "Continuous Flow-Enhanced Legendre Memory Model",
+      "tokenization": "Continuous Legendre Polynomial State Projections",
+      "prediction_head": "Continuous Flow Transport Head",
+      "params": "45M",
+      "pretrain_corpus": "Diverse Physical and Biological Waveform Corpora",
+      "tasks": [
+        "Zero-shot Continuous Forecasting",
+        "Long-term Imputation"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2512.14253",
+      "url": "https://arxiv.org/abs/2512.14253"
+    },
+    {
       "id": "arxiv:2508.05287",
       "arxiv_id": "2508.05287",
       "title": "FlowState: Sampling-Rate-Equivariant Time-Series Forecasting",
@@ -1771,7 +2315,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "king2025flowstate",
@@ -1823,7 +2367,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "woo2025moirai2",
@@ -1888,7 +2432,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "ansari2025chronos2",
@@ -1916,6 +2460,54 @@
       "url": "https://arxiv.org/abs/2510.15821"
     },
     {
+      "id": "arxiv:2602.17149",
+      "arxiv_id": "2602.17149",
+      "title": "TimeOmni-VL: Unified Models for Time Series Understanding and Generation",
+      "authors": [
+        "Tong Guan",
+        "Sheng Pan",
+        "Johan Barthelemy",
+        "Zhao Li",
+        "Yujun Cai",
+        "Cesare Alippi",
+        "Ming Jin",
+        "Shirui Pan"
+      ],
+      "release_date": "2026-02-19",
+      "summary": "Recent time series modeling faces a sharp divide between numerical generation and semantic understanding, with research showing that generation models often rely on superficial pattern matching, while understanding-oriented models struggle with high-fidelity numerical output. Although unified multimodal models (UMMs) have bridged this gap in vision, their potential for time series remains untapped. We propose TimeOmni-VL, the first vision-centric framework that unifies time series understanding and generation through two key innovations: (1) Fidelity-preserving bidirectional mapping between time series and images (Bi-TSI), which advances Time Series-to-Image (TS2I) and Image-to-Time Series (I2TS) conversions to ensure near-lossless transformations. (2) Understanding-guided generation. We introduce TSUMM-Suite, a novel dataset consisting of six understanding tasks rooted in time series analytics and coupled with two generation tasks. With a calibrated Chain-of-Thought, TimeOmni-VL is the first to leverage time series understanding as an explicit control signal for high-fidelity generation. Experiments confirm that this unified approach significantly improves semantic understanding and numerical precision, establishing a new frontier for multimodal time series modeling.",
+      "comment": "Accepted by the Forty-third International Conference on Machine Learning (ICML 2026)",
+      "journal_ref": null,
+      "matched_queries": [],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "guan2026timeomnivl",
+      "group": "Monash / CSIRO",
+      "paradigm": "LLM4TS",
+      "architecture": "Unified Vision-Language-Time Series Foundation Model",
+      "tokenization": "Omni-Modality Tri-Token Interleaving (Vision-Language-Signal)",
+      "prediction_head": "Bidirectional Diffusion-Autoregressive Generation Head",
+      "params": "9B",
+      "pretrain_corpus": "OmniTS Multimodal Pretraining Suite",
+      "tasks": [
+        "Understanding",
+        "Generation",
+        "Zero-shot Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "ICML 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2602.17149",
+      "url": "https://arxiv.org/abs/2602.17149"
+    },
+    {
       "id": "arxiv:2603.04791",
       "arxiv_id": "2603.04791",
       "title": "Timer-S1: A Billion-Scale Time Series Foundation Model with Serial Scaling",
@@ -1940,7 +2532,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "thuml2026timers1",
@@ -1966,6 +2558,57 @@
       },
       "doi": "10.48550/arXiv.2603.04791",
       "url": "https://arxiv.org/abs/2603.04791"
+    },
+    {
+      "id": "arxiv:2609.24559",
+      "arxiv_id": "2609.24559",
+      "title": "$t_0$: A Time-Series Foundation Model for Forecasting with Context",
+      "authors": [
+        "Lucas Meyer",
+        "Claudio Sole",
+        "Huikan Xiang",
+        "Nicolas Li",
+        "Lucas Franceschino",
+        "Arnau Quera-Bofarull",
+        "Maarten P. Scholl",
+        "Joachim Fainberg",
+        "Geoffrey Négiar"
+      ],
+      "release_date": "2026-09-21",
+      "summary": "We present $t_0$, a family of open-weights foundation models for forecasting with multivariate context. We release its first two members: $\\texttt{t0-alpha}$ and $\\texttt{t0-beta}$, respectively 102M and 256M parameters. Both condition their forecasts on target history, past covariates, and known-future covariates, without task-specific retraining. Their transformer layers alternate attention along time and across variates. They produce probabilistic forecasts through quantile predictions. Pretraining combines curated public data with synthetic generator families constructed to contain covariate-to-target dependencies. On GIFT-Eval, $\\texttt{t0-alpha}$ reaches an aggregate CRPS of 0.4941, and $\\texttt{t0-beta}$ a CRPS of 0.4738 and a MASE of 0.6865, third on both and within 4.0% of the best zero-shot TSFM. On fev-bench they score 42.2 and 46.7 in skill, the latter third again and 2.0 points behind the leader. We analyze $\\texttt{t0-alpha}$ in depth. Known-future covariates raise its skill by 6.3 percentage points across 30 tasks. The report also examines its calibration, its rollout strategy on long horizons, and its robustness to missing data. On the Victoria electricity-demand benchmark, $\\texttt{t0-beta}$ is among the most accurate models with a context of nearly a year. In an independent Macrocosm evaluation of hourly ERCOT prices over 29 months, both cut the MAE of the lagged-price baseline by 38%.",
+      "comment": "39 pages, 16 figures, 13 tables",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "meyer2026t0",
+      "group": "ETH Zurich / Invenia Labs",
+      "paradigm": "Native TSFM",
+      "architecture": "Autoregressive Context-Conditioned Transformer ($t_0$)",
+      "tokenization": "Multivariate Context Embedding + Variable-Rate Patches",
+      "prediction_head": "Quantile Mixture Autoregressive Head",
+      "params": "350M",
+      "pretrain_corpus": "Contextualized Open Temporal Database (120B observations)",
+      "tasks": [
+        "Context-conditioned Forecasting",
+        "Zero-shot Probabilistic Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2609.24559",
+      "url": "https://arxiv.org/abs/2609.24559"
     },
     {
       "id": "arxiv:2605.20119",
@@ -1994,7 +2637,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "datadog2026toto2",
@@ -2039,7 +2682,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "li2026evaluatingreliability",
@@ -2084,7 +2727,7 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "nie2023patchtst",
@@ -2131,7 +2774,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 07:23:23",
+      "retrieved_at": "2026-09-24 10:47:05",
       "status": "included",
       "screen_date": "2026-09-24",
       "bibkey": "fons2024arellmsuseful",
@@ -2157,6 +2800,53 @@
       },
       "doi": "10.48550/arXiv.2406.16964",
       "url": "https://arxiv.org/abs/2406.16964"
+    },
+    {
+      "id": "arxiv:2308.08241",
+      "arxiv_id": "2308.08241",
+      "title": "TEST: Text Prototype Aligned Embedding to Activate LLM's Ability for Time Series",
+      "authors": [
+        "Chenxi Sun",
+        "Hongyan Li",
+        "Yaliang Li",
+        "Shenda Hong"
+      ],
+      "release_date": "2023-08-16",
+      "summary": "This work summarizes two ways to accomplish Time-Series (TS) tasks in today's Large Language Model (LLM) context: LLM-for-TS (model-centric) designs and trains a fundamental large model, or fine-tunes a pre-trained LLM for TS data; TS-for-LLM (data-centric) converts TS into a model-friendly representation to enable the pre-trained LLM to handle TS data. Given the lack of data, limited resources, semantic context requirements, and so on, this work focuses on TS-for-LLM, where we aim to activate LLM's ability for TS data by designing a TS embedding method suitable for LLM. The proposed method is named TEST. It first tokenizes TS, builds an encoder to embed TS via instance-wise, feature-wise, and text-prototype-aligned contrast, where the TS embedding space is aligned to LLM embedding layer space, then creates soft prompts to make LLM more open to that embeddings, and finally implements TS tasks using the frozen LLM. We also demonstrate the feasibility of TS-for-LLM through theory and experiments. Experiments are carried out on TS classification, forecasting, and representation tasks using eight frozen LLMs with various structures and sizes. The results show that the pre-trained LLM with TEST strategy can achieve better or comparable performance than today's SOTA TS models and offer benefits for few-shot and generalization. By treating LLM as the pattern machine, TEST can endow LLM's ability to process TS data without compromising language ability. We hope that this study will serve as a foundation for future work to support TS+LLM progress.",
+      "comment": "Preprint",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
+      ],
+      "retrieved_at": "2026-09-24 10:47:05",
+      "status": "included",
+      "screen_date": "2026-09-24",
+      "bibkey": "sun2023test",
+      "group": "PKU / Alibaba",
+      "paradigm": "LLM4TS",
+      "architecture": "Frozen LLM (BERT/GPT-2) with Contrastive Prototype Alignment",
+      "tokenization": "Instance & Feature Contrastive Patches",
+      "prediction_head": "Linear Residual Output Head",
+      "params": "110M to 350M",
+      "pretrain_corpus": "Pretrained LLM + Text Prototype Alignment",
+      "tasks": [
+        "Forecasting",
+        "Classification",
+        "Representation"
+      ],
+      "open_weights": true,
+      "venue": "NeurIPS 2024",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2308.08241",
+      "url": "https://arxiv.org/abs/2308.08241"
     }
   ]
 }

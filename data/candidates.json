@@ -23,7 +23,33 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "ekambaram2024ttm",
+    "group": "IBM",
+    "paradigm": "Native TSFM",
+    "architecture": "Lightweight TSMixer Multi-level Encoder-Decoder",
+    "tokenization": "Adaptive Resolution Patching + Prefix Tuning",
+    "prediction_head": "Channel-mixing Linear Forecast Head",
+    "params": "1M to 8M",
+    "pretrain_corpus": "Curated Multi-Domain Benchmarks (Monash, etc.)",
+    "tasks": [
+      "Zero-shot Forecasting",
+      "Few-shot Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024",
+    "code_url": "https://github.com/ibm-granite/granite-tsfm",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2401.03955",
+    "url": "https://arxiv.org/abs/2401.03955"
   },
   {
     "id": "arxiv:2310.10196",
@@ -55,7 +81,32 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "jin2023largemodels",
+    "group": "Ming Jin",
+    "paradigm": "Survey & Foundations",
+    "architecture": "Survey Taxonomy",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Survey"
+    ],
+    "open_weights": null,
+    "venue": "ACM Computing Surveys 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 2,
+      "total": 11
+    },
+    "doi": "10.48550/arXiv.2310.10196",
+    "url": "https://arxiv.org/abs/2310.10196"
   },
   {
     "id": "arxiv:2302.11939",
@@ -76,7 +127,35 @@
       "Q1_native_tsfm",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "zhou2023onefitsall",
+    "group": "Alibaba / DAMO",
+    "paradigm": "LLM4TS",
+    "architecture": "Frozen Pretrained GPT-2 Backbone with Cross-modal Reprogramming",
+    "tokenization": "Patch Tokenization + Linear Probing",
+    "prediction_head": "Linear Residual Head",
+    "params": "not reported",
+    "pretrain_corpus": "Pretrained GPT-2 weights",
+    "tasks": [
+      "Forecasting",
+      "Classification",
+      "Anomaly Detection",
+      "Imputation"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2023",
+    "code_url": "https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2302.11939",
+    "url": "https://arxiv.org/abs/2302.11939"
   },
   {
     "id": "arxiv:2402.02368",
@@ -100,7 +179,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "liu2024timer",
+    "group": "THUML",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only (GPT-style)",
+    "tokenization": "Single-series Subseries Patching",
+    "prediction_head": "Linear Next-Patch Regression",
+    "params": "84M",
+    "pretrain_corpus": "UTSD (1B points)",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2024",
+    "code_url": "https://github.com/thuml/Large-Time-Series-Model",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2402.02368",
+    "url": "https://arxiv.org/abs/2402.02368"
   },
   {
     "id": "arxiv:2308.08469",
@@ -121,7 +225,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "chang2023llm4ts",
+    "group": "NYCU",
+    "paradigm": "LLM4TS",
+    "architecture": "Two-Stage Fine-Tuned Transformer (GPT-2 Backbone)",
+    "tokenization": "Non-overlapping Patch Partitioning + Normalization",
+    "prediction_head": "Linear Flattening Head",
+    "params": "124M",
+    "pretrain_corpus": "Self-Supervised Masked Reconstruction + Forecast Tuning",
+    "tasks": [
+      "Few-Shot Forecasting",
+      "Zero-Shot Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2023",
+    "code_url": "https://github.com/blacksnail789521/LLM4TS",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2308.08469",
+    "url": "https://arxiv.org/abs/2308.08469"
   },
   {
     "id": "arxiv:2202.07125",
@@ -143,7 +273,9 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC1: General review/survey without novel empirical model artifact"
   },
   {
     "id": "arxiv:2310.07820",
@@ -163,7 +295,32 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "gruver2023llmtime",
+    "group": "NYU",
+    "paradigm": "LLM4TS",
+    "architecture": "Direct Autoregressive Prompting (GPT-3/4, Llama-2)",
+    "tokenization": "Decimal String Encoding (ASCII characters)",
+    "prediction_head": "Autoregressive String Prediction Head",
+    "params": "70B+",
+    "pretrain_corpus": "None (zero-shot prompting)",
+    "tasks": [
+      "Zero-shot Probabilistic Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2023",
+    "code_url": "https://github.com/ngruver/llmtime",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2310.07820",
+    "url": "https://arxiv.org/abs/2310.07820"
   },
   {
     "id": "arxiv:2311.01933",
@@ -183,7 +340,32 @@
     "matched_queries": [
       "Q1_native_tsfm"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "dooley2023forecastpfn",
+    "group": "Abacus.AI / CMU",
+    "paradigm": "Native TSFM",
+    "architecture": "Prior-Data Fitted Network (Transformer PFN)",
+    "tokenization": "Coordinate & Value Feature Tokens",
+    "prediction_head": "Direct Bayesian Predictive Distribution Head",
+    "params": "10M",
+    "pretrain_corpus": "Synthetic Bayesian Priors (1M Prior Processes)",
+    "tasks": [
+      "Zero-shot Probabilistic Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2023",
+    "code_url": "https://github.com/abacusai/ForecastPFN",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2311.01933",
+    "url": "https://arxiv.org/abs/2311.01933"
   },
   {
     "id": "arxiv:2310.04948",
@@ -207,7 +389,32 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "cao2023tempo",
+    "group": "Ming Jin / Monash",
+    "paradigm": "LLM4TS",
+    "architecture": "Decoder-only Prompt-based Transformer",
+    "tokenization": "Decomposed Trend-Season-Residual Patches",
+    "prediction_head": "Decomposed Linear Head",
+    "params": "not reported",
+    "pretrain_corpus": "Pretrained GPT-2",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2024",
+    "code_url": "https://github.com/caoccao/TEMPO",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2310.04948",
+    "url": "https://arxiv.org/abs/2310.04948"
   },
   {
     "id": "arxiv:2210.08964",
@@ -226,7 +433,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "xue2022promptcast",
+    "group": "UNSW",
+    "paradigm": "LLM4TS",
+    "architecture": "Encoder-Decoder Language Model (T5 / BART)",
+    "tokenization": "Natural Language Prompting (Text-to-Text String Casting)",
+    "prediction_head": "Autoregressive Vocabulary Generation Head",
+    "params": "220M to 770M",
+    "pretrain_corpus": "PISA Benchmark Prompts",
+    "tasks": [
+      "Zero-shot Forecasting",
+      "Contextual Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "IEEE TKDE 2023",
+    "code_url": "https://github.com/HaoUNSW/PISA",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2210.08964",
+    "url": "https://arxiv.org/abs/2210.08964"
   },
   {
     "id": "arxiv:2402.01801",
@@ -245,7 +478,9 @@
     "matched_queries": [
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC1: General review/survey without novel empirical model artifact"
   },
   {
     "id": "arxiv:2310.09751",
@@ -267,7 +502,33 @@
     "matched_queries": [
       "Q1_native_tsfm"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "liu2024unitime",
+    "group": "Beihang / NTU",
+    "paradigm": "LLM4TS",
+    "architecture": "Language-Time Series Transformer",
+    "tokenization": "Dynamic Patching + Domain Instruction Tokens",
+    "prediction_head": "Unified Cross-Domain Forecast Head",
+    "params": "not reported",
+    "pretrain_corpus": "Multi-Domain Corpora (11 Public Datasets)",
+    "tasks": [
+      "Cross-Domain Forecasting",
+      "Zero-shot Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "WWW 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2310.09751",
+    "url": "https://arxiv.org/abs/2310.09751"
   },
   {
     "id": "arxiv:2310.10688",
@@ -287,7 +548,32 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "das2024timesfm",
+    "group": "Google",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only (Autoregressive Transformer)",
+    "tokenization": "Input Patching (patch length 32)",
+    "prediction_head": "Output Patch Linear Head (length 128)",
+    "params": "200M",
+    "pretrain_corpus": "100B real & synthetic points (Google Trends, Wikipedia, Synthetic)",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2024",
+    "code_url": "https://github.com/google-research/timesfm",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2310.10688",
+    "url": "https://arxiv.org/abs/2310.10688"
   },
   {
     "id": "arxiv:2310.01728",
@@ -316,7 +602,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "jin2023timellm",
+    "group": "Ming Jin",
+    "paradigm": "LLM4TS",
+    "architecture": "Decoder-only (Reprogrammed Llama-7B)",
+    "tokenization": "Patch Reprogramming + Prompt Tokens",
+    "prediction_head": "Linear Output Flattening",
+    "params": "7B",
+    "pretrain_corpus": "Pretrained LLM backbone",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2024",
+    "code_url": "https://github.com/KimMeen/Time-LLM",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2310.01728",
+    "url": "https://arxiv.org/abs/2310.01728"
   },
   {
     "id": "arxiv:2310.08278",
@@ -350,7 +661,32 @@
       "Q1_native_tsfm",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "rasul2023lagllama",
+    "group": "Mila / Morgan Stanley",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only (Llama-style with RoPE)",
+    "tokenization": "Lag Feature Vectors (calendar & historical lags)",
+    "prediction_head": "Student-t Distribution Head",
+    "params": "2.4M",
+    "pretrain_corpus": "Monash Time Series Repository (27 datasets, 7.9K series)",
+    "tasks": [
+      "Probabilistic Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2024 Workshop",
+    "code_url": "https://github.com/time-series-foundation-models/lag-llama",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2310.08278",
+    "url": "https://arxiv.org/abs/2310.08278"
   },
   {
     "id": "arxiv:2402.16132",
@@ -372,7 +708,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2406.08627",
@@ -398,7 +736,32 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "yue2024timemmd",
+    "group": "SJTU",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Multi-Domain Multimodal Dataset",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Dataset Benchmark"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024 D&B",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2406.08627",
+    "url": "https://arxiv.org/abs/2406.08627"
   },
   {
     "id": "arxiv:2405.14616",
@@ -419,7 +782,32 @@
     "comment": null,
     "journal_ref": null,
     "matched_queries": [],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "wang2024timemixer",
+    "group": "Ming Jin",
+    "paradigm": "Native TSFM",
+    "architecture": "Multiscale Mixing (MLP/Attention)",
+    "tokenization": "Multiscale Subsampling Patches",
+    "prediction_head": "Multiscale Predictor",
+    "params": "not reported",
+    "pretrain_corpus": "not reported",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2024",
+    "code_url": "https://github.com/kwuking/TimeMixer",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2405.14616",
+    "url": "https://arxiv.org/abs/2405.14616"
   },
   {
     "id": "arxiv:2403.14735",
@@ -442,7 +830,9 @@
     "matched_queries": [
       "Q1_native_tsfm"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC1: General review/survey without novel empirical model artifact"
   },
   {
     "id": "arxiv:2402.02592",
@@ -464,7 +854,32 @@
       "Q1_native_tsfm",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "woo2024moirai",
+    "group": "Salesforce",
+    "paradigm": "Native TSFM",
+    "architecture": "Encoder-Decoder (Any-Variate Attention)",
+    "tokenization": "Multi-patch Size Projection (8, 16, 32, 64, 128)",
+    "prediction_head": "Mixture of Parametric Distributions (Student-t, Normal)",
+    "params": "14M, 91M, 311M",
+    "pretrain_corpus": "LOTSA (27B observations, 9 domains)",
+    "tasks": [
+      "Probabilistic Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2024",
+    "code_url": "https://github.com/SalesforceAIResearch/uni2ts",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2402.02592",
+    "url": "https://arxiv.org/abs/2402.02592"
   },
   {
     "id": "arxiv:2402.03885",
@@ -487,7 +902,35 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "goswami2024moment",
+    "group": "CMU",
+    "paradigm": "Native TSFM",
+    "architecture": "Encoder-only (T5 encoder backbone with Masked Pretraining)",
+    "tokenization": "Subseries Patching (length 512, stride 64)",
+    "prediction_head": "Task-specific Linear Probes / Reconstruction Head",
+    "params": "385M",
+    "pretrain_corpus": "Time-series Pile (13M sequences, 1B observations)",
+    "tasks": [
+      "Forecasting",
+      "Classification",
+      "Anomaly Detection",
+      "Imputation"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2024",
+    "code_url": "https://github.com/moment-timeseries-foundation-model/moment",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2402.03885",
+    "url": "https://arxiv.org/abs/2402.03885"
   },
   {
     "id": "arxiv:2402.02370",
@@ -508,7 +951,32 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "liu2024autotimes",
+    "group": "THUML",
+    "paradigm": "LLM4TS",
+    "architecture": "Decoder-only (Llama-2-7B backbone)",
+    "tokenization": "Point-wise Scalar Projection",
+    "prediction_head": "Autoregressive Next-Token Head",
+    "params": "7B",
+    "pretrain_corpus": "not reported",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024",
+    "code_url": "https://github.com/thuml/AutoTimes",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2402.02370",
+    "url": "https://arxiv.org/abs/2402.02370"
   },
   {
     "id": "arxiv:2403.00131",
@@ -530,7 +998,35 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "zhou2024units",
+    "group": "Harvard",
+    "paradigm": "Native TSFM",
+    "architecture": "Unified Multi-Task Transformer",
+    "tokenization": "Shared Masked Patches",
+    "prediction_head": "Dynamic Task Heads",
+    "params": "not reported",
+    "pretrain_corpus": "Multi-domain 38 datasets",
+    "tasks": [
+      "Forecasting",
+      "Classification",
+      "Anomaly Detection",
+      "Imputation"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024",
+    "code_url": "https://github.com/mims-harvard/UniTS",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2403.00131",
+    "url": "https://arxiv.org/abs/2403.00131"
   },
   {
     "id": "arxiv:2405.17478",
@@ -555,7 +1051,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2403.07815",
@@ -591,7 +1089,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "ansari2024chronos",
+    "group": "Amazon",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only (T5 architecture adapted)",
+    "tokenization": "Uniform Quantization into 4096 Bins",
+    "prediction_head": "Categorical Cross-Entropy over Bins",
+    "params": "20M to 710M",
+    "pretrain_corpus": "TSMix + Gaussian Processes (84B observations)",
+    "tasks": [
+      "Probabilistic Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2024 / TMLR",
+    "code_url": "https://github.com/amazon-science/chronos-forecasting",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2403.07815",
+    "url": "https://arxiv.org/abs/2403.07815"
   },
   {
     "id": "arxiv:2403.07300",
@@ -615,7 +1138,32 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "liu2024calf",
+    "group": "Tsinghua / DAMO",
+    "paradigm": "LLM4TS",
+    "architecture": "Cross-Modal Aligned LLM with Dual Low-Rank Adaptation",
+    "tokenization": "Patch-based Tokenizer + Text Instruction Tokens",
+    "prediction_head": "Linear Projection Head with Cross-Modal Contrastive Loss",
+    "params": "not reported",
+    "pretrain_corpus": "Pretrained LLaMA / GPT-2 Backbones",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "KDD 2024",
+    "code_url": "https://github.com/Hank0626/CALF",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2403.07300",
+    "url": "https://arxiv.org/abs/2403.07300"
   },
   {
     "id": "arxiv:2402.19072",
@@ -639,7 +1187,32 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "wang2024timexer",
+    "group": "THUML",
+    "paradigm": "Native TSFM",
+    "architecture": "Encoder-Decoder",
+    "tokenization": "Endogenous + Exogenous Patching",
+    "prediction_head": "Linear Projection",
+    "params": "not reported",
+    "pretrain_corpus": "not reported",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024",
+    "code_url": "https://github.com/thuml/TimeXer",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2402.19072",
+    "url": "https://arxiv.org/abs/2402.19072"
   },
   {
     "id": "arxiv:2403.05798",
@@ -662,7 +1235,32 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "wu2024s2ipllm",
+    "group": "SJTU",
+    "paradigm": "LLM4TS",
+    "architecture": "Cross-Modal Semantic Informed Prompting",
+    "tokenization": "Semantic Space Informed Prompting",
+    "prediction_head": "Linear Head",
+    "params": "7B",
+    "pretrain_corpus": "Frozen Llama-2",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2403.05798",
+    "url": "https://arxiv.org/abs/2403.05798"
   },
   {
     "id": "arxiv:2405.14982",
@@ -681,7 +1279,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2406.01638",
@@ -704,7 +1304,32 @@
     "matched_queries": [
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "chen2024timecma",
+    "group": "CUHK",
+    "paradigm": "LLM4TS",
+    "architecture": "Cross-Modality Aligned LLM",
+    "tokenization": "Channel-Wise Patching + Text Embeddings",
+    "prediction_head": "Aligned Output Head",
+    "params": "7B",
+    "pretrain_corpus": "Frozen Llama",
+    "tasks": [
+      "Multivariate Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2406.01638",
+    "url": "https://arxiv.org/abs/2406.01638"
   },
   {
     "id": "arxiv:2410.10469",
@@ -730,7 +1355,32 @@
       "Q1_native_tsfm",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "woo2024moiraimoe",
+    "group": "Salesforce",
+    "paradigm": "Native TSFM",
+    "architecture": "Sparse MoE Encoder-Decoder",
+    "tokenization": "Multi-patch Size Projection",
+    "prediction_head": "Parametric Mixture Distribution",
+    "params": "1.1B",
+    "pretrain_corpus": "LOTSA (27B observations)",
+    "tasks": [
+      "Probabilistic Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2024",
+    "code_url": "https://github.com/SalesforceAIResearch/uni2ts",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2410.10469",
+    "url": "https://arxiv.org/abs/2410.10469"
   },
   {
     "id": "arxiv:2410.14752",
@@ -750,7 +1400,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC1: Narrow task-specific model lacking cross-domain foundation pretraining"
   },
   {
     "id": "arxiv:2410.04803",
@@ -772,7 +1424,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "liu2024timerxl",
+    "group": "THUML",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only Long-Context",
+    "tokenization": "Hierarchical Context Patching",
+    "prediction_head": "Next-Patch Regression",
+    "params": "84M",
+    "pretrain_corpus": "UTSD-2",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024",
+    "code_url": "https://github.com/thuml/Large-Time-Series-Model",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2410.04803",
+    "url": "https://arxiv.org/abs/2410.04803"
   },
   {
     "id": "arxiv:2502.04395",
@@ -794,7 +1471,33 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "zhong2025timevlm",
+    "group": "Ming Jin / Monash",
+    "paradigm": "LLM4TS",
+    "architecture": "Multimodal Vision-Language Architecture (Qwen-VL / CLIP)",
+    "tokenization": "Gramian Angular Field / Plot Rendering + Text Prompts",
+    "prediction_head": "Autoregressive Visual-Language Predictor",
+    "params": "7B",
+    "pretrain_corpus": "Time-Vision Multimodal Benchmarks",
+    "tasks": [
+      "Multimodal Forecasting",
+      "Visual Time Series Reasoning"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2025",
+    "code_url": "https://github.com/CityMind-Lab/ICML25-TimeVLM",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2502.04395",
+    "url": "https://arxiv.org/abs/2502.04395"
   },
   {
     "id": "arxiv:2412.03104",
@@ -819,7 +1522,34 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "xie2024chatts",
+    "group": "Tsinghua / NetMan",
+    "paradigm": "LLM4TS",
+    "architecture": "Instruction-Tuned Multimodal LLM (ChatTS)",
+    "tokenization": "Quantized Patch Encodings + Synthetic Instruction Dialogues",
+    "prediction_head": "Autoregressive Conversational & Metric Output Head",
+    "params": "8B",
+    "pretrain_corpus": "Synthetic Conversational Temporal Corpus (SynTS-100K)",
+    "tasks": [
+      "Temporal Reasoning",
+      "Anomaly Attribution",
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2024",
+    "code_url": "https://github.com/NetManAIOps/ChatTS",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2412.03104",
+    "url": "https://arxiv.org/abs/2412.03104"
   },
   {
     "id": "arxiv:2410.10393",
@@ -843,7 +1573,32 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "salesforce2024gifteval",
+    "group": "Salesforce",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Evaluation Benchmark Suite",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Benchmark"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024 D&B",
+    "code_url": "https://github.com/SalesforceAIResearch/gift-eval",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2410.10393",
+    "url": "https://arxiv.org/abs/2410.10393"
   },
   {
     "id": "arxiv:2409.16040",
@@ -867,7 +1622,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "shi2024timemoe",
+    "group": "Ming Jin",
+    "paradigm": "Native TSFM",
+    "architecture": "Sparse Mixture-of-Experts (MoE)",
+    "tokenization": "Variable-Resolution Patching",
+    "prediction_head": "Autoregressive MoE Head",
+    "params": "2.4B",
+    "pretrain_corpus": "Time-300B (300B observations)",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2025",
+    "code_url": "https://github.com/Time-MoE/Time-MoE",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2409.16040",
+    "url": "https://arxiv.org/abs/2409.16040"
   },
   {
     "id": "arxiv:2503.01875",
@@ -891,7 +1671,34 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "jin2025timemqa",
+    "group": "Ming Jin",
+    "paradigm": "LLM4TS",
+    "architecture": "Decoder-only (Llama-3-8B)",
+    "tokenization": "Patch Alignment + Text QA",
+    "prediction_head": "Autoregressive Text/Value Head",
+    "params": "8B",
+    "pretrain_corpus": "Multi-domain MQA",
+    "tasks": [
+      "Question Answering",
+      "Forecasting",
+      "Anomaly Detection"
+    ],
+    "open_weights": true,
+    "venue": "ACL 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2503.01875",
+    "url": "https://arxiv.org/abs/2503.01875"
   },
   {
     "id": "arxiv:2408.17253",
@@ -913,7 +1720,32 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "chen2024visionts",
+    "group": "HKUST",
+    "paradigm": "LLM4TS",
+    "architecture": "Visual Masked Autoencoder (MAE Backbone)",
+    "tokenization": "1D Time Series Rendered as 2D Image Patches",
+    "prediction_head": "Pixel Reconstruction Head",
+    "params": "86M",
+    "pretrain_corpus": "ImageNet Pretrained MAE",
+    "tasks": [
+      "Zero-shot Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024",
+    "code_url": "https://github.com/chenhaotian/VisionTS",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2408.17253",
+    "url": "https://arxiv.org/abs/2408.17253"
   },
   {
     "id": "arxiv:2501.02945",
@@ -933,7 +1765,32 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "muller2025tabpfnts",
+    "group": "Freiburg",
+    "paradigm": "Native TSFM",
+    "architecture": "Prior-Data Fitted Network (TabPFN Transformer)",
+    "tokenization": "Point-Context Conditioning",
+    "prediction_head": "Direct Bayesian Posterior Distribution",
+    "params": "not reported",
+    "pretrain_corpus": "Synthetic Prior Stochastic Processes",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2501.02945",
+    "url": "https://arxiv.org/abs/2501.02945"
   },
   {
     "id": "arxiv:2502.00816",
@@ -958,7 +1815,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "thuml2025sundial",
+    "group": "THUML",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only",
+    "tokenization": "Multi-rate Adaptive Patching",
+    "prediction_head": "Autoregressive Continuous Head",
+    "params": "1.5B",
+    "pretrain_corpus": "UTSD-3 (>10B points)",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": "https://github.com/thuml/Sundial",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2502.00816",
+    "url": "https://arxiv.org/abs/2502.00816"
   },
   {
     "id": "arxiv:2410.16032",
@@ -980,7 +1862,35 @@
     "comment": "Accepted by the 13th International Conference on Learning Representations (ICLR 2025)",
     "journal_ref": null,
     "matched_queries": [],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "wang2024timemixerplus",
+    "group": "Ming Jin",
+    "paradigm": "Native TSFM",
+    "architecture": "Multiscale Mixer Backbone",
+    "tokenization": "Decomposable Patching",
+    "prediction_head": "Universal Head",
+    "params": "not reported",
+    "pretrain_corpus": "not reported",
+    "tasks": [
+      "Forecasting",
+      "Classification",
+      "Anomaly Detection",
+      "Imputation"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2410.16032",
+    "url": "https://arxiv.org/abs/2410.16032"
   },
   {
     "id": "arxiv:2410.11674",
@@ -1002,7 +1912,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2410.24087",
@@ -1023,7 +1935,32 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "das2024incontext",
+    "group": "Google",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only",
+    "tokenization": "In-context Patch Sequence",
+    "prediction_head": "Continuous Head",
+    "params": "200M",
+    "pretrain_corpus": "100B points",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024 Workshop",
+    "code_url": "https://github.com/google-research/timesfm",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2410.24087",
+    "url": "https://arxiv.org/abs/2410.24087"
   },
   {
     "id": "arxiv:2412.11376",
@@ -1047,7 +1984,33 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "zhang2024chattime",
+    "group": "ZJU",
+    "paradigm": "LLM4TS",
+    "architecture": "Multimodal LLM",
+    "tokenization": "Interleaved Numeric Patch & Token",
+    "prediction_head": "Language & Signal Head",
+    "params": "7B",
+    "pretrain_corpus": "ChatTime Multi-modal Corpus",
+    "tasks": [
+      "Forecasting",
+      "Text-TS Reasoning"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2412.11376",
+    "url": "https://arxiv.org/abs/2412.11376"
   },
   {
     "id": "arxiv:2509.25826",
@@ -1072,7 +2035,32 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "zhang2025kairos",
+    "group": "NUS",
+    "paradigm": "Native TSFM",
+    "architecture": "Parameter-Efficient Transformer",
+    "tokenization": "Adaptive Frequency Patching",
+    "prediction_head": "Linear Head",
+    "params": "not reported",
+    "pretrain_corpus": "Multi-domain Temporal Corpora",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2509.25826",
+    "url": "https://arxiv.org/abs/2509.25826"
   },
   {
     "id": "arxiv:2510.13654",
@@ -1093,7 +2081,32 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "gong2025rethinkingeval",
+    "group": "Monash / HKUST",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Information Leakage Audit",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Benchmark Audit"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2510.13654",
+    "url": "https://arxiv.org/abs/2510.13654"
   },
   {
     "id": "arxiv:2510.03255",
@@ -1124,7 +2137,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "wu2025scits",
+    "group": "Wuhan Univ / Shanghai AI Lab",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Universal Benchmark & Unified TimeOmni Framework",
+    "tokenization": "Unified High-Frequency Sampling + Dual Discrete/Continuous Tokens",
+    "prediction_head": "Multi-Task Unified Regression and Generation Head",
+    "params": "not reported",
+    "pretrain_corpus": "SciTS-Bench (12 Domains, 43 Tasks, >50K Instances)",
+    "tasks": [
+      "Scientific Benchmark",
+      "Scientific TS Understanding & Generation"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2510.03255",
+    "url": "https://arxiv.org/abs/2510.03255"
   },
   {
     "id": "arxiv:2509.24803",
@@ -1150,7 +2189,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "jin2025timeomni",
+    "group": "Ming Jin",
+    "paradigm": "LLM4TS",
+    "architecture": "Decoder-only Multi-modal",
+    "tokenization": "Patch-Text Interleaving",
+    "prediction_head": "Reasoning & Value Tokens",
+    "params": "8B",
+    "pretrain_corpus": "TimeOmni-Dataset",
+    "tasks": [
+      "Reasoning",
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2509.24803",
+    "url": "https://arxiv.org/abs/2509.24803"
   },
   {
     "id": "arxiv:2510.02410",
@@ -1189,7 +2254,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "raj2025opentslm",
+    "group": "Stanford",
+    "paradigm": "LLM4TS",
+    "architecture": "Domain-Specific Medical LLM",
+    "tokenization": "Physiological Wavelet Patching + Clinical Text",
+    "prediction_head": "Clinical Event Prediction Head",
+    "params": "8B",
+    "pretrain_corpus": "MIMIC-IV Waveforms + Notes",
+    "tasks": [
+      "Clinical Forecasting",
+      "Diagnosis"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2510.02410",
+    "url": "https://arxiv.org/abs/2510.02410"
   },
   {
     "id": "arxiv:2512.11251",
@@ -1217,7 +2308,33 @@
     "matched_queries": [
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "zhang2025insightminer",
+    "group": "HKUST / MSRA",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Cross-Domain Alignment Dataset & Evaluation Pipeline",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "InsightMiner Corpus (1.2M Multi-Domain TS-Text Pairs)",
+    "tasks": [
+      "Cross-Domain Alignment Benchmark",
+      "Evaluation"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2512.11251",
+    "url": "https://arxiv.org/abs/2512.11251"
   },
   {
     "id": "arxiv:2602.01588",
@@ -1234,7 +2351,9 @@
     "comment": "Accepted at AISTATS 2026",
     "journal_ref": null,
     "matched_queries": [],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC1: Narrow task-specific model lacking cross-domain foundation pretraining"
   },
   {
     "id": "arxiv:2505.23719",
@@ -1258,7 +2377,33 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "auer2025tirex",
+    "group": "JKU Linz / ELLIS",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only In-Context Transformer",
+    "tokenization": "Dual-Horizon Dynamic Patching",
+    "prediction_head": "Continuous Distributional Head",
+    "params": "150M",
+    "pretrain_corpus": "Curated Multi-Resolution Temporal Corpus (50B tokens)",
+    "tasks": [
+      "Zero-shot Forecasting",
+      "Long-Horizon Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2505.23719",
+    "url": "https://arxiv.org/abs/2505.23719"
   },
   {
     "id": "arxiv:2505.14766",
@@ -1293,7 +2438,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC1: General review/survey without novel empirical model artifact"
   },
   {
     "id": "arxiv:2506.06005",
@@ -1317,7 +2464,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_fulltext",
+    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
   {
     "id": "arxiv:2506.11029",
@@ -1339,7 +2488,32 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "liu2025yinglong",
+    "group": "Tsinghua / THUML",
+    "paradigm": "Native TSFM",
+    "architecture": "Autoregressive Transformer with Delayed CoT",
+    "tokenization": "Multivariate Patching",
+    "prediction_head": "Reasoning & Value Tokens",
+    "params": "not reported",
+    "pretrain_corpus": "Large-scale Spatio-Temporal Corpus",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2506.11029",
+    "url": "https://arxiv.org/abs/2506.11029"
   },
   {
     "id": "arxiv:2512.14253",
@@ -1362,7 +2536,33 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "wu2025flame",
+    "group": "Zhejiang Univ / Westlake",
+    "paradigm": "Native TSFM",
+    "architecture": "Continuous Flow-Enhanced Legendre Memory Model",
+    "tokenization": "Continuous Legendre Polynomial State Projections",
+    "prediction_head": "Continuous Flow Transport Head",
+    "params": "45M",
+    "pretrain_corpus": "Diverse Physical and Biological Waveform Corpora",
+    "tasks": [
+      "Zero-shot Continuous Forecasting",
+      "Long-term Imputation"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2512.14253",
+    "url": "https://arxiv.org/abs/2512.14253"
   },
   {
     "id": "arxiv:2508.05287",
@@ -1382,7 +2582,32 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "king2025flowstate",
+    "group": "MIT",
+    "paradigm": "Native TSFM",
+    "architecture": "Continuous Flow-Matching State-Space Model",
+    "tokenization": "Continuous Sampling-Rate Equivariant Embeddings",
+    "prediction_head": "Flow Velocity Field",
+    "params": "not reported",
+    "pretrain_corpus": "Synthetic + Multi-rate Sensor Streams",
+    "tasks": [
+      "Irregular Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2508.05287",
+    "url": "https://arxiv.org/abs/2508.05287"
   },
   {
     "id": "arxiv:2511.11698",
@@ -1409,7 +2634,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "woo2025moirai2",
+    "group": "Salesforce",
+    "paradigm": "Native TSFM",
+    "architecture": "Encoder-Decoder",
+    "tokenization": "Dynamic Patching",
+    "prediction_head": "Distributional Mixture Head",
+    "params": "311M",
+    "pretrain_corpus": "LOTSA v2",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": "https://github.com/SalesforceAIResearch/uni2ts",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2511.11698",
+    "url": "https://arxiv.org/abs/2511.11698"
   },
   {
     "id": "arxiv:2510.15821",
@@ -1449,7 +2699,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "ansari2025chronos2",
+    "group": "Amazon",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only Universal Transformer",
+    "tokenization": "Quantized Bins + Continuous Residuals",
+    "prediction_head": "Hybrid Distribution Head",
+    "params": "710M",
+    "pretrain_corpus": "Extended TSMix + Kernel Bank",
+    "tasks": [
+      "Multivariate Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": "https://github.com/amazon-science/chronos-forecasting",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2510.15821",
+    "url": "https://arxiv.org/abs/2510.15821"
   },
   {
     "id": "arxiv:2602.14024",
@@ -1473,7 +2748,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2602.17001",
@@ -1496,7 +2773,9 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2602.17149",
@@ -1517,7 +2796,34 @@
     "comment": "Accepted by the Forty-third International Conference on Machine Learning (ICML 2026)",
     "journal_ref": null,
     "matched_queries": [],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "guan2026timeomnivl",
+    "group": "Monash / CSIRO",
+    "paradigm": "LLM4TS",
+    "architecture": "Unified Vision-Language-Time Series Foundation Model",
+    "tokenization": "Omni-Modality Tri-Token Interleaving (Vision-Language-Signal)",
+    "prediction_head": "Bidirectional Diffusion-Autoregressive Generation Head",
+    "params": "9B",
+    "pretrain_corpus": "OmniTS Multimodal Pretraining Suite",
+    "tasks": [
+      "Understanding",
+      "Generation",
+      "Zero-shot Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2602.17149",
+    "url": "https://arxiv.org/abs/2602.17149"
   },
   {
     "id": "arxiv:2608.17299",
@@ -1538,7 +2844,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2609.24156",
@@ -1559,7 +2867,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2602.12147",
@@ -1586,7 +2896,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_fulltext",
+    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
   {
     "id": "arxiv:2609.26389",
@@ -1609,7 +2921,9 @@
       "Q2_llm4ts",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC1: Narrow task-specific model lacking cross-domain foundation pretraining"
   },
   {
     "id": "arxiv:2609.15087",
@@ -1635,7 +2949,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_fulltext",
+    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
   {
     "id": "arxiv:2603.04791",
@@ -1662,7 +2978,32 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "thuml2026timers1",
+    "group": "THUML",
+    "paradigm": "Native TSFM",
+    "architecture": "Mixture-of-Experts (MoE)",
+    "tokenization": "Serial Patching",
+    "prediction_head": "MoE Regression",
+    "params": "8.3B",
+    "pretrain_corpus": "UTSD-3",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2603.04791",
+    "url": "https://arxiv.org/abs/2603.04791"
   },
   {
     "id": "arxiv:2607.06973",
@@ -1683,7 +3024,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_fulltext",
+    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
   {
     "id": "arxiv:2605.09395",
@@ -1709,7 +3052,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2609.24559",
@@ -1734,7 +3079,33 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "meyer2026t0",
+    "group": "ETH Zurich / Invenia Labs",
+    "paradigm": "Native TSFM",
+    "architecture": "Autoregressive Context-Conditioned Transformer ($t_0$)",
+    "tokenization": "Multivariate Context Embedding + Variable-Rate Patches",
+    "prediction_head": "Quantile Mixture Autoregressive Head",
+    "params": "350M",
+    "pretrain_corpus": "Contextualized Open Temporal Database (120B observations)",
+    "tasks": [
+      "Context-conditioned Forecasting",
+      "Zero-shot Probabilistic Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2609.24559",
+    "url": "https://arxiv.org/abs/2609.24559"
   },
   {
     "id": "arxiv:2605.25045",
@@ -1754,7 +3125,9 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_fulltext",
+    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
   {
     "id": "arxiv:2606.06285",
@@ -1781,7 +3154,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2609.13956",
@@ -1810,7 +3185,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_fulltext",
+    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
   {
     "id": "arxiv:2605.20119",
@@ -1839,7 +3216,33 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "datadog2026toto2",
+    "group": "Datadog",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only Scaled Transformer",
+    "tokenization": "Quantized Wavelet Tokens",
+    "prediction_head": "Quantile & Anomaly Distribution",
+    "params": "1.2B",
+    "pretrain_corpus": "Enterprise Telemetry (1.5 Trillion Points)",
+    "tasks": [
+      "Forecasting",
+      "Anomaly Detection"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2605.20119",
+    "url": "https://arxiv.org/abs/2605.20119"
   },
   {
     "id": "arxiv:2606.16173",
@@ -1864,7 +3267,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_title",
+    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
   {
     "id": "arxiv:2609.25788",
@@ -1883,7 +3288,32 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "li2026evaluatingreliability",
+    "group": "TU Munich",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Probabilistic Calibration Harness",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Probabilistic Evaluation"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2609.25788",
+    "url": "https://arxiv.org/abs/2609.25788"
   },
   {
     "id": "arxiv:2609.27385",
@@ -1901,7 +3331,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "excluded_fulltext",
+    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
   {
     "id": "arxiv:2211.14730",
@@ -1921,7 +3353,32 @@
       "Q1_native_tsfm",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "nie2023patchtst",
+    "group": "UC Berkeley",
+    "paradigm": "Native TSFM",
+    "architecture": "Channel-Independent Transformer Encoder",
+    "tokenization": "Subseries Patching (length 16, stride 8)",
+    "prediction_head": "Linear Flattening Head",
+    "params": "not reported",
+    "pretrain_corpus": "Self-supervised Masked Patch Modeling",
+    "tasks": [
+      "Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2023",
+    "code_url": "https://github.com/yuqinie98/PatchTST",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2211.14730",
+    "url": "https://arxiv.org/abs/2211.14730"
   },
   {
     "id": "arxiv:2406.16964",
@@ -1943,6 +3400,78 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 07:23:23"
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "fons2024arellmsuseful",
+    "group": "Imperial College London / Oxford",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Critique & Empirical Analysis",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Empirical Critique"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2406.16964",
+    "url": "https://arxiv.org/abs/2406.16964"
+  },
+  {
+    "id": "arxiv:2308.08241",
+    "arxiv_id": "2308.08241",
+    "title": "TEST: Text Prototype Aligned Embedding to Activate LLM's Ability for Time Series",
+    "authors": [
+      "Chenxi Sun",
+      "Hongyan Li",
+      "Yaliang Li",
+      "Shenda Hong"
+    ],
+    "release_date": "2023-08-16",
+    "summary": "This work summarizes two ways to accomplish Time-Series (TS) tasks in today's Large Language Model (LLM) context: LLM-for-TS (model-centric) designs and trains a fundamental large model, or fine-tunes a pre-trained LLM for TS data; TS-for-LLM (data-centric) converts TS into a model-friendly representation to enable the pre-trained LLM to handle TS data. Given the lack of data, limited resources, semantic context requirements, and so on, this work focuses on TS-for-LLM, where we aim to activate LLM's ability for TS data by designing a TS embedding method suitable for LLM. The proposed method is named TEST. It first tokenizes TS, builds an encoder to embed TS via instance-wise, feature-wise, and text-prototype-aligned contrast, where the TS embedding space is aligned to LLM embedding layer space, then creates soft prompts to make LLM more open to that embeddings, and finally implements TS tasks using the frozen LLM. We also demonstrate the feasibility of TS-for-LLM through theory and experiments. Experiments are carried out on TS classification, forecasting, and representation tasks using eight frozen LLMs with various structures and sizes. The results show that the pre-trained LLM with TEST strategy can achieve better or comparable performance than today's SOTA TS models and offer benefits for few-shot and generalization. By treating LLM as the pattern machine, TEST can endow LLM's ability to process TS data without compromising language ability. We hope that this study will serve as a foundation for future work to support TS+LLM progress.",
+    "comment": "Preprint",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q1_native_tsfm",
+      "Q2_llm4ts"
+    ],
+    "retrieved_at": "2026-09-24 10:47:05",
+    "status": "included",
+    "screen_date": "2026-09-24",
+    "bibkey": "sun2023test",
+    "group": "PKU / Alibaba",
+    "paradigm": "LLM4TS",
+    "architecture": "Frozen LLM (BERT/GPT-2) with Contrastive Prototype Alignment",
+    "tokenization": "Instance & Feature Contrastive Patches",
+    "prediction_head": "Linear Residual Output Head",
+    "params": "110M to 350M",
+    "pretrain_corpus": "Pretrained LLM + Text Prototype Alignment",
+    "tasks": [
+      "Forecasting",
+      "Classification",
+      "Representation"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2308.08241",
+    "url": "https://arxiv.org/abs/2308.08241"
   }
 ]

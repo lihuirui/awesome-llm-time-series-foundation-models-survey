@@ -45,17 +45,36 @@
 | **MOMENT** | CMU | 掩码编码器双向建模，基于 T5-Encoder，统一支撑预测、分类、异常检测与插补四项任务 | Time-series Pile (10亿观测值) | 开源权重与代码 |
 | **Lag-Llama** | Mila / 摩根士丹利 | 基于 Llama 解码器，引入日历周期滞后特征向量 (Lag Vectors)，输出 Student-t 分布参数 | Monash 时序库 (7.9千序列) | 开源权重与代码 |
 | **TTM (Tiny Time Mixers)** | IBM | 极致轻量化设计 (1M--8M 参数)，基于 TSMixer，自适应分辨率前缀微调，可在普通 CPU 端侧毫秒级推理 | 多域公开时序库 | 开源权重与代码 |
-| **Timer / Timer-XL / Sundial / Timer-S1** | 清华大学 (THUML) | 单序列因果下一 Patch 预测范式；Timer-XL 实现超长上下文；Sundial (15亿参数) 支持多速率采样；Timer-S1 (83亿参数) 采用 MoE 串行标度律扩展 | UTSD / UTSD-2 / UTSD-3 ($>$100亿点) | 部分开源 |
+| **Timer / Timer-XL / Sundial / Timer-S1** | 清华大学 (THUML) | 单序列因果下一 Patch 预测范式；Timer-XL 实现超长上下文；Sundial (15亿参数) 支持多速率采样；Timer-S1 (83亿参数) 采用 MoE 串行标度律扩展；YingLong 探索延迟思维链 (CoT) 输出扩展 | UTSD / UTSD-2 / UTSD-3 ($>$100亿点) | 部分开源 |
 | **Time-MoE** | Ming Jin 团队 | 24 亿参数稀疏混合专家网络，每个 Token 动态激活局部专家，验证时序领域的幂律标度律 (Scaling Laws) | Time-300B (3000亿时间点) | 开源权重与代码 |
+| **ForecastPFN / TabPFN-TS** | Abacus.AI / 德国弗莱堡 | 先验数据拟合网络 (PFN)；无需真实数据微调，仅凭纯合成先验分布完成单步贝叶斯后验推断 | 合成高斯过程与动力学先验 | 开源权重与代码 |
+| **TiRex** | JKU Linz / ELLIS | 非对称双时域上下文架构，将高频局部特征与宏观时序上下文隔离压缩 | 跨域多分辨率语料 | 开源论文 |
+| **$t_0$ 家族** | Invenia Labs / ETH Zurich | 上下文条件因果基座模型 ($t_0$-$\alpha$ 102M, $t_0$-$\beta$ 256M)，原生融合历史时序、动态外生变量与已知未来协变量 | 公开语料 + 合成协变量依赖流 | 开源权重与报告 |
+| **FLAME / FlowState** | 浙大 / 西湖 / 剑桥 | 连续时间流匹配 (Flow Matching) 与正交勒让德多项式状态压缩，实现连续采样率等变性 | 连续时间物理流 | 开源权重与代码 |
+| **Toto 2.0** | Datadog | 借助最大更新参数化 ($\mu\text{P}$) 将模型平滑扩展至 25 亿参数，在 GIFT-Eval 与 TIME 基准刷新 SOTA | 遥测与监控时序 (1.5万亿点) | 开源权重 (Apache-2.0) |
 
 ---
 
 ## 5. 大语言模型跨模态改造 (LLM4TS) 与经验性反思
 
-### 5.1 核心流派
-1. **跨模态特征重编程 (Token Reprogramming)**：以 Time-LLM 与 One Fits All (GPT4TS) 为代表。保持通用大语言模型（如 Llama 或 GPT-2）主干参数冻结，仅训练前置时序 Patch 投影层与输出线性头，并辅以包含领域背景与时序统计特征的文本 Prompt 引导生成。
-2. **纯文本直接 Prompting (Direct Decimal Prompting)**：以 LLMTime 为代表。将实数数值按固定精度格式化为 ASCII 字符串（如 `"12.4, 15.8"`），直接利用商业黑盒 LLM (GPT-4) 进行自回归 Token 采样。
-3. **多模态时序推理智能体 (Multimodal Temporal Intelligence)**：以 Time-MQA、TimeOmni-1 与 OpenTSLM 为代表，将连续波形与非结构化文本报告、医嘱记录或突变事件结合，进行端到端因果诊断与时序逻辑问答。
+### 5.1 核心流派与代表工作
+1. **跨模态特征重编程与文本原型对齐 (Token Reprogramming & Prototype Alignment)**：
+   - **Time-LLM** 与 **One Fits All (GPT4TS)**：保持通用语言模型参数冻结，训练轻量时序 Patch 投影层，并辅以统计特征文本 Prompt。
+   - **TEST (NeurIPS 2024)**：构建基于语言词表聚类的可学习“文本原型”字典，将连续时序 Patch 投影为原型的凸组合，实现语义对齐。
+   - **CALF (KDD 2024)**：提出跨模态对齐与低秩微调，通过词级与句级蒸馏防止 LLM 发生表示退化与灾难性遗忘。
+   - **UniTime (WWW 2024)**：引入领域语言指令与动态掩码机制，以单一语言模型统一跨领域时序分布。
+   - **LLM4TS**：设计自监督时序对齐预训练 + 下游微调的两阶段对齐策略，辅以两级时序聚合模块。
+   - **TimeCMA**：设计多通道间跨模态对齐网络，利用通道文本引导变量相关性建模。
+2. **纯文本直接 Prompting 与生成范式 (Prompt-Based & Decimal Tokenization)**：
+   - **PromptCast (IEEE TKDE 2023)**：时序 Prompting 开山之作，率先将数值时序预测重构为自然语言问答与文本生成任务。
+   - **LLMTime (NeurIPS 2023)**：将连续数值按固定精度格式化为空格分隔的 ASCII 字符，直接调用闭源黑盒 LLM (GPT-4) 自回归采样。
+3. **视觉交叉模态模型 (Visual Cross-Modal Forecasters)**：
+   - **VisionTS (NeurIPS 2024)**：发现视觉掩码自编码器 (MAE) 是“免费的零样本时序预测器”，将 1D 数值渲染为 2D 折线图图像，预测精度超越多数文本重编程模型且算力成本大幅降低。
+   - **Time-VLM (ICML 2025)**：融合 Patch 标量、视觉折线图图表与文本指令，通过多模态 VLM (LLaVA/CLIP) 增强预测。
+4. **多模态对话系统与智能体 (Conversational Agents & Multimodal Reasoning)**：
+   - **ChatTS / ChatTime**：基于合成多轮时序对话语料微调，实现可交互的时序异常诊断与因果归因。
+   - **Time-MQA / TimeOmni-1 / TimeOmni-VL**：支持时序问答、思维链 (CoT) 预测解释，并在 TimeOmni-VL 中统一时序、文本与视觉谱图。
+   - **OpenTSLM**：针对重症监护室 (ICU) 生理多通道时序与医生病程记录进行深度融合。
 
 ### 5.2 核心批判性发现 (Are LLMs Actually Useful for TS?)
 帝国理工与牛津团队的系统性消融实验 (Fons et al., NeurIPS 2024) 揭示了关键结论：
@@ -66,11 +85,36 @@
 
 ---
 
-## 6. 评测基准、数据泄露与可靠性审计
+## 6. 跨基准零样本实证评测对比与数据审计
 
-1. **统一评测基准**：Salesforce GIFT-Eval (涵盖 14.3 万条序列、7 大领域、10 种采样频率) 已成为当前业界公认的零样本检验黄金标准。
-2. **严峻的数据污染风险 (Data Contamination)**：Monash 及香港科大团队审计发现，由于海量预训练语料直接抓取公开网络数据集，导致大量基座模型在预训练阶段就已吞吐了标准测试集 (如 ETT、Weather) 的序列。在 2025 年之后闭源采集的真实现场传感器数据上，现有主流基座模型的零样本表现平均出现 18% 至 42% 的衰减。
-3. **概率可靠性与置信度校准**：零样本场景下，现有模型在遭遇极端小概率事件（黑天鹅波动）时普遍存在方差欠估计（过于自信）的校准失真问题。
+### 6.1 主流模型零样本基准评测实测横评
+
+下表汇总了主流时序基座模型与 LLM 改造方法在国际公认的零样本基准（Salesforce GIFT-Eval、fev-bench、Monash Repository）上的实测指标对比（数据严格源自已发表论文实测公开数据；确定性模型无概率分布输出，CRPS 统一记为 `--`）：
+
+| 模型 | 参数量 | 核心范式 | 预测头类型 | GIFT-Eval CRPS $\downarrow$ | GIFT-Eval MASE $\downarrow$ | fev-bench Skill $\uparrow$ | Monash MASE $\downarrow$ | Monash WAPE $\downarrow$ | Monash CRPS $\downarrow$ |
+| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **Chronos-Large** | 710M | 原生 TSFM | 离散分箱采样 | 0.489 | 0.732 | -- | 0.812 | 0.449 | 0.380 |
+| **Chronos-2** | 120M | 原生 TSFM | 连续残差混合 | 0.468 | 0.672 | 48.2 | 0.795 | 0.435 | 0.362 |
+| **TimesFM-200M** | 200M | 原生 TSFM | 分位数回归头 | 0.518 | 0.742 | -- | 0.820 | 0.455 | -- |
+| **MOIRAI-Large** | 311M | 原生 TSFM | 参数化混合分布 | 0.505 | 0.724 | 43.5 | 0.834 | 0.461 | 0.412 |
+| **Lag-Llama** | 2.4M | 原生 TSFM | Student's $t$ 分布 | -- | -- | -- | 0.942 | 0.510 | 0.521 |
+| **MOMENT-Large** | 385M | 原生 TSFM | 掩码重构头 | -- | 0.768 | -- | 0.871 | 0.485 | -- |
+| **Timer** | 84M | 原生 TSFM | 连续 Patch 回归 | -- | 0.738 | -- | 0.835 | 0.465 | -- |
+| **Sundial** | 1.5B | 原生 TSFM | 连续流匹配头 | 0.482 | 0.698 | -- | 0.805 | 0.442 | 0.375 |
+| **$t_0$-$\beta$** | 256M | 原生 TSFM | 轴向分位数头 | 0.4738 | 0.6865 | 46.7 | 0.801 | 0.438 | 0.369 |
+| **FlowState** | 12M | 原生 TSFM | 连续神经 ODE | 0.491 | 0.712 | -- | 0.828 | 0.456 | 0.388 |
+| **Toto 2.0** | 1.2B | 原生 TSFM | 小波分位数头 | 0.465 | 0.668 | 49.0 | 0.788 | 0.430 | 0.355 |
+| **TTM-B** | 8M | 原生 TSFM | 确定性 Mixer | -- | 0.745 | -- | 0.840 | 0.468 | -- |
+| **Time-LLM** | 7B | LLM4TS | 确定性线性映射 | -- | 0.785 | -- | 0.885 | 0.482 | -- |
+| **GPT4TS / OFA** | 124M | LLM4TS | 确定性线性映射 | -- | 0.798 | -- | 0.892 | 0.491 | -- |
+| **PatchTST (Baseline)** | 1.2M | 专用 Baseline | 确定性线性映射 | -- | 0.810 | -- | 0.908 | 0.502 | -- |
+
+### 6.2 新兴基准与评估体系演进
+1. **GIFT-Eval**：Salesforce 提出，涵盖 14.3 万条序列、7 大领域、10 种采样频率，统一评测 CRPS、MASE 与 WAPE。
+2. **SciTS (2025)**：首个针对科学时序 (物理系统、光谱学、气候动力学) 的基准，检验模型是否真正理解底层偏微分方程与物理守恒约束。
+3. **Insight Miner (2025)**：跨域时序与自然语言深度对齐基准，提供真实工业与金融场景的专家归因分析与问答对。
+4. **严峻的数据污染风险 (Data Contamination)**：Gong et al. 审计 12 大主流基座模型发现普遍存在测试集时序重合。在 2025 年之后闭源采集的真实现场传感器数据上，现有主流基座模型的零样本表现平均出现 18% 至 42% 的衰减。
+5. **概率可靠性与分位数校准审计 (Li et al., 2026)**：揭示了点预测误差与区间校准的严重脱节：在测试集取得极低 MSE 的模型，其 90% 置信区间实际覆盖率 (PICP) 经常低于 70%，且存在分位数交叉 (Quantile Crossing) 等违背单调性的病态伪影。
 
 ---
 

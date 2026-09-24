@@ -13,9 +13,14 @@ Introduced by Ming Jin et al., Time-LLM~\cite{jin2023timellm} establishes a cano
 \subsubsection{One Fits All (GPT4TS / OFA): Universal Backbone Sharing}
 In One Fits All (GPT4TS)~\cite{zhou2023onefitsall}, Zhou et al. explore the minimal adaptation required to transfer language transformers to temporal tasks. By taking a pre-trained GPT-2 backbone, freezing its self-attention and feed-forward layers, and retraining only an input linear patch embedder and output layer, GPT4TS achieves state-of-the-art results across forecasting, anomaly detection, classification, and imputation. The authors argue that multi-head self-attention trained on natural language acts as a universal sequence engine capable of recognizing temporal autocorrelation and periodic waveforms.
 
-\subsubsection{Decomposition and Semantic Prompting}
-Subsequent works enhance cross-modal alignment:
+\subsubsection{Decomposition, Prototype Alignment, and Distillation}
+Subsequent works systematically refine cross-modal reprogramming:
 \begin{itemize}[leftmargin=*]
+    \item \emph{TEST}~\cite{sun2023test}: Sun et al. identify the semantic gap between continuous temporal tokens and discrete word embeddings. TEST constructs a learnable dictionary of \emph{text prototypes} derived from language vocabulary clusters. By mapping temporal patches onto convex combinations of text prototypes, TEST aligns time-series patterns with linguistic semantics before feeding them into the frozen LLM.
+    \item \emph{CALF}~\cite{liu2024calf}: Liu et al. address catastrophic representation degradation during cross-modal adaptation. CALF introduces Cross-modal Alignment and Low-rank Fine-tuning, utilizing word-level and sentence-level semantic distillation to preserve the backbone's latent sequence modeling capabilities while aligning temporal features.
+    \item \emph{UniTime}~\cite{liu2024unitime}: Liu et al. design a language-empowered unified model for cross-domain forecasting. By introducing domain-specific language instructions and dynamic masking, UniTime transfers a single LLM across multiple distinct data distributions without catastrophic interference.
+    \item \emph{LLM4TS}~\cite{chang2023llm4ts}: Chang et al. propose a two-stage alignment strategy: a self-supervised time-series alignment pre-training phase followed by downstream forecasting fine-tuning, coupled with a two-level temporal aggregation module to capture multi-scale seasonality.
+    \item \emph{TimeCMA}~\cite{chen2024timecma}: Chen et al. design cross-modality alignment between multivariate channels and language representations, using channel-wise text prompts to guide inter-series dependency modeling.
     \item \emph{TEMPO}~\cite{cao2023tempo}: Decomposes input series into trend, seasonal, and residual components using classical STL decomposition. Each component is independently embedded and guided by specialized prompts, enabling the language model to reason over modular temporal dynamics.
     \item \emph{S$^2$IP-LLM}~\cite{wu2024s2ipllm}: Introduces semantic-space informed prompting, projecting statistical temporal attributes into dense semantic embeddings that constrain the LLM's generative search space.
 \end{itemize}
@@ -24,7 +29,11 @@ Subsequent works enhance cross-modal alignment:
 
 Rather than learning adapter layers, direct prompting methods interact with off-the-shelf closed or open LLMs (such as GPT-4 or Llama-3) by formatting numeric series as text strings.
 
-In LLMTime~\cite{gruver2023llmtime}, Gruver et al. treat time series as comma-separated ASCII digit strings (e.g., ``\texttt{12.4, 15.8, 14.2}''). By appropriately scaling the series, rounding to fixed decimal precision, and formatting with spaces between digits to ensure consistent tokenization, standard language models predict future values autoregressively via temperature sampling. This enables probabilistic forecasting without any fine-tuning.
+\subsubsection{Foundations: PromptCast and Generative Formulation}
+The paradigm of casting numerical forecasting as text generation was pioneered by Xue and Salim in \emph{PromptCast}~\cite{xue2022promptcast}. Rather than treating forecasting as numerical regression, PromptCast encodes historical observations into natural language questions (e.g., ``\emph{Given the temperature readings of the past 24 hours, what will be the temperature over the next 6 hours?}'') and trains generative language models (BART, T5) to synthesize the numerical forecast directly as text output. PromptCast established that language generation objectives can compete with traditional numerical loss formulations.
+
+\subsubsection{Decimal String Modeling: LLMTime}
+In LLMTime~\cite{gruver2023llmtime}, Gruver et al. generalize this principle to frozen zero-shot foundation models (GPT-4, Llama-2). By formatting time series as comma-separated ASCII digit strings (e.g., ``\texttt{12.4, 15.8, 14.2}'') with spaces between digits to enforce consistent tokenization, standard language models predict future values autoregressively via temperature sampling. This enables probabilistic forecasting without any fine-tuning.
 
 However, direct decimal prompting incurs severe practical drawbacks:
 \begin{enumerate}[leftmargin=*]
@@ -33,12 +42,24 @@ However, direct decimal prompting incurs severe practical drawbacks:
     \item \emph{Financial Cost}: Using proprietary commercial API endpoints (e.g., GPT-4) for enterprise-scale industrial monitoring with thousands of sensors results in prohibitive recurring costs.
 \end{enumerate}
 
-\subsection{Multimodal Integration and Agentic Reasoning}
+\subsection{Multimodal Integration, Vision-Language Adapters, and Conversational Agents}
 
-Where LLMs demonstrate distinct superiority over native TSFMs is in multimodal context integration—scenarios requiring the simultaneous reasoning over continuous numerical series and textual domain context.
+Where LLMs demonstrate distinct superiority over native TSFMs is in multimodal context integration—scenarios requiring the simultaneous reasoning over continuous numerical series, visual waveforms, and textual domain context.
+
+\subsubsection{Visual Cross-Modal Forecasters}
+A remarkable alternative to text reprogramming is the utilization of visual foundation models:
 \begin{itemize}[leftmargin=*]
-    \item \emph{Time-MQA}~\cite{jin2025timemqa}: Formulates multi-task question answering, enabling users to query numerical waveforms using natural language questions (e.g., ``\emph{Did the turbine vibration exceed safety thresholds after 14:00?}'').
-    \item \emph{TimeOmni-1}~\cite{jin2025timeomni}: Introduces multi-modal temporal reasoning, training LLMs to generate both numeric forecasts and chain-of-thought rationales explaining the forecasted trajectory.
-    \item \emph{OpenTSLM}~\cite{raj2025opentslm}: Specializes multimodal reasoning for healthcare, integrating multi-channel ICU physiological waveforms (ECG, arterial blood pressure) with clinical notes and physician orders.
+    \item \emph{VisionTS}~\cite{chen2024visionts}: Chen et al. uncover that visual masked autoencoders (e.g., MAE pretrained on ImageNet) act as ``free-lunch'' zero-shot forecasters. By rendering 1D numerical trajectories into 2D line plot images, VisionTS reformulates forecasting as image inpainting. VisionTS matches or outperforms text-based LLMs while requiring substantially lower computational resources.
+    \item \emph{Time-VLM}~\cite{zhong2025timevlm}: Zhong et al. explore multimodal Vision-Language Models (e.g., LLaVA, CLIP) for augmented forecasting. By jointly processing numerical patch tokens, visual line charts, and domain prompts, Time-VLM leverages complementary visual-textual inductive biases.
 \end{itemize}
-These developments suggest that while native TSFMs dominate raw numeric prediction, repurposed LLMs serve as powerful cognitive orchestrators for hybrid temporal-textual intelligence.
+
+\subsubsection{Conversational Agents and Omni-Modal Intelligence}
+Recent works develop full-fledged conversational and analytical systems:
+\begin{itemize}[leftmargin=*]
+    \item \emph{ChatTS}~\cite{xie2024chatts}: Aligns time series with LLMs using synthetic conversational datasets generated through rule-based simulations, enabling grounded interactive Q\&A, anomaly explanation, and trend narration.
+    \item \emph{ChatTime}~\cite{zhang2024chattime}: A unified multimodal foundation model that bridges numerical waveforms and textual queries for interactive dialogue, counterfactual reasoning, and zero-shot forecasting.
+    \item \emph{Time-MQA}~\cite{jin2025timemqa}: Formulates multi-task question answering, enabling users to query numerical waveforms using natural language questions (e.g., ``\emph{Did the turbine vibration exceed safety thresholds after 14:00?}'').
+    \item \emph{TimeOmni-1 \& TimeOmni-VL}~\cite{jin2025timeomni,guan2026timeomnivl}: Advance multimodal temporal foundation modeling. TimeOmni-1 generates numeric forecasts alongside chain-of-thought rationales, while TimeOmni-VL unifies continuous time series, text, and visual spectrograms into an omni-modal transformer.
+    \item \emph{OpenTSLM}~\cite{raj2025opentslm}: Specializes multimodal reasoning for clinical healthcare, integrating multi-channel ICU physiological waveforms (ECG, arterial blood pressure) with clinical notes and physician orders.
+\end{itemize}
+These developments indicate that while native TSFMs dominate pure high-throughput numerical prediction, repurposed LLMs and VLMs serve as indispensable cognitive orchestrators for hybrid temporal-textual intelligence.

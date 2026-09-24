@@ -49,7 +49,7 @@ def generate_readme():
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 1 (Bootstrap P0 $\\rightarrow$ P1)** · Last Updated: **{today}**
+> Latest Iteration: **Iteration 2 (Empirical Benchmarks & Scale Expansion)** · Last Updated: **{today}**
 
 ---
 

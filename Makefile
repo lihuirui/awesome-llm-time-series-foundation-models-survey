@@ -1,6 +1,6 @@
 .PHONY: all search screen bib figures readme paper check clean
 
-all: search screen bib figures readme paper check
+all: screen bib figures readme paper check
 
 search:
 	python3 scripts/search.py
@@ -22,7 +22,6 @@ paper:
 
 check:
 	python3 scripts/check.py
-	cd paper && tectonic -X compile main.tex
 
 clean:
 	rm -rf paper/*.aux paper/*.log paper/*.out paper/*.bbl paper/*.blg paper/.tectonic

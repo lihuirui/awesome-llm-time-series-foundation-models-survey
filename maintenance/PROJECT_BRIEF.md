@@ -13,3 +13,11 @@
   performance; efficiency; when LLM backbones help vs. native TSFMs; evaluation pitfalls (leakage, benchmark overlap).
 - Extra figures: model-family genealogy/timeline; reported parameter count vs. release date; pretraining corpus size vs.
   date (only stated values); open-weight share; comparison table of design choices.
+
+
+## Iteration 2 focus (read docs/STATE.md first)
+Prioritize the Top-3 backlog in `docs/STATE.md`. Persistent weakness: **Depth of Analysis** / missing quantitative tables.
+1. Synthesize a zero-shot benchmark comparison table (GIFT-Eval / fev-bench / Monash; CRPS/MASE/WAPE only when stated).
+2. Deepen native TSFM vs LLM-reprogramming sections with 2025–2026 verified releases.
+3. Automate or run Semantic Scholar snowballing for emerging preprints; add at most ~15 new verified papers.
+Stay within ~90 minutes; pass `make check`; commit and push; print Chinese report.

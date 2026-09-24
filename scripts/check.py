@@ -64,6 +64,37 @@ def run_checks():
         else:
             print(f"[OK] All {len(papers)} included papers verified with logged API responses")
 
+    # Check PRISMA arithmetic consistency (Amendment K)
+    if not os.path.exists(PRISMA_FILE):
+        errors.append("data/prisma_counts.json missing")
+    else:
+        try:
+            with open(PRISMA_FILE, "r", encoding="utf-8") as f:
+                pdata = json.load(f)
+            ident = pdata.get("identification", {})
+            screen = pdata.get("screening", {})
+            inc = pdata.get("included", {})
+
+            total_id = ident.get("total_records_identified", 0)
+            dups = ident.get("duplicates_removed", 0)
+            screened = screen.get("screened_title_abstract", 0)
+            ex_title = screen.get("excluded_title_abstract", 0)
+            assessed = screen.get("fulltext_assessed", 0)
+            ex_full = screen.get("excluded_fulltext", 0)
+            total_inc = inc.get("total_included", 0)
+
+            if screened != total_id - dups:
+                errors.append(f"PRISMA arithmetic error: screened ({screened}) != total_id ({total_id}) - dups ({dups})")
+            if assessed != screened - ex_title:
+                errors.append(f"PRISMA arithmetic error: assessed ({assessed}) != screened ({screened}) - excluded_title ({ex_title})")
+            if total_inc != assessed - ex_full:
+                errors.append(f"PRISMA arithmetic error: total_included ({total_inc}) != assessed ({assessed}) - excluded_fulltext ({ex_full})")
+            if total_inc != len(papers):
+                errors.append(f"PRISMA included count ({total_inc}) != len(papers.json) ({len(papers)})")
+            print(f"[OK] PRISMA arithmetic verified consistent: {total_id} - {dups} = {screened} -> {screened} - {ex_title} = {assessed} -> {assessed} - {ex_full} = {total_inc}")
+        except Exception as e:
+            errors.append(f"Failed to verify PRISMA arithmetic: {e}")
+
     # 2. Check references.bib
     if not os.path.exists(BIB_FILE):
         errors.append("paper/references.bib does not exist")

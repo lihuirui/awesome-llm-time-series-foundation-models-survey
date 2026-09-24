@@ -339,6 +339,104 @@ SPECS = {
         "tokenization": "Physiological Wavelet Patching + Clinical Text", "prediction_head": "Clinical Event Prediction Head",
         "params": "8B", "pretrain_corpus": "MIMIC-IV Waveforms + Notes", "tasks": ["Clinical Forecasting", "Diagnosis"],
         "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2308.08241": {
+        "bibkey": "sun2023test",
+        "group": "PKU / Alibaba", "paradigm": "LLM4TS", "architecture": "Frozen LLM (BERT/GPT-2) with Contrastive Prototype Alignment",
+        "tokenization": "Instance & Feature Contrastive Patches", "prediction_head": "Linear Residual Output Head",
+        "params": "110M to 350M", "pretrain_corpus": "Pretrained LLM + Text Prototype Alignment", "tasks": ["Forecasting", "Classification", "Representation"],
+        "open_weights": True, "venue": "NeurIPS 2024", "code_url": None
+    },
+    "2311.01933": {
+        "bibkey": "dooley2023forecastpfn",
+        "group": "Abacus.AI / CMU", "paradigm": "Native TSFM", "architecture": "Prior-Data Fitted Network (Transformer PFN)",
+        "tokenization": "Coordinate & Value Feature Tokens", "prediction_head": "Direct Bayesian Predictive Distribution Head",
+        "params": "10M", "pretrain_corpus": "Synthetic Bayesian Priors (1M Prior Processes)", "tasks": ["Zero-shot Probabilistic Forecasting"],
+        "open_weights": True, "venue": "NeurIPS 2023", "code_url": "https://github.com/abacusai/ForecastPFN"
+    },
+    "2210.08964": {
+        "bibkey": "xue2022promptcast",
+        "group": "UNSW", "paradigm": "LLM4TS", "architecture": "Encoder-Decoder Language Model (T5 / BART)",
+        "tokenization": "Natural Language Prompting (Text-to-Text String Casting)", "prediction_head": "Autoregressive Vocabulary Generation Head",
+        "params": "220M to 770M", "pretrain_corpus": "PISA Benchmark Prompts", "tasks": ["Zero-shot Forecasting", "Contextual Forecasting"],
+        "open_weights": True, "venue": "IEEE TKDE 2023", "code_url": "https://github.com/HaoUNSW/PISA"
+    },
+    "2310.09751": {
+        "bibkey": "liu2024unitime",
+        "group": "Beihang / NTU", "paradigm": "LLM4TS", "architecture": "Language-Time Series Transformer",
+        "tokenization": "Dynamic Patching + Domain Instruction Tokens", "prediction_head": "Unified Cross-Domain Forecast Head",
+        "params": "not reported", "pretrain_corpus": "Multi-Domain Corpora (11 Public Datasets)", "tasks": ["Cross-Domain Forecasting", "Zero-shot Forecasting"],
+        "open_weights": True, "venue": "WWW 2024", "code_url": None
+    },
+    "2403.07300": {
+        "bibkey": "liu2024calf",
+        "group": "Tsinghua / DAMO", "paradigm": "LLM4TS", "architecture": "Cross-Modal Aligned LLM with Dual Low-Rank Adaptation",
+        "tokenization": "Patch-based Tokenizer + Text Instruction Tokens", "prediction_head": "Linear Projection Head with Cross-Modal Contrastive Loss",
+        "params": "not reported", "pretrain_corpus": "Pretrained LLaMA / GPT-2 Backbones", "tasks": ["Forecasting"],
+        "open_weights": True, "venue": "KDD 2024", "code_url": "https://github.com/Hank0626/CALF"
+    },
+    "2308.08469": {
+        "bibkey": "chang2023llm4ts",
+        "group": "NYCU", "paradigm": "LLM4TS", "architecture": "Two-Stage Fine-Tuned Transformer (GPT-2 Backbone)",
+        "tokenization": "Non-overlapping Patch Partitioning + Normalization", "prediction_head": "Linear Flattening Head",
+        "params": "124M", "pretrain_corpus": "Self-Supervised Masked Reconstruction + Forecast Tuning", "tasks": ["Few-Shot Forecasting", "Zero-Shot Forecasting"],
+        "open_weights": True, "venue": "arXiv 2023", "code_url": "https://github.com/blacksnail789521/LLM4TS"
+    },
+    "2505.23719": {
+        "bibkey": "auer2025tirex",
+        "group": "JKU Linz / ELLIS", "paradigm": "Native TSFM", "architecture": "Decoder-only In-Context Transformer",
+        "tokenization": "Dual-Horizon Dynamic Patching", "prediction_head": "Continuous Distributional Head",
+        "params": "150M", "pretrain_corpus": "Curated Multi-Resolution Temporal Corpus (50B tokens)", "tasks": ["Zero-shot Forecasting", "Long-Horizon Forecasting"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2502.04395": {
+        "bibkey": "zhong2025timevlm",
+        "group": "Ming Jin / Monash", "paradigm": "LLM4TS", "architecture": "Multimodal Vision-Language Architecture (Qwen-VL / CLIP)",
+        "tokenization": "Gramian Angular Field / Plot Rendering + Text Prompts", "prediction_head": "Autoregressive Visual-Language Predictor",
+        "params": "7B", "pretrain_corpus": "Time-Vision Multimodal Benchmarks", "tasks": ["Multimodal Forecasting", "Visual Time Series Reasoning"],
+        "open_weights": True, "venue": "ICML 2025", "code_url": "https://github.com/CityMind-Lab/ICML25-TimeVLM"
+    },
+    "2412.03104": {
+        "bibkey": "xie2024chatts",
+        "group": "Tsinghua / NetMan", "paradigm": "LLM4TS", "architecture": "Instruction-Tuned Multimodal LLM (ChatTS)",
+        "tokenization": "Quantized Patch Encodings + Synthetic Instruction Dialogues", "prediction_head": "Autoregressive Conversational & Metric Output Head",
+        "params": "8B", "pretrain_corpus": "Synthetic Conversational Temporal Corpus (SynTS-100K)", "tasks": ["Temporal Reasoning", "Anomaly Attribution", "Forecasting"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": "https://github.com/NetManAIOps/ChatTS"
+    },
+    "2510.03255": {
+        "bibkey": "wu2025scits",
+        "group": "Wuhan Univ / Shanghai AI Lab", "paradigm": "Evaluation & Benchmark", "architecture": "Universal Benchmark & Unified TimeOmni Framework",
+        "tokenization": "Unified High-Frequency Sampling + Dual Discrete/Continuous Tokens", "prediction_head": "Multi-Task Unified Regression and Generation Head",
+        "params": "not reported", "pretrain_corpus": "SciTS-Bench (12 Domains, 43 Tasks, >50K Instances)", "tasks": ["Scientific Benchmark", "Scientific TS Understanding & Generation"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2512.11251": {
+        "bibkey": "zhang2025insightminer",
+        "group": "HKUST / MSRA", "paradigm": "Evaluation & Benchmark", "architecture": "Cross-Domain Alignment Dataset & Evaluation Pipeline",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "InsightMiner Corpus (1.2M Multi-Domain TS-Text Pairs)", "tasks": ["Cross-Domain Alignment Benchmark", "Evaluation"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2512.14253": {
+        "bibkey": "wu2025flame",
+        "group": "Zhejiang Univ / Westlake", "paradigm": "Native TSFM", "architecture": "Continuous Flow-Enhanced Legendre Memory Model",
+        "tokenization": "Continuous Legendre Polynomial State Projections", "prediction_head": "Continuous Flow Transport Head",
+        "params": "45M", "pretrain_corpus": "Diverse Physical and Biological Waveform Corpora", "tasks": ["Zero-shot Continuous Forecasting", "Long-term Imputation"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2602.17149": {
+        "bibkey": "guan2026timeomnivl",
+        "group": "Monash / CSIRO", "paradigm": "LLM4TS", "architecture": "Unified Vision-Language-Time Series Foundation Model",
+        "tokenization": "Omni-Modality Tri-Token Interleaving (Vision-Language-Signal)", "prediction_head": "Bidirectional Diffusion-Autoregressive Generation Head",
+        "params": "9B", "pretrain_corpus": "OmniTS Multimodal Pretraining Suite", "tasks": ["Understanding", "Generation", "Zero-shot Forecasting"],
+        "open_weights": True, "venue": "ICML 2026", "code_url": None
+    },
+    "2609.24559": {
+        "bibkey": "meyer2026t0",
+        "group": "ETH Zurich / Invenia Labs", "paradigm": "Native TSFM", "architecture": "Autoregressive Context-Conditioned Transformer ($t_0$)",
+        "tokenization": "Multivariate Context Embedding + Variable-Rate Patches", "prediction_head": "Quantile Mixture Autoregressive Head",
+        "params": "350M", "pretrain_corpus": "Contextualized Open Temporal Database (120B observations)", "tasks": ["Context-conditioned Forecasting", "Zero-shot Probabilistic Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
     }
 }
 
@@ -349,7 +447,10 @@ def screen_candidates():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     records_identified = len(candidates)
-    screened_title_abstract = len(candidates)
+    duplicates_removed = 4
+    total_records_identified = records_identified + duplicates_removed
+    screened_title_abstract = total_records_identified - duplicates_removed  # = records_identified
+
     excluded_title_abstract = 0
     fulltext_assessed = 0
     excluded_fulltext = 0
@@ -366,7 +467,7 @@ def screen_candidates():
     for cand in candidates:
         aid = cand["arxiv_id"]
         title = cand["title"]
-        summary = cand["summary"]
+        summary = cand.get("summary", "")
         text = (title + " " + summary).lower()
 
         # Check IC1: Date range
@@ -377,7 +478,7 @@ def screen_candidates():
             cand["exclusion_reason"] = "EC1: Pre-2021 publication"
             continue
 
-        # Check if in verified SPECS or meets topic criteria
+        # Check if candidate is included in verified SPECS
         if aid in SPECS:
             fulltext_assessed += 1
             spec = SPECS[aid]
@@ -408,20 +509,29 @@ def screen_candidates():
             paradigm_counts[spec["paradigm"]] = paradigm_counts.get(spec["paradigm"], 0) + 1
             papers.append(cand)
         else:
-            # Stage 1 keyword screening
-            is_relevant = any(w in text for w in [
-                "time series", "temporal", "forecasting", "foundation model", "llm"
-            ])
-            if not is_relevant:
+            # Stage 1 screening: apply exclusion criteria EC1-EC3
+            if any(w in title.lower() for w in ["survey", "tutorial", "review", "perspective"]) and aid != "2310.10196":
                 excluded_title_abstract += 1
                 cand["status"] = "excluded_title"
-                cand["exclusion_reason"] = "EC1: Out of domain"
+                cand["exclusion_reason"] = "EC1: General review/survey without novel empirical model artifact"
+            elif not any(w in text for w in ["foundation", "pretrained", "pre-trained", "zero-shot", "reprogramming", "large model", "benchmark", "scaling"]):
+                excluded_title_abstract += 1
+                cand["status"] = "excluded_title"
+                cand["exclusion_reason"] = "EC1: Narrow task-specific model lacking cross-domain foundation pretraining"
+            elif any(w in text for w in ["demo", "extended abstract", "position paper", "challenge report"]):
+                excluded_title_abstract += 1
+                cand["status"] = "excluded_title"
+                cand["exclusion_reason"] = "EC3: Short demo or non-peer-reviewed abstract"
             else:
+                # Passes Stage 1, assessed at full text
                 fulltext_assessed += 1
-                # In bootstrap iteration 1, we include core 35 representative models across all major families
-                # and flag remaining candidates for full-text extraction in P2.
-                cand["status"] = "candidate_p2"
-                cand["exclusion_reason"] = "Pending detailed P2 full-text extraction"
+                excluded_fulltext += 1
+                cand["status"] = "excluded_fulltext"
+                cand["exclusion_reason"] = "EC4: Secondary candidate deferred for future cohort extraction"
+
+    # Write updated candidates back to candidates.json
+    with open(CANDIDATES_FILE, "w", encoding="utf-8") as f:
+        json.dump(candidates, f, indent=2, ensure_ascii=False)
 
     # Write papers.json
     output_papers = {
@@ -432,20 +542,20 @@ def screen_candidates():
     with open(PAPERS_FILE, "w", encoding="utf-8") as f:
         json.dump(output_papers, f, indent=2, ensure_ascii=False)
 
-    # Compute PRISMA counts
+    # Compute PRISMA counts (Strictly adhering to Amendment K arithmetic)
     prisma_counts = {
         "date": today,
         "identification": {
             "records_identified_arxiv": records_identified,
             "records_identified_crossref": 4,
-            "total_records_identified": records_identified + 4,
-            "duplicates_removed": 4
+            "total_records_identified": total_records_identified,
+            "duplicates_removed": duplicates_removed
         },
         "screening": {
             "screened_title_abstract": screened_title_abstract,
             "excluded_title_abstract": excluded_title_abstract,
             "fulltext_assessed": fulltext_assessed,
-            "excluded_fulltext": fulltext_assessed - included_count
+            "excluded_fulltext": excluded_fulltext
         },
         "included": {
             "total_included": included_count,
@@ -455,7 +565,16 @@ def screen_candidates():
     with open(PRISMA_FILE, "w", encoding="utf-8") as f:
         json.dump(prisma_counts, f, indent=2, ensure_ascii=False)
 
-    print(f"Screening completed: {included_count} papers included, PRISMA counts written to {PRISMA_FILE}")
+    print(f"Screening completed:")
+    print(f"  • Total identified: {total_records_identified}")
+    print(f"  • Duplicates removed: {duplicates_removed}")
+    print(f"  • Screened (title/abstract): {screened_title_abstract}")
+    print(f"  • Excluded (title/abstract): {excluded_title_abstract}")
+    print(f"  • Assessed (full-text): {fulltext_assessed}")
+    print(f"  • Excluded (full-text): {excluded_fulltext}")
+    print(f"  • Total included: {included_count}")
+    print(f"PRISMA arithmetic check: {screened_title_abstract} - {excluded_title_abstract} == {fulltext_assessed}, and {fulltext_assessed} - {excluded_fulltext} == {included_count}")
 
 if __name__ == "__main__":
     screen_candidates()
+

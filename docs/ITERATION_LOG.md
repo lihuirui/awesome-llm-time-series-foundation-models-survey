@@ -39,6 +39,7 @@
    - Created comprehensive Chinese survey summary `docs/SURVEY_zh.md`.
    - Updated iteration state and peer-review evaluation in `docs/STATE.md`.
 9. **Quality Gate Status**: Passed `make check` completely with zero errors.
+10. **Git Status**: Committed (`a8e9436`) and pushed to `origin/main` (GitHub repository: `lihuirui/awesome-llm-time-series-foundation-models-survey`).
 
 ### Reviewer Scores (Iteration 1)
 - Coverage: 4.2 / 5.0

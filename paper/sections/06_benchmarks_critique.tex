@@ -1,0 +1,69 @@
+\section{Evaluations, Benchmarks, and Critical Perspectives}
+\label{sec:eval}
+
+The transition toward foundation models has fundamentally reshaped evaluation methodologies. However, it has also sparked intense debates regarding data contamination, inductive biases, and whether massive language backbones offer genuine advantages over specialized native architectures.
+
+\subsection{Standardized Foundation Benchmarks}
+
+Traditional time series evaluation relied on a small collection of homogeneous academic datasets (e.g., ETT, Weather, Electricity, Traffic). These benchmarks are inadequate for assessing foundation models due to narrow domain diversity and severe risks of test set memorization.
+
+To establish rigorous evaluation standards, recent initiatives introduce expansive benchmark suites:
+\begin{itemize}[leftmargin=*]
+    \item \emph{GIFT-Eval}~\cite{salesforce2024gifteval}: Introduced by Salesforce Research, GIFT-Eval comprises over $143{,}000$ distinct time series spanning 7 diverse domains, 10 sampling frequencies, and both univariate and multivariate regimes. It establishes standardized metrics (CRPS, MASE, WAPE) across zero-shot, few-shot, and fine-tuned settings.
+    \item \emph{Time-MMD}~\cite{yue2024timemmd}: A multi-domain multimodal dataset evaluating the integration of numerical time series with unstructured text reports, news articles, and domain metadata across 9 industries.
+\end{itemize}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.98\textwidth]{figures/fig_timeline.pdf}
+\caption{Genealogy and chronological release timeline of representative time series foundation models and repurposed language model frameworks from 2022 to 2026.}
+\label{fig:timeline}
+\end{figure*}
+
+\subsection{Critical Perspectives: Are LLMs Actually Useful for Time Series?}
+
+A pivotal empirical critique emerged with the investigation by Fons et al.~\cite{fons2024arellmsuseful}, entitled \emph{``Are Language Models Actually Useful for Time Series Forecasting?''}
+Through extensive ablation experiments across multiple LLM-based forecasters (including GPT4TS~\cite{zhou2023onefitsall} and Time-LLM~\cite{jin2023timellm}), the authors isolated the impact of pre-trained language weights by comparing:
+\begin{enumerate}[leftmargin=*]
+    \item Frozen pre-trained language weights (e.g., GPT-2, Llama-2);
+    \item Randomly initialized transformer weights with the same architecture;
+    \item Compact specialized baselines (such as PatchTST~\cite{nie2023patchtst} and lightweight MLPs).
+\end{enumerate}
+
+Their empirical findings revealed striking conclusions:
+\begin{itemize}[leftmargin=*]
+    \item Replacing pre-trained language weights with \emph{randomly initialized weights} resulted in comparable, and in several cases superior, forecasting accuracy.
+    \item Much of the empirical gains reported in early LLM4TS literature originated from the structural benefits of \emph{subseries patching} and normalization, rather than any semantic or temporal reasoning inherent in linguistic pre-training.
+    \item In terms of operational efficiency, frozen $7\text{B}$ parameter language models require up to $100\times$ more memory and $50\times$ longer inference latency than compact native models like TTM~\cite{ekambaram2024ttm} ($8\text{M}$ parameters) or Timer~\cite{liu2024timer} ($84\text{M}$ parameters), which consistently achieve competitive or superior accuracy.
+\end{itemize}
+
+These findings indicate that while LLMs are uniquely valuable for multimodal tasks (text-grounded reasoning, interactive analysis, and report generation), deploying frozen multi-billion parameter text backbones solely for univariate numeric forecasting represents an inefficient architectural detour.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.98\textwidth]{figures/fig_params_corpus.pdf}
+\caption{Scaling dynamics across the literature: (a) Reported parameter counts vs. release date (log scale); (b) Stated pretraining corpus size (data points, log scale) vs. release date.}
+\label{fig:params_corpus}
+\end{figure*}
+
+\subsection{Data Contamination and Leakage Audits}
+
+A critical vulnerability in contemporary foundation model evaluation is \emph{benchmark contamination}. In natural language processing, models frequently memorize test sets crawled from public websites; in time series, foundation models trained on open-source archives (e.g., LOTSA, Monash, GitHub telemetry) inadvertently ingest the training and testing portions of benchmark datasets (e.g., ETT, Weather)~\cite{gong2025rethinkingeval}.
+
+Gong et al.~\cite{gong2025rethinkingeval} systematically audited 12 major foundation models and discovered widespread temporal overlap between pretraining datasets and standard test benchmarks. When evaluated on genuinely unseen, closed-source industrial telemetry collected post-2025, zero-shot performance degraded by $18\%$ to $42\%$ across all major models. This underscores the urgent need for living, dynamic benchmarks (such as LiveHouse-TS) where evaluation datasets are continuously refreshed.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=0.98\textwidth]{figures/fig_category_dist.pdf}
+\caption{Meta-review statistics: (a) Publications per year broken down by model paradigm (stacked bar chart); (b) Distribution of included studies across premier peer-reviewed venues.}
+\label{fig:category_dist}
+\end{figure*}
+
+\subsection{Empirical Scaling Laws in Temporal Data}
+
+Do foundation models for time series exhibit the predictable power-law scaling observed in NLP?
+Recent empirical studies on large pre-trained models—notably Time-MoE~\cite{shi2024timemoe} ($2.4\text{B}$ parameters, $300\text{B}$ points), Sundial~\cite{thuml2025sundial} ($1.5\text{B}$ parameters), and Timer-S1~\cite{thuml2026timers1} ($8.3\text{B}$ parameters)—demonstrate that when data quality and volume are rigorously maintained, test loss follows power-law scaling as a function of compute and dataset tokens:
+\begin{equation}
+    L(N, D) = \left( \frac{N_c}{N} \right)^{\alpha_N} + \left( \frac{D_c}{D} \right)^{\alpha_D} + L_0.
+\end{equation}
+However, unlike text, scaling parameters without expanding temporal diversity leads to rapid overfitting. Cross-domain pretraining on synthetic kernel mixtures and diverse physical systems is essential to sustain positive scaling exponents.

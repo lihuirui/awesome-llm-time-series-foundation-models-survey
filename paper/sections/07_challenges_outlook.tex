@@ -1,0 +1,23 @@
+\section{Open Challenges and Future Horizons}
+\label{sec:outlook}
+
+Despite rapid progress in foundation models and LLM adaptations, temporal machine learning remains in a formative phase. In this section, we delineate six critical open research horizons that must be addressed to achieve truly universal temporal intelligence.
+
+\subsection{Irregular Sampling and Continuous-Time Dynamics}
+Existing foundation models (e.g., Chronos, TimesFM, MOIRAI) predominantly assume regularly sampled, synchronous discrete grids. However, real-world physical telemetry—such as ICU medical records, IoT sensor dropouts, and financial trade ticks—arrives at asynchronous, irregular time intervals.
+Emerging approaches such as FlowState~\cite{king2025flowstate} leverage continuous flow matching and continuous-time neural state-space models to achieve sampling-rate equivariance. Future foundation architectures must natively encode irregular time intervals $(\Delta t)$ into latent manifolds rather than relying on crude imputation or resampling heuristics.
+
+\subsection{Prior-Data Fitted Bayesian Networks}
+Standard foundation models require thousands of gradient optimization steps during fine-tuning. A compelling alternative is demonstrated by TabPFN-TS~\cite{muller2025tabpfnts}, which adapts Prior-Data Fitted Networks to time series. By training a transformer exclusively on synthetic prior stochastic processes (e.g., Gaussian processes, Ornstein-Uhlenbeck, and Markov switching models), the network learns to perform Bayesian posterior inference in a single forward pass without parameter updates. Expanding synthetic prior spaces to encompass complex non-linear dynamics represents a fertile research direction.
+
+\subsection{Extreme Long-Horizon Context and Serial Scaling}
+In natural language, modern models handle context windows exceeding $1\text{M}$ tokens. In temporal analysis, historical series often span millions of high-frequency timestamps. Capturing decadal climate shifts, annual retail cycles, and second-level power grid vibrations within a single context window demands extreme context scaling. Architectural innovations such as long-context state-space models (Mamba), hierarchical linear attention, and serial scaling (as explored in Timer-XL~\cite{liu2024timerxl} and Timer-S1~\cite{thuml2026timers1}) will be essential to eliminate context truncation.
+
+\subsection{Unified Multimodal Perception}
+Real-world decision-making rarely relies on isolated scalar numbers. An industrial operator monitors pressure gauges alongside diagnostic maintenance logs; a macroeconomist reads financial reports while analyzing stock tickers. Future foundation models must advance beyond ad-hoc text reprogramming to train native multi-modal architectures from scratch—treating numerical time series, textual reports, spatial satellite imagery, and audio vibrations as co-equal perceptual modalities.
+
+\subsection{Calibrated Uncertainty under Distribution Shift}
+In safety-critical applications (such as healthcare and grid management), an uncalibrated point forecast is hazardous. As demonstrated by recent reliability audits~\cite{li2026evaluatingreliability}, current zero-shot models frequently underestimate predictive variance when confronted with unprecedented macroeconomic shocks or extreme weather events. Developing conformal prediction techniques, robust Bayesian heads, and flow-based generative sampling that maintain rigorous coverage guarantees under out-of-distribution shifts is imperative.
+
+\subsection{Edge Deployment and Hardware Quantization}
+While research models scale to billions of parameters, industrial IoT environments require deployment on low-power microcontrollers, edge gateways, and automotive Electronic Control Units (ECUs). Adapting post-training quantization (INT8/INT4), model pruning, and specialized kernel architectures (following IBM's TTM philosophy~\cite{ekambaram2024ttm}) will be necessary to bridge the gap between academic benchmarks and enterprise production lines.

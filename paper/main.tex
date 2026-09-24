@@ -1,0 +1,63 @@
+\documentclass[10pt,journal,compsoc]{IEEEtran}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{tabularx}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{cite}
+\usepackage{balance}
+\usepackage{pifont}
+\usepackage{enumitem}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black,
+    citecolor=blue!70!black,
+    urlcolor=blue!70!black
+}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+\begin{document}
+
+\title{Large Language Models and Foundation Models for Time Series: A Survey and Outlook}
+
+\author{Huirui~Li
+\IEEEcompsocitemizethanks{
+\IEEEcompsocthanksitem H. Li is the sole author and maintainer of this living survey repository. Contact: 58367737+lihuirui@users.noreply.github.com. Project repository: \url{https://github.com/lihuirui/awesome-llm-time-series-foundation-models-survey}.
+}
+}
+
+\IEEEtitleabstractindextext{
+\begin{abstract}
+Time series analysis underpins mission-critical decision systems across modern society, including industrial Internet of Things (IoT), computational finance, energy grid stabilization, meteorological forecasting, and clinical healthcare. Over the past five years, the field has undergone a profound paradigm shift from narrow, task-specific deep neural networks (such as specialized LSTMs and convolutional architectures) toward scalable foundation models. This evolution is bifurcated into two dominant architectural philosophies: (1) \emph{Native Time Series Foundation Models (TSFMs)}, which are trained ab initio on massive cross-domain time-series corpora comprising tens to hundreds of billions of observations (e.g., Chronos, TimesFM, MOIRAI, MOMENT, Lag-Llama, TTM, Timer, Sundial, Time-MoE, and Toto); and (2) \emph{Repurposed Large Language Models (LLM4TS)}, which repurpose frozen or parameter-efficiently adapted language transformers to temporal sequences through cross-modal token reprogramming, decimal prompting, or multimodal instruction tuning (e.g., Time-LLM, GPT4TS/OFA, LLMTime, TEMPO, and S2IP-LLM). In this survey, conducted strictly under the PRISMA 2020 systematic review protocol, we provide the first unified, comprehensive taxonomy and comparative synthesis spanning 2021 through 2026. We formalize the mathematical preliminaries of temporal representation, deconstruct core tokenization mechanics (patching vs. scalar quantization vs. lag vectors), analyze probabilistic formulation heads, examine empirical scaling behaviors and zero-shot transfer capabilities, and critically evaluate the central debate: \emph{Are billion-parameter language backbones truly necessary, or do compact specialized foundation models provide superior accuracy and operational efficiency?} Finally, we conduct an audit of standardized benchmarks (e.g., GIFT-Eval), uncover evaluation pitfalls such as benchmark contamination and temporal leakage, and delineate open research directions toward multi-modal temporal intelligence.
+\end{abstract}
+
+\begin{IEEEkeywords}
+Time series analysis, foundation models, large language models, deep learning, zero-shot forecasting, tokenization, scaling laws, PRISMA systematic review.
+\end{IEEEkeywords}}
+
+\maketitle
+\IEEEdisplaynontitleabstractindextext
+\IEEEpeerreviewmaketitle
+
+\input{sections/01_introduction}
+\input{sections/02_preliminaries}
+\input{sections/03_taxonomy}
+\input{sections/04_native_tsfm}
+\input{sections/05_llm4ts}
+\input{sections/06_benchmarks_critique}
+\input{sections/07_challenges_outlook}
+\input{sections/08_conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

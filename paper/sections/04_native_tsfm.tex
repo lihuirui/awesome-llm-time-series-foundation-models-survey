@@ -1,0 +1,49 @@
+\section{Native Time Series Foundation Models}
+\label{sec:native}
+
+Native Time Series Foundation Models (TSFMs) represent the purist approach to temporal foundation modeling: architectures designed from first principles and trained directly on massive corpora of continuous time-series data without linguistic baggage. In this section, we examine the primary architectural branches, data curation pipelines, and empirical scaling mechanisms.
+
+\subsection{Autoregressive Decoder-Only Architectures}
+
+Autoregressive models frame time-series modeling as sequential generation, predicting subsequent time-steps or patches conditioned on historical context.
+
+\subsubsection{The Chronos Family: Discretization as Linguistic Analogy}
+Amazon's Chronos~\cite{ansari2024chronos} represents one of the most radical departures from conventional continuous time-series modeling. Rather than predicting real numbers via regression losses, Chronos asks: \emph{Can time series be modeled identically to language tokens?}
+By applying instance-level mean scaling followed by uniform quantization into $K = 4096$ bins, continuous values are transformed into integer token indices. Chronos trains standard T5 architectures (ranging from $20\text{M}$ to $710\text{M}$ parameters) solely with the cross-entropy objective.
+The predictive distribution over future horizons is obtained by autoregressively sampling categorical bin logits and de-quantizing them back into real space. This approach has three key advantages:
+\begin{enumerate}[leftmargin=*]
+    \item It sidesteps parametric distribution assumptions (e.g., Gaussianity), naturally expressing multi-modal, skewed, or heavy-tailed predictive distributions.
+    \item It enables direct reuse of optimized language transformer implementations (such as FlashAttention and KV-caching).
+    \item In Chronos-2~\cite{ansari2025chronos2}, the architecture is extended to multivariate series via grouped channel tokenization and hybrid continuous residual heads.
+\end{enumerate}
+
+\subsubsection{Google TimesFM: Multi-Patch Output Generation}
+Unlike Chronos's scalar quantization, Google's TimesFM~\cite{das2024timesfm} operates directly on continuous numerical values using continuous patching. TimesFM employs an input patch size of $P = 32$ and an output patch size of $H = 128$. By predicting an entire multi-step block in a single forward step, TimesFM drastically reduces autoregressive unrolling steps, curbing error accumulation and inference latency.
+TimesFM is trained on a massive corpus of $100\text{B}$ time-series data points collected from Google Trends, Wikipedia pageviews, and synthetic ARMA processes. Recent extensions examine in-context fine-tuning~\cite{das2024incontext}, demonstrating that supplying short conditioning examples within the context window improves zero-shot adaptation.
+
+\subsubsection{The THUML Timer Family: Universal Generative Modeling}
+The THUML research group (led by Mingsheng Long at Tsinghua University) has systematically advanced generative time series pretraining:
+\begin{itemize}[leftmargin=*]
+    \item \emph{Timer}~\cite{liu2024timer}: Conceptualizes a single-series sequential next-patch regression paradigm. Timer is pretrained on the Unified Time Series Dataset (UTSD), comprising over $1\text{B}$ observations across diverse domains. Timer establishes that channel-independent single-series formatting enables universal transfer across arbitrary multivariate configurations.
+    \item \emph{Timer-XL}~\cite{liu2024timerxl}: Introduces long-context transformer modeling for temporal signals, scaling context lengths from standard 512 patches to extreme contexts, enabling the model to capture multi-year periodicities without context truncation.
+    \item \emph{Sundial}~\cite{thuml2025sundial}: Scales the model to $1.5\text{B}$ parameters pretrained on UTSD-3 ($>10\text{B}$ observations), introducing multi-rate adaptive patching to handle heterogeneous sampling frequencies seamlessly.
+    \item \emph{Timer-S1}~\cite{thuml2026timers1}: Reaches $8.3\text{B}$ parameters via sparse Mixture-of-Experts routing, demonstrating the viability of serial parameter scaling in native temporal models.
+\end{itemize}
+
+\subsubsection{Lag-Llama: Probabilistic Modeling with Lag Embeddings}
+Developed by Morgan Stanley and Mila, Lag-Llama~\cite{rasul2023lagllama} adapts the Llama decoder backbone by substituting word embeddings with lag feature vectors. Specifically, it computes lags corresponding to standard calendar frequencies (e.g., quarter-hour, day, week, year). Lag-Llama outputs the parameters of a Student's $t$ distribution, achieving robust probabilistic calibration on out-of-distribution Monash datasets.
+
+\subsection{Masked Encoders and Encoder-Decoder Architectures}
+
+\subsubsection{Salesforce MOIRAI: Any-Variate Cross-Attention}
+Salesforce's MOIRAI~\cite{woo2024moirai} addresses two central limitations of previous models: rigid patch sizes and channel-independence. MOIRAI introduces \emph{Any-Variate Attention}, flattening an arbitrary multivariate sequence $\mathbf{X} \in \mathbb{R}^{C \times T}$ into a sequence of variate-tagged patch tokens. Furthermore, it employs a multi-patch projection head capable of simultaneously processing patch lengths of $8, 16, 32, 64,$ and $128$.
+MOIRAI is trained on the Large-scale Open Time Series Archive (LOTSA), containing $27\text{B}$ observations across 9 distinct domains. The model outputs mixtures of parametric distributions, achieving top-tier ranking on zero-shot benchmarks. Moirai 2.0~\cite{woo2025moirai2} and Moirai-MoE~\cite{woo2024moiraimoe} further extend this framework to sparse routing with $1.1\text{B}$ parameters.
+
+\subsubsection{CMU MOMENT: Multi-Task Representation Learning}
+While most TSFMs focus exclusively on forecasting, CMU's MOMENT~\cite{goswami2024moment} investigates foundation models for universal multi-task analysis (forecasting, classification, anomaly detection, and imputation). Based on a masked T5 encoder ($385\text{M}$ parameters), MOMENT is pretrained on the Time-series Pile ($1\text{B}$ observations) using masked patch reconstruction. Fine-tuning experiments show that MOMENT’s pre-trained representations transfer effectively to non-generative tasks such as ECG anomaly detection and gesture classification.
+
+\subsubsection{IBM Tiny Time Mixers (TTM): Extreme Edge Efficiency}
+Challenging the premise that foundation models must contain hundreds of millions of parameters, IBM Research introduced Tiny Time Mixers (TTM)~\cite{ekambaram2024ttm}. Utilizing lightweight multi-level TSMixer blocks, TTM models range from $1\text{M}$ to $8\text{M}$ parameters. TTM incorporates adaptive resolution sampling and resolution prefix tuning, outperforming models orders of magnitude larger while running inference in milliseconds on standard edge CPUs.
+
+\subsection{Mixture-of-Experts (MoE) and Scaling to Billions}
+A major architectural breakthrough between 2024 and 2026 is the deployment of Sparse Mixture-of-Experts (MoE) in time series. In Time-MoE~\cite{shi2024timemoe} (Ming Jin's group), the model scales to $2.4\text{B}$ parameters while only activating a subset of experts per patch token. Trained on Time-300B ($300\text{B}$ time points), Time-MoE demonstrates clear empirical power-law scaling in validation loss, proving that scaling laws discovered in NLP hold equally for native temporal representations when sufficient data volume is supplied.

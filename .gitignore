@@ -1,0 +1,28 @@
+# Template downloads (arXiv source/pdf)
+template/
+
+# Raw query caches (track verified metadata logs, ignore extra dumps)
+data/raw/*
+!data/raw/arxiv_raw_metadata.json
+!data/raw/github_verified.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+
+# LaTeX build artifacts (paper/main.pdf is tracked and committed)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.toc
+paper/*.bbl
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/_build/
+paper/.tectonic/
+.tectonic/

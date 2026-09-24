@@ -1,0 +1,80 @@
+{
+  "Chronos": {
+    "repo": "amazon-science/chronos-forecasting",
+    "url": "https://github.com/amazon-science/chronos-forecasting",
+    "stars": 5901,
+    "description": "Chronos: Pretrained Models for Time Series Forecasting"
+  },
+  "TimesFM": {
+    "repo": "google-research/timesfm",
+    "url": "https://github.com/google-research/timesfm",
+    "stars": 33595,
+    "description": "TimesFM (Time Series Foundation Model) is a pretrained time-series foundation model developed by Google Research for time-series forecasting."
+  },
+  "MOIRAI": {
+    "repo": "SalesforceAIResearch/uni2ts",
+    "url": "https://github.com/SalesforceAIResearch/uni2ts",
+    "stars": 1596,
+    "description": "Unified Training of Universal Time Series Forecasting Transformers"
+  },
+  "MOMENT": {
+    "repo": "moment-timeseries-foundation-model/moment",
+    "url": "https://github.com/moment-timeseries-foundation-model/moment",
+    "stars": 846,
+    "description": "MOMENT: A Family of Open Time-series Foundation Models, ICML'24"
+  },
+  "Lag-Llama": {
+    "repo": "time-series-foundation-models/lag-llama",
+    "url": "https://github.com/time-series-foundation-models/lag-llama",
+    "stars": 1601,
+    "description": "Lag-Llama: Towards Foundation Models for Probabilistic Time Series Forecasting"
+  },
+  "TTM": {
+    "repo": "ibm-granite/granite-tsfm",
+    "url": "https://github.com/ibm-granite/granite-tsfm",
+    "stars": 902,
+    "description": "Foundation Models for Time Series"
+  },
+  "Timer": {
+    "repo": "thuml/Large-Time-Series-Model",
+    "url": "https://github.com/thuml/Large-Time-Series-Model",
+    "stars": 1020,
+    "description": "Official code, datasets and checkpoints for \"Timer: Generative Pre-trained Transformers Are Large Time Series Models\" (ICML 2024) and subsequent works"
+  },
+  "Time-LLM": {
+    "repo": "KimMeen/Time-LLM",
+    "url": "https://github.com/KimMeen/Time-LLM",
+    "stars": 2696,
+    "description": "[ICLR 2024] Official implementation of \" \ud83e\udd99 Time-LLM: Time Series Forecasting by Reprogramming Large Language Models\""
+  },
+  "GPT4TS": {
+    "repo": "DAMO-DI-ML/NeurIPS2023-One-Fits-All",
+    "url": "https://github.com/DAMO-DI-ML/NeurIPS2023-One-Fits-All",
+    "stars": 671,
+    "description": "The official code for \"One Fits All: Power General Time Series Analysis by Pretrained LM (NeurIPS 2023 Spotlight)\""
+  },
+  "LLMTime": {
+    "repo": "ngruver/llmtime",
+    "url": "https://github.com/ngruver/llmtime",
+    "stars": 836,
+    "description": null
+  },
+  "PatchTST": {
+    "repo": "yuqinie98/PatchTST",
+    "url": "https://github.com/yuqinie98/PatchTST",
+    "stars": 2713,
+    "description": "An offical implementation of PatchTST: \"A Time Series is Worth 64 Words: Long-term Forecasting with Transformers.\" (ICLR 2023) https://arxiv.org/abs/2211.14730"
+  },
+  "Time-MoE": {
+    "repo": "Time-MoE/Time-MoE",
+    "url": "https://github.com/Time-MoE/Time-MoE",
+    "stars": 1001,
+    "description": "[ICLR 2025 Spotlight] Official implementation of \"Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts\""
+  },
+  "GIFT-Eval": {
+    "repo": "SalesforceAIResearch/gift-eval",
+    "url": "https://github.com/SalesforceAIResearch/gift-eval",
+    "stars": 262,
+    "description": null
+  }
+}

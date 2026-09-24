@@ -1,0 +1,44 @@
+\section{Repurposed Large Language Models (LLM4TS)}
+\label{sec:llm4ts}
+
+In parallel to native foundation models, an active branch of literature investigates repurposing existing Large Language Models (LLMs) for time series analysis. Driven by the hypothesis that multi-billion parameter text models have acquired generalized pattern matching, sequence extrapolation, and relational reasoning abilities, these methods adapt frozen or fine-tuned language backbones to temporal streams.
+
+\subsection{Cross-Modal Token Reprogramming}
+
+Token reprogramming bridges the structural gap between continuous numerical signals and the discrete token space of language transformers by learning parameter-efficient adapter layers while keeping the core language model frozen.
+
+\subsubsection{Time-LLM: Prompt-Guided Reprogramming}
+Introduced by Ming Jin et al., Time-LLM~\cite{jin2023timellm} establishes a canonical reprogramming framework. Input time series are patched into subseries vectors, which are mapped through a linear projection layer into the textual word embedding space of Llama-7B. Crucially, Time-LLM constructs dynamic text prompts containing domain context, task instructions, and dataset statistics (e.g., trend, variance, seasonality). The frozen language model processes the concatenated prompt tokens and reprogrammed temporal tokens, producing representations that are decoded back into continuous forecasts via a linear projection head. Time-LLM demonstrates strong zero-shot and few-shot capabilities across benchmark datasets.
+
+\subsubsection{One Fits All (GPT4TS / OFA): Universal Backbone Sharing}
+In One Fits All (GPT4TS)~\cite{zhou2023onefitsall}, Zhou et al. explore the minimal adaptation required to transfer language transformers to temporal tasks. By taking a pre-trained GPT-2 backbone, freezing its self-attention and feed-forward layers, and retraining only an input linear patch embedder and output layer, GPT4TS achieves state-of-the-art results across forecasting, anomaly detection, classification, and imputation. The authors argue that multi-head self-attention trained on natural language acts as a universal sequence engine capable of recognizing temporal autocorrelation and periodic waveforms.
+
+\subsubsection{Decomposition and Semantic Prompting}
+Subsequent works enhance cross-modal alignment:
+\begin{itemize}[leftmargin=*]
+    \item \emph{TEMPO}~\cite{cao2023tempo}: Decomposes input series into trend, seasonal, and residual components using classical STL decomposition. Each component is independently embedded and guided by specialized prompts, enabling the language model to reason over modular temporal dynamics.
+    \item \emph{S$^2$IP-LLM}~\cite{wu2024s2ipllm}: Introduces semantic-space informed prompting, projecting statistical temporal attributes into dense semantic embeddings that constrain the LLM's generative search space.
+\end{itemize}
+
+\subsection{Direct Prompting and Decimal Tokenization}
+
+Rather than learning adapter layers, direct prompting methods interact with off-the-shelf closed or open LLMs (such as GPT-4 or Llama-3) by formatting numeric series as text strings.
+
+In LLMTime~\cite{gruver2023llmtime}, Gruver et al. treat time series as comma-separated ASCII digit strings (e.g., ``\texttt{12.4, 15.8, 14.2}''). By appropriately scaling the series, rounding to fixed decimal precision, and formatting with spaces between digits to ensure consistent tokenization, standard language models predict future values autoregressively via temperature sampling. This enables probabilistic forecasting without any fine-tuning.
+
+However, direct decimal prompting incurs severe practical drawbacks:
+\begin{enumerate}[leftmargin=*]
+    \item \emph{Token Inflation}: A single 4-digit floating-point number can expand into 3 to 6 text tokens, drastically reducing the effective context window.
+    \item \emph{Inference Latency}: Autoregressively sampling hundreds of tokens from a $70\text{B}$ parameter model for a single univariate series takes several seconds, rendering real-time streaming infeasible.
+    \item \emph{Financial Cost}: Using proprietary commercial API endpoints (e.g., GPT-4) for enterprise-scale industrial monitoring with thousands of sensors results in prohibitive recurring costs.
+\end{enumerate}
+
+\subsection{Multimodal Integration and Agentic Reasoning}
+
+Where LLMs demonstrate distinct superiority over native TSFMs is in multimodal context integration—scenarios requiring the simultaneous reasoning over continuous numerical series and textual domain context.
+\begin{itemize}[leftmargin=*]
+    \item \emph{Time-MQA}~\cite{jin2025timemqa}: Formulates multi-task question answering, enabling users to query numerical waveforms using natural language questions (e.g., ``\emph{Did the turbine vibration exceed safety thresholds after 14:00?}'').
+    \item \emph{TimeOmni-1}~\cite{jin2025timeomni}: Introduces multi-modal temporal reasoning, training LLMs to generate both numeric forecasts and chain-of-thought rationales explaining the forecasted trajectory.
+    \item \emph{OpenTSLM}~\cite{raj2025opentslm}: Specializes multimodal reasoning for healthcare, integrating multi-channel ICU physiological waveforms (ECG, arterial blood pressure) with clinical notes and physician orders.
+\end{itemize}
+These developments suggest that while native TSFMs dominate raw numeric prediction, repurposed LLMs serve as powerful cognitive orchestrators for hybrid temporal-textual intelligence.

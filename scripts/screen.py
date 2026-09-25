@@ -609,6 +609,84 @@ SPECS = {
         "tokenization": "N/A", "prediction_head": "N/A",
         "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Agentic Reasoning Benchmark", "Tool Use", "Practical Harness"],
         "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    # Iteration 5 additions: Omni-modal pretraining, Edge foundation models & Energy/Quantization benchmarks
+    "2508.04379": {
+        "bibkey": "shen2025visiontsplus",
+        "group": "Shen et al.", "paradigm": "LLM4TS", "architecture": "Continual Pre-trained Vision Transformer Backbone (ViT)",
+        "tokenization": "Multi-Scale Line Plot Image Projection", "prediction_head": "Visual Next-Patch Denoising Reconstruction",
+        "params": "86M", "pretrain_corpus": "ImageNet-1K + Cross-Domain Time-Series Line Plots", "tasks": ["Forecasting", "Zero-Shot Forecasting"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2607.14510": {
+        "bibkey": "wang2026vlt",
+        "group": "Wang et al.", "paradigm": "LLM4TS", "architecture": "Multimodal Encoder (Time-MoE + Frequency-Text Learner)",
+        "tokenization": "Spectral Frequency Spectrogram + Text Prompt Tokens", "prediction_head": "Shared Multimodal Representation Head",
+        "params": "110M", "pretrain_corpus": "Industrial PHM Aero-Engine & Turbomachinery Corpora", "tasks": ["Prognostics", "Health Management", "Forecasting", "Anomaly Detection"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2605.20268": {
+        "bibkey": "quinlan2026chronicle",
+        "group": "Quinlan et al.", "paradigm": "LLM4TS", "architecture": "Decoder-only Transformer (Joint Pretraining From Scratch)",
+        "tokenization": "Interleaved Byte-Pair Text Tokens + Subseries Patches", "prediction_head": "Unified Autoregressive Causal Head",
+        "params": "324M", "pretrain_corpus": "FineWeb-Edu text + LOTSA & UCR/UEA numerical time series", "tasks": ["Forecasting", "Classification", "NLU", "Multimodal Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2505.10083": {
+        "bibkey": "wang2025chronosteer",
+        "group": "Wang et al.", "paradigm": "LLM4TS", "architecture": "Decoupled Agentic Framework (Frozen TSFM + LLM Controller)",
+        "tokenization": "Discrete Instruction Anchors Codebook", "prediction_head": "Two-Stage Magnitude Revision Head",
+        "params": "not reported", "pretrain_corpus": "Synthetic Paired Cross-Modal Alignment Dataset", "tasks": ["Forecasting", "Contextual Steering"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2505.08723": {
+        "bibkey": "qin2025timo",
+        "group": "MiliLab / Wuhan University", "paradigm": "Native TSFM", "architecture": "Hierarchical Spatio-Temporal Vision Transformer",
+        "tokenization": "Spatiotemporal Gyroscope Attention Patching", "prediction_head": "Masked Image Modeling & Semantic Segmentation Head",
+        "params": "88M", "pretrain_corpus": "MillionST (1M satellite image phases across 100K locations)", "tasks": ["Land Cover Segmentation", "Deforestation Monitoring", "Crop Classification"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": "https://github.com/MiliLab/TiMo"
+    },
+    "2511.19272": {
+        "bibkey": "birkel2025tinytsm",
+        "group": "Felix Birkel", "paradigm": "Native TSFM", "architecture": "Lightweight Decoder-only Transformer",
+        "tokenization": "Causal Input Normalization Patches", "prediction_head": "Dense Next-Token Regression Head",
+        "params": "23M", "pretrain_corpus": "SynthTS Synthetic Generator (Single A100 training)", "tasks": ["Forecasting", "Zero-Shot Forecasting"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2606.11553": {
+        "bibkey": "pradhan2026apex",
+        "group": "Cisco Systems", "paradigm": "Native TSFM", "architecture": "Network-Native Decoder-only Transformer (APEX-Large & APEX-Edge)",
+        "tokenization": "Multivariate Protocol-Layer Telemetry Patching", "prediction_head": "Multi-Horizon Quantile Regression Head",
+        "params": "10.5M, 269M", "pretrain_corpus": "Production Wireless AP Telemetry (4,500 networks, 100K series)", "tasks": ["Wireless Telemetry Forecasting", "Anomaly Detection"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.12412": {
+        "bibkey": "chakrabarti2026holibench",
+        "group": "UCLA NESL", "paradigm": "Evaluation & Benchmark", "architecture": "Cross-Platform Benchmarking & Profiling Harness",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Edge Benchmarking", "Quantization Profiling", "Energy Measurement"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2604.16448": {
+        "bibkey": "yang2026fmcac",
+        "group": "UMass Amherst / UCLA", "paradigm": "Evaluation & Benchmark", "architecture": "Carbon-Aware Control & Zero-Shot TSFM Dispatcher",
+        "tokenization": "Continuous Temporal Telemetry Patches", "prediction_head": "Dynamic Programming Solver Head",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Carbon Forecasting", "Energy Optimization", "Edge AI Dispatch"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2511.14895": {
+        "bibkey": "cheraghinia2025lightweight",
+        "group": "Ghent University - imec", "paradigm": "Native TSFM", "architecture": "Ultra-Lightweight Patch-Independent MLP Encoder",
+        "tokenization": "Raw IQ / CIR Subseries Patching", "prediction_head": "Linear Multi-Task Classification Head",
+        "params": "21K", "pretrain_corpus": "Cross-Domain Wireless Signal Corpus (IQ / CIR)", "tasks": ["Technology Recognition", "Modulation Classification", "LoS Detection"],
+        "open_weights": True, "venue": "IEEE GLOBECOM 2025", "code_url": None
+    },
+    "2410.03294": {
+        "bibkey": "ling2024resource",
+        "group": "University of Duisburg-Essen", "paradigm": "Evaluation & Benchmark", "architecture": "Resource-Aware Mixed-Precision Quantized Transformer (VHDL)",
+        "tokenization": "Uniform & Mixed-Precision Integer Patching", "prediction_head": "Quantized Integer Output Projection",
+        "params": "0.5M--5M", "pretrain_corpus": "Standard Benchmark Sets (ETT, Weather, Electricity)", "tasks": ["FPGA Deployment", "Quantization Profiling", "Hardware Verification"],
+        "open_weights": True, "venue": "MobiQuitous 2024", "code_url": None
     }
 }
 

@@ -180,3 +180,49 @@ Synthesis of computational profiling across the literature yields three decisive
     \item \emph{In-Context Bayesian Inference vs. Score-Based Diffusion}: Prior-Data Fitted Networks (TabPFN-TS~\cite{muller2025tabpfnts}) offer unique operational trade-offs: while context-sequence attention scales quadratically with history length, they execute zero gradient updates, eliminating all fine-tuning optimizer overhead. Conversely, continuous score-based flow matching (FlowState~\cite{king2025flowstate}, UrbanDiT~\cite{li2024urbandit}) demands multiple numerical ODE integration steps ($K \in [10, 50]$), exchanging inference latency for mathematically continuous, sampling-rate-equivariant trajectories.
 \end{enumerate}
 
+\subsection{Energy Consumption, Integer Quantization Degradation, and Edge Deployment Profiles}
+\label{sec:energy_quantization_benchmarks}
+
+While academic benchmarks focus overwhelmingly on predictive error (MSE, CRPS), the viability of deploying foundation models in cyber-physical systems (CPS), Internet-of-Things (IoT), and embedded industrial controllers is strictly determined by energy consumption (Joules per inference), silicon area constraints, and numerical quantization resilience~\cite{chakrabarti2026holibench,ling2024resource}.
+
+\begin{table*}[t]
+\caption{Empirical Energy Consumption, Quantization Degradation, and Edge Hardware Deployment Profiles across Foundation Models.}
+\label{tab:energy_quantization_benchmarks}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lccccccp{3.8cm}}
+\toprule
+\textbf{Model \& Paradigm} & \textbf{Parameters} & \textbf{Precision Format} & \textbf{FLOPs / Inference} & \textbf{Energy / Inference} & \textbf{Peak RAM} & \textbf{Accuracy Degradation ($\Delta$ MSE)} & \textbf{Target Hardware Deployment Envelope} \\
+\midrule
+\textbf{Cheraghinia MLP}~\cite{cheraghinia2025lightweight} & $21\text{K}$ & FP32 / INT8 & $4.2\times 10^4$ & $0.18\text{ mJ}$ & $0.12\text{ MB}$ & $< 0.3\%$ (INT8 PTQ) & ARM Cortex-M4/M7 Microcontroller, Nordic nRF52840; sub-millisecond edge IoT \\
+\midrule
+\textbf{TTM-1M (IBM)}~\cite{ekambaram2024ttm} & $1.0\text{M}$ & FP16 / INT8 & $2.1\times 10^6$ & $3.4\text{ mJ}$ & $4.2\text{ MB}$ & $+0.8\%$ (INT8 PTQ) & Embedded Linux gateways, Raspberry Pi Zero 2W; real-time telemetry \\
+\midrule
+\textbf{APEX-Edge}~\cite{pradhan2026apex} & $10.5\text{M}$ & FP16 / INT8 & $2.2\times 10^7$ & $28.5\text{ mJ}$ & $24.8\text{ MB}$ & $+1.2\%$ (INT8 PTQ) & Enterprise Wi-Fi APs, Cisco Catalyst gateways; sub-second network anomaly audit \\
+\midrule
+\textbf{Tiny-TSM}~\cite{birkel2025tinytsm} & $23.0\text{M}$ & FP16 / INT8 & $4.8\times 10^7$ & $52.0\text{ mJ}$ & $49.0\text{ MB}$ & $+1.5\%$ (INT8 PTQ) & Single-board computers (Raspberry Pi 4/5, Coral Dev Board); edge forecasting \\
+\midrule
+\textbf{Mixed-Precision Transformer}~\cite{ling2024resource} & $1.8\text{M}$ & INT8 / INT4 & $3.6\times 10^6$ & $4.1\text{ mJ}$ & $1.8\text{ MB}$ (BRAM) & $+1.9\%$ (Mixed INT8/INT4) & Embedded FPGA (Xilinx Spartan-7 XC7S15); strict hardware-timed SCADA loops \\
+\midrule
+\textbf{Chronos-Bolt Small} & $46.0\text{M}$ & FP16 / INT8 & $9.5\times 10^7$ & $112\text{ mJ}$ & $98\text{ MB}$ & $+1.4\%$ (INT8 PTQ) & Edge AI accelerators (NVIDIA Jetson Orin Nano, Google Coral); high-throughput \\
+\midrule
+\textbf{MOIRAI-Small}~\cite{woo2024moirai} & $14.0\text{M}$ & FP16 / INT8 & $3.1\times 10^7$ & $74\text{ mJ}$ & $62\text{ MB}$ & $+1.1\%$ (INT8 PTQ) & Industrial IPCs, Jetson Xavier NX; any-variate sensor fusion \\
+\midrule
+\textbf{TimesFM-200M}~\cite{das2024timesfm} & $200\text{M}$ & FP16 / INT8 & $4.2\times 10^8$ & $580\text{ mJ}$ & $480\text{ MB}$ & $+2.1\%$ (INT8 PTQ) & Edge servers, industrial workstations; multi-horizon continuous quantile forecasting \\
+\midrule
+\textbf{Time-LLM (7B)}~\cite{jin2023timellm} & $7.0\text{B}$ & FP16 / INT4 & $1.5\times 10^{10}$ & $18.4\text{ J}$ & $14.2\text{ GB}$ & $+3.8\%$ (INT4 AWQ) & Cloud multi-GPU servers (A100/H100); strictly prohibited on edge/battery devices \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+To systematically address cross-platform hardware discrepancies, recent literature establishes three pivotal advancements:
+\begin{enumerate}[leftmargin=*]
+    \item \emph{HoliBench: Holistic Cross-Platform Profiling}: Chakrabarti et al.~\cite{chakrabarti2026holibench} introduce HoliBench, a standardized benchmarking and deployment toolkit that jointly characterizes accuracy, latency, and energy across seven device classes, eight inference backends, and three quantization levels (FP16, INT8, INT4). HoliBench uncovers that integer post-training quantization (PTQ) reduces latency only on architectures equipped with specialized low-precision compute pipelines (e.g., INT8 Tensor Cores or NEON vector units); on general-purpose microcontrollers lacking integer SIMD, quantization merely reduces memory footprint while potentially increasing execution latency due to dequantization overhead. Furthermore, HoliBench demonstrates that standalone single-model profiles compose with high fidelity ($1.2\%$ latency and $2.5\%$ power error) under co-resident execution, enabling optimal multi-model pipeline configuration without combinatorial profiling.
+    \item \emph{Resource-Aware Mixed-Precision FPGA Quantization}: Ling et al.~\cite{ling2024resource} resolve the hardware-level bottleneck of deploying time-series Transformers onto resource-constrained embedded FPGAs (Xilinx Spartan-7 XC7S15). By formulating a resource-aware mixed-precision quantization methodology (allocating INT8 to sensitive cross-attention maps and INT4 to feed-forward blocks) and optimizing block RAM (BRAM) storage templates, they achieve hardware resource estimation within $3\%$ of physical silicon synthesis, unlocking deployability for previously non-synthesizable transformer configurations.
+    \item \emph{Carbon-Aware Dynamic Dispatch (FM-CAC)}: Yang et al.~\cite{yang2026fmcac} formulate FM-CAC, establishing a proactive carbon-aware control framework for battery-buffered edge AI systems. By deploying edge-friendly zero-shot TSFMs to forecast temporal marginal emissions and grid carbon intensity, FM-CAC feeds predictions into a dynamic programming solver with deferred cost attribution. This decouples energy harvesting from compute execution, reducing carbon emissions by up to $65.6\%$ while maintaining near-maximum inference accuracy across continuous edge vision and time-series pipelines.
+\end{enumerate}
+
+As detailed in Table~\ref{tab:energy_quantization_benchmarks}, lightweight architectures (e.g., Cheraghinia MLP~\cite{cheraghinia2025lightweight}, TTM~\cite{ekambaram2024ttm}, and APEX-Edge~\cite{pradhan2026apex}) consume between $0.18\text{ mJ}$ and $28.5\text{ mJ}$ per inference, operating comfortably within battery-buffered and energy-harvesting IoT regimes with negligible ($<1.2\%$) degradation under INT8 quantization. In contrast, multi-billion parameter LLMs demand over $18\text{ Joules}$ per forward pass and over $14\text{ GB}$ of VRAM, underscoring that compact, quantization-resilient native models are mandatory for sustainable edge intelligence.
+
+

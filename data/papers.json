@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-25",
-  "total_included": 81,
+  "total_included": 92,
   "papers": [
     {
       "id": "arxiv:2401.03955",
@@ -4045,6 +4045,515 @@
       },
       "doi": "10.48550/arXiv.2509.26468",
       "url": "https://arxiv.org/abs/2509.26468"
+    },
+    {
+      "id": "arxiv:2508.04379",
+      "arxiv_id": "2508.04379",
+      "title": "VisionTS++: Cross-Modal Time Series Foundation Model with Continual Pre-trained Vision Backbones",
+      "authors": [
+        "Lefei Shen",
+        "Mouxiang Chen",
+        "Xu Liu",
+        "Han Fu",
+        "Xiaoxue Ren",
+        "Jianling Sun",
+        "Zhuo Li",
+        "Chenghao Liu"
+      ],
+      "release_date": "2025-08-06",
+      "summary": "Recent studies have indicated that vision models pre-trained on images can serve as time series foundation models (TSFMs) by reformulating time series forecasting (TSF) as image reconstruction. However, effective cross-modal transfer from vision to time series remains challenging due to three discrepancies: (1) the data-modality gap between structured, bounded image data and unbounded, heterogeneous time series; (2) the multivariate-forecasting gap between fixed RGB-three-channel vision models and time series with arbitrary numbers of variates; and (3) the probabilistic-forecasting gap between the deterministic outputs of vision models and the requirement for uncertainty-aware probabilistic predictions. To bridge these gaps, we propose VisonTS++, a TSFM based on continual pre-training of a vision model on large-scale time series. Our approach introduces three key innovations: (1) vision-model-based filtering to identify high-quality sequences to stabilize pre-training and mitigate modality gap; (2) colorized multivariate conversion, encoding multivariate series as multi-subfigure RGB images to enhance cross-variate modeling; (3) multi-quantile forecasting, using parallel reconstruction heads to generate quantile forecasts without parametric assumptions. Experiments show that VisionTS++ achieves state-of-the-art performance in both in-distribution and out-of-distribution forecasting, outperforming specialized TSFMs by 6%-44% in MSE reduction and ranking first in GIFT-Eval benchmark which comprises 23 datasets across 7 domains. Our work demonstrates that with appropriate adaptation, vision models can effectively generalize to TSF, thus advancing the pursuit of universal TSFMs. Code is available at https://github.com/HALF111/VisionTSpp.",
+      "comment": "19 pages",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "shen2025visiontsplus",
+      "group": "Shen et al.",
+      "paradigm": "LLM4TS",
+      "architecture": "Continual Pre-trained Vision Transformer Backbone (ViT)",
+      "tokenization": "Multi-Scale Line Plot Image Projection",
+      "prediction_head": "Visual Next-Patch Denoising Reconstruction",
+      "params": "86M",
+      "pretrain_corpus": "ImageNet-1K + Cross-Domain Time-Series Line Plots",
+      "tasks": [
+        "Forecasting",
+        "Zero-Shot Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2508.04379",
+      "url": "https://arxiv.org/abs/2508.04379"
+    },
+    {
+      "id": "arxiv:2607.14510",
+      "arxiv_id": "2607.14510",
+      "title": "VLT: A Vision-Language-Time Series Multimodal Foundation Model for Industrial Intelligence",
+      "authors": [
+        "Haiteng Wang",
+        "Jingheng Yan",
+        "Xiaokang Wang",
+        "Lei Ren"
+      ],
+      "release_date": "2026-07-16",
+      "summary": "Industrial time series serve as the foundation for Prognostics and Health Management (PHM) to ensure the reliability and safety of industrial equipment such as aero-engines. However, existing approaches are typically limited to single-modality modeling, which restricts their generalization in complex scenarios. Although recent advances in large language models (LLMs) provide new opportunities for multimodal learning, bridging continuous time-series signals and discrete textual semantics remains an open challenge. To this end, we propose VLT, a multimodal foundation model that jointly models time-series, frequency-spectrum visual representations, and textual knowledge. A key insight is to utilize the frequency spectrum as a visual bridge to connect continuous temporal signals with discrete semantics. Specifically, a Time-aware Mixture-of-Experts (Time-MoE) is designed to capture heterogeneous temporal dynamics, while a Frequency-Text Augmented Learner enables joint modeling of spectral and semantic features within a shared representation space. Furthermore, a time-centric gradient alignment mechanism is introduced to mitigate cross-modal optimization conflicts via gradient normalization and reliability-aware dynamic reweighting. Extensive experiments on multiple industrial datasets demonstrate that VLT outperforms state-of-the-art methods, achieving superior robustness and generalization under few-shot, noisy, and incomplete-modality settings.",
+      "comment": "18 pages, 13 figures, and 13 tables, including supplementary material. Haiteng Wang and Jingheng Yan contributed equally to this work",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "wang2026vlt",
+      "group": "Wang et al.",
+      "paradigm": "LLM4TS",
+      "architecture": "Multimodal Encoder (Time-MoE + Frequency-Text Learner)",
+      "tokenization": "Spectral Frequency Spectrogram + Text Prompt Tokens",
+      "prediction_head": "Shared Multimodal Representation Head",
+      "params": "110M",
+      "pretrain_corpus": "Industrial PHM Aero-Engine & Turbomachinery Corpora",
+      "tasks": [
+        "Prognostics",
+        "Health Management",
+        "Forecasting",
+        "Anomaly Detection"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2607.14510",
+      "url": "https://arxiv.org/abs/2607.14510"
+    },
+    {
+      "id": "arxiv:2605.20268",
+      "arxiv_id": "2605.20268",
+      "title": "Chronicle: A Multimodal Foundation Model for Joint Language and Time Series Understanding",
+      "authors": [
+        "Paul Quinlan",
+        "Jeremy Levasseur",
+        "Qingguo Li",
+        "Xiaodan Zhu"
+      ],
+      "release_date": "2026-05-18",
+      "summary": "Real-world time series come with text: metadata, descriptions, news, reports. Yet time series foundation models process numerical sequences in isolation, and the multimodal text-and-time-series models that attempt to bridge the two all adapt a pretrained language model post hoc, inheriting representations shaped without ever seeing temporal data. These models are also evaluated almost exclusively against other multimodal baselines, not against the strongest unimodal foundation models in either domain, leaving open whether joint training is needed at all. We present Chronicle, a compact 324M-parameter decoder-only transformer trained from scratch on natural language and time series within a single unified architecture. Both modalities share the same transformer blocks, attention mechanism, and residual stream; the bulk of pretraining uses unimodal batches so cross-modal capability emerges purely from shared parameters, with a short alignment stage that interleaves the two. To our knowledge, Chronicle is the first model jointly pretrained on text and time series from scratch, and the first multimodal model evaluated against dedicated foundation models in both domains. It matches Gemma-3-270M-PT on 19 NLU tasks, sets a new bar for frozen-embedding time series classification on 24 UCR/UEA datasets, and produces multimodal forecasts on Time-MMD that beat every supervised fusion baseline, all from a single backbone.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "quinlan2026chronicle",
+      "group": "Quinlan et al.",
+      "paradigm": "LLM4TS",
+      "architecture": "Decoder-only Transformer (Joint Pretraining From Scratch)",
+      "tokenization": "Interleaved Byte-Pair Text Tokens + Subseries Patches",
+      "prediction_head": "Unified Autoregressive Causal Head",
+      "params": "324M",
+      "pretrain_corpus": "FineWeb-Edu text + LOTSA & UCR/UEA numerical time series",
+      "tasks": [
+        "Forecasting",
+        "Classification",
+        "NLU",
+        "Multimodal Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2605.20268",
+      "url": "https://arxiv.org/abs/2605.20268"
+    },
+    {
+      "id": "arxiv:2505.10083",
+      "arxiv_id": "2505.10083",
+      "title": "ChronoSteer: Bridging Large Language Model and Time Series Foundation Model via Synthetic Cross-Modal Alignment Dataset",
+      "authors": [
+        "Chengsen Wang",
+        "Qi Qi",
+        "Zhongwen Rao",
+        "Lujia Pan",
+        "Jingyu Wang"
+      ],
+      "release_date": "2025-05-15",
+      "summary": "Conventional forecasting methods are trained end-to-end on unimodal time series, which limits their ability to exploit textual information and undermines their generalization in data-scarce scenarios. Recently, large language models (LLMs) and time series foundation models (TSFMs) have demonstrated powerful capabilities in complex textual reasoning and zero-shot temporal modeling, respectively. Integrating these strengths to construct a multimodal time series foundation model that jointly leverages temporal and textual information for zero-shot future inference has emerged as a promising research direction. However, the scarcity of large-scale, high-quality multimodal datasets remains a fundamental obstacle. To address this challenge, we propose ChronoSteer, a decoupled agentic framework that learns cross-modal alignment from synthetic paired supervision. Specifically, a pretrained LLM first converts textual events into revision instructions that steer the initial unimodal prediction produced by a frozen TSFM. These revision instructions form an intermediate instruction space that bridges the semantic gap between text and time series while fully leveraging pretrained knowledge. Technically, the instructions are discretized into a compact codebook of instruction anchors, effectively mitigating semantic divergence while reducing the cost of dataset construction. Finally, we adopt a two-stage training strategy to recover the fine-grained magnitude information lost during discretization. Furthermore, we release a leakage-controlled multimodal benchmark constructed with temporal separation and textual context available before the prediction window. When paired with an LLM and trained on synthetic cross-modal alignment data, ChronoSteer achieves a 25.8% improvement in zero-shot prediction accuracy over its unimodal backbone, and outperforms prior state-of-the-art unimodal and multimodal ...",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "wang2025chronosteer",
+      "group": "Wang et al.",
+      "paradigm": "LLM4TS",
+      "architecture": "Decoupled Agentic Framework (Frozen TSFM + LLM Controller)",
+      "tokenization": "Discrete Instruction Anchors Codebook",
+      "prediction_head": "Two-Stage Magnitude Revision Head",
+      "params": "not reported",
+      "pretrain_corpus": "Synthetic Paired Cross-Modal Alignment Dataset",
+      "tasks": [
+        "Forecasting",
+        "Contextual Steering"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2505.10083",
+      "url": "https://arxiv.org/abs/2505.10083"
+    },
+    {
+      "id": "arxiv:2505.08723",
+      "arxiv_id": "2505.08723",
+      "title": "TiMo: Spatiotemporal Foundation Model for Satellite Image Time Series",
+      "authors": [
+        "Xiaolei Qin",
+        "Di Wang",
+        "Jing Zhang",
+        "Fengxiang Wang",
+        "Xin Su",
+        "Bo Du",
+        "Liangpei Zhang"
+      ],
+      "release_date": "2025-05-13",
+      "summary": "Satellite image time series (SITS) provide continuous observations of the Earth's surface, making them essential for applications such as environmental management and disaster assessment. However, existing spatiotemporal foundation models rely on plain vision transformers, which encode entire temporal sequences without explicitly capturing multiscale spatiotemporal relationships between land objects. This limitation hinders their effectiveness in downstream tasks. To overcome this challenge, we propose TiMo, a novel hierarchical vision transformer foundation model tailored for SITS analysis. At its core, we introduce a spatiotemporal gyroscope attention mechanism that dynamically captures evolving multiscale patterns across both time and space. For pre-training, we curate MillionST, a large-scale dataset of one million images from 100,000 geographic locations, each captured across 10 temporal phases over five years, encompassing diverse geospatial changes and seasonal variations. Leveraging this dataset, we adapt masked image modeling to pre-train TiMo, enabling it to effectively learn and encode generalizable spatiotemporal representations.Extensive experiments across multiple spatiotemporal tasks-including deforestation monitoring, land cover segmentation, crop type classification, and flood detection-demonstrate TiMo's superiority over state-of-the-art methods. Code, model, and dataset will be released at https://github.com/MiliLab/TiMo.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "qin2025timo",
+      "group": "MiliLab / Wuhan University",
+      "paradigm": "Native TSFM",
+      "architecture": "Hierarchical Spatio-Temporal Vision Transformer",
+      "tokenization": "Spatiotemporal Gyroscope Attention Patching",
+      "prediction_head": "Masked Image Modeling & Semantic Segmentation Head",
+      "params": "88M",
+      "pretrain_corpus": "MillionST (1M satellite image phases across 100K locations)",
+      "tasks": [
+        "Land Cover Segmentation",
+        "Deforestation Monitoring",
+        "Crop Classification"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": "https://github.com/MiliLab/TiMo",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2505.08723",
+      "url": "https://arxiv.org/abs/2505.08723"
+    },
+    {
+      "id": "arxiv:2511.19272",
+      "arxiv_id": "2511.19272",
+      "title": "Tiny-TSM: Efficiently Training a Lightweight SOTA Time Series Foundation Model",
+      "authors": [
+        "Felix Birkel"
+      ],
+      "release_date": "2025-11-24",
+      "summary": "We present Tiny-TSM, a time series foundation model characterized by small scale, economical training, and state-of-the-art performance. It comprises 23M total parameters, trained on a single A100 GPU in less than a week using a new synthetic data generation and data augmentation pipeline (SynthTS). Without any neural architecture search, hyperparameter tuning, or scaling up model size, Tiny-TSM achieves state-of-the-art performance on a wide range of time series benchmark datasets, often outperforming much larger models and even matching the performance of much larger, industrial-scale, likely highly tuned foundation models. Specifically, Tiny-TSM outperforms all other time series foundation models we evaluated on medium- and long-term forecasting tasks under MSE loss, while short-term accuracy is still competitive with state-of-the-art models. We also introduce a causal input normalization scheme that enables time series models to be trained with dense next-token prediction loss, significantly accelerating convergence speed and reducing training time. All experiments were conducted on a single A100 GPU, illustrating the practicality of the proposed approach in a resource-constrained setting.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "birkel2025tinytsm",
+      "group": "Felix Birkel",
+      "paradigm": "Native TSFM",
+      "architecture": "Lightweight Decoder-only Transformer",
+      "tokenization": "Causal Input Normalization Patches",
+      "prediction_head": "Dense Next-Token Regression Head",
+      "params": "23M",
+      "pretrain_corpus": "SynthTS Synthetic Generator (Single A100 training)",
+      "tasks": [
+        "Forecasting",
+        "Zero-Shot Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2511.19272",
+      "url": "https://arxiv.org/abs/2511.19272"
+    },
+    {
+      "id": "arxiv:2606.11553",
+      "arxiv_id": "2606.11553",
+      "title": "APEX: A Network-Native Time-Series Foundation Model for Forecasting and Anomaly Detection for Wireless Edge Operations",
+      "authors": [
+        "Swadhin Pradhan",
+        "Niloo Bahadori",
+        "Peiman Amini"
+      ],
+      "release_date": "2026-06-10",
+      "summary": "Generic time-series foundation models transfer poorly to wireless network telemetry whose signals are bursty, zero-inflated, and coupled across protocol layers. We present APEX, a network-native, decoder-only transformer for forecasting enterprise AP telemetry, and evaluate it on DHCP degradation as a representative network task. APEX is pre-trained on 10-channel multivariate telemetry from ~4,500 production wireless networks (~100K AP time series, 34 metrics per AP), and is available as APEX-Large (269M, cloud) and APEX-Edge (10.5M, edge). On a 192-step (4-day) DHCP degradation benchmark, APEX-Large reduces MAE by 18% over the strongest foundation-model baseline (Toto) and 38% over SARIMA, with anomaly-detection F1 = 0.93, while APEX-Edge enables sub-second, privacy-preserving inference on AP-class edge hardware. These results suggest network-native pre-training is a practical foundation for proactive wireless operations.",
+      "comment": "5 pages, 1 figure, 4 tables. Discusses a network-native time-series foundation model for wireless edge operations",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "pradhan2026apex",
+      "group": "Cisco Systems",
+      "paradigm": "Native TSFM",
+      "architecture": "Network-Native Decoder-only Transformer (APEX-Large & APEX-Edge)",
+      "tokenization": "Multivariate Protocol-Layer Telemetry Patching",
+      "prediction_head": "Multi-Horizon Quantile Regression Head",
+      "params": "10.5M, 269M",
+      "pretrain_corpus": "Production Wireless AP Telemetry (4,500 networks, 100K series)",
+      "tasks": [
+        "Wireless Telemetry Forecasting",
+        "Anomaly Detection"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2606.11553",
+      "url": "https://arxiv.org/abs/2606.11553"
+    },
+    {
+      "id": "arxiv:2609.12412",
+      "arxiv_id": "2609.12412",
+      "title": "HoliBench: A Cross-Platform Benchmarking and Deployment Toolkit for Foundation Models in CPS-IoT Applications",
+      "authors": [
+        "Inesh Chakrabarti",
+        "Zejun Xiong",
+        "Pragya Sharma",
+        "Mani Srivastava"
+      ],
+      "release_date": "2026-09-11",
+      "summary": "Foundation models, including large language models, vision-language models, and time-series foundation models, are increasingly deployed on embedded and edge platforms for CPS and IoT applications, where energy, latency, and memory are as critical as task accuracy. Existing benchmarking tools evaluate model capability in isolation, reporting accuracy assuming sufficient compute, while hardware profiling tools remain platform-specific and mutually incompatible. As a result, users lack a unified workflow for making deployment decisions across heterogeneous devices. We present HoliBench, a modular benchmarking and deployment toolkit that jointly characterizes accuracy, latency, and energy across platforms from single-board computers to GPU servers. Its platform abstraction layer calibrates cross-device measurement, and the toolkit supports multiple model modalities, inference engines, concurrencies, and existing evaluation harnesses. An interactive interface exposes constraint-aware configuration selection over a design space that is profiled once and reused across studies. Using HoliBench, we characterize 20 models across 7 device types, 3 quantization levels, 8 inference backends, and over 30 tasks, surfacing tradeoffs that existing tools miss: quantization reduces latency only on hardware with low-precision support, accuracy gains show diminishing returns relative to energy, and for autoregressive workloads, average inference power is approximately constant across output lengths. We further find that single-model profiles compose under sequential co-resident execution. In a multi-model CPS deployment, standalone profiles predict combined-pipeline latency and power within 1.2% and 2.5%, enabling deployment exploration without exhaustively profiling every pipeline configuration. We release HoliBench as open-source infrastructure for deployment-aware evaluation of foundation models.",
+      "comment": "16 pages, 9 figures, 2 tables. Code: <a href=\"https://github.com/beesfleas/HoliBench\" rel=\"external noopener nofollow\" class=\"link-external link-https\">this https URL</a>",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "chakrabarti2026holibench",
+      "group": "UCLA NESL",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Cross-Platform Benchmarking & Profiling Harness",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Edge Benchmarking",
+        "Quantization Profiling",
+        "Energy Measurement"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2609.12412",
+      "url": "https://arxiv.org/abs/2609.12412"
+    },
+    {
+      "id": "arxiv:2604.16448",
+      "arxiv_id": "2604.16448",
+      "title": "FM-CAC: Carbon-Aware Control for Battery-Buffered Edge AI via Time-Series Foundation Models",
+      "authors": [
+        "Kang Yang",
+        "Walid A. Hanafy",
+        "Prashant Shenoy",
+        "Mani Srivastava"
+      ],
+      "release_date": "2026-04-07",
+      "summary": "As edge AI deployments scale to billions of devices running always-on, real-time compound AI pipelines, they represent a massive and largely unmanaged source of energy consumption and carbon emissions. To reduce carbon emissions while maximizing Quality-of-Service (QoS), this paper proposes FM-CAC, a proactive carbon-aware control framework that leverages a battery as an active temporal buffer. By decoupling energy acquisition from energy consumption, FM-CAC can maximize the use of low-carbon energy, substantially reducing carbon emissions. At each control step, FM-CAC jointly optimizes the software pipeline variant, the hardware operating point, and the battery charging and discharging actions. To support this decision process, FM-CAC leverages edge-friendly Time-Series Foundation Models (TSFMs) for zero-shot carbon forecasting and integrates these forecasts into a dynamic programming solver with deferred cost attribution to prevent myopic battery depletion. Results show that FM-CAC reduces carbon emissions by up to 65.6% while maintaining near-maximum inference accuracy.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "yang2026fmcac",
+      "group": "UMass Amherst / UCLA",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Carbon-Aware Control & Zero-Shot TSFM Dispatcher",
+      "tokenization": "Continuous Temporal Telemetry Patches",
+      "prediction_head": "Dynamic Programming Solver Head",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Carbon Forecasting",
+        "Energy Optimization",
+        "Edge AI Dispatch"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2604.16448",
+      "url": "https://arxiv.org/abs/2604.16448"
+    },
+    {
+      "id": "arxiv:2511.14895",
+      "arxiv_id": "2511.14895",
+      "title": "Lightweight Foundation Model for Wireless Time Series Downstream Tasks on Edge Devices",
+      "authors": [
+        "Mohammad Cheraghinia",
+        "Eli De Poorter",
+        "Jaron Fontaine",
+        "Kwang Soon Kim",
+        "Merouane Debbah",
+        "Adnan Shahid"
+      ],
+      "release_date": "2025-11-18",
+      "summary": "While machine learning is widely used to optimize wireless networks, training a separate model for each task in communication and localization is becoming increasingly unsustainable due to the significant costs associated with training and deployment. Foundation models offer a more scalable alternative by enabling a single model to be adapted across multiple tasks through fine-tuning with limited samples. However, current foundation models mostly rely on large-scale Transformer architectures, resulting in computationally intensive models unsuitable for deployment on typical edge devices. This paper presents a lightweight foundation model based on simple Multi-Layer-Perceptron (MLP) encoders that independently process input patches. Our model supports 4 types of downstream tasks (long-range technology recognition, short-range technology recognition, modulation recognition and line-of-sight-detection) from multiple input types (IQ and CIR) and different sampling rates. We show that, unlike Transformers, which can exhibit performance drops as downstream tasks are added, our MLP model maintains robust generalization performance, achieving over 97% accurate fine-tuning results for previously unseen data classes. These results are achieved despite having only 21K trainable parameters, allowing an inference time of 0.33 ms on common edge devices, making the model suitable for constrained real-time deployments.",
+      "comment": "6 pages, 4 figures, 5 tables. Accepted to a workshop in the IEEE GLOBECOM 2025",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "cheraghinia2025lightweight",
+      "group": "Ghent University - imec",
+      "paradigm": "Native TSFM",
+      "architecture": "Ultra-Lightweight Patch-Independent MLP Encoder",
+      "tokenization": "Raw IQ / CIR Subseries Patching",
+      "prediction_head": "Linear Multi-Task Classification Head",
+      "params": "21K",
+      "pretrain_corpus": "Cross-Domain Wireless Signal Corpus (IQ / CIR)",
+      "tasks": [
+        "Technology Recognition",
+        "Modulation Classification",
+        "LoS Detection"
+      ],
+      "open_weights": true,
+      "venue": "IEEE GLOBECOM 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2511.14895",
+      "url": "https://arxiv.org/abs/2511.14895"
+    },
+    {
+      "id": "arxiv:2410.03294",
+      "arxiv_id": "2410.03294",
+      "title": "Resource-aware Mixed-precision Quantization for Enhancing Deployability of Transformers for Time-series Forecasting on Embedded FPGAs",
+      "authors": [
+        "Tianheng Ling",
+        "Chao Qian",
+        "Gregor Schiele"
+      ],
+      "release_date": "2024-10-04",
+      "summary": "This study addresses the deployment challenges of integer-only quantized Transformers on resource-constrained embedded FPGAs (Xilinx Spartan-7 XC7S15). We enhanced the flexibility of our VHDL template by introducing a selectable resource type for storing intermediate results across model layers, thereby breaking the deployment bottleneck by utilizing BRAM efficiently. Moreover, we developed a resource-aware mixed-precision quantization approach that enables researchers to explore hardware-level quantization strategies without requiring extensive expertise in Neural Architecture Search. This method provides accurate resource utilization estimates with a precision discrepancy as low as 3%, compared to actual deployment metrics. Compared to previous work, our approach has successfully facilitated the deployment of model configurations utilizing mixed-precision quantization, thus overcoming the limitations inherent in five previously non-deployable configurations with uniform quantization bitwidths. Consequently, this research enhances the applicability of Transformers in embedded systems, facilitating a broader range of Transformer-powered applications on edge devices.",
+      "comment": "20 pages, 8 figures, 6 tables, accepted by the 21st EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous2024)",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q5_iteration5_multimodal_edge_quantization"
+      ],
+      "retrieved_at": "2026-09-26 07:44:00",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "ling2024resource",
+      "group": "University of Duisburg-Essen",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Resource-Aware Mixed-Precision Quantized Transformer (VHDL)",
+      "tokenization": "Uniform & Mixed-Precision Integer Patching",
+      "prediction_head": "Quantized Integer Output Projection",
+      "params": "0.5M--5M",
+      "pretrain_corpus": "Standard Benchmark Sets (ETT, Weather, Electricity)",
+      "tasks": [
+        "FPGA Deployment",
+        "Quantization Profiling",
+        "Hardware Verification"
+      ],
+      "open_weights": true,
+      "venue": "MobiQuitous 2024",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2410.03294",
+      "url": "https://arxiv.org/abs/2410.03294"
     }
   ]
 }

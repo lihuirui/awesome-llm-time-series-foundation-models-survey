@@ -2,11 +2,11 @@
 
 [![Survey Paper](https://img.shields.io/badge/Survey%20Paper-PDF-red?style=flat&logo=adobeacrobatreader)](paper/main.pdf)
 [![PRISMA 2020](https://img.shields.io/badge/PRISMA%202020-Reproducible-green?style=flat)](docs/PROTOCOL.md)
-[![Total Included](https://img.shields.io/badge/Included%20Studies-81-blue?style=flat)](data/papers.json)
+[![Total Included](https://img.shields.io/badge/Included%20Studies-92-blue?style=flat)](data/papers.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 4 (Spatio-Temporal Foundation Models & Computational Profiling)** · Last Updated: **2026-09-25**
+> Latest Iteration: **Iteration 5 (Omni-Modal Grounding, Edge Foundation Models & Energy/Quantization Benchmarks)** · Last Updated: **2026-09-25**
 
 ---
 
@@ -14,10 +14,10 @@
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **原生时间序列基座模型 (Native TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与扩散模型，如 Chronos、TimesFM、MOIRAI、MOMENT、Lag-Llama、TTM、Timer、Timer-XL、Sundial、Timer-S1、Time-MoE、Toto 2.0、$t_0$ 等。
-2. **时空图谱基座模型 (Spatio-Temporal Foundation Models)**：打破1D序列孤岛，将空间拓扑图与时间动态统一建模，如 OpenCity、UniST、UrbanDiT、UrbanFM、UrbanGPT、ST-LLM 等。
-3. **基于大语言模型改造的时序方法 (LLM4TS)**：跨模态重编程、提示调优、特征跨模态对齐及自主智能体，如 Time-LLM、GPT4TS/One Fits All、LLMTime、TEMPO、TEST、S2IP-LLM、Time-MQA、TimeOmni-VL 等。
-4. **评测基准、标度律与计算开销对比**：GIFT-Eval、fev-bench（含协变量评估）、It's TIME（数据泄漏审计）、Beyond Numerical TS、AION，以及各范式的算法复杂度、KV-Cache 内存与端侧低延迟部署评测。
+1. **原生与端侧轻量基座模型 (Native & Edge TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与极端端侧轻量模型，如 Chronos-2、TimesFM、MOIRAI、MOMENT、TTM、Timer-S1、Time-MoE、Toto 2.0、$t_0$、Tiny-TSM (23M单卡训练)、APEX (网络原生AP遥测)、Cheraghinia MLP (21K微控制器级) 等。
+2. **时空图谱与卫星遥感时序基座模型 (Spatio-Temporal & Remote Sensing)**：打破1D序列孤岛，统一空间拓扑图与连续时序，如 OpenCity、UniST、UrbanDiT、UrbanFM、TiMo (100万卫星时序图像多尺度陀螺注意力) 等。
+3. **全模态表征与跨模态预训练 (Omni-Modal & LLM4TS)**：跨模态重编程、全模态联合预训练、时频视觉桥接与智能体指导，如 Time-LLM、Chronicle (从头联合预训练324M模型)、VLT (工业时频图谱-文本多模态)、ChronoSteer (合成指令引导对齐)、VisionTS++ (持续预训练视觉主干)、TimeOmni-VL 等。
+4. **能耗剖析、整数低比特量化与端侧评测 (Energy, Quantization & Edge Benchmarks)**：HoliBench (跨7类硬件与FP16/INT8/INT4能耗分析)、FM-CAC (时序大模型赋能绿色AI与碳感知动态调度)、Ling et al. (FPGA混合精度INT8/INT4量化)、GIFT-Eval、fev-bench、It's TIME (多粒度数据泄漏审计) 等。
 5. **重点学术团队专题**：深入跟踪清华大学龙明盛团队 (THUML)、Ming Jin 团队、以及亚马逊 Chronos 团队的最新研发脉络。
 
 ---
@@ -34,16 +34,16 @@ graph TD
     Root --> P3["Evaluations, Benchmarks & Critiques"]
 
     P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM, Timer, Sundial, TiRex, Toto, Tabby, t0)"]
-    P1 --> P1_Enc["Masked, PFN & Mixer Models<br/>(MOMENT, MOIRAI, TTM, ICTSP, ForecastPFN, TabPFN-TS, LightGTS)"]
-    P1 --> P1_ST["Spatio-Temporal & Dynamical<br/>(OpenCity, UniST, UrbanDiT, UrbanFM, Time-MoE, EIDOS, FlowState)"]
+    P1 --> P1_Edge["Masked, PFN & Edge Models<br/>(MOMENT, MOIRAI, TTM, Tiny-TSM, APEX, Cheraghinia MLP, LightGTS)"]
+    P1 --> P1_ST["Spatio-Temporal & Remote Sensing<br/>(OpenCity, UniST, UrbanDiT, TiMo, UrbanFM, Time-MoE, EIDOS, FLAME)"]
 
     P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
     P2 --> P2_Prompt["Prompting & Spatio-Temporal<br/>(LLMTime, PromptCast, UniTime, UrbanGPT, ST-LLM, AutoTimes)"]
-    P2 --> P2_Multi["Multimodal Context & Agentic Reasoning<br/>(Time-VLM, ChatTS, TimeOmni-VL, TRACE, Time-MQA, OpenTSLM)"]
+    P2 --> P2_Omni["Omni-Modal & Joint Pretraining<br/>(Chronicle, VLT, VisionTS++, ChronoSteer, Time-VLM, TimeOmni-VL)"]
 
     P3 --> P3_Bench["Standardized Benchmarks (GIFT-Eval, fev-bench, TimesX, SciTS)"]
     P3 --> P3_Audit["Leakage Audits & Complexity (It's TIME, Rethinking Eval, Table 4)"]
-    P3 --> P3_Agent["Next-Gen Agentic & Context Suites (Beyond Numerical, AION, TimeVista)"]
+    P3 --> P3_Energy["Energy & Quantization Profiles (HoliBench, FM-CAC, Ling et al., Table 5)"]
 ```
 
 ---
@@ -54,13 +54,13 @@ graph TD
 
 | Phase | Metric | Count | Description |
 | :--- | :--- | :---: | :--- |
-| **Identification** | Total records retrieved | **97** | Systematic queries across arXiv and Crossref APIs |
+| **Identification** | Total records retrieved | **108** | Systematic queries across arXiv and Crossref APIs |
 | | Duplicates removed | **5** | Deduplication via DOI and arXiv identifiers |
-| **Screening** | Title & abstract screened | **92** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
+| **Screening** | Title & abstract screened | **103** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
 | | Excluded at Stage 1 | **10** | Out of domain / pre-2021 releases |
-| **Eligibility** | Full-text assessed | **82** | Assessed for architectural details and experimental rigor |
+| **Eligibility** | Full-text assessed | **93** | Assessed for architectural details and experimental rigor |
 | | Deferred for P2 extraction | **1** | Candidates queued for detailed extraction in upcoming iteration |
-| **Included** | **Total Synthesized Studies** | **81** | **Core benchmark and foundation models synthesized** |
+| **Included** | **Total Synthesized Studies** | **92** | **Core benchmark and foundation models synthesized** |
 
 ---
 
@@ -120,6 +120,10 @@ graph TD
 | **UniST** | Tsinghua FIB Lab | KDD 2024 | not reported | Multi-Scenario Urban Spatio-Temporal Benchmark | Patch-based Spatio-Temporal Tokenization; Unified Spatio-Temporal Masked Autoencoder with Knowledge Prompts | [📄 Paper](https://arxiv.org/abs/2402.11838)<br/>[💻 Code](https://github.com/tsinghua-fib-lab/UniST) |
 | **Diffusion Transformers as Open-World Spatiotemporal Foundation Models** | Tsinghua FIB Lab | NeurIPS 2025 | 45M | Open-world Urban Heterogeneous Data | Unified Grid & Graph Patch Tokens + Prompt Tokens; Spatio-Temporal Diffusion Transformer (DiT) | [📄 Paper](https://arxiv.org/abs/2411.12164)<br/>[💻 Code](https://github.com/tsinghua-fib-lab/UrbanDiT) |
 | **UrbanFM** | HKUST / Tsinghua | arXiv 2026 | 120M | Multi-City Urban Spatio-Temporal Corpus | MiniST Tokenization (Heterogeneous Signal Regularization); Minimalist Spatio-Temporal Transformer with Constrained Bias | [📄 Paper](https://arxiv.org/abs/2602.20677)<br/>🔒 Proprietary |
+| **TiMo** | MiliLab / Wuhan University | arXiv 2025 | 88M | MillionST (1M satellite image phases across 100K locations) | Spatiotemporal Gyroscope Attention Patching; Hierarchical Spatio-Temporal Vision Transformer | [📄 Paper](https://arxiv.org/abs/2505.08723)<br/>[💻 Code](https://github.com/MiliLab/TiMo) |
+| **Tiny-TSM** | Felix Birkel | arXiv 2025 | 23M | SynthTS Synthetic Generator (Single A100 training) | Causal Input Normalization Patches; Lightweight Decoder-only Transformer | [📄 Paper](https://arxiv.org/abs/2511.19272)<br/>🔒 Proprietary |
+| **APEX** | Cisco Systems | arXiv 2026 | 10.5M, 269M | Production Wireless AP Telemetry (4,500 networks, 100K series) | Multivariate Protocol-Layer Telemetry Patching; Network-Native Decoder-only Transformer (APEX-Large & APEX-Edge) | [📄 Paper](https://arxiv.org/abs/2606.11553)<br/>🔒 Proprietary |
+| **Lightweight Foundation Model for Wireless Time Series Downstream Tasks on Edge Devices** | Ghent University - imec | IEEE GLOBECOM 2025 | 21K | Cross-Domain Wireless Signal Corpus (IQ / CIR) | Raw IQ / CIR Subseries Patching; Ultra-Lightweight Patch-Independent MLP Encoder | [📄 Paper](https://arxiv.org/abs/2511.14895)<br/>🔒 Proprietary |
 
 ### 2. Repurposed Large Language Models (LLM4TS)
 
@@ -150,6 +154,10 @@ graph TD
 | **TEST** | PKU / Alibaba | NeurIPS 2024 | 110M to 350M | Frozen LLM (BERT/GPT-2) with Contrastive Prototype Alignment | Instance & Feature Contrastive Patches | [📄 Paper](https://arxiv.org/abs/2308.08241)<br/>🔒 Proprietary |
 | **UrbanGPT** | HKU / Baidu | KDD 2024 | 7B | Spatio-Temporal Dependency Encoder + Llama-2-7B Backbone | Spatio-Temporal Graph & Temporal Patch Tokenization | [📄 Paper](https://arxiv.org/abs/2403.00813)<br/>[💻 Code](https://github.com/HKUDS/UrbanGPT) |
 | **Spatial-Temporal Large Language Model for Traffic Prediction** | Beihang University | TKDE 2025 | 7B | Partially-Frozen LLM with Spatio-Temporal Graph Embeddings | Node-level Temporal Patch Tokens | [📄 Paper](https://arxiv.org/abs/2401.10134)<br/>🔒 Proprietary |
+| **VisionTS++** | Shen et al. | arXiv 2025 | 86M | Continual Pre-trained Vision Transformer Backbone (ViT) | Multi-Scale Line Plot Image Projection | [📄 Paper](https://arxiv.org/abs/2508.04379)<br/>🔒 Proprietary |
+| **VLT** | Wang et al. | arXiv 2026 | 110M | Multimodal Encoder (Time-MoE + Frequency-Text Learner) | Spectral Frequency Spectrogram + Text Prompt Tokens | [📄 Paper](https://arxiv.org/abs/2607.14510)<br/>🔒 Proprietary |
+| **Chronicle** | Quinlan et al. | arXiv 2026 | 324M | Decoder-only Transformer (Joint Pretraining From Scratch) | Interleaved Byte-Pair Text Tokens + Subseries Patches | [📄 Paper](https://arxiv.org/abs/2605.20268)<br/>🔒 Proprietary |
+| **ChronoSteer** | Wang et al. | arXiv 2025 | not reported | Decoupled Agentic Framework (Frozen TSFM + LLM Controller) | Discrete Instruction Anchors Codebook | [📄 Paper](https://arxiv.org/abs/2505.10083)<br/>🔒 Proprietary |
 
 ### 3. Evaluations, Benchmarks, Scaling Laws & Critiques
 
@@ -171,6 +179,9 @@ graph TD
 | **Forecast Workflow Bench** | Independent / Tokyo | Agentic Forecast Benchmark, Tool Budget Evaluation | Time-series foundation models (TSFMs) provide forecasts for operational decisions, but accuracy alone does not determine... | [📄 Paper](https://arxiv.org/abs/2609.27385) — |
 | **Are Language Models Actually Useful for Time Series Forecasting?** | Imperial College London / Oxford | Empirical Critique | Large language models (LLMs) are being applied to time series forecasting. But are language models actually useful for t... | [📄 Paper](https://arxiv.org/abs/2406.16964) — |
 | **fev-bench** | AWS / AutoGluon | Covariate-Aware Forecasting Benchmark, Statistical Win Rates | Benchmark quality is critical for meaningful evaluation and sustained progress in time series forecasting, particularly ... | [📄 Paper](https://arxiv.org/abs/2509.26468) [💻 Code](https://github.com/autogluon/fev) |
+| **HoliBench** | UCLA NESL | Edge Benchmarking, Quantization Profiling, Energy Measurement | Foundation models, including large language models, vision-language models, and time-series foundation models, are incre... | [📄 Paper](https://arxiv.org/abs/2609.12412) — |
+| **FM-CAC** | UMass Amherst / UCLA | Carbon Forecasting, Energy Optimization, Edge AI Dispatch | As edge AI deployments scale to billions of devices running always-on, real-time compound AI pipelines, they represent a... | [📄 Paper](https://arxiv.org/abs/2604.16448) — |
+| **Resource-aware Mixed-precision Quantization for Enhancing Deployability of Transformers for Time-series Forecasting on Embedded FPGAs** | University of Duisburg-Essen | FPGA Deployment, Quantization Profiling, Hardware Verification | This study addresses the deployment challenges of integer-only quantized Transformers on resource-constrained embedded F... | [📄 Paper](https://arxiv.org/abs/2410.03294) — |
 
 ---
 

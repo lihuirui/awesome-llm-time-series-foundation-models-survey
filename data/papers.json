@@ -1,6 +1,6 @@
 {
-  "updated": "2026-09-24",
-  "total_included": 57,
+  "updated": "2026-09-25",
+  "total_included": 70,
   "papers": [
     {
       "id": "arxiv:2401.03955",
@@ -24,11 +24,12 @@
         "Q1_native_tsfm",
         "Q2_llm4ts",
         "Q3_model_families",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "ekambaram2024ttm",
       "group": "IBM",
       "paradigm": "Native TSFM",
@@ -84,9 +85,9 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "jin2023largemodels",
       "group": "Ming Jin",
       "paradigm": "Survey & Foundations",
@@ -128,11 +129,12 @@
       "journal_ref": null,
       "matched_queries": [
         "Q1_native_tsfm",
-        "Q3_model_families"
+        "Q3_model_families",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "zhou2023onefitsall",
       "group": "Alibaba / DAMO",
       "paradigm": "LLM4TS",
@@ -182,9 +184,9 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "liu2024timer",
       "group": "THUML",
       "paradigm": "Native TSFM",
@@ -226,11 +228,12 @@
       "matched_queries": [
         "Q1_native_tsfm",
         "Q2_llm4ts",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "chang2023llm4ts",
       "group": "NYCU",
       "paradigm": "LLM4TS",
@@ -274,9 +277,9 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "gruver2023llmtime",
       "group": "NYU",
       "paradigm": "LLM4TS",
@@ -319,9 +322,9 @@
       "matched_queries": [
         "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "dooley2023forecastpfn",
       "group": "Abacus.AI / CMU",
       "paradigm": "Native TSFM",
@@ -368,9 +371,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "cao2023tempo",
       "group": "Ming Jin / Monash",
       "paradigm": "LLM4TS",
@@ -412,9 +415,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "xue2022promptcast",
       "group": "UNSW",
       "paradigm": "LLM4TS",
@@ -460,9 +463,9 @@
       "matched_queries": [
         "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "liu2024unitime",
       "group": "Beihang / NTU",
       "paradigm": "LLM4TS",
@@ -506,9 +509,9 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "das2024timesfm",
       "group": "Google",
       "paradigm": "Native TSFM",
@@ -560,9 +563,9 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "jin2023timellm",
       "group": "Ming Jin",
       "paradigm": "LLM4TS",
@@ -619,9 +622,9 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "rasul2023lagllama",
       "group": "Mila / Morgan Stanley",
       "paradigm": "Native TSFM",
@@ -670,9 +673,9 @@
       "matched_queries": [
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "yue2024timemmd",
       "group": "SJTU",
       "paradigm": "Evaluation & Benchmark",
@@ -716,9 +719,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "wang2024timemixer",
       "group": "Ming Jin",
       "paradigm": "Native TSFM",
@@ -763,9 +766,9 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "woo2024moirai",
       "group": "Salesforce",
       "paradigm": "Native TSFM",
@@ -809,11 +812,12 @@
       "matched_queries": [
         "Q1_native_tsfm",
         "Q3_model_families",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "goswami2024moment",
       "group": "CMU",
       "paradigm": "Native TSFM",
@@ -858,11 +862,12 @@
       "journal_ref": null,
       "matched_queries": [
         "Q1_native_tsfm",
-        "Q2_llm4ts"
+        "Q2_llm4ts",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "liu2024autotimes",
       "group": "THUML",
       "paradigm": "LLM4TS",
@@ -907,9 +912,9 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "zhou2024units",
       "group": "Harvard",
       "paradigm": "Native TSFM",
@@ -971,9 +976,9 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "ansari2024chronos",
       "group": "Amazon",
       "paradigm": "Native TSFM",
@@ -1018,11 +1023,12 @@
       "journal_ref": null,
       "matched_queries": [
         "Q1_native_tsfm",
-        "Q2_llm4ts"
+        "Q2_llm4ts",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "liu2024calf",
       "group": "Tsinghua / DAMO",
       "paradigm": "LLM4TS",
@@ -1069,9 +1075,9 @@
       "matched_queries": [
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "wang2024timexer",
       "group": "THUML",
       "paradigm": "Native TSFM",
@@ -1117,9 +1123,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "wu2024s2ipllm",
       "group": "SJTU",
       "paradigm": "LLM4TS",
@@ -1145,6 +1151,52 @@
       "url": "https://arxiv.org/abs/2403.05798"
     },
     {
+      "id": "arxiv:2405.14982",
+      "arxiv_id": "2405.14982",
+      "title": "In-context Time Series Predictor",
+      "authors": [
+        "Jiecheng Lu",
+        "Yan Sun",
+        "Shihao Yang"
+      ],
+      "release_date": "2024-05-23",
+      "summary": "Recent Transformer-based large language models (LLMs) demonstrate in-context learning ability to perform various functions based solely on the provided context, without updating model parameters. To fully utilize the in-context capabilities in time series forecasting (TSF) problems, unlike previous Transformer-based or LLM-based time series forecasting methods, we reformulate \"time series forecasting tasks\" as input tokens by constructing a series of (lookback, future) pairs within the tokens. This method aligns more closely with the inherent in-context mechanisms, and is more parameter-efficient without the need of using pre-trained LLM parameters. Furthermore, it addresses issues such as overfitting in existing Transformer-based TSF models, consistently achieving better performance across full-data, few-shot, and zero-shot settings compared to previous architectures.",
+      "comment": "Camera-ready version. Accepted at ICLR 2025",
+      "journal_ref": "Proceedings of the Thirteenth International Conference on Learning Representations (ICLR 2025)",
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "lu2024incontext",
+      "group": "Georgia Tech",
+      "paradigm": "Native TSFM",
+      "architecture": "In-Context Meta-Learning Transformer (ICTSP)",
+      "tokenization": "Interleaved Prompt-Query Subseries Patches",
+      "prediction_head": "Direct In-Context Continuous Extrapolation",
+      "params": "42M",
+      "pretrain_corpus": "Synthetic Meta-Stochastic Processes + Empirical Benchmarks",
+      "tasks": [
+        "In-Context Forecasting",
+        "Few-shot Adaptation"
+      ],
+      "open_weights": true,
+      "venue": "ICLR 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2405.14982",
+      "url": "https://arxiv.org/abs/2405.14982"
+    },
+    {
       "id": "arxiv:2406.01638",
       "arxiv_id": "2406.01638",
       "title": "TimeCMA: Towards LLM-Empowered Multivariate Time Series Forecasting via Cross-Modality Alignment",
@@ -1165,9 +1217,9 @@
       "matched_queries": [
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "chen2024timecma",
       "group": "CUHK",
       "paradigm": "LLM4TS",
@@ -1216,9 +1268,9 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "woo2024moiraimoe",
       "group": "Salesforce",
       "paradigm": "Native TSFM",
@@ -1244,6 +1296,52 @@
       "url": "https://arxiv.org/abs/2410.10469"
     },
     {
+      "id": "arxiv:2410.14752",
+      "arxiv_id": "2410.14752",
+      "title": "TimeSeriesExam: A time series understanding exam",
+      "authors": [
+        "Yifu Cai",
+        "Arjun Choudhry",
+        "Mononito Goswami",
+        "Artur Dubrawski"
+      ],
+      "release_date": "2024-10-18",
+      "summary": "Large Language Models (LLMs) have recently demonstrated a remarkable ability to model time series data. These capabilities can be partly explained if LLMs understand basic time series concepts. However, our knowledge of what these models understand about time series data remains relatively limited. To address this gap, we introduce TimeSeriesExam, a configurable and scalable multiple-choice question exam designed to assess LLMs across five core time series understanding categories: pattern recognition, noise understanding, similarity analysis, anomaly detection, and causality analysis. TimeSeriesExam comprises of over 700 questions, procedurally generated using 104 carefully curated templates and iteratively refined to balance difficulty and their ability to discriminate good from bad models. We test 7 state-of-the-art LLMs on the TimeSeriesExam and provide the first comprehensive evaluation of their time series understanding abilities. Our results suggest that closed-source models such as GPT-4 and Gemini understand simple time series concepts significantly better than their open-source counterparts, while all models struggle with complex concepts such as causality analysis. We believe that the ability to programatically generate questions is fundamental to assessing and improving LLM's ability to understand and reason about time series data.",
+      "comment": "Accepted at NeurIPS'24 Time Series in the Age of Large Models Workshop",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "cai2024timeseriesexam",
+      "group": "CMU",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Standardized Diagnostic Benchmark Exam for Foundation Models",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Diagnostic Evaluation",
+        "Foundational Capability Probing"
+      ],
+      "open_weights": true,
+      "venue": "NeurIPS 2024 Workshop",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2410.14752",
+      "url": "https://arxiv.org/abs/2410.14752"
+    },
+    {
       "id": "arxiv:2410.04803",
       "arxiv_id": "2410.04803",
       "title": "Timer-XL: Long-Context Transformers for Unified Time Series Forecasting",
@@ -1263,9 +1361,9 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "liu2024timerxl",
       "group": "THUML",
       "paradigm": "Native TSFM",
@@ -1310,9 +1408,9 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "zhong2025timevlm",
       "group": "Ming Jin / Monash",
       "paradigm": "LLM4TS",
@@ -1361,9 +1459,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "xie2024chatts",
       "group": "Tsinghua / NetMan",
       "paradigm": "LLM4TS",
@@ -1412,9 +1510,9 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "salesforce2024gifteval",
       "group": "Salesforce",
       "paradigm": "Evaluation & Benchmark",
@@ -1461,9 +1559,9 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "shi2024timemoe",
       "group": "Ming Jin",
       "paradigm": "Native TSFM",
@@ -1510,9 +1608,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "jin2025timemqa",
       "group": "Ming Jin",
       "paradigm": "LLM4TS",
@@ -1557,11 +1655,12 @@
       "journal_ref": null,
       "matched_queries": [
         "Q1_native_tsfm",
-        "Q2_llm4ts"
+        "Q2_llm4ts",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "chen2024visionts",
       "group": "HKUST",
       "paradigm": "LLM4TS",
@@ -1604,9 +1703,9 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "muller2025tabpfnts",
       "group": "Freiburg",
       "paradigm": "Native TSFM",
@@ -1654,9 +1753,9 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "thuml2025sundial",
       "group": "THUML",
       "paradigm": "Native TSFM",
@@ -1701,9 +1800,9 @@
       "comment": "Accepted by the 13th International Conference on Learning Representations (ICLR 2025)",
       "journal_ref": null,
       "matched_queries": [],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "wang2024timemixerplus",
       "group": "Ming Jin",
       "paradigm": "Native TSFM",
@@ -1732,6 +1831,53 @@
       "url": "https://arxiv.org/abs/2410.16032"
     },
     {
+      "id": "arxiv:2410.11674",
+      "arxiv_id": "2410.11674",
+      "title": "LLM-Mixer: Multiscale Mixing in LLMs for Time Series Forecasting",
+      "authors": [
+        "Md Kowsher",
+        "Md. Shohanur Islam Sobuj",
+        "Nusrat Jahan Prottasha",
+        "E. Alejandro Alanis",
+        "Ozlem Ozmen Garibay",
+        "Niloofar Yousefi"
+      ],
+      "release_date": "2024-10-15",
+      "summary": "Time series forecasting remains a challenging task, particularly in the context of complex multiscale temporal patterns. This study presents LLM-Mixer, a framework that improves forecasting accuracy through the combination of multiscale time-series decomposition with pre-trained LLMs (Large Language Models). LLM-Mixer captures both short-term fluctuations and long-term trends by decomposing the data into multiple temporal resolutions and processing them with a frozen LLM, guided by a textual prompt specifically designed for time-series data. Extensive experiments conducted on multivariate and univariate datasets demonstrate that LLM-Mixer achieves competitive performance, outperforming recent state-of-the-art models across various forecasting horizons. This work highlights the potential of combining multiscale analysis and LLMs for effective and scalable time-series forecasting.",
+      "comment": "Time series forecasting using LLMs",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "kowsher2024llmmixer",
+      "group": "UCF",
+      "paradigm": "LLM4TS",
+      "architecture": "Multiscale Token-Mixing Frozen LLM (LLaMA-2 Backbone)",
+      "tokenization": "Multiscale Patch Decompositions",
+      "prediction_head": "Linear Residual Output Head",
+      "params": "7B",
+      "pretrain_corpus": "Frozen LLaMA-2-7B",
+      "tasks": [
+        "Multiscale Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2024",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2410.11674",
+      "url": "https://arxiv.org/abs/2410.11674"
+    },
+    {
       "id": "arxiv:2410.24087",
       "arxiv_id": "2410.24087",
       "title": "In-Context Fine-Tuning for Time-Series Foundation Models",
@@ -1748,11 +1894,12 @@
       "matched_queries": [
         "Q1_native_tsfm",
         "Q2_llm4ts",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "das2024incontext",
       "group": "Google",
       "paradigm": "Native TSFM",
@@ -1799,9 +1946,9 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "zhang2024chattime",
       "group": "ZJU",
       "paradigm": "LLM4TS",
@@ -1848,11 +1995,12 @@
       "journal_ref": null,
       "matched_queries": [
         "Q1_native_tsfm",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "zhang2025kairos",
       "group": "NUS",
       "paradigm": "Native TSFM",
@@ -1894,11 +2042,12 @@
       "matched_queries": [
         "Q1_native_tsfm",
         "Q2_llm4ts",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "gong2025rethinkingeval",
       "group": "Monash / HKUST",
       "paradigm": "Evaluation & Benchmark",
@@ -1952,9 +2101,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "wu2025scits",
       "group": "Wuhan Univ / Shanghai AI Lab",
       "paradigm": "Evaluation & Benchmark",
@@ -2004,9 +2153,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "jin2025timeomni",
       "group": "Ming Jin",
       "paradigm": "LLM4TS",
@@ -2067,11 +2216,12 @@
       "matched_queries": [
         "Q1_native_tsfm",
         "Q2_llm4ts",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "raj2025opentslm",
       "group": "Stanford",
       "paradigm": "LLM4TS",
@@ -2123,9 +2273,9 @@
       "matched_queries": [
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "zhang2025insightminer",
       "group": "HKUST / MSRA",
       "paradigm": "Evaluation & Benchmark",
@@ -2171,11 +2321,12 @@
         "Q1_native_tsfm",
         "Q2_llm4ts",
         "Q3_model_families",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "auer2025tirex",
       "group": "JKU Linz / ELLIS",
       "paradigm": "Native TSFM",
@@ -2202,6 +2353,118 @@
       "url": "https://arxiv.org/abs/2505.23719"
     },
     {
+      "id": "arxiv:2505.14766",
+      "arxiv_id": "2505.14766",
+      "title": "This Time is Different: An Observability Perspective on Time Series Foundation Models",
+      "authors": [
+        "Ben Cohen",
+        "Emaad Khwaja",
+        "Youssef Doubli",
+        "Salahidine Lemaachi",
+        "Chris Lettieri",
+        "Charles Masson",
+        "Hugo Miccinilli",
+        "Elise Ramé",
+        "Qiqi Ren",
+        "Afshin Rostamizadeh",
+        "Jean Ogier du Terrail",
+        "Anna-Monica Toon",
+        "Kan Wang",
+        "Stephan Xie",
+        "Zongzhe Xu",
+        "Viktoriya Zhukova",
+        "David Asker",
+        "Ameet Talwalkar",
+        "Othmane Abou-Amal"
+      ],
+      "release_date": "2025-05-20",
+      "summary": "We introduce Toto, a time series forecasting foundation model with 151 million parameters. Toto uses a modern decoder-only architecture coupled with architectural innovations designed to account for specific challenges found in multivariate observability time series data. Toto's pre-training corpus is a mixture of observability data, open datasets, and synthetic data, and is 4-10$\\times$ larger than those of leading time series foundation models. Additionally, we introduce BOOM, a large-scale benchmark consisting of 350 million observations across 2,807 real-world time series. For both Toto and BOOM, we source observability data exclusively from Datadog's own telemetry and internal observability metrics. Extensive evaluations demonstrate that Toto achieves state-of-the-art performance on both BOOM and on established general purpose time series forecasting benchmarks. Toto's model weights, inference code, and evaluation scripts, as well as BOOM's data and evaluation code, are all available as open source under the Apache 2.0 License available at https://huggingface.co/Datadog/Toto-Open-Base-1.0 and https://github.com/DataDog/toto.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "cohen2025toto",
+      "group": "Datadog",
+      "paradigm": "Native TSFM",
+      "architecture": "Decoder-only Transformer (Toto 1.0)",
+      "tokenization": "Continuous Patching",
+      "prediction_head": "Multi-quantile Head + Anomaly Score Head",
+      "params": "151M",
+      "pretrain_corpus": "Datadog Observability Corpus (1 Trillion Points)",
+      "tasks": [
+        "Forecasting",
+        "Anomaly Detection"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2505.14766",
+      "url": "https://arxiv.org/abs/2505.14766"
+    },
+    {
+      "id": "arxiv:2506.06005",
+      "arxiv_id": "2506.06005",
+      "title": "LightGTS: A Lightweight General Time Series Forecasting Model",
+      "authors": [
+        "Yihang Wang",
+        "Yuying Qiu",
+        "Peng Chen",
+        "Yang Shu",
+        "Zhongwen Rao",
+        "Lujia Pan",
+        "Bin Yang",
+        "Chenjuan Guo"
+      ],
+      "release_date": "2025-06-06",
+      "summary": "Existing works on general time series forecasting build foundation models with heavy model parameters through large-scale multi-source pre-training. These models achieve superior generalization ability across various datasets at the cost of significant computational burdens and limitations in resource-constrained scenarios. This paper introduces LightGTS, a lightweight general time series forecasting model designed from the perspective of consistent periodical modeling. To handle diverse scales and intrinsic periods in multi-source pre-training, we introduce Periodical Tokenization, which extracts consistent periodic patterns across different datasets with varying scales. To better utilize the periodicity in the decoding process, we further introduce Periodical Parallel Decoding, which leverages historical tokens to improve forecasting. Based on the two techniques above which fully leverage the inductive bias of periods inherent in time series, LightGTS uses a lightweight model to achieve outstanding performance on general time series forecasting. It achieves state-of-the-art forecasting performance on 9 real-world benchmarks in both zero-shot and full-shot settings with much better efficiency compared with existing time series foundation models.",
+      "comment": "Accepted by the 42th International Conference on Machine Learning (ICML 2025)",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "wang2025lightgts",
+      "group": "East China Normal Univ / Huawei",
+      "paradigm": "Native TSFM",
+      "architecture": "Lightweight Dual-Path Transformer with Adaptive Parameter Allocation",
+      "tokenization": "Compact Hierarchical Patching",
+      "prediction_head": "Multi-Horizon Direct Projection Head",
+      "params": "5.8M",
+      "pretrain_corpus": "Curated General Time Series Corpus (8B observations)",
+      "tasks": [
+        "Zero-shot Forecasting",
+        "Edge Deployment"
+      ],
+      "open_weights": true,
+      "venue": "ICML 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2506.06005",
+      "url": "https://arxiv.org/abs/2506.06005"
+    },
+    {
       "id": "arxiv:2506.11029",
       "arxiv_id": "2506.11029",
       "title": "Output Scaling: YingLong-Delayed Chain of Thought in a Large Pretrained Time Series Forecasting Model",
@@ -2221,9 +2484,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "liu2025yinglong",
       "group": "Tsinghua / THUML",
       "paradigm": "Native TSFM",
@@ -2269,9 +2532,9 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "wu2025flame",
       "group": "Zhejiang Univ / Westlake",
       "paradigm": "Native TSFM",
@@ -2315,9 +2578,9 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "king2025flowstate",
       "group": "MIT",
       "paradigm": "Native TSFM",
@@ -2367,9 +2630,9 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "woo2025moirai2",
       "group": "Salesforce",
       "paradigm": "Native TSFM",
@@ -2430,11 +2693,12 @@
       "matched_queries": [
         "Q1_native_tsfm",
         "Q3_model_families",
-        "Q4_benchmarks_critiques"
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "ansari2025chronos2",
       "group": "Amazon",
       "paradigm": "Native TSFM",
@@ -2460,6 +2724,57 @@
       "url": "https://arxiv.org/abs/2510.15821"
     },
     {
+      "id": "arxiv:2602.14024",
+      "arxiv_id": "2602.14024",
+      "title": "EIDOS: Latent-Space Predictive Learning for Time Series Foundation Models",
+      "authors": [
+        "Xinxing Zhou",
+        "Qingren Yao",
+        "Yiji Zhao",
+        "Chenghao Liu",
+        "Flora Salim",
+        "Xiaojie Yuan",
+        "Yanlong Wen",
+        "Ming Jin"
+      ],
+      "release_date": "2026-02-15",
+      "summary": "Most time series foundation models are pretrained by directly predicting future observations, which often yields weakly structured latent representations that capture surface noise rather than coherent and predictable temporal dynamics. In this work, we introduce EIDOS, a foundation model family that shifts pretraining from future value prediction to latent-space predictive learning. We train a causal Transformer to predict the evolution of latent representations, encouraging the emergence of structured and temporally coherent latent states. To ensure stable targets for latent-space learning, we design a lightweight aggregation branch to construct target representations. EIDOS is optimized via a joint objective that integrates latent-space alignment, observational grounding to anchor representations to the input signal, and direct forecasting supervision. On the GIFT-Eval benchmark, EIDOS mitigates structural fragmentation in the representation space and achieves state-of-the-art performance. These results demonstrate that constraining models to learn predictable latent dynamics is a principled step toward more robust and reliable time series foundation models.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "zhou2026eidos",
+      "group": "Ming Jin / UNSW / Nankai",
+      "paradigm": "Native TSFM",
+      "architecture": "Latent-Space Joint-Embedding Predictive Architecture (JEPA)",
+      "tokenization": "Continuous Latent Patch Projector",
+      "prediction_head": "Latent Space Predictor + Decoder Head",
+      "params": "88M",
+      "pretrain_corpus": "Multi-domain Latent Pretraining Archive (35B observations)",
+      "tasks": [
+        "Zero-shot Forecasting",
+        "Representation Learning"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2602.14024",
+      "url": "https://arxiv.org/abs/2602.14024"
+    },
+    {
       "id": "arxiv:2602.17149",
       "arxiv_id": "2602.17149",
       "title": "TimeOmni-VL: Unified Models for Time Series Understanding and Generation",
@@ -2478,9 +2793,9 @@
       "comment": "Accepted by the Forty-third International Conference on Machine Learning (ICML 2026)",
       "journal_ref": null,
       "matched_queries": [],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "guan2026timeomnivl",
       "group": "Monash / CSIRO",
       "paradigm": "LLM4TS",
@@ -2508,6 +2823,101 @@
       "url": "https://arxiv.org/abs/2602.17149"
     },
     {
+      "id": "arxiv:2608.17299",
+      "arxiv_id": "2608.17299",
+      "title": "LiveHouse-TS: An Open-world Living Benchmark for Time Series Foundation Models",
+      "authors": [
+        "Haomin Wen",
+        "Ziyu Zhou",
+        "Qingxiang Liu",
+        "Siru Zhong",
+        "Yuxuan Liang"
+      ],
+      "release_date": "2026-08-18",
+      "summary": "Time Series Foundation Models (TSFMs) have recently emerged as a highly promising paradigm for cross-domain zero-shot forecasting. However, existing evaluation protocols predominantly rely on static benchmarks with fixed historical test windows. While these benchmarks provide a valuable baseline snapshot, they evaluate an average performance on a fixed history, failing to capture how models behave in continuously evolving real-world environments characterized by seasonal variations, distribution shifts, and unexpected events. To bridge this gap, we introduce LiveHouse-TS, the first open-world living benchmark infrastructure for TSFMs. By evaluating models prequentially on real future data in open-world environments, LiveHouse-TS shifts time series benchmarking from snapshot accuracy to continuous temporal validity. Rather than acting as a one-off leaderboard, our infrastructure serves as a continuous time series infrastructure designed to explore vital, long-term scientific questions: Can model rankings be maintained over the long term? Which models remain genuinely robust under distribution shifts? Extensive streaming evaluations across 11 domains with 17 datasets demonstrate that static rankings undergo a dramatic reshuffling under a live protocol.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "wen2026livehouse",
+      "group": "HKUST(GZ)",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Living Evaluation Platform & Continuous Benchmark Harness",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Living Benchmark",
+        "Contamination-Free Evaluation"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2608.17299",
+      "url": "https://arxiv.org/abs/2608.17299"
+    },
+    {
+      "id": "arxiv:2609.24156",
+      "arxiv_id": "2609.24156",
+      "title": "TAC-Time: Texts as Channels For Multimodal Time Series Forecasting",
+      "authors": [
+        "Jiayi Liang",
+        "Xiaotian Gu",
+        "Xinyu Xie",
+        "Yuanbin Wu",
+        "Xiaoling Wang"
+      ],
+      "release_date": "2026-09-21",
+      "summary": "Most existing time series forecasting methods rely solely on numerical observations, overlooking rich contextual information from auxiliary texts. Recent multimodal approaches attempt to incorporate textual signals, but they often treat text as static features or use large language models as forecasting backbones, limiting their ability to capture temporal dynamics and increasing computational cost. To address these challenges, we propose TAC-Time, a unified framework that transforms textual information into additional temporal channels. By modeling text features jointly with numerical sequences in a shared temporal backbone, TAC-Time preserves temporal continuity and periodic structures while remaining efficient and scalable. This formulation also enables systematic interpretability analyses. We show strong cross-modal dependencies through attention and frequency-domain analyses, and identify predictive textual signals whose correlation-aware alignment yields partial forecasting improvements. Extensive experiments on real-world multimodal benchmarks demonstrate that TAC-Time outperforms prior methods.",
+      "comment": "11 pages, 6 figures, 4 tables",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "liang2026tactime",
+      "group": "ECNU",
+      "paradigm": "LLM4TS",
+      "architecture": "Text-as-Channel Dual-Stream Cross-Attention Transformer",
+      "tokenization": "Textual Channel Embeddings + Temporal Patch Embeddings",
+      "prediction_head": "Channel-Fused Forecast Head",
+      "params": "350M",
+      "pretrain_corpus": "Multimodal Context Corpora",
+      "tasks": [
+        "Multimodal Forecasting",
+        "Context-Informed Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2609.24156",
+      "url": "https://arxiv.org/abs/2609.24156"
+    },
+    {
       "id": "arxiv:2603.04791",
       "arxiv_id": "2603.04791",
       "title": "Timer-S1: A Billion-Scale Time Series Foundation Model with Serial Scaling",
@@ -2532,9 +2942,9 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "thuml2026timers1",
       "group": "THUML",
       "paradigm": "Native TSFM",
@@ -2560,6 +2970,53 @@
       "url": "https://arxiv.org/abs/2603.04791"
     },
     {
+      "id": "arxiv:2607.06973",
+      "arxiv_id": "2607.06973",
+      "title": "Rethinking Multimodal Time-Series Forecasting Evaluation",
+      "authors": [
+        "Haoxin Liu",
+        "Yichen Zhou",
+        "Rajat Sen",
+        "B. Aditya Prakash",
+        "Abhimanyu Das"
+      ],
+      "release_date": "2026-07-08",
+      "summary": "We introduce a new context-enriched, multimodal time series forecasting benchmark, TimesX. TimesX contains a wide selection of high-quality real-world time series with diverse domains and textual contexts obtained from an automated data generation pipeline, which helps address three main issues of existing multimodal forecasting benchmarks: (1) poor generalization due to the small scale and synthetic nature of benchmark data, (2) very limited types of textual contexts in the benchmarks, and (3) an inability to mitigate data leakage in evaluation. We conduct a thorough empirical study of zero-shot multimodal forecasting approaches on TimesX. Our results suggest that many approaches that perform well on existing benchmarks may fail on TimesX. In contrast, simple ensemble methods that leverage rich textual context accompanying time-series can outperform strong baselines on TimesX.",
+      "comment": null,
+      "journal_ref": "Published in ICML 2026",
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "liu2026timesx",
+      "group": "Georgia Tech / Google Research",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "TimesX Context-Enriched Multimodal Benchmark Suite",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Multimodal Benchmark",
+        "Context-Rich Evaluation"
+      ],
+      "open_weights": true,
+      "venue": "ICML 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2607.06973",
+      "url": "https://arxiv.org/abs/2607.06973"
+    },
+    {
       "id": "arxiv:2609.24559",
       "arxiv_id": "2609.24559",
       "title": "$t_0$: A Time-Series Foundation Model for Forecasting with Context",
@@ -2582,9 +3039,9 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "meyer2026t0",
       "group": "ETH Zurich / Invenia Labs",
       "paradigm": "Native TSFM",
@@ -2611,6 +3068,116 @@
       "url": "https://arxiv.org/abs/2609.24559"
     },
     {
+      "id": "arxiv:2606.06285",
+      "arxiv_id": "2606.06285",
+      "title": "TRACE: A Temporal Conditional Estimation for Multimodal Time Series Foundation Models",
+      "authors": [
+        "Ziwen Kan",
+        "Yishuo Chen",
+        "Kecheng Li",
+        "Andrew Wen",
+        "Xiaomeng Wang",
+        "Liwei Wang",
+        "Jihao Duan",
+        "Song Wang",
+        "Hongfang Liu",
+        "Tianlong Chen"
+      ],
+      "release_date": "2026-06-04",
+      "summary": "Time series foundation models (TS-FMs) aim to learn generalizable temporal representations that can be adapted to a wide range of downstream tasks. In real-world multimodal settings, time series are frequently affected by temporal misalignment and partial modality missingness, where different modalities are observed at heterogeneous time scales or are partially absent. Existing approaches typically rely on naive imputation or masking strategies, which fail to account for cross-modal dependencies and often lead to misaligned or degraded representations. We propose TRACE, a conditional estimation paradigm for multimodal time series foundation model pipelines under missingness and irregular sampling, allowing incomplete target modalities to be systematically inferred from available auxiliary modalities. We evaluate TRACE on diverse multimodal benchmarks spanning healthcare and affective computing, including the MIMIC-IV clinical dataset and the CMU-MOSI and CMU-MOSEI benchmarks for multimodal sentiment analysis. Across a range of downstream prediction tasks and missing-modality settings, TRACE consistently outperforms prior multimodal fusion approaches, demonstrating improved robustness to severe modality missingness and more reliable cross-modal representations.",
+      "comment": "5 figures and 5 tables in the main paper, plus appendix",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "kan2026trace",
+      "group": "UNC Chapel Hill / UT Austin",
+      "paradigm": "LLM4TS",
+      "architecture": "Temporal Conditional Estimation Network with Pretrained Multimodal Backbones",
+      "tokenization": "Multimodal Token Alignment (Text + Waveform)",
+      "prediction_head": "Conditional Continuous Estimator",
+      "params": "7B",
+      "pretrain_corpus": "Pretrained Multimodal LLM Backbones",
+      "tasks": [
+        "Multimodal Forecasting",
+        "Clinical Time Series"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2606.06285",
+      "url": "https://arxiv.org/abs/2606.06285"
+    },
+    {
+      "id": "arxiv:2609.13956",
+      "arxiv_id": "2609.13956",
+      "title": "Tabby: An Open Pretraining Recipe for Time Series Foundation Models",
+      "authors": [
+        "Shifeng Xie",
+        "Bahaeddine Abdessalem",
+        "Zehao Xiao",
+        "Youssef Attia El Hili",
+        "Ambroise Odonnat",
+        "Zhiwei Dong",
+        "Lei Zan",
+        "Themis Palpanas",
+        "Jianfeng Zhang",
+        "Lujia Pan",
+        "Keli Zhang",
+        "Malik Tiomoko"
+      ],
+      "release_date": "2026-09-12",
+      "summary": "In this report, we release Tabby, a long context probabilistic time series foundation model, together with a complete and open recipe of how it was built. Tabby adopts an encoder-only patch Transformer architecture and concentrates the contributions on the data and the training procedure. The pretraining corpus combines an extended real-world collection, GIFT-Eval-Pretrain+ and BLAST, with synthetic data from KernelSynth and CauKerV2, an online generator that composes temporal dynamics through randomly sampled structural causal models. Training couples a progressive convergence schedule, which yields reusable intermediate checkpoints, with a deep quantile supervision objective for intermediate layers. The resulting 145M parameter backbone supports contexts of up to 8,192 observations and serves forecasting, classification, and anomaly detection, while a prompt-tuning module further improves in-distribution forecasting performance with the pretrained weights frozen. Tabby achieves competitive zero-shot forecasting performance on GIFT-Eval and the out-of-distribution TIME benchmark, while the same pretrained backbone also supports classification on the UCR Archive and zero-shot anomaly detection on TSB-AD-U. We release training pipeline and model as open source at huawei-noah/trustworthyAI.",
+      "comment": "43 pages, 3 figures, 32 tables. Technical report",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "xie2026tabby",
+      "group": "Huawei Noah's Ark / Univ Paris Cité",
+      "paradigm": "Native TSFM",
+      "architecture": "Long-Context Probabilistic Decoder-only Transformer",
+      "tokenization": "Normalized Multi-Resolution Subseries Patching",
+      "prediction_head": "Quantile & Categorical Mixture Head",
+      "params": "120M",
+      "pretrain_corpus": "Open Tabby-Corpus (150B tokens open release)",
+      "tasks": [
+        "Zero-shot Probabilistic Forecasting",
+        "Long-Context Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2609.13956",
+      "url": "https://arxiv.org/abs/2609.13956"
+    },
+    {
       "id": "arxiv:2605.20119",
       "arxiv_id": "2605.20119",
       "title": "Toto 2.0: Time Series Forecasting Enters the Scaling Era",
@@ -2635,11 +3202,13 @@
       "journal_ref": null,
       "matched_queries": [
         "Q1_native_tsfm",
-        "Q4_benchmarks_critiques"
+        "Q3_model_families",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "datadog2026toto2",
       "group": "Datadog",
       "paradigm": "Native TSFM",
@@ -2666,6 +3235,58 @@
       "url": "https://arxiv.org/abs/2605.20119"
     },
     {
+      "id": "arxiv:2606.16173",
+      "arxiv_id": "2606.16173",
+      "title": "TimeVista: Exploring and Exploiting Vision-Language Models as Judges for Time Series Forecasting",
+      "authors": [
+        "Zhi Chen",
+        "Yuxuan Wang",
+        "Jialong Wu",
+        "Yong Liu",
+        "Haoran Zhang",
+        "Xingjian Su",
+        "Jianmin Wang",
+        "Mingsheng Long"
+      ],
+      "release_date": "2026-06-15",
+      "summary": "High-quality time series forecasting is pivotal for real-world decision-making. However, traditional point-wise metrics often fail to reveal complex temporal patterns and align poorly with human intuitive preferences. While the ''LLM-as-a-Judge'' paradigm has revolutionized text evaluation by providing flexible, human-aligned judgment, its application to time series remains largely unexplored. In this paper, we leverage Vision-Language Models (VLMs) as judges for time series forecasting, harnessing their ability to comprehend time series plots grounded in textual information. Specifically, we propose a novel framework integrating micro- and macro-level judgments informed by contextual information to evaluate time series forecasting. To this end, we introduce TimeVista, a comprehensive VLM-as-a-Judge benchmark comprising 5563 time series samples paired with detailed evaluation rubrics. Extensive meta-evaluations demonstrate that VLMs are highly reliable judges, achieving significantly higher consistency with human preferences than conventional metrics. Building upon our benchmark, we comprehensively assess recent Time Series Foundation Models (TSFMs) under the VLM-as-a-Judge paradigm. Our results demonstrate that VLMs serve as robust and interpretable judges, providing a comprehensive, human-aligned standard for evaluating time series models.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "chen2026timevista",
+      "group": "Tsinghua University (THUML)",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Vision-Language Model Perceptual Judge Framework",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "8B",
+      "pretrain_corpus": "TimeVista Perceptual Evaluation Benchmark",
+      "tasks": [
+        "LLM-as-a-Judge",
+        "Perceptual Shape Fidelity Evaluation"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2606.16173",
+      "url": "https://arxiv.org/abs/2606.16173"
+    },
+    {
       "id": "arxiv:2609.25788",
       "arxiv_id": "2609.25788",
       "title": "Evaluating Accuracy and Probabilistic Reliability of Zero-Shot Time Series Foundation Models",
@@ -2682,9 +3303,9 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "li2026evaluatingreliability",
       "group": "TU Munich",
       "paradigm": "Evaluation & Benchmark",
@@ -2710,6 +3331,50 @@
       "url": "https://arxiv.org/abs/2609.25788"
     },
     {
+      "id": "arxiv:2609.27385",
+      "arxiv_id": "2609.27385",
+      "title": "Forecast Workflow Bench: Evaluating Language-Model Decisions with Budgeted Forecast Tools",
+      "authors": [
+        "Shunya Nagashima"
+      ],
+      "release_date": "2026-09-23",
+      "summary": "Time-series foundation models (TSFMs) provide forecasts for operational decisions, but accuracy alone does not determine their value. Evaluating agents that use these models requires measuring decision quality and forecast cost. FWBench evaluates this capability on 1,251 electricity and cycle-hire cases using fixed forecast tools and simulated capacity contracts. Agents select models, histories and horizons, then submit capacities to minimize a stated loss-cost objective. We evaluated two hosted and eight local configurations, including small language models, and tested local models with and without TSFMs. GPT-6 Astra bought inexpensive short-horizon forecasts selectively, using 2.5% of the budget, and outperformed fixed policies when the saved decisions were scored with three loss-cost weightings. FWBench enables reproducible evaluation of how language models select and use time-series forecasts to make decisions under cost constraints.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "nagashima2026forecastworkflow",
+      "group": "Independent / Tokyo",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Agentic Tool-Use Evaluation Framework",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Agentic Forecast Benchmark",
+        "Tool Budget Evaluation"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2609.27385",
+      "url": "https://arxiv.org/abs/2609.27385"
+    },
+    {
       "id": "arxiv:2211.14730",
       "arxiv_id": "2211.14730",
       "title": "A Time Series is Worth 64 Words: Long-term Forecasting with Transformers",
@@ -2725,11 +3390,12 @@
       "journal_ref": null,
       "matched_queries": [
         "Q1_native_tsfm",
-        "Q3_model_families"
+        "Q3_model_families",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "nie2023patchtst",
       "group": "UC Berkeley",
       "paradigm": "Native TSFM",
@@ -2774,9 +3440,9 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "fons2024arellmsuseful",
       "group": "Imperial College London / Oxford",
       "paradigm": "Evaluation & Benchmark",
@@ -2819,9 +3485,9 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-24 10:47:05",
+      "retrieved_at": "2026-09-25 15:20:48",
       "status": "included",
-      "screen_date": "2026-09-24",
+      "screen_date": "2026-09-25",
       "bibkey": "sun2023test",
       "group": "PKU / Alibaba",
       "paradigm": "LLM4TS",

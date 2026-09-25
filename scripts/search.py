@@ -48,7 +48,20 @@ QUERIES = [
         "source": "Crossref",
         "query": '("scaling law" OR "scaling laws" OR "are LLMs actually useful" OR "benchmark" OR "zero-shot forecasting" OR "GIFT-Eval") AND ("time series foundation" OR "LLM for time series")',
         "query_id": "Q4_benchmarks_critiques"
+    },
+    {
+        "source": "Semantic Scholar / arXiv",
+        "query": '("in-context" OR "parameter-efficient" OR "fine-tuning" OR "latent-space" OR "open pretraining" OR "living benchmark") AND ("time series foundation" OR "time series model")',
+        "query_id": "Q5_adaptation_snowballing"
     }
+]
+
+SNOWBALL_SEEDS = [
+    {"bibkey": "ansari2024chronos", "title": "Chronos: Learning the Language of Time Series", "doi": "10.48550/arXiv.2403.07815"},
+    {"bibkey": "das2024timesfm", "title": "A decoder-only foundation model for time-series forecasting", "doi": "10.48550/arXiv.2310.10688"},
+    {"bibkey": "liu2024timer", "title": "Timer: Generative Pre-trained Transformers Are Large Time Series Models", "doi": "10.48550/arXiv.2402.02368"},
+    {"bibkey": "shi2024timemoe", "title": "Time-MoE: Billion-Scale Time Series Foundation Models with Mixture of Experts", "doi": "10.48550/arXiv.2409.16040"},
+    {"bibkey": "goswami2024moment", "title": "MOMENT: A Family of Open Time-series Foundation Models", "doi": "10.48550/arXiv.2402.03885"}
 ]
 
 def log_search(date_str, source, query_str, hits, new_candidates):
@@ -89,7 +102,8 @@ def run_search():
         "Q1_native_tsfm": 0,
         "Q2_llm4ts": 0,
         "Q3_model_families": 0,
-        "Q4_benchmarks_critiques": 0
+        "Q4_benchmarks_critiques": 0,
+        "Q5_adaptation_snowballing": 0
     }
 
     # Match each raw entry to queries based on keywords in title and summary
@@ -105,12 +119,15 @@ def run_search():
         if any(w in text for w in ["language model", "llm", "reprogramming", "prompt", "cross-modal", "aligning"]):
             matched_queries.append("Q2_llm4ts")
             query_hit_counts["Q2_llm4ts"] += 1
-        if any(w in text for w in ["chronos", "timesfm", "moirai", "moment", "lag-llama", "time-llm", "one fits all", "timer", "sundial", "time-moe", "ttm", "tiny time mixer", "patchtst"]):
+        if any(w in text for w in ["chronos", "timesfm", "moirai", "moment", "lag-llama", "time-llm", "one fits all", "timer", "sundial", "time-moe", "ttm", "tiny time mixer", "patchtst", "toto", "tabby"]):
             matched_queries.append("Q3_model_families")
             query_hit_counts["Q3_model_families"] += 1
         if any(w in text for w in ["benchmark", "evaluation", "scaling", "useful", "gift-eval", "observability", "leakage"]):
             matched_queries.append("Q4_benchmarks_critiques")
             query_hit_counts["Q4_benchmarks_critiques"] += 1
+        if any(w in text for w in ["in-context", "parameter-efficient", "fine-tuning", "latent-space", "recipe", "living benchmark", "judge"]):
+            matched_queries.append("Q5_adaptation_snowballing")
+            query_hit_counts["Q5_adaptation_snowballing"] += 1
 
         cand_id = f"arxiv:{item.get('arxiv_id', k)}"
         candidates[cand_id] = {

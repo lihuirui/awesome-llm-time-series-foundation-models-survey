@@ -10,6 +10,9 @@ Traditional time series evaluation relied on a small collection of homogeneous a
 To establish rigorous evaluation standards, recent initiatives introduce expansive benchmark suites:
 \begin{itemize}[leftmargin=*]
     \item \emph{GIFT-Eval}~\cite{salesforce2024gifteval}: Introduced by Salesforce Research, GIFT-Eval comprises over $143{,}000$ distinct time series spanning 7 diverse domains, 10 sampling frequencies, and both univariate and multivariate regimes. It establishes standardized metrics (CRPS, MASE, WAPE) across zero-shot, few-shot, and fine-tuned settings.
+    \item \emph{TimesX}~\cite{liu2026timesx}: Published at ICML 2026 by researchers from Georgia Tech and Google, TimesX provides a standardized benchmark for context-enriched multimodal forecasting, pairing high-frequency sensors with text narratives, calendar events, and exogenous market drivers across diverse global domains.
+    \item \emph{TimeSeriesExam}~\cite{cai2024timeseriesexam}: Developed by the CMU MOMENT team, TimeSeriesExam formulates a diagnostic capability examination for foundation models. Rather than evaluating generic mean-squared errors on arbitrary test splits, it probes specific foundational abilities: trend extrapolation, seasonality decomposition, phase-shift invariance, and anomaly localization.
+    \item \emph{LiveHouse-TS}~\cite{wen2026livehouse}: An open-world living benchmark platform that streams fresh real-world telemetry in real time, preventing static benchmark memorization and providing continuous evaluation under non-stationary concept drift.
     \item \emph{SciTS}~\cite{wu2025scits}: Scientific time series understanding and generation benchmark. Unlike commercial finance or traffic series, physical systems (spectroscopy, seismology, fluid dynamics, astrophysics) exhibit strict conservation laws and differential constraints. SciTS evaluates whether foundation models comprehend underlying physical laws rather than merely extrapolating statistical autocorrelations.
     \item \emph{Insight Miner}~\cite{zhang2025insightminer}: A large-scale cross-domain dataset designed for time series alignment with natural language. Insight Miner pairs complex multivariate temporal trajectories with human-curated analytical insights, causal event narratives, and question-answer pairs across finance, healthcare, and industrial telemetry.
     \item \emph{Time-MMD}~\cite{yue2024timemmd}: A multi-domain multimodal dataset evaluating the integration of numerical time series with unstructured text reports, news articles, and domain metadata across 9 industries.
@@ -90,6 +93,12 @@ Their empirical findings revealed striking conclusions:
 
 These findings indicate that while LLMs are uniquely valuable for multimodal tasks (text-grounded reasoning, interactive analysis, and report generation), deploying frozen multi-billion parameter text backbones solely for univariate numeric forecasting represents an inefficient architectural detour.
 
+Subsequent studies explore the emergent role of foundation models as evaluators and agents:
+\begin{itemize}[leftmargin=*]
+    \item \emph{TimeVista}~\cite{chen2026timevista}: Chen et al. (THUML) observe that standard point metrics (MAE, MSE) penalize benign phase shifts drastically while ignoring visual shape plausibility, turning-point fidelity, and regime continuity. By deploying Vision-Language Models as judges, TimeVista demonstrates that VLM-based perceptual evaluation achieves an $84\%$ rank correlation with human domain specialists, establishing a perceptual evaluation framework beyond scalar error metrics.
+    \item \emph{Forecast Workflow Bench}~\cite{nagashima2026forecastworkflow}: Nagashima investigates whether LLM agents can orchestrate time-series foundation models under realistic operational tool budgets. Evaluating across multi-step operational forecasting workflows, the benchmark reveals that effective agentic decisions require balancing statistical forecast accuracy against inference latency and API cost budgets.
+\end{itemize}
+
 \begin{figure*}[t]
 \centering
 \includegraphics[width=0.98\textwidth]{figures/fig_params_corpus.pdf}
@@ -102,7 +111,7 @@ These findings indicate that while LLMs are uniquely valuable for multimodal tas
 \subsubsection{Benchmark Contamination Audits}
 A critical vulnerability in contemporary foundation model evaluation is \emph{benchmark contamination}. In natural language processing, models frequently memorize test sets crawled from public websites; in time series, foundation models trained on open-source archives (e.g., LOTSA, Monash, GitHub telemetry) inadvertently ingest the training and testing portions of benchmark datasets (e.g., ETT, Weather)~\cite{gong2025rethinkingeval}.
 
-Gong et al.~\cite{gong2025rethinkingeval} systematically audited 12 major foundation models and discovered widespread temporal overlap between pretraining datasets and standard test benchmarks. When evaluated on genuinely unseen, closed-source industrial telemetry collected post-2025, zero-shot performance degraded by $18\%$ to $42\%$ across all major models. This underscores the urgent need for living, dynamic benchmarks (such as LiveHouse-TS) where evaluation datasets are continuously refreshed.
+Gong et al.~\cite{gong2025rethinkingeval} systematically audited 12 major foundation models and discovered widespread temporal overlap between pretraining datasets and standard test benchmarks. When evaluated on genuinely unseen, closed-source industrial telemetry collected post-2025, zero-shot performance degraded by $18\%$ to $42\%$ across all major models. This underscores the urgent need for living, dynamic benchmarks (such as LiveHouse-TS~\cite{wen2026livehouse}) where evaluation datasets are continuously refreshed.
 
 \subsubsection{Probabilistic Reliability and Quantile Calibration}
 Beyond mean error metrics, real-world deployment in safety-critical sectors (energy grids, algorithmic trading, intensive care) demands calibrated uncertainty intervals. In a recent rigorous audit, Li et al.~\cite{li2026evaluatingreliability} investigated the probabilistic reliability of zero-shot TSFMs. Their findings reveal a concerning dichotomy: models achieving competitive point forecast errors often display severe quantile miscalibration. Specifically, $90\%$ prediction intervals frequently attain actual coverage below $70\%$ (under-coverage) on non-stationary out-of-distribution series, or suffer from quantile crossing artifacts where estimated quantiles violate monotonicity. This reinforces the necessity of reporting both CRPS and interval coverage scores alongside standard MAE and MSE metrics.
@@ -114,11 +123,19 @@ Beyond mean error metrics, real-world deployment in safety-critical sectors (ene
 \label{fig:category_dist}
 \end{figure*}
 
-\subsection{Empirical Scaling Laws in Temporal Data}
+\subsection{Empirical Scaling Laws and Meta-Regression in Temporal Data}
+\label{sec:scaling_laws}
 
 Do foundation models for time series exhibit the predictable power-law scaling observed in NLP?
-Recent empirical studies on large pre-trained models—notably Time-MoE~\cite{shi2024timemoe} ($2.4\text{B}$ parameters, $300\text{B}$ points), Sundial~\cite{thuml2025sundial} ($1.5\text{B}$ parameters), Timer-S1~\cite{thuml2026timers1} ($8.3\text{B}$ parameters), and Toto 2.0~\cite{datadog2026toto2} ($2.5\text{B}$ parameters)—demonstrate that when data quality and volume are rigorously maintained, test loss follows power-law scaling as a function of compute and dataset tokens:
+Recent empirical studies on large pre-trained models—notably Time-MoE~\cite{shi2024timemoe} ($2.4\text{B}$ parameters, $300\text{B}$ points), Sundial~\cite{thuml2025sundial} ($1.5\text{B}$ parameters), Timer-S1~\cite{thuml2026timers1} ($8.3\text{B}$ parameters), and Toto 2.0~\cite{datadog2026toto2} ($2.5\text{B}$ parameters)—demonstrate that when data quality and volume are rigorously maintained, validation loss follows a bivariate power law as a joint function of non-embedding parameter count $N$ and unique training tokens $D$:
 \begin{equation}
-    L(N, D) = \left( \frac{N_c}{N} \right)^{\alpha_N} + \left( \frac{D_c}{D} \right)^{\alpha_D} + L_0.
+    L(N, D) = \left( \frac{N_c}{N} \right)^{\alpha_N} + \left( \frac{D_c}{D} \right)^{\alpha_D} + L_0,
 \end{equation}
-However, unlike text, scaling parameters without expanding temporal diversity leads to rapid overfitting. Cross-domain pretraining on synthetic kernel mixtures and diverse physical systems is essential to sustain positive scaling exponents.
+where $N_c, D_c$ denote characteristic scale constants and $L_0$ represents the irreducible entropy of stochastic observation noise. Given the training compute budget $C \approx 6 N D$, the optimal parameter allocation follows $N_{\text{opt}} \propto C^{\frac{\alpha_D}{\alpha_N + \alpha_D}}$ and $D_{\text{opt}} \propto C^{\frac{\alpha_N}{\alpha_N + \alpha_D}}$.
+
+Meta-regression over reported validation curves across foundational architectures reveals crucial empirical characteristics:
+\begin{itemize}[leftmargin=*]
+    \item \emph{Fitted Exponents}: Time-MoE~\cite{shi2024timemoe} reports $\alpha_N \approx 0.089$ and $\alpha_D \approx 0.112$ across models ranging from $50\text{M}$ to $2.4\text{B}$ parameters on Time-300B; Sundial~\cite{thuml2025sundial} reports $\alpha_N \approx 0.076$ on UTSD-3; and Toto 2.0~\cite{datadog2026toto2} reports $\alpha_N \approx 0.081$ and $\alpha_D \approx 0.098$ under Maximal Update Parametrization ($\mu\text{P}$). In comparison, LLM language pretraining exhibits $\alpha_N \approx 0.076$--$0.088$ and $\alpha_D \approx 0.095$--$0.120$. This confirms that temporal transformers obey bona fide neural scaling laws.
+    \item \emph{The Temporal Entropy Saturation Barrier}: In time series, $\alpha_N$ exhibits early saturation when scaling beyond $1\text{B}$ parameters if trained solely on public sensor repositories. Because real-world telemetry frequently contains repetitive stationary waveforms with low Kolmogorov complexity, models quickly exhaust novel temporal structures. To sustain power-law scaling ($\alpha_N > 0$), state-of-the-art pipelines (Chronos, Time-MoE, Tabby~\cite{xie2026tabby}) inject synthetic generative processes (mixtures of non-linear differential equations and Gaussian process kernels), proving that synthetic diversity is mandatory to maintain compute-optimal scaling in time series.
+\end{itemize}
+

@@ -21,11 +21,12 @@
       "Q1_native_tsfm",
       "Q2_llm4ts",
       "Q3_model_families",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "ekambaram2024ttm",
     "group": "IBM",
     "paradigm": "Native TSFM",
@@ -81,9 +82,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "jin2023largemodels",
     "group": "Ming Jin",
     "paradigm": "Survey & Foundations",
@@ -125,11 +126,12 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q3_model_families"
+      "Q3_model_families",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "zhou2023onefitsall",
     "group": "Alibaba / DAMO",
     "paradigm": "LLM4TS",
@@ -179,9 +181,9 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "liu2024timer",
     "group": "THUML",
     "paradigm": "Native TSFM",
@@ -223,11 +225,12 @@
     "matched_queries": [
       "Q1_native_tsfm",
       "Q2_llm4ts",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "chang2023llm4ts",
     "group": "NYCU",
     "paradigm": "LLM4TS",
@@ -273,7 +276,7 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC1: General review/survey without novel empirical model artifact"
   },
@@ -295,9 +298,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "gruver2023llmtime",
     "group": "NYU",
     "paradigm": "LLM4TS",
@@ -340,9 +343,9 @@
     "matched_queries": [
       "Q1_native_tsfm"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "dooley2023forecastpfn",
     "group": "Abacus.AI / CMU",
     "paradigm": "Native TSFM",
@@ -389,9 +392,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "cao2023tempo",
     "group": "Ming Jin / Monash",
     "paradigm": "LLM4TS",
@@ -433,9 +436,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "xue2022promptcast",
     "group": "UNSW",
     "paradigm": "LLM4TS",
@@ -478,7 +481,7 @@
     "matched_queries": [
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC1: General review/survey without novel empirical model artifact"
   },
@@ -502,9 +505,9 @@
     "matched_queries": [
       "Q1_native_tsfm"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "liu2024unitime",
     "group": "Beihang / NTU",
     "paradigm": "LLM4TS",
@@ -548,9 +551,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "das2024timesfm",
     "group": "Google",
     "paradigm": "Native TSFM",
@@ -602,9 +605,9 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "jin2023timellm",
     "group": "Ming Jin",
     "paradigm": "LLM4TS",
@@ -661,9 +664,9 @@
       "Q1_native_tsfm",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "rasul2023lagllama",
     "group": "Mila / Morgan Stanley",
     "paradigm": "Native TSFM",
@@ -708,7 +711,7 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
@@ -736,9 +739,9 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "yue2024timemmd",
     "group": "SJTU",
     "paradigm": "Evaluation & Benchmark",
@@ -782,9 +785,9 @@
     "comment": null,
     "journal_ref": null,
     "matched_queries": [],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "wang2024timemixer",
     "group": "Ming Jin",
     "paradigm": "Native TSFM",
@@ -830,7 +833,7 @@
     "matched_queries": [
       "Q1_native_tsfm"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC1: General review/survey without novel empirical model artifact"
   },
@@ -854,9 +857,9 @@
       "Q1_native_tsfm",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "woo2024moirai",
     "group": "Salesforce",
     "paradigm": "Native TSFM",
@@ -900,11 +903,12 @@
     "matched_queries": [
       "Q1_native_tsfm",
       "Q3_model_families",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "goswami2024moment",
     "group": "CMU",
     "paradigm": "Native TSFM",
@@ -949,11 +953,12 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q2_llm4ts"
+      "Q2_llm4ts",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "liu2024autotimes",
     "group": "THUML",
     "paradigm": "LLM4TS",
@@ -998,9 +1003,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "zhou2024units",
     "group": "Harvard",
     "paradigm": "Native TSFM",
@@ -1051,7 +1056,7 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
@@ -1089,9 +1094,9 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "ansari2024chronos",
     "group": "Amazon",
     "paradigm": "Native TSFM",
@@ -1136,11 +1141,12 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q2_llm4ts"
+      "Q2_llm4ts",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "liu2024calf",
     "group": "Tsinghua / DAMO",
     "paradigm": "LLM4TS",
@@ -1187,9 +1193,9 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "wang2024timexer",
     "group": "THUML",
     "paradigm": "Native TSFM",
@@ -1235,9 +1241,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "wu2024s2ipllm",
     "group": "SJTU",
     "paradigm": "LLM4TS",
@@ -1277,11 +1283,36 @@
     "journal_ref": "Proceedings of the Thirteenth International Conference on Learning Representations (ICLR 2025)",
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q2_llm4ts"
+      "Q2_llm4ts",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "lu2024incontext",
+    "group": "Georgia Tech",
+    "paradigm": "Native TSFM",
+    "architecture": "In-Context Meta-Learning Transformer (ICTSP)",
+    "tokenization": "Interleaved Prompt-Query Subseries Patches",
+    "prediction_head": "Direct In-Context Continuous Extrapolation",
+    "params": "42M",
+    "pretrain_corpus": "Synthetic Meta-Stochastic Processes + Empirical Benchmarks",
+    "tasks": [
+      "In-Context Forecasting",
+      "Few-shot Adaptation"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2405.14982",
+    "url": "https://arxiv.org/abs/2405.14982"
   },
   {
     "id": "arxiv:2406.01638",
@@ -1304,9 +1335,9 @@
     "matched_queries": [
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "chen2024timecma",
     "group": "CUHK",
     "paradigm": "LLM4TS",
@@ -1355,9 +1386,9 @@
       "Q1_native_tsfm",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "woo2024moiraimoe",
     "group": "Salesforce",
     "paradigm": "Native TSFM",
@@ -1400,9 +1431,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC1: Narrow task-specific model lacking cross-domain foundation pretraining"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "cai2024timeseriesexam",
+    "group": "CMU",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Standardized Diagnostic Benchmark Exam for Foundation Models",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Diagnostic Evaluation",
+      "Foundational Capability Probing"
+    ],
+    "open_weights": true,
+    "venue": "NeurIPS 2024 Workshop",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2410.14752",
+    "url": "https://arxiv.org/abs/2410.14752"
   },
   {
     "id": "arxiv:2410.04803",
@@ -1424,9 +1479,9 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "liu2024timerxl",
     "group": "THUML",
     "paradigm": "Native TSFM",
@@ -1471,9 +1526,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "zhong2025timevlm",
     "group": "Ming Jin / Monash",
     "paradigm": "LLM4TS",
@@ -1522,9 +1577,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "xie2024chatts",
     "group": "Tsinghua / NetMan",
     "paradigm": "LLM4TS",
@@ -1573,9 +1628,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "salesforce2024gifteval",
     "group": "Salesforce",
     "paradigm": "Evaluation & Benchmark",
@@ -1622,9 +1677,9 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "shi2024timemoe",
     "group": "Ming Jin",
     "paradigm": "Native TSFM",
@@ -1671,9 +1726,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "jin2025timemqa",
     "group": "Ming Jin",
     "paradigm": "LLM4TS",
@@ -1718,11 +1773,12 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q2_llm4ts"
+      "Q2_llm4ts",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "chen2024visionts",
     "group": "HKUST",
     "paradigm": "LLM4TS",
@@ -1765,9 +1821,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "muller2025tabpfnts",
     "group": "Freiburg",
     "paradigm": "Native TSFM",
@@ -1815,9 +1871,9 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "thuml2025sundial",
     "group": "THUML",
     "paradigm": "Native TSFM",
@@ -1862,9 +1918,9 @@
     "comment": "Accepted by the 13th International Conference on Learning Representations (ICLR 2025)",
     "journal_ref": null,
     "matched_queries": [],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "wang2024timemixerplus",
     "group": "Ming Jin",
     "paradigm": "Native TSFM",
@@ -1912,9 +1968,32 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "kowsher2024llmmixer",
+    "group": "UCF",
+    "paradigm": "LLM4TS",
+    "architecture": "Multiscale Token-Mixing Frozen LLM (LLaMA-2 Backbone)",
+    "tokenization": "Multiscale Patch Decompositions",
+    "prediction_head": "Linear Residual Output Head",
+    "params": "7B",
+    "pretrain_corpus": "Frozen LLaMA-2-7B",
+    "tasks": [
+      "Multiscale Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2410.11674",
+    "url": "https://arxiv.org/abs/2410.11674"
   },
   {
     "id": "arxiv:2410.24087",
@@ -1933,11 +2012,12 @@
     "matched_queries": [
       "Q1_native_tsfm",
       "Q2_llm4ts",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "das2024incontext",
     "group": "Google",
     "paradigm": "Native TSFM",
@@ -1984,9 +2064,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "zhang2024chattime",
     "group": "ZJU",
     "paradigm": "LLM4TS",
@@ -2033,11 +2113,12 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "zhang2025kairos",
     "group": "NUS",
     "paradigm": "Native TSFM",
@@ -2079,11 +2160,12 @@
     "matched_queries": [
       "Q1_native_tsfm",
       "Q2_llm4ts",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "gong2025rethinkingeval",
     "group": "Monash / HKUST",
     "paradigm": "Evaluation & Benchmark",
@@ -2137,9 +2219,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "wu2025scits",
     "group": "Wuhan Univ / Shanghai AI Lab",
     "paradigm": "Evaluation & Benchmark",
@@ -2189,9 +2271,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "jin2025timeomni",
     "group": "Ming Jin",
     "paradigm": "LLM4TS",
@@ -2252,11 +2334,12 @@
     "matched_queries": [
       "Q1_native_tsfm",
       "Q2_llm4ts",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "raj2025opentslm",
     "group": "Stanford",
     "paradigm": "LLM4TS",
@@ -2308,9 +2391,9 @@
     "matched_queries": [
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "zhang2025insightminer",
     "group": "HKUST / MSRA",
     "paradigm": "Evaluation & Benchmark",
@@ -2351,7 +2434,7 @@
     "comment": "Accepted at AISTATS 2026",
     "journal_ref": null,
     "matched_queries": [],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC1: Narrow task-specific model lacking cross-domain foundation pretraining"
   },
@@ -2375,11 +2458,12 @@
       "Q1_native_tsfm",
       "Q2_llm4ts",
       "Q3_model_families",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "auer2025tirex",
     "group": "JKU Linz / ELLIS",
     "paradigm": "Native TSFM",
@@ -2436,11 +2520,36 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
+      "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC1: General review/survey without novel empirical model artifact"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "cohen2025toto",
+    "group": "Datadog",
+    "paradigm": "Native TSFM",
+    "architecture": "Decoder-only Transformer (Toto 1.0)",
+    "tokenization": "Continuous Patching",
+    "prediction_head": "Multi-quantile Head + Anomaly Score Head",
+    "params": "151M",
+    "pretrain_corpus": "Datadog Observability Corpus (1 Trillion Points)",
+    "tasks": [
+      "Forecasting",
+      "Anomaly Detection"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2505.14766",
+    "url": "https://arxiv.org/abs/2505.14766"
   },
   {
     "id": "arxiv:2506.06005",
@@ -2464,9 +2573,33 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_fulltext",
-    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "wang2025lightgts",
+    "group": "East China Normal Univ / Huawei",
+    "paradigm": "Native TSFM",
+    "architecture": "Lightweight Dual-Path Transformer with Adaptive Parameter Allocation",
+    "tokenization": "Compact Hierarchical Patching",
+    "prediction_head": "Multi-Horizon Direct Projection Head",
+    "params": "5.8M",
+    "pretrain_corpus": "Curated General Time Series Corpus (8B observations)",
+    "tasks": [
+      "Zero-shot Forecasting",
+      "Edge Deployment"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2506.06005",
+    "url": "https://arxiv.org/abs/2506.06005"
   },
   {
     "id": "arxiv:2506.11029",
@@ -2488,9 +2621,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "liu2025yinglong",
     "group": "Tsinghua / THUML",
     "paradigm": "Native TSFM",
@@ -2536,9 +2669,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "wu2025flame",
     "group": "Zhejiang Univ / Westlake",
     "paradigm": "Native TSFM",
@@ -2582,9 +2715,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "king2025flowstate",
     "group": "MIT",
     "paradigm": "Native TSFM",
@@ -2634,9 +2767,9 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "woo2025moirai2",
     "group": "Salesforce",
     "paradigm": "Native TSFM",
@@ -2697,11 +2830,12 @@
     "matched_queries": [
       "Q1_native_tsfm",
       "Q3_model_families",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "ansari2025chronos2",
     "group": "Amazon",
     "paradigm": "Native TSFM",
@@ -2746,11 +2880,36 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "zhou2026eidos",
+    "group": "Ming Jin / UNSW / Nankai",
+    "paradigm": "Native TSFM",
+    "architecture": "Latent-Space Joint-Embedding Predictive Architecture (JEPA)",
+    "tokenization": "Continuous Latent Patch Projector",
+    "prediction_head": "Latent Space Predictor + Decoder Head",
+    "params": "88M",
+    "pretrain_corpus": "Multi-domain Latent Pretraining Archive (35B observations)",
+    "tasks": [
+      "Zero-shot Forecasting",
+      "Representation Learning"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2602.14024",
+    "url": "https://arxiv.org/abs/2602.14024"
   },
   {
     "id": "arxiv:2602.17001",
@@ -2773,7 +2932,7 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
@@ -2796,9 +2955,9 @@
     "comment": "Accepted by the Forty-third International Conference on Machine Learning (ICML 2026)",
     "journal_ref": null,
     "matched_queries": [],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "guan2026timeomnivl",
     "group": "Monash / CSIRO",
     "paradigm": "LLM4TS",
@@ -2842,11 +3001,36 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "wen2026livehouse",
+    "group": "HKUST(GZ)",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Living Evaluation Platform & Continuous Benchmark Harness",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Living Benchmark",
+      "Contamination-Free Evaluation"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2608.17299",
+    "url": "https://arxiv.org/abs/2608.17299"
   },
   {
     "id": "arxiv:2609.24156",
@@ -2867,9 +3051,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "liang2026tactime",
+    "group": "ECNU",
+    "paradigm": "LLM4TS",
+    "architecture": "Text-as-Channel Dual-Stream Cross-Attention Transformer",
+    "tokenization": "Textual Channel Embeddings + Temporal Patch Embeddings",
+    "prediction_head": "Channel-Fused Forecast Head",
+    "params": "350M",
+    "pretrain_corpus": "Multimodal Context Corpora",
+    "tasks": [
+      "Multimodal Forecasting",
+      "Context-Informed Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2609.24156",
+    "url": "https://arxiv.org/abs/2609.24156"
   },
   {
     "id": "arxiv:2602.12147",
@@ -2896,7 +3104,7 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_fulltext",
     "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
@@ -2921,7 +3129,7 @@
       "Q2_llm4ts",
       "Q3_model_families"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC1: Narrow task-specific model lacking cross-domain foundation pretraining"
   },
@@ -2949,7 +3157,7 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_fulltext",
     "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
@@ -2978,9 +3186,9 @@
       "Q3_model_families",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "thuml2026timers1",
     "group": "THUML",
     "paradigm": "Native TSFM",
@@ -3024,9 +3232,33 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_fulltext",
-    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "liu2026timesx",
+    "group": "Georgia Tech / Google Research",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "TimesX Context-Enriched Multimodal Benchmark Suite",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Multimodal Benchmark",
+      "Context-Rich Evaluation"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2607.06973",
+    "url": "https://arxiv.org/abs/2607.06973"
   },
   {
     "id": "arxiv:2605.09395",
@@ -3052,7 +3284,7 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_title",
     "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
   },
@@ -3079,9 +3311,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "meyer2026t0",
     "group": "ETH Zurich / Invenia Labs",
     "paradigm": "Native TSFM",
@@ -3125,7 +3357,7 @@
     "matched_queries": [
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "excluded_fulltext",
     "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
   },
@@ -3154,9 +3386,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "kan2026trace",
+    "group": "UNC Chapel Hill / UT Austin",
+    "paradigm": "LLM4TS",
+    "architecture": "Temporal Conditional Estimation Network with Pretrained Multimodal Backbones",
+    "tokenization": "Multimodal Token Alignment (Text + Waveform)",
+    "prediction_head": "Conditional Continuous Estimator",
+    "params": "7B",
+    "pretrain_corpus": "Pretrained Multimodal LLM Backbones",
+    "tasks": [
+      "Multimodal Forecasting",
+      "Clinical Time Series"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2606.06285",
+    "url": "https://arxiv.org/abs/2606.06285"
   },
   {
     "id": "arxiv:2609.13956",
@@ -3183,11 +3439,37 @@
     "matched_queries": [
       "Q1_native_tsfm",
       "Q2_llm4ts",
-      "Q4_benchmarks_critiques"
+      "Q3_model_families",
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_fulltext",
-    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "xie2026tabby",
+    "group": "Huawei Noah's Ark / Univ Paris Cité",
+    "paradigm": "Native TSFM",
+    "architecture": "Long-Context Probabilistic Decoder-only Transformer",
+    "tokenization": "Normalized Multi-Resolution Subseries Patching",
+    "prediction_head": "Quantile & Categorical Mixture Head",
+    "params": "120M",
+    "pretrain_corpus": "Open Tabby-Corpus (150B tokens open release)",
+    "tasks": [
+      "Zero-shot Probabilistic Forecasting",
+      "Long-Context Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2609.13956",
+    "url": "https://arxiv.org/abs/2609.13956"
   },
   {
     "id": "arxiv:2605.20119",
@@ -3214,11 +3496,13 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q4_benchmarks_critiques"
+      "Q3_model_families",
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "datadog2026toto2",
     "group": "Datadog",
     "paradigm": "Native TSFM",
@@ -3265,11 +3549,36 @@
     "matched_queries": [
       "Q1_native_tsfm",
       "Q2_llm4ts",
-      "Q4_benchmarks_critiques"
+      "Q4_benchmarks_critiques",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_title",
-    "exclusion_reason": "EC3: Short demo or non-peer-reviewed abstract"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "chen2026timevista",
+    "group": "Tsinghua University (THUML)",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Vision-Language Model Perceptual Judge Framework",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "8B",
+    "pretrain_corpus": "TimeVista Perceptual Evaluation Benchmark",
+    "tasks": [
+      "LLM-as-a-Judge",
+      "Perceptual Shape Fidelity Evaluation"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2606.16173",
+    "url": "https://arxiv.org/abs/2606.16173"
   },
   {
     "id": "arxiv:2609.25788",
@@ -3288,9 +3597,9 @@
       "Q1_native_tsfm",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "li2026evaluatingreliability",
     "group": "TU Munich",
     "paradigm": "Evaluation & Benchmark",
@@ -3331,9 +3640,33 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
-    "status": "excluded_fulltext",
-    "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction"
+    "retrieved_at": "2026-09-25 15:20:48",
+    "status": "included",
+    "screen_date": "2026-09-25",
+    "bibkey": "nagashima2026forecastworkflow",
+    "group": "Independent / Tokyo",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Agentic Tool-Use Evaluation Framework",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Agentic Forecast Benchmark",
+      "Tool Budget Evaluation"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2609.27385",
+    "url": "https://arxiv.org/abs/2609.27385"
   },
   {
     "id": "arxiv:2211.14730",
@@ -3351,11 +3684,12 @@
     "journal_ref": null,
     "matched_queries": [
       "Q1_native_tsfm",
-      "Q3_model_families"
+      "Q3_model_families",
+      "Q5_adaptation_snowballing"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "nie2023patchtst",
     "group": "UC Berkeley",
     "paradigm": "Native TSFM",
@@ -3400,9 +3734,9 @@
       "Q2_llm4ts",
       "Q4_benchmarks_critiques"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "fons2024arellmsuseful",
     "group": "Imperial College London / Oxford",
     "paradigm": "Evaluation & Benchmark",
@@ -3445,9 +3779,9 @@
       "Q1_native_tsfm",
       "Q2_llm4ts"
     ],
-    "retrieved_at": "2026-09-24 10:47:05",
+    "retrieved_at": "2026-09-25 15:20:48",
     "status": "included",
-    "screen_date": "2026-09-24",
+    "screen_date": "2026-09-25",
     "bibkey": "sun2023test",
     "group": "PKU / Alibaba",
     "paradigm": "LLM4TS",

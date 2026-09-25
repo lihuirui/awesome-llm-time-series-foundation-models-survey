@@ -36,18 +36,20 @@ Standard autoregressive models often struggle with the structural tension betwee
 \begin{itemize}[leftmargin=*]
     \item \emph{TiRex}~\cite{auer2025tirex}: Auer et al. (JKU Linz / ELLIS) propose an asymmetric dual-horizon in-context architecture. TiRex isolates local fine-grained patches from global horizon summaries, using memory compaction to preserve multi-scale context without quadratic computational blowup.
     \item \emph{$t_0$ Family}~\cite{meyer2026t0}: Meyer et al. introduce $t_0$, releasing open-weights checkpoints $\texttt{t0-alpha}$ ($102\text{M}$) and $\texttt{t0-beta}$ ($256\text{M}$). Departing from channel-independent univariate approaches, $t_0$ explicitly conditions predictions on historical targets, past dynamic covariates, and known-future covariates (e.g., promotional calendars, weather forecasts). By alternating axial self-attention along the temporal axis and cross-variate attention across feature channels, $t_0$ attains aggregate CRPS of $0.4738$ and MASE of $0.6865$ on GIFT-Eval, standing within 4\% of the top zero-shot forecaster.
-    \item \emph{Toto 2.0}~\cite{datadog2026toto2}: Datadog's Toto 2.0 demonstrates that unified training recipes reliably scale from $4\text{M}$ to $2.5\text{B}$ parameters using Maximal Update Parametrization ($\mu\text{P}$), achieving state-of-the-art results on GIFT-Eval and the contamination-resistant TIME benchmark.
+    \item \emph{Toto Family}~\cite{cohen2025toto,datadog2026toto2}: Datadog introduced Toto ($151\text{M}$ parameters)~\cite{cohen2025toto}, trained on $1\text{T}$ cloud infrastructure and application metrics to deliver joint zero-shot quantile forecasting and out-of-distribution anomaly scoring. Toto 2.0~\cite{datadog2026toto2} subsequently scales from $4\text{M}$ to $2.5\text{B}$ parameters using Maximal Update Parametrization ($\mu\text{P}$), achieving state-of-the-art results on GIFT-Eval and the contamination-resistant TIME benchmark.
+    \item \emph{Tabby Open Recipe}~\cite{xie2026tabby}: Addressing the pervasive opacity of proprietary pretraining mixtures, Xie et al. introduce Tabby ($120\text{M}$ parameters), releasing an open-source, long-context probabilistic foundation model accompanied by a fully reproducible data curation pipeline and an open $150\text{B}$-token pretraining corpus.
 \end{itemize}
 
 \subsubsection{Lag-Llama: Probabilistic Modeling with Lag Embeddings}
 Developed by Morgan Stanley and Mila, Lag-Llama~\cite{rasul2023lagllama} adapts the Llama decoder backbone by substituting word embeddings with lag feature vectors. Specifically, it computes lags corresponding to standard calendar frequencies (e.g., quarter-hour, day, week, year). Lag-Llama outputs the parameters of a Student's $t$ distribution, achieving robust probabilistic calibration on out-of-distribution Monash datasets.
 
-\subsection{Prior-Data Fitted Networks (PFNs) and Synthetic In-Context Priors}
+\subsection{Prior-Data Fitted Networks (PFNs) and In-Context Meta-Learning}
 
-A radically distinct paradigm in native foundation modeling is the Prior-Data Fitted Network (PFN) framework, which foregoes empirical training corpora entirely in favor of synthetically generated structural priors:
+A radically distinct paradigm in native foundation modeling is the Prior-Data Fitted Network (PFN) and in-context learning framework, which foregoes empirical training corpora or iterative gradient steps entirely in favor of synthetically generated structural priors:
 \begin{itemize}[leftmargin=*]
     \item \emph{ForecastPFN}~\cite{dooley2023forecastpfn}: Dooley et al. demonstrate that a transformer trained exclusively on synthetic time series generated from a Bayesian mixture of Gaussian processes, ARMA models, and dynamical equations can approximate posterior predictive distributions in a single forward pass. ForecastPFN requires zero gradient steps or hyperparameter tuning at inference time, achieving competitive zero-shot accuracy across diverse real-world datasets.
     \item \emph{TabPFN-TS}~\cite{muller2025tabpfnts}: Extending tabular foundation models (TabPFN-v2) to the temporal domain, Müller et al. propose TabPFN-TS ($11\text{M}$ parameters). By encoding time series as tabular regression tasks conditioned on causal lag features and exogenous metadata, TabPFN-TS achieves state-of-the-art accuracy on covariate-informed forecasting across GIFT-Eval and fev-bench, proving that in-context synthetic priors offer extreme parameter efficiency.
+    \item \emph{In-Context Time Series Predictor (ICTSP)}~\cite{lu2024incontext}: Lu et al. (ICLR 2025) formalize in-context regression for continuous temporal sequences. By structuring historical context and query sequences within an interleaved prompt-query attention mechanism, ICTSP ($42\text{M}$ parameters) executes zero-gradient meta-adaptation across disparate sampling frequencies and noise regimes without updating network weights.
 \end{itemize}
 
 \subsection{Masked Encoders, Multiscale Mixers, and Multi-Task Architectures}
@@ -67,6 +69,7 @@ Challenging the premise that foundation models require massive parameter scales:
     \item \emph{TimeMixer and TimeMixer++}~\cite{wang2024timemixer,wang2024timemixerplus}: Wang et al. formulate multiscale mixing architectures. TimeMixer decomposes signals into downsampled representations to disentangle multiscale seasonalities, while TimeMixer++ extends this principle into a general temporal pattern machine supporting cross-domain transfer.
     \item \emph{TimeXer}~\cite{wang2024timexer}: Specifically targets exogenous variables by learning cross-attention maps between target end-points and exogenous features, avoiding noise propagation from uninformative covariates.
     \item \emph{Kairos}~\cite{zhang2025kairos}: Introduces predictability-stratified pretraining (PreSTS), filtering chaotic or non-deterministic temporal noise during self-supervised training to ensure foundation models focus representational capacity on predictable temporal dynamics.
+    \item \emph{LightGTS}~\cite{wang2025lightgts}: Wang et al. (ICML 2025) challenge the assumption that cross-domain generalizability requires heavy parameter footprints. LightGTS ($5.8\text{M}$ parameters) introduces dual-path hierarchical patching and adaptive parameter allocation, matching the zero-shot accuracy of foundation models two orders of magnitude larger while running inference directly on resource-constrained edge microcontrollers.
 \end{itemize}
 
 \subsection{Continuous Flow Matching and Polynomial Memory Networks}
@@ -75,7 +78,41 @@ A vital 2025 frontier replaces discrete tokenization with continuous-time dynami
 \begin{itemize}[leftmargin=*]
     \item \emph{FLAME}~\cite{wu2025flame}: Wu et al. introduce Flow-Enhanced Legendre Memory Models. FLAME compresses long continuous temporal histories onto orthogonal Legendre polynomial bases, avoiding memory degradation over extended sequences, while modeling predictive distributions via continuous normalizing flows.
     \item \emph{FlowState}~\cite{king2025flowstate}: King et al. formulate time series forecasting via continuous-time ODEs and flow matching. FlowState achieves strict sampling-rate equivariance, allowing zero-shot inference across irregularly sampled or arbitrary continuous time-steps without interpolation artifacts. Despite its compact footprint ($12\text{M}$ parameters), FlowState achieves top-tier CRPS on GIFT-Eval.
+    \item \emph{EIDOS}~\cite{zhou2026eidos}: Zhou et al. (Ming Jin's group, 2026) introduce latent-space predictive learning for temporal foundation models via a Joint-Embedding Predictive Architecture (JEPA). Rather than optimizing token-level mean-squared reconstruction—which forces the model to expend capacity memorizing stochastic high-frequency jitter—EIDOS predicts future dynamics within a learned latent metric space, yielding semantically structured representations that transfer robustly across unseen domains.
 \end{itemize}
 
 \subsection{Mixture-of-Experts (MoE) and Scaling to Billions}
 A major architectural breakthrough between 2024 and 2026 is the deployment of Sparse Mixture-of-Experts (MoE) in time series. In Time-MoE~\cite{shi2024timemoe} (Ming Jin's group), the model scales to $2.4\text{B}$ parameters while only activating a subset of experts per patch token. Trained on Time-300B ($300\text{B}$ time points), Time-MoE demonstrates clear empirical power-law scaling in validation loss, proving that scaling laws discovered in NLP hold equally for native temporal representations when sufficient data volume is supplied. Similarly, Moirai-MoE~\cite{woo2024moiraimoe} ($1.1\text{B}$) and Timer-S1~\cite{thuml2026timers1} ($8.3\text{B}$) substantiate that sparse MoE routing allows foundation models to specialize on domain-specific dynamics (e.g., high-frequency finance vs. slow-moving climate trends) while keeping inference latency within practical bounds.
+
+\subsection{Parameter-Efficient Fine-Tuning vs. In-Context Adaptation}
+\label{sec:adaptation_synthesis}
+
+A central dilemma in deploying foundation models is choosing between zero-shot inference, in-context learning, parameter-efficient fine-tuning (PEFT), and full fine-tuning. Table~\ref{tab:adaptation_comparison} categorizes the core adaptation paradigms across efficiency, computational overhead, and empirical generalization trade-offs.
+
+\begin{table*}[t]
+\caption{Systematic Comparison of Downstream Adaptation Paradigms for Time Series Foundation Models.}
+\label{tab:adaptation_comparison}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lp{3.2cm}cccp{3.6cm}p{3.2cm}}
+\toprule
+\textbf{Adaptation Paradigm} & \textbf{Exemplar Models} & \textbf{Trainable Params} & \textbf{Gradient Steps} & \textbf{Memory Overhead} & \textbf{Data Regime / Sample Efficiency} & \textbf{Generalization \& Stability} \\
+\midrule
+\textbf{Zero-Shot Transfer} & Chronos-2~\cite{ansari2025chronos2}, TimesFM~\cite{das2024timesfm}, $t_0$~\cite{meyer2026t0}, Toto 2.0~\cite{datadog2026toto2} & $0\%$ & $0$ & Baseline (KV-Cache only) & Zero target samples required; immediate out-of-the-box deployment & Preserves broad cross-domain calibration; bounded by pretraining domain overlap \\
+\midrule
+\textbf{In-Context Meta-Learning} & ForecastPFN~\cite{dooley2023forecastpfn}, TabPFN-TS~\cite{muller2025tabpfnts}, ICTSP~\cite{lu2024incontext}, TimesFM-IC~\cite{das2024incontext} & $0\%$ & $0$ & Low--Medium (Expanded context window) & Extreme few-shot ($5$--$50$ context sequences); zero fine-tuning FLOPs & Immune to catastrophic forgetting; limited by maximum attention context length \\
+\midrule
+\textbf{Parameter-Efficient (PEFT / LoRA / Prefix)} & TTM~\cite{ekambaram2024ttm}, CALF~\cite{liu2024calf}, Time-LLM~\cite{jin2023timellm}, OFA~\cite{zhou2023onefitsall} & $0.05\%$--$2.0\%$ & Few ($50$--$500$) & Low ($<10\%$ activation memory) & Highly sample-efficient ($5\%$--$10\%$ target dataset matches full training) & Mitigates representation collapse via low-rank constraints; retains core backbone weights \\
+\midrule
+\textbf{Full-Parameter Fine-Tuning} & MOMENT~\cite{goswami2024moment}, PatchTST~\cite{nie2023patchtst}, Timer~\cite{liu2024timer} & $100\%$ & Many ($1\text{K}$--$10\text{K}$) & High ($4\times$ model size for optimizer states) & Requires substantial target history ($100\%$ dataset); prone to overfitting on small data & Achieves lowest in-domain MSE on large stationary datasets; suffers catastrophic forgetting \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+Empirical synthesis reveals two critical principles governing downstream adaptation:
+\begin{enumerate}[leftmargin=*]
+    \item \emph{The In-Context Learning Frontier}: Prior-Data Fitted Networks (TabPFN-TS, ForecastPFN) and meta-learning predictors (ICTSP) demonstrate that conditioning on prompt-target pairs inside the attention context matches 100-step gradient descent while executing in a single forward pass, providing an ideal mechanism for real-time edge streaming where backpropagation is computationally prohibited.
+    \item \emph{PEFT Prevents Semantic Collapse}: As demonstrated in CALF~\cite{liu2024calf} and TTM~\cite{ekambaram2024ttm}, tuning less than $1\%$ of weights via low-rank matrices or adaptive resolution prefix blocks yields within $2\%$ of full fine-tuning performance on target benchmarks while completely insulating the model against catastrophic representation drift.
+\end{enumerate}
+

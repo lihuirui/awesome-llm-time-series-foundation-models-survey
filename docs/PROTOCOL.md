@@ -1,12 +1,14 @@
 # Systematic Review Protocol: Large Language Models and Foundation Models for Time Series
 
 ## 1. Protocol Identification and Changelog
-- **Protocol Version**: 1.0.0
+- **Protocol Version**: 1.1.0
 - **Initial Date**: 2026-09-24
+- **Last Amended**: 2026-09-25
 - **Methodological Standard**: PRISMA 2020 (Preferred Reporting Items for Systematic Reviews and Meta-Analyses)
 - **Target Repository**: `lihuirui/awesome-llm-time-series-foundation-models-survey`
 
 ### Changelog
+- **2026-09-25 (v1.1.0)**: Iteration 3 update: Extended temporal search window to 2026-09-25; added explicit focus on fine-tuning vs. in-context adaptation trade-offs (PEFT, LoRA, PFN in-context priors) and scaling laws meta-regression ($\alpha_N, \alpha_D$); integrated continuous delta search and snowballing for emerging 2025–2026 preprints.
 - **2026-09-24 (v1.0.0)**: Initialized protocol for iteration 1 bootstrap: defined Research Questions RQ1–RQ7, Boolean query formulations across 4 scholarly engines, 2-stage screening criteria, data extraction schema, quality scoring rubric, and forward/backward snowballing procedure.
 
 ---
@@ -26,7 +28,7 @@
 ## 3. Eligibility Criteria
 
 ### 3.1 Inclusion Criteria (IC)
-- **IC1 (Temporal Scope)**: Published or preprint released between **2021-01-01** and the present (**2026-09-24**).
+- **IC1 (Temporal Scope)**: Published or preprint released between **2021-01-01** and the present (**2026-09-25**).
 - **IC2 (Topic Relevance)**:
   - (a) Pre-trained time series foundation models trained on cross-domain time-series corpora (e.g., Chronos, TimesFM, Moirai, MOMENT, Lag-Llama, Timer, Sundial, Time-MoE, Toto, TabPFN-TS, TTM, etc.).
   - (b) Large Language Models adapted, reprogrammed, prompted, or fine-tuned for time series analysis (e.g., Time-LLM, GPT4TS/OFA, LLMTime, TEMPO, TEST, S2IP-LLM, etc.).

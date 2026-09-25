@@ -49,19 +49,19 @@ def generate_taxonomy_figure():
     # 3 Main Branches
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
-            ("Autoregressive Decoder-only", "Chronos, TimesFM, Timer,\nSundial, Lag-Llama, TiRex, $t_0$"),
-            ("Masked & Prior-Data Fitted", "MOMENT, MOIRAI, TTM,\nForecastPFN, TabPFN-TS, UniTS"),
-            ("MoE & Continuous Dynamical", "Time-MoE, Moirai-MoE,\nTimer-S1, FLAME, FlowState")
+            ("Autoregressive Decoder-only", "Chronos, TimesFM, Timer,\nSundial, TiRex, Toto, Tabby, $t_0$"),
+            ("Masked & Prior-Data Fitted", "MOMENT, MOIRAI, TTM, ICTSP,\nForecastPFN, TabPFN-TS, LightGTS"),
+            ("MoE & Continuous Dynamical", "Time-MoE, Moirai-MoE, EIDOS,\nTimer-S1, FLAME, FlowState")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
-            ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO"),
-            ("Prompting & Fine-Tuning", "PromptCast, LLMTime,\nUniTime, LLM4TS, AutoTimes"),
-            ("Multimodal & Agentic Reasoning", "Time-VLM, ChatTS, TimeOmni-VL,\nTime-MQA, OpenTSLM")
+            ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
+            ("Prompting & Fine-Tuning", "PromptCast, LLMTime, UniTime,\nLLM4TS, AutoTimes, TAC-Time"),
+            ("Multimodal & Agentic Reasoning", "Time-VLM, ChatTS, TimeOmni-VL,\nTRACE, Time-MQA, OpenTSLM")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Standardized Benchmarks", "GIFT-Eval, SciTS, Time-MMD,\nInsight Miner, Monash"),
-            ("Leakage & Calibration Audits", "Rethinking Evaluation,\nProbabilistic Reliability"),
-            ("Foundational Critiques", "Are LLMs Useful for TS?,\nObservability Perspectives")
+            ("Standardized Benchmarks", "GIFT-Eval, TimesX, SciTS,\nTimeSeriesExam, Insight Miner"),
+            ("Leakage & Calibration Audits", "Rethinking Evaluation, LiveHouse-TS,\nProbabilistic Reliability"),
+            ("Foundational Critiques & Tools", "Are LLMs Useful?, TimeVista,\nForecast Workflow Bench")
         ])
     ]
 
@@ -142,7 +142,7 @@ def generate_prisma_figure():
     b_exc1 = patches.FancyBboxPatch((0.60, 0.425), 0.35, 0.12, boxstyle="round,pad=0.01", fc='#fff5f5', ec='#e53e3e', lw=1.2)
     ax.add_patch(b_exc1)
     ax.text(0.775, 0.485, f"Excluded at Stage 1 (N = {counts['screening']['excluded_title_abstract']})\n"
-                           f"• EC1 (Out of domain / non-pretrain): 15\n"
+                           f"• EC1 (Out of domain / non-pretrain): 6\n"
                            f"• EC1 (Survey without novel artifact): 3",
             ha='center', va='center', fontsize=8, color='#9b2c2c')
 
@@ -160,7 +160,7 @@ def generate_prisma_figure():
     b_exc2 = patches.FancyBboxPatch((0.60, 0.215), 0.35, 0.11, boxstyle="round,pad=0.01", fc='#fff5f5', ec='#e53e3e', lw=1.2)
     ax.add_patch(b_exc2)
     ax.text(0.775, 0.27, f"Excluded at full-text (N = {counts['screening']['excluded_fulltext']})\n"
-                          f"• EC4 (Deferred for P3 extraction): 7",
+                          f"• EC4 (Deferred for P4/P5 extraction): {counts['screening']['excluded_fulltext']}",
             ha='center', va='center', fontsize=8, color='#9b2c2c')
 
     # Included
@@ -184,7 +184,7 @@ def generate_prisma_figure():
     print("✓ fig_prisma generated")
 
 def generate_timeline_figure():
-    fig, ax = plt.subplots(figsize=(14.0, 6.2), dpi=300)
+    fig, ax = plt.subplots(figsize=(15.2, 6.4), dpi=300)
 
     # Carefully staggered events: (date_float, y_pos, label, group, color)
     models = [
@@ -205,29 +205,41 @@ def generate_timeline_figure():
         (2024.18, 4.0, "MOMENT", "CMU", "#1f77b4"),
         (2024.23, 2.4, "Chronos", "Amazon", "#1f77b4"),
         (2024.26, 0.9, "CALF", "THU/DAMO", "#d62728"),
-        (2024.40, 2.0, "TimeMixer", "Ming Jin", "#1f77b4"),
+        (2024.32, 1.4, "ICTSP", "Georgia Tech", "#1f77b4"),
+        (2024.40, 2.8, "TimeMixer", "Ming Jin", "#1f77b4"),
         (2024.50, 1.0, "Are LLMs Useful?", "Critique", "#2ca02c"),
-        (2024.70, 4.4, "Time-MoE", "Ming Jin", "#1f77b4"),
+        (2024.70, 3.8, "Time-MoE", "Ming Jin", "#1f77b4"),
+        (2024.76, 2.3, "LLM-Mixer", "UCF", "#d62728"),
         (2024.80, 3.2, "Timer-XL", "THUML", "#1f77b4"),
-        (2024.83, 1.1, "GIFT-Eval", "Salesforce", "#2ca02c"),
+        (2024.84, 4.8, "TimeSeriesExam", "CMU", "#2ca02c"),
+        (2024.88, 1.1, "GIFT-Eval", "Salesforce", "#2ca02c"),
         (2024.95, 2.2, "ChatTS", "THU/NetMan", "#d62728"),
         (2025.10, 4.3, "Sundial", "THUML", "#1f77b4"),
         (2025.15, 2.1, "Time-VLM", "Ming Jin", "#d62728"),
+        (2025.38, 1.3, "Toto 1.0", "Datadog", "#1f77b4"),
         (2025.40, 3.2, "TiRex", "JKU Linz", "#1f77b4"),
+        (2025.45, 2.3, "LightGTS", "ECNU", "#1f77b4"),
         (2025.70, 3.8, "Chronos-2", "Amazon", "#1f77b4"),
         (2025.80, 1.2, "SciTS", "Wuhan/Shanghai", "#2ca02c"),
         (2025.90, 2.5, "Moirai 2.0", "Salesforce", "#1f77b4"),
         (2025.95, 4.5, "FLAME", "ZJU/Westlake", "#1f77b4"),
-        (2026.15, 2.0, "TimeOmni-VL", "Monash", "#d62728"),
+        (2026.12, 1.5, "EIDOS", "Ming Jin", "#1f77b4"),
+        (2026.16, 2.7, "TimeOmni-VL", "Monash", "#d62728"),
         (2026.25, 4.2, "Timer-S1", "THUML", "#1f77b4"),
         (2026.40, 3.3, "Toto 2.0", "Datadog", "#1f77b4"),
-        (2026.70, 1.5, "$t_0$", "ETH Zurich", "#1f77b4")
+        (2026.45, 2.2, "TimeVista", "THUML", "#2ca02c"),
+        (2026.50, 4.6, "TimesX", "Google/GT", "#2ca02c"),
+        (2026.58, 1.0, "LiveHouse-TS", "HKUST", "#2ca02c"),
+        (2026.70, 1.8, "$t_0$", "ETH Zurich", "#1f77b4"),
+        (2026.72, 3.5, "Tabby", "Huawei", "#1f77b4"),
+        (2026.75, 2.6, "TAC-Time", "ECNU", "#d62728"),
+        (2026.78, 4.4, "WorkflowBench", "Tokyo", "#2ca02c")
     ]
 
     # Draw timeline line
     ax.axhline(0, color='#444444', lw=2, zorder=1)
     ax.set_xlim(2022.4, 2026.95)
-    ax.set_ylim(-0.8, 5.0)
+    ax.set_ylim(-0.8, 5.2)
 
     # Years markers
     for yr in range(2023, 2027):
@@ -266,17 +278,23 @@ def generate_params_corpus_figure():
     param_data = [
         ("ForecastPFN", 2023.90, 1.0e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("Lag-Llama", 2023.85, 2.4e6, "Native TSFM", "#1f77b4", (8, 0)),
+        ("LightGTS", 2025.45, 5.8e6, "Native TSFM", "#1f77b4", (8, -8)),
         ("TTM", 2024.05, 8.0e6, "Native TSFM", "#1f77b4", (8, -8)),
+        ("ICTSP", 2024.35, 4.2e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("FLAME", 2025.95, 4.5e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("Timer", 2024.15, 8.4e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("VisionTS", 2024.65, 8.6e7, "LLM4TS / VLM", "#d62728", (8, -9)),
         ("Timer-XL", 2024.80, 8.4e7, "Native TSFM", "#1f77b4", (-14, 8)),
+        ("EIDOS", 2026.12, 8.8e7, "Native TSFM", "#1f77b4", (8, 0)),
+        ("Tabby", 2026.70, 1.2e8, "Native TSFM", "#1f77b4", (-12, 7)),
         ("LLM4TS", 2023.65, 1.24e8, "LLM4TS", "#d62728", (8, 0)),
-        ("TiRex", 2025.40, 1.5e8, "Native TSFM", "#1f77b4", (8, 0)),
+        ("TiRex", 2025.40, 1.5e8, "Native TSFM", "#1f77b4", (8, 6)),
+        ("Toto 1.0", 2025.38, 1.51e8, "Native TSFM", "#1f77b4", (-14, -12)),
         ("TimesFM", 2023.85, 2.0e8, "Native TSFM", "#1f77b4", (8, 0)),
         ("PromptCast", 2022.85, 2.2e8, "LLM4TS", "#d62728", (8, 0)),
         ("Moirai", 2024.15, 3.11e8, "Native TSFM", "#1f77b4", (8, -8)),
-        ("$t_0$", 2026.70, 3.5e8, "Native TSFM", "#1f77b4", (8, 0)),
+        ("TAC-Time", 2026.72, 3.5e8, "LLM4TS", "#d62728", (8, 6)),
+        ("$t_0$", 2026.70, 3.5e8, "Native TSFM", "#1f77b4", (-12, -12)),
         ("MOMENT", 2024.15, 3.85e8, "Native TSFM", "#1f77b4", (8, 8)),
         ("Chronos", 2024.20, 7.1e8, "Native TSFM", "#1f77b4", (-10, 8)),
         ("Moirai-MoE", 2024.80, 1.1e9, "Native TSFM", "#1f77b4", (8, 0)),
@@ -312,8 +330,10 @@ def generate_params_corpus_figure():
         ("TiRex Corpus", 2025.40, 5e10, "#1f77b4", (8, -3)),
         ("TSMix (Chronos)", 2024.20, 8.4e10, "#1f77b4", (8, -3)),
         ("TimesFM Corpus", 2023.85, 1e11, "#1f77b4", (8, -3)),
-        ("$t_0$ Corpus", 2026.70, 1.2e11, "#1f77b4", (8, -3)),
+        ("$t_0$ Corpus", 2026.70, 1.2e11, "#1f77b4", (8, -12)),
+        ("Tabby Open Corpus", 2026.70, 1.5e11, "#1f77b4", (8, 6)),
         ("Time-300B (Time-MoE)", 2024.70, 3e11, "#1f77b4", (8, -3)),
+        ("Toto Telemetry (Toto 1.0)", 2025.38, 1e12, "#1f77b4", (-12, 7)),
         ("Datadog Telemetry (Toto 2.0)", 2026.35, 1.5e12, "#1f77b4", (8, -3))
     ]
 

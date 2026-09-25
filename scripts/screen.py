@@ -437,6 +437,99 @@ SPECS = {
         "tokenization": "Multivariate Context Embedding + Variable-Rate Patches", "prediction_head": "Quantile Mixture Autoregressive Head",
         "params": "350M", "pretrain_corpus": "Contextualized Open Temporal Database (120B observations)", "tasks": ["Context-conditioned Forecasting", "Zero-shot Probabilistic Forecasting"],
         "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+
+    # Iteration 3 Verified Studies (+13 Core Papers, Total: 70)
+    "2505.14766": {
+        "bibkey": "cohen2025toto",
+        "group": "Datadog", "paradigm": "Native TSFM", "architecture": "Decoder-only Transformer (Toto 1.0)",
+        "tokenization": "Continuous Patching", "prediction_head": "Multi-quantile Head + Anomaly Score Head",
+        "params": "151M", "pretrain_corpus": "Datadog Observability Corpus (1 Trillion Points)", "tasks": ["Forecasting", "Anomaly Detection"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2609.13956": {
+        "bibkey": "xie2026tabby",
+        "group": "Huawei Noah's Ark / Univ Paris Cité", "paradigm": "Native TSFM", "architecture": "Long-Context Probabilistic Decoder-only Transformer",
+        "tokenization": "Normalized Multi-Resolution Subseries Patching", "prediction_head": "Quantile & Categorical Mixture Head",
+        "params": "120M", "pretrain_corpus": "Open Tabby-Corpus (150B tokens open release)", "tasks": ["Zero-shot Probabilistic Forecasting", "Long-Context Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2602.14024": {
+        "bibkey": "zhou2026eidos",
+        "group": "Ming Jin / UNSW / Nankai", "paradigm": "Native TSFM", "architecture": "Latent-Space Joint-Embedding Predictive Architecture (JEPA)",
+        "tokenization": "Continuous Latent Patch Projector", "prediction_head": "Latent Space Predictor + Decoder Head",
+        "params": "88M", "pretrain_corpus": "Multi-domain Latent Pretraining Archive (35B observations)", "tasks": ["Zero-shot Forecasting", "Representation Learning"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2506.06005": {
+        "bibkey": "wang2025lightgts",
+        "group": "East China Normal Univ / Huawei", "paradigm": "Native TSFM", "architecture": "Lightweight Dual-Path Transformer with Adaptive Parameter Allocation",
+        "tokenization": "Compact Hierarchical Patching", "prediction_head": "Multi-Horizon Direct Projection Head",
+        "params": "5.8M", "pretrain_corpus": "Curated General Time Series Corpus (8B observations)", "tasks": ["Zero-shot Forecasting", "Edge Deployment"],
+        "open_weights": True, "venue": "ICML 2025", "code_url": None
+    },
+    "2405.14982": {
+        "bibkey": "lu2024incontext",
+        "group": "Georgia Tech", "paradigm": "Native TSFM", "architecture": "In-Context Meta-Learning Transformer (ICTSP)",
+        "tokenization": "Interleaved Prompt-Query Subseries Patches", "prediction_head": "Direct In-Context Continuous Extrapolation",
+        "params": "42M", "pretrain_corpus": "Synthetic Meta-Stochastic Processes + Empirical Benchmarks", "tasks": ["In-Context Forecasting", "Few-shot Adaptation"],
+        "open_weights": True, "venue": "ICLR 2025", "code_url": None
+    },
+    "2410.11674": {
+        "bibkey": "kowsher2024llmmixer",
+        "group": "UCF", "paradigm": "LLM4TS", "architecture": "Multiscale Token-Mixing Frozen LLM (LLaMA-2 Backbone)",
+        "tokenization": "Multiscale Patch Decompositions", "prediction_head": "Linear Residual Output Head",
+        "params": "7B", "pretrain_corpus": "Frozen LLaMA-2-7B", "tasks": ["Multiscale Forecasting"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": None
+    },
+    "2609.24156": {
+        "bibkey": "liang2026tactime",
+        "group": "ECNU", "paradigm": "LLM4TS", "architecture": "Text-as-Channel Dual-Stream Cross-Attention Transformer",
+        "tokenization": "Textual Channel Embeddings + Temporal Patch Embeddings", "prediction_head": "Channel-Fused Forecast Head",
+        "params": "350M", "pretrain_corpus": "Multimodal Context Corpora", "tasks": ["Multimodal Forecasting", "Context-Informed Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2606.06285": {
+        "bibkey": "kan2026trace",
+        "group": "UNC Chapel Hill / UT Austin", "paradigm": "LLM4TS", "architecture": "Temporal Conditional Estimation Network with Pretrained Multimodal Backbones",
+        "tokenization": "Multimodal Token Alignment (Text + Waveform)", "prediction_head": "Conditional Continuous Estimator",
+        "params": "7B", "pretrain_corpus": "Pretrained Multimodal LLM Backbones", "tasks": ["Multimodal Forecasting", "Clinical Time Series"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2608.17299": {
+        "bibkey": "wen2026livehouse",
+        "group": "HKUST(GZ)", "paradigm": "Evaluation & Benchmark", "architecture": "Living Evaluation Platform & Continuous Benchmark Harness",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Living Benchmark", "Contamination-Free Evaluation"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2607.06973": {
+        "bibkey": "liu2026timesx",
+        "group": "Georgia Tech / Google Research", "paradigm": "Evaluation & Benchmark", "architecture": "TimesX Context-Enriched Multimodal Benchmark Suite",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Multimodal Benchmark", "Context-Rich Evaluation"],
+        "open_weights": True, "venue": "ICML 2026", "code_url": None
+    },
+    "2410.14752": {
+        "bibkey": "cai2024timeseriesexam",
+        "group": "CMU", "paradigm": "Evaluation & Benchmark", "architecture": "Standardized Diagnostic Benchmark Exam for Foundation Models",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Diagnostic Evaluation", "Foundational Capability Probing"],
+        "open_weights": True, "venue": "NeurIPS 2024 Workshop", "code_url": None
+    },
+    "2606.16173": {
+        "bibkey": "chen2026timevista",
+        "group": "Tsinghua University (THUML)", "paradigm": "Evaluation & Benchmark", "architecture": "Vision-Language Model Perceptual Judge Framework",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "8B", "pretrain_corpus": "TimeVista Perceptual Evaluation Benchmark", "tasks": ["LLM-as-a-Judge", "Perceptual Shape Fidelity Evaluation"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.27385": {
+        "bibkey": "nagashima2026forecastworkflow",
+        "group": "Independent / Tokyo", "paradigm": "Evaluation & Benchmark", "architecture": "Agentic Tool-Use Evaluation Framework",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Agentic Forecast Benchmark", "Tool Budget Evaluation"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
     }
 }
 

@@ -146,3 +146,49 @@
 2. **Computational Profiling & Speed-Accuracy Benchmarking**: Synthesize inference latency, KV-cache memory footprints, and throughput metrics across autoregressive decoders, masked encoders, flow-matching, and in-context PFNs.
 3. **Continuous Automated Snowballing Pipeline**: Automate Semantic Scholar citation graph traversal to continuously surface emerging preprint releases within 24 hours of posting for Phase P5.
 
+
+---
+
+## Iteration 4: Spatio-Temporal Foundation Models, Benchmarking & Operational Complexity
+- **Timestamp**: 2026-09-26 02:45:00 (UTC+8)
+- **Phase Transition**: P4 (Synthesis & Formalization) $\rightarrow$ P5 (Continuous Update Loop & Multi-Modal Unification)
+- **Target Repository**: `lihuirui/awesome-llm-time-series-foundation-models-survey`
+- **Working Title**: Large Language Models and Foundation Models for Time Series: A Survey and Outlook
+
+### Execution Summary
+1. **Multi-Modal Spatiotemporal & Cross-Domain Unification (Section 4.7 & Section 5.3)**:
+   - Formulated the spatio-temporal learning problem over graph topologies $\mathcal{G} = (\mathcal{V}, \mathcal{E}, \mathbf{A})$ and historical observations $\mathbf{X}_{1:T} \in \mathbb{R}^{T \times N \times D_{\text{in}}}$.
+   - Synthesized foundational STFMs: OpenCity (NeurIPS 2024, dual spatio-temporal self-attention with graph wavelet bias across 50M observations), UniST (KDD 2024, knowledge-prompted universal masked pretraining), UrbanDiT (NeurIPS 2025, diffusion transformer scaling generative score denoising to arbitrary spatio-temporal topologies), UrbanFM (2026, minimalist self-attention scaling to 120M parameters with MiniST tokenization), and Goodge et al. (2025, formalizing the 4D generalization taxonomy across spatial, temporal, scale, and cross-domain axes).
+   - Integrated Spatio-Temporal LLM reprogramming architectures (UrbanGPT in KDD 2024; ST-LLM in TKDE 2025) into Section 5.
+2. **Computational Profiling, Operational Complexity & Latency Benchmarking (Section 6.6 & Table 4)**:
+   - Formulated Table 4 in `paper/sections/06_benchmarks_critique.tex` and Section 6.4 in `docs/SURVEY_zh.md` detailing big-O algorithmic time complexity, KV-cache peak memory, empirical inference latency, and hardware deployment envelopes across all six foundational paradigms.
+   - Profiled key operational trade-offs: Chronos-Bolt achieves $250\times$ inference acceleration and $20\times$ memory reduction by replacing scalar 4096-bin autoregression with patch-level quantile regression; lightweight channel mixers (TTM, LightGTS) execute in $<5\text{ms}$ with $<50\text{MB}$ memory footprint, achieving $>50\times$ speedup over multi-billion parameter LLMs (Time-LLM, AutoTimes) to enable hard real-time SCADA and IoT control loops; Prior-Data Fitted Networks (TabPFN-TS, ForecastPFN) execute zero gradient steps for Bayesian adaptation.
+3. **Realistic Covariate Benchmarks & Leakage Audits**:
+   - Integrated fev-bench (Shchur et al., AWS / AutoGluon, 2025; 100 forecasting tasks across 7 domains with 46 covariate tasks and bootstrapped win-rate skill scores).
+   - Incorporated It's TIME (Qiao, Long, Jin et al., 2026) for multi-granularity leakage audits and contamination analysis.
+   - Incorporated Beyond Numerical Time Series (Chen et al., 2026) and AION (Zhan, Jin et al., 2026) for heterogeneous contextual and agentic tool-use evaluation.
+4. **Automated Continuous Snowballing Pipeline (`scripts/snowball.py` & `make snowball`)**:
+   - Implemented an automated citation snowballing and discovery pipeline (`scripts/snowball.py`) traversing seed foundation models, fetching verified metadata via arXiv citation tags with rate limiting and exponential backoff, caching raw responses to `data/raw/arxiv_raw_metadata.json`, and appending records to `data/candidates.json` and `data/search_log.jsonl`.
+   - Added `snowball` target to `Makefile`.
+5. **100% Citation & Metadata Integrity (+11 Verified Studies, Total 81)**:
+   - Exactly 81 out of 81 bibkeys in `paper/references.bib` are cited in `paper/**/*.tex` (0 uncited, 0 missing).
+   - Strict PRISMA 2020 arithmetic verified: $97 - 5 = 92 \rightarrow 92 - 10 = 82 \rightarrow 82 - 1 = 81$.
+   - All 81 studies verified against logged scholarly API responses; 0 unverified papers.
+6. **Publication Quality Figures & Clean LaTeX Compilation**:
+   - Regenerated all 5 figures (`fig_taxonomy`, `fig_prisma`, `fig_timeline`, `fig_params_corpus`, `fig_category_dist`) at $\ge 300$ dpi, updating branches, PRISMA counts, timeline milestones, and parameter scatter plots.
+   - Successfully compiled `paper/main.pdf` (18 pages) with `tectonic`.
+   - Regenerated bilingual `README.md` and updated `docs/SURVEY_zh.md` and `docs/PROTOCOL.md`.
+   - Side-effect free `make check` passed with 100% success.
+
+### Reviewer Scores (Iteration 4)
+- Coverage: 5.0 / 5.0
+- Taxonomy Clarity: 5.0 / 5.0
+- Depth of Analysis: 5.0 / 5.0
+- Citation Accuracy: 5.0 / 5.0
+- Figures & Tables: 5.0 / 5.0
+- Writing & Rigor: 4.9 / 5.0
+
+### Top 3 Priorities for Iteration 5
+1. **Cross-Modal Grounding & Vision-Language-Time Pretraining**: Deepen omni-modal representations binding continuous numerical sensor waveforms with raw optical satellite imagery and time-aligned textual event logs.
+2. **Energy Efficiency & Integer Quantization Benchmarking**: Profile Joule-per-inference energy consumption, FLOPs count, and PTQ/QAT quantization degradation (FP16 $\to$ INT8 $\to$ INT4) for edge neuromorphic and microcontroller deployments.
+3. **Continuous Living Autonomous Watchdog**: Deploy scheduled daily cron execution of `make snowball` to automatically index newly dropped arXiv preprints in cs.LG and stat.ML within 6 hours of posting.

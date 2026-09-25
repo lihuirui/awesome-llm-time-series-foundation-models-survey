@@ -49,7 +49,7 @@ def generate_readme():
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 3 (Adaptation Synthesis & Scaling Laws Meta-Regression)** · Last Updated: **{today}**
+> Latest Iteration: **Iteration 4 (Spatio-Temporal Foundation Models & Computational Profiling)** · Last Updated: **{today}**
 
 ---
 
@@ -57,10 +57,11 @@ def generate_readme():
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **原生时间序列基座模型 (Native TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，如 Chronos、TimesFM、MOIRAI、MOMENT、Lag-Llama、TTM、Timer、Timer-XL、Sundial、Timer-S1、Time-MoE、Toto 2.0 等。
-2. **基于大语言模型改造的时序方法 (LLM4TS)**：跨模态重编程、提示调优、特征跨模态对齐及自主智能体，如 Time-LLM、GPT4TS/One Fits All、LLMTime、TEMPO、TEST、S2IP-LLM、Time-MQA 等。
-3. **评测基准、标度律与批判性分析**：GIFT-Eval、fev-bench、Time-MMD、以及对于“LLM 在时间序列任务上是否真正有效”的经验性质疑与数据泄漏审计。
-4. **重点学术团队专题**：深入跟踪清华大学龙明盛团队 (THUML)、Ming Jin 团队、以及亚马逊 Chronos 团队的最新研发脉络。
+1. **原生时间序列基座模型 (Native TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与扩散模型，如 Chronos、TimesFM、MOIRAI、MOMENT、Lag-Llama、TTM、Timer、Timer-XL、Sundial、Timer-S1、Time-MoE、Toto 2.0、$t_0$ 等。
+2. **时空图谱基座模型 (Spatio-Temporal Foundation Models)**：打破1D序列孤岛，将空间拓扑图与时间动态统一建模，如 OpenCity、UniST、UrbanDiT、UrbanFM、UrbanGPT、ST-LLM 等。
+3. **基于大语言模型改造的时序方法 (LLM4TS)**：跨模态重编程、提示调优、特征跨模态对齐及自主智能体，如 Time-LLM、GPT4TS/One Fits All、LLMTime、TEMPO、TEST、S2IP-LLM、Time-MQA、TimeOmni-VL 等。
+4. **评测基准、标度律与计算开销对比**：GIFT-Eval、fev-bench（含协变量评估）、It's TIME（数据泄漏审计）、Beyond Numerical TS、AION，以及各范式的算法复杂度、KV-Cache 内存与端侧低延迟部署评测。
+5. **重点学术团队专题**：深入跟踪清华大学龙明盛团队 (THUML)、Ming Jin 团队、以及亚马逊 Chronos 团队的最新研发脉络。
 
 ---
 
@@ -75,16 +76,17 @@ graph TD
     Root --> P2["Repurposed LLM4TS (Language Backbones)"]
     Root --> P3["Evaluations, Benchmarks & Critiques"]
 
-    P1 --> P1_Dec["Autoregressive Decoder-only<br/>(Chronos, TimesFM, Timer, Sundial, Lag-Llama)"]
-    P1 --> P1_Enc["Masked Encoder & Enc-Dec<br/>(MOMENT, MOIRAI, TTM, PatchTST)"]
-    P1 --> P1_MoE["Mixture-of-Experts (MoE)<br/>(Time-MoE, Moirai-MoE, Timer-S1)"]
+    P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM, Timer, Sundial, TiRex, Toto, Tabby, t0)"]
+    P1 --> P1_Enc["Masked, PFN & Mixer Models<br/>(MOMENT, MOIRAI, TTM, ICTSP, ForecastPFN, TabPFN-TS, LightGTS)"]
+    P1 --> P1_ST["Spatio-Temporal & Dynamical<br/>(OpenCity, UniST, UrbanDiT, UrbanFM, Time-MoE, EIDOS, FlowState)"]
 
-    P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEMPO)"]
-    P2 --> P2_Prompt["Direct Prompting & Decimal Tokenization<br/>(LLMTime, PromptCast)"]
-    P2 --> P2_Multi["Multimodal Context & Agentic Reasoning<br/>(Time-MQA, TimeOmni-1, ChatTime)"]
+    P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
+    P2 --> P2_Prompt["Prompting & Spatio-Temporal<br/>(LLMTime, PromptCast, UniTime, UrbanGPT, ST-LLM, AutoTimes)"]
+    P2 --> P2_Multi["Multimodal Context & Agentic Reasoning<br/>(Time-VLM, ChatTS, TimeOmni-VL, TRACE, Time-MQA, OpenTSLM)"]
 
-    P3 --> P3_Bench["Standardized Benchmarks (GIFT-Eval, fev-bench)"]
-    P3 --> P3_Audit["Leakage Audits & Calibration (Are LLMs Useful?)"]
+    P3 --> P3_Bench["Standardized Benchmarks (GIFT-Eval, fev-bench, TimesX, SciTS)"]
+    P3 --> P3_Audit["Leakage Audits & Complexity (It's TIME, Rethinking Eval, Table 4)"]
+    P3 --> P3_Agent["Next-Gen Agentic & Context Suites (Beyond Numerical, AION, TimeVista)"]
 ```
 
 ---

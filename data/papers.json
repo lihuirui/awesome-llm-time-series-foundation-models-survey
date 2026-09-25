@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-25",
-  "total_included": 70,
+  "total_included": 81,
   "papers": [
     {
       "id": "arxiv:2401.03955",
@@ -2918,6 +2918,113 @@
       "url": "https://arxiv.org/abs/2609.24156"
     },
     {
+      "id": "arxiv:2602.12147",
+      "arxiv_id": "2602.12147",
+      "title": "It's TIME: Towards the Next Generation of Time Series Forecasting Benchmarks",
+      "authors": [
+        "Zhongzheng Qiao",
+        "Sheng Pan",
+        "Anni Wang",
+        "Viktoriya Zhukova",
+        "Yong Liu",
+        "Xudong Jiang",
+        "Qingsong Wen",
+        "Mingsheng Long",
+        "Ming Jin",
+        "Chenghao Liu"
+      ],
+      "release_date": "2026-02-12",
+      "summary": "Time series foundation models (TSFMs) are revolutionizing the forecasting landscape from specific dataset modeling to generalizable task evaluation. However, we contend that existing benchmarks exhibit common limitations in four dimensions: constrained data composition dominated by reused legacy sources, compromised data integrity lacking rigorous quality assurance, misaligned task formulations detached from real-world contexts, and rigid analysis perspectives that obscure generalizable insights. To bridge these gaps, we introduce TIME, a next-generation task-centric benchmark comprising 50 fresh datasets and 98 forecasting tasks, tailored for strict zero-shot TSFM evaluation free from data leakage. Integrating large language models and human expertise, we establish a human-in-the-loop benchmark construction pipeline to ensure high data integrity and redefine task formulation by aligning forecasting configurations with real-world operational requirements and variate predictability. Furthermore, we propose a novel pattern-level evaluation perspective that moves beyond traditional dataset-level evaluations based on static meta labels. By leveraging structural time series features to characterize intrinsic temporal properties, this approach offers generalizable insights into model capabilities across diverse patterns. We evaluate 12 TSFMs and establish a multi-granular leaderboard to facilitate in-depth analysis and visualized inspection. The leaderboard is available at https://huggingface.co/spaces/Real-TSF/TIME-leaderboard.",
+      "comment": "Accepted to ICML 2026. Camera-ready version",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction",
+      "screen_date": "2026-09-25",
+      "bibkey": "qiao2026time",
+      "group": "THUML / Tsinghua / Monash",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Leakage-Audited Multi-Granularity Benchmark Harness",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Benchmark",
+        "Leakage Audit",
+        "Contamination Analysis"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2602.12147",
+      "url": "https://arxiv.org/abs/2602.12147"
+    },
+    {
+      "id": "arxiv:2609.15087",
+      "arxiv_id": "2609.15087",
+      "title": "Beyond Numerical Time Series: A Unified Benchmark for Multimodal Forecasting with Heterogeneous Context",
+      "authors": [
+        "Peng Chen",
+        "Zhihao Zhuang",
+        "Hongzhou Chen",
+        "Junhao Huang",
+        "Aiping Yang",
+        "Mengsen Wu",
+        "Yiding Liu",
+        "Xilin Dai",
+        "Zewei Dong"
+      ],
+      "release_date": "2026-09-14",
+      "summary": "Most time series forecasting benchmarks remain numerical-centric and provide limited support for evaluating contextual information that shapes real-world temporal dynamics. Existing multimodal benchmarks also suffer from limited data and context coverage, fragmented evaluation settings, and overreliance on aggregate evaluation. In this paper, we propose \\textbf{MUSE-Bench}, a unified benchmark for multimodal time series forecasting with heterogeneous context. It comprises fourteen datasets across eight domains and six types of context: metadata, events, holidays, news, images, and numerical covariates. We evaluate diverse forecasting paradigms, including statistical, data-specific, foundation, multimodal, and general-purpose LLM forecasting methods under shared non-overlapping forecast windows, common target observations, and consistent point and probabilistic metrics. Extensive experiments yield three main findings. First, numerical time series foundation models dominate the overall ranking, while Aurora, the evaluated multimodal foundation model, trails the leading numerical TSFMs but outperforms all evaluated data-specific models. Second, ablations show that external context improves the four evaluated context-aware models, whereas incorrect or temporally misaligned context degrades performance. Third, general-purpose LLMs perform poorly as direct forecasters, and LLM-guided refinement does not yield consistent improvements. MUSE-Bench enables systematic evaluation of how forecasting models utilize context and provides a foundation for future multimodal forecasting research.",
+      "comment": "preprint",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction",
+      "screen_date": "2026-09-25",
+      "bibkey": "chen2026beyondnumerical",
+      "group": "Peking University / CAS",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Multimodal Contextual Forecasting Evaluation Suite",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Multimodal Contextual Forecasting Benchmark"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2609.15087",
+      "url": "https://arxiv.org/abs/2609.15087"
+    },
+    {
       "id": "arxiv:2603.04791",
       "arxiv_id": "2603.04791",
       "title": "Timer-S1: A Billion-Scale Time Series Foundation Model with Serial Scaling",
@@ -3066,6 +3173,54 @@
       },
       "doi": "10.48550/arXiv.2609.24559",
       "url": "https://arxiv.org/abs/2609.24559"
+    },
+    {
+      "id": "arxiv:2605.25045",
+      "arxiv_id": "2605.25045",
+      "title": "AION: Next-Generation Tasks and Practical Harness for Time Series",
+      "authors": [
+        "Tianxiang Zhan",
+        "Xiaobao Song",
+        "Tong Guan",
+        "Shirui Pan",
+        "Ming Jin"
+      ],
+      "release_date": "2026-05-24",
+      "summary": "Time series research is moving beyond fixed forecasting benchmarks toward realistic tasks that combine prediction, contextual reasoning, tool use, and structured decision support. Most benchmarks are built around clean data and short evaluation loops; agents alone may miss temporal constraints, evidence checks, or review before finalizing outputs. We first formalize next-generation time series tasks as three-component tuples consisting of a task file, a workspace, and a validation interface. We then present AION, a time series harness built from six component groups: agents, skills, rules, memory, evaluation, and protocols. In this harness, we use three design principles: temporal grounding, temporal knowledge-grounded reasoning, and reliability mechanisms such as post-experiment analysis and layered review. A Kaggle Store Sales case study shows that the harness produces more detailed process traces, more artifacts, and more review steps than the same base agent operating in OpenCode direct build mode. Taken together, these results argue for a paradigm shift from fixed tasks to realistic ones under real-world constraints.",
+      "comment": "Project page and code are available at https://github.com/ztxtech/aion",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-25 15:20:48",
+      "status": "included",
+      "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction",
+      "screen_date": "2026-09-25",
+      "bibkey": "zhan2026aion",
+      "group": "Ming Jin Group / Monash",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Next-Generation Agentic Task & Practical Harness",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Agentic Reasoning Benchmark",
+        "Tool Use",
+        "Practical Harness"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2605.25045",
+      "url": "https://arxiv.org/abs/2605.25045"
     },
     {
       "id": "arxiv:2606.06285",
@@ -3513,6 +3668,383 @@
       },
       "doi": "10.48550/arXiv.2308.08241",
       "url": "https://arxiv.org/abs/2308.08241"
+    },
+    {
+      "id": "arxiv:2403.00813",
+      "arxiv_id": "2403.00813",
+      "title": "UrbanGPT: Spatio-Temporal Large Language Models",
+      "authors": [
+        "Li, Zhonghang",
+        "Xia, Lianghao",
+        "Tang, Jiabin",
+        "Xu, Yong",
+        "Shi, Lei",
+        "Xia, Long",
+        "Yin, Dawei",
+        "Huang, Chao"
+      ],
+      "release_date": "2024-02-25",
+      "summary": "Spatio-temporal prediction aims to forecast and gain insights into the ever-changing dynamics of urban environments across both time and space. Its purpose is to anticipate future patterns, trends, and events in diverse facets of urban life, including transportation, population movement, and crime rates. Although numerous efforts have been dedicated to developing neural network techniques for accurate predictions on spatio-temporal data, it is important to note that many of these methods heavily depend on having sufficient labeled data to generate precise spatio-temporal representations. Unfortunately, the issue of data scarcity is pervasive in practical urban sensing scenarios. Consequently, it becomes necessary to build a spatio-temporal model with strong generalization capabilities across diverse spatio-temporal learning scenarios. Taking inspiration from the remarkable achievements of large language models (LLMs), our objective is to create a spatio-temporal LLM that can exhibit exceptional generalization capabilities across a wide range of downstream urban tasks. To achieve this objective, we present the UrbanGPT, which seamlessly integrates a spatio-temporal dependency encoder with the instruction-tuning paradigm. This integration enables LLMs to comprehend the complex inter-dependencies across time and space, facilitating more comprehensive and accurate predictions under data scarcity. To validate the effectiveness of our approach, we conduct extensive experiments on various public datasets, covering different spatio-temporal prediction tasks. The results consistently demonstrate that our UrbanGPT, with its carefully designed architecture, consistently outperforms state-of-the-art baselines. These findings highlight the potential of building large language models for spatio-temporal learning, particularly in zero-shot scenarios where labeled data is scarce.",
+      "comment": "Accepted by KDD'2024 as Full Paper",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q6_snowballing_iteration4"
+      ],
+      "retrieved_at": "2026-09-25 18:40:24",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "li2024urbangpt",
+      "group": "HKU / Baidu",
+      "paradigm": "LLM4TS",
+      "architecture": "Spatio-Temporal Dependency Encoder + Llama-2-7B Backbone",
+      "tokenization": "Spatio-Temporal Graph & Temporal Patch Tokenization",
+      "prediction_head": "Linear Token Prediction Head",
+      "params": "7B",
+      "pretrain_corpus": "Urban Spatio-Temporal Datasets (Traffic & Flow)",
+      "tasks": [
+        "Spatio-Temporal Forecasting",
+        "Urban Transfer Learning"
+      ],
+      "open_weights": true,
+      "venue": "KDD 2024",
+      "code_url": "https://github.com/HKUDS/UrbanGPT",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2403.00813",
+      "url": "https://arxiv.org/abs/2403.00813"
+    },
+    {
+      "id": "arxiv:2408.10269",
+      "arxiv_id": "2408.10269",
+      "title": "OpenCity: Open Spatio-Temporal Foundation Models for Traffic Prediction",
+      "authors": [
+        "Li, Zhonghang",
+        "Xia, Long",
+        "Shi, Lei",
+        "Xu, Yong",
+        "Yin, Dawei",
+        "Huang, Chao"
+      ],
+      "release_date": "2024-08-16",
+      "summary": "Accurate traffic forecasting is crucial for effective urban planning and transportation management, enabling efficient resource allocation and enhanced travel experiences. However, existing models often face limitations in generalization, struggling with zero-shot prediction on unseen regions and cities, as well as diminished long-term accuracy. This is primarily due to the inherent challenges in handling the spatial and temporal heterogeneity of traffic data, coupled with the significant distribution shift across time and space. In this work, we aim to unlock new possibilities for building versatile, resilient and adaptive spatio-temporal foundation models for traffic prediction. To achieve this goal, we introduce a novel foundation model, named OpenCity, that can effectively capture and normalize the underlying spatio-temporal patterns from diverse data characteristics, facilitating zero-shot generalization across diverse urban environments. OpenCity integrates the Transformer architecture with graph neural networks to model the complex spatio-temporal dependencies in traffic data. By pre-training OpenCity on large-scale, heterogeneous traffic datasets, we enable the model to learn rich, generalizable representations that can be seamlessly applied to a wide range of traffic forecasting scenarios. Experimental results demonstrate that OpenCity exhibits exceptional zero-shot predictive performance. Moreover, OpenCity showcases promising scaling laws, suggesting the potential for developing a truly one-for-all traffic prediction solution that can adapt to new urban contexts with minimal overhead. We made our proposed OpenCity model open-source and it is available at the following link: https://github.com/HKUDS/OpenCity.",
+      "comment": "12 pages",
+      "journal_ref": "ACM TIST, 2025",
+      "matched_queries": [
+        "Q6_snowballing_iteration4"
+      ],
+      "retrieved_at": "2026-09-25 18:40:24",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "li2024opencity",
+      "group": "HKU / Baidu",
+      "paradigm": "Native TSFM",
+      "architecture": "Dual Spatio-Temporal Transformer with Graph Wavelet Bias",
+      "tokenization": "Spatial Graph Node + Temporal Patch Embeddings",
+      "prediction_head": "Direct Multi-Horizon Spatio-Temporal Projection",
+      "params": "26M",
+      "pretrain_corpus": "Open-world Urban Traffic Network Corpus (>50M observations)",
+      "tasks": [
+        "Zero-Shot Traffic Forecasting",
+        "Transfer Learning"
+      ],
+      "open_weights": true,
+      "venue": "NeurIPS 2024",
+      "code_url": "https://github.com/HKUDS/OpenCity",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2408.10269",
+      "url": "https://arxiv.org/abs/2408.10269"
+    },
+    {
+      "id": "arxiv:2402.11838",
+      "arxiv_id": "2402.11838",
+      "title": "UniST: A Prompt-Empowered Universal Model for Urban Spatio-Temporal Prediction",
+      "authors": [
+        "Yuan, Yuan",
+        "Ding, Jingtao",
+        "Feng, Jie",
+        "Jin, Depeng",
+        "Li, Yong"
+      ],
+      "release_date": "2024-02-19",
+      "summary": "Urban spatio-temporal prediction is crucial for informed decision-making, such as traffic management, resource optimization, and emergence response. Despite remarkable breakthroughs in pretrained natural language models that enable one model to handle diverse tasks, a universal solution for spatio-temporal prediction remains challenging Existing prediction approaches are typically tailored for specific spatio-temporal scenarios, requiring task-specific model designs and extensive domain-specific training data. In this study, we introduce UniST, a universal model designed for general urban spatio-temporal prediction across a wide range of scenarios. Inspired by large language models, UniST achieves success through: (i) utilizing diverse spatio-temporal data from different scenarios, (ii) effective pre-training to capture complex spatio-temporal dynamics, (iii) knowledge-guided prompts to enhance generalization capabilities. These designs together unlock the potential of building a universal model for various scenarios Extensive experiments on more than 20 spatio-temporal scenarios demonstrate UniST's efficacy in advancing state-of-the-art performance, especially in few-shot and zero-shot prediction. The datasets and code implementation are released on https://github.com/tsinghua-fib-lab/UniST.",
+      "comment": "2024 ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD 2024",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q6_snowballing_iteration4"
+      ],
+      "retrieved_at": "2026-09-25 18:40:24",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "yuan2024unist",
+      "group": "Tsinghua FIB Lab",
+      "paradigm": "Native TSFM",
+      "architecture": "Unified Spatio-Temporal Masked Autoencoder with Knowledge Prompts",
+      "tokenization": "Patch-based Spatio-Temporal Tokenization",
+      "prediction_head": "Multi-scale Spatio-Temporal Decoder",
+      "params": "not reported",
+      "pretrain_corpus": "Multi-Scenario Urban Spatio-Temporal Benchmark",
+      "tasks": [
+        "Zero-Shot Spatio-Temporal Prediction",
+        "Few-Shot Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "KDD 2024",
+      "code_url": "https://github.com/tsinghua-fib-lab/UniST",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2402.11838",
+      "url": "https://arxiv.org/abs/2402.11838"
+    },
+    {
+      "id": "arxiv:2401.10134",
+      "arxiv_id": "2401.10134",
+      "title": "Spatial-Temporal Large Language Model for Traffic Prediction",
+      "authors": [
+        "Liu, Chenxi",
+        "Yang, Sun",
+        "Xu, Qianxiong",
+        "Li, Zhishuai",
+        "Long, Cheng",
+        "Li, Ziyue",
+        "Zhao, Rui"
+      ],
+      "release_date": "2024-01-18",
+      "summary": "Traffic prediction, an essential component for intelligent transportation systems, endeavours to use historical data to foresee future traffic features at specific locations. Although existing traffic prediction models often emphasize developing complex neural network structures, their accuracy has not improved. Recently, large language models have shown outstanding capabilities in time series analysis. Differing from existing models, LLMs progress mainly through parameter expansion and extensive pretraining while maintaining their fundamental structures. Motivated by these developments, we propose a Spatial-Temporal Large Language Model (ST-LLM) for traffic prediction. In the ST-LLM, we define timesteps at each location as tokens and design a spatial-temporal embedding to learn the spatial location and global temporal patterns of these tokens. Additionally, we integrate these embeddings by a fusion convolution to each token for a unified spatial-temporal representation. Furthermore, we innovate a partially frozen attention strategy to adapt the LLM to capture global spatial-temporal dependencies for traffic prediction. Comprehensive experiments on real traffic datasets offer evidence that ST-LLM is a powerful spatial-temporal learner that outperforms state-of-the-art models. Notably, the ST-LLM also exhibits robust performance in both few-shot and zero-shot prediction scenarios. The code is publicly available at https://github.com/ChenxiLiu-HNU/ST-LLM.",
+      "comment": "Accepted by MDM 2024 (Research Track)",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q6_snowballing_iteration4"
+      ],
+      "retrieved_at": "2026-09-25 18:40:24",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "liu2024stllm",
+      "group": "Beihang University",
+      "paradigm": "LLM4TS",
+      "architecture": "Partially-Frozen LLM with Spatio-Temporal Graph Embeddings",
+      "tokenization": "Node-level Temporal Patch Tokens",
+      "prediction_head": "Autoregressive Next-Patch Projection",
+      "params": "7B",
+      "pretrain_corpus": "Spatio-Temporal Traffic Repositories",
+      "tasks": [
+        "Traffic Forecasting",
+        "Spatial-Temporal Reasoning"
+      ],
+      "open_weights": true,
+      "venue": "TKDE 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2401.10134",
+      "url": "https://arxiv.org/abs/2401.10134"
+    },
+    {
+      "id": "arxiv:2411.12164",
+      "arxiv_id": "2411.12164",
+      "title": "Diffusion Transformers as Open-World Spatiotemporal Foundation Models",
+      "authors": [
+        "Yuan, Yuan",
+        "Han, Chonghua",
+        "Ding, Jingtao",
+        "Zhang, Guozhen",
+        "Jin, Depeng",
+        "Li, Yong"
+      ],
+      "release_date": "2024-11-19",
+      "summary": "The urban environment is characterized by complex spatio-temporal dynamics arising from diverse human activities and interactions. Effectively modeling these dynamics is essential for understanding and optimizing urban systems. In this work, we introduce UrbanDiT, a foundation model for open-world urban spatio-temporal learning that successfully scales up diffusion transformers in this field. UrbanDiT pioneers a unified model that integrates diverse data sources and types while learning universal spatio-temporal patterns across different cities and scenarios. This allows the model to unify both multi-data and multi-task learning, and effectively support a wide range of spatio-temporal applications. Its key innovation lies in the elaborated prompt learning framework, which adaptively generates both data-driven and task-specific prompts, guiding the model to deliver superior performance across various urban applications. UrbanDiT offers three advantages: 1) It unifies diverse data types, such as grid-based and graph-based data, into a sequential format; 2) With task-specific prompts, it supports a wide range of tasks, including bi-directional spatio-temporal prediction, temporal interpolation, spatial extrapolation, and spatio-temporal imputation; and 3) It generalizes effectively to open-world scenarios, with its powerful zero-shot capabilities outperforming nearly all baselines with training data. UrbanDiT sets up a new benchmark for foundation models in the urban spatio-temporal domain. Code and datasets are publicly available at https://github.com/tsinghua-fib-lab/UrbanDiT.",
+      "comment": "Accepted by NeurIPS 2025",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q6_snowballing_iteration4"
+      ],
+      "retrieved_at": "2026-09-25 18:40:24",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "li2024urbandit",
+      "group": "Tsinghua FIB Lab",
+      "paradigm": "Native TSFM",
+      "architecture": "Spatio-Temporal Diffusion Transformer (DiT)",
+      "tokenization": "Unified Grid & Graph Patch Tokens + Prompt Tokens",
+      "prediction_head": "Denoising Score / Noise-Prediction Network",
+      "params": "45M",
+      "pretrain_corpus": "Open-world Urban Heterogeneous Data",
+      "tasks": [
+        "Bidirectional Forecasting",
+        "Imputation",
+        "Extrapolation"
+      ],
+      "open_weights": true,
+      "venue": "NeurIPS 2025",
+      "code_url": "https://github.com/tsinghua-fib-lab/UrbanDiT",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2411.12164",
+      "url": "https://arxiv.org/abs/2411.12164"
+    },
+    {
+      "id": "arxiv:2602.20677",
+      "arxiv_id": "2602.20677",
+      "title": "UrbanFM: Scaling Urban Spatio-Temporal Foundation Models",
+      "authors": [
+        "Chen, Wei",
+        "Wu, Yuqian",
+        "Chen, Junle",
+        "Zhou, Xiaofang",
+        "Liang, Yuxuan"
+      ],
+      "release_date": "2026-02-24",
+      "summary": "Urban systems, as dynamic complex systems, continuously generate spatio-temporal data streams that encode the fundamental laws of human mobility and city evolution. While AI for Science has witnessed the transformative power of foundation models in disciplines like genomics and meteorology, urban computing remains fragmented due to \"scenario-specific\" models, which are overfitted to specific regions or tasks, hindering their generalizability. To bridge this gap and advance spatio-temporal foundation models for urban systems, we adopt scaling as the central perspective and systematically investigate two key questions: what to scale and how to scale. Grounded in first-principles analysis, we identify three critical dimensions: heterogeneity, correlation, and dynamics, aligning these principles with the fundamental scientific properties of urban spatio-temporal data. Specifically, to address heterogeneity through data scaling, we construct WorldST. This billion-scale corpus standardizes diverse physical signals, such as traffic flow and speed, from over 100 global cities into a unified data format. To enable computation scaling for modeling correlations, we introduce the MiniST unit, a novel split mechanism that discretizes continuous spatio-temporal fields into learnable computational units to unify representations of grid-based and sensor-based observations. Finally, addressing dynamics via architecture scaling, we propose UrbanFM, a minimalist self-attention architecture designed with limited inductive biases to autonomously learn dynamic spatio-temporal dependencies from massive data. Furthermore, we establish EvalST, the largest-scale urban spatio-temporal benchmark to date. Extensive experiments demonstrate that UrbanFM achieves remarkable zero-shot generalization across unseen cities and tasks, marking a pivotal first step toward large-scale urban spatio-temporal foundation models.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q6_snowballing_iteration4"
+      ],
+      "retrieved_at": "2026-09-25 18:40:24",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "chen2026urbanfm",
+      "group": "HKUST / Tsinghua",
+      "paradigm": "Native TSFM",
+      "architecture": "Minimalist Spatio-Temporal Transformer with Constrained Bias",
+      "tokenization": "MiniST Tokenization (Heterogeneous Signal Regularization)",
+      "prediction_head": "Generative Masked Reconstruction & Multi-Horizon Head",
+      "params": "120M",
+      "pretrain_corpus": "Multi-City Urban Spatio-Temporal Corpus",
+      "tasks": [
+        "Zero-shot Traffic Prediction",
+        "Signal Recovery"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2602.20677",
+      "url": "https://arxiv.org/abs/2602.20677"
+    },
+    {
+      "id": "arxiv:2501.09045",
+      "arxiv_id": "2501.09045",
+      "title": "Spatio-Temporal Foundation Models: Vision, Challenges, and Opportunities",
+      "authors": [
+        "Goodge, Adam",
+        "Ng, Wee Siong",
+        "Hooi, Bryan",
+        "Ng, See Kiong"
+      ],
+      "release_date": "2025-01-15",
+      "summary": "Foundation models have revolutionized artificial intelligence, setting new benchmarks in performance and enabling transformative capabilities across a wide range of vision and language tasks. However, despite the prevalence of spatio-temporal data in critical domains such as transportation, public health, and environmental monitoring, spatio-temporal foundation models (STFMs) have not yet achieved comparable success. In this paper, we articulate a vision for the future of STFMs, outlining their essential characteristics and the generalization capabilities necessary for broad applicability. We critically assess the current state of research, identifying gaps relative to these ideal traits, and highlight key challenges that impede their progress. Finally, we explore potential opportunities and directions to advance research towards the aim of effective and broadly applicable STFMs.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q6_snowballing_iteration4"
+      ],
+      "retrieved_at": "2026-09-25 18:40:24",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "goodge2025stfmvision",
+      "group": "A*STAR / NUS",
+      "paradigm": "Survey & Foundations",
+      "architecture": "Conceptual Framework & Generalization Taxonomy",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Survey & Vision"
+      ],
+      "open_weights": null,
+      "venue": "arXiv 2025",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 2,
+        "total": 11
+      },
+      "doi": "10.48550/arXiv.2501.09045",
+      "url": "https://arxiv.org/abs/2501.09045"
+    },
+    {
+      "id": "arxiv:2509.26468",
+      "arxiv_id": "2509.26468",
+      "title": "fev-bench: A Realistic Benchmark for Time Series Forecasting",
+      "authors": [
+        "Shchur, Oleksandr",
+        "Ansari, Abdul Fatir",
+        "Turkmen, Caner",
+        "Stella, Lorenzo",
+        "Erickson, Nick",
+        "Guerron, Pablo",
+        "Bohlke-Schneider, Michael",
+        "Wang, Yuyang"
+      ],
+      "release_date": "2025-09-30",
+      "summary": "Benchmark quality is critical for meaningful evaluation and sustained progress in time series forecasting, particularly with the rise of pretrained models. Existing benchmarks often have limited domain coverage or overlook real-world settings such as tasks with covariates. Their aggregation procedures frequently lack statistical rigor, making it unclear whether observed performance differences reflect true improvements or random variation. Many benchmarks lack consistent evaluation infrastructure or are too rigid for integration into existing pipelines. To address these gaps, we propose fev-bench, a benchmark of 100 forecasting tasks across seven domains, including 46 with covariates. Supporting the benchmark, we introduce fev, a lightweight Python library for forecasting evaluation emphasizing reproducibility and integration with existing workflows. Using fev, fev-bench employs principled aggregation with bootstrapped confidence intervals to report performance along two dimensions: win rates and skill scores. We report results on fev-bench for pretrained, statistical, and baseline models and identify promising future research directions.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q6_snowballing_iteration4"
+      ],
+      "retrieved_at": "2026-09-25 18:40:24",
+      "status": "included",
+      "screen_date": "2026-09-25",
+      "bibkey": "shchur2025fevbench",
+      "group": "AWS / AutoGluon",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Covariate-Aware Benchmark Suite with Bootstrapped Skill Scores",
+      "tokenization": "N/A",
+      "prediction_head": "N/A",
+      "params": "not reported",
+      "pretrain_corpus": "N/A",
+      "tasks": [
+        "Covariate-Aware Forecasting Benchmark",
+        "Statistical Win Rates"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": "https://github.com/autogluon/fev",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2509.26468",
+      "url": "https://arxiv.org/abs/2509.26468"
     }
   ]
 }

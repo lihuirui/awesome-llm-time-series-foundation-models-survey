@@ -1,9 +1,12 @@
-.PHONY: all search screen bib figures readme paper check clean
+.PHONY: all search snowball screen bib figures readme paper check clean
 
 all: screen bib figures readme paper check
 
 search:
 	python3 scripts/search.py
+
+snowball:
+	python3 scripts/snowball.py
 
 screen:
 	python3 scripts/screen.py

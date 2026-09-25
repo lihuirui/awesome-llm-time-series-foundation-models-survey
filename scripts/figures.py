@@ -49,19 +49,19 @@ def generate_taxonomy_figure():
     # 3 Main Branches
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
-            ("Autoregressive Decoder-only", "Chronos, TimesFM, Timer,\nSundial, TiRex, Toto, Tabby, $t_0$"),
-            ("Masked & Prior-Data Fitted", "MOMENT, MOIRAI, TTM, ICTSP,\nForecastPFN, TabPFN-TS, LightGTS"),
-            ("MoE & Continuous Dynamical", "Time-MoE, Moirai-MoE, EIDOS,\nTimer-S1, FLAME, FlowState")
+            ("Autoregressive & Patch Decoders", "Chronos, TimesFM, Timer,\nSundial, TiRex, Toto, Tabby, $t_0$"),
+            ("Masked, PFN & Mixer Models", "MOMENT, MOIRAI, TTM, ICTSP,\nForecastPFN, TabPFN-TS, LightGTS"),
+            ("Spatio-Temporal & Dynamical", "OpenCity, UniST, UrbanDiT, UrbanFM,\nTime-MoE, EIDOS, FlowState")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
             ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
-            ("Prompting & Fine-Tuning", "PromptCast, LLMTime, UniTime,\nLLM4TS, AutoTimes, TAC-Time"),
+            ("Prompting & Spatio-Temporal", "PromptCast, LLMTime, UniTime,\nUrbanGPT, ST-LLM, AutoTimes"),
             ("Multimodal & Agentic Reasoning", "Time-VLM, ChatTS, TimeOmni-VL,\nTRACE, Time-MQA, OpenTSLM")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Standardized Benchmarks", "GIFT-Eval, TimesX, SciTS,\nTimeSeriesExam, Insight Miner"),
-            ("Leakage & Calibration Audits", "Rethinking Evaluation, LiveHouse-TS,\nProbabilistic Reliability"),
-            ("Foundational Critiques & Tools", "Are LLMs Useful?, TimeVista,\nForecast Workflow Bench")
+            ("Standardized Benchmarks", "GIFT-Eval, fev-bench, TimesX,\nSciTS, TimeSeriesExam, Insight Miner"),
+            ("Leakage & Calibration Audits", "It's TIME, Rethinking Evaluation,\nLiveHouse-TS, Probabilistic Reliab."),
+            ("Multimodal & Agentic Suites", "Beyond Numerical, AION, TimeVista,\nForecast Workflow, Are LLMs Useful?")
         ])
     ]
 
@@ -142,8 +142,8 @@ def generate_prisma_figure():
     b_exc1 = patches.FancyBboxPatch((0.60, 0.425), 0.35, 0.12, boxstyle="round,pad=0.01", fc='#fff5f5', ec='#e53e3e', lw=1.2)
     ax.add_patch(b_exc1)
     ax.text(0.775, 0.485, f"Excluded at Stage 1 (N = {counts['screening']['excluded_title_abstract']})\n"
-                           f"• EC1 (Out of domain / non-pretrain): 6\n"
-                           f"• EC1 (Survey without novel artifact): 3",
+                           f"• EC1 (Narrow / non-foundation): 5\n"
+                           f"• EC1 (Review / tutorial without artifact): 5",
             ha='center', va='center', fontsize=8, color='#9b2c2c')
 
     # Eligibility
@@ -202,31 +202,38 @@ def generate_timeline_figure():
         (2024.05, 4.6, "TTM", "IBM", "#1f77b4"),
         (2024.12, 1.5, "Timer", "THUML", "#1f77b4"),
         (2024.16, 3.3, "Moirai", "Salesforce", "#1f77b4"),
-        (2024.18, 4.0, "MOMENT", "CMU", "#1f77b4"),
+        (2024.14, 4.2, "UniST", "THU FIB", "#1f77b4"),
+        (2024.15, 2.0, "UrbanGPT", "HKU/Baidu", "#d62728"),
+        (2024.18, 3.8, "MOMENT", "CMU", "#1f77b4"),
         (2024.23, 2.4, "Chronos", "Amazon", "#1f77b4"),
         (2024.26, 0.9, "CALF", "THU/DAMO", "#d62728"),
         (2024.32, 1.4, "ICTSP", "Georgia Tech", "#1f77b4"),
         (2024.40, 2.8, "TimeMixer", "Ming Jin", "#1f77b4"),
         (2024.50, 1.0, "Are LLMs Useful?", "Critique", "#2ca02c"),
-        (2024.70, 3.8, "Time-MoE", "Ming Jin", "#1f77b4"),
+        (2024.62, 3.5, "OpenCity", "HKU/Baidu", "#1f77b4"),
+        (2024.70, 4.4, "Time-MoE", "Ming Jin", "#1f77b4"),
         (2024.76, 2.3, "LLM-Mixer", "UCF", "#d62728"),
         (2024.80, 3.2, "Timer-XL", "THUML", "#1f77b4"),
         (2024.84, 4.8, "TimeSeriesExam", "CMU", "#2ca02c"),
         (2024.88, 1.1, "GIFT-Eval", "Salesforce", "#2ca02c"),
-        (2024.95, 2.2, "ChatTS", "THU/NetMan", "#d62728"),
+        (2024.90, 1.9, "UrbanDiT", "THU FIB", "#1f77b4"),
+        (2024.95, 2.7, "ChatTS", "THU/NetMan", "#d62728"),
         (2025.10, 4.3, "Sundial", "THUML", "#1f77b4"),
         (2025.15, 2.1, "Time-VLM", "Ming Jin", "#d62728"),
         (2025.38, 1.3, "Toto 1.0", "Datadog", "#1f77b4"),
         (2025.40, 3.2, "TiRex", "JKU Linz", "#1f77b4"),
         (2025.45, 2.3, "LightGTS", "ECNU", "#1f77b4"),
         (2025.70, 3.8, "Chronos-2", "Amazon", "#1f77b4"),
+        (2025.75, 4.7, "fev-bench", "AWS", "#2ca02c"),
         (2025.80, 1.2, "SciTS", "Wuhan/Shanghai", "#2ca02c"),
         (2025.90, 2.5, "Moirai 2.0", "Salesforce", "#1f77b4"),
         (2025.95, 4.5, "FLAME", "ZJU/Westlake", "#1f77b4"),
         (2026.12, 1.5, "EIDOS", "Ming Jin", "#1f77b4"),
+        (2026.15, 3.9, "UrbanFM", "HKUST/THU", "#1f77b4"),
         (2026.16, 2.7, "TimeOmni-VL", "Monash", "#d62728"),
         (2026.25, 4.2, "Timer-S1", "THUML", "#1f77b4"),
-        (2026.40, 3.3, "Toto 2.0", "Datadog", "#1f77b4"),
+        (2026.40, 2.9, "AION", "Ming Jin", "#2ca02c"),
+        (2026.42, 3.3, "Toto 2.0", "Datadog", "#1f77b4"),
         (2026.45, 2.2, "TimeVista", "THUML", "#2ca02c"),
         (2026.50, 4.6, "TimesX", "Google/GT", "#2ca02c"),
         (2026.58, 1.0, "LiveHouse-TS", "HKUST", "#2ca02c"),
@@ -280,12 +287,16 @@ def generate_params_corpus_figure():
         ("Lag-Llama", 2023.85, 2.4e6, "Native TSFM", "#1f77b4", (8, 0)),
         ("LightGTS", 2025.45, 5.8e6, "Native TSFM", "#1f77b4", (8, -8)),
         ("TTM", 2024.05, 8.0e6, "Native TSFM", "#1f77b4", (8, -8)),
+        ("ForecastPFN", 2023.90, 1.0e7, "Native TSFM", "#1f77b4", (8, 0)),
+        ("OpenCity", 2024.62, 2.6e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("ICTSP", 2024.35, 4.2e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("FLAME", 2025.95, 4.5e7, "Native TSFM", "#1f77b4", (8, 0)),
+        ("UrbanDiT", 2024.90, 4.5e7, "Native TSFM", "#1f77b4", (8, 6)),
         ("Timer", 2024.15, 8.4e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("VisionTS", 2024.65, 8.6e7, "LLM4TS / VLM", "#d62728", (8, -9)),
         ("Timer-XL", 2024.80, 8.4e7, "Native TSFM", "#1f77b4", (-14, 8)),
         ("EIDOS", 2026.12, 8.8e7, "Native TSFM", "#1f77b4", (8, 0)),
+        ("UrbanFM", 2026.15, 1.2e8, "Native TSFM", "#1f77b4", (8, -8)),
         ("Tabby", 2026.70, 1.2e8, "Native TSFM", "#1f77b4", (-12, 7)),
         ("LLM4TS", 2023.65, 1.24e8, "LLM4TS", "#d62728", (8, 0)),
         ("TiRex", 2025.40, 1.5e8, "Native TSFM", "#1f77b4", (8, 6)),
@@ -301,6 +312,7 @@ def generate_params_corpus_figure():
         ("Toto 2.0", 2026.35, 1.2e9, "Native TSFM", "#1f77b4", (8, 0)),
         ("Sundial", 2025.10, 1.5e9, "Native TSFM", "#1f77b4", (8, 0)),
         ("Time-MoE", 2024.70, 2.4e9, "Native TSFM", "#1f77b4", (8, 0)),
+        ("UrbanGPT", 2024.15, 7.0e9, "LLM4TS", "#d62728", (8, 6)),
         ("Time-LLM", 2023.80, 7.0e9, "LLM4TS", "#d62728", (-12, 7)),
         ("AutoTimes", 2024.15, 7.0e9, "LLM4TS", "#d62728", (8, -9)),
         ("Time-VLM", 2025.10, 7.0e9, "LLM4TS", "#d62728", (8, -9)),

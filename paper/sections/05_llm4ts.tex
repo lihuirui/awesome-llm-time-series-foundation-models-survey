@@ -65,4 +65,12 @@ Recent works develop full-fledged conversational and analytical systems:
     \item \emph{TRACE}~\cite{kan2026trace}: Kan et al. propose temporal conditional estimation for multimodal foundation models, formalizing joint inference over complex clinical physiological waveforms, clinical electronic health record (EHR) text narratives, and diagnostic interventions under non-stationary physical dynamics.
     \item \emph{OpenTSLM}~\cite{raj2025opentslm}: Specializes multimodal reasoning for clinical healthcare, integrating multi-channel ICU physiological waveforms (ECG, arterial blood pressure) with clinical notes and physician orders.
 \end{itemize}
+
+\subsubsection{Spatio-Temporal Large Language Models}
+Extending LLM cross-modal adaptation from 1D sequences to interconnected geographic networks represents an impactful frontier:
+\begin{itemize}[leftmargin=*]
+    \item \emph{UrbanGPT}~\cite{li2024urbangpt}: Li et al. (KDD 2024) introduce a spatio-temporal large language model for urban forecasting. UrbanGPT constructs a Spatio-Temporal Dependency Encoder (ST-Encoder) that maps spatial topological graphs and historical temporal dynamics into language token representations. When interfaced with a frozen LLaMA-2-7B backbone via lightweight cross-modal instruction tuning, UrbanGPT generalizes zero-shot across diverse urban prediction tasks (traffic flow, ride-hailing demand) in unseen metropolitan regions where training data is scarce.
+    \item \emph{ST-LLM}~\cite{liu2024stllm}: Liu et al. (TKDE 2025) develop a spatial-temporal large language model framework for traffic prediction. ST-LLM integrates spatial graph positional embeddings with partially-frozen transformer attention layers, enabling language models to simultaneously capture localized spatial dependencies across physical sensor networks and long-range temporal trends without incurring full model fine-tuning overhead.
+\end{itemize}
+
 These developments indicate that while native TSFMs dominate pure high-throughput numerical prediction, repurposed LLMs and VLMs serve as indispensable cognitive orchestrators for hybrid temporal-textual intelligence.

@@ -2,11 +2,11 @@
 
 [![Survey Paper](https://img.shields.io/badge/Survey%20Paper-PDF-red?style=flat&logo=adobeacrobatreader)](paper/main.pdf)
 [![PRISMA 2020](https://img.shields.io/badge/PRISMA%202020-Reproducible-green?style=flat)](docs/PROTOCOL.md)
-[![Total Included](https://img.shields.io/badge/Included%20Studies-70-blue?style=flat)](data/papers.json)
+[![Total Included](https://img.shields.io/badge/Included%20Studies-81-blue?style=flat)](data/papers.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 3 (Adaptation Synthesis & Scaling Laws Meta-Regression)** · Last Updated: **2026-09-25**
+> Latest Iteration: **Iteration 4 (Spatio-Temporal Foundation Models & Computational Profiling)** · Last Updated: **2026-09-25**
 
 ---
 
@@ -14,10 +14,11 @@
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **原生时间序列基座模型 (Native TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，如 Chronos、TimesFM、MOIRAI、MOMENT、Lag-Llama、TTM、Timer、Timer-XL、Sundial、Timer-S1、Time-MoE、Toto 2.0 等。
-2. **基于大语言模型改造的时序方法 (LLM4TS)**：跨模态重编程、提示调优、特征跨模态对齐及自主智能体，如 Time-LLM、GPT4TS/One Fits All、LLMTime、TEMPO、TEST、S2IP-LLM、Time-MQA 等。
-3. **评测基准、标度律与批判性分析**：GIFT-Eval、fev-bench、Time-MMD、以及对于“LLM 在时间序列任务上是否真正有效”的经验性质疑与数据泄漏审计。
-4. **重点学术团队专题**：深入跟踪清华大学龙明盛团队 (THUML)、Ming Jin 团队、以及亚马逊 Chronos 团队的最新研发脉络。
+1. **原生时间序列基座模型 (Native TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与扩散模型，如 Chronos、TimesFM、MOIRAI、MOMENT、Lag-Llama、TTM、Timer、Timer-XL、Sundial、Timer-S1、Time-MoE、Toto 2.0、$t_0$ 等。
+2. **时空图谱基座模型 (Spatio-Temporal Foundation Models)**：打破1D序列孤岛，将空间拓扑图与时间动态统一建模，如 OpenCity、UniST、UrbanDiT、UrbanFM、UrbanGPT、ST-LLM 等。
+3. **基于大语言模型改造的时序方法 (LLM4TS)**：跨模态重编程、提示调优、特征跨模态对齐及自主智能体，如 Time-LLM、GPT4TS/One Fits All、LLMTime、TEMPO、TEST、S2IP-LLM、Time-MQA、TimeOmni-VL 等。
+4. **评测基准、标度律与计算开销对比**：GIFT-Eval、fev-bench（含协变量评估）、It's TIME（数据泄漏审计）、Beyond Numerical TS、AION，以及各范式的算法复杂度、KV-Cache 内存与端侧低延迟部署评测。
+5. **重点学术团队专题**：深入跟踪清华大学龙明盛团队 (THUML)、Ming Jin 团队、以及亚马逊 Chronos 团队的最新研发脉络。
 
 ---
 
@@ -32,16 +33,17 @@ graph TD
     Root --> P2["Repurposed LLM4TS (Language Backbones)"]
     Root --> P3["Evaluations, Benchmarks & Critiques"]
 
-    P1 --> P1_Dec["Autoregressive Decoder-only<br/>(Chronos, TimesFM, Timer, Sundial, Lag-Llama)"]
-    P1 --> P1_Enc["Masked Encoder & Enc-Dec<br/>(MOMENT, MOIRAI, TTM, PatchTST)"]
-    P1 --> P1_MoE["Mixture-of-Experts (MoE)<br/>(Time-MoE, Moirai-MoE, Timer-S1)"]
+    P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM, Timer, Sundial, TiRex, Toto, Tabby, t0)"]
+    P1 --> P1_Enc["Masked, PFN & Mixer Models<br/>(MOMENT, MOIRAI, TTM, ICTSP, ForecastPFN, TabPFN-TS, LightGTS)"]
+    P1 --> P1_ST["Spatio-Temporal & Dynamical<br/>(OpenCity, UniST, UrbanDiT, UrbanFM, Time-MoE, EIDOS, FlowState)"]
 
-    P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEMPO)"]
-    P2 --> P2_Prompt["Direct Prompting & Decimal Tokenization<br/>(LLMTime, PromptCast)"]
-    P2 --> P2_Multi["Multimodal Context & Agentic Reasoning<br/>(Time-MQA, TimeOmni-1, ChatTime)"]
+    P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
+    P2 --> P2_Prompt["Prompting & Spatio-Temporal<br/>(LLMTime, PromptCast, UniTime, UrbanGPT, ST-LLM, AutoTimes)"]
+    P2 --> P2_Multi["Multimodal Context & Agentic Reasoning<br/>(Time-VLM, ChatTS, TimeOmni-VL, TRACE, Time-MQA, OpenTSLM)"]
 
-    P3 --> P3_Bench["Standardized Benchmarks (GIFT-Eval, fev-bench)"]
-    P3 --> P3_Audit["Leakage Audits & Calibration (Are LLMs Useful?)"]
+    P3 --> P3_Bench["Standardized Benchmarks (GIFT-Eval, fev-bench, TimesX, SciTS)"]
+    P3 --> P3_Audit["Leakage Audits & Complexity (It's TIME, Rethinking Eval, Table 4)"]
+    P3 --> P3_Agent["Next-Gen Agentic & Context Suites (Beyond Numerical, AION, TimeVista)"]
 ```
 
 ---
@@ -52,13 +54,13 @@ graph TD
 
 | Phase | Metric | Count | Description |
 | :--- | :--- | :---: | :--- |
-| **Identification** | Total records retrieved | **86** | Systematic queries across arXiv and Crossref APIs |
-| | Duplicates removed | **4** | Deduplication via DOI and arXiv identifiers |
-| **Screening** | Title & abstract screened | **82** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
-| | Excluded at Stage 1 | **9** | Out of domain / pre-2021 releases |
-| **Eligibility** | Full-text assessed | **73** | Assessed for architectural details and experimental rigor |
-| | Deferred for P2 extraction | **3** | Candidates queued for detailed extraction in upcoming iteration |
-| **Included** | **Total Synthesized Studies** | **70** | **Core benchmark and foundation models synthesized** |
+| **Identification** | Total records retrieved | **97** | Systematic queries across arXiv and Crossref APIs |
+| | Duplicates removed | **5** | Deduplication via DOI and arXiv identifiers |
+| **Screening** | Title & abstract screened | **92** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
+| | Excluded at Stage 1 | **10** | Out of domain / pre-2021 releases |
+| **Eligibility** | Full-text assessed | **82** | Assessed for architectural details and experimental rigor |
+| | Deferred for P2 extraction | **1** | Candidates queued for detailed extraction in upcoming iteration |
+| **Included** | **Total Synthesized Studies** | **81** | **Core benchmark and foundation models synthesized** |
 
 ---
 
@@ -114,6 +116,10 @@ graph TD
 | **Tabby** | Huawei Noah's Ark / Univ Paris Cité | arXiv 2026 | 120M | Open Tabby-Corpus (150B tokens open release) | Normalized Multi-Resolution Subseries Patching; Long-Context Probabilistic Decoder-only Transformer | [📄 Paper](https://arxiv.org/abs/2609.13956)<br/>🔒 Proprietary |
 | **Toto 2.0** | Datadog | arXiv 2026 | 1.2B | Enterprise Telemetry (1.5 Trillion Points) | Quantized Wavelet Tokens; Decoder-only Scaled Transformer | [📄 Paper](https://arxiv.org/abs/2605.20119)<br/>🔒 Proprietary |
 | **A Time Series is Worth 64 Words** | UC Berkeley | ICLR 2023 | not reported | Self-supervised Masked Patch Modeling | Subseries Patching (length 16, stride 8); Channel-Independent Transformer Encoder | [📄 Paper](https://arxiv.org/abs/2211.14730)<br/>[💻 Code](https://github.com/yuqinie98/PatchTST) |
+| **OpenCity** | HKU / Baidu | NeurIPS 2024 | 26M | Open-world Urban Traffic Network Corpus (>50M observations) | Spatial Graph Node + Temporal Patch Embeddings; Dual Spatio-Temporal Transformer with Graph Wavelet Bias | [📄 Paper](https://arxiv.org/abs/2408.10269)<br/>[💻 Code](https://github.com/HKUDS/OpenCity) |
+| **UniST** | Tsinghua FIB Lab | KDD 2024 | not reported | Multi-Scenario Urban Spatio-Temporal Benchmark | Patch-based Spatio-Temporal Tokenization; Unified Spatio-Temporal Masked Autoencoder with Knowledge Prompts | [📄 Paper](https://arxiv.org/abs/2402.11838)<br/>[💻 Code](https://github.com/tsinghua-fib-lab/UniST) |
+| **Diffusion Transformers as Open-World Spatiotemporal Foundation Models** | Tsinghua FIB Lab | NeurIPS 2025 | 45M | Open-world Urban Heterogeneous Data | Unified Grid & Graph Patch Tokens + Prompt Tokens; Spatio-Temporal Diffusion Transformer (DiT) | [📄 Paper](https://arxiv.org/abs/2411.12164)<br/>[💻 Code](https://github.com/tsinghua-fib-lab/UrbanDiT) |
+| **UrbanFM** | HKUST / Tsinghua | arXiv 2026 | 120M | Multi-City Urban Spatio-Temporal Corpus | MiniST Tokenization (Heterogeneous Signal Regularization); Minimalist Spatio-Temporal Transformer with Constrained Bias | [📄 Paper](https://arxiv.org/abs/2602.20677)<br/>🔒 Proprietary |
 
 ### 2. Repurposed Large Language Models (LLM4TS)
 
@@ -142,6 +148,8 @@ graph TD
 | **TAC-Time** | ECNU | arXiv 2026 | 350M | Text-as-Channel Dual-Stream Cross-Attention Transformer | Textual Channel Embeddings + Temporal Patch Embeddings | [📄 Paper](https://arxiv.org/abs/2609.24156)<br/>🔒 Proprietary |
 | **TRACE** | UNC Chapel Hill / UT Austin | arXiv 2026 | 7B | Temporal Conditional Estimation Network with Pretrained Multimodal Backbones | Multimodal Token Alignment (Text + Waveform) | [📄 Paper](https://arxiv.org/abs/2606.06285)<br/>🔒 Proprietary |
 | **TEST** | PKU / Alibaba | NeurIPS 2024 | 110M to 350M | Frozen LLM (BERT/GPT-2) with Contrastive Prototype Alignment | Instance & Feature Contrastive Patches | [📄 Paper](https://arxiv.org/abs/2308.08241)<br/>🔒 Proprietary |
+| **UrbanGPT** | HKU / Baidu | KDD 2024 | 7B | Spatio-Temporal Dependency Encoder + Llama-2-7B Backbone | Spatio-Temporal Graph & Temporal Patch Tokenization | [📄 Paper](https://arxiv.org/abs/2403.00813)<br/>[💻 Code](https://github.com/HKUDS/UrbanGPT) |
+| **Spatial-Temporal Large Language Model for Traffic Prediction** | Beihang University | TKDE 2025 | 7B | Partially-Frozen LLM with Spatio-Temporal Graph Embeddings | Node-level Temporal Patch Tokens | [📄 Paper](https://arxiv.org/abs/2401.10134)<br/>🔒 Proprietary |
 
 ### 3. Evaluations, Benchmarks, Scaling Laws & Critiques
 
@@ -154,11 +162,15 @@ graph TD
 | **SciTS** | Wuhan Univ / Shanghai AI Lab | Scientific Benchmark, Scientific TS Understanding & Generation | The scientific reasoning ability of large language models (LLMs) has recently attracted significant attention. Time seri... | [📄 Paper](https://arxiv.org/abs/2510.03255) — |
 | **Insight Miner** | HKUST / MSRA | Cross-Domain Alignment Benchmark, Evaluation | Time-series data is critical across many scientific and industrial domains, including environmental analysis, agricultur... | [📄 Paper](https://arxiv.org/abs/2512.11251) — |
 | **LiveHouse-TS** | HKUST(GZ) | Living Benchmark, Contamination-Free Evaluation | Time Series Foundation Models (TSFMs) have recently emerged as a highly promising paradigm for cross-domain zero-shot fo... | [📄 Paper](https://arxiv.org/abs/2608.17299) — |
+| **It's TIME** | THUML / Tsinghua / Monash | Benchmark, Leakage Audit, Contamination Analysis | Time series foundation models (TSFMs) are revolutionizing the forecasting landscape from specific dataset modeling to ge... | [📄 Paper](https://arxiv.org/abs/2602.12147) — |
+| **Beyond Numerical Time Series** | Peking University / CAS | Multimodal Contextual Forecasting Benchmark | Most time series forecasting benchmarks remain numerical-centric and provide limited support for evaluating contextual i... | [📄 Paper](https://arxiv.org/abs/2609.15087) — |
 | **Rethinking Multimodal Time-Series Forecasting Evaluation** | Georgia Tech / Google Research | Multimodal Benchmark, Context-Rich Evaluation | We introduce a new context-enriched, multimodal time series forecasting benchmark, TimesX. TimesX contains a wide select... | [📄 Paper](https://arxiv.org/abs/2607.06973) — |
+| **AION** | Ming Jin Group / Monash | Agentic Reasoning Benchmark, Tool Use, Practical Harness | Time series research is moving beyond fixed forecasting benchmarks toward realistic tasks that combine prediction, conte... | [📄 Paper](https://arxiv.org/abs/2605.25045) — |
 | **TimeVista** | Tsinghua University (THUML) | LLM-as-a-Judge, Perceptual Shape Fidelity Evaluation | High-quality time series forecasting is pivotal for real-world decision-making. However, traditional point-wise metrics ... | [📄 Paper](https://arxiv.org/abs/2606.16173) — |
 | **Evaluating Accuracy and Probabilistic Reliability of Zero-Shot Time Series Foundation Models** | TU Munich | Probabilistic Evaluation | Time Series Foundation Models (TSFMs) promise a paradigm shift toward zero-shot forecasting by eliminating task-specific... | [📄 Paper](https://arxiv.org/abs/2609.25788) — |
 | **Forecast Workflow Bench** | Independent / Tokyo | Agentic Forecast Benchmark, Tool Budget Evaluation | Time-series foundation models (TSFMs) provide forecasts for operational decisions, but accuracy alone does not determine... | [📄 Paper](https://arxiv.org/abs/2609.27385) — |
 | **Are Language Models Actually Useful for Time Series Forecasting?** | Imperial College London / Oxford | Empirical Critique | Large language models (LLMs) are being applied to time series forecasting. But are language models actually useful for t... | [📄 Paper](https://arxiv.org/abs/2406.16964) — |
+| **fev-bench** | AWS / AutoGluon | Covariate-Aware Forecasting Benchmark, Statistical Win Rates | Benchmark quality is critical for meaningful evaluation and sustained progress in time series forecasting, particularly ... | [📄 Paper](https://arxiv.org/abs/2509.26468) [💻 Code](https://github.com/autogluon/fev) |
 
 ---
 

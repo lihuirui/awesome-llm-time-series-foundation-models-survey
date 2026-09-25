@@ -10,6 +10,10 @@ Traditional time series evaluation relied on a small collection of homogeneous a
 To establish rigorous evaluation standards, recent initiatives introduce expansive benchmark suites:
 \begin{itemize}[leftmargin=*]
     \item \emph{GIFT-Eval}~\cite{salesforce2024gifteval}: Introduced by Salesforce Research, GIFT-Eval comprises over $143{,}000$ distinct time series spanning 7 diverse domains, 10 sampling frequencies, and both univariate and multivariate regimes. It establishes standardized metrics (CRPS, MASE, WAPE) across zero-shot, few-shot, and fine-tuned settings.
+    \item \emph{fev-bench}~\cite{shchur2025fevbench}: Introduced by Shchur et al. (AWS and AutoGluon), fev-bench formulates a realistic benchmark encompassing 100 forecasting tasks across 7 domains. Crucially, 46 of these tasks incorporate dynamic covariates (e.g., promotional flags, weather drivers, calendar events) evaluated via the open-source \texttt{fev} library using bootstrapped confidence intervals and win-rate skill scores, directly addressing the historic deficiency where foundation models underperformed simple baselines by omitting exogenous features.
+    \item \emph{It's TIME}~\cite{qiao2026time}: Qiao et al. (joint work between Tsinghua THUML and Ming Jin's group) establish next-generation benchmarks addressing multi-granularity task evaluation and rigorous train-test contamination audits, establishing standardized leakage-free splits across diverse operational horizons.
+    \item \emph{Beyond Numerical Time Series}~\cite{chen2026beyondnumerical}: Chen et al. establish a unified multimodal evaluation framework pairing continuous quantitative sensors with heterogeneous textual descriptions, news contexts, and structural calendar metadata.
+    \item \emph{AION}~\cite{zhan2026aion}: Zhan, Jin et al. formulate next-generation benchmarks moving beyond static univariate forecasting to evaluate agentic tool-use, multi-step structured reasoning, and contextual decision support over temporal observations.
     \item \emph{TimesX}~\cite{liu2026timesx}: Published at ICML 2026 by researchers from Georgia Tech and Google, TimesX provides a standardized benchmark for context-enriched multimodal forecasting, pairing high-frequency sensors with text narratives, calendar events, and exogenous market drivers across diverse global domains.
     \item \emph{TimeSeriesExam}~\cite{cai2024timeseriesexam}: Developed by the CMU MOMENT team, TimeSeriesExam formulates a diagnostic capability examination for foundation models. Rather than evaluating generic mean-squared errors on arbitrary test splits, it probes specific foundational abilities: trend extrapolation, seasonality decomposition, phase-shift invariance, and anomaly localization.
     \item \emph{LiveHouse-TS}~\cite{wen2026livehouse}: An open-world living benchmark platform that streams fresh real-world telemetry in real time, preventing static benchmark memorization and providing continuous evaluation under non-stationary concept drift.
@@ -138,4 +142,41 @@ Meta-regression over reported validation curves across foundational architecture
     \item \emph{Fitted Exponents}: Time-MoE~\cite{shi2024timemoe} reports $\alpha_N \approx 0.089$ and $\alpha_D \approx 0.112$ across models ranging from $50\text{M}$ to $2.4\text{B}$ parameters on Time-300B; Sundial~\cite{thuml2025sundial} reports $\alpha_N \approx 0.076$ on UTSD-3; and Toto 2.0~\cite{datadog2026toto2} reports $\alpha_N \approx 0.081$ and $\alpha_D \approx 0.098$ under Maximal Update Parametrization ($\mu\text{P}$). In comparison, LLM language pretraining exhibits $\alpha_N \approx 0.076$--$0.088$ and $\alpha_D \approx 0.095$--$0.120$. This confirms that temporal transformers obey bona fide neural scaling laws.
     \item \emph{The Temporal Entropy Saturation Barrier}: In time series, $\alpha_N$ exhibits early saturation when scaling beyond $1\text{B}$ parameters if trained solely on public sensor repositories. Because real-world telemetry frequently contains repetitive stationary waveforms with low Kolmogorov complexity, models quickly exhaust novel temporal structures. To sustain power-law scaling ($\alpha_N > 0$), state-of-the-art pipelines (Chronos, Time-MoE, Tabby~\cite{xie2026tabby}) inject synthetic generative processes (mixtures of non-linear differential equations and Gaussian process kernels), proving that synthetic diversity is mandatory to maintain compute-optimal scaling in time series.
 \end{itemize}
+
+\subsection{Computational Profiling, Operational Complexity, and Real-Time Inference}
+\label{sec:computational_profiling}
+
+While accuracy metrics (CRPS, MASE) dominate research papers, practical adoption across industrial SCADA telemetry, financial high-frequency execution, smart energy grids, and resource-constrained edge microcontrollers is governed fundamentally by \emph{computational efficiency}, \emph{memory footprint}, and \emph{inference latency}. Table~\ref{tab:computational_complexity} formalizes the algorithmic complexity, memory overhead, empirical latency, and operational deployment envelopes across the six foundational time-series paradigms.
+
+\begin{table*}[t]
+\caption{Operational Complexity, Inference Latency, and Memory Footprints Across Foundation Paradigms.}
+\label{tab:computational_complexity}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lp{3.0cm}ccccp{3.2cm}}
+\toprule
+\textbf{Foundational Paradigm} & \textbf{Exemplar Models} & \textbf{Time Complexity (Inference)} & \textbf{KV-Cache / Peak Memory} & \textbf{Latency (ms)} & \textbf{Generation Mechanism} & \textbf{Hardware / Deployment Envelope} \\
+\midrule
+\textbf{Autoregressive Token / Point Transformer} & Chronos-Large~\cite{ansari2024chronos}, Timer~\cite{liu2024timer}, AutoTimes~\cite{liu2024autotimes} & $\mathcal{O}(H \cdot L \cdot d + H^2 \cdot d)$ & High ($\mathcal{O}((L+H) \cdot d)$ KV-cache) & $120$--$450$ & Step-by-step sequential sampling ($H$ passes) & Server GPU (A100/H100); latency-prohibitive for sub-second control \\
+\midrule
+\textbf{Patch-Based Encoder-Decoder} & Chronos-Bolt, MOIRAI~\cite{woo2024moirai}, TimeXer~\cite{wang2024timexer} & $\mathcal{O}((L/P)^2 \cdot d + (H/P) \cdot (L/P) \cdot d)$ & Medium ($\mathcal{O}((L/P) \cdot d)$ patch cache) & $8$--$25$ & Direct multi-patch projection ($1$ or few passes) & Workstation GPU / Edge GPU (Jetson Orin); $250\times$ faster than vanilla Chronos \\
+\midrule
+\textbf{Multi-Scale Channel Mixers} & TTM~\cite{ekambaram2024ttm}, LightGTS~\cite{wang2025lightgts}, TimeMixer++~\cite{wang2024timemixerplus} & $\mathcal{O}(L \cdot d)$ (Linear mixing) & Minimal ($\le 50\text{MB}$, zero KV-cache) & $1.5$--$5$ & Single-pass linear time/channel projection & Microcontrollers, IoT gateways, embedded CPU; sub-5ms hard real-time \\
+\midrule
+\textbf{Continuous Flow-Matching \& Diffusion} & FlowState~\cite{king2025flowstate}, FLAME~\cite{wu2025flame}, UrbanDiT~\cite{li2024urbandit} & $\mathcal{O}(K \cdot (L/P)^2 \cdot d)$ ($K$ ODE steps, $K \in [10, 50]$) & Medium ($\mathcal{O}((L/P) \cdot d)$, zero KV-cache) & $35$--$120$ & Multi-step numerical ODE/SDE integration & Standard GPU; viable for batch forecasting, unsuited for sub-10ms loops \\
+\midrule
+\textbf{Prior-Data Fitted Bayesian Networks} & TabPFN-TS~\cite{muller2025tabpfnts}, ForecastPFN~\cite{dooley2023forecastpfn}, ICTSP~\cite{lu2024incontext} & $\mathcal{O}((N_{\text{ctx}} + H)^2 \cdot d)$ (Context attention) & Medium--High ($\mathcal{O}((N_{\text{ctx}} + H)^2)$ prompt memory) & $15$--$60$ & Single-pass exact Bayesian posterior & Workstation GPU / High-RAM CPU; instant edge zero-shot cold start \\
+\midrule
+\textbf{Reprogrammed Multi-Billion LLMs} & Time-LLM~\cite{jin2023timellm}, OFA~\cite{zhou2023onefitsall}, LLMTime~\cite{gruver2023llmtime} & $\mathcal{O}(L_{\text{text}}^2 \cdot D_{\text{LLM}} + H \cdot D_{\text{LLM}})$ & Extreme ($14$--$80\text{GB}$ VRAM, multi-head KV cache) & $500$--$3500$ & Text tokenization + multi-layer LLM forwards & Multi-GPU cloud clusters only; completely prohibited on edge devices \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+Synthesis of computational profiling across the literature yields three decisive insights:
+\begin{enumerate}[leftmargin=*]
+    \item \emph{The Autoregressive Generation Bottleneck}: Models relying on scalar or token-wise autoregression (e.g., original Chronos~\cite{ansari2024chronos} iterating over 4096 bins) incur $H$ sequential attention forward passes to forecast an $H$-step horizon. In production benchmarks, Chronos-Bolt resolves this bottleneck by shifting from point-wise autoregression to patch-level direct quantile regression, achieving a documented $250\times$ inference speedup and $20\times$ memory reduction while matching or exceeding zero-shot accuracy.
+    \item \emph{The Extreme Throughput Gap (Mixers vs. Reprogrammed LLMs)}: Lightweight architectural designs—exemplified by IBM's Tiny Time Mixers (TTM~\cite{ekambaram2024ttm}, 1M--8M parameters) and LightGTS~\cite{wang2025lightgts} (5.8M parameters)—execute full batch inference in under $5\text{ms}$ on commodity hardware with zero KV-cache memory overhead. In contrast, reprogrammed LLMs (Time-LLM~\cite{jin2023timellm}, AutoTimes~\cite{liu2024autotimes}) require multi-second latency per inference batch and allocate over $14\text{GB}$ of GPU VRAM. For high-frequency industrial automation where millisecond response times are mandatory, compact native mixers represent the only viable foundation paradigm.
+    \item \emph{In-Context Bayesian Inference vs. Score-Based Diffusion}: Prior-Data Fitted Networks (TabPFN-TS~\cite{muller2025tabpfnts}) offer unique operational trade-offs: while context-sequence attention scales quadratically with history length, they execute zero gradient updates, eliminating all fine-tuning optimizer overhead. Conversely, continuous score-based flow matching (FlowState~\cite{king2025flowstate}, UrbanDiT~\cite{li2024urbandit}) demands multiple numerical ODE integration steps ($K \in [10, 50]$), exchanging inference latency for mathematically continuous, sampling-rate-equivariant trajectories.
+\end{enumerate}
 

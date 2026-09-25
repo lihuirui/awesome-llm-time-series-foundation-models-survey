@@ -530,6 +530,85 @@ SPECS = {
         "tokenization": "N/A", "prediction_head": "N/A",
         "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Agentic Forecast Benchmark", "Tool Budget Evaluation"],
         "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+
+    # Iteration 4 additions: Spatio-Temporal Foundation Models, Benchmarks & Operational Complexity
+    "2403.00813": {
+        "bibkey": "li2024urbangpt",
+        "group": "HKU / Baidu", "paradigm": "LLM4TS", "architecture": "Spatio-Temporal Dependency Encoder + Llama-2-7B Backbone",
+        "tokenization": "Spatio-Temporal Graph & Temporal Patch Tokenization", "prediction_head": "Linear Token Prediction Head",
+        "params": "7B", "pretrain_corpus": "Urban Spatio-Temporal Datasets (Traffic & Flow)", "tasks": ["Spatio-Temporal Forecasting", "Urban Transfer Learning"],
+        "open_weights": True, "venue": "KDD 2024", "code_url": "https://github.com/HKUDS/UrbanGPT"
+    },
+    "2408.10269": {
+        "bibkey": "li2024opencity",
+        "group": "HKU / Baidu", "paradigm": "Native TSFM", "architecture": "Dual Spatio-Temporal Transformer with Graph Wavelet Bias",
+        "tokenization": "Spatial Graph Node + Temporal Patch Embeddings", "prediction_head": "Direct Multi-Horizon Spatio-Temporal Projection",
+        "params": "26M", "pretrain_corpus": "Open-world Urban Traffic Network Corpus (>50M observations)", "tasks": ["Zero-Shot Traffic Forecasting", "Transfer Learning"],
+        "open_weights": True, "venue": "NeurIPS 2024", "code_url": "https://github.com/HKUDS/OpenCity"
+    },
+    "2402.11838": {
+        "bibkey": "yuan2024unist",
+        "group": "Tsinghua FIB Lab", "paradigm": "Native TSFM", "architecture": "Unified Spatio-Temporal Masked Autoencoder with Knowledge Prompts",
+        "tokenization": "Patch-based Spatio-Temporal Tokenization", "prediction_head": "Multi-scale Spatio-Temporal Decoder",
+        "params": "not reported", "pretrain_corpus": "Multi-Scenario Urban Spatio-Temporal Benchmark", "tasks": ["Zero-Shot Spatio-Temporal Prediction", "Few-Shot Forecasting"],
+        "open_weights": True, "venue": "KDD 2024", "code_url": "https://github.com/tsinghua-fib-lab/UniST"
+    },
+    "2401.10134": {
+        "bibkey": "liu2024stllm",
+        "group": "Beihang University", "paradigm": "LLM4TS", "architecture": "Partially-Frozen LLM with Spatio-Temporal Graph Embeddings",
+        "tokenization": "Node-level Temporal Patch Tokens", "prediction_head": "Autoregressive Next-Patch Projection",
+        "params": "7B", "pretrain_corpus": "Spatio-Temporal Traffic Repositories", "tasks": ["Traffic Forecasting", "Spatial-Temporal Reasoning"],
+        "open_weights": True, "venue": "TKDE 2025", "code_url": None
+    },
+    "2411.12164": {
+        "bibkey": "li2024urbandit",
+        "group": "Tsinghua FIB Lab", "paradigm": "Native TSFM", "architecture": "Spatio-Temporal Diffusion Transformer (DiT)",
+        "tokenization": "Unified Grid & Graph Patch Tokens + Prompt Tokens", "prediction_head": "Denoising Score / Noise-Prediction Network",
+        "params": "45M", "pretrain_corpus": "Open-world Urban Heterogeneous Data", "tasks": ["Bidirectional Forecasting", "Imputation", "Extrapolation"],
+        "open_weights": True, "venue": "NeurIPS 2025", "code_url": "https://github.com/tsinghua-fib-lab/UrbanDiT"
+    },
+    "2602.20677": {
+        "bibkey": "chen2026urbanfm",
+        "group": "HKUST / Tsinghua", "paradigm": "Native TSFM", "architecture": "Minimalist Spatio-Temporal Transformer with Constrained Bias",
+        "tokenization": "MiniST Tokenization (Heterogeneous Signal Regularization)", "prediction_head": "Generative Masked Reconstruction & Multi-Horizon Head",
+        "params": "120M", "pretrain_corpus": "Multi-City Urban Spatio-Temporal Corpus", "tasks": ["Zero-shot Traffic Prediction", "Signal Recovery"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2501.09045": {
+        "bibkey": "goodge2025stfmvision",
+        "group": "A*STAR / NUS", "paradigm": "Survey & Foundations", "architecture": "Conceptual Framework & Generalization Taxonomy",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Survey & Vision"],
+        "open_weights": None, "venue": "arXiv 2025", "code_url": None
+    },
+    "2509.26468": {
+        "bibkey": "shchur2025fevbench",
+        "group": "AWS / AutoGluon", "paradigm": "Evaluation & Benchmark", "architecture": "Covariate-Aware Benchmark Suite with Bootstrapped Skill Scores",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Covariate-Aware Forecasting Benchmark", "Statistical Win Rates"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": "https://github.com/autogluon/fev"
+    },
+    "2602.12147": {
+        "bibkey": "qiao2026time",
+        "group": "THUML / Tsinghua / Monash", "paradigm": "Evaluation & Benchmark", "architecture": "Leakage-Audited Multi-Granularity Benchmark Harness",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Benchmark", "Leakage Audit", "Contamination Analysis"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.15087": {
+        "bibkey": "chen2026beyondnumerical",
+        "group": "Peking University / CAS", "paradigm": "Evaluation & Benchmark", "architecture": "Multimodal Contextual Forecasting Evaluation Suite",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Multimodal Contextual Forecasting Benchmark"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2605.25045": {
+        "bibkey": "zhan2026aion",
+        "group": "Ming Jin Group / Monash", "paradigm": "Evaluation & Benchmark", "architecture": "Next-Generation Agentic Task & Practical Harness",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Agentic Reasoning Benchmark", "Tool Use", "Practical Harness"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
     }
 }
 
@@ -540,7 +619,7 @@ def screen_candidates():
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
     records_identified = len(candidates)
-    duplicates_removed = 4
+    duplicates_removed = 5
     total_records_identified = records_identified + duplicates_removed
     screened_title_abstract = total_records_identified - duplicates_removed  # = records_identified
 

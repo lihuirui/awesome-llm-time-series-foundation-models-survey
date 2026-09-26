@@ -1811,5 +1811,157 @@
     "comment": "20 pages, 8 figures, 6 tables, accepted by the 21st EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous2024)",
     "journal_ref": null,
     "doi": "10.1007/978-3-032-10554-7_20"
+  },
+  "2501.04970": {
+    "arxiv_id": "2501.04970",
+    "title": "Battling the Non-stationarity in Time Series Forecasting via Test-time Adaptation",
+    "authors": [
+      "Kim, HyunGi",
+      "Kim, Siwon",
+      "Mok, Jisoo",
+      "Yoon, Sungroh"
+    ],
+    "release_date": "2025-01-09",
+    "summary": "Deep Neural Networks have spearheaded remarkable advancements in time series forecasting (TSF), one of the major tasks in time series modeling. Nonetheless, the non-stationarity of time series undermines the reliability of pre-trained source time series forecasters in mission-critical deployment settings. In this study, we introduce a pioneering test-time adaptation framework tailored for TSF (TSF-TTA). TAFAS, the proposed approach to TSF-TTA, flexibly adapts source forecasters to continuously shifting test distributions while preserving the core semantic information learned during pre-training. The novel utilization of partially-observed ground truth and gated calibration module enables proactive, robust, and model-agnostic adaptation of source forecasters. Experiments on diverse benchmark datasets and cutting-edge architectures demonstrate the efficacy and generality of TAFAS, especially in long-term forecasting scenarios that suffer from significant distribution shifts. The code is available at https://github.com/kimanki/TAFAS.",
+    "comment": "Accepted at AAAI 2025",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2501.04970"
+  },
+  "2601.12893": {
+    "arxiv_id": "2601.12893",
+    "title": "AdaNODEs: Test Time Adaptation for Time Series Forecasting Using Neural ODEs",
+    "authors": [
+      "Dang, Ting",
+      "Chatterjee, Soumyajit",
+      "Jia, Hong",
+      "Wu, Yu",
+      "Salim, Flora",
+      "Kawsar, Fahim"
+    ],
+    "release_date": "2026-01-19",
+    "summary": "Test time adaptation (TTA) has emerged as a promising solution to adapt pre-trained models to new, unseen data distributions using unlabeled target domain data. However, most TTA methods are designed for independent data, often overlooking the time series data and rarely addressing forecasting tasks. This paper presents AdaNODEs, an innovative source-free TTA method tailored explicitly for time series forecasting. By leveraging Neural Ordinary Differential Equations (NODEs), we propose a novel adaptation framework that accommodates the unique characteristics of distribution shifts in time series data. Moreover, we innovatively propose a new loss function to tackle TTA for forecasting tasks. AdaNODEs only requires updating limited model parameters, showing effectiveness in capturing temporal dependencies while avoiding significant memory usage. Extensive experiments with one- and high-dimensional data demonstrate that AdaNODEs offer relative improvements of 5.88\\% and 28.4\\% over the SOTA baselines, especially demonstrating robustness across higher severity distribution shifts.",
+    "comment": "Accepted by ICASSP 2026",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2601.12893"
+  },
+  "2603.27814": {
+    "arxiv_id": "2603.27814",
+    "title": "RG-TTA: Regime-Guided Meta-Control for Test-Time Adaptation in Streaming Time Series",
+    "authors": [
+      "Kumar, Indar",
+      "Tiwari, Akanksha",
+      "Jasti, Sai Krishna",
+      "Lade, Ankit Hemant"
+    ],
+    "release_date": "2026-03-29",
+    "summary": "Test-time adaptation (TTA) enables neural forecasters to adapt to distribution shifts in streaming time series, but existing methods apply the same adaptation intensity regardless of the nature of the shift. We propose Regime-Guided Test-Time Adaptation (RG-TTA), a meta-controller that continuously modulates adaptation intensity based on distributional similarity to previously-seen regimes. Using an ensemble of Kolmogorov-Smirnov, Wasserstein-1, feature-distance, and variance-ratio metrics, RG-TTA computes a similarity score for each incoming batch and uses it to (i) smoothly scale the learning rate -- more aggressive for novel distributions, conservative for familiar ones -- and (ii) control gradient effort via loss-driven early stopping rather than fixed budgets, allowing the system to allocate exactly the effort each batch requires. As a supplementary mechanism, RG-TTA gates checkpoint reuse from a regime memory, loading stored specialist models only when they demonstrably outperform the current model (loss improvement >= 30%). RG-TTA is model-agnostic and strategy-composable: it wraps any forecaster exposing train/predict/save/load interfaces and enhances any gradient-based TTA method. We demonstrate three compositions -- RG-TTA, RG-EWC, and RG-DynaTTA -- and evaluate 6 update policies (3 baselines + 3 regime-guided variants) across 4 compact architectures (GRU, iTransformer, PatchTST, DLinear), 14 datasets (6 real-world multivariate benchmarks + 8 synthetic regime scenarios), and 4 forecast horizons (96, 192, 336, 720) under a streaming evaluation protocol with 3 random seeds (672 experiments total). Regime-guided policies achieve the lowest MSE in 156 of 224 seed-averaged experiments (69.6%), with RG-EWC winning 30.4% and RG-TTA winning 29.0%. Overall, RG-TTA reduces MSE by 5.7% vs TTA while running 5.5% faster; RG-EWC reduces MSE by 14.1% vs standalone EWC.",
+    "comment": "18 pages, 8 figures",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2603.27814"
+  },
+  "2605.17250": {
+    "arxiv_id": "2605.17250",
+    "title": "Towards Principled Test-Time Adaptation for Time Series Forecasting",
+    "authors": [
+      "Wang, Haochun",
+      "Xu, Ruichen",
+      "Kementzidis, Georgios",
+      "Cho, Karen",
+      "Villarreal, Sebastian Ramirez",
+      "Deng, Yuefan"
+    ],
+    "release_date": "2026-05-17",
+    "summary": "Test-time adaptation (TTA) has recently emerged as a promising approach for improving time series forecasting (TSF) under distribution shift. Existing TSF-TTA methods differ in how they utilize revealed targets, yet the resulting adaptation protocols remain heterogeneous and lack a clearly unified formulation. To address this issue, we revisit TSF-TTA from the perspective of protocol cleanliness and propose an adaptation protocol based solely on matured ground truth, yielding a more principled setting for adaptation. Under this protocol, we further diagnose existing adapters in the frequency domain and find that their prediction corrections often exhibit limited and weakly structured spectral modifications. Motivated by this diagnosis, we propose Frequency-Aware Calibration (FAC), a lightweight calibration method that directly parameterizes prediction corrections in the frequency domain. Across diverse datasets, forecasting horizons, and source forecasters, FAC achieves competitive and consistent performance while requiring substantially fewer trainable parameters than the compared TSF-TTA adapters.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2605.17250"
+  },
+  "2402.09305": {
+    "arxiv_id": "2402.09305",
+    "title": "Embracing the black box: Heading towards foundation models for causal discovery from time series data",
+    "authors": [
+      "Stein, Gideon",
+      "Shadaydeh, Maha",
+      "Denzler, Joachim"
+    ],
+    "release_date": "2024-02-14",
+    "summary": "Causal discovery from time series data encompasses many existing solutions, including those based on deep learning techniques. However, these methods typically do not endorse one of the most prevalent paradigms in deep learning: End-to-end learning. To address this gap, we explore what we call Causal Pretraining. A methodology that aims to learn a direct mapping from multivariate time series to the underlying causal graphs in a supervised manner. Our empirical findings suggest that causal discovery in a supervised manner is possible, assuming that the training and test time series samples share most of their dynamics. More importantly, we found evidence that the performance of Causal Pretraining can increase with data and model size, even if the additional data do not share the same dynamics. Further, we provide examples where causal discovery for real-world data with causally pretrained neural networks is possible within limits. We argue that this hints at the possibility of a foundation model for causal discovery.",
+    "comment": "AAAI Workshop (AI4TS) 2024",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2402.09305"
+  },
+  "2603.11090": {
+    "arxiv_id": "2603.11090",
+    "title": "Interventional Time Series Priors for Causal Foundation Models",
+    "authors": [
+      "Thumm, Dennis",
+      "Chen, Ying"
+    ],
+    "release_date": "2026-03-11",
+    "summary": "Prior-data fitted networks (PFNs) have emerged as powerful foundation models for tabular causal inference, yet their extension to time series remains limited by the absence of synthetic data generators that provide interventional targets. Existing time series benchmarks generate observational data with ground-truth causal graphs but lack the interventional data required for training causal foundation models. To address this, we propose \\textbf{CausalTimePrior}, a principled framework for generating synthetic temporal structural causal models (TSCMs) with paired observational and interventional time series. Our prior supports configurable causal graph structures, nonlinear autoregressive mechanisms, regime-switching dynamics, and multiple intervention types (hard, soft, time-varying). We demonstrate that PFNs trained on CausalTimePrior can perform in-context causal effect estimation on held-out TSCMs, establishing a pathway toward foundation models for time series causal inference.",
+    "comment": "ICLR 2026 1st Workshop on Time Series in the Age of Large Models (TSALM)",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2603.11090"
+  },
+  "2608.24303": {
+    "arxiv_id": "2608.24303",
+    "title": "Causal Analysis for Time Series Foundation Models",
+    "authors": [
+      "Jander, Mathis",
+      "van Heeswijk, Wouter",
+      "Mes, Martijn"
+    ],
+    "release_date": "2026-08-25",
+    "summary": "Transitioning from bespoke time series models towards time series foundation models changes the relationship of model and application from one-to-one to one-to-many. This shift introduces concentration risk as many, potentially high-risk, forecasting applications are exposed to the same biases and failure modes of a single time series foundation model. At the same time, this centralization allows for economies of scale in model development and validation. In this study we investigate how biases and failure modes of time series foundation models can be identified before deployment. We propose a causal analysis framework to investigate the ability of a time series foundation model to preserve time series patterns. To achieve this, we intervene on parameterized synthetic time series generators and measure the corresponding change in model output under ceteris paribus conditions. We apply our causal analysis framework to Chronos-2 and TimesFM-2.5 and test them across six distinct time series patterns. We find safe configurations for trend and harmonic oscillation patterns. The results also indicate a bias in both models towards overestimating persistence, sudden failures for both models against the regime switch pattern and failure for TimesFM-2.5 against the energy-release pattern. Our review of the original works for both models indicates that the findings might be explained by the data used for pretraining. We conclude our study with suggestions for further model development, recommendations for application-specific model selection, and a discussion of limitations and further research directions.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2608.24303"
+  },
+  "2609.06008": {
+    "arxiv_id": "2609.06008",
+    "title": "Cadence: Error-Bounded Lossy Compression of Demand Time Series with a Time-Series Foundation Model",
+    "authors": [
+      "Tacconelli, Roberto"
+    ],
+    "release_date": "2026-09-05",
+    "summary": "We present Cadence, an error-bounded lossy compressor for numeric time series pairing a 330M-parameter time-series foundation model (Google TimesFM-3) with an adaptive arithmetic coder, guaranteeing $|\\hat{x}_t-x_t|\\le\\tau$ on every sample. One negative result constrains the design space: for lossless coding a foundation model is worth nothing, because bits saved are logarithmic in predictor accuracy, $\\Delta b=\\log_2(\\mathrm{MAE_{old}}/\\mathrm{MAE_{new}})$. So the $1.51\\times$ advantage TimesFM-3 holds over a 32-tap linear predictor buys 0.60 bits of 20.28, a median gain of +0.03%. Error-bounded coding escapes this at one point: once a forecast lands inside the band the residual index is zero and the sample nearly free. Cadence contributes: (1) an adaptive range coder with context-modelled binarization, beating xz/zstd on real indices by 9.7% (15/15) and reversing a finding from a general-purpose back end; (2) a determinism result -- predictions are not bit-identical across batch sizes, and no PyTorch configuration repairs this, forcing group size and execution device into the container format; and (3) domain localization on corpora postdating any plausible training cutoff. On 49 EIA-930 balancing-authority demand series (2026) Cadence gains 13.3% over the best of six classical predictors, and 28.3% on 50 MTA ridership series (2026): 21.4% median over 297 series-tolerance pairs, winning all 297. Against downsampling, what time-series databases deploy for retention, its guaranteed worst-case error is $28$--$56\\times$ tighter at equal size. End-to-end, once the context bootstrap is paid for, gains run from 6.8% at six months of hourly data to 15.1% asymptotically. Attempting to falsify the domain claim on SDRBench, theory predicts failure and delivers: -0.8% median, 0 of 27 pairs gaining. Three further negative results and eight retracted claims are reported in full.",
+    "comment": "10 pages",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.06008"
+  },
+  "2310.01753": {
+    "arxiv_id": "2310.01753",
+    "title": "CausalTime: Realistically Generated Time-series for Benchmarking of Causal Discovery",
+    "authors": [
+      "Cheng, Yuxiao",
+      "Wang, Ziqian",
+      "Xiao, Tingxiong",
+      "Zhong, Qin",
+      "Suo, Jinli",
+      "He, Kunlun"
+    ],
+    "release_date": "2023-10-03",
+    "summary": "Time-series causal discovery (TSCD) is a fundamental problem of machine learning. However, existing synthetic datasets cannot properly evaluate or predict the algorithms' performance on real data. This study introduces the CausalTime pipeline to generate time-series that highly resemble the real data and with ground truth causal graphs for quantitative performance evaluation. The pipeline starts from real observations in a specific scenario and produces a matching benchmark dataset. Firstly, we harness deep neural networks along with normalizing flow to accurately capture realistic dynamics. Secondly, we extract hypothesized causal graphs by performing importance analysis on the neural network or leveraging prior knowledge. Thirdly, we derive the ground truth causal graphs by splitting the causal model into causal term, residual term, and noise term. Lastly, using the fitted network and the derived causal graph, we generate corresponding versatile time-series proper for algorithm assessment. In the experiments, we validate the fidelity of the generated data through qualitative and quantitative experiments, followed by a benchmarking of existing TSCD algorithms using these generated datasets. CausalTime offers a feasible solution to evaluating TSCD algorithms in real applications and can be generalized to a wide range of fields. For easy use of the proposed approach, we also provide a user-friendly website, hosted on www.causaltime.cc.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2310.01753"
+  },
+  "2509.20846": {
+    "arxiv_id": "2509.20846",
+    "title": "Causal Time Series Generation via Diffusion Models",
+    "authors": [
+      "Xia, Yutong",
+      "Xu, Chang",
+      "Liang, Yuxuan",
+      "Zhao, Li",
+      "Wen, Qingsong",
+      "Zimmermann, Roger",
+      "Bian, Jiang"
+    ],
+    "release_date": "2025-09-25",
+    "summary": "Time series generation (TSG) synthesizes realistic sequences and has achieved remarkable success. Among TSG, conditional models generate sequences given observed covariates, however, such models learn observational correlations without considering unobserved confounding. In this work, we propose a causal perspective on conditional TSG and introduce causal time series generation as a new TSG task family, formalized within Pearl's causal ladder, extending beyond observational generation to include interventional and counterfactual settings. To instantiate these tasks, we develop CaTSG, a unified diffusion-based framework with backdoor-adjusted guidance that causally steers sampling toward desired interventions and individual counterfactuals while preserving observational fidelity. Specifically, our method derives causal score functions via backdoor adjustment and the abduction-action-prediction procedure, thus enabling principled support for all three levels of TSG. Extensive experiments on both synthetic and real-world datasets show that CaTSG achieves superior fidelity and also supporting interventional and counterfactual generation that existing baselines cannot handle. Overall, we propose the causal TSG family and instantiate it with CaTSG, providing an initial proof-of-concept and opening a promising direction toward more reliable simulation under interventions and counterfactual generation.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2509.20846"
   }
 }

@@ -687,6 +687,78 @@ SPECS = {
         "tokenization": "Uniform & Mixed-Precision Integer Patching", "prediction_head": "Quantized Integer Output Projection",
         "params": "0.5M--5M", "pretrain_corpus": "Standard Benchmark Sets (ETT, Weather, Electricity)", "tasks": ["FPGA Deployment", "Quantization Profiling", "Hardware Verification"],
         "open_weights": True, "venue": "MobiQuitous 2024", "code_url": None
+    },
+
+    # Iteration 6: Test-Time Adaptation, Causal Discovery & Living Benchmarks
+    "2501.04970": {
+        "bibkey": "kim2025battling",
+        "group": "Seoul National University", "paradigm": "Native TSFM", "architecture": "Test-Time Adaptation Forecaster (TSF-TTA)",
+        "tokenization": "Non-Stationary Patch Normalization", "prediction_head": "Dynamic Test-Time Linear Predictor",
+        "params": "0.5M--5M", "pretrain_corpus": "Pretrained Base Forecasters (PatchTST, DLinear)", "tasks": ["Test-Time Adaptation", "Non-Stationary Forecasting"],
+        "open_weights": True, "venue": "AAAI 2025", "code_url": None
+    },
+    "2601.12893": {
+        "bibkey": "dang2026adanodes",
+        "group": "Singapore Management University", "paradigm": "Native TSFM", "architecture": "Continuous Neural ODE Dynamic Adapter",
+        "tokenization": "Continuous Latent State Trajectory", "prediction_head": "ODE-Integrated Temporal Predictor",
+        "params": "0.15M (Adapter)", "pretrain_corpus": "Frozen Source Forecasters", "tasks": ["Source-Free Test-Time Adaptation", "Forecasting"],
+        "open_weights": True, "venue": "ICASSP 2026", "code_url": None
+    },
+    "2603.27814": {
+        "bibkey": "kumar2026rgtta",
+        "group": "IIT Delhi & TCS Research", "paradigm": "Native TSFM", "architecture": "Regime-Guided Meta-Controlled Transformer",
+        "tokenization": "Multi-Regime Temporal Patching", "prediction_head": "Modulated Gradient Forecaster",
+        "params": "not reported", "pretrain_corpus": "Streaming Non-Stationary Corpora", "tasks": ["Streaming TTA", "Regime Detection", "Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2605.17250": {
+        "bibkey": "wang2026principled",
+        "group": "HKUST", "paradigm": "Evaluation & Benchmark", "architecture": "Frequency-Aware Calibration (FAC) Framework",
+        "tokenization": "Orthogonal Fourier / Wavelet Decomposition", "prediction_head": "Frequency-Calibrated Output Projection",
+        "params": "not reported", "pretrain_corpus": "TSF-TTA Benchmark Suite", "tasks": ["TTA Benchmark", "Frequency Calibration", "Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2402.09305": {
+        "bibkey": "stein2024embracing",
+        "group": "Friedrich Schiller University Jena", "paradigm": "Native TSFM", "architecture": "Deep Causal Pretrained Transformer (Causal-PT)",
+        "tokenization": "Multivariate Temporal Sequence Embedding", "prediction_head": "Directed Acyclic Graph (DAG) Adjacency Classifier",
+        "params": "25M", "pretrain_corpus": "Synthetic Structural Causal Models (10M graphs)", "tasks": ["Causal Discovery", "Graph Reconstruction"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": None
+    },
+    "2603.11090": {
+        "bibkey": "thumm2026interventional",
+        "group": "Humboldt University of Berlin", "paradigm": "Native TSFM", "architecture": "Prior-Data Fitted Network (CausalTimePrior PFN)",
+        "tokenization": "Interventional Observation Pairs", "prediction_head": "In-Context Posterior Causal Effect Head",
+        "params": "85M", "pretrain_corpus": "Synthetic Interventional TSCMs (500M simulations)", "tasks": ["In-Context Causal Inference", "Counterfactual Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2608.24303": {
+        "bibkey": "jander2026causal",
+        "group": "University of Twente", "paradigm": "Evaluation & Benchmark", "architecture": "Interventional Synthetic Audit Harness",
+        "tokenization": "Parametric Dynamic Generator Embeddings", "prediction_head": "Persistence & Regime Distortion Evaluator",
+        "params": "N/A", "pretrain_corpus": "Chronos-2, TimesFM-2.5, MOIRAI", "tasks": ["Causal Audit", "Persistence Bias Detection", "Regime Shift Robustness"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2310.01753": {
+        "bibkey": "cheng2023causaltime",
+        "group": "Tsinghua University", "paradigm": "Evaluation & Benchmark", "architecture": "Realistic Synthetic Causal Discovery Benchmark Harness",
+        "tokenization": "Nonlinear Flow Invertible Transformations", "prediction_head": "Ground-Truth Causal Adjacency Verification",
+        "params": "N/A", "pretrain_corpus": "CausalTime Benchmark Suite", "tasks": ["Causal Discovery Benchmark", "Ground-Truth Evaluation"],
+        "open_weights": True, "venue": "NeurIPS 2023", "code_url": None
+    },
+    "2509.20846": {
+        "bibkey": "xia2025causal",
+        "group": "City University of Hong Kong", "paradigm": "Native TSFM", "architecture": "Structural Causal Diffusion Model (CaTSG)",
+        "tokenization": "Causal Graph Structured Latents", "prediction_head": "Denoising Score Matching Predictor",
+        "params": "45M", "pretrain_corpus": "Cross-domain Causal Time Series", "tasks": ["Causal Time Series Generation", "Counterfactual Forecasting"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2609.06008": {
+        "bibkey": "tacconelli2026cadence",
+        "group": "Politecnico di Torino", "paradigm": "Native TSFM", "architecture": "TimesFM-3 (330M) + Adaptive Arithmetic Coding Engine",
+        "tokenization": "Stacked Variate Attention Patches", "prediction_head": "Iterative RevIN Quantile Residual Engine",
+        "params": "330M (TimesFM-3)", "pretrain_corpus": "1T Time Points (Google Pretraining Corpus)", "tasks": ["Error-Bounded Lossy Compression", "Multivariate Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/google-research/timesfm"
     }
 }
 

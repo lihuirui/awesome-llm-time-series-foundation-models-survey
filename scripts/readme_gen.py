@@ -49,7 +49,7 @@ def generate_readme():
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 5 (Omni-Modal Grounding, Edge Foundation Models & Energy/Quantization Benchmarks)** · Last Updated: **{today}**
+> Latest Iteration: **Iteration 6 (Test-Time Adaptation, Causal Discovery & Living Benchmarks)** · Last Updated: **{today}**
 
 ---
 
@@ -57,11 +57,11 @@ def generate_readme():
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **原生与端侧轻量基座模型 (Native & Edge TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与极端端侧轻量模型，如 Chronos-2、TimesFM、MOIRAI、MOMENT、TTM、Timer-S1、Time-MoE、Toto 2.0、$t_0$、Tiny-TSM (23M单卡训练)、APEX (网络原生AP遥测)、Cheraghinia MLP (21K微控制器级) 等。
-2. **时空图谱与卫星遥感时序基座模型 (Spatio-Temporal & Remote Sensing)**：打破1D序列孤岛，统一空间拓扑图与连续时序，如 OpenCity、UniST、UrbanDiT、UrbanFM、TiMo (100万卫星时序图像多尺度陀螺注意力) 等。
-3. **全模态表征与跨模态预训练 (Omni-Modal & LLM4TS)**：跨模态重编程、全模态联合预训练、时频视觉桥接与智能体指导，如 Time-LLM、Chronicle (从头联合预训练324M模型)、VLT (工业时频图谱-文本多模态)、ChronoSteer (合成指令引导对齐)、VisionTS++ (持续预训练视觉主干)、TimeOmni-VL 等。
-4. **能耗剖析、整数低比特量化与端侧评测 (Energy, Quantization & Edge Benchmarks)**：HoliBench (跨7类硬件与FP16/INT8/INT4能耗分析)、FM-CAC (时序大模型赋能绿色AI与碳感知动态调度)、Ling et al. (FPGA混合精度INT8/INT4量化)、GIFT-Eval、fev-bench、It's TIME (多粒度数据泄漏审计) 等。
-5. **重点学术团队专题**：深入跟踪清华大学龙明盛团队 (THUML)、Ming Jin 团队、以及亚马逊 Chronos 团队的最新研发脉络。
+1. **原生与端侧轻量基座模型 (Native & Edge TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与极端端侧轻量模型，如 Chronos-2、TimesFM-3 (330M原生多变量预测与1T训练集)、Cadence (基于TimesFM-3的有界有损时序压缩系统)、MOIRAI、MOMENT、TTM、Timer-S1、Time-MoE、Toto 2.0、$t_0$、Tiny-TSM (23M单卡训练)、APEX (网络原生AP遥测)、Cheraghinia MLP (21K微控制器级) 等。
+2. **非平稳时序漂移与测试时自适应 (Test-Time Adaptation, TTA)**：无监督应对测试期分布偏移与概念漂移，如 TSF-TTA (AAAI'25无源测试时自适应与一致性损失)、AdaNODEs (ICASSP'26连续神经ODE自适应)、RG-TTA (流式机制引导元控制与动态梯度调节)、FAC (频域感知校准与防高频噪声发散)。
+3. **因果发现、先验拟合与反事实基座模型 (Causal Discovery & Structural Priors)**：融合结构因果模型 (SCMs)，如 Causal-PT (深度因果预训练单步DAG重构)、CausalTimePrior (首个基于先验数据拟合网络PFN的因果干预时序模型，支持即时反事实预测)、CaTSG (结构因果扩散生成)、CausalTime (NeurIPS'23真实动力学流因果评测基准)、Jander 因果审计 (揭示主流时序基座模型顽固的滞后惯性偏差)。
+4. **时空图谱与全模态跨模态表征 (Spatio-Temporal & Omni-Modal)**：OpenCity、UniST、UrbanDiT、UrbanFM、TiMo (卫星时序多尺度陀螺注意力)、Time-LLM、Chronicle (从头联合预训练324M模型)、VLT、ChronoSteer、VisionTS++、TimeOmni-VL 等。
+5. **动态评测社区、能耗剖析与活跃榜单 (Living Leaderboards & Benchmarks)**：It's TIME (50个全新数据集、98个评测任务与HuggingFace实时打榜空间)、HoliBench (跨7类硬件与FP16/INT8/INT4能耗分析)、FM-CAC (碳感知动态调度)、Ling et al. (FPGA混合精度INT8/INT4量化)、GIFT-Eval、fev-bench 等。
 
 ---
 
@@ -76,17 +76,17 @@ graph TD
     Root --> P2["Repurposed LLM4TS (Language Backbones)"]
     Root --> P3["Evaluations, Benchmarks & Critiques"]
 
-    P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM, Timer, Sundial, TiRex, Toto, Tabby, t0)"]
-    P1 --> P1_Edge["Masked, PFN & Edge Models<br/>(MOMENT, MOIRAI, TTM, Tiny-TSM, APEX, Cheraghinia MLP, LightGTS)"]
-    P1 --> P1_ST["Spatio-Temporal & Remote Sensing<br/>(OpenCity, UniST, UrbanDiT, TiMo, UrbanFM, Time-MoE, EIDOS, FLAME)"]
+    P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM-3, Timer, Sundial, TiRex, Toto, Tabby, Cadence)"]
+    P1 --> P1_TTA["Test-Time Adaptation & Causal Models<br/>(TSF-TTA, AdaNODEs, RG-TTA, CausalTimePrior, Causal-PT, CaTSG)"]
+    P1 --> P1_Edge["Spatio-Temporal & Edge Micro-Models<br/>(OpenCity, UniST, UrbanFM, TiMo, Tiny-TSM, APEX, Cheraghinia MLP)"]
 
     P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
     P2 --> P2_Prompt["Prompting & Spatio-Temporal<br/>(LLMTime, PromptCast, UniTime, UrbanGPT, ST-LLM, AutoTimes)"]
     P2 --> P2_Omni["Omni-Modal & Joint Pretraining<br/>(Chronicle, VLT, VisionTS++, ChronoSteer, Time-VLM, TimeOmni-VL)"]
 
-    P3 --> P3_Bench["Standardized Benchmarks (GIFT-Eval, fev-bench, TimesX, SciTS)"]
-    P3 --> P3_Audit["Leakage Audits & Complexity (It's TIME, Rethinking Eval, Table 4)"]
-    P3 --> P3_Energy["Energy & Quantization Profiles (HoliBench, FM-CAC, Ling et al., Table 5)"]
+    P3 --> P3_Bench["Standardized & Living Benchmarks<br/>(TIME Leaderboard, GIFT-Eval, fev-bench, TimesX, CausalTime)"]
+    P3 --> P3_Audit["Causal Audits & Complexity<br/>(Jander Causal Audit, FAC TTA Bench, LiveHouse-TS, Table 4)"]
+    P3 --> P3_Energy["Energy & Quantization Profiles<br/>(HoliBench, FM-CAC, Ling et al., Table 5, Table 6)"]
 ```
 
 ---

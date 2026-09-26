@@ -20,6 +20,7 @@ The predictive distribution over future horizons is obtained by autoregressively
 \subsubsection{Google TimesFM: Multi-Patch Output Generation}
 Unlike Chronos's scalar quantization, Google's TimesFM~\cite{das2024timesfm} operates directly on continuous numerical values using continuous patching. TimesFM employs an input patch size of $P = 32$ and an output patch size of $H = 128$. By predicting an entire multi-step block in a single forward step, TimesFM drastically reduces autoregressive unrolling steps, curbing error accumulation and inference latency.
 TimesFM is trained on a massive corpus of $100\text{B}$ time-series data points collected from Google Trends, Wikipedia pageviews, and synthetic ARMA processes. Recent extensions examine in-context fine-tuning~\cite{das2024incontext}, demonstrating that supplying short conditioning examples within the context window improves zero-shot adaptation.
+Subsequently, TimesFM-3 scales the architecture to $330\text{M}$ parameters pre-trained over $1\text{T}$ time points, introducing native multivariate forecasting via stacked variate attention and iterative reversible instance normalization (RevIN). Demonstrating the industrial viability of large-scale foundation forecasters, Tacconelli~\cite{tacconelli2026cadence} introduces Cadence, pairing TimesFM-3 with an adaptive arithmetic coder to execute error-bounded lossy compression on enterprise telemetry, guaranteeing user-defined maximum deviation bounds while achieving state-of-the-art bit-rate reductions.
 
 \subsubsection{The THUML Timer Family and Output Scaling}
 The THUML research group (led by Mingsheng Long at Tsinghua University) has systematically advanced generative time series pretraining:
@@ -147,5 +148,48 @@ While industrial-scale foundation models scale from hundreds of millions to bill
     \item \emph{Ultra-Lightweight Patch-Independent MLPs (Cheraghinia et al., 2025)}~\cite{cheraghinia2025lightweight}: Cheraghinia et al. demonstrate that transformer self-attention is unnecessary for constrained edge devices. By deploying simple patch-independent multi-layer perceptron (MLP) encoders comprising a mere $21\text{K}$ trainable parameters, their foundation architecture executes downstream wireless modulation classification, technology recognition, and line-of-sight detection in $0.33\text{ms}$ on commodity microcontrollers, maintaining $>97\%$ accuracy across previously unseen data classes without representation degradation.
 \end{itemize}
 These architectures prove that foundation pretraining is not intrinsically tied to massive parameter scales; structured inductive priors, synthetic data curation, and patch-level modularity enable sub-megabyte foundation models for extreme edge environments.
+
+\subsection{Non-Stationary Temporal Drift and Test-Time Adaptation (TTA)}
+\label{sec:test_time_adaptation}
+
+A foundational vulnerability of all pre-trained temporal forecasters is the assumption of distributional stationarity between pretraining corpora $\mathcal{D}_{\text{pre}}$ and streaming inference horizons $\mathcal{D}_{\text{test}}$. In open cyber-physical, meteorological, and economic environments, time series are intrinsically non-stationary, exhibiting evolving mean-variance trajectories, seasonal structural breaks, and abrupt concept drift:
+\begin{equation}
+    \mathcal{P}_{\text{train}}(\mathbf{X}_{t-L:t}) \neq \mathcal{P}_{\text{test}}(\mathbf{X}_{t-L:t}), \quad \mathcal{P}_{\text{train}}(\mathbf{Y}_{t:t+H} \mid \mathbf{X}_{t-L:t}) \neq \mathcal{P}_{\text{test}}(\mathbf{Y}_{t:t+H} \mid \mathbf{X}_{t-L:t}).
+\end{equation}
+While standard fine-tuning requires labeled supervision and risks catastrophic forgetting of general priors, \emph{Test-Time Adaptation (TTA)} enables pre-trained foundation models to continually adapt their latent representations to streaming distribution shifts using only unlabeled observations available at inference time~\cite{kim2025battling,dang2026adanodes}.
+
+Recent advances formalize TTA for foundation time-series forecasters across three primary paradigms:
+\begin{itemize}[leftmargin=*]
+    \item \emph{Online Test-Time Adaptation Forecasters (TSF-TTA)}: Kim et al.~\cite{kim2025battling} establish the TSF-TTA framework, systematically addressing non-stationarity in temporal models without requiring access to source pretraining datasets. TSF-TTA freezes the feature extraction backbone and restricts test-time updates to reversible instance normalization statistics and lightweight dynamic linear adapter heads. By minimizing an unsupervised temporal consistency objective across sliding test windows, TSF-TTA dynamically tracks concept drift, cutting test-time prediction error by up to $22\%$ across non-stationary benchmarks while incurring negligible compute overhead.
+    \item \emph{Continuous Dynamical Adaptation via Neural ODEs (AdaNODEs)}: Dang et al.~\cite{dang2026adanodes} introduce AdaNODEs, moving beyond discrete heuristic gradient steps by formulating test-time parameter trajectories through continuous-time Neural Ordinary Differential Equations (NODEs). In AdaNODEs, the evolution of latent state representations $\mathbf{z}(t)$ under streaming temporal drift is governed by a parameterized continuous vector field:
+    \begin{equation}
+        \frac{d\mathbf{z}(t)}{dt} = f_{\theta_{\text{ode}}}(\mathbf{z}(t), t), \quad \mathbf{z}(t_1) = \mathbf{z}(t_0) + \int_{t_0}^{t_1} f_{\theta_{\text{ode}}}(\mathbf{z}(\tau), \tau) \, d\tau.
+    \end{equation}
+    By updating only an ultra-compact $0.15\text{M}$ parameter NODE adapter rather than backbone weights, AdaNODEs smoothly accommodates irregular sampling intervals and continuous distribution shifts, demonstrating superior parameter efficiency and convergence stability over standard gradient descent.
+    \item \emph{Regime-Guided Meta-Control (RG-TTA)}: Kumar et al.~\cite{kumar2026rgtta} resolve the dilemma between under-adaptation (failing to catch sudden shifts) and over-adaptation (overfitting to transient noise). RG-TTA introduces a regime-guided meta-controller that continuously computes rolling distribution statistics (spectral energy, mean drift, variance change) to classify the streaming series into stationary baseline vs. shifted regimes. The meta-controller dynamically modulates the adaptation learning rate $\eta_t = \sigma(\mathbf{W}_r \mathbf{r}_t + b_r)$ and gradient clipping thresholds, applying aggressive updates during genuine regime changes while damping updates during stable periods to preserve foundational knowledge.
+\end{itemize}
+
+\subsection{Causal Discovery, Structural Priors, and Counterfactual Foundation Models}
+\label{sec:causal_foundation}
+
+While contemporary time series foundation models exhibit remarkable correlational forecasting capabilities, their black-box representations struggle with out-of-distribution intervention reasoning, policy simulation, and root-cause attribution~\cite{jander2026causal}. Integrating \emph{Structural Causal Models (SCMs)} into foundation architectures represents a crucial frontier bridging deep representations with causal mechanics~\cite{stein2024embracing,thumm2026interventional}.
+
+Formally, a dynamic temporal structural causal model defines a multivariate time series $\mathbf{X}_t = [X_{1,t}, \dots, X_{D,t}]^\top$ across time steps $t$ via a system of structural equations over parent variables $\text{PA}(X_{i,t})$ and independent exogenous noise processes $U_{i,t}$:
+\begin{equation}
+    X_{i,t} := f_i\left(\text{PA}_{\text{inter}}(X_{i,t}), \text{PA}_{\text{intra}}(X_{i,t}), U_{i,t}\right), \quad U_{i,t} \sim \mathcal{P}_{U_i},
+\end{equation}
+where $\text{PA}_{\text{inter}}(X_{i,t}) \subseteq \{X_{j,t-\tau} \mid j \in [D], \tau \ge 1\}$ denotes lagged inter-temporal causal parents and $\text{PA}_{\text{intra}}(X_{i,t}) \subseteq \{X_{j,t} \mid j \neq i\}$ represents instantaneous intra-temporal parents, defining an underlying causal Directed Acyclic Graph (DAG) $\mathcal{G}_{\text{causal}}$.
+
+Recent foundation architectures synthesize causality across three complementary frontiers:
+\begin{itemize}[leftmargin=*]
+    \item \emph{Foundation Models for Time-Series Causal Discovery (Causal-PT)}: Stein et al.~\cite{stein2024embracing} demonstrate that causal DAG discovery from temporal signals can be learned end-to-end by a pre-trained foundation transformer. Rather than relying on combinatorial constraint-based testing (e.g., PCMCI) or continuous optimization (e.g., DYNOTEARS), Causal-PT pre-trains a 25M-parameter transformer over 10 million synthetically generated nonlinear structural causal processes. At test time, Causal-PT maps raw multivariate temporal trajectories directly to the estimated causal adjacency matrix $\hat{\mathbf{A}}$ in a single feedforward pass, outperforming classical algorithms while exhibiting high robustness to observational noise.
+    \item \emph{Interventional Time Series Priors for In-Context Causal Models (CausalTimePrior)}: Thumm and Chen~\cite{thumm2026interventional} pioneer the fusion of Prior-Data Fitted Networks (PFNs) with temporal structural causality. Prior PFNs (e.g., TabPFN, ForecastPFN) were constrained strictly to observational data. CausalTimePrior constructs a synthetic generator producing hundreds of millions of diverse temporal structural causal models (TSCMs) paired with both observational trajectories and atomic interventions $do(X_j = \alpha)$. By pre-training a transformer on these paired trajectories, CausalTimePrior performs exact in-context causal effect estimation and counterfactual forecasting in a single forward evaluation without requiring gradient optimization.
+    \item \emph{Causal Time Series Generation via Diffusion Models (CaTSG)}: Xia et al.~\cite{xia2025causal} introduce CaTSG, establishing a structural causal diffusion framework for multivariate time series. CaTSG incorporates time-varying causal graph representations into the reverse-time score-matching process:
+    \begin{equation}
+        s_\theta(\mathbf{x}_t, t, \mathcal{G}_{\text{causal}}) \approx \nabla_{\mathbf{x}_t} \log p_t(\mathbf{x}_t \mid \mathcal{G}_{\text{causal}}).
+    \end{equation}
+    By constraining the generative diffusion trajectories through learned causal adjacency masks, CaTSG guarantees that generated trajectories strictly adhere to physical causal dependencies, enabling controllable simulation across observational, interventional, and counterfactual query spaces.
+\end{itemize}
+
 
 

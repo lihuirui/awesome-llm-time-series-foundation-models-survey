@@ -1,13 +1,14 @@
 # Systematic Review Protocol: Large Language Models and Foundation Models for Time Series
 
 ## 1. Protocol Identification and Changelog
-- **Protocol Version**: 1.3.0
+- **Protocol Version**: 1.4.0
 - **Initial Date**: 2026-09-24
 - **Last Amended**: 2026-09-26
 - **Methodological Standard**: PRISMA 2020 (Preferred Reporting Items for Systematic Reviews and Meta-Analyses)
 - **Target Repository**: `lihuirui/awesome-llm-time-series-foundation-models-survey`
 
 ### Changelog
+- **2026-09-26 (v1.4.0)**: Iteration 6 update: Formalized non-stationary temporal drift and test-time adaptation (TTA; TSF-TTA, AdaNODEs, RG-TTA, FAC framework); integrated causal discovery, structural causal priors (SCMs), and counterfactual foundation models (Causal-PT, CausalTimePrior, CaTSG, CausalTime benchmark, Jander et al. causal audit uncovering persistence bias); incorporated production-grade TimesFM-3 (330M, 1T tokens) and Cadence error-bounded lossy compression; integrated living community leaderboards (TIME benchmark across 50 fresh datasets and HuggingFace Spaces); expanded synthesis to Table 6; updated PRISMA cohort to 102 verified included studies.
 - **2026-09-26 (v1.3.0)**: Iteration 5 update: Deepened omni-modal representations binding continuous numerical sensor waveforms, 2D visual spectrograms/satellite imagery, and time-aligned textual event logs (VisionTS++, VLT, Chronicle, ChronoSteer, TiMo); synthesized empirical energy profiles, integer-only quantization degradation (FP16 $\to$ INT8 $\to$ INT4), and edge hardware envelopes across microcontrollers, FPGAs, and embedded IoT devices (Table 5; HoliBench, FM-CAC, Ling et al., Cheraghinia et al., APEX-Edge, Tiny-TSM); deployed autonomous living discovery watchdog script (`scripts/watchdog.py`, `make watchdog`); updated PRISMA cohort to 92 verified included studies.
 - **2026-09-26 (v1.2.0)**: Iteration 4 update: Extended temporal search window to 2026-09-26; incorporated Spatio-Temporal Foundation Models (STFMs) unifying 1D temporal series with spatial graph topologies (OpenCity, UniST, UrbanDiT, UrbanFM, UrbanGPT, ST-LLM); expanded formal RQ6 to encompass algorithmic time complexity, KV-cache memory footprints, and sub-5ms hard real-time latency profiling across six foundation paradigms; automated continuous citation snowballing pipeline (`scripts/snowball.py`); updated PRISMA cohort to 81 verified included studies.
 - **2026-09-25 (v1.1.0)**: Iteration 3 update: Extended temporal search window to 2026-09-25; added explicit focus on fine-tuning vs. in-context adaptation trade-offs (PEFT, LoRA, PFN in-context priors) and scaling laws meta-regression ($\alpha_N, \alpha_D$); integrated continuous delta search and snowballing for emerging 2025–2026 preprints.

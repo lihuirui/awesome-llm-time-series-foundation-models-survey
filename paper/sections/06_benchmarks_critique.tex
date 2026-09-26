@@ -225,4 +225,53 @@ To systematically address cross-platform hardware discrepancies, recent literatu
 
 As detailed in Table~\ref{tab:energy_quantization_benchmarks}, lightweight architectures (e.g., Cheraghinia MLP~\cite{cheraghinia2025lightweight}, TTM~\cite{ekambaram2024ttm}, and APEX-Edge~\cite{pradhan2026apex}) consume between $0.18\text{ mJ}$ and $28.5\text{ mJ}$ per inference, operating comfortably within battery-buffered and energy-harvesting IoT regimes with negligible ($<1.2\%$) degradation under INT8 quantization. In contrast, multi-billion parameter LLMs demand over $18\text{ Joules}$ per forward pass and over $14\text{ GB}$ of VRAM, underscoring that compact, quantization-resilient native models are mandatory for sustainable edge intelligence.
 
+\subsection{Causal Auditing, Test-Time Adaptation Benchmarks, and Living Leaderboards}
+\label{sec:causal_audits_living_benchmarks}
+
+As foundation models increasingly transition from academic prototypes to mission-critical infrastructure, evaluation methodologies must evolve beyond aggregate static point-error metrics (MSE, MASE) toward verifying \emph{causal structural fidelity}, \emph{resilience under test-time drift}, and \emph{continuous contamination-resistant leaderboards}~\cite{jander2026causal,wang2026principled}. Table~\ref{tab:tta_causal_synthesis} systematically categorizes the core mechanisms, parameter footprints, and capability envelopes across the emerging landscape of test-time adaptation and causal foundation modeling.
+
+\begin{table*}[t]
+\caption{Systematic Synthesis of Test-Time Adaptation (TTA) and Causal Time-Series Foundation Models.}
+\label{tab:tta_causal_synthesis}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lp{2.4cm}p{4.2cm}cccp{3.8cm}}
+\toprule
+\textbf{Framework} & \textbf{Key Reference} & \textbf{Core Mechanism \& Adaptation / Causal Objective} & \textbf{Base Model} & \textbf{Param Footprint} & \textbf{Inference Overhead} & \textbf{Target Shift / Causal Capabilities} \\
+\midrule
+\multicolumn{7}{l}{\textbf{Category A: Test-Time Adaptation (TTA) under Non-Stationary Drift}} \\
+\midrule
+\textbf{TSF-TTA} & Kim et al.~\cite{kim2025battling} (AAAI'25) & Online update of normalization statistics and linear projection heads via temporal consistency loss $\mathcal{L}_{\text{TTA}} = \|\hat{\mathbf{y}}_{t} - \mathcal{T}(\hat{\mathbf{y}}_{t-1})\|_2^2$ & Frozen PatchTST / DLinear & Small ($<5\text{M}$) & $+12\%$ latency & Abrupt mean/variance non-stationarity without source data \\
+\midrule
+\textbf{AdaNODEs} & Dang et al.~\cite{dang2026adanodes} (ICASSP'26) & Continuous latent trajectory adaptation via Neural ODEs: $\frac{d\mathbf{z}(t)}{dt} = f_\theta(\mathbf{z}(t), t)$ with self-supervised reconstruction & Any Frozen Forecaster & Minimal ($0.15\text{M}$) & $+8\%$ latency & Source-free continuous non-linear temporal drift \\
+\midrule
+\textbf{RG-TTA} & Kumar et al.~\cite{kumar2026rgtta} (arXiv'26) & Regime-guided meta-control dynamically detecting stationary vs. non-stationary regimes, modulating gradient steps $\eta_t = \sigma(\text{RegimeGate}(X_t))$ & Pretrained Transformer & Zero extra params & $+5\%$ latency & Multi-regime streaming series; prevents catastrophic forgetting \\
+\midrule
+\textbf{FAC Framework} & Wang et al.~\cite{wang2026principled} (arXiv'26) & Frequency-Aware Calibration projecting updates onto orthogonal spectral sub-bands to suppress high-frequency noise explosion & Pretrained TSFM & Lightweight & $+10\%$ latency & Leakage-free streaming adaptation; eliminates noisy gradient divergence \\
+\midrule
+\multicolumn{7}{l}{\textbf{Category B: Causal Discovery, Structural Priors, and Counterfactual Foundation Models}} \\
+\midrule
+\textbf{Causal-PT} & Stein et al.~\cite{stein2024embracing} (arXiv'24) & Direct transformer mapping from multivariate temporal tokens to causal DAG adjacency matrix $\hat{\mathbf{A}} \in \{0, 1\}^{D \times D}$ pre-trained across 10M SCMs & Transformer Encoder & $25\text{M}$ & Single forward pass & Zero-shot discovery of directed causal graphs from observational series \\
+\midrule
+\textbf{CausalTimePrior} & Thumm \& Chen~\cite{thumm2026interventional} (arXiv'26) & Prior-Data Fitted Network (PFN) pre-trained on 500M synthetic interventional TSCMs to approximate exact in-context posterior $P(\mathbf{Y} \mid do(\mathbf{X}), \mathcal{D}_{\text{obs}})$ & Transformer PFN & $85\text{M}$ & Single forward pass & In-context causal effect estimation and zero-shot counterfactual forecasting \\
+\midrule
+\textbf{CaTSG} & Xia et al.~\cite{xia2025causal} (arXiv'25) & Structural causal score-based diffusion model conditioning reverse denoising trajectories on time-varying causal graphs $\mathcal{G}_t$ & Causal Diffusion Net & $45\text{M}$ & Multi-step ODE/SDE & Controllable trajectory generation under interventions ($do(X_i = \alpha)$) \\
+\midrule
+\textbf{CausalTime Bench} & Cheng et al.~\cite{cheng2023causaltime} (NeurIPS'23) & Deep normalizing flow generator providing realistic multivariate time series paired with verifiable ground-truth causal graphs & Benchmark Generator & N/A & Offline evaluation & Ground-truth benchmark suite for time-series causal discovery algorithms \\
+\midrule
+\textbf{Jander Audit} & Jander et al.~\cite{jander2026causal} (arXiv'26) & Synthetic interventional audit harness probing persistence bias and structural distortion across foundation models & Chronos-2, TimesFM, MOIRAI & N/A & Offline audit & Uncovers persistence bias and regime switch degradation in TSFMs \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+Synthesis of these evaluative frontiers yields four critical insights:
+\begin{enumerate}[leftmargin=*]
+    \item \emph{Causal Audits and the Persistence Bias Failure Mode}: Jander, van Heeswijk, and Mes~\cite{jander2026causal} demonstrate that transitioning from bespoke models to foundation forecasters creates systemic concentration risk. By probing state-of-the-art foundation models (Chronos-2~\cite{ansari2025chronos2}, TimesFM-2.5~\cite{das2024timesfm}, MOIRAI~\cite{woo2024moirai}) using synthetic interventional data generators, their causal audit reveals that foundation models exhibit a severe \emph{persistence bias}. Specifically, when probed with processes exhibiting delayed interventional responses, sudden regime shifts, or unobserved confounders, models default to extrapolating local lag trends, severely underestimating the magnitude and velocity of structural inflections.
+    \item \emph{Realistic Benchmarking for Temporal Causal Discovery}: Cheng et al.~\cite{cheng2023causaltime} establish CausalTime (NeurIPS 2023), resolving a core bottleneck in temporal causal validation. Prior benchmarks relied on oversimplified linear autoregressive models with Gaussian noise, producing synthetic evaluations disconnected from real-world physics. CausalTime utilizes deep invertible generative neural networks and normalizing flows to capture complex nonlinear dynamics and heteroskedasticity while deriving exact ground-truth causal DAGs, creating a rigorous standard benchmark for evaluating causal graph discovery.
+    \item \emph{Principled Test-Time Adaptation Benchmarking (FAC)}: Wang et al.~\cite{wang2026principled} critique existing TTA evaluations for subtle future-information leakage and ad-hoc batch scheduling. They establish a standardized leak-free streaming benchmark suite and introduce Frequency-Aware Calibration (FAC). FAC proves that adapting models directly in the raw temporal domain frequently amplifies high-frequency measurement noise into destructive gradient shocks; conversely, isolating adapter updates to orthogonal low- and mid-frequency Fourier sub-bands preserves base model stability while yielding consistent accuracy improvements across non-stationary streaming horizons.
+    \item \emph{Living Leaderboard Ecosystems (The TIME Benchmark)}: Addressing the rapid obsolescence of static benchmark datasets, Qiao et al.~\cite{qiao2026time} introduce the TIME benchmark (50 fresh datasets, 98 tasks) and the public Hugging Face TIME-Leaderboard (\url{https://huggingface.co/spaces/Real-TSF/TIME-leaderboard}). By pairing automated weekly evaluation pipelines with pattern-level time series decomposition, TIME evaluates foundation models across multi-scale periodicity, non-stationarity, and noise regimes, establishing a living, contamination-resistant community reference standard for zero-shot time-series intelligence.
+\end{enumerate}
+
+
 

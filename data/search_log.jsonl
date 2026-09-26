@@ -16,3 +16,6 @@
 {"timestamp": "2026-09-25 15:20:48", "source": "Crossref", "query": "(\"scaling law\" OR \"scaling laws\" OR \"are LLMs actually useful\" OR \"benchmark\" OR \"zero-shot forecasting\" OR \"GIFT-Eval\") AND (\"time series foundation\" OR \"LLM for time series\")", "hits": 54, "new_candidates": 54}
 {"timestamp": "2026-09-25 15:20:48", "source": "Semantic Scholar / arXiv", "query": "(\"in-context\" OR \"parameter-efficient\" OR \"fine-tuning\" OR \"latent-space\" OR \"open pretraining\" OR \"living benchmark\") AND (\"time series foundation\" OR \"time series model\")", "hits": 20, "new_candidates": 20}
 {"timestamp": "2026-09-25 18:40:24", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 10", "hits": 10, "new_candidates": 10}
+{"timestamp": "2026-09-26 04:35:56", "source": "Autonomous Living Watchdog (arXiv API)", "query": "Queries: 3", "hits": 0, "new_candidates": 0}
+{"timestamp": "2026-09-26 04:39:20", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 9", "hits": 9, "new_candidates": 8}
+{"timestamp": "2026-09-26 04:41:12", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 2", "hits": 2, "new_candidates": 2}

@@ -49,9 +49,9 @@ def generate_taxonomy_figure():
     # 3 Main Branches
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
-            ("Autoregressive & Patch Decoders", "Chronos, TimesFM, Timer,\nSundial, TiRex, Toto, Tabby, $t_0$"),
-            ("Masked, PFN & Edge Models", "MOMENT, MOIRAI, TTM, Tiny-TSM,\nAPEX, Cheraghinia MLP, LightGTS"),
-            ("Spatio-Temporal & Dynamical", "OpenCity, UniST, UrbanDiT, TiMo,\nUrbanFM, Time-MoE, EIDOS, FLAME")
+            ("Autoregressive & Patch Decoders", "Chronos, TimesFM-3, Timer,\nSundial, TiRex, Toto, Tabby, Cadence"),
+            ("TTA & Causal Foundation Models", "TSF-TTA, AdaNODEs, RG-TTA,\nCausalTimePrior, Causal-PT, CaTSG"),
+            ("Spatio-Temporal & Edge Models", "OpenCity, UniST, UrbanFM, TiMo,\nTiny-TSM, APEX, Cheraghinia MLP")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
             ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
@@ -59,8 +59,8 @@ def generate_taxonomy_figure():
             ("Omni-Modal & Joint Pretraining", "Chronicle, VLT, VisionTS++,\nChronoSteer, Time-VLM, TimeOmni")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Standardized Benchmarks", "GIFT-Eval, fev-bench, TimesX,\nSciTS, TimeSeriesExam, Insight Miner"),
-            ("Leakage & Calibration Audits", "It's TIME, Rethinking Evaluation,\nLiveHouse-TS, Probabilistic Reliab."),
+            ("Standardized & Living Benchmarks", "TIME Leaderboard, GIFT-Eval,\nfev-bench, TimesX, SciTS, CausalTime"),
+            ("Leakage, TTA & Causal Audits", "Jander Causal Audit, FAC TTA Bench,\nLiveHouse-TS, Probabilistic Reliab."),
             ("Energy, Edge & Agentic Suites", "HoliBench, FM-CAC, Ling et al.,\nBeyond Numerical, AION, WorkflowBench")
         ])
     ]
@@ -247,17 +247,20 @@ def generate_timeline_figure():
         (2026.50, 4.6, "TimesX", "Google/GT", "#2ca02c"),
         (2026.54, 3.0, "VLT", "Industrial AI", "#d62728"),
         (2026.58, 1.0, "LiveHouse-TS", "HKUST", "#2ca02c"),
+        (2026.65, 4.8, "TimesFM-3", "Google", "#1f77b4"),
+        (2026.68, 3.8, "Cadence", "PoliTo", "#1f77b4"),
         (2026.70, 0.7, "HoliBench", "UCLA", "#2ca02c"),
         (2026.70, 1.8, "$t_0$", "ETH Zurich", "#1f77b4"),
         (2026.72, 3.5, "Tabby", "Huawei", "#1f77b4"),
         (2026.75, 2.6, "TAC-Time", "ECNU", "#d62728"),
-        (2026.78, 4.4, "WorkflowBench", "Tokyo", "#2ca02c")
+        (2026.78, 4.4, "WorkflowBench", "Tokyo", "#2ca02c"),
+        (2026.82, 1.2, "Causal Audit", "Twente", "#2ca02c")
     ]
 
     # Draw timeline line
     ax.axhline(0, color='#444444', lw=2, zorder=1)
-    ax.set_xlim(2022.4, 2026.95)
-    ax.set_ylim(-0.8, 5.2)
+    ax.set_xlim(2022.4, 2026.98)
+    ax.set_ylim(-0.8, 5.3)
 
     # Years markers
     for yr in range(2023, 2027):
@@ -301,11 +304,14 @@ def generate_params_corpus_figure():
         ("ForecastPFN", 2023.90, 1.0e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("APEX-Edge", 2026.46, 1.05e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("Tiny-TSM", 2025.90, 2.3e7, "Native TSFM", "#1f77b4", (8, 6)),
+        ("Causal-PT", 2024.12, 2.5e7, "Native TSFM", "#1f77b4", (-14, 8)),
         ("OpenCity", 2024.62, 2.6e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("ICTSP", 2024.35, 4.2e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("FLAME", 2025.95, 4.5e7, "Native TSFM", "#1f77b4", (8, 0)),
+        ("CaTSG", 2025.75, 4.5e7, "Native TSFM", "#1f77b4", (-10, -8)),
         ("UrbanDiT", 2024.90, 4.5e7, "Native TSFM", "#1f77b4", (8, 6)),
         ("Timer", 2024.15, 8.4e7, "Native TSFM", "#1f77b4", (8, -8)),
+        ("CausalTimePrior", 2026.20, 8.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("VisionTS", 2024.65, 8.6e7, "LLM4TS / VLM", "#d62728", (8, -9)),
         ("VisionTS++", 2025.62, 8.6e7, "LLM4TS", "#d62728", (8, 6)),
         ("TiMo", 2025.38, 8.8e7, "Native TSFM", "#1f77b4", (8, -8)),
@@ -322,6 +328,7 @@ def generate_params_corpus_figure():
         ("APEX-Large", 2026.46, 2.69e8, "Native TSFM", "#1f77b4", (8, -8)),
         ("Moirai", 2024.15, 3.11e8, "Native TSFM", "#1f77b4", (8, -8)),
         ("Chronicle", 2026.38, 3.24e8, "LLM4TS", "#d62728", (8, 6)),
+        ("TimesFM-3", 2026.65, 3.3e8, "Native TSFM", "#1f77b4", (8, 0)),
         ("TAC-Time", 2026.72, 3.5e8, "LLM4TS", "#d62728", (8, 6)),
         ("$t_0$", 2026.70, 3.5e8, "Native TSFM", "#1f77b4", (-12, -12)),
         ("MOMENT", 2024.15, 3.85e8, "Native TSFM", "#1f77b4", (8, 8)),
@@ -349,11 +356,13 @@ def generate_params_corpus_figure():
     ax1.set_ylabel("Reported Parameters (Log Scale)", weight='bold', labelpad=8)
     ax1.set_title("(a) Model Parameter Count vs. Release Date", fontsize=11, weight='bold', color='#1f4e78')
     ax1.grid(True, linestyle=':', alpha=0.6)
-    ax1.set_xlim(2022.6, 2026.95)
+    ax1.set_xlim(2022.6, 2026.98)
 
     # Panel B: Stated Pretraining Corpus Size (Points / Observations)
     corpus_data = [
         ("MillionST (TiMo)", 2025.38, 1e6, "#1f77b4", (8, 0)),
+        ("Causal-PT Prior Graphs", 2024.12, 1e7, "#1f77b4", (8, 0)),
+        ("CausalTimePrior Priors", 2026.20, 5e8, "#1f77b4", (8, 0)),
         ("UTSD (Timer)", 2024.15, 1e9, "#1f77b4", (-12, 7)),
         ("Time-series Pile (MOMENT)", 2024.15, 1e9, "#1f77b4", (8, -9)),
         ("APEX Telemetry", 2026.46, 5e9, "#1f77b4", (8, -3)),
@@ -366,6 +375,7 @@ def generate_params_corpus_figure():
         ("Tabby Open Corpus", 2026.70, 1.5e11, "#1f77b4", (8, 6)),
         ("Time-300B (Time-MoE)", 2024.70, 3e11, "#1f77b4", (8, -3)),
         ("Toto Telemetry (Toto 1.0)", 2025.38, 1e12, "#1f77b4", (-12, 7)),
+        ("Google 1T (TimesFM-3)", 2026.65, 1e12, "#1f77b4", (8, -8)),
         ("Datadog Telemetry (Toto 2.0)", 2026.35, 1.5e12, "#1f77b4", (8, -3))
     ]
 

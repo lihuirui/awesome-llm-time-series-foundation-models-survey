@@ -2,7 +2,7 @@
 
 [![Survey Paper](https://img.shields.io/badge/Survey%20Paper-PDF-red?style=flat&logo=adobeacrobatreader)](paper/main.pdf)
 [![PRISMA 2020](https://img.shields.io/badge/PRISMA%202020-Reproducible-green?style=flat)](docs/PROTOCOL.md)
-[![Total Included](https://img.shields.io/badge/Included%20Studies-125-blue?style=flat)](data/papers.json)
+[![Total Included](https://img.shields.io/badge/Included%20Studies-137-blue?style=flat)](data/papers.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
@@ -54,13 +54,13 @@ graph TD
 
 | Phase | Metric | Count | Description |
 | :--- | :--- | :---: | :--- |
-| **Identification** | Total records retrieved | **140** | Systematic queries across arXiv and Crossref APIs |
+| **Identification** | Total records retrieved | **153** | Systematic queries across arXiv and Crossref APIs |
 | | Duplicates removed | **5** | Deduplication via DOI and arXiv identifiers |
-| **Screening** | Title & abstract screened | **135** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
-| | Excluded at Stage 1 | **9** | Out of domain / pre-2021 releases |
-| **Eligibility** | Full-text assessed | **126** | Assessed for architectural details and experimental rigor |
+| **Screening** | Title & abstract screened | **148** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
+| | Excluded at Stage 1 | **10** | Out of domain / pre-2021 releases |
+| **Eligibility** | Full-text assessed | **138** | Assessed for architectural details and experimental rigor |
 | | Deferred for P2 extraction | **1** | Candidates queued for detailed extraction in upcoming iteration |
-| **Included** | **Total Synthesized Studies** | **125** | **Core benchmark and foundation models synthesized** |
+| **Included** | **Total Synthesized Studies** | **137** | **Core benchmark and foundation models synthesized** |
 
 ---
 
@@ -138,6 +138,12 @@ graph TD
 | **SGA** | Nanjing University | arXiv 2026 | 15M (SGA Adapter) | Synthetic Gaussian and Realistic Multi-Step Benchmarks | State-Guided Hidden Trajectory Tokens; State-Guided Autoregressive (SGA) Uncertainty Head | [📄 Paper](https://arxiv.org/abs/2609.28582)<br/>🔒 Proprietary |
 | **Sparse Binary Transformers for Multivariate Time Series Modeling** | Colorado State University | arXiv 2023 | 0.8M (1-bit weights) | Multivariate Sensor & Energy Time Series | Binary Patch Tokenization with Multi-Rate Attention; Sparse Binary Transformer (1-Bit Weights {-1, +1}) | [📄 Paper](https://arxiv.org/abs/2308.04637)<br/>🔒 Proprietary |
 | **Q-DEQ** | Harbin Institute of Technology | arXiv 2026 | 0.3M (Quantized Equilibrium) | Edge Sensor Benchmarks | Quantized Continuous State Vector Projections; Quantized Deep Equilibrium Model (Q-DEQ) with Fixed-Point Solver | [📄 Paper](https://arxiv.org/abs/2609.24042)<br/>🔒 Proprietary |
+| **TimeRFT** | HKUST | arXiv 2026 | Adapted TSFM Backbones (TimesFM, Chronos, UniTS) | Multi-Domain Public Benchmarks (Weather, Electricity, Traffic, ETT) | Multi-Resolution Temporal Patching; Reinforcement Fine-Tuned TSFM with Quality-Aware Temporal Rewards | [📄 Paper](https://arxiv.org/abs/2605.00015)<br/>[💻 Code](https://github.com/LSY-Cython/TimeRFT) |
+| **TimeHF** | JD.com / Independent | arXiv 2025 | 6B | Industrial Supply Chain Telemetry (>20,000 Products) | Patch Convolutional Embedding; Billion-Scale Time-Series Transformer with Timeseries Policy Optimization (TPO) | [📄 Paper](https://arxiv.org/abs/2501.15942)<br/>[💻 Code](https://github.com/TimeHF/TimeHF) |
+| **GridSFM** | University of Washington / Microsoft | arXiv 2026 | 15M | 54 Transmission Grid Topologies (500 to 4,000 Buses) | Bus Injection & Voltage Vector Embeddings with Log-Penalized Slacks; Physics-Inspired Graph Neural Network Pretrained on Newton Power Flow | [📄 Paper](https://arxiv.org/abs/2609.30173)<br/>[💻 Code](https://github.com/UW-LIPS/GridSFM) |
+| **Time series Foundation Models based on Physics-Informed Synthetic Histories for Cold-Start Photovoltaic Forecasting** | Marche Polytechnic University | ICML 2026 Workshop | Evaluated across TabPFN-TS, Chronos-2, TimesFM | 440 Commercial Photovoltaic Sites (synthetic model chains via pvlib) | Synthetic History & Meteorological Covariate Patch Tokens; Zero-Shot Foundation Model Pipeline Conditioned on Physical Synthetic Histories | [📄 Paper](https://arxiv.org/abs/2606.07457)<br/>🔒 Proprietary |
+| **SurF** | University of Toronto / Vector Institute | arXiv 2026 | 12M | Earthquake, Retweet, Taobao, and Synthetic Poisson Point Process Streams | Continuous-Time Event Tuples & Scalable Cumulative Intensity Parameterization; Generative Continuous-Time Transformer with Time Rescaling Theorem Bijection | [📄 Paper](https://arxiv.org/abs/2605.14069)<br/>[💻 Code](https://github.com/mohammadrezaei/surf) |
+| **TradeFM** | J.P. Morgan AI Research | arXiv 2026 | 524M | Billions of Trade-Flow Events across 9,000+ Equities (US & APAC) | Scale-Invariant Universal Order-Flow Tokenization; 524M Generative Order Flow Transformer coupled with Deterministic Market Simulator | [📄 Paper](https://arxiv.org/abs/2602.23784)<br/>🔒 Proprietary |
 
 ### 2. Repurposed Large Language Models (LLM4TS)
 
@@ -182,6 +188,9 @@ graph TD
 | **Multimodal Collaborative Debate for Zero-Shot Time Series Reasoning** | KAIST | arXiv 2026 | 7B / 14B Backbones | Multimodal Collaborative Debate (MC-Debate) Swarm Framework | Interleaved Visual Plots, Text Prompts, and Patch Sequences | [📄 Paper](https://arxiv.org/abs/2601.19151)<br/>🔒 Proprietary |
 | **MetaCaster** | University of Connecticut | arXiv 2026 | Agent Controller + Lightweight Models (<1M) | Meta-Harness Agent for End-to-End Few-Shot Forecaster Synthesis | Few-Shot Temporal Context and Model Search Tokens | [📄 Paper](https://arxiv.org/abs/2608.23473)<br/>🔒 Proprietary |
 | **When Tomorrow Becomes Today** | Peking University | arXiv 2026 | 7B Agent Policy | Self-Evolving Policy Network for Agentic Forecasting | Temporal Policy Decisions and Historical Action Traces | [📄 Paper](https://arxiv.org/abs/2609.24862)<br/>🔒 Proprietary |
+| **Eliciting Chain-of-Thought Reasoning for Time Series Analysis using Reinforcement Learning** | Johns Hopkins University | NeurIPS 2025 | 7B (Llama / Mistral Backbones) | Discrete Tokenized LLM with Group Relative Policy Optimization (GRPO) | Residual Vector-Quantized VAE (RVQ-VAE) Discrete Tokens | [📄 Paper](https://arxiv.org/abs/2510.01116)<br/>[💻 Code](https://github.com/flxprkr/counts) |
+| **TimeMaster** | Zhejiang University | arXiv 2025 | 3B (Qwen2.5-VL-3B Backbone) | Multimodal LLM with Reinforcement Learning Reasoner | Visualized Signal Spectrograms & Waveform Embeddings | [📄 Paper](https://arxiv.org/abs/2506.13705)<br/>[💻 Code](https://github.com/zjr2000/TimeMaster) |
+| **LAST SToP For Modeling Asynchronous Time Series** | University of Guelph / Vector Institute | ICML 2025 | 7B (Llama-2, Mistral Backbones) | Language-modeled Asynchronous Time Series (LASTS) + Stochastic Soft Prompting (StoP) | Natural Language Prompting of Irregular Timestamped Tuples | [📄 Paper](https://arxiv.org/abs/2502.01922)<br/>[💻 Code](https://github.com/shubhamgupta1404/LASTS) |
 
 ### 3. Evaluations, Benchmarks, Scaling Laws & Critiques
 
@@ -215,6 +224,9 @@ graph TD
 | **Forecast-Dojo** | Penn State | Agentic Forecasting Benchmark, Replayable Market Simulation | We introduce Forecast-Dojo, a replayable environment for benchmarking and training LLM forecasting agents. It combines r... | [📄 Paper](https://arxiv.org/abs/2609.28876) — |
 | **TSFMAudit** | Zhejiang University | Pretraining Corpus Contamination Auditing, Leakage Quantification | Time series foundation models (TSFMs) are increasingly pretrained on large corpora, raising concerns that evaluation dat... | [📄 Paper](https://arxiv.org/abs/2605.26161) — |
 | **A Later Test Set Is Not a New Domain** | Sharif University of Technology | Temporal Domain Generalization, Pretraining Familiarity Auditing | Time-series foundation models are evaluated almost exclusively on public archives that predate them, so a strong score c... | [📄 Paper](https://arxiv.org/abs/2609.10357) [💻 Code](https://github.com/mahdinaser/tsfm-bench) |
+| **Foundation models for time series forecasting** | IMT Atlantique | Conformal Prediction Intervals, Zero-Shot Uncertainty Calibration, Coverage Guarantee Auditing | The zero-shot capabilities of foundation models (FMs) for time series forecasting offer promising potentials in conforma... | [📄 Paper](https://arxiv.org/abs/2507.08858) [💻 Code](https://github.com/sami-achour/tsfm-conformal) |
+| **Adaptive Conformal Anomaly Detection with Time Series Foundation Models for Signal Monitoring** | IBM Research | Adaptive Conformal Anomaly Detection, False-Alarm Rate Control, Distribution Shift Monitoring | We propose a post-hoc adaptive conformal anomaly detection method for monitoring time series that leverages predictions ... | [📄 Paper](https://arxiv.org/abs/2604.20122) — |
+| **RareCP** | Freie Universität Berlin | Regime-Aware Conformal Prediction, Asymmetric Prediction Intervals, Uncertainty Calibration | Recent advances in uncertainty quantification for time series forecasting show that conformal prediction can provide rel... | [📄 Paper](https://arxiv.org/abs/2605.08857) [💻 Code](https://github.com/mheurich/rarecp) |
 
 ---
 

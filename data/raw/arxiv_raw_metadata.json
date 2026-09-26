@@ -2341,5 +2341,215 @@
     "comment": null,
     "journal_ref": null,
     "doi": "10.48550/arXiv.2609.24042"
+  },
+  "2605.00015": {
+    "arxiv_id": "2605.00015",
+    "title": "TimeRFT: Stimulating Generalizable Time Series Forecasting for TSFMs via Reinforcement Finetuning",
+    "authors": [
+      "Li, Siyang",
+      "Chen, Yize",
+      "Zhu, Zijie",
+      "Pan, Yuxin",
+      "Guo, Yan",
+      "Huang, Ming",
+      "Xiong, Hui"
+    ],
+    "release_date": "2026-04-18",
+    "summary": "Time Series Foundation Models (TSFMs) have demonstrated strong generalization capability and data efficiency in time series forecasting through large-scale pretraining. However, adapting TSFMs to downstream forecasting tasks remains challenging due to temporal distribution shifts and varying data availability. Specifically, the non-stationary and uncertain nature of time series data leads to discrepancies between historical training and future forecasting distributions, making existing Supervised FineTuning (SFT)-based adaptation vulnerable to overfitting and limited generalization. Moreover, forecasting tasks often operate under varying data regimes, requiring TSFMs to extract generalizable temporal patterns from limited training samples. To address these challenges, we propose Time series Reinforcement FineTuning (TimeRFT), a reinforcement learning-based adaptation paradigm for TSFMs. TimeRFT introduces two forecasting-oriented training recipes: (i) A quality-aware temporal reward mechanism providing fine-grained credit assignment by holistically evaluating the contribution of each prediction step to overall forecasting performance. (ii) A difficulty-aware data selection strategy prioritizing informative time series samples with generalizable forecasting patterns. Extensive experiments on diverse real-world forecasting benchmarks demonstrate that TimeRFT consistently surpasses SFT-based adaptation methods across various real-world forecasting tasks with different data regimes, achieving improved prediction accuracy and enhanced generalization against unforeseen distribution shifts.",
+    "comment": "15 pages, 8 figures, In Submission",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2605.00015"
+  },
+  "2501.15942": {
+    "arxiv_id": "2501.15942",
+    "title": "TimeHF: Billion-Scale Time Series Models Guided by Human Feedback",
+    "authors": [
+      "Qi, Yongzhi",
+      "Hu, Hao",
+      "Lei, Dazhou",
+      "Zhang, Jianshen",
+      "Shi, Zhengxin",
+      "Huang, Yulin",
+      "Chen, Zhengyu",
+      "Lin, Xiaoming",
+      "Shen, Zuo-Jun Max"
+    ],
+    "release_date": "2025-01-27",
+    "summary": "Time series neural networks perform exceptionally well in real-world applications but encounter challenges such as limited scalability, poor generalization, and suboptimal zero-shot performance. Inspired by large language models, there is interest in developing large time series models (LTM) to address these issues. However, current methods struggle with training complexity, adapting human feedback, and achieving high predictive accuracy. We introduce TimeHF, a novel pipeline for creating LTMs with 6 billion parameters, incorporating human feedback. We use patch convolutional embedding to capture long time series information and design a human feedback mechanism called time-series policy optimization. Deployed in JD.com's supply chain, TimeHF handles automated replenishment for over 20,000 products, improving prediction accuracy by 33.21% over existing methods. This work advances LTM technology and shows significant industrial benefits.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2501.15942"
+  },
+  "2510.01116": {
+    "arxiv_id": "2510.01116",
+    "title": "Eliciting Chain-of-Thought Reasoning for Time Series Analysis using Reinforcement Learning",
+    "authors": [
+      "Parker, Felix",
+      "Chan, Nimeesha",
+      "Zhang, Chi",
+      "Ghobadi, Kimia"
+    ],
+    "release_date": "2025-10-01",
+    "summary": "Complex numerical time series analysis often demands multi-step reasoning capabilities beyond current models' reach. Tasks like medical diagnosis and weather forecasting require sequential reasoning processes - including counterfactual analysis, logical deduction, knowledge application, and multi-modal contextual integration - that existing time series models cannot explicitly perform. While recent research has shown large language models (LLMs) can achieve sophisticated Chain-of-Thought (CoT) reasoning through reinforcement learning (RL), these advances have primarily focused on mathematical and coding domains, with LLMs still demonstrating poor performance on time series tasks. We introduce Chain Of thought for Understanding Numerical Time Series (COUNTS), the first framework that trains LLMs to perform CoT reasoning across diverse time series tasks using RL with verifiable rewards. Our approach employs a Residual Vector-Quantized VAE to create high-fidelity discrete tokens that seamlessly integrate into a pre-trained LLM's vocabulary. COUNTS undergoes a two-stage training process: first, supervised fine-tuning on time series analysis tasks to master our novel representations, followed by Group Relative Policy Optimization training on verifiable problems using prompting strategies that encourage explicit reasoning steps before producing final answers. Our experiments demonstrate that this RL-driven approach with intermediate CoT reasoning significantly enhances LLM performance across various time series analysis tasks, opening new possibilities for complex temporal data reasoning.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2510.01116"
+  },
+  "2506.13705": {
+    "arxiv_id": "2506.13705",
+    "title": "TimeMaster: Training Time-Series Multimodal LLMs to Reason via Reinforcement Learning",
+    "authors": [
+      "Zhang, Junru",
+      "Feng, Lang",
+      "Guo, Xu",
+      "Wu, Yuhan",
+      "Dong, Yabo",
+      "Xu, Duanqing"
+    ],
+    "release_date": "2025-06-16",
+    "summary": "Time-series reasoning remains a significant challenge in multimodal large language models (MLLMs) due to the dynamic temporal patterns, ambiguous semantics, and lack of temporal priors. In this work, we introduce TimeMaster, a reinforcement learning (RL)-based method that enables time-series MLLMs to perform structured, interpretable reasoning directly over visualized time-series inputs and task prompts. TimeMaster adopts a three-part structured output format, reasoning, classification, and domain-specific extension, and is optimized via a composite reward function that aligns format adherence, prediction accuracy, and open-ended insight quality. The model is trained using a two-stage pipeline: we first apply supervised fine-tuning (SFT) to establish a good initialization, followed by Group Relative Policy Optimization (GRPO) at the token level to enable stable and targeted reward-driven improvement in time-series reasoning. We evaluate TimeMaster on the TimerBed benchmark across six real-world classification tasks based on Qwen2.5-VL-3B-Instruct. TimeMaster achieves state-of-the-art performance, outperforming both classical time-series models and few-shot GPT-4o by over 14.6% and 7.3% performance gain, respectively. Notably, TimeMaster goes beyond time-series classification: it also exhibits expert-like reasoning behavior, generates context-aware explanations, and delivers domain-aligned insights. Our results highlight that reward-driven RL can be a scalable and promising path toward integrating temporal understanding into time-series MLLMs.",
+    "comment": "Preprint",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2506.13705"
+  },
+  "2609.30173": {
+    "arxiv_id": "2609.30173",
+    "title": "GridSFM: A Foundation Model for Solving AC Optimal Power Flow",
+    "authors": [
+      "Bhan, Luke",
+      "Yang, Weiwei",
+      "Capetz, Margaret",
+      "Zhang, Baosen"
+    ],
+    "release_date": "2026-09-24",
+    "summary": "We introduce GridSFM, a framework that combines a pretrained foundation model across grid topologies with physics-informed fine-tuning for solving AC Optimal Power Flow (AC-OPF) at scale. It is a $15$ million parameter physics-inspired graph neural network pretrained across $54$ topologies of $500$ to $4{,}000$ buses. Our model attains a $2.45\\%$ zero-shot generation-cost error on a $10{,}000$ bus case held-out operating conditions with no degradation as system size grows. Building on this, we pair the pretrained backbone with a physics-informed fine-tuning design based on Newton's method for power flow. With only $100$ solved instances, GridSFM adapts to unseen grids up to $10{,}000$ buses. We show it out performs single topology, dedicated neural network models that are trained more data, both in terms of cost and solver iterations when deployed as warm starting points. In designing this foundation model, we overcome the fact that the feasible set for AC-OPF can be disconnected. This is an obstruction that prevents any continuous neural network from approximating the solution map. To do so, we lift the problem and relax its constraints with logarithmically penalized slacks. We prove that the resulting elastic feasible set is contractible, that the AC-OPF minimizers remain minimizers of the elastic problem above an explicit penalty threshold, and that projecting an approximate solution back onto the AC-OPF feasible set is well posed. We release all models, data, and code so that the community can build on a shared starting point for AC-OPF.",
+    "comment": "19 pages",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.30173"
+  },
+  "2606.07457": {
+    "arxiv_id": "2606.07457",
+    "title": "Time series Foundation Models based on Physics-Informed Synthetic Histories for Cold-Start Photovoltaic Forecasting",
+    "authors": [
+      "Longarini, Lorenzo",
+      "Rongoni, Alessandro",
+      "Silenzi, Simone",
+      "Frontoni, Emanuele",
+      "Rosati, Riccardo"
+    ],
+    "release_date": "2026-06-05",
+    "summary": "At commissioning time, Photovoltaic (PV) operators must forecast production before target-site observations are available, limiting the direct use of standard supervised forecasters. This cold-start setting is addressed with a zero-shot pipeline that generates a synthetic production history from plant metadata and meteorological covariates, enabling time-series foundation models (TSFMs) to forecast through inference-time conditioning. Five TSFMs are benchmarked against classical baselines under strict Cold-Start Baseline, Real Feedback, and Self-Forecast Feedback strategies. The evaluation spans $440$ PV sites across four datasets and diverse climate regimes. Covariate-aware foundation models outperform baselines by approximately $1.7-2\\times$: TabPFN-TS achieves the lowest error under Real Feedback (MAE $0.514$, RMSE $0.721$ $kWh$ ${kWp}^{-1}$ ${d}^{-1}$), while Chronos-2 is most robust under Self-Forecast Feedback. Performance is largely insensitive to the synthetic-history source, indicating that accuracy is driven more by the availability of plausible temporal context than by the specific generator.",
+    "comment": "To be published in the 2nd ICML Workshop on Foundation Models for Structured Data",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2606.07457"
+  },
+  "2507.08858": {
+    "arxiv_id": "2507.08858",
+    "title": "Foundation models for time series forecasting: Application in conformal prediction",
+    "authors": [
+      "Achour, Sami",
+      "Bouher, Yassine",
+      "Nguyen, Duong",
+      "Chesneau, Nicolas"
+    ],
+    "release_date": "2025-07-09",
+    "summary": "The zero-shot capabilities of foundation models (FMs) for time series forecasting offer promising potentials in conformal prediction, as most of the available data can be allocated to calibration. This study compares the performance of Time Series Foundation Models (TSFMs) with traditional methods, including statistical models and gradient boosting, within a conformal prediction setting. Our findings highlight two key advantages of TSFMs. First, when the volume of data is limited, TSFMs provide more reliable conformalized prediction intervals than classic models, thanks to their superior predictive accuracy. Second, the calibration process is more stable because more data are used for calibration. Morever, the fewer data available, the more pronounced these benefits become, as classic models require a substantial amount of data for effective training. These results underscore the potential of foundation models in improving conformal prediction reliability in time series applications, particularly in data-constrained cases. All the code to reproduce the experiments is available.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2507.08858"
+  },
+  "2604.20122": {
+    "arxiv_id": "2604.20122",
+    "title": "Adaptive Conformal Anomaly Detection with Time Series Foundation Models for Signal Monitoring",
+    "authors": [
+      "Gil, Natalia Martinez",
+      "O'Donncha, Fearghal",
+      "Gifford, Wesley M.",
+      "Zhou, Nianjun",
+      "Patel, Dhaval C.",
+      "Vaculin, Roman"
+    ],
+    "release_date": "2026-04-22",
+    "summary": "We propose a post-hoc adaptive conformal anomaly detection method for monitoring time series that leverages predictions from pre-trained foundation models without requiring additional fine-tuning. Our method yields an interpretable anomaly score directly interpretable as a false alarm rate (p-value), facilitating transparent and actionable decision-making. It employs weighted quantile conformal prediction bounds and adaptively learns optimal weighting parameters from past predictions, enabling calibration under distribution shifts and stable false alarm control, while preserving out-of-sample guarantees. As a model-agnostic solution, it integrates seamlessly with foundation models and supports rapid deployment in resource-constrained environments. This approach addresses key industrial challenges such as limited data availability, lack of training expertise, and the need for immediate inference, while taking advantage of the growing accessibility of time series foundation models. Experiments on both synthetic and real-world datasets show that the proposed approach delivers strong performance, combining simplicity, interpretability, robustness, and adaptivity.",
+    "comment": "Code in : <a href=\"https://github.com/ibm-granite/granite-tsfm/tree/main/notebooks/hfdemo/adaptive_conformal_tsad\" rel=\"external noopener nofollow\" class=\"link-external link-https\">this https URL</a>",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2604.20122"
+  },
+  "2605.08857": {
+    "arxiv_id": "2605.08857",
+    "title": "RareCP: Regime-Aware Retrieval for Efficient Conformal Prediction",
+    "authors": [
+      "Heurich, Manuel",
+      "Granz, Maximilian",
+      "Landgraf, Tim"
+    ],
+    "release_date": "2026-05-09",
+    "summary": "Recent advances in uncertainty quantification for time series forecasting show that conformal prediction can provide reliable prediction intervals, yet standard conformal methods are often inefficient under temporal dependence, drift, and heterogeneous error behavior. Existing methods typically either update miscoverage rates over time or learn unconstrained calibration weights, without explicitly separating two central sources of nonstationarity: smoothly drifting error distributions and co-existing distinct error regimes. We introduce RareCP, a regime-aware retrieval method for adaptive conformal time series prediction. RareCP learns local calibration representations through a mixture of cosine-attention experts that each capture distinct error regimes, while a compact hypernetwork adapts the kernel parameters to track temporal drift. Given a new forecasting context, RareCP retrieves the top-k most relevant calibration examples, assigns similarity weights, and forms a weighted conformal quantile over their signed residuals, yielding asymmetric prediction intervals. The adaptive kernel is trained using a smooth interval score objective, with a parameter-space anchor to a lightweight teacher kernel to preserve stable local representations. On the GIFT-Eval benchmark, RareCP improves interval efficiency over recent conformal baselines and foundation model uncertainty estimates while maintaining empirical coverage. Ablations confirm that regime-specific experts, drift-adaptive kernels, sparse retrieval, and teacher anchoring each contribute to the final performance.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2605.08857"
+  },
+  "2502.01922": {
+    "arxiv_id": "2502.01922",
+    "title": "LAST SToP For Modeling Asynchronous Time Series",
+    "authors": [
+      "Gupta, Shubham",
+      "Durand, Thibaut",
+      "Taylor, Graham",
+      "Białokozowicz, Lilian W."
+    ],
+    "release_date": "2025-02-04",
+    "summary": "We present a novel prompt design for Large Language Models (LLMs) tailored to Asynchronous Time Series. Unlike regular time series, which assume values at evenly spaced time points, asynchronous time series consist of timestamped events occurring at irregular intervals, each described in natural language. Our approach effectively utilizes the rich natural language of event descriptions, allowing LLMs to benefit from their broad world knowledge for reasoning across different domains and tasks. This allows us to extend the scope of asynchronous time series analysis beyond forecasting to include tasks like anomaly detection and data imputation. We further introduce Stochastic Soft Prompting, a novel prompt-tuning mechanism that significantly improves model performance, outperforming existing fine-tuning methods such as QLoRA. Through extensive experiments on real world datasets, we demonstrate that our approach achieves state-of-the-art performance across different tasks and datasets.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2502.01922"
+  },
+  "2605.14069": {
+    "arxiv_id": "2605.14069",
+    "title": "SurF: A Generative Model for Multivariate Irregular Time Series Forecasting",
+    "authors": [
+      "Rezaei, Mohammad R.",
+      "Balaji, Tejas",
+      "Krishnan, Rahul G."
+    ],
+    "release_date": "2026-05-13",
+    "summary": "Irregularly sampled multivariate event streams remain a difficult modality for generative modeling: tokenization-based approaches break down when inter-event intervals vary by orders of magnitude. We (i) propose \\textbf{SurF}, a generative model that uses the Time Rescaling Theorem (TRT) as a learnable bijection between event sequences and i.i.d.\\ unit-rate exponential noise, enabling a single model to be trained across heterogeneous event-stream datasets; (ii) three efficient parameterizations of the cumulative intensity that scale to long sequences; and (iii) a Transformer-based encoder for multi-dataset pretraining. On six real-world benchmarks, SurF achieves the best reported time RMSE on Earthquake, Retweet, and Taobao, and is within trial-level noise of the strongest specialist on the remaining three. Under a strict leave-one-out protocol, the held-out checkpoint beats every classical and neural-autoregressive baseline on $5/6$ datasets and beats every baseline on Amazon and Earthquake, an initial step toward foundation models over asynchronous event streams (Code is available at https://github.com/MrRezaeiUofT/SurF).",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2605.14069"
+  },
+  "2602.23784": {
+    "arxiv_id": "2602.23784",
+    "title": "TradeFM: A Generative Foundation Model for Trade-flow and Market Microstructure",
+    "authors": [
+      "Kawawa-Beaudan, Maxime",
+      "Sood, Srijan",
+      "Papasotiriou, Kassiani",
+      "Borrajo, Daniel",
+      "Veloso, Manuela"
+    ],
+    "release_date": "2026-02-27",
+    "summary": "Foundation models have transformed domains from language to genomics by learning general-purpose representations from large-scale, heterogeneous data. We introduce TradeFM, a 524M-parameter generative Transformer that brings this paradigm to market microstructure, learning directly from billions of trade events across >9K equities. To enable cross-asset generalization, we develop scale-invariant features and a universal tokenization scheme that map the heterogeneous, multi-modal event stream of order flow into a unified discrete sequence -- eliminating asset-specific calibration. Integrated with a deterministic market simulator, TradeFM-generated rollouts reproduce key stylized facts of financial returns, including heavy tails, volatility clustering, and absence of return autocorrelation. Quantitatively, TradeFM achieves 2-3x lower distributional error than Compound Hawkes baselines and generalizes zero-shot to geographically out-of-distribution APAC markets with moderate perplexity degradation. Together, these results suggest that scale-invariant trade representations capture transferable structure in market microstructure, opening a path toward synthetic data generation, stress testing, and learning-based trading agents.",
+    "comment": "29 pages, 17 figures, 6 tables. Preprint",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2602.23784"
+  },
+  "2504.04011": {
+    "arxiv_id": "2504.04011",
+    "title": "Foundation Models for Time Series: A Survey",
+    "authors": [
+      "Kottapalli, Siva Rama Krishna",
+      "Hubli, Karthik",
+      "Chandrashekhara, Sandeep",
+      "Jain, Garima",
+      "Hubli, Sunayana",
+      "Botla, Gayathri",
+      "Doddaiah, Ramesh"
+    ],
+    "release_date": "2025-04-05",
+    "summary": "Transformer-based foundation models have emerged as a dominant paradigm in time series analysis, offering unprecedented capabilities in tasks such as forecasting, anomaly detection, classification, trend analysis and many more time series analytical tasks. This survey provides a comprehensive overview of the current state of the art pre-trained foundation models, introducing a novel taxonomy to categorize them across several dimensions. Specifically, we classify models by their architecture design, distinguishing between those leveraging patch-based representations and those operating directly on raw sequences. The taxonomy further includes whether the models provide probabilistic or deterministic predictions, and whether they are designed to work with univariate time series or can handle multivariate time series out of the box. Additionally, the taxonomy encompasses model scale and complexity, highlighting differences between lightweight architectures and large-scale foundation models. A unique aspect of this survey is its categorization by the type of objective function employed during training phase. By synthesizing these perspectives, this survey serves as a resource for researchers and practitioners, providing insights into current trends and identifying promising directions for future research in transformer-based time series modeling.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2504.04011"
   }
 }

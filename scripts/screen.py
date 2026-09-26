@@ -922,6 +922,92 @@ SPECS = {
         "tokenization": "Multi-Horizon Covariate and Target Patch Streams", "prediction_head": "N/A (Benchmark Evaluation & Distribution Shift Stress-Tester)",
         "params": "not reported", "pretrain_corpus": "PJM, EPEX, and Australian Electricity Market Telemetry", "tasks": ["Electricity Price Forecasting", "Covariate Shift Stress-Testing", "Contamination Audit"],
         "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+
+    # Iteration 9 Additions: Post-Training Policy Optimization (RLHF/RLPF), Conformal Prediction, Physics Foundations & Asynchronous Event Streams
+    "2605.00015": {
+        "bibkey": "li2026timerft",
+        "group": "HKUST", "paradigm": "Native TSFM", "architecture": "Reinforcement Fine-Tuned TSFM with Quality-Aware Temporal Rewards",
+        "tokenization": "Multi-Resolution Temporal Patching", "prediction_head": "Quality-Reward Guided Forecast Head",
+        "params": "Adapted TSFM Backbones (TimesFM, Chronos, UniTS)", "pretrain_corpus": "Multi-Domain Public Benchmarks (Weather, Electricity, Traffic, ETT)", "tasks": ["Zero-Shot Forecasting", "Reinforcement Fine-Tuning", "Distribution Shift Adaptation"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/LSY-Cython/TimeRFT"
+    },
+    "2501.15942": {
+        "bibkey": "qi2025timehf",
+        "group": "JD.com / Independent", "paradigm": "Native TSFM", "architecture": "Billion-Scale Time-Series Transformer with Timeseries Policy Optimization (TPO)",
+        "tokenization": "Patch Convolutional Embedding", "prediction_head": "TPO-Guided Autoregressive Forecast Head",
+        "params": "6B", "pretrain_corpus": "Industrial Supply Chain Telemetry (>20,000 Products)", "tasks": ["Supply Chain Replenishment", "Zero-Shot Forecasting", "Human-Feedback Alignment"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": "https://github.com/TimeHF/TimeHF"
+    },
+    "2510.01116": {
+        "bibkey": "parker2025counts",
+        "group": "Johns Hopkins University", "paradigm": "LLM4TS", "architecture": "Discrete Tokenized LLM with Group Relative Policy Optimization (GRPO)",
+        "tokenization": "Residual Vector-Quantized VAE (RVQ-VAE) Discrete Tokens", "prediction_head": "Chain-of-Thought Autoregressive Token Generation",
+        "params": "7B (Llama / Mistral Backbones)", "pretrain_corpus": "ECG-QA, Context-Is-Key, UCR Archive Reasoned Traces", "tasks": ["Chain-of-Thought Temporal Reasoning", "Zero-Shot Classification", "Contextual Forecasting"],
+        "open_weights": True, "venue": "NeurIPS 2025", "code_url": "https://github.com/flxprkr/counts"
+    },
+    "2506.13705": {
+        "bibkey": "zhang2025timemaster",
+        "group": "Zhejiang University", "paradigm": "LLM4TS", "architecture": "Multimodal LLM with Reinforcement Learning Reasoner",
+        "tokenization": "Visualized Signal Spectrograms & Waveform Embeddings", "prediction_head": "Structured Multimodal Reasoning & Output Synthesis",
+        "params": "3B (Qwen2.5-VL-3B Backbone)", "pretrain_corpus": "Physiological Signals (EMG, ECG) & HAR Telemetry", "tasks": ["Multimodal Signal Reasoning", "Physiological Time-Series QA", "Anomaly Diagnosis"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": "https://github.com/zjr2000/TimeMaster"
+    },
+    "2609.30173": {
+        "bibkey": "bhan2026gridsfm",
+        "group": "University of Washington / Microsoft", "paradigm": "Native TSFM", "architecture": "Physics-Inspired Graph Neural Network Pretrained on Newton Power Flow",
+        "tokenization": "Bus Injection & Voltage Vector Embeddings with Log-Penalized Slacks", "prediction_head": "Physics-Constrained Power Flow Dispatch Head",
+        "params": "15M", "pretrain_corpus": "54 Transmission Grid Topologies (500 to 4,000 Buses)", "tasks": ["AC Optimal Power Flow", "Zero-Shot Grid Generalization", "Physics-Informed Optimization"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/UW-LIPS/GridSFM"
+    },
+    "2606.07457": {
+        "bibkey": "longarini2026physics",
+        "group": "Marche Polytechnic University", "paradigm": "Native TSFM", "architecture": "Zero-Shot Foundation Model Pipeline Conditioned on Physical Synthetic Histories",
+        "tokenization": "Synthetic History & Meteorological Covariate Patch Tokens", "prediction_head": "Inference-Time Conditioned Zero-Shot Projection",
+        "params": "Evaluated across TabPFN-TS, Chronos-2, TimesFM", "pretrain_corpus": "440 Commercial Photovoltaic Sites (synthetic model chains via pvlib)", "tasks": ["Cold-Start Photovoltaic Forecasting", "Zero-Shot Inference Conditioning"],
+        "open_weights": True, "venue": "ICML 2026 Workshop", "code_url": None
+    },
+    "2507.08858": {
+        "bibkey": "achour2025conformal",
+        "group": "IMT Atlantique", "paradigm": "Evaluation & Benchmark", "architecture": "Split Conformal Prediction (SCP) Harness for Zero-Shot TSFMs",
+        "tokenization": "Continuous Horizon Windows & Nonconformity Scores", "prediction_head": "Distribution-Free Conformal Prediction Intervals",
+        "params": "Evaluated across Lag-Llama, TimesFM, Chronos", "pretrain_corpus": "ERCOT, NN5 Daily, NN5 Weekly, M3 Monthly Benchmarks", "tasks": ["Conformal Prediction Intervals", "Zero-Shot Uncertainty Calibration", "Coverage Guarantee Auditing"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": "https://github.com/sami-achour/tsfm-conformal"
+    },
+    "2604.20122": {
+        "bibkey": "martinezgil2026adaptive",
+        "group": "IBM Research", "paradigm": "Evaluation & Benchmark", "architecture": "Adaptive Weighted Quantile Conformal Anomaly Detection Harness",
+        "tokenization": "Sliding Window Prediction Residuals", "prediction_head": "Interpretable False-Alarm Rate Controlled P-Values",
+        "params": "Evaluated across TimesFM and Chronos-Bolt", "pretrain_corpus": "Industrial IoT Telemetry & Signal Monitoring Streams", "tasks": ["Adaptive Conformal Anomaly Detection", "False-Alarm Rate Control", "Distribution Shift Monitoring"],
+        "open_weights": True, "venue": "ICLR 2026", "code_url": None
+    },
+    "2605.08857": {
+        "bibkey": "heurich2026rarecp",
+        "group": "Freie Universität Berlin", "paradigm": "Evaluation & Benchmark", "architecture": "Regime-Aware Retrieval Cosine-Attention MoE Conformal Engine",
+        "tokenization": "Context Retrieval Tokens & Residual Embeddings", "prediction_head": "Asymmetric Weighted Conformal Quantile Predictor",
+        "params": "Hypernetwork + Mixture of Cosine-Attention Experts", "pretrain_corpus": "GIFT-Eval Benchmark Suite", "tasks": ["Regime-Aware Conformal Prediction", "Asymmetric Prediction Intervals", "Uncertainty Calibration"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/mheurich/rarecp"
+    },
+    "2502.01922": {
+        "bibkey": "gupta2025laststop",
+        "group": "University of Guelph / Vector Institute", "paradigm": "LLM4TS", "architecture": "Language-modeled Asynchronous Time Series (LASTS) + Stochastic Soft Prompting (StoP)",
+        "tokenization": "Natural Language Prompting of Irregular Timestamped Tuples", "prediction_head": "Autoregressive LLM Sequence Generation",
+        "params": "7B (Llama-2, Mistral Backbones)", "pretrain_corpus": "Irregular Clinical & Sensor Time-Series Benchmarks", "tasks": ["Asynchronous Time Series Modeling", "Irregular Anomaly Detection", "Continuous Imputation"],
+        "open_weights": True, "venue": "ICML 2025", "code_url": "https://github.com/shubhamgupta1404/LASTS"
+    },
+    "2605.14069": {
+        "bibkey": "rezaei2026surf",
+        "group": "University of Toronto / Vector Institute", "paradigm": "Native TSFM", "architecture": "Generative Continuous-Time Transformer with Time Rescaling Theorem Bijection",
+        "tokenization": "Continuous-Time Event Tuples & Scalable Cumulative Intensity Parameterization", "prediction_head": "Invertible Flow Sampling over Unit-Rate Exponential Noise",
+        "params": "12M", "pretrain_corpus": "Earthquake, Retweet, Taobao, and Synthetic Poisson Point Process Streams", "tasks": ["Continuous-Time Irregular Event Forecasting", "Multi-Dataset Pretraining", "Temporal Point Process Generative Modeling"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/mohammadrezaei/surf"
+    },
+    "2602.23784": {
+        "bibkey": "kawawabeaudan2026tradefm",
+        "group": "J.P. Morgan AI Research", "paradigm": "Native TSFM", "architecture": "524M Generative Order Flow Transformer coupled with Deterministic Market Simulator",
+        "tokenization": "Scale-Invariant Universal Order-Flow Tokenization", "prediction_head": "Autoregressive Trade-Event Probability Distribution",
+        "params": "524M", "pretrain_corpus": "Billions of Trade-Flow Events across 9,000+ Equities (US & APAC)", "tasks": ["Market Microstructure Simulation", "Zero-Shot Cross-Market Rollouts", "Order Flow Modeling"],
+        "open_weights": False, "venue": "arXiv 2026", "code_url": None
     }
 }
 

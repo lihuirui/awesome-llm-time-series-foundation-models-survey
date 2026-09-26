@@ -1,6 +1,6 @@
 {
   "updated": "2026-09-26",
-  "total_included": 125,
+  "total_included": 137,
   "papers": [
     {
       "id": "arxiv:2401.03955",
@@ -27,7 +27,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "ekambaram2024ttm",
@@ -85,7 +85,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "jin2023largemodels",
@@ -132,7 +132,7 @@
         "Q3_model_families",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "zhou2023onefitsall",
@@ -184,7 +184,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liu2024timer",
@@ -231,7 +231,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "chang2023llm4ts",
@@ -277,7 +277,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "gruver2023llmtime",
@@ -322,7 +322,7 @@
       "matched_queries": [
         "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "dooley2023forecastpfn",
@@ -371,7 +371,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "cao2023tempo",
@@ -415,7 +415,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "xue2022promptcast",
@@ -463,7 +463,7 @@
       "matched_queries": [
         "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liu2024unitime",
@@ -509,7 +509,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "das2024timesfm",
@@ -563,7 +563,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "jin2023timellm",
@@ -622,7 +622,7 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "rasul2023lagllama",
@@ -673,7 +673,7 @@
       "matched_queries": [
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "yue2024timemmd",
@@ -719,7 +719,7 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wang2024timemixer",
@@ -766,7 +766,7 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "woo2024moirai",
@@ -815,7 +815,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "goswami2024moment",
@@ -865,7 +865,7 @@
         "Q2_llm4ts",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liu2024autotimes",
@@ -912,7 +912,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "zhou2024units",
@@ -976,7 +976,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "ansari2024chronos",
@@ -1026,7 +1026,7 @@
         "Q2_llm4ts",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liu2024calf",
@@ -1075,7 +1075,7 @@
       "matched_queries": [
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wang2024timexer",
@@ -1123,7 +1123,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wu2024s2ipllm",
@@ -1168,7 +1168,7 @@
         "Q2_llm4ts",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "lu2024incontext",
@@ -1217,7 +1217,7 @@
       "matched_queries": [
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "chen2024timecma",
@@ -1268,7 +1268,7 @@
         "Q1_native_tsfm",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "woo2024moiraimoe",
@@ -1313,7 +1313,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "cai2024timeseriesexam",
@@ -1361,7 +1361,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liu2024timerxl",
@@ -1408,7 +1408,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "zhong2025timevlm",
@@ -1459,7 +1459,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "xie2024chatts",
@@ -1510,7 +1510,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "salesforce2024gifteval",
@@ -1559,7 +1559,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "shi2024timemoe",
@@ -1608,7 +1608,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "jin2025timemqa",
@@ -1658,7 +1658,7 @@
         "Q2_llm4ts",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "chen2024visionts",
@@ -1703,7 +1703,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "muller2025tabpfnts",
@@ -1753,7 +1753,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "thuml2025sundial",
@@ -1800,7 +1800,7 @@
       "comment": "Accepted by the 13th International Conference on Learning Representations (ICLR 2025)",
       "journal_ref": null,
       "matched_queries": [],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wang2024timemixerplus",
@@ -1850,7 +1850,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "kowsher2024llmmixer",
@@ -1897,7 +1897,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "das2024incontext",
@@ -1946,7 +1946,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "zhang2024chattime",
@@ -1998,7 +1998,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "zhang2025kairos",
@@ -2045,7 +2045,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "gong2025rethinkingeval",
@@ -2101,7 +2101,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wu2025scits",
@@ -2153,7 +2153,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "jin2025timeomni",
@@ -2219,7 +2219,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "raj2025opentslm",
@@ -2273,7 +2273,7 @@
       "matched_queries": [
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "zhang2025insightminer",
@@ -2324,7 +2324,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "auer2025tirex",
@@ -2386,7 +2386,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "cohen2025toto",
@@ -2436,7 +2436,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wang2025lightgts",
@@ -2484,7 +2484,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liu2025yinglong",
@@ -2532,7 +2532,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wu2025flame",
@@ -2578,7 +2578,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "king2025flowstate",
@@ -2630,7 +2630,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "woo2025moirai2",
@@ -2696,7 +2696,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "ansari2025chronos2",
@@ -2746,7 +2746,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "zhou2026eidos",
@@ -2793,7 +2793,7 @@
       "comment": "Accepted by the Forty-third International Conference on Machine Learning (ICML 2026)",
       "journal_ref": null,
       "matched_queries": [],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "guan2026timeomnivl",
@@ -2842,7 +2842,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wen2026livehouse",
@@ -2889,7 +2889,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liang2026tactime",
@@ -2942,9 +2942,8 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
-      "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction",
       "screen_date": "2026-09-26",
       "bibkey": "qiao2026time",
       "group": "THUML / Tsinghua / Monash",
@@ -2977,13 +2976,13 @@
       "arxiv_id": "2609.26389",
       "title": "TimeInteract: Towards Real-Time Interactive Intelligence for Streaming Time Series",
       "authors": [
-        "Sheng Pan",
-        "Yongli Gu",
-        "Yiqing Guo",
-        "Warren Jin",
-        "Bo Du",
-        "Shirui Pan",
-        "Ming Jin"
+        "Pan, Sheng",
+        "Gu, Yongli",
+        "Guo, Yiqing",
+        "Jin, Warren",
+        "Du, Bo",
+        "Pan, Shirui",
+        "Jin, Ming"
       ],
       "release_date": "2026-09-22",
       "summary": "Real-world time series evolve continuously, with meaningful changes potentially emerging at any moment. However, existing time-series language models (TSLMs) remain inherently static. They either receive complete sequences for offline processing or alternate between streaming input and response generation, which prevents processing of new observations during interaction. We introduce a new regime, Time-Series Interaction: a model continuously perceives incoming time-series observations and user intent, autonomously decides when to remain silent or respond, and continues processing new observations during response generation. To realize this, we develop TimeInteract with three key designs: a dual-view streaming TS encoder that captures local variations and historical dynamics, a response control mechanism that learns when to trigger a response, and a decoupled streaming inference mechanism that separates control from response generation to avoid blocking subsequent observations. We further formulate a hierarchy of interaction capabilities, progressing from Understanding to Adaptivity. Based on this hierarchy, we construct StreamTSI-34K, a large-scale streaming TS interaction dataset with 34,588 episodes and 77,505 responses across synthetic and real-world time series in single- and multi-turn settings. Across all four interaction levels, TimeInteract consistently outperforms existing LLMs, VLMs, and TSLMs, with gains of up to 23.92 points on challenging tasks. It also improves response triggering while achieving near-zero stream stall and up to $2.15\\times$ inference speedup.",
@@ -2993,9 +2992,8 @@
         "Q2_llm4ts",
         "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
-      "exclusion_reason": "EC1: Narrow task-specific model lacking cross-domain foundation pretraining",
       "screen_date": "2026-09-26",
       "bibkey": "pan2026timeinteract",
       "group": "Ming Jin",
@@ -3046,9 +3044,8 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
-      "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction",
       "screen_date": "2026-09-26",
       "bibkey": "chen2026beyondnumerical",
       "group": "Peking University / CAS",
@@ -3099,7 +3096,7 @@
         "Q3_model_families",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "thuml2026timers1",
@@ -3145,7 +3142,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liu2026timesx",
@@ -3196,7 +3193,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "meyer2026t0",
@@ -3242,9 +3239,8 @@
       "matched_queries": [
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
-      "exclusion_reason": "EC4: Secondary candidate deferred for future cohort extraction",
       "screen_date": "2026-09-26",
       "bibkey": "zhan2026aion",
       "group": "Ming Jin Group / Monash",
@@ -3297,7 +3293,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "kan2026trace",
@@ -3354,7 +3350,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "xie2026tabby",
@@ -3411,7 +3407,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "datadog2026toto2",
@@ -3463,7 +3459,7 @@
         "Q4_benchmarks_critiques",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "chen2026timevista",
@@ -3508,7 +3504,7 @@
         "Q1_native_tsfm",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "li2026evaluatingreliability",
@@ -3551,7 +3547,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "nagashima2026forecastworkflow",
@@ -3598,7 +3594,7 @@
         "Q3_model_families",
         "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "nie2023patchtst",
@@ -3645,7 +3641,7 @@
         "Q2_llm4ts",
         "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "fons2024arellmsuseful",
@@ -3690,7 +3686,7 @@
         "Q1_native_tsfm",
         "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 15:20:48",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "sun2023test",
@@ -3738,9 +3734,10 @@
       "comment": "Accepted by KDD'2024 as Full Paper",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 18:40:24",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "li2024urbangpt",
@@ -3785,9 +3782,10 @@
       "comment": "12 pages",
       "journal_ref": "ACM TIST, 2025",
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 18:40:24",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "li2024opencity",
@@ -3831,9 +3829,10 @@
       "comment": "2024 ACM SIGKDD International Conference on Knowledge Discovery and Data Mining, KDD 2024",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 18:40:24",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "yuan2024unist",
@@ -3879,9 +3878,10 @@
       "comment": "Accepted by MDM 2024 (Research Track)",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-25 18:40:24",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "liu2024stllm",
@@ -3926,9 +3926,11 @@
       "comment": "Accepted by NeurIPS 2025",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 18:40:24",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "li2024urbandit",
@@ -3973,9 +3975,11 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 18:40:24",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "chen2026urbanfm",
@@ -4018,9 +4022,10 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 18:40:24",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "goodge2025stfmvision",
@@ -4066,9 +4071,10 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-25 18:40:24",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "shchur2025fevbench",
@@ -4115,9 +4121,11 @@
       "comment": "19 pages",
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "shen2025visiontsplus",
@@ -4160,9 +4168,11 @@
       "comment": "18 pages, 13 figures, and 13 tables, including supplementary material. Haiteng Wang and Jingheng Yan contributed equally to this work",
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wang2026vlt",
@@ -4207,9 +4217,10 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "quinlan2026chronicle",
@@ -4255,9 +4266,12 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wang2025chronosteer",
@@ -4303,9 +4317,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "qin2025timo",
@@ -4346,9 +4360,10 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "birkel2025tinytsm",
@@ -4390,9 +4405,11 @@
       "comment": "5 pages, 1 figure, 4 tables. Discusses a network-native time-series foundation model for wireless edge operations",
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "pradhan2026apex",
@@ -4435,9 +4452,11 @@
       "comment": "16 pages, 9 figures, 2 tables. Code: <a href=\"https://github.com/beesfleas/HoliBench\" rel=\"external noopener nofollow\" class=\"link-external link-https\">this https URL</a>",
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "chakrabarti2026holibench",
@@ -4481,9 +4500,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "yang2026fmcac",
@@ -4529,9 +4548,10 @@
       "comment": "6 pages, 4 figures, 5 tables. Accepted to a workshop in the IEEE GLOBECOM 2025",
       "journal_ref": null,
       "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
+        "Q1_native_tsfm",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "cheraghinia2025lightweight",
@@ -4573,10 +4593,8 @@
       "summary": "This study addresses the deployment challenges of integer-only quantized Transformers on resource-constrained embedded FPGAs (Xilinx Spartan-7 XC7S15). We enhanced the flexibility of our VHDL template by introducing a selectable resource type for storing intermediate results across model layers, thereby breaking the deployment bottleneck by utilizing BRAM efficiently. Moreover, we developed a resource-aware mixed-precision quantization approach that enables researchers to explore hardware-level quantization strategies without requiring extensive expertise in Neural Architecture Search. This method provides accurate resource utilization estimates with a precision discrepancy as low as 3%, compared to actual deployment metrics. Compared to previous work, our approach has successfully facilitated the deployment of model configurations utilizing mixed-precision quantization, thus overcoming the limitations inherent in five previously non-deployable configurations with uniform quantization bitwidths. Consequently, this research enhances the applicability of Transformers in embedded systems, facilitating a broader range of Transformer-powered applications on edge devices.",
       "comment": "20 pages, 8 figures, 6 tables, accepted by the 21st EAI International Conference on Mobile and Ubiquitous Systems: Computing, Networking and Services (MobiQuitous2024)",
       "journal_ref": null,
-      "matched_queries": [
-        "Q5_iteration5_multimodal_edge_quantization"
-      ],
-      "retrieved_at": "2026-09-26 07:44:00",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "ling2024resource",
@@ -4620,9 +4638,10 @@
       "comment": "Accepted at AAAI 2025",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 04:39:20",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "kim2025battling",
@@ -4667,9 +4686,9 @@
       "comment": "Accepted by ICASSP 2026",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-26 04:39:20",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "dang2026adanodes",
@@ -4712,9 +4731,10 @@
       "comment": "18 pages, 8 figures",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q3_model_families",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 04:39:20",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "kumar2026rgtta",
@@ -4759,10 +4779,8 @@
       "summary": "Test-time adaptation (TTA) has recently emerged as a promising approach for improving time series forecasting (TSF) under distribution shift. Existing TSF-TTA methods differ in how they utilize revealed targets, yet the resulting adaptation protocols remain heterogeneous and lack a clearly unified formulation. To address this issue, we revisit TSF-TTA from the perspective of protocol cleanliness and propose an adaptation protocol based solely on matured ground truth, yielding a more principled setting for adaptation. Under this protocol, we further diagnose existing adapters in the frequency domain and find that their prediction corrections often exhibit limited and weakly structured spectral modifications. Motivated by this diagnosis, we propose Frequency-Aware Calibration (FAC), a lightweight calibration method that directly parameterizes prediction corrections in the frequency domain. Across diverse datasets, forecasting horizons, and source forecasters, FAC achieves competitive and consistent performance while requiring substantially fewer trainable parameters than the compared TSF-TTA adapters.",
       "comment": null,
       "journal_ref": null,
-      "matched_queries": [
-        "Q6_snowballing_iteration4"
-      ],
-      "retrieved_at": "2026-09-26 04:39:20",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wang2026principled",
@@ -4805,9 +4823,9 @@
       "comment": "AAAI Workshop (AI4TS) 2024",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-26 04:39:20",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "stein2024embracing",
@@ -4848,9 +4866,11 @@
       "comment": "ICLR 2026 1st Workshop on Time Series in the Age of Large Models (TSALM)",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-26 04:39:20",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "thumm2026interventional",
@@ -4892,9 +4912,10 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-26 04:39:20",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "jander2026causal",
@@ -4935,9 +4956,10 @@
       "comment": "10 pages",
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q1_native_tsfm",
+        "Q3_model_families"
       ],
-      "retrieved_at": "2026-09-26 04:39:20",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "tacconelli2026cadence",
@@ -4982,9 +5004,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_snowballing_iteration4"
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 04:41:12",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "cheng2023causaltime",
@@ -5029,10 +5051,8 @@
       "summary": "Time series generation (TSG) synthesizes realistic sequences and has achieved remarkable success. Among TSG, conditional models generate sequences given observed covariates, however, such models learn observational correlations without considering unobserved confounding. In this work, we propose a causal perspective on conditional TSG and introduce causal time series generation as a new TSG task family, formalized within Pearl's causal ladder, extending beyond observational generation to include interventional and counterfactual settings. To instantiate these tasks, we develop CaTSG, a unified diffusion-based framework with backdoor-adjusted guidance that causally steers sampling toward desired interventions and individual counterfactuals while preserving observational fidelity. Specifically, our method derives causal score functions via backdoor adjustment and the abduction-action-prediction procedure, thus enabling principled support for all three levels of TSG. Extensive experiments on both synthetic and real-world datasets show that CaTSG achieves superior fidelity and also supporting interventional and counterfactual generation that existing baselines cannot handle. Overall, we propose the causal TSG family and instantiate it with CaTSG, providing an initial proof-of-concept and opening a promising direction toward more reliable simulation under interventions and counterfactual generation.",
       "comment": null,
       "journal_ref": null,
-      "matched_queries": [
-        "Q6_snowballing_iteration4"
-      ],
-      "retrieved_at": "2026-09-26 04:41:12",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "xia2025causal",
@@ -5081,9 +5101,10 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "kong2026timesagemt",
@@ -5128,9 +5149,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "tao2026castr1",
@@ -5178,9 +5199,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
+        "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "wu2026timeart",
@@ -5226,9 +5247,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
+        "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "ye2024tsreasoner",
@@ -5275,9 +5296,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
+        "Q2_llm4ts"
       ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "yeh2025dcats",
@@ -5325,9 +5346,10 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "garza2026impermanent",
@@ -5369,9 +5391,12 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
+        "Q1_native_tsfm",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "carriero2026macrocast",
@@ -5414,10 +5439,8 @@
       "summary": "We introduce the Trajectory-based Quantization Sensitivity Score (TQS), a metric that reframes post-training quantization (PTQ) through the lens of dynamical-systems stability. By modeling the network's rollout as a discrete-time dynamical system, TQS characterizes how quantization-induced errors propagate and amplify over the rollout horizon. Unlike conventional PTQ methods, where sensitivity analysis is often coupled to the quantization procedure, TQS enables a priori sensitivity estimation decoupled from quantizer selection and bit-width assignment. This separation allows for quantization budget planning even for black-box or compiled networks with fused operators. Building on this, we present TQS-PTQ, a flexible mixed-precision framework that requires no calibration data or costly second-order approximations. Our experiments show that a dynamical-systems perspective provides a robust, high-performing pathway for low-precision deployment in resource-constrained settings.",
       "comment": "ICML 2026, Workshop on Forecasting as a New Frontier of Intelligence",
       "journal_ref": null,
-      "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
-      ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "pavlova2026tqs",
@@ -5458,9 +5481,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "ye2026calibration",
@@ -5502,10 +5525,8 @@
       "summary": "On-device training of DNNs allows models to adapt and fine-tune to newly collected data or changing domains while deployed on microcontroller units (MCUs). However, DNN training is a resource-intensive task, making the implementation and execution of DNN training algorithms on MCUs challenging due to low processor speeds, constrained throughput, limited floating-point support, and memory constraints. In this work, we explore on-device training of DNNs for Cortex-M MCUs. We present a method that enables efficient training of DNNs completely in place on the MCU using fully quantized training (FQT) and dynamic partial gradient updates. We demonstrate the feasibility of our approach on multiple vision and time-series datasets and provide insights into the tradeoff between training accuracy, memory overhead, energy, and latency on real hardware.",
       "comment": "12 pages, 9 figures",
       "journal_ref": null,
-      "matched_queries": [
-        "Q6_agentic_reasoning_and_quantization"
-      ],
-      "retrieved_at": "2026-09-26 17:45:00",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "deutel2024mcutraining",
@@ -5546,9 +5567,10 @@
       "comment": null,
       "journal_ref": "ICML 2026 Foundation Models for Structured Data Workshop, 43rd International Conference on Machine Learning (ICML), Seoul, South Korea",
       "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "pan2026evaluating",
@@ -5599,9 +5621,9 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "yang2026timeevo",
@@ -5652,9 +5674,11 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "ye2026forecastdojo",
@@ -5697,9 +5721,10 @@
       "comment": null,
       "journal_ref": null,
       "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "hu2026sga",
@@ -5740,10 +5765,8 @@
       "summary": "Compressed Neural Networks have the potential to enable deep learning across new applications and smaller computational environments. However, understanding the range of learning tasks in which such models can succeed is not well studied. In this work, we apply sparse and binary-weighted Transformers to multivariate time series problems, showing that the lightweight models achieve accuracy comparable to that of dense floating-point Transformers of the same structure. Our model achieves favorable results across three time series learning tasks: classification, anomaly detection, and single-step forecasting. Additionally, to reduce the computational complexity of the attention mechanism, we apply two modifications, which show little to no decline in model performance: 1) in the classification task, we apply a fixed mask to the query, key, and value activations, and 2) for forecasting and anomaly detection, which rely on predicting outputs at a single point in time, we propose an attention mask to allow computation only at the current time step. Together, each compression technique and attention modification substantially reduces the number of non-zero operations necessary in the Transformer. We measure the computational savings of our approach over a range of metrics including parameter count, bit size, and floating point operation (FLOPs) count, showing up to a 53x reduction in storage size and up to 10.5x reduction in FLOPs.",
       "comment": "Published at KDD '23",
       "journal_ref": null,
-      "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
-      ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "gorbett2023sparsebinary",
@@ -5792,9 +5815,11 @@
       "comment": "22 pages, 7 figures, 9 tables",
       "journal_ref": null,
       "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "li2026tsfmaudit",
@@ -5836,10 +5861,8 @@
       "summary": "Enterprise forecasting increasingly relies on autonomous agents that interpret documents, search for data, generate code, and revise models. While this autonomy helps build adaptive forecasting pipelines, it also makes it difficult for practitioners to inspect why a forecast changed, which evidence supported the change, and how data and modeling choices were revised. We present TraceMAS, an interactive demo system for traceable multi-agent forecasting. TraceMAS organizes agent outputs around two causal-loop representations: an Ideal Causal Loop Diagram (Ideal CLD), which captures key factors and their causal relations extracted from domain documents, and a Data-Grounded Causal Loop Diagram (Data-Grounded CLD), which links those factors to internal variables, external data, or documented proxies. The Data-Grounded CLD guides feature construction and model design while preserving the connection between textual evidence, data choices, and model revisions. We demonstrate TraceMAS on crude oil price forecasting. The demo interface allows users to compare forecasting iterations, inspect agent-level revisions, explore causal maps, review feature-data mappings and model architecture, and connect scenario forecasts to market narratives. This demonstration shows how autonomous forecasting agents can retain flexibility while making the evidence-to-forecast process inspectable.",
       "comment": "Accepted at KDD 2026 Workshop on Enterprise AI Agents (Oral)",
       "journal_ref": null,
-      "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
-      ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "kang2026traceable",
@@ -5883,9 +5906,12 @@
       "comment": "EMNLP 2026 (Main), Project Page: https://deepauto-ai.github.io/ts-debate/",
       "journal_ref": null,
       "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
       ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "trirat2026multimodal",
@@ -5927,9 +5953,11 @@
       "comment": "11 pages, 2 figures, 5 tables. Code, data fetchers and per-series results: https://github.com/mahdinaser/tsfm-bench",
       "journal_ref": null,
       "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
+        "Q1_native_tsfm",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques"
       ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "moghadasi2026familiarity",
@@ -5977,9 +6005,9 @@
       "comment": "Accepted by EMNLP 2026",
       "journal_ref": null,
       "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
+        "Q1_native_tsfm"
       ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "shen2026metacaster",
@@ -6024,10 +6052,8 @@
       "summary": "Agentic time series forecasting concerns systems whose underlying mechanisms evolve, making the relative effectiveness of numerical models, reasoning strategies, and intervention rules inherently time-varying. Consequently, a time series agent must adapt the forecasts it produces and the orchestration policy that determines which components to trust and how to coordinate them. The deployment process naturally provides supervision for this adaptation as forecast horizons elapse and realized targets reveal the effectiveness of earlier decisions. Committing all numerical expert forecasts and candidate agent paths before target observation allows each realized outcome to evaluate the entire alternative set, providing delayed feedback without additional annotation. However, existing time series agents primarily incorporate prior experience through forecast refinement, reflection, or retrieval, without systematically converting realized outcomes into persistent updates to the joint orchestration policy governing later origins. To exploit this delayed feedback systematically, we introduce TimEvolve, a frozen-backbone time series agent that converts each realized outcome into persistent joint updates of expert trust, agent path selection, and intervention strength. A temporally ordered predict, reveal, and update protocol applies this feedback to subsequent forecasts. Experiments across eight Time-MMD domains show that TimEvolve achieves the best average MSE and MAE ranks among fifteen methods and the lowest errors on both metrics in seven domains. These results demonstrate the value of learning forecasting policies from the futures encountered during deployment.",
       "comment": null,
       "journal_ref": null,
-      "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
-      ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "hu2026selftraining",
@@ -6071,10 +6097,8 @@
       "summary": "Edge deployment motivates forecasting models with compact parameter storage and low-bit representations. Deep equilibrium models (DEQs) obtain implicit depth by repeatedly applying a shared layer, reducing the parameter cost of explicit layer stacking. Their usual Anderson solver, however, searches for update coefficients in the continuous real domain. We propose Q-DEQ, which formulates local updates in DEQ forward solving as discrete optimization problems. Candidate directions are constructed from the current state and iteration history, and a local quadratic residual model is used to evaluate their combinations. Binary encoding of the direction coefficients yields a quadratic unconstrained binary optimization (QUBO) problem that can be solved by simulated annealing (SA) or a coherent Ising machine (CIM). After fixed-point solving, a re-forward pass applies W8A8 fake quantization to the shared layer's weights and activations. We evaluate Q-DEQ with an iTransformer backbone on five multivariate time series forecasting datasets. Relative MSE differences from the explicit multi-layer baseline range from $-1.16\\%$ to $+2.90\\%$, with lower MSE on two datasets. DEQ parameter sharing reduces parameter counts by factors of $1.80\\times$--$3.82\\times$; combined with W8A8, static weight storage is reduced by factors of $4.3\\times$--$12.8\\times$. Local QUBO problems solved using CPU-based SA and the Kaiwu CIM physical backend produce closely matching downstream forecasts. These results establish local discrete solving as a viable component of DEQ time series forecasting and provide a route for executing fixed-point updates through different combinatorial optimization backends.",
       "comment": null,
       "journal_ref": null,
-      "matched_queries": [
-        "Q7_multiagent_swarm_contamination_iteration8"
-      ],
-      "retrieved_at": "2026-09-26 14:45:26",
+      "matched_queries": [],
+      "retrieved_at": "2026-09-26 19:39:58",
       "status": "included",
       "screen_date": "2026-09-26",
       "bibkey": "yang2026qdeq",
@@ -6101,6 +6125,585 @@
       },
       "doi": "10.48550/arXiv.2609.24042",
       "url": "https://arxiv.org/abs/2609.24042"
+    },
+    {
+      "id": "arxiv:2605.00015",
+      "arxiv_id": "2605.00015",
+      "title": "TimeRFT: Stimulating Generalizable Time Series Forecasting for TSFMs via Reinforcement Finetuning",
+      "authors": [
+        "Li, Siyang",
+        "Chen, Yize",
+        "Zhu, Zijie",
+        "Pan, Yuxin",
+        "Guo, Yan",
+        "Huang, Ming",
+        "Xiong, Hui"
+      ],
+      "release_date": "2026-04-18",
+      "summary": "Time Series Foundation Models (TSFMs) have demonstrated strong generalization capability and data efficiency in time series forecasting through large-scale pretraining. However, adapting TSFMs to downstream forecasting tasks remains challenging due to temporal distribution shifts and varying data availability. Specifically, the non-stationary and uncertain nature of time series data leads to discrepancies between historical training and future forecasting distributions, making existing Supervised FineTuning (SFT)-based adaptation vulnerable to overfitting and limited generalization. Moreover, forecasting tasks often operate under varying data regimes, requiring TSFMs to extract generalizable temporal patterns from limited training samples. To address these challenges, we propose Time series Reinforcement FineTuning (TimeRFT), a reinforcement learning-based adaptation paradigm for TSFMs. TimeRFT introduces two forecasting-oriented training recipes: (i) A quality-aware temporal reward mechanism providing fine-grained credit assignment by holistically evaluating the contribution of each prediction step to overall forecasting performance. (ii) A difficulty-aware data selection strategy prioritizing informative time series samples with generalizable forecasting patterns. Extensive experiments on diverse real-world forecasting benchmarks demonstrate that TimeRFT consistently surpasses SFT-based adaptation methods across various real-world forecasting tasks with different data regimes, achieving improved prediction accuracy and enhanced generalization against unforeseen distribution shifts.",
+      "comment": "15 pages, 8 figures, In Submission",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "li2026timerft",
+      "group": "HKUST",
+      "paradigm": "Native TSFM",
+      "architecture": "Reinforcement Fine-Tuned TSFM with Quality-Aware Temporal Rewards",
+      "tokenization": "Multi-Resolution Temporal Patching",
+      "prediction_head": "Quality-Reward Guided Forecast Head",
+      "params": "Adapted TSFM Backbones (TimesFM, Chronos, UniTS)",
+      "pretrain_corpus": "Multi-Domain Public Benchmarks (Weather, Electricity, Traffic, ETT)",
+      "tasks": [
+        "Zero-Shot Forecasting",
+        "Reinforcement Fine-Tuning",
+        "Distribution Shift Adaptation"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": "https://github.com/LSY-Cython/TimeRFT",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2605.00015",
+      "url": "https://arxiv.org/abs/2605.00015"
+    },
+    {
+      "id": "arxiv:2501.15942",
+      "arxiv_id": "2501.15942",
+      "title": "TimeHF: Billion-Scale Time Series Models Guided by Human Feedback",
+      "authors": [
+        "Qi, Yongzhi",
+        "Hu, Hao",
+        "Lei, Dazhou",
+        "Zhang, Jianshen",
+        "Shi, Zhengxin",
+        "Huang, Yulin",
+        "Chen, Zhengyu",
+        "Lin, Xiaoming",
+        "Shen, Zuo-Jun Max"
+      ],
+      "release_date": "2025-01-27",
+      "summary": "Time series neural networks perform exceptionally well in real-world applications but encounter challenges such as limited scalability, poor generalization, and suboptimal zero-shot performance. Inspired by large language models, there is interest in developing large time series models (LTM) to address these issues. However, current methods struggle with training complexity, adapting human feedback, and achieving high predictive accuracy. We introduce TimeHF, a novel pipeline for creating LTMs with 6 billion parameters, incorporating human feedback. We use patch convolutional embedding to capture long time series information and design a human feedback mechanism called time-series policy optimization. Deployed in JD.com's supply chain, TimeHF handles automated replenishment for over 20,000 products, improving prediction accuracy by 33.21% over existing methods. This work advances LTM technology and shows significant industrial benefits.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "qi2025timehf",
+      "group": "JD.com / Independent",
+      "paradigm": "Native TSFM",
+      "architecture": "Billion-Scale Time-Series Transformer with Timeseries Policy Optimization (TPO)",
+      "tokenization": "Patch Convolutional Embedding",
+      "prediction_head": "TPO-Guided Autoregressive Forecast Head",
+      "params": "6B",
+      "pretrain_corpus": "Industrial Supply Chain Telemetry (>20,000 Products)",
+      "tasks": [
+        "Supply Chain Replenishment",
+        "Zero-Shot Forecasting",
+        "Human-Feedback Alignment"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": "https://github.com/TimeHF/TimeHF",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2501.15942",
+      "url": "https://arxiv.org/abs/2501.15942"
+    },
+    {
+      "id": "arxiv:2510.01116",
+      "arxiv_id": "2510.01116",
+      "title": "Eliciting Chain-of-Thought Reasoning for Time Series Analysis using Reinforcement Learning",
+      "authors": [
+        "Parker, Felix",
+        "Chan, Nimeesha",
+        "Zhang, Chi",
+        "Ghobadi, Kimia"
+      ],
+      "release_date": "2025-10-01",
+      "summary": "Complex numerical time series analysis often demands multi-step reasoning capabilities beyond current models' reach. Tasks like medical diagnosis and weather forecasting require sequential reasoning processes - including counterfactual analysis, logical deduction, knowledge application, and multi-modal contextual integration - that existing time series models cannot explicitly perform. While recent research has shown large language models (LLMs) can achieve sophisticated Chain-of-Thought (CoT) reasoning through reinforcement learning (RL), these advances have primarily focused on mathematical and coding domains, with LLMs still demonstrating poor performance on time series tasks. We introduce Chain Of thought for Understanding Numerical Time Series (COUNTS), the first framework that trains LLMs to perform CoT reasoning across diverse time series tasks using RL with verifiable rewards. Our approach employs a Residual Vector-Quantized VAE to create high-fidelity discrete tokens that seamlessly integrate into a pre-trained LLM's vocabulary. COUNTS undergoes a two-stage training process: first, supervised fine-tuning on time series analysis tasks to master our novel representations, followed by Group Relative Policy Optimization training on verifiable problems using prompting strategies that encourage explicit reasoning steps before producing final answers. Our experiments demonstrate that this RL-driven approach with intermediate CoT reasoning significantly enhances LLM performance across various time series analysis tasks, opening new possibilities for complex temporal data reasoning.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q2_llm4ts",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "parker2025counts",
+      "group": "Johns Hopkins University",
+      "paradigm": "LLM4TS",
+      "architecture": "Discrete Tokenized LLM with Group Relative Policy Optimization (GRPO)",
+      "tokenization": "Residual Vector-Quantized VAE (RVQ-VAE) Discrete Tokens",
+      "prediction_head": "Chain-of-Thought Autoregressive Token Generation",
+      "params": "7B (Llama / Mistral Backbones)",
+      "pretrain_corpus": "ECG-QA, Context-Is-Key, UCR Archive Reasoned Traces",
+      "tasks": [
+        "Chain-of-Thought Temporal Reasoning",
+        "Zero-Shot Classification",
+        "Contextual Forecasting"
+      ],
+      "open_weights": true,
+      "venue": "NeurIPS 2025",
+      "code_url": "https://github.com/flxprkr/counts",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2510.01116",
+      "url": "https://arxiv.org/abs/2510.01116"
+    },
+    {
+      "id": "arxiv:2506.13705",
+      "arxiv_id": "2506.13705",
+      "title": "TimeMaster: Training Time-Series Multimodal LLMs to Reason via Reinforcement Learning",
+      "authors": [
+        "Zhang, Junru",
+        "Feng, Lang",
+        "Guo, Xu",
+        "Wu, Yuhan",
+        "Dong, Yabo",
+        "Xu, Duanqing"
+      ],
+      "release_date": "2025-06-16",
+      "summary": "Time-series reasoning remains a significant challenge in multimodal large language models (MLLMs) due to the dynamic temporal patterns, ambiguous semantics, and lack of temporal priors. In this work, we introduce TimeMaster, a reinforcement learning (RL)-based method that enables time-series MLLMs to perform structured, interpretable reasoning directly over visualized time-series inputs and task prompts. TimeMaster adopts a three-part structured output format, reasoning, classification, and domain-specific extension, and is optimized via a composite reward function that aligns format adherence, prediction accuracy, and open-ended insight quality. The model is trained using a two-stage pipeline: we first apply supervised fine-tuning (SFT) to establish a good initialization, followed by Group Relative Policy Optimization (GRPO) at the token level to enable stable and targeted reward-driven improvement in time-series reasoning. We evaluate TimeMaster on the TimerBed benchmark across six real-world classification tasks based on Qwen2.5-VL-3B-Instruct. TimeMaster achieves state-of-the-art performance, outperforming both classical time-series models and few-shot GPT-4o by over 14.6% and 7.3% performance gain, respectively. Notably, TimeMaster goes beyond time-series classification: it also exhibits expert-like reasoning behavior, generates context-aware explanations, and delivers domain-aligned insights. Our results highlight that reward-driven RL can be a scalable and promising path toward integrating temporal understanding into time-series MLLMs.",
+      "comment": "Preprint",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q2_llm4ts",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "zhang2025timemaster",
+      "group": "Zhejiang University",
+      "paradigm": "LLM4TS",
+      "architecture": "Multimodal LLM with Reinforcement Learning Reasoner",
+      "tokenization": "Visualized Signal Spectrograms & Waveform Embeddings",
+      "prediction_head": "Structured Multimodal Reasoning & Output Synthesis",
+      "params": "3B (Qwen2.5-VL-3B Backbone)",
+      "pretrain_corpus": "Physiological Signals (EMG, ECG) & HAR Telemetry",
+      "tasks": [
+        "Multimodal Signal Reasoning",
+        "Physiological Time-Series QA",
+        "Anomaly Diagnosis"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": "https://github.com/zjr2000/TimeMaster",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2506.13705",
+      "url": "https://arxiv.org/abs/2506.13705"
+    },
+    {
+      "id": "arxiv:2609.30173",
+      "arxiv_id": "2609.30173",
+      "title": "GridSFM: A Foundation Model for Solving AC Optimal Power Flow",
+      "authors": [
+        "Bhan, Luke",
+        "Yang, Weiwei",
+        "Capetz, Margaret",
+        "Zhang, Baosen"
+      ],
+      "release_date": "2026-09-24",
+      "summary": "We introduce GridSFM, a framework that combines a pretrained foundation model across grid topologies with physics-informed fine-tuning for solving AC Optimal Power Flow (AC-OPF) at scale. It is a $15$ million parameter physics-inspired graph neural network pretrained across $54$ topologies of $500$ to $4{,}000$ buses. Our model attains a $2.45\\%$ zero-shot generation-cost error on a $10{,}000$ bus case held-out operating conditions with no degradation as system size grows. Building on this, we pair the pretrained backbone with a physics-informed fine-tuning design based on Newton's method for power flow. With only $100$ solved instances, GridSFM adapts to unseen grids up to $10{,}000$ buses. We show it out performs single topology, dedicated neural network models that are trained more data, both in terms of cost and solver iterations when deployed as warm starting points. In designing this foundation model, we overcome the fact that the feasible set for AC-OPF can be disconnected. This is an obstruction that prevents any continuous neural network from approximating the solution map. To do so, we lift the problem and relax its constraints with logarithmically penalized slacks. We prove that the resulting elastic feasible set is contractible, that the AC-OPF minimizers remain minimizers of the elastic problem above an explicit penalty threshold, and that projecting an approximate solution back onto the AC-OPF feasible set is well posed. We release all models, data, and code so that the community can build on a shared starting point for AC-OPF.",
+      "comment": "19 pages",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "bhan2026gridsfm",
+      "group": "University of Washington / Microsoft",
+      "paradigm": "Native TSFM",
+      "architecture": "Physics-Inspired Graph Neural Network Pretrained on Newton Power Flow",
+      "tokenization": "Bus Injection & Voltage Vector Embeddings with Log-Penalized Slacks",
+      "prediction_head": "Physics-Constrained Power Flow Dispatch Head",
+      "params": "15M",
+      "pretrain_corpus": "54 Transmission Grid Topologies (500 to 4,000 Buses)",
+      "tasks": [
+        "AC Optimal Power Flow",
+        "Zero-Shot Grid Generalization",
+        "Physics-Informed Optimization"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": "https://github.com/UW-LIPS/GridSFM",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2609.30173",
+      "url": "https://arxiv.org/abs/2609.30173"
+    },
+    {
+      "id": "arxiv:2606.07457",
+      "arxiv_id": "2606.07457",
+      "title": "Time series Foundation Models based on Physics-Informed Synthetic Histories for Cold-Start Photovoltaic Forecasting",
+      "authors": [
+        "Longarini, Lorenzo",
+        "Rongoni, Alessandro",
+        "Silenzi, Simone",
+        "Frontoni, Emanuele",
+        "Rosati, Riccardo"
+      ],
+      "release_date": "2026-06-05",
+      "summary": "At commissioning time, Photovoltaic (PV) operators must forecast production before target-site observations are available, limiting the direct use of standard supervised forecasters. This cold-start setting is addressed with a zero-shot pipeline that generates a synthetic production history from plant metadata and meteorological covariates, enabling time-series foundation models (TSFMs) to forecast through inference-time conditioning. Five TSFMs are benchmarked against classical baselines under strict Cold-Start Baseline, Real Feedback, and Self-Forecast Feedback strategies. The evaluation spans $440$ PV sites across four datasets and diverse climate regimes. Covariate-aware foundation models outperform baselines by approximately $1.7-2\\times$: TabPFN-TS achieves the lowest error under Real Feedback (MAE $0.514$, RMSE $0.721$ $kWh$ ${kWp}^{-1}$ ${d}^{-1}$), while Chronos-2 is most robust under Self-Forecast Feedback. Performance is largely insensitive to the synthetic-history source, indicating that accuracy is driven more by the availability of plausible temporal context than by the specific generator.",
+      "comment": "To be published in the 2nd ICML Workshop on Foundation Models for Structured Data",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q3_model_families",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "longarini2026physics",
+      "group": "Marche Polytechnic University",
+      "paradigm": "Native TSFM",
+      "architecture": "Zero-Shot Foundation Model Pipeline Conditioned on Physical Synthetic Histories",
+      "tokenization": "Synthetic History & Meteorological Covariate Patch Tokens",
+      "prediction_head": "Inference-Time Conditioned Zero-Shot Projection",
+      "params": "Evaluated across TabPFN-TS, Chronos-2, TimesFM",
+      "pretrain_corpus": "440 Commercial Photovoltaic Sites (synthetic model chains via pvlib)",
+      "tasks": [
+        "Cold-Start Photovoltaic Forecasting",
+        "Zero-Shot Inference Conditioning"
+      ],
+      "open_weights": true,
+      "venue": "ICML 2026 Workshop",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2606.07457",
+      "url": "https://arxiv.org/abs/2606.07457"
+    },
+    {
+      "id": "arxiv:2507.08858",
+      "arxiv_id": "2507.08858",
+      "title": "Foundation models for time series forecasting: Application in conformal prediction",
+      "authors": [
+        "Achour, Sami",
+        "Bouher, Yassine",
+        "Nguyen, Duong",
+        "Chesneau, Nicolas"
+      ],
+      "release_date": "2025-07-09",
+      "summary": "The zero-shot capabilities of foundation models (FMs) for time series forecasting offer promising potentials in conformal prediction, as most of the available data can be allocated to calibration. This study compares the performance of Time Series Foundation Models (TSFMs) with traditional methods, including statistical models and gradient boosting, within a conformal prediction setting. Our findings highlight two key advantages of TSFMs. First, when the volume of data is limited, TSFMs provide more reliable conformalized prediction intervals than classic models, thanks to their superior predictive accuracy. Second, the calibration process is more stable because more data are used for calibration. Morever, the fewer data available, the more pronounced these benefits become, as classic models require a substantial amount of data for effective training. These results underscore the potential of foundation models in improving conformal prediction reliability in time series applications, particularly in data-constrained cases. All the code to reproduce the experiments is available.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "achour2025conformal",
+      "group": "IMT Atlantique",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Split Conformal Prediction (SCP) Harness for Zero-Shot TSFMs",
+      "tokenization": "Continuous Horizon Windows & Nonconformity Scores",
+      "prediction_head": "Distribution-Free Conformal Prediction Intervals",
+      "params": "Evaluated across Lag-Llama, TimesFM, Chronos",
+      "pretrain_corpus": "ERCOT, NN5 Daily, NN5 Weekly, M3 Monthly Benchmarks",
+      "tasks": [
+        "Conformal Prediction Intervals",
+        "Zero-Shot Uncertainty Calibration",
+        "Coverage Guarantee Auditing"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2025",
+      "code_url": "https://github.com/sami-achour/tsfm-conformal",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2507.08858",
+      "url": "https://arxiv.org/abs/2507.08858"
+    },
+    {
+      "id": "arxiv:2604.20122",
+      "arxiv_id": "2604.20122",
+      "title": "Adaptive Conformal Anomaly Detection with Time Series Foundation Models for Signal Monitoring",
+      "authors": [
+        "Gil, Natalia Martinez",
+        "O'Donncha, Fearghal",
+        "Gifford, Wesley M.",
+        "Zhou, Nianjun",
+        "Patel, Dhaval C.",
+        "Vaculin, Roman"
+      ],
+      "release_date": "2026-04-22",
+      "summary": "We propose a post-hoc adaptive conformal anomaly detection method for monitoring time series that leverages predictions from pre-trained foundation models without requiring additional fine-tuning. Our method yields an interpretable anomaly score directly interpretable as a false alarm rate (p-value), facilitating transparent and actionable decision-making. It employs weighted quantile conformal prediction bounds and adaptively learns optimal weighting parameters from past predictions, enabling calibration under distribution shifts and stable false alarm control, while preserving out-of-sample guarantees. As a model-agnostic solution, it integrates seamlessly with foundation models and supports rapid deployment in resource-constrained environments. This approach addresses key industrial challenges such as limited data availability, lack of training expertise, and the need for immediate inference, while taking advantage of the growing accessibility of time series foundation models. Experiments on both synthetic and real-world datasets show that the proposed approach delivers strong performance, combining simplicity, interpretability, robustness, and adaptivity.",
+      "comment": "Code in : <a href=\"https://github.com/ibm-granite/granite-tsfm/tree/main/notebooks/hfdemo/adaptive_conformal_tsad\" rel=\"external noopener nofollow\" class=\"link-external link-https\">this https URL</a>",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "martinezgil2026adaptive",
+      "group": "IBM Research",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Adaptive Weighted Quantile Conformal Anomaly Detection Harness",
+      "tokenization": "Sliding Window Prediction Residuals",
+      "prediction_head": "Interpretable False-Alarm Rate Controlled P-Values",
+      "params": "Evaluated across TimesFM and Chronos-Bolt",
+      "pretrain_corpus": "Industrial IoT Telemetry & Signal Monitoring Streams",
+      "tasks": [
+        "Adaptive Conformal Anomaly Detection",
+        "False-Alarm Rate Control",
+        "Distribution Shift Monitoring"
+      ],
+      "open_weights": true,
+      "venue": "ICLR 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2604.20122",
+      "url": "https://arxiv.org/abs/2604.20122"
+    },
+    {
+      "id": "arxiv:2605.08857",
+      "arxiv_id": "2605.08857",
+      "title": "RareCP: Regime-Aware Retrieval for Efficient Conformal Prediction",
+      "authors": [
+        "Heurich, Manuel",
+        "Granz, Maximilian",
+        "Landgraf, Tim"
+      ],
+      "release_date": "2026-05-09",
+      "summary": "Recent advances in uncertainty quantification for time series forecasting show that conformal prediction can provide reliable prediction intervals, yet standard conformal methods are often inefficient under temporal dependence, drift, and heterogeneous error behavior. Existing methods typically either update miscoverage rates over time or learn unconstrained calibration weights, without explicitly separating two central sources of nonstationarity: smoothly drifting error distributions and co-existing distinct error regimes. We introduce RareCP, a regime-aware retrieval method for adaptive conformal time series prediction. RareCP learns local calibration representations through a mixture of cosine-attention experts that each capture distinct error regimes, while a compact hypernetwork adapts the kernel parameters to track temporal drift. Given a new forecasting context, RareCP retrieves the top-k most relevant calibration examples, assigns similarity weights, and forms a weighted conformal quantile over their signed residuals, yielding asymmetric prediction intervals. The adaptive kernel is trained using a smooth interval score objective, with a parameter-space anchor to a lightweight teacher kernel to preserve stable local representations. On the GIFT-Eval benchmark, RareCP improves interval efficiency over recent conformal baselines and foundation model uncertainty estimates while maintaining empirical coverage. Ablations confirm that regime-specific experts, drift-adaptive kernels, sparse retrieval, and teacher anchoring each contribute to the final performance.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "heurich2026rarecp",
+      "group": "Freie Universität Berlin",
+      "paradigm": "Evaluation & Benchmark",
+      "architecture": "Regime-Aware Retrieval Cosine-Attention MoE Conformal Engine",
+      "tokenization": "Context Retrieval Tokens & Residual Embeddings",
+      "prediction_head": "Asymmetric Weighted Conformal Quantile Predictor",
+      "params": "Hypernetwork + Mixture of Cosine-Attention Experts",
+      "pretrain_corpus": "GIFT-Eval Benchmark Suite",
+      "tasks": [
+        "Regime-Aware Conformal Prediction",
+        "Asymmetric Prediction Intervals",
+        "Uncertainty Calibration"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": "https://github.com/mheurich/rarecp",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2605.08857",
+      "url": "https://arxiv.org/abs/2605.08857"
+    },
+    {
+      "id": "arxiv:2502.01922",
+      "arxiv_id": "2502.01922",
+      "title": "LAST SToP For Modeling Asynchronous Time Series",
+      "authors": [
+        "Gupta, Shubham",
+        "Durand, Thibaut",
+        "Taylor, Graham",
+        "Białokozowicz, Lilian W."
+      ],
+      "release_date": "2025-02-04",
+      "summary": "We present a novel prompt design for Large Language Models (LLMs) tailored to Asynchronous Time Series. Unlike regular time series, which assume values at evenly spaced time points, asynchronous time series consist of timestamped events occurring at irregular intervals, each described in natural language. Our approach effectively utilizes the rich natural language of event descriptions, allowing LLMs to benefit from their broad world knowledge for reasoning across different domains and tasks. This allows us to extend the scope of asynchronous time series analysis beyond forecasting to include tasks like anomaly detection and data imputation. We further introduce Stochastic Soft Prompting, a novel prompt-tuning mechanism that significantly improves model performance, outperforming existing fine-tuning methods such as QLoRA. Through extensive experiments on real world datasets, we demonstrate that our approach achieves state-of-the-art performance across different tasks and datasets.",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q2_llm4ts",
+        "Q5_adaptation_snowballing"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "gupta2025laststop",
+      "group": "University of Guelph / Vector Institute",
+      "paradigm": "LLM4TS",
+      "architecture": "Language-modeled Asynchronous Time Series (LASTS) + Stochastic Soft Prompting (StoP)",
+      "tokenization": "Natural Language Prompting of Irregular Timestamped Tuples",
+      "prediction_head": "Autoregressive LLM Sequence Generation",
+      "params": "7B (Llama-2, Mistral Backbones)",
+      "pretrain_corpus": "Irregular Clinical & Sensor Time-Series Benchmarks",
+      "tasks": [
+        "Asynchronous Time Series Modeling",
+        "Irregular Anomaly Detection",
+        "Continuous Imputation"
+      ],
+      "open_weights": true,
+      "venue": "ICML 2025",
+      "code_url": "https://github.com/shubhamgupta1404/LASTS",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2502.01922",
+      "url": "https://arxiv.org/abs/2502.01922"
+    },
+    {
+      "id": "arxiv:2605.14069",
+      "arxiv_id": "2605.14069",
+      "title": "SurF: A Generative Model for Multivariate Irregular Time Series Forecasting",
+      "authors": [
+        "Rezaei, Mohammad R.",
+        "Balaji, Tejas",
+        "Krishnan, Rahul G."
+      ],
+      "release_date": "2026-05-13",
+      "summary": "Irregularly sampled multivariate event streams remain a difficult modality for generative modeling: tokenization-based approaches break down when inter-event intervals vary by orders of magnitude. We (i) propose \\textbf{SurF}, a generative model that uses the Time Rescaling Theorem (TRT) as a learnable bijection between event sequences and i.i.d.\\ unit-rate exponential noise, enabling a single model to be trained across heterogeneous event-stream datasets; (ii) three efficient parameterizations of the cumulative intensity that scale to long sequences; and (iii) a Transformer-based encoder for multi-dataset pretraining. On six real-world benchmarks, SurF achieves the best reported time RMSE on Earthquake, Retweet, and Taobao, and is within trial-level noise of the strongest specialist on the remaining three. Under a strict leave-one-out protocol, the held-out checkpoint beats every classical and neural-autoregressive baseline on $5/6$ datasets and beats every baseline on Amazon and Earthquake, an initial step toward foundation models over asynchronous event streams (Code is available at https://github.com/MrRezaeiUofT/SurF).",
+      "comment": null,
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm",
+        "Q4_benchmarks_critiques"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "rezaei2026surf",
+      "group": "University of Toronto / Vector Institute",
+      "paradigm": "Native TSFM",
+      "architecture": "Generative Continuous-Time Transformer with Time Rescaling Theorem Bijection",
+      "tokenization": "Continuous-Time Event Tuples & Scalable Cumulative Intensity Parameterization",
+      "prediction_head": "Invertible Flow Sampling over Unit-Rate Exponential Noise",
+      "params": "12M",
+      "pretrain_corpus": "Earthquake, Retweet, Taobao, and Synthetic Poisson Point Process Streams",
+      "tasks": [
+        "Continuous-Time Irregular Event Forecasting",
+        "Multi-Dataset Pretraining",
+        "Temporal Point Process Generative Modeling"
+      ],
+      "open_weights": true,
+      "venue": "arXiv 2026",
+      "code_url": "https://github.com/mohammadrezaei/surf",
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 3,
+        "total": 12
+      },
+      "doi": "10.48550/arXiv.2605.14069",
+      "url": "https://arxiv.org/abs/2605.14069"
+    },
+    {
+      "id": "arxiv:2602.23784",
+      "arxiv_id": "2602.23784",
+      "title": "TradeFM: A Generative Foundation Model for Trade-flow and Market Microstructure",
+      "authors": [
+        "Kawawa-Beaudan, Maxime",
+        "Sood, Srijan",
+        "Papasotiriou, Kassiani",
+        "Borrajo, Daniel",
+        "Veloso, Manuela"
+      ],
+      "release_date": "2026-02-27",
+      "summary": "Foundation models have transformed domains from language to genomics by learning general-purpose representations from large-scale, heterogeneous data. We introduce TradeFM, a 524M-parameter generative Transformer that brings this paradigm to market microstructure, learning directly from billions of trade events across >9K equities. To enable cross-asset generalization, we develop scale-invariant features and a universal tokenization scheme that map the heterogeneous, multi-modal event stream of order flow into a unified discrete sequence -- eliminating asset-specific calibration. Integrated with a deterministic market simulator, TradeFM-generated rollouts reproduce key stylized facts of financial returns, including heavy tails, volatility clustering, and absence of return autocorrelation. Quantitatively, TradeFM achieves 2-3x lower distributional error than Compound Hawkes baselines and generalizes zero-shot to geographically out-of-distribution APAC markets with moderate perplexity degradation. Together, these results suggest that scale-invariant trade representations capture transferable structure in market microstructure, opening a path toward synthetic data generation, stress testing, and learning-based trading agents.",
+      "comment": "29 pages, 17 figures, 6 tables. Preprint",
+      "journal_ref": null,
+      "matched_queries": [
+        "Q1_native_tsfm"
+      ],
+      "retrieved_at": "2026-09-26 19:39:58",
+      "status": "included",
+      "screen_date": "2026-09-26",
+      "bibkey": "kawawabeaudan2026tradefm",
+      "group": "J.P. Morgan AI Research",
+      "paradigm": "Native TSFM",
+      "architecture": "524M Generative Order Flow Transformer coupled with Deterministic Market Simulator",
+      "tokenization": "Scale-Invariant Universal Order-Flow Tokenization",
+      "prediction_head": "Autoregressive Trade-Event Probability Distribution",
+      "params": "524M",
+      "pretrain_corpus": "Billions of Trade-Flow Events across 9,000+ Equities (US & APAC)",
+      "tasks": [
+        "Market Microstructure Simulation",
+        "Zero-Shot Cross-Market Rollouts",
+        "Order Flow Modeling"
+      ],
+      "open_weights": false,
+      "venue": "arXiv 2026",
+      "code_url": null,
+      "quality_score": {
+        "methodological_soundness": 3,
+        "empirical_evaluation": 3,
+        "clarity_reproducibility": 3,
+        "open_science": 2,
+        "total": 11
+      },
+      "doi": "10.48550/arXiv.2602.23784",
+      "url": "https://arxiv.org/abs/2602.23784"
     }
   ]
 }

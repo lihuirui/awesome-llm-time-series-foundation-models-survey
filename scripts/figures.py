@@ -50,17 +50,17 @@ def generate_taxonomy_figure():
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
             ("Autoregressive & Patch Decoders", "Chronos, TimesFM-3, Timer, Sundial,\nTiRex, Toto, Tabby, Cadence, SGA"),
-            ("TTA & Causal Foundation Models", "TSF-TTA, AdaNODEs, RG-TTA,\nCausalTimePrior, Causal-PT, CaTSG"),
+            ("Physics & Continuous Event Streams", "GridSFM, SurF, TradeFM,\nLongarini et al., Causal-PT, CaTSG"),
             ("1-Bit, Quantization & Edge MCU", "Sparse Binary, Q-DEQ, TQS-PTQ,\nMCU-FQT, OpenCity, UrbanFM, MACROCAST")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
             ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
-            ("Multi-Agent Swarms & Consensus", "MC-Debate, TimeEvo, TimeInteract,\nCast-R1, TimeART, Traceable-Agent"),
-            ("Omni-Modal & Few-Shot Agents", "Chronicle, VLT, VisionTS++,\nMetaCaster, ChronoSteer, TimeOmni")
+            ("Policy Optimization & CoT Reasoning", "TimeRFT, TimeHF, COUNTS,\nTimeMaster, LAST SToP, MC-Debate"),
+            ("Multi-Agent Swarms & Autonomous Tools", "TimeEvo, TimeInteract, Cast-R1,\nTimeART, Traceable-Agent, MetaCaster")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
             ("Living & Replayable Benchmarks", "Forecast-Dojo, Impermanent, TimeSage,\nTIME, GIFT-Eval, fev-bench"),
-            ("Contamination & Leakage Audits", "TSFMAudit, Familiarity Bias, Jander,\nFAC TTA Bench, LiveHouse-TS"),
+            ("Conformal Coverage & Statistical Audits", "Achour, Adaptive-CAD, RareCP,\nTSFMAudit, Familiarity Bias, Pan"),
             ("Energy, Quantization & Edge Suites", "HoliBench, FM-CAC, QuantCalibration,\nBeyond Numerical, AION, WorkflowBench")
         ])
     ]
@@ -143,7 +143,7 @@ def generate_prisma_figure():
     ax.add_patch(b_exc1)
     ax.text(0.775, 0.485, f"Excluded at Stage 1 (N = {counts['screening']['excluded_title_abstract']})\n"
                            f"• EC1 (Narrow / non-foundation): 5\n"
-                           f"• EC1 (Review / tutorial without artifact): 4",
+                           f"• EC1 (Review / tutorial without artifact): 5",
             ha='center', va='center', fontsize=8, color='#9b2c2c')
 
     # Eligibility
@@ -262,12 +262,24 @@ def generate_timeline_figure():
         (2026.90, 2.8, "TimeART", "Aalborg", "#d62728"),
         (2026.92, 4.1, "MACROCAST", "QMUL", "#1f77b4"),
         (2026.94, 2.3, "TQS-PTQ", "Imperial", "#1f77b4"),
+        (2025.08, 3.7, "TimeHF", "JD.com", "#1f77b4"),
+        (2025.12, 1.8, "LAST SToP", "Vector", "#d62728"),
+        (2025.48, 2.6, "TimeMaster", "ZJU", "#d62728"),
+        (2025.52, 1.2, "Achour et al.", "IMT", "#2ca02c"),
+        (2025.80, 2.8, "COUNTS", "JHU", "#d62728"),
         (2026.08, 3.1, "MC-Debate", "KAIST", "#d62728"),
+        (2026.12, 3.9, "TradeFM", "JPMorgan", "#1f77b4"),
+        (2026.32, 1.1, "Adaptive-CAD", "IBM", "#2ca02c"),
+        (2026.38, 4.3, "TimeRFT", "HKUST", "#1f77b4"),
+        (2026.40, 2.1, "RareCP", "FU Berlin", "#2ca02c"),
         (2026.40, 1.4, "TSFMAudit", "ZJU", "#2ca02c"),
+        (2026.42, 3.4, "SurF", "Toronto", "#1f77b4"),
+        (2026.46, 1.7, "Longarini", "Marche", "#1f77b4"),
         (2026.71, 3.6, "TimeEvo", "Tianjin", "#d62728"),
-        (2026.73, 4.3, "Forecast-Dojo", "PSU", "#2ca02c"),
         (2026.72, 2.2, "Q-DEQ", "HIT", "#1f77b4"),
-        (2026.74, 1.5, "SGA", "NJU", "#1f77b4")
+        (2026.73, 4.3, "Forecast-Dojo", "PSU", "#2ca02c"),
+        (2026.74, 1.5, "SGA", "NJU", "#1f77b4"),
+        (2026.74, 4.7, "GridSFM", "UW/MSFT", "#1f77b4")
     ]
 
     # Draw timeline line
@@ -318,6 +330,8 @@ def generate_params_corpus_figure():
         ("TTM", 2024.05, 8.0e6, "Native TSFM", "#1f77b4", (8, -8)),
         ("ForecastPFN", 2023.90, 1.0e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("APEX-Edge", 2026.46, 1.05e7, "Native TSFM", "#1f77b4", (8, -8)),
+        ("SurF", 2026.42, 1.2e7, "Native TSFM", "#1f77b4", (8, 6)),
+        ("GridSFM", 2026.74, 1.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("SGA", 2026.74, 1.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("Tiny-TSM", 2025.90, 2.3e7, "Native TSFM", "#1f77b4", (8, 6)),
         ("Causal-PT", 2024.12, 2.5e7, "Native TSFM", "#1f77b4", (-14, 8)),
@@ -348,11 +362,14 @@ def generate_params_corpus_figure():
         ("TAC-Time", 2026.72, 3.5e8, "LLM4TS", "#d62728", (8, 6)),
         ("$t_0$", 2026.70, 3.5e8, "Native TSFM", "#1f77b4", (-12, -12)),
         ("MOMENT", 2024.15, 3.85e8, "Native TSFM", "#1f77b4", (8, 8)),
+        ("TradeFM", 2026.12, 5.24e8, "Native TSFM", "#1f77b4", (8, 0)),
         ("Chronos", 2024.20, 7.1e8, "Native TSFM", "#1f77b4", (-10, 8)),
         ("Moirai-MoE", 2024.80, 1.1e9, "Native TSFM", "#1f77b4", (8, 0)),
         ("Toto 2.0", 2026.35, 1.2e9, "Native TSFM", "#1f77b4", (8, 0)),
         ("Sundial", 2025.10, 1.5e9, "Native TSFM", "#1f77b4", (8, 0)),
         ("Time-MoE", 2024.70, 2.4e9, "Native TSFM", "#1f77b4", (8, 0)),
+        ("TimeMaster", 2025.48, 3.0e9, "LLM4TS", "#d62728", (8, -8)),
+        ("TimeHF", 2025.08, 6.0e9, "Native TSFM", "#1f77b4", (8, 6)),
         ("UrbanGPT", 2024.15, 7.0e9, "LLM4TS", "#d62728", (8, 6)),
         ("Time-LLM", 2023.80, 7.0e9, "LLM4TS", "#d62728", (-12, 7)),
         ("AutoTimes", 2024.15, 7.0e9, "LLM4TS", "#d62728", (8, -9)),
@@ -393,6 +410,7 @@ def generate_params_corpus_figure():
         ("TiRex Corpus", 2025.40, 5e10, "#1f77b4", (8, -3)),
         ("TSMix (Chronos)", 2024.20, 8.4e10, "#1f77b4", (8, -3)),
         ("TimesFM Corpus", 2023.85, 1e11, "#1f77b4", (8, -3)),
+        ("TradeFM LOB Events", 2026.12, 1e11, "#1f77b4", (8, 0)),
         ("$t_0$ Corpus", 2026.70, 1.2e11, "#1f77b4", (8, -12)),
         ("Tabby Open Corpus", 2026.70, 1.5e11, "#1f77b4", (8, 6)),
         ("Time-300B (Time-MoE)", 2024.70, 3e11, "#1f77b4", (8, -3)),

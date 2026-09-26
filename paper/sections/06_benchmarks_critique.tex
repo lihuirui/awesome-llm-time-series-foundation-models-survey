@@ -371,6 +371,70 @@ Table~\ref{tab:multiagent_contamination_edge_synthesis} synthesizes the frontier
 }
 \end{table*}
 
+\subsection{Distribution-Free Conformal Prediction and Statistical Coverage Guarantees}
+\label{sec:conformal_prediction_guarantees}
+
+A profound deficiency in contemporary time series foundation models is their vulnerability to \emph{uncalibrated probabilistic uncertainty}. While foundation models deploy various heads---such as categorical cross-entropy over quantized bins (Chronos), continuous Student's $t$ / Gaussian parameters (TimesFM, Moirai), or diffusion score matching---their nominal prediction intervals lack rigorous finite-sample coverage guarantees. Under out-of-distribution drift, non-stationary variance scaling, or heavy-tailed shocks, standard foundation model intervals suffer from catastrophic empirical undercoverage (e.g., nominal $90\%$ prediction intervals achieving only $65$--$75\%$ empirical coverage).
+
+\emph{Conformal Prediction (CP)} provides an elegant, model-agnostic, distribution-free mathematical framework that converts any point or quantile forecaster into set-valued prediction regions $\mathcal{C}_{1-\alpha}(\mathbf{X}_{n+1})$ guaranteeing exact finite-sample marginal coverage:
+\begin{equation}
+    \mathbb{P}\left(\mathbf{Y}_{n+1} \in \mathcal{C}_{1-\alpha}(\mathbf{X}_{n+1})\right) \ge 1 - \alpha,
+\end{equation}
+for a user-specified significance level $\alpha \in (0, 1)$, without requiring Gaussianity, linearity, or asymptotic sample sizes.
+
+Recent breakthroughs systematically integrate conformal inference with time series foundation models:
+\begin{itemize}[leftmargin=*]
+    \item \emph{Foundation Models for Time Series in Conformal Prediction (Achour et al., 2025)}~\cite{achour2025conformal}: Achour et al. uncover a structural synergy between zero-shot foundation models and \emph{Split Conformal Prediction (SCP)}. In classical machine learning, limited data must be bifurcated between parameter fitting $\mathcal{D}_{\text{train}}$ and nonconformity calibration $\mathcal{D}_{\text{calib}}$, severely impairing calibration sample size. Because zero-shot foundation models (Lag-Llama, TimesFM, Chronos) require zero target training data, $100\%$ of available in-domain historical data can be dedicated to calibration. Evaluating across ERCOT, NN5, and M3 benchmarks, Achour et al. show that zero-shot TSFM conformal intervals achieve strictly valid $1-\alpha$ coverage while producing significantly narrower interval widths than classical GBDT or ARIMA baselines, demonstrating that foundation backbones stabilize post-hoc conformal calibration.
+    \item \emph{Adaptive Conformal Anomaly Detection for Signal Monitoring (Martinez Gil et al., 2026)}~\cite{martinezgil2026adaptive}: Martinez Gil et al. formulate adaptive conformal anomaly detection for industrial telemetry. Rather than applying arbitrary thresholding heuristics to foundation model reconstruction residuals, the authors utilize weighted quantile conformal prediction bounds to transform residuals into exact, false-alarm-rate controlled p-values. By adaptively updating nonconformity weights online as temporal distributions drift, this framework maintains a guaranteed false alarm rate ($\le \alpha$) on streaming IoT sensor workloads without retraining foundation backbones.
+    \item \emph{RareCP: Regime-Aware Retrieval for Efficient Conformal Prediction (Heurich et al., 2026)}~\cite{heurich2026rarecp}: Standard conformal inference assumes exchangeability, an assumption systematically violated by temporal autocorrelation and regime-switching dynamics. Heurich, Granz, and Landgraf introduce RareCP, which decouples smooth distribution drift from distinct macroeconomic/operational regimes. RareCP deploys a Mixture of Experts (MoE) with cosine attention alongside a hypernetwork that retrieves the top-$k$ most relevant historical calibration contexts for any query sequence. By computing asymmetric weighted conformal quantiles over retrieved residuals on the GIFT-Eval benchmark, RareCP preserves nominal coverage guarantees while shrinking interval width by up to $22\%$ compared to Adaptive Conformal Inference (ACI) and raw foundation model quantiles.
+\end{itemize}
+
+Table~\ref{tab:posttrain_conformal_physics_synthesis} provides a unified synthesis of the Iteration 9 frontiers, comparing post-training policy optimization architectures, conformal prediction frameworks, physics-informed foundations, and continuous asynchronous event models.
+
+\begin{table*}[t]
+\caption{Taxonomy and Empirical Characterization of Post-Training Policy Optimization (RLHF/RLPF), Distribution-Free Conformal Prediction, Physics Foundations, and Asynchronous Event-Stream Models.}
+\label{tab:posttrain_conformal_physics_synthesis}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lp{2.2cm}p{3.0cm}p{3.2cm}p{2.6cm}p{4.4cm}}
+\toprule
+\textbf{Framework} & \textbf{Key Reference} & \textbf{Core Category \& Paradigm} & \textbf{Policy / Conformal / Physical Mechanism} & \textbf{Target Domain / Hardware} & \textbf{Key Empirical Finding / Theoretical Guarantee} \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category A: Reinforcement Learning and Post-Training Policy Optimization (RLHF / RLPF)}} \\
+\midrule
+\textbf{TimeRFT} & Li et al.~\cite{li2026timerft} (arXiv'26) & RL Fine-Tuning for TSFMs & Quality-aware temporal rewards + difficulty-aware sample selection & Multi-Domain (TimesFM, Chronos) & Up to $-18.6\%$ forecast error under distribution shift; overcomes SFT exposure bias \\
+\midrule
+\textbf{TimeHF} & Qi et al.~\cite{qi2025timehf} (arXiv'25) & 6B Human-Aligned Foundation & Timeseries Policy Optimization (TPO) with pairwise preference rewards & Enterprise Supply Chain (20k products) & $+33.21\%$ replenishment decision accuracy; aligns asymmetric stockout costs \\
+\midrule
+\textbf{COUNTS} & Parker et al.~\cite{parker2025counts} (NeurIPS'25) & Reasoning LLM for Time Series & RVQ-VAE discrete tokens + Group Relative Policy Optimization (GRPO) & Medical ECG-QA / UCR Archive & Elicits verifiable Chain-of-Thought reasoning; outperforms direct prompting by large margins \\
+\midrule
+\textbf{TimeMaster} & Zhang et al.~\cite{zhang2025timemaster} (arXiv'25) & Multimodal Reasoning via RL & Step-by-step diagnostic rewards over spectrograms and waveforms & Physiological Signals (EMG, ECG, HAR) & Eliminates visual hallucinations; enables structured multimodal diagnostic reasoning \\
+\midrule
+\textbf{LAST SToP} & Gupta et al.~\cite{gupta2025laststop} (ICML'25) & Asynchronous LLM Adaptation & Language-modeled Asynchronous TS (LASTS) + Stochastic Soft Prompting & Irregular Clinical ICU Telemetry & Outperforms QLoRA on irregular time intervals while preserving pre-trained LLM priors \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category B: Distribution-Free Conformal Prediction and Coverage Guarantees}} \\
+\midrule
+\textbf{TSFM-Conformal} & Achour et al.~\cite{achour2025conformal} (arXiv'25) & Split Conformal Prediction (SCP) & Zero-shot TSFM base forecasters dedicating $100\%$ target data to calibration & ERCOT, NN5, M3 Benchmarks & Exact $1-\alpha$ marginal coverage guarantee; produces tighter intervals than GBDTs \\
+\midrule
+\textbf{Adaptive-CAD} & Martinez Gil et al.~\cite{martinezgil2026adaptive} (ICLR'26) & Conformal Anomaly Detection & Weighted quantile conformal bounds outputting p-values & Industrial IoT Telemetry Streams & Strict false alarm rate control ($\le \alpha$); stable calibration under non-stationary drift \\
+\midrule
+\textbf{RareCP} & Heurich et al.~\cite{heurich2026rarecp} (arXiv'26) & Regime-Aware Conformal MoE & Cosine-attention retrieval of calibration residuals + hypernetwork drift adaptation & GIFT-Eval Benchmark Suite & Preserves nominal coverage while reducing interval width by up to $22\%$ over ACI \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category C: Physics-Informed Foundations and Continuous Asynchronous Event Streams}} \\
+\midrule
+\textbf{GridSFM} & Bhan et al.~\cite{bhan2026gridsfm} (arXiv'26) & Physics-Inspired Grid Model & Newton power flow operators with logarithmically penalized slack slacks & Electrical Transmission (10k buses) & $2.45\%$ zero-shot generation cost error on unseen grids; $10\times$ solver speedup \\
+\midrule
+\textbf{Physics-SynHist} & Longarini et al.~\cite{longarini2026physics} (ICML-W'26) & Cold-Start Physical Pipeline & Deterministic physical chains (\texttt{pvlib}) generating surrogate histories & Solar PV Facilities (440 sites) & Up to $50\%$ MAE reduction on zero-shot cold start without target fine-tuning \\
+\midrule
+\textbf{SurF} & Rezaei et al.~\cite{rezaei2026surf} (arXiv'26) & Generative Event Foundation & Time Rescaling Theorem (TRT) as continuous flow bijection to $\text{Exp}(1)$ & Earthquakes, Retweets, E-commerce & Multi-dataset continuous pretraining; eliminates quadrature integration bottlenecks \\
+\midrule
+\textbf{TradeFM} & Kawawa-Beaudan et al.~\cite{kawawabeaudan2026tradefm} (arXiv'26) & 524M Market Microstructure & Scale-invariant universal tokenization of limit order books & 9,000+ Equities (US, APAC) & Replicates non-linear financial stylized facts; zero-shot international market rollout \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+
 
 
 

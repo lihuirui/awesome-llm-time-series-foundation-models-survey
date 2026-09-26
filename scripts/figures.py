@@ -49,18 +49,18 @@ def generate_taxonomy_figure():
     # 3 Main Branches
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
-            ("Autoregressive & Patch Decoders", "Chronos, TimesFM-3, Timer,\nSundial, TiRex, Toto, Tabby, Cadence"),
+            ("Autoregressive & Patch Decoders", "Chronos, TimesFM-3, Timer, Sundial,\nTiRex, Toto, Tabby, Cadence, SGA"),
             ("TTA & Causal Foundation Models", "TSF-TTA, AdaNODEs, RG-TTA,\nCausalTimePrior, Causal-PT, CaTSG"),
-            ("Spatio-Temporal & Microcontrollers", "OpenCity, UniST, UrbanFM, MACROCAST,\nTiny-TSM, MCU-FQT, TQS-PTQ, Cheraghinia")
+            ("1-Bit, Quantization & Edge MCU", "Sparse Binary, Q-DEQ, TQS-PTQ,\nMCU-FQT, OpenCity, UrbanFM, MACROCAST")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
             ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
-            ("Interactive Reasoning & Tool Agents", "TimeInteract, Cast-R1, TimeART,\nTS-Reasoner, DCATS, TimeAgent"),
-            ("Omni-Modal & Joint Pretraining", "Chronicle, VLT, VisionTS++,\nChronoSteer, Time-VLM, TimeOmni")
+            ("Multi-Agent Swarms & Consensus", "MC-Debate, TimeEvo, TimeInteract,\nCast-R1, TimeART, Traceable-Agent"),
+            ("Omni-Modal & Few-Shot Agents", "Chronicle, VLT, VisionTS++,\nMetaCaster, ChronoSteer, TimeOmni")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Living & Multi-Turn Benchmarks", "Impermanent, TimeSage-MT, TIME,\nGIFT-Eval, fev-bench, CausalTime"),
-            ("Leakage, TTA & Causal Audits", "Jander Causal Audit, FAC TTA Bench,\nLiveHouse-TS, Probabilistic Reliab."),
+            ("Living & Replayable Benchmarks", "Forecast-Dojo, Impermanent, TimeSage,\nTIME, GIFT-Eval, fev-bench"),
+            ("Contamination & Leakage Audits", "TSFMAudit, Familiarity Bias, Jander,\nFAC TTA Bench, LiveHouse-TS"),
             ("Energy, Quantization & Edge Suites", "HoliBench, FM-CAC, QuantCalibration,\nBeyond Numerical, AION, WorkflowBench")
         ])
     ]
@@ -261,7 +261,13 @@ def generate_timeline_figure():
         (2026.88, 1.6, "Impermanent", "TimeCopilot", "#2ca02c"),
         (2026.90, 2.8, "TimeART", "Aalborg", "#d62728"),
         (2026.92, 4.1, "MACROCAST", "QMUL", "#1f77b4"),
-        (2026.94, 2.3, "TQS-PTQ", "Imperial", "#1f77b4")
+        (2026.94, 2.3, "TQS-PTQ", "Imperial", "#1f77b4"),
+        (2026.08, 3.1, "MC-Debate", "KAIST", "#d62728"),
+        (2026.40, 1.4, "TSFMAudit", "ZJU", "#2ca02c"),
+        (2026.71, 3.6, "TimeEvo", "Tianjin", "#d62728"),
+        (2026.73, 4.3, "Forecast-Dojo", "PSU", "#2ca02c"),
+        (2026.72, 2.2, "Q-DEQ", "HIT", "#1f77b4"),
+        (2026.74, 1.5, "SGA", "NJU", "#1f77b4")
     ]
 
     # Draw timeline line
@@ -305,11 +311,14 @@ def generate_params_corpus_figure():
     # Panel A: Parameter counts (only stated in papers)
     param_data = [
         ("Cheraghinia", 2025.88, 2.1e4, "Native TSFM", "#1f77b4", (8, 0)),
+        ("Q-DEQ", 2026.72, 3.0e5, "Native TSFM", "#1f77b4", (8, 4)),
+        ("SparseBinary", 2023.60, 8.0e5, "Native TSFM", "#1f77b4", (8, 0)),
         ("Lag-Llama", 2023.85, 2.4e6, "Native TSFM", "#1f77b4", (8, 0)),
         ("LightGTS", 2025.45, 5.8e6, "Native TSFM", "#1f77b4", (8, -8)),
         ("TTM", 2024.05, 8.0e6, "Native TSFM", "#1f77b4", (8, -8)),
         ("ForecastPFN", 2023.90, 1.0e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("APEX-Edge", 2026.46, 1.05e7, "Native TSFM", "#1f77b4", (8, -8)),
+        ("SGA", 2026.74, 1.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("Tiny-TSM", 2025.90, 2.3e7, "Native TSFM", "#1f77b4", (8, 6)),
         ("Causal-PT", 2024.12, 2.5e7, "Native TSFM", "#1f77b4", (-14, 8)),
         ("OpenCity", 2024.62, 2.6e7, "Native TSFM", "#1f77b4", (8, -8)),

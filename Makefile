@@ -1,4 +1,4 @@
-.PHONY: all search snowball watchdog screen bib figures readme paper check clean
+.PHONY: all search snowball watchdog audit screen bib figures readme paper check clean
 
 all: screen bib figures readme paper check
 
@@ -10,6 +10,9 @@ snowball:
 
 watchdog:
 	python3 scripts/watchdog.py
+
+audit:
+	python3 scripts/audit_contamination.py
 
 screen:
 	python3 scripts/screen.py

@@ -2135,5 +2135,211 @@
     "comment": "12 pages, 9 figures",
     "journal_ref": null,
     "doi": "10.1109/TCAD.2024.3484354"
+  },
+  "2607.02623": {
+    "arxiv_id": "2607.02623",
+    "title": "Evaluating Time Series Foundation Models for Electricity Price Forecasting: Contamination Risk, Distributional Shifts, and Covariate Dependence",
+    "authors": [
+      "Zhenghua Pan",
+      "Ahmed Aziz Ezzat"
+    ],
+    "release_date": "2026-07-02",
+    "summary": "Time series foundation models (TSFMs) have shown strong zero-shot forecasting performance, but their generalization in covariate-driven, non-stationary settings is underexplored. Electricity price forecasting (EPF) presents a challenging testbed due to complex temporal dependencies, distributional shifts, and strong reliance on structural and contextual information. We propose a two-dataset-benchmarking framework for EPF to mitigate contamination risk and enable fair evaluation of TSFMs. We examine key aspects of EPF including point and probabilistic forecasting performance, tail behavior, price spikes, and comparisons against domain-specific methods. We find that TSFMs are highly competitive and often outperform general-purpose baselines. Yet, their performance depends critically on covariate support, and they do not consistently surpass domain-specific methods tailored to EPF. Interestingly, simple ensembles of TSFMs and domain-specific methods appear to have significant potential, suggesting that the two approaches capture complementary predictive information.",
+    "comment": null,
+    "journal_ref": "ICML 2026 Foundation Models for Structured Data Workshop, 43rd International Conference on Machine Learning (ICML), Seoul, South Korea",
+    "doi": "10.48550/arXiv.2607.02623"
+  },
+  "2609.27277": {
+    "arxiv_id": "2609.27277",
+    "title": "TimeEvo: Failure-Driven Self-Evolution of a Time Series Agent",
+    "authors": [
+      "Jie Yang",
+      "Yan Zheng",
+      "Jiarui Sun",
+      "Xiran Fan",
+      "Junpeng Wang",
+      "Liang Wang",
+      "Zelin Xu",
+      "Qinghua Liu",
+      "Zhengyu Fang",
+      "Yiwei Cai",
+      "Philip S. Yu"
+    ],
+    "release_date": "2026-09-23",
+    "summary": "Time series agents answer analytical questions by calling external tools, and which tools they carry is decided by people before the agent runs. However, we identify two failures in this setup. Human-Agent Tool Misalignment: a library of 21 expert-curated tools helps on some tasks and hurts on others, dropping anomaly accuracy under every backbone we test. Silent Harm: one round of generic self-revision changes 147 answers and breaks 56 of them, while the final score moves by less than a point. Both follow from the same gap: whether a tool helps is decided question by question at runtime, while tools are supplied in advance and judged by a single average. To address this, we propose TimeEvo, which clusters an agent's diagnosed failures into capability gaps, plans a measurement for each, synthesizes evidence-only tools that fill them, and admits the candidate library only through a paired admission gate. Experiments on ten time series QA tasks and three backbones show that TimeEvo, starting from an empty library, improves accuracy on every task and every backbone, and that a library grown on a cheap model still gains when it is installed into stronger ones. Code is available at https://github.com/Muyiiiii/TimeEvo.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.27277"
+  },
+  "2609.28876": {
+    "arxiv_id": "2609.28876",
+    "title": "Forecast-Dojo: Replayable Environments for Benchmarking and Training LLM Forecasting Agents",
+    "authors": [
+      "Liqin Ye",
+      "Haorui Wang",
+      "Fardin Ahmed",
+      "Rongzhi Zhang",
+      "Yuan He",
+      "Ziyuan Lin",
+      "Yanbin Yin",
+      "Jing Peng",
+      "Michael Galarnyk",
+      "Sudheer Chava",
+      "Chao Zhang"
+    ],
+    "release_date": "2026-09-24",
+    "summary": "We introduce Forecast-Dojo, a replayable environment for benchmarking and training LLM forecasting agents. It combines resolved prediction-market questions with dated news, allowing agents to research an event and revisit their predictions at successive historical dates. The same tasks and tools support repeated evaluation, collection of training interactions, and feedback from recorded outcomes without waiting for new events to resolve. Forecast-Dojo contains 1,568 Polymarket events, split by time into training and evaluation periods, and 18.8M dated news articles. In an evaluation of 12 models, research tools lower Brier score for all 12. Forecasts also improve as events unfold, with the largest gains at steps where more newly dated evidence is recorded. Every model still trails historical market forecasts in both Brier score and accuracy. A belief notebook carried between dates lowers research cost but does not consistently improve forecast quality. Beyond evaluation, Forecast-Dojo provides interaction trajectories and outcome feedback for agent learning, with supervised fine-tuning as a proof of concept.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.28876"
+  },
+  "2609.28582": {
+    "arxiv_id": "2609.28582",
+    "title": "SGA: Uncertainty Quantification for Multi-Step Forecasting in Time Series Foundation Models",
+    "authors": [
+      "Xin-Yu Hu",
+      "Shuang Liang",
+      "Cheng Feng",
+      "Shao-Qun Zhang"
+    ],
+    "release_date": "2026-09-23",
+    "summary": "The recent emergence of Time Series Foundation Models (TSFMs) has significantly advanced multi-step forecasting performance, enabling accurate predictions over extended future horizons. However, existing TSFMs often suffer from significantly inherent uncertainty, which typically manifests as derived forecast branches emerging at each time step and spreading to subsequent steps; different forecast branches often exhibit varying forecasting performance, thereby undermining the credibility of TSFM forecasts. In this paper, we propose the Slicing-Graphing-Alignment (SGA) method to quantify the uncertainty of multi-step TSFM forecasts. The proposed SGA first characterizes the topology of all potential forecast branches using a directed acyclic graph, such that the graph complexity bounds the uncertainty of multi-step forecasts, and then precisely measures the graph complexity by integrating both topological information and TSFM-inherent stochasticity. Experimental results conducted on 11 TSFMs and 27 datasets demonstrate that (i) SGA achieves the best performance when ranking predictive errors with uncertainty estimates; (ii) SGA works with a more extensive and more precise sampling coverage than those of existing UQ methods, deriving a quantification mechanism fundamentally different from those of established ones; and (iii) larger model scales of TSFMs correlate with lower uncertainty estimates of multi-step forecasts, suggesting another empirical scaling law for uncertainty quantification of multi-step TSFM forecasts.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.28582"
+  },
+  "2308.04637": {
+    "arxiv_id": "2308.04637",
+    "title": "Sparse Binary Transformers for Multivariate Time Series Modeling",
+    "authors": [
+      "Matt Gorbett",
+      "Hossein Shirazi",
+      "Indrakshi Ray"
+    ],
+    "release_date": "2023-08-09",
+    "summary": "Compressed Neural Networks have the potential to enable deep learning across new applications and smaller computational environments. However, understanding the range of learning tasks in which such models can succeed is not well studied. In this work, we apply sparse and binary-weighted Transformers to multivariate time series problems, showing that the lightweight models achieve accuracy comparable to that of dense floating-point Transformers of the same structure. Our model achieves favorable results across three time series learning tasks: classification, anomaly detection, and single-step forecasting. Additionally, to reduce the computational complexity of the attention mechanism, we apply two modifications, which show little to no decline in model performance: 1) in the classification task, we apply a fixed mask to the query, key, and value activations, and 2) for forecasting and anomaly detection, which rely on predicting outputs at a single point in time, we propose an attention mask to allow computation only at the current time step. Together, each compression technique and attention modification substantially reduces the number of non-zero operations necessary in the Transformer. We measure the computational savings of our approach over a range of metrics including parameter count, bit size, and floating point operation (FLOPs) count, showing up to a 53x reduction in storage size and up to 10.5x reduction in FLOPs.",
+    "comment": "Published at KDD '23",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2308.04637"
+  },
+  "2605.26161": {
+    "arxiv_id": "2605.26161",
+    "title": "TSFMAudit: Data Contamination Auditing in Forecasting Time Series Foundation Models",
+    "authors": [
+      "Hongkai Li",
+      "Shifeng Xie",
+      "Lefei Shen",
+      "Zhuo Li",
+      "Mouxiang Chen",
+      "Xiaobin Zhang",
+      "Han Fu",
+      "Jianling Sun",
+      "Xiaoxue Ren",
+      "Chenghao Liu"
+    ],
+    "release_date": "2026-05-24",
+    "summary": "Time series foundation models (TSFMs) are increasingly pretrained on large corpora, raising concerns that evaluation datasets may have been exposed during pretraining and thus yield overly optimistic performance estimates. Auditing such contamination is challenging in time series because signals are continuous and heterogeneous, and often lack corpus documentation. To the best of our knowledge, this is the first work to study pretraining contamination auditing for TSFMs. We formalize the problem of pretraining contamination auditing for TSFMs and propose TSFMAudit, a method based on probe adaptation dynamics. Our key intuition is that contamination manifests as unusually efficient adaptation: after a fine tuning probe, contaminated datasets tend to exhibit faster loss reduction with smaller backbone movement. We evaluate TSFMAudit on 6 TSFMs and 187 datasets using documented training source evidence as supervision, and compare against 10 competitive baselines adapted from the LLM literature.",
+    "comment": "22 pages, 7 figures, 9 tables",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2605.26161"
+  },
+  "2608.03339": {
+    "arxiv_id": "2608.03339",
+    "title": "Traceable Multi-Agent System for Knowledge-Based Forecasting",
+    "authors": [
+      "Junhyeok Kang",
+      "Sangjun Han",
+      "Hyeokjun Choe",
+      "Soonyoung Lee"
+    ],
+    "release_date": "2026-08-04",
+    "summary": "Enterprise forecasting increasingly relies on autonomous agents that interpret documents, search for data, generate code, and revise models. While this autonomy helps build adaptive forecasting pipelines, it also makes it difficult for practitioners to inspect why a forecast changed, which evidence supported the change, and how data and modeling choices were revised. We present TraceMAS, an interactive demo system for traceable multi-agent forecasting. TraceMAS organizes agent outputs around two causal-loop representations: an Ideal Causal Loop Diagram (Ideal CLD), which captures key factors and their causal relations extracted from domain documents, and a Data-Grounded Causal Loop Diagram (Data-Grounded CLD), which links those factors to internal variables, external data, or documented proxies. The Data-Grounded CLD guides feature construction and model design while preserving the connection between textual evidence, data choices, and model revisions. We demonstrate TraceMAS on crude oil price forecasting. The demo interface allows users to compare forecasting iterations, inspect agent-level revisions, explore causal maps, review feature-data mappings and model architecture, and connect scenario forecasts to market narratives. This demonstration shows how autonomous forecasting agents can retain flexibility while making the evidence-to-forecast process inspectable.",
+    "comment": "Accepted at KDD 2026 Workshop on Enterprise AI Agents (Oral)",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2608.03339"
+  },
+  "2601.19151": {
+    "arxiv_id": "2601.19151",
+    "title": "Multimodal Collaborative Debate for Zero-Shot Time Series Reasoning",
+    "authors": [
+      "Patara Trirat",
+      "Jin Myung Kwak",
+      "Jay Heo",
+      "Heejun Lee",
+      "Sung Ju Hwang"
+    ],
+    "release_date": "2026-01-27",
+    "summary": "Large language models (LLMs) are increasingly used as natural-language interfaces to structured data, yet they remain brittle when reasoning over time series. Visual patterns can be misleading, numerical claims can be hallucinated, and textual context can override evidence from the signal. We study zero-shot time-series reasoning as a multimodal evidence arbitration problem for LLM agents. We propose TS-Debate, an inference-time multi-agent protocol that requires no task-specific fine-tuning. TS-Debate first elicits relevant domain knowledge, then assigns modality-specialized agents to textual context, visual patterns, and numerical signals, and coordinates their interaction through a verification-conflict-calibration procedure. Reviewer agents check decision-critical claims with lightweight code execution and numerical lookup, resolve cross-modal disagreement, and calibrate the final answer. Unlike generic multi-agent debate or unconstrained tool use, TS-Debate specifies how evidence is exposed, which claims are checkable, and how verification outcomes shape synthesis. Across 20 tasks from three public benchmarks, TS-Debate improves classification and question answering performance over strong baselines, while revealing that debate is most useful for global-structure and cross-view reasoning rather than local value reconstruction.",
+    "comment": "EMNLP 2026 (Main), Project Page: https://deepauto-ai.github.io/ts-debate/",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2601.19151"
+  },
+  "2609.10357": {
+    "arxiv_id": "2609.10357",
+    "title": "A Later Test Set Is Not a New Domain: Pretraining Familiarity Survives a Contamination-Free Hold-Out",
+    "authors": [
+      "Mahdi Naser Moghadasi",
+      "Faezeh Ghaderi"
+    ],
+    "release_date": "2026-09-09",
+    "summary": "Time-series foundation models are evaluated almost exclusively on public archives that predate them, so a strong score cannot be separated from having seen the test set during pretraining. The obvious remedy is a hold-out that postdates the models. We build one: thirteen forecasters -- four classical, three trained per dataset, six pretrained -- on seven groups drawn from five domains, every observation published after the last model was released, and every dataset rebuildable without an API key. Under this protocol pretrained models win 5 of 7 groups, lose one to a Theta baseline, and on daily exchange rates are indistinguishable from a seasonal naive forecast, along with every other method tested. We then ask what separates the wins from the losses, and report a negative result: the two intrinsic properties one would reach for -- seasonal strength and spectral entropy, measured on the input window -- do not account for the pattern, and seasonal strength is if anything negatively associated with the advantage. What does track it is corpus familiarity. Our largest gain (28% lower MASE than the best classical method, on weekly Wikipedia pageviews) falls on Wikipedia pageviews, the domain TimesFM's authors describe as the bulk of its pretraining corpus, at the same granularities and differing only in time window. Within the pretrained family, where every model forecasts identical series so that series difficulty cancels, the TimesFM family outranks the Chronos family by -0.53 ranks on Wikipedia against -0.09 everywhere else (1,500 vs. 754 series, Mann-Whitney p < 1e-5). We conclude that a temporal hold-out removes memorisation of a window but not familiarity with a domain, that benchmarks therefore need domain hold-outs stated relative to disclosed corpora, and that the practitioner's question is less which model is better than whether their domain is one the model was raised on.",
+    "comment": "11 pages, 2 figures, 5 tables. Code, data fetchers and per-series results: https://github.com/mahdinaser/tsfm-bench",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.10357"
+  },
+  "2608.23473": {
+    "arxiv_id": "2608.23473",
+    "title": "MetaCaster: Meta-Harness-Optimized Agent for End-to-End Few-Shot Learning of Lightweight Time Series Forecasters",
+    "authors": [
+      "ChengAo Shen",
+      "Wenchao Yu",
+      "Fangyu Wu",
+      "Dongjin Song",
+      "Hanghang Tong",
+      "Dongsheng Luo",
+      "Wei Cheng",
+      "Haifeng Chen",
+      "Jingchao Ni"
+    ],
+    "release_date": "2026-08-24",
+    "summary": "Time series forecasting (TSF) is evolving toward multimodal and agentic settings, yet using foundation models remains uneconomical in resource-constrained scenarios, where compact, specialized forecasters are more desirable. However, lightweight forecasters typically require substantial training data, limiting their use in domains with scarce, slowly accumulated, or privacy-sensitive time series. To address this dilemma, we investigate the challenging problem of few-shot learning for lightweight forecasters. We propose MetaCaster, a meta-harness-optimized multi-agent framework that uses agentic data generation to automatically train specialized lightweight forecasters from only a few examples and textual contexts. Our work highlights a new TSF paradigm in which agents act not as forecasters but as intermediary engineers that prepare efficient, task-specific forecasters for deployment. Experiments on 18 datasets, 23 state-of-the-art lightweight forecasters, and 14 baselines demonstrate that MetaCaster achieves both data efficiency and computational efficiency while maintaining high-quality TSF performance.",
+    "comment": "Accepted by EMNLP 2026",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2608.23473"
+  },
+  "2609.24862": {
+    "arxiv_id": "2609.24862",
+    "title": "When Tomorrow Becomes Today: Self-Evolving Policies for Agentic Time-Series Forecasting",
+    "authors": [
+      "Yifan Hu",
+      "Xilin Dai",
+      "Zhiyuan Qu",
+      "Yiding Liu",
+      "Zewei Dong",
+      "Jiang-ming Yang",
+      "Qiang Xu"
+    ],
+    "release_date": "2026-09-21",
+    "summary": "Agentic time series forecasting concerns systems whose underlying mechanisms evolve, making the relative effectiveness of numerical models, reasoning strategies, and intervention rules inherently time-varying. Consequently, a time series agent must adapt the forecasts it produces and the orchestration policy that determines which components to trust and how to coordinate them. The deployment process naturally provides supervision for this adaptation as forecast horizons elapse and realized targets reveal the effectiveness of earlier decisions. Committing all numerical expert forecasts and candidate agent paths before target observation allows each realized outcome to evaluate the entire alternative set, providing delayed feedback without additional annotation. However, existing time series agents primarily incorporate prior experience through forecast refinement, reflection, or retrieval, without systematically converting realized outcomes into persistent updates to the joint orchestration policy governing later origins. To exploit this delayed feedback systematically, we introduce TimEvolve, a frozen-backbone time series agent that converts each realized outcome into persistent joint updates of expert trust, agent path selection, and intervention strength. A temporally ordered predict, reveal, and update protocol applies this feedback to subsequent forecasts. Experiments across eight Time-MMD domains show that TimEvolve achieves the best average MSE and MAE ranks among fifteen methods and the lowest errors on both metrics in seven domains. These results demonstrate the value of learning forecasting policies from the futures encountered during deployment.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.24862"
+  },
+  "2609.24042": {
+    "arxiv_id": "2609.24042",
+    "title": "Q-DEQ: Discrete Solving and Quantization for Deep Equilibrium Models in Time Series Forecasting under Edge Deployment Coding Constraints",
+    "authors": [
+      "Ruotong Yang",
+      "Hongdong Zhu",
+      "Qi Gao",
+      "Yin Ma",
+      "Hai Wei",
+      "Kai Wen"
+    ],
+    "release_date": "2026-09-21",
+    "summary": "Edge deployment motivates forecasting models with compact parameter storage and low-bit representations. Deep equilibrium models (DEQs) obtain implicit depth by repeatedly applying a shared layer, reducing the parameter cost of explicit layer stacking. Their usual Anderson solver, however, searches for update coefficients in the continuous real domain. We propose Q-DEQ, which formulates local updates in DEQ forward solving as discrete optimization problems. Candidate directions are constructed from the current state and iteration history, and a local quadratic residual model is used to evaluate their combinations. Binary encoding of the direction coefficients yields a quadratic unconstrained binary optimization (QUBO) problem that can be solved by simulated annealing (SA) or a coherent Ising machine (CIM). After fixed-point solving, a re-forward pass applies W8A8 fake quantization to the shared layer's weights and activations. We evaluate Q-DEQ with an iTransformer backbone on five multivariate time series forecasting datasets. Relative MSE differences from the explicit multi-layer baseline range from $-1.16\\%$ to $+2.90\\%$, with lower MSE on two datasets. DEQ parameter sharing reduces parameter counts by factors of $1.80\\times$--$3.82\\times$; combined with W8A8, static weight storage is reduced by factors of $4.3\\times$--$12.8\\times$. Local QUBO problems solved using CPU-based SA and the Kaiwu CIM physical backend produce closely matching downstream forecasts. These results establish local discrete solving as a viable component of DEQ time series forecasting and provide a route for executing fixed-point updates through different combinatorial optimization backends.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.24042"
   }
 }

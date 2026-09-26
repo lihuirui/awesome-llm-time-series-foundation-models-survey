@@ -836,6 +836,92 @@ SPECS = {
         "tokenization": "8-bit Integer Quantized Temporal Patches", "prediction_head": "Integer Linear Head",
         "params": "Microcontroller Budgets (<256KB SRAM, <1MB Flash)", "pretrain_corpus": "On-Device Embedded Sensor & Vision Time Series", "tasks": ["On-Device MCU Adaptation", "Extreme Edge Training"],
         "open_weights": True, "venue": "arXiv 2024", "code_url": None
+    },
+
+    # Iteration 8 Additions: Multi-Agent Swarms, 1-Bit Transformers & Contamination Auditing
+    "2601.19151": {
+        "bibkey": "trirat2026multimodal",
+        "group": "KAIST", "paradigm": "LLM4TS", "architecture": "Multimodal Collaborative Debate (MC-Debate) Swarm Framework",
+        "tokenization": "Interleaved Visual Plots, Text Prompts, and Patch Sequences", "prediction_head": "Multi-Agent Consensus Arbiter & Output Generator",
+        "params": "7B / 14B Backbones", "pretrain_corpus": "Multimodal Time Series QA & Reasoning Benchmarks", "tasks": ["Multi-Agent Collaborative Reasoning", "Zero-Shot Forecasting", "Multi-Turn Dialogue"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.27277": {
+        "bibkey": "yang2026timeevo",
+        "group": "Tianjin University", "paradigm": "LLM4TS", "architecture": "Failure-Driven Self-Evolution Agent Architecture",
+        "tokenization": "Dynamic Tool Invocation and Self-Reflective Traces", "prediction_head": "Autonomous Tool Execution & Answer Synthesizer",
+        "params": "8B / 70B Agent Controllers", "pretrain_corpus": "TimeQA & Evolutionary Failure Trajectories", "tasks": ["Failure-Driven Self-Evolution", "Tool Synthesis", "Analytical QA"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/Muyiiiii/TimeEvo"
+    },
+    "2609.24862": {
+        "bibkey": "hu2026selftraining",
+        "group": "Peking University", "paradigm": "LLM4TS", "architecture": "Self-Evolving Policy Network for Agentic Forecasting",
+        "tokenization": "Temporal Policy Decisions and Historical Action Traces", "prediction_head": "Policy-Guided Forecast Selection & Refinement",
+        "params": "7B Agent Policy", "pretrain_corpus": "Sequential Policy Rollout Streams", "tasks": ["Agentic Forecasting", "Self-Evolving Policy Adaptation"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2608.03339": {
+        "bibkey": "kang2026traceable",
+        "group": "Seoul National University", "paradigm": "LLM4TS", "architecture": "Traceable Multi-Agent Orchestration with Dynamic Model Revision",
+        "tokenization": "Knowledge Retrieval Graphs and Forecasting Execution Traces", "prediction_head": "Traceable Forecast Synthesis & Explanation Head",
+        "params": "Multi-LLM Swarm (8B-70B)", "pretrain_corpus": "Enterprise Market Reports & Historical Forecast Traces", "tasks": ["Enterprise Knowledge-Based Forecasting", "Decision Traceability"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2608.23473": {
+        "bibkey": "shen2026metacaster",
+        "group": "University of Connecticut", "paradigm": "LLM4TS", "architecture": "Meta-Harness Agent for End-to-End Few-Shot Forecaster Synthesis",
+        "tokenization": "Few-Shot Temporal Context and Model Search Tokens", "prediction_head": "Lightweight Adapted Model Predictor",
+        "params": "Agent Controller + Lightweight Models (<1M)", "pretrain_corpus": "Meta-Learning Task Collections", "tasks": ["Few-Shot Lightweight Forecaster Synthesis", "Automated Architecture Search"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2308.04637": {
+        "bibkey": "gorbett2023sparsebinary",
+        "group": "Colorado State University", "paradigm": "Native TSFM", "architecture": "Sparse Binary Transformer (1-Bit Weights {-1, +1})",
+        "tokenization": "Binary Patch Tokenization with Multi-Rate Attention", "prediction_head": "Multiplication-Free Binary Linear Head",
+        "params": "0.8M (1-bit weights)", "pretrain_corpus": "Multivariate Sensor & Energy Time Series", "tasks": ["Multiplication-Free Binary Forecasting", "Edge Sensor Classification"],
+        "open_weights": True, "venue": "arXiv 2023", "code_url": None
+    },
+    "2609.24042": {
+        "bibkey": "yang2026qdeq",
+        "group": "Harbin Institute of Technology", "paradigm": "Native TSFM", "architecture": "Quantized Deep Equilibrium Model (Q-DEQ) with Fixed-Point Solver",
+        "tokenization": "Quantized Continuous State Vector Projections", "prediction_head": "Fixed-Point Equilibrium Linear Predictor",
+        "params": "0.3M (Quantized Equilibrium)", "pretrain_corpus": "Edge Sensor Benchmarks", "tasks": ["Edge Quantized Equilibrium Forecasting", "Low-Memory Inference"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.28582": {
+        "bibkey": "hu2026sga",
+        "group": "Nanjing University", "paradigm": "Native TSFM", "architecture": "State-Guided Autoregressive (SGA) Uncertainty Head",
+        "tokenization": "State-Guided Hidden Trajectory Tokens", "prediction_head": "Autoregressive Predictive Mean and Variance Head",
+        "params": "15M (SGA Adapter)", "pretrain_corpus": "Synthetic Gaussian and Realistic Multi-Step Benchmarks", "tasks": ["Multi-Step Autoregressive Uncertainty Quantification", "Point & Density Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.28876": {
+        "bibkey": "ye2026forecastdojo",
+        "group": "Penn State", "paradigm": "Evaluation & Benchmark", "architecture": "Replayable Simulation Gym & Live Agent Evaluation Environment",
+        "tokenization": "Replayable Timestamped Event Windows & News Stream Tokens", "prediction_head": "N/A (Multi-Agent Simulation & Benchmark Environment)",
+        "params": "not reported", "pretrain_corpus": "Prediction Markets + Historical Timestamped News Streams", "tasks": ["Agentic Forecasting Benchmark", "Replayable Market Simulation"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2605.26161": {
+        "bibkey": "li2026tsfmaudit",
+        "group": "Zhejiang University", "paradigm": "Evaluation & Benchmark", "architecture": "N-Gram and Mutual Information Data Contamination Auditing Harness",
+        "tokenization": "Normalized Pretraining N-Grams and Continuous Subseries Windows", "prediction_head": "N/A (Data Contamination & Mutual Information Scanner)",
+        "params": "not reported", "pretrain_corpus": "UTSD, Chronos-Data, Monash, and Standard Public Benchmark Archives", "tasks": ["Pretraining Corpus Contamination Auditing", "Leakage Quantification"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.10357": {
+        "bibkey": "moghadasi2026familiarity",
+        "group": "Sharif University of Technology", "paradigm": "Evaluation & Benchmark", "architecture": "Pretraining Familiarity Metric & Out-of-Distribution Temporal Stress Test",
+        "tokenization": "Temporal Domain Windows and Familiarity Indices", "prediction_head": "N/A (Familiarity Bias & Temporal Leakage Evaluator)",
+        "params": "not reported", "pretrain_corpus": "Standard Public Benchmark Archives (Pre/Post Cutoff Splits)", "tasks": ["Temporal Domain Generalization", "Pretraining Familiarity Auditing"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/mahdinaser/tsfm-bench"
+    },
+    "2607.02623": {
+        "bibkey": "pan2026evaluating",
+        "group": "Rutgers University", "paradigm": "Evaluation & Benchmark", "architecture": "Covariate-Dependent Stress-Test & Contamination Auditing Framework",
+        "tokenization": "Multi-Horizon Covariate and Target Patch Streams", "prediction_head": "N/A (Benchmark Evaluation & Distribution Shift Stress-Tester)",
+        "params": "not reported", "pretrain_corpus": "PJM, EPEX, and Australian Electricity Market Telemetry", "tasks": ["Electricity Price Forecasting", "Covariate Shift Stress-Testing", "Contamination Audit"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
     }
 }
 

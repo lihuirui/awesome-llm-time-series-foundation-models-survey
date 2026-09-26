@@ -20,3 +20,4 @@
 {"timestamp": "2026-09-26 04:39:20", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 9", "hits": 9, "new_candidates": 8}
 {"timestamp": "2026-09-26 04:41:12", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 2", "hits": 2, "new_candidates": 2}
 {"timestamp": "2026-09-26 17:45:00", "source": "Snowball & Targeted arXiv Search (Iteration 7)", "query": "Agentic Time Series, Microcontroller Quantization, Living Contamination Audits", "hits": 11, "new_candidates": 10}
+{"timestamp": "2026-09-26 14:45:26", "source": "arXiv API (Iteration 8 Systematic Delta Search)", "query": "Q7_multiagent_swarm_contamination_iteration8", "hits": 12, "new_candidates": 12}

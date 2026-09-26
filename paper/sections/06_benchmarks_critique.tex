@@ -317,6 +317,61 @@ These living and agentic evaluation frameworks illuminate two fundamental paradi
     \item \emph{Multi-Turn Dialogue and Decision Gaps}: Kong et al.~\cite{kong2026timesagemt} construct \emph{TimeSage-MT}, bridging the gap between single-step predictions and practical decision-making workflows. Across 2,680 dialogue turns in eight domains (finance, energy, transportation, healthcare, meteorology, manufacturing, retail, and server telemetry), they discover that even frontier closed-source LLMs (GPT-4o, Claude 3.5 Sonnet) suffer sharp performance drops exceeding $35\%$ when progressing from exploratory questions to complex multi-step decision tasks. These failures stem primarily from three bottlenecks: loss of intermediate memory over long dialogue horizons, inability to calibrate forecast uncertainty across tool invocations, and domain hallucination when resolving conflicting statistical evidence.
 \end{enumerate}
 
+\subsection{Data Contamination, Pretraining Familiarity Bias, and Automated Continuous Auditing}
+\label{sec:data_contamination_auditing}
+
+The rapid proliferation of time-series foundation models has exposed an acute methodological challenge: \emph{benchmark data contamination and temporal leakage}. Unlike natural language corpora where test sets can be filtered via string matching, time series consist of continuous, normalized numerical sequences that undergo varying degrees of preprocessing (standardization, differencing, patch discretization). Furthermore, because the pretraining datasets of many prominent models (e.g., UTSD, Chronos-Data, Monash) aggregate open-source archives, classic benchmarks (ETT, Weather, Electricity, Traffic) are frequently ingested during pretraining, rendering reported zero-shot performance suspect.
+
+Recent literature systematically tackles this vulnerability through automated auditing frameworks, leakage-free simulation gyms, and temporal familiarity metrics:
+\begin{itemize}[leftmargin=*]
+    \item \emph{TSFMAudit: Automated Temporal Contamination Scanning (Li et al., 2026)}~\cite{li2026tsfmaudit}: Li et al. develop TSFMAudit, establishing the first formal auditing suite for detecting pretraining contamination in time-series foundation models. TSFMAudit introduces two complementary statistical tests: (1) \emph{Quantile-Bin N-Gram Hashing}, which maps continuous floating-point sequences into discrete symbolic tokens to detect verbatim sequence memorization, and (2) \emph{Mutual Information Permutation Testing}, which quantifies non-linear statistical dependence between candidate pretraining segments and benchmark test sets. Auditing multiple prominent open-weight foundation models, TSFMAudit reveals that up to $18.4\%$ of standard benchmark sequences exhibit statistically significant memorization signatures, leading to artificially deflated zero-shot test errors.
+    \item \emph{Pretraining Familiarity Bias Survives Temporal Hold-Outs (Moghadasi \& Ghaderi, 2026)}~\cite{moghadasi2026familiarity}: Moghadasi and Ghaderi challenge the pervasive research convention that temporal hold-outs (e.g., training on pre-2020 data and testing on post-2020 data) guarantee an uncontaminated evaluation. They show that because physical data-generating processes (e.g., weather cycles, power grid load curves) exhibit stationary dynamical attractors, a foundation model exposed to historical records retains profound \emph{pretraining familiarity}. When evaluated on temporally separated hold-outs from familiar domains versus genuine cross-domain datasets, foundation models experience performance gaps of up to $42\%$, proving that reported zero-shot scores frequently conflate cross-domain generalization with domain-specific familiarity.
+    \item \emph{Empirical Stress-Testing on Volatile Infrastructure (Pan \& Ezzat, 2026)}~\cite{pan2026evaluating}: Pan and Ezzat conduct an exhaustive empirical audit of zero-shot foundation models (Chronos-Bolt, TimesFM, Moirai) on electricity price markets (PJM, EPEX, and Australian NEM). Characterized by extreme price spikes and renewable penetration, electricity markets violate Gaussian stationarity. Their audit uncovers that univariate foundation models degrade by $28\%$ compared to localized gradient-boosted trees (LightGBM) due to their inability to ingest critical exogenous covariates (temperature, transmission capacity). Furthermore, contamination risk is heightened because public market data is ubiquitously crawled into pretraining corpora without provenance tracking.
+    \item \emph{Forecast-Dojo: Replayable Environments for LLM Forecasting Agents (Ye et al., 2026)}~\cite{ye2026forecastdojo}: Ye et al. introduce Forecast-Dojo, a leak-free replayable simulation gym that benchmarks multi-agent forecasting systems on resolved prediction market questions (from Polymarket and Metaculus). Forecast-Dojo deterministically pairs real-world questions with dated, timestamped global news archives, strictly eliminating future lookahead bias. In this controlled environment, agents must gather historical evidence, write Python code, and generate calibrated probabilistic forecasts, providing a rigorous testbed for evaluating genuine temporal reasoning without data contamination.
+\end{itemize}
+
+Table~\ref{tab:multiagent_contamination_edge_synthesis} synthesizes the frontier across multi-agent deliberation systems, data contamination auditors, and extreme low-bit edge quantization foundations.
+
+\begin{table*}[t]
+\caption{Taxonomy and Empirical Characterization of Multi-Agent Deliberation Systems, Contamination Scanners, and Edge Quantization Foundations.}
+\label{tab:multiagent_contamination_edge_synthesis}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lp{2.2cm}p{3.2cm}p{3.2cm}p{2.6cm}p{4.2cm}}
+\toprule
+\textbf{Framework} & \textbf{Key Reference} & \textbf{Core Category \& Paradigm} & \textbf{Architectural Mechanism} & \textbf{Target Hardware / Scope} & \textbf{Key Metric / Empirical Finding} \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category A: Multi-Agent Swarm Deliberation and Self-Evolving Systems}} \\
+\midrule
+\textbf{MC-Debate} & Trirat et al.~\cite{trirat2026multimodal} (arXiv'26) & Multi-Agent Swarm Deliberation & Cross-modal debate across Visual, Numerical, and Textual specialists & Server GPUs (7B/14B Backbones) & $-14.2\%$ reasoning error; eliminates $76\%$ of hallucinated trend reversals \\
+\midrule
+\textbf{TimeEvo} & Yang et al.~\cite{yang2026timeevo} (arXiv'26) & Failure-Driven Self-Evolution & Evolutionary agent autonomously synthesizing Python tools on task failure & Server Clusters (8B/70B Controllers) & Dynamic tool synthesis; continuous improvement on TimeQA without human engineering \\
+\midrule
+\textbf{Traceable-Agent} & Kang et al.~\cite{kang2026traceable} (arXiv'26) & Traceable Enterprise Multi-Agent & Four sub-agents with immutable DAG linking 10-K filings to forecasts & Enterprise Cloud Infrastructure & $100\%$ decision traceability; verifiable causal citations for regulatory compliance \\
+\midrule
+\textbf{MetaCaster} & Shen et al.~\cite{shen2026metacaster} (arXiv'26) & Meta-Harness Forecaster Synthesis & LLM agent architecting compact models (<1M) via dataset fingerprints & Edge / Low-power IoT nodes & Matches 100M+ TSFM zero-shot accuracy with $20\times$ lower inference compute \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category B: Extreme Low-Bit Quantization and Edge Inference Foundations}} \\
+\midrule
+\textbf{SparseBinary} & Gorbett et al.~\cite{gorbett2023sparsebinary} (arXiv'23) & 1-Bit Weight Transformer & Extreme binary weights ($\{-1, +1\}$) with addition-only ALU accumulation & Embedded FPGAs / ASICs & $87\%$ parameter reduction; multiplication-free multivariate attention \\
+\midrule
+\textbf{Q-DEQ} & Yang et al.~\cite{yang2026qdeq} (arXiv'26) & Quantized Deep Equilibrium Model & Implicit fixed-point solving ($\mathbf{z}^* = f_\theta(\mathbf{z}^*, \mathbf{x})$) under INT4/INT8 & Bare-metal MCUs (<100KB SRAM) & $0.3\text{M}$ params; $75\text{ KB}$ footprint; zero dynamical stability loss \\
+\midrule
+\textbf{SGA} & Hu et al.~\cite{hu2026sga} (arXiv'26) & State-Guided Autoregressive Adapter & Latent state curvature tracking to scale autoregressive rollout variance & TSFM Backbones (15M Adapter) & Calibrated prediction intervals over long horizons without Monte Carlo sampling \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category C: Data Contamination Auditing, Familiarity Bias, and Replayable Gyms}} \\
+\midrule
+\textbf{TSFMAudit} & Li et al.~\cite{li2026tsfmaudit} (arXiv'26) & Data Contamination Scanner & Quantile n-gram hashing and mutual information permutation testing & Pretraining Corpora (UTSD, Chronos) & Detects up to $18.4\%$ sequence memorization in public open-weight models \\
+\midrule
+\textbf{Familiarity-Audit} & Moghadasi et al.~\cite{moghadasi2026familiarity} (arXiv'26) & Pretraining Familiarity Evaluator & Pretraining familiarity index across pre/post temporal benchmark splits & Benchmark Archives (ETT, Weather) & Proves temporal hold-outs preserve domain attractor bias (up to $42\%$ gap) \\
+\midrule
+\textbf{Forecast-Dojo} & Ye et al.~\cite{ye2026forecastdojo} (arXiv'26) & Replayable Agent Simulation Gym & Prediction markets paired with dated news streams in leakage-free gym & Multi-Agent Evaluation & Leakage-free benchmark for multi-agent temporal decision policies \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+
 
 
 

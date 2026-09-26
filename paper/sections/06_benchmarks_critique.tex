@@ -273,5 +273,50 @@ Synthesis of these evaluative frontiers yields four critical insights:
     \item \emph{Living Leaderboard Ecosystems (The TIME Benchmark)}: Addressing the rapid obsolescence of static benchmark datasets, Qiao et al.~\cite{qiao2026time} introduce the TIME benchmark (50 fresh datasets, 98 tasks) and the public Hugging Face TIME-Leaderboard (\url{https://huggingface.co/spaces/Real-TSF/TIME-leaderboard}). By pairing automated weekly evaluation pipelines with pattern-level time series decomposition, TIME evaluates foundation models across multi-scale periodicity, non-stationarity, and noise regimes, establishing a living, contamination-resistant community reference standard for zero-shot time-series intelligence.
 \end{enumerate}
 
+\subsection{Living Streaming Benchmarks, Temporal Generalization, and Agentic Multi-Turn Evaluation}
+\label{sec:living_streaming_agentic_benchmarks}
+
+Static benchmark splits (e.g., standard 70/10/20 train-val-test partitioning on historical repositories) have increasingly become liabilities in foundation model evaluation. Beyond the acute risk of pretraining data contamination and lookahead leakage, static benchmarks fail to measure how models perform under continuous open-world temporal evolution~\cite{garza2026impermanent}. Simultaneously, standard single-step error metrics (MSE, MAE, CRPS) cannot evaluate multi-turn agentic workflows where conclusions emerge from cumulative dialogue turns, tool executions, and state reflections~\cite{kong2026timesagemt}.
+
+Table~\ref{tab:agentic_time_series_benchmarks} provides a systematic taxonomy and architectural comparison across the emerging generation of agentic time-series reasoning frameworks and living temporal benchmarks.
+
+\begin{table*}[t]
+\caption{Taxonomy and Architectural Profiling of Agentic Time-Series Reasoning Frameworks and Living Benchmarks.}
+\label{tab:agentic_time_series_benchmarks}
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lp{2.2cm}p{3.2cm}p{3.0cm}p{3.2cm}p{3.0cm}p{3.8cm}}
+\toprule
+\textbf{Framework} & \textbf{Key Reference} & \textbf{Core Role \& Paradigm} & \textbf{Base Model / Backbone} & \textbf{Toolset \& Action Space} & \textbf{State \& Memory Mechanism} & \textbf{Evaluated Benchmarks \& Capabilities} \\
+\midrule
+\multicolumn{7}{l}{\textbf{Category A: Interactive Reasoning and Tool-Augmented Agents}} \\
+\midrule
+\textbf{TimeInteract} & Pan et al.~\cite{pan2026timeinteract} (arXiv'26) & Streaming Real-Time Interactive Intelligence & Qwen2-7B Backbone with Dual-View TS Encoder & Streaming perception, silent/response gating, decoupled generation & Dual-view short/long-term rolling perceptual memory & StreamTSI-34K (34.5K episodes); near-zero stall; $2.15\times$ speedup \\
+\midrule
+\textbf{Cast-R1} & Tao et al.~\cite{tao2026castr1} (arXiv'26) & Tool-Augmented Sequential Decision Forecaster & Qwen2.5-7B (SFT + Multi-Turn RL) & Seasonal-trend decomposition, stationarity tests, lightweight model calls & Episodic decision memory maintaining historical evidence & Complex non-stationary benchmarks; multi-turn self-reflective forecasting \\
+\midrule
+\textbf{TimeART} & Wu et al.~\cite{wu2026timeart} (arXiv'26) & Agentic Data Scientist for Time-Series QA & 8B Time Series Reasoning Model (TSRM) on Llama-3 & Data science tool suite, statistical tests, plotting, forecasting heads & Trajectory memory with experience replay & TimeToolBench (100k expert trajectories); high-precision TSQA \\
+\midrule
+\textbf{TS-Reasoner} & Ye et al.~\cite{ye2024tsreasoner} (arXiv'24) & Domain-Specialized Multi-Step Inference Agent & 7B / 14B Language Models & Domain-specific computational routines, symbolic reasoning tools & Iterative error feedback loop with constraint validator & TimeSeriesExam; complex multi-step compositional inference \\
+\midrule
+\textbf{DCATS} & Yeh et al.~\cite{yeh2025dcats} (arXiv'25) & Data-Centric AutoML Agent for Time Series & GPT-4 / Llama-3-70B Planner & Data cleaning routines, anomaly imputation, pipeline configurators & Pipeline state tracker optimizing data quality & Large-scale traffic volume datasets; $6\%$ average error reduction across models \\
+\midrule
+\multicolumn{7}{l}{\textbf{Category B: Living Temporal Benchmarks and Multi-Turn Diagnostic Suites}} \\
+\midrule
+\textbf{Impermanent} & Garza et al.~\cite{garza2026impermanent} (arXiv'26) & Continuous Live Streaming Generalization Benchmark & TimeCopilot Live Platform (Top 400 GitHub Repos) & Daily automated ingestion of PRs, issues, commits, stargazers & Rolling daily window with sequential scoring & Living leaderboard; evaluates temporal robustness against distribution breaks \\
+\midrule
+\textbf{TimeSage-MT} & Kong et al.~\cite{kong2026timesagemt} (arXiv'26) & Multi-Turn Agentic Reasoning Benchmark Suite & Frontier LLMs + Structured TimeSage Agent & Comprehensive time-series skill library (decomposition, anomaly, stats) & Multi-turn conversational dialogue state tracking & 240 tasks, 2,680 turns across 8 domains; audits memory and uncertainty failure \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+These living and agentic evaluation frameworks illuminate two fundamental paradigms:
+\begin{enumerate}[leftmargin=*]
+    \item \emph{Continuous Live Evaluation vs. Static Overfitting}: Garza et al.~\cite{garza2026impermanent} instantiate \emph{Impermanent} on top-400 GitHub activity streams. Because software repositories experience organic shocks (major version releases, viral social adoption, tooling migrations), they exhibit intense non-stationarity without synthetic artifacts. Crucially, Impermanent scores forecasts sequentially over time on live data streams with daily leaderboard updates (\url{https://impermanent.timecopilot.dev}). Their findings expose that zero-shot foundation models showing near-optimal static error rates frequently deteriorate when evaluated under sustained streaming evolution, underscoring that static benchmarks reward memorization and lookahead leakage rather than true temporal generalizability.
+    \item \emph{Multi-Turn Dialogue and Decision Gaps}: Kong et al.~\cite{kong2026timesagemt} construct \emph{TimeSage-MT}, bridging the gap between single-step predictions and practical decision-making workflows. Across 2,680 dialogue turns in eight domains (finance, energy, transportation, healthcare, meteorology, manufacturing, retail, and server telemetry), they discover that even frontier closed-source LLMs (GPT-4o, Claude 3.5 Sonnet) suffer sharp performance drops exceeding $35\%$ when progressing from exploratory questions to complex multi-step decision tasks. These failures stem primarily from three bottlenecks: loss of intermediate memory over long dialogue horizons, inability to calibrate forecast uncertainty across tool invocations, and domain hallucination when resolving conflicting statistical evidence.
+\end{enumerate}
+
+
 
 

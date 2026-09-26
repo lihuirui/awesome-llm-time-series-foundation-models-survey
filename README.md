@@ -2,11 +2,11 @@
 
 [![Survey Paper](https://img.shields.io/badge/Survey%20Paper-PDF-red?style=flat&logo=adobeacrobatreader)](paper/main.pdf)
 [![PRISMA 2020](https://img.shields.io/badge/PRISMA%202020-Reproducible-green?style=flat)](docs/PROTOCOL.md)
-[![Total Included](https://img.shields.io/badge/Included%20Studies-102-blue?style=flat)](data/papers.json)
+[![Total Included](https://img.shields.io/badge/Included%20Studies-113-blue?style=flat)](data/papers.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 6 (Test-Time Adaptation, Causal Discovery & Living Benchmarks)** · Last Updated: **2026-09-26**
+> Latest Iteration: **Iteration 7 (Interactive Time-Series Agents, Extreme MCU Quantization & Living Streaming Benchmarks)** · Last Updated: **2026-09-26**
 
 ---
 
@@ -14,11 +14,11 @@
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **原生与端侧轻量基座模型 (Native & Edge TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与极端端侧轻量模型，如 Chronos-2、TimesFM-3 (330M原生多变量预测与1T训练集)、Cadence (基于TimesFM-3的有界有损时序压缩系统)、MOIRAI、MOMENT、TTM、Timer-S1、Time-MoE、Toto 2.0、$t_0$、Tiny-TSM (23M单卡训练)、APEX (网络原生AP遥测)、Cheraghinia MLP (21K微控制器级) 等。
-2. **非平稳时序漂移与测试时自适应 (Test-Time Adaptation, TTA)**：无监督应对测试期分布偏移与概念漂移，如 TSF-TTA (AAAI'25无源测试时自适应与一致性损失)、AdaNODEs (ICASSP'26连续神经ODE自适应)、RG-TTA (流式机制引导元控制与动态梯度调节)、FAC (频域感知校准与防高频噪声发散)。
-3. **因果发现、先验拟合与反事实基座模型 (Causal Discovery & Structural Priors)**：融合结构因果模型 (SCMs)，如 Causal-PT (深度因果预训练单步DAG重构)、CausalTimePrior (首个基于先验数据拟合网络PFN的因果干预时序模型，支持即时反事实预测)、CaTSG (结构因果扩散生成)、CausalTime (NeurIPS'23真实动力学流因果评测基准)、Jander 因果审计 (揭示主流时序基座模型顽固的滞后惯性偏差)。
-4. **时空图谱与全模态跨模态表征 (Spatio-Temporal & Omni-Modal)**：OpenCity、UniST、UrbanDiT、UrbanFM、TiMo (卫星时序多尺度陀螺注意力)、Time-LLM、Chronicle (从头联合预训练324M模型)、VLT、ChronoSteer、VisionTS++、TimeOmni-VL 等。
-5. **动态评测社区、能耗剖析与活跃榜单 (Living Leaderboards & Benchmarks)**：It's TIME (50个全新数据集、98个评测任务与HuggingFace实时打榜空间)、HoliBench (跨7类硬件与FP16/INT8/INT4能耗分析)、FM-CAC (碳感知动态调度)、Ling et al. (FPGA混合精度INT8/INT4量化)、GIFT-Eval、fev-bench 等。
+1. **原生与端侧轻量基座模型 (Native & Edge TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与极端端侧轻量模型，如 Chronos-2、TimesFM-3 (330M原生多变量预测与1T训练集)、Cadence (时序有损压缩)、MACROCAST (15M纯合成BVAR/DFM模拟预训练、零未来与修正泄露的实时宏观经济基座模型)、MOIRAI、MOMENT、TTM、Timer-S1、Time-MoE、Toto 2.0、$t_0$、Tiny-TSM (23M单卡训练)、APEX (网络原生AP遥测)、TQS-PTQ (动力学系统轨迹量化敏感度预算)、4-Bit激活校准 (Ye & Wanjiku 2026)、MCU-FQT (Cortex-M微控制器全量化端侧训练) 等。
+2. **交互式时序智能体与工具增强推理 (Interactive Time-Series Agents & Tool Reasoning)**：从静态单步映射走向多轮交互与序列决策，如 TimeInteract (Ming Jin 团队，首创流式实时交互范式与解耦流式推理、零卡顿响应 StreamTSI-34K)、Cast-R1 (USTC，强化学习序列决策策略与统计工具自省)、TimeART (10万专家轨迹 TimeToolBench 与8B时序问答模型 TSRM)、TS-Reasoner (领域专业时序推断与反馈回环)、DCATS (数据中心化 AutoML 智能体)、TimeAgent (龙明盛团队，科学探究闭环调度与跨基座模型仲裁克服跷跷板效应)。
+3. **非平稳时序漂移与测试时自适应 (Test-Time Adaptation, TTA)**：无监督应对测试期分布偏移与概念漂移，如 TSF-TTA (AAAI'25无源测试时自适应与一致性损失)、AdaNODEs (ICASSP'26连续神经ODE自适应)、RG-TTA (流式机制引导元控制与动态梯度调节)、FAC (频域感知校准与防高频噪声发散)。
+4. **因果发现、先验拟合与反事实基座模型 (Causal Discovery & Structural Priors)**：融合结构因果模型 (SCMs)，如 Causal-PT (深度因果预训练单步DAG重构)、CausalTimePrior (首个基于先验数据拟合网络PFN的因果干预时序模型，支持即时反事实预测)、CaTSG (结构因果扩散生成)、CausalTime (NeurIPS'23真实动力学流因果评测基准)、Jander 因果审计 (揭示主流时序基座模型顽固的滞后惯性偏差)。
+5. **动态流式评测、多轮智能体基准与活跃榜单 (Living Benchmarks & Multi-Turn Suites)**：Impermanent (Garza et al., 2026, 基于 GitHub Top-400 实时代码仓动态事件流的持续滚动评测基准，防止静态过拟合与数据污染)、TimeSage-MT (Ming Jin & Qingsong Wen, 240项任务、2680轮跨8大领域的多轮智能体时序推理评测基准与技能库)、It's TIME (50个全新数据集、98个评测任务与HuggingFace实时打榜空间)、HoliBench (跨7类硬件与FP16/INT8/INT4能耗分析)、FM-CAC (碳感知动态调度) 等。
 
 ---
 
@@ -35,15 +35,15 @@ graph TD
 
     P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM-3, Timer, Sundial, TiRex, Toto, Tabby, Cadence)"]
     P1 --> P1_TTA["Test-Time Adaptation & Causal Models<br/>(TSF-TTA, AdaNODEs, RG-TTA, CausalTimePrior, Causal-PT, CaTSG)"]
-    P1 --> P1_Edge["Spatio-Temporal & Edge Micro-Models<br/>(OpenCity, UniST, UrbanFM, TiMo, Tiny-TSM, APEX, Cheraghinia MLP)"]
+    P1 --> P1_Edge["Spatio-Temporal & Microcontrollers<br/>(OpenCity, UniST, UrbanFM, MACROCAST, Tiny-TSM, MCU-FQT, TQS-PTQ, Cheraghinia)"]
 
     P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
-    P2 --> P2_Prompt["Prompting & Spatio-Temporal<br/>(LLMTime, PromptCast, UniTime, UrbanGPT, ST-LLM, AutoTimes)"]
+    P2 --> P2_Agent["Interactive Reasoning & Tool Agents<br/>(TimeInteract, Cast-R1, TimeART, TS-Reasoner, DCATS, TimeAgent)"]
     P2 --> P2_Omni["Omni-Modal & Joint Pretraining<br/>(Chronicle, VLT, VisionTS++, ChronoSteer, Time-VLM, TimeOmni-VL)"]
 
-    P3 --> P3_Bench["Standardized & Living Benchmarks<br/>(TIME Leaderboard, GIFT-Eval, fev-bench, TimesX, CausalTime)"]
-    P3 --> P3_Audit["Causal Audits & Complexity<br/>(Jander Causal Audit, FAC TTA Bench, LiveHouse-TS, Table 4)"]
-    P3 --> P3_Energy["Energy & Quantization Profiles<br/>(HoliBench, FM-CAC, Ling et al., Table 5, Table 6)"]
+    P3 --> P3_Bench["Living & Multi-Turn Benchmarks<br/>(Impermanent, TimeSage-MT, TIME Leaderboard, GIFT-Eval, fev-bench, CausalTime)"]
+    P3 --> P3_Audit["Causal Audits & Complexity<br/>(Jander Causal Audit, FAC TTA Bench, LiveHouse-TS, Table 4, Table 6)"]
+    P3 --> P3_Energy["Energy, Quantization & Agent Profiles<br/>(HoliBench, FM-CAC, QuantCalibration, Table 5, Table 7)"]
 ```
 
 ---
@@ -54,13 +54,13 @@ graph TD
 
 | Phase | Metric | Count | Description |
 | :--- | :--- | :---: | :--- |
-| **Identification** | Total records retrieved | **118** | Systematic queries across arXiv and Crossref APIs |
+| **Identification** | Total records retrieved | **128** | Systematic queries across arXiv and Crossref APIs |
 | | Duplicates removed | **5** | Deduplication via DOI and arXiv identifiers |
-| **Screening** | Title & abstract screened | **113** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
-| | Excluded at Stage 1 | **10** | Out of domain / pre-2021 releases |
-| **Eligibility** | Full-text assessed | **103** | Assessed for architectural details and experimental rigor |
+| **Screening** | Title & abstract screened | **123** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
+| | Excluded at Stage 1 | **9** | Out of domain / pre-2021 releases |
+| **Eligibility** | Full-text assessed | **114** | Assessed for architectural details and experimental rigor |
 | | Deferred for P2 extraction | **1** | Candidates queued for detailed extraction in upcoming iteration |
-| **Included** | **Total Synthesized Studies** | **102** | **Core benchmark and foundation models synthesized** |
+| **Included** | **Total Synthesized Studies** | **113** | **Core benchmark and foundation models synthesized** |
 
 ---
 
@@ -131,6 +131,10 @@ graph TD
 | **Interventional Time Series Priors for Causal Foundation Models** | Humboldt University of Berlin | arXiv 2026 | 85M | Synthetic Interventional TSCMs (500M simulations) | Interventional Observation Pairs; Prior-Data Fitted Network (CausalTimePrior PFN) | [📄 Paper](https://arxiv.org/abs/2603.11090)<br/>🔒 Proprietary |
 | **Cadence** | Politecnico di Torino | arXiv 2026 | 330M (TimesFM-3) | 1T Time Points (Google Pretraining Corpus) | Stacked Variate Attention Patches; TimesFM-3 (330M) + Adaptive Arithmetic Coding Engine | [📄 Paper](https://arxiv.org/abs/2609.06008)<br/>[💻 Code](https://github.com/google-research/timesfm) |
 | **Causal Time Series Generation via Diffusion Models** | City University of Hong Kong | arXiv 2025 | 45M | Cross-domain Causal Time Series | Causal Graph Structured Latents; Structural Causal Diffusion Model (CaTSG) | [📄 Paper](https://arxiv.org/abs/2509.20846)<br/>🔒 Proprietary |
+| **MACROCAST** | Other | arXiv 2026 | 15M | Synthetic BVAR & DFM Simulations (Purely Synthetic, 0 Lookahead) | Patch-level Macroeconomic Tokens; Decoder-only Vintage-Consistent Transformer | [📄 Paper](https://arxiv.org/abs/2606.28670)<br/>🔒 Proprietary |
+| **Quantizing Time-Series Models As Dynamical Systems** | Other | arXiv 2026 | Mixed-Precision Quantized Models (FP16 down to INT4) | N/A (Zero-shot Post-Training Quantization) | Continuous State Trajectories; TQS-PTQ Dynamical Systems Quantization Framework | [📄 Paper](https://arxiv.org/abs/2606.13300)<br/>🔒 Proprietary |
+| **Calibration Bets on the Past** | Other | arXiv 2026 | 560 Models evaluated across 7 Architectures | S&P 500 Cross-Sectional Volatility (2018-2025 Walk-Forward) | Percentile-Calibrated Activation Patches; 4-Bit Static Weight & Activation PTQ Calibration | [📄 Paper](https://arxiv.org/abs/2608.12259)<br/>🔒 Proprietary |
+| **On-Device Training of Fully Quantized Deep Neural Networks on Cortex-M Microcontrollers** | Other | arXiv 2024 | Microcontroller Budgets (<256KB SRAM, <1MB Flash) | On-Device Embedded Sensor & Vision Time Series | 8-bit Integer Quantized Temporal Patches; Fully Quantized Training (FQT) with Dynamic Partial Gradients | [📄 Paper](https://arxiv.org/abs/2407.10734)<br/>🔒 Proprietary |
 
 ### 2. Repurposed Large Language Models (LLM4TS)
 
@@ -157,6 +161,7 @@ graph TD
 | **OpenTSLM** | Stanford | arXiv 2025 | 8B | Domain-Specific Medical LLM | Physiological Wavelet Patching + Clinical Text | [📄 Paper](https://arxiv.org/abs/2510.02410)<br/>🔒 Proprietary |
 | **TimeOmni-VL** | Monash / CSIRO | ICML 2026 | 9B | Unified Vision-Language-Time Series Foundation Model | Omni-Modality Tri-Token Interleaving (Vision-Language-Signal) | [📄 Paper](https://arxiv.org/abs/2602.17149)<br/>🔒 Proprietary |
 | **TAC-Time** | ECNU | arXiv 2026 | 350M | Text-as-Channel Dual-Stream Cross-Attention Transformer | Textual Channel Embeddings + Temporal Patch Embeddings | [📄 Paper](https://arxiv.org/abs/2609.24156)<br/>🔒 Proprietary |
+| **TimeInteract** | Ming Jin | arXiv 2026 | 7B (Qwen2 Backbone) | Dual-View Streaming Encoder + Decoupled Inference | Local-Variation Continuous Patches | [📄 Paper](https://arxiv.org/abs/2609.26389)<br/>🔒 Proprietary |
 | **TRACE** | UNC Chapel Hill / UT Austin | arXiv 2026 | 7B | Temporal Conditional Estimation Network with Pretrained Multimodal Backbones | Multimodal Token Alignment (Text + Waveform) | [📄 Paper](https://arxiv.org/abs/2606.06285)<br/>🔒 Proprietary |
 | **TEST** | PKU / Alibaba | NeurIPS 2024 | 110M to 350M | Frozen LLM (BERT/GPT-2) with Contrastive Prototype Alignment | Instance & Feature Contrastive Patches | [📄 Paper](https://arxiv.org/abs/2308.08241)<br/>🔒 Proprietary |
 | **UrbanGPT** | HKU / Baidu | KDD 2024 | 7B | Spatio-Temporal Dependency Encoder + Llama-2-7B Backbone | Spatio-Temporal Graph & Temporal Patch Tokenization | [📄 Paper](https://arxiv.org/abs/2403.00813)<br/>[💻 Code](https://github.com/HKUDS/UrbanGPT) |
@@ -165,6 +170,10 @@ graph TD
 | **VLT** | Wang et al. | arXiv 2026 | 110M | Multimodal Encoder (Time-MoE + Frequency-Text Learner) | Spectral Frequency Spectrogram + Text Prompt Tokens | [📄 Paper](https://arxiv.org/abs/2607.14510)<br/>🔒 Proprietary |
 | **Chronicle** | Quinlan et al. | arXiv 2026 | 324M | Decoder-only Transformer (Joint Pretraining From Scratch) | Interleaved Byte-Pair Text Tokens + Subseries Patches | [📄 Paper](https://arxiv.org/abs/2605.20268)<br/>🔒 Proprietary |
 | **ChronoSteer** | Wang et al. | arXiv 2025 | not reported | Decoupled Agentic Framework (Frozen TSFM + LLM Controller) | Discrete Instruction Anchors Codebook | [📄 Paper](https://arxiv.org/abs/2505.10083)<br/>🔒 Proprietary |
+| **Cast-R1** | Other | arXiv 2026 | 7B (Qwen2.5 Backbone) | Tool-Augmented Sequential Decision Agent (SFT + Multi-Turn RL) | Modular Statistical Tool-Call Tokens | [📄 Paper](https://arxiv.org/abs/2602.13802)<br/>[💻 Code](https://github.com/ustc-time-series/Cast-R1) |
+| **TimeART** | Other | arXiv 2026 | 8B (Llama-3 Backbone) | Time Series Reasoning Model (TSRM) + Tool-Augmented Agent | Tool-Augmented Analytical Sequences | [📄 Paper](https://arxiv.org/abs/2601.13653)<br/>🔒 Proprietary |
+| **TS-Reasoner** | Other | arXiv 2024 | 7B / 14B Backbones | Domain-Specialized Inference Agent with Error Feedback Loop | Symbolic Concept & Numerical Segment Encoding | [📄 Paper](https://arxiv.org/abs/2410.04047)<br/>🔒 Proprietary |
+| **Empowering Time Series Forecasting with LLM-Agents** | Other | arXiv 2025 | GPT-4 / Llama-3-70B Controller | Data-Centric Agent for Time Series (DCATS) Controller | Metadata Context Prompting | [📄 Paper](https://arxiv.org/abs/2508.04231)<br/>🔒 Proprietary |
 
 ### 3. Evaluations, Benchmarks, Scaling Laws & Critiques
 
@@ -192,6 +201,8 @@ graph TD
 | **Towards Principled Test-Time Adaptation for Time Series Forecasting** | HKUST | TTA Benchmark, Frequency Calibration, Forecasting | Test-time adaptation (TTA) has recently emerged as a promising approach for improving time series forecasting (TSF) unde... | [📄 Paper](https://arxiv.org/abs/2605.17250) — |
 | **Causal Analysis for Time Series Foundation Models** | University of Twente | Causal Audit, Persistence Bias Detection, Regime Shift Robustness | Transitioning from bespoke time series models towards time series foundation models changes the relationship of model an... | [📄 Paper](https://arxiv.org/abs/2608.24303) — |
 | **CausalTime** | Tsinghua University | Causal Discovery Benchmark, Ground-Truth Evaluation | Time-series causal discovery (TSCD) is a fundamental problem of machine learning. However, existing synthetic datasets c... | [📄 Paper](https://arxiv.org/abs/2310.01753) — |
+| **TimeSage-MT** | Ming Jin | Multi-Turn Agentic Reasoning, Tool Selection & Uncertainty Auditing | Time series data inform critical decisions across many real-world domains. While large language model (LLM) agents can a... | [📄 Paper](https://arxiv.org/abs/2606.01498) — |
+| **Impermanent** | Other | Temporal Generalization Benchmark, Continuous Contamination Auditing | Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models ... | [📄 Paper](https://arxiv.org/abs/2603.08707) [💻 Code](https://github.com/TimeCopilot/impermanent) |
 
 ---
 

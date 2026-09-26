@@ -49,7 +49,7 @@ def generate_readme():
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 6 (Test-Time Adaptation, Causal Discovery & Living Benchmarks)** · Last Updated: **{today}**
+> Latest Iteration: **Iteration 7 (Interactive Time-Series Agents, Extreme MCU Quantization & Living Streaming Benchmarks)** · Last Updated: **{today}**
 
 ---
 
@@ -57,11 +57,11 @@ def generate_readme():
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **原生与端侧轻量基座模型 (Native & Edge TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与极端端侧轻量模型，如 Chronos-2、TimesFM-3 (330M原生多变量预测与1T训练集)、Cadence (基于TimesFM-3的有界有损时序压缩系统)、MOIRAI、MOMENT、TTM、Timer-S1、Time-MoE、Toto 2.0、$t_0$、Tiny-TSM (23M单卡训练)、APEX (网络原生AP遥测)、Cheraghinia MLP (21K微控制器级) 等。
-2. **非平稳时序漂移与测试时自适应 (Test-Time Adaptation, TTA)**：无监督应对测试期分布偏移与概念漂移，如 TSF-TTA (AAAI'25无源测试时自适应与一致性损失)、AdaNODEs (ICASSP'26连续神经ODE自适应)、RG-TTA (流式机制引导元控制与动态梯度调节)、FAC (频域感知校准与防高频噪声发散)。
-3. **因果发现、先验拟合与反事实基座模型 (Causal Discovery & Structural Priors)**：融合结构因果模型 (SCMs)，如 Causal-PT (深度因果预训练单步DAG重构)、CausalTimePrior (首个基于先验数据拟合网络PFN的因果干预时序模型，支持即时反事实预测)、CaTSG (结构因果扩散生成)、CausalTime (NeurIPS'23真实动力学流因果评测基准)、Jander 因果审计 (揭示主流时序基座模型顽固的滞后惯性偏差)。
-4. **时空图谱与全模态跨模态表征 (Spatio-Temporal & Omni-Modal)**：OpenCity、UniST、UrbanDiT、UrbanFM、TiMo (卫星时序多尺度陀螺注意力)、Time-LLM、Chronicle (从头联合预训练324M模型)、VLT、ChronoSteer、VisionTS++、TimeOmni-VL 等。
-5. **动态评测社区、能耗剖析与活跃榜单 (Living Leaderboards & Benchmarks)**：It's TIME (50个全新数据集、98个评测任务与HuggingFace实时打榜空间)、HoliBench (跨7类硬件与FP16/INT8/INT4能耗分析)、FM-CAC (碳感知动态调度)、Ling et al. (FPGA混合精度INT8/INT4量化)、GIFT-Eval、fev-bench 等。
+1. **原生与端侧轻量基座模型 (Native & Edge TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与极端端侧轻量模型，如 Chronos-2、TimesFM-3 (330M原生多变量预测与1T训练集)、Cadence (时序有损压缩)、MACROCAST (15M纯合成BVAR/DFM模拟预训练、零未来与修正泄露的实时宏观经济基座模型)、MOIRAI、MOMENT、TTM、Timer-S1、Time-MoE、Toto 2.0、$t_0$、Tiny-TSM (23M单卡训练)、APEX (网络原生AP遥测)、TQS-PTQ (动力学系统轨迹量化敏感度预算)、4-Bit激活校准 (Ye & Wanjiku 2026)、MCU-FQT (Cortex-M微控制器全量化端侧训练) 等。
+2. **交互式时序智能体与工具增强推理 (Interactive Time-Series Agents & Tool Reasoning)**：从静态单步映射走向多轮交互与序列决策，如 TimeInteract (Ming Jin 团队，首创流式实时交互范式与解耦流式推理、零卡顿响应 StreamTSI-34K)、Cast-R1 (USTC，强化学习序列决策策略与统计工具自省)、TimeART (10万专家轨迹 TimeToolBench 与8B时序问答模型 TSRM)、TS-Reasoner (领域专业时序推断与反馈回环)、DCATS (数据中心化 AutoML 智能体)、TimeAgent (龙明盛团队，科学探究闭环调度与跨基座模型仲裁克服跷跷板效应)。
+3. **非平稳时序漂移与测试时自适应 (Test-Time Adaptation, TTA)**：无监督应对测试期分布偏移与概念漂移，如 TSF-TTA (AAAI'25无源测试时自适应与一致性损失)、AdaNODEs (ICASSP'26连续神经ODE自适应)、RG-TTA (流式机制引导元控制与动态梯度调节)、FAC (频域感知校准与防高频噪声发散)。
+4. **因果发现、先验拟合与反事实基座模型 (Causal Discovery & Structural Priors)**：融合结构因果模型 (SCMs)，如 Causal-PT (深度因果预训练单步DAG重构)、CausalTimePrior (首个基于先验数据拟合网络PFN的因果干预时序模型，支持即时反事实预测)、CaTSG (结构因果扩散生成)、CausalTime (NeurIPS'23真实动力学流因果评测基准)、Jander 因果审计 (揭示主流时序基座模型顽固的滞后惯性偏差)。
+5. **动态流式评测、多轮智能体基准与活跃榜单 (Living Benchmarks & Multi-Turn Suites)**：Impermanent (Garza et al., 2026, 基于 GitHub Top-400 实时代码仓动态事件流的持续滚动评测基准，防止静态过拟合与数据污染)、TimeSage-MT (Ming Jin & Qingsong Wen, 240项任务、2680轮跨8大领域的多轮智能体时序推理评测基准与技能库)、It's TIME (50个全新数据集、98个评测任务与HuggingFace实时打榜空间)、HoliBench (跨7类硬件与FP16/INT8/INT4能耗分析)、FM-CAC (碳感知动态调度) 等。
 
 ---
 
@@ -78,15 +78,15 @@ graph TD
 
     P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM-3, Timer, Sundial, TiRex, Toto, Tabby, Cadence)"]
     P1 --> P1_TTA["Test-Time Adaptation & Causal Models<br/>(TSF-TTA, AdaNODEs, RG-TTA, CausalTimePrior, Causal-PT, CaTSG)"]
-    P1 --> P1_Edge["Spatio-Temporal & Edge Micro-Models<br/>(OpenCity, UniST, UrbanFM, TiMo, Tiny-TSM, APEX, Cheraghinia MLP)"]
+    P1 --> P1_Edge["Spatio-Temporal & Microcontrollers<br/>(OpenCity, UniST, UrbanFM, MACROCAST, Tiny-TSM, MCU-FQT, TQS-PTQ, Cheraghinia)"]
 
     P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
-    P2 --> P2_Prompt["Prompting & Spatio-Temporal<br/>(LLMTime, PromptCast, UniTime, UrbanGPT, ST-LLM, AutoTimes)"]
+    P2 --> P2_Agent["Interactive Reasoning & Tool Agents<br/>(TimeInteract, Cast-R1, TimeART, TS-Reasoner, DCATS, TimeAgent)"]
     P2 --> P2_Omni["Omni-Modal & Joint Pretraining<br/>(Chronicle, VLT, VisionTS++, ChronoSteer, Time-VLM, TimeOmni-VL)"]
 
-    P3 --> P3_Bench["Standardized & Living Benchmarks<br/>(TIME Leaderboard, GIFT-Eval, fev-bench, TimesX, CausalTime)"]
-    P3 --> P3_Audit["Causal Audits & Complexity<br/>(Jander Causal Audit, FAC TTA Bench, LiveHouse-TS, Table 4)"]
-    P3 --> P3_Energy["Energy & Quantization Profiles<br/>(HoliBench, FM-CAC, Ling et al., Table 5, Table 6)"]
+    P3 --> P3_Bench["Living & Multi-Turn Benchmarks<br/>(Impermanent, TimeSage-MT, TIME Leaderboard, GIFT-Eval, fev-bench, CausalTime)"]
+    P3 --> P3_Audit["Causal Audits & Complexity<br/>(Jander Causal Audit, FAC TTA Bench, LiveHouse-TS, Table 4, Table 6)"]
+    P3 --> P3_Energy["Energy, Quantization & Agent Profiles<br/>(HoliBench, FM-CAC, QuantCalibration, Table 5, Table 7)"]
 ```
 
 ---

@@ -281,3 +281,45 @@
 3. **Automated Continuous Pretraining Contamination Scanners**: Extend the living watchdog pipeline to automate continuous n-gram and mutual information testing against newly published public benchmark datasets.
 
 
+
+
+---
+
+## Iteration 7: Interactive Time-Series Agents, Extreme MCU Quantization & Living Streaming Benchmarks
+- **Timestamp**: 2026-09-26 18:00:00 (UTC+8)
+- **Phase Transition**: P5 (Continuous Update Loop & Agentic / Living Benchmark Synthesis)
+- **Target Repository**: `lihuirui/awesome-llm-time-series-foundation-models-survey`
+- **Working Title**: Large Language Models and Foundation Models for Time Series: A Survey and Outlook
+
+### Execution Summary
+1. **Interactive Time-Series Agents, Tool-Augmented Reasoning & Autonomous Exploration (Section 5.5)**:
+   - Formulated Subsection 5.5 in `paper/sections/05_llm4ts.tex` and Section 5.4 in `docs/SURVEY_zh.md` detailing the paradigm shift from static single-pass numerical mapping $\hat{\mathbf{Y}} = f_\theta(\mathbf{X})$ to sequential, tool-augmented agentic decision making.
+   - Synthesized foundational agentic works: TimeInteract (Pan et al., 2026, Ming Jin group; real-time streaming interaction with decoupled inference and zero-stall perception on StreamTSI-34K across 34,588 episodes), Cast-R1 (Tao et al., 2026; sequential decision-making policy trained with SFT + multi-turn RL and modular tool-use/self-reflection), TimeART (Wu et al., 2026; 8B Time Series Reasoning Model TSRM on 100k expert trajectory TimeToolBench for TSQA), TS-Reasoner (Ye et al., 2024; domain-specialized multi-step inference agents with error feedback loops on TimeSeriesExam), DCATS (Yeh et al., 2025; data-centric AutoML agent optimizing cleaning pipelines), and TimeAgent (Wang, Long et al., IEEE TKDE 2026; training-free closed-loop scientific inquiry and multi-model arbitration).
+2. **Extreme Low-Bit Quantization, MCU-Level Training & Vintage-Consistent Foundations (Section 4.8)**:
+   - Deepened Subsection 4.8 in `paper/sections/04_native_tsfm.tex` and Section 4.8 in `docs/SURVEY_zh.md`.
+   - Synthesized foundational edge & low-bit works: TQS-PTQ (Pavlova et al., 2026; Trajectory-based Quantization Sensitivity Score modeling rollouts as dynamical systems $\mathbf{z}_{t+1} = \Phi(\mathbf{z}_t, \mathbf{x}_t)$ to budget layer-wise mixed precision decoupled from quantizers), QuantCalibration (Ye & Wanjiku, 2026; systematic audit across 560 models showing percentile calibration recovers 53-94% of abs-max degradation under 4-bit activation drift), MCU-FQT (Deutel et al., 2024; on-device fully quantized training FQT with dynamic partial gradient updates directly on ARM Cortex-M MCUs in <256KB SRAM), and MACROCAST (Carriero et al., 2026; 15M lightweight macroeconomic foundation model pre-trained on synthetic BVAR/DFMs eliminating both temporal lookahead and revision bias).
+3. **Living Streaming Benchmarks, Temporal Generalization & Agentic Multi-Turn Profiling (Section 6.9 & Table 7)**:
+   - Formulated Subsection 6.9 in `paper/sections/06_benchmarks_critique.tex`, Section 6.7 in `docs/SURVEY_zh.md`, and synthesized comprehensive Table 7 comparing 8 agentic reasoning frameworks and living benchmarks across paradigms, backbones, toolsets, memory mechanisms, and capabilities.
+   - Synthesized Impermanent (Garza et al., 2026; live benchmark scoring forecasts sequentially on daily updated top-400 GitHub repository activity streams, revealing severe degradation in static high-scoring models under organic drift) and TimeSage-MT (Kong, Jin, Wen et al., 2026; multi-turn agentic reasoning benchmark across 240 tasks, 2,680 dialogue turns, and 8 domains, exposing memory failure and uncertainty collapse in frontier LLMs).
+4. **100% Citation & Metadata Integrity (+11 Verified Studies, Total 113)**:
+   - Exactly 113 out of 113 bibkeys in `paper/references.bib` are cited in `paper/**/*.tex` (0 uncited, 0 missing).
+   - Strict PRISMA 2020 arithmetic verified: $128 - 5 = 123 \rightarrow 123 - 9 = 114 \rightarrow 114 - 1 = 113$.
+   - All 113 studies verified against logged scholarly API responses; 0 unverified papers.
+5. **Publication Quality Figures & Expanded Survey Paper**:
+   - Regenerated all 5 figures (`fig_taxonomy`, `fig_prisma`, `fig_timeline`, `fig_params_corpus`, `fig_category_dist`) at $\ge 300$ dpi, updating taxonomy branches, PRISMA counts, timeline milestones, and parameter/corpus scatter plots.
+   - Successfully compiled `paper/main.pdf` (expanded to 26 pages) with `tectonic`.
+   - Regenerated bilingual `README.md` and updated `docs/SURVEY_zh.md` and `docs/PROTOCOL.md` (v1.5.0).
+   - Side-effect free `make check` passed with 100% success.
+
+### Reviewer Scores (Iteration 7)
+- Coverage: 5.0 / 5.0
+- Taxonomy Clarity: 5.0 / 5.0
+- Depth of Analysis: 5.0 / 5.0
+- Citation Accuracy: 5.0 / 5.0
+- Figures & Tables: 5.0 / 5.0
+- Writing & Rigor: 5.0 / 5.0
+
+### Top 3 Priorities for Iteration 8
+1. **Multi-Agent Collaborative Ensembles & Swarm Forecasting**: Formalize heterogeneous agent swarms where specialized visual, statistical, and causal agents negotiate consensus forecasts.
+2. **Extreme 1-Bit / Ternary BitNet Architectures for Time Series**: Formulate ternary $\{-1, 0, +1\}$ matrix multiplications ($1.58$-bit) for temporal convolutions and patch mixers to achieve multiplication-free edge inference.
+3. **Continuous Real-Time Data Contamination Auditing Harness**: Deploy automated n-gram and mutual information scanners directly hooked into the watchdog stream to flag contamination in new preprints against public benchmark splits.

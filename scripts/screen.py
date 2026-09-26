@@ -759,6 +759,83 @@ SPECS = {
         "tokenization": "Stacked Variate Attention Patches", "prediction_head": "Iterative RevIN Quantile Residual Engine",
         "params": "330M (TimesFM-3)", "pretrain_corpus": "1T Time Points (Google Pretraining Corpus)", "tasks": ["Error-Bounded Lossy Compression", "Multivariate Forecasting"],
         "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/google-research/timesfm"
+    },
+    "2609.26389": {
+        "bibkey": "pan2026timeinteract",
+        "group": "Ming Jin", "paradigm": "LLM4TS", "architecture": "Dual-View Streaming Encoder + Decoupled Inference",
+        "tokenization": "Local-Variation Continuous Patches", "prediction_head": "Autonomous Response Trigger & Generator",
+        "params": "7B (Qwen2 Backbone)", "pretrain_corpus": "StreamTSI-34K (34.5K episodes)", "tasks": ["Streaming Time-Series Interaction", "Zero-Stall Perception"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2606.01498": {
+        "bibkey": "kong2026timesagemt",
+        "group": "Ming Jin", "paradigm": "Evaluation & Benchmark", "architecture": "Structured Agent with Time-Series Skill Library",
+        "tokenization": "Multi-Turn Interactive Dialogue & Code Traces", "prediction_head": "N/A (Multi-turn Agent Evaluation)",
+        "params": "not reported", "pretrain_corpus": "240 Tasks, 2,680 Dialogue Turns across 8 Domains", "tasks": ["Multi-Turn Agentic Reasoning", "Tool Selection & Uncertainty Auditing"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2602.13802": {
+        "bibkey": "tao2026castr1",
+        "group": "Other", "paradigm": "LLM4TS", "architecture": "Tool-Augmented Sequential Decision Agent (SFT + Multi-Turn RL)",
+        "tokenization": "Modular Statistical Tool-Call Tokens", "prediction_head": "Iterative Policy Refinement Head",
+        "params": "7B (Qwen2.5 Backbone)", "pretrain_corpus": "Sequential Decision-Making Trajectories", "tasks": ["Forecasting", "Sequential Policy Decision", "Tool-Augmented Reasoning"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/ustc-time-series/Cast-R1"
+    },
+    "2601.13653": {
+        "bibkey": "wu2026timeart",
+        "group": "Other", "paradigm": "LLM4TS", "architecture": "Time Series Reasoning Model (TSRM) + Tool-Augmented Agent",
+        "tokenization": "Tool-Augmented Analytical Sequences", "prediction_head": "Autoregressive Tool-Call & Text Head",
+        "params": "8B (Llama-3 Backbone)", "pretrain_corpus": "TimeToolBench (100k Expert Trajectories)", "tasks": ["Time Series Question Answering", "Agentic Automated Analysis"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2410.04047": {
+        "bibkey": "ye2024tsreasoner",
+        "group": "Other", "paradigm": "LLM4TS", "architecture": "Domain-Specialized Inference Agent with Error Feedback Loop",
+        "tokenization": "Symbolic Concept & Numerical Segment Encoding", "prediction_head": "Constraint-Aware Reasoning Head",
+        "params": "7B / 14B Backbones", "pretrain_corpus": "TimeSeriesExam + Domain Trajectories", "tasks": ["Multi-Step Inference", "Automated Concept Reasoning"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": None
+    },
+    "2508.04231": {
+        "bibkey": "yeh2025dcats",
+        "group": "Other", "paradigm": "LLM4TS", "architecture": "Data-Centric Agent for Time Series (DCATS) Controller",
+        "tokenization": "Metadata Context Prompting", "prediction_head": "Automated Pipeline Controller",
+        "params": "GPT-4 / Llama-3-70B Controller", "pretrain_corpus": "Traffic Volume & Time Series Metadata", "tasks": ["Data Cleaning", "AutoML Pipeline Optimization", "Forecasting"],
+        "open_weights": False, "venue": "arXiv 2025", "code_url": None
+    },
+    "2603.08707": {
+        "bibkey": "garza2026impermanent",
+        "group": "Other", "paradigm": "Evaluation & Benchmark", "architecture": "Living Streaming Evaluation Platform",
+        "tokenization": "Daily Rolling Activity Windows", "prediction_head": "Sequential Multi-Horizon Scoring",
+        "params": "not reported", "pretrain_corpus": "Top 400 GitHub Star Repositories (Daily Streams)", "tasks": ["Temporal Generalization Benchmark", "Continuous Contamination Auditing"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/TimeCopilot/impermanent"
+    },
+    "2606.28670": {
+        "bibkey": "carriero2026macrocast",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Decoder-only Vintage-Consistent Transformer",
+        "tokenization": "Patch-level Macroeconomic Tokens", "prediction_head": "Density & Point Forecast Regression",
+        "params": "15M", "pretrain_corpus": "Synthetic BVAR & DFM Simulations (Purely Synthetic, 0 Lookahead)", "tasks": ["Real-Time Macroeconomic Forecasting", "Vintage-Consistent Leakage Elimination"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2606.13300": {
+        "bibkey": "pavlova2026tqs",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "TQS-PTQ Dynamical Systems Quantization Framework",
+        "tokenization": "Continuous State Trajectories", "prediction_head": "Sensitivity-Guided Low-Precision Autoregression",
+        "params": "Mixed-Precision Quantized Models (FP16 down to INT4)", "pretrain_corpus": "N/A (Zero-shot Post-Training Quantization)", "tasks": ["PTQ Sensitivity Budgeting", "Error-Bounded Low-Precision Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2608.12259": {
+        "bibkey": "ye2026calibration",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "4-Bit Static Weight & Activation PTQ Calibration",
+        "tokenization": "Percentile-Calibrated Activation Patches", "prediction_head": "Quantized Linear Predictor",
+        "params": "560 Models evaluated across 7 Architectures", "pretrain_corpus": "S&P 500 Cross-Sectional Volatility (2018-2025 Walk-Forward)", "tasks": ["Low-Bit Activation Calibration", "Financial Time-Series Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2407.10734": {
+        "bibkey": "deutel2024mcutraining",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Fully Quantized Training (FQT) with Dynamic Partial Gradients",
+        "tokenization": "8-bit Integer Quantized Temporal Patches", "prediction_head": "Integer Linear Head",
+        "params": "Microcontroller Budgets (<256KB SRAM, <1MB Flash)", "pretrain_corpus": "On-Device Embedded Sensor & Vision Time Series", "tasks": ["On-Device MCU Adaptation", "Extreme Edge Training"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": None
     }
 }
 

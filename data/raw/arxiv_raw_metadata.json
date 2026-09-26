@@ -1192,18 +1192,19 @@
     "arxiv_id": "2609.26389",
     "title": "TimeInteract: Towards Real-Time Interactive Intelligence for Streaming Time Series",
     "authors": [
-      "Sheng Pan",
-      "Yongli Gu",
-      "Yiqing Guo",
-      "Warren Jin",
-      "Bo Du",
-      "Shirui Pan",
-      "Ming Jin"
+      "Pan, Sheng",
+      "Gu, Yongli",
+      "Guo, Yiqing",
+      "Jin, Warren",
+      "Du, Bo",
+      "Pan, Shirui",
+      "Jin, Ming"
     ],
     "release_date": "2026-09-22",
+    "summary": "Real-world time series evolve continuously, with meaningful changes potentially emerging at any moment. However, existing time-series language models (TSLMs) remain inherently static. They either receive complete sequences for offline processing or alternate between streaming input and response generation, which prevents processing of new observations during interaction. We introduce a new regime, Time-Series Interaction: a model continuously perceives incoming time-series observations and user intent, autonomously decides when to remain silent or respond, and continues processing new observations during response generation. To realize this, we develop TimeInteract with three key designs: a dual-view streaming TS encoder that captures local variations and historical dynamics, a response control mechanism that learns when to trigger a response, and a decoupled streaming inference mechanism that separates control from response generation to avoid blocking subsequent observations. We further formulate a hierarchy of interaction capabilities, progressing from Understanding to Adaptivity. Based on this hierarchy, we construct StreamTSI-34K, a large-scale streaming TS interaction dataset with 34,588 episodes and 77,505 responses across synthetic and real-world time series in single- and multi-turn settings. Across all four interaction levels, TimeInteract consistently outperforms existing LLMs, VLMs, and TSLMs, with gains of up to 23.92 points on challenging tasks. It also improves response triggering while achieving near-zero stream stall and up to $2.15\\times$ inference speedup.",
     "comment": null,
     "journal_ref": null,
-    "summary": "Real-world time series evolve continuously, with meaningful changes potentially emerging at any moment. However, existing time-series language models (TSLMs) remain inherently static. They either receive complete sequences for offline processing or alternate between streaming input and response generation, which prevents processing of new observations during interaction. We introduce a new regime, Time-Series Interaction: a model continuously perceives incoming time-series observations and user intent, autonomously decides when to remain silent or respond, and continues processing new observations during response generation. To realize this, we develop TimeInteract with three key designs: a dual-view streaming TS encoder that captures local variations and historical dynamics, a response control mechanism that learns when to trigger a response, and a decoupled streaming inference mechanism that separates control from response generation to avoid blocking subsequent observations. We further formulate a hierarchy of interaction capabilities, progressing from Understanding to Adaptivity. Based on this hierarchy, we construct StreamTSI-34K, a large-scale streaming TS interaction dataset with 34,588 episodes and 77,505 responses across synthetic and real-world time series in single- and multi-turn settings. Across all four interaction levels, TimeInteract consistently outperforms existing LLMs, VLMs, and TSLMs, with gains of up to 23.92 points on challenging tasks. It also improves response triggering while achieving near-zero stream stall and up to $2.15\\times$ inference speedup."
+    "doi": "10.48550/arXiv.2609.26389"
   },
   "2609.15087": {
     "arxiv_id": "2609.15087",
@@ -1963,5 +1964,176 @@
     "comment": null,
     "journal_ref": null,
     "doi": "10.48550/arXiv.2509.20846"
+  },
+  "2606.01498": {
+    "arxiv_id": "2606.01498",
+    "title": "TimeSage-MT: A Multi-Turn Benchmark for Evaluating Agentic Time Series Reasoning",
+    "authors": [
+      "Kong, Yaxuan",
+      "Yao, Qingren",
+      "Nie, Yuqi",
+      "Li, Yichen",
+      "Shao, Yilei",
+      "Zohren, Stefan",
+      "Vettoruzzo, Anna",
+      "Vanschoren, Joaquin",
+      "Jin, Ming",
+      "Wen, Qingsong"
+    ],
+    "release_date": "2026-05-31",
+    "summary": "Time series data inform critical decisions across many real-world domains. While large language model (LLM) agents can analyze data through natural language and tools, it remains unclear whether they can conduct reliable time series analysis across multi-turn conversations. Existing benchmarks focus on single-step tasks such as forecasting and anomaly detection, overlooking practical workflows where user goals evolve, agents must build on prior analyses, and conclusions emerge from accumulated evidence. In this work, we introduce TimeSage-MT, a multi-turn benchmark for agentic time series reasoning with 240 tasks and 2,680 dialogue turns across 8 real-world domains, spanning basic exploration to decision-oriented analysis. TimeSage-MT is built through a reproducible pipeline that converts real-world time series data into multi-turn conversations with verifiable answers. It provides a unified evaluation protocol and public leaderboard for comparing time series agentic systems. To demonstrate the benchmark's utility, we evaluate frontier LLMs alongside TimeSage, a novel structured agent equipped with a comprehensive time series skill library. The results show sharp performance drops on decision-oriented tasks, driven by failures in memory, uncertainty handling, and domain-based decision making. TimeSage-MT exposes critical gaps in current agentic reasoning and provides a rigorous foundation for future development.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2606.01498"
+  },
+  "2602.13802": {
+    "arxiv_id": "2602.13802",
+    "title": "Cast-R1: Learning Tool-Augmented Sequential Decision Policies for Time Series Forecasting",
+    "authors": [
+      "Tao, Xiaoyu",
+      "Cheng, Mingyue",
+      "Jiang, Chuang",
+      "Gao, Tian",
+      "Zhang, Huanjian",
+      "Liu, Yaguo"
+    ],
+    "release_date": "2026-02-14",
+    "summary": "Time series forecasting has long been dominated by model-centric approaches that formulate prediction as a single-pass mapping from historical observations to future values. Despite recent progress, such formulations often struggle in complex and evolving settings, largely because most forecasting models lack the ability to autonomously acquire informative evidence, reason about potential future changes, or revise predictions through iterative decision processes. In this work, we propose Cast-R1, a learned time series forecasting framework that reformulates forecasting as a sequential decision-making problem. Cast-R1 introduces a memory-based state management mechanism that maintains decision-relevant information across interaction steps, enabling the accumulation of contextual evidence to support long-horizon reasoning. Building on this formulation, forecasting is carried out through a tool-augmented agentic workflow, in which the agent autonomously interacts with a modular toolkit to extract statistical features, invoke lightweight forecasting models for decision support, perform reasoning-based prediction, and iteratively refine forecasts through self-reflection. To train Cast-R1, we adopt a two-stage learning strategy that combines supervised fine-tuning with multi-turn reinforcement learning, together with a curriculum learning scheme that progressively increases task difficulty to improve policy learning. Extensive experiments on multiple real-world time series datasets demonstrate the effectiveness of Cast-R1. We hope this work provides a practical step towards further exploration of agentic paradigms for time series modeling. Our code is available at https://github.com/Xiaoyu-Tao/Cast-R1-TS.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2602.13802"
+  },
+  "2601.13653": {
+    "arxiv_id": "2601.13653",
+    "title": "TimeART: Towards Agentic Time Series Reasoning via Tool-Augmentation",
+    "authors": [
+      "Wu, Xingjian",
+      "Lu, Junkai",
+      "Li, Zhengyu",
+      "Qiu, Xiangfei",
+      "Hu, Jilin",
+      "Guo, Chenjuan",
+      "Jensen, Christian S.",
+      "Yang, Bin"
+    ],
+    "release_date": "2026-01-20",
+    "summary": "Time series data widely exist in real-world cyber-physical systems. Though analyzing and interpreting them contributes to significant values, e.g, disaster prediction and financial risk control, current workflows mainly rely on human data scientists, which requires significant labor costs and lacks automation. To tackle this, we introduce TimeART, a framework fusing the analytical capability of strong out-of-the-box tools and the reasoning capability of Large Language Models (LLMs), which serves as a fully agentic data scientist for Time Series Question Answering (TSQA). To teach the LLM-based Time Series Reasoning Models (TSRMs) strategic tool-use, we also collect a 100k expert trajectory corpus called TimeToolBench. To enhance TSRMs' generalization capability, we then devise a four-stage training strategy, which boosts TSRMs through learning from their own early experiences and self-reflections. Experimentally, we train an 8B TSRM on TimeToolBench and equip it with the TimeART framework, and it achieves consistent state-of-the-art performance on multiple TSQA tasks, which pioneers a novel approach towards agentic time series reasoning.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2601.13653"
+  },
+  "2410.04047": {
+    "arxiv_id": "2410.04047",
+    "title": "TS-Reasoner: Domain-Oriented Time Series Inference Agents for Reasoning and Automated Analysis",
+    "authors": [
+      "Ye, Wen",
+      "Yang, Wei",
+      "Cao, Defu",
+      "Zhang, Yizhou",
+      "Tang, Lumingyuan",
+      "Cai, Jie",
+      "Liu, Yan"
+    ],
+    "release_date": "2024-10-05",
+    "summary": "Time series analysis is crucial in real-world applications, yet traditional methods focus on isolated tasks only, and recent studies on time series reasoning remain limited to either single-step inference or are constrained to natural language answers. In this work, we introduce TS-Reasoner, a domain-specialized agent designed for multi-step time series inference. By integrating large language model (LLM) reasoning with domain-specific computational tools and an error feedback loop, TS-Reasoner enables domain-informed, constraint-aware analytical workflows that combine symbolic reasoning with precise numerical analysis. We assess the system's capabilities along two axes: (1) fundamental time series understanding assessed by TimeSeriesExam and (2) complex, multi-step inference evaluated by a newly proposed dataset designed to test both compositional reasoning and computational precision in time series analysis. Experiments show that our approach outperforms standalone general-purpose LLMs in both basic time series concept understanding as well as the multi-step time series inference task, highlighting the promise of domain-specialized agents for automating real-world time series reasoning and analysis.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2410.04047"
+  },
+  "2508.04231": {
+    "arxiv_id": "2508.04231",
+    "title": "Empowering Time Series Forecasting with LLM-Agents",
+    "authors": [
+      "Yeh, Chin-Chia Michael",
+      "Lai, Vivian",
+      "Saini, Uday Singh",
+      "Fan, Xiran",
+      "Fan, Yujie",
+      "Wang, Junpeng",
+      "Dai, Xin",
+      "Zheng, Yan"
+    ],
+    "release_date": "2025-08-06",
+    "summary": "Large Language Model (LLM) powered agents have emerged as effective planners for Automated Machine Learning (AutoML) systems. While most existing AutoML approaches focus on automating feature engineering and model architecture search, recent studies in time series forecasting suggest that lightweight models can often achieve state-of-the-art performance. This observation led us to explore improving data quality, rather than model architecture, as a potentially fruitful direction for AutoML on time series data. We propose DCATS, a Data-Centric Agent for Time Series. DCATS leverages metadata accompanying time series to clean data while optimizing forecasting performance. We evaluated DCATS using four time series forecasting models on a large-scale traffic volume forecasting dataset. Results demonstrate that DCATS achieves an average 6% error reduction across all tested models and time horizons, highlighting the potential of data-centric approaches in AutoML for time series forecasting.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2508.04231"
+  },
+  "2603.08707": {
+    "arxiv_id": "2603.08707",
+    "title": "Impermanent: A Live Benchmark for Temporal Generalization in Time Series Forecasting",
+    "authors": [
+      "Garza, Azul",
+      "Rosillo, Renée",
+      "Mendoza-Smith, Rodrigo",
+      "Salinas, David",
+      "Williams, Andrew Robert",
+      "Ashok, Arjun",
+      "Goswami, Mononito",
+      "Juárez, José Martín"
+    ],
+    "release_date": "2026-03-09",
+    "summary": "Recent advances in time-series forecasting increasingly rely on pre-trained foundation-style models. While these models often claim broad generalization, existing evaluation protocols provide limited evidence. Indeed, most current benchmarks use static train-test splits that can easily lead to contamination as foundation models can inadvertently train on test data or perform model selection using test scores, which can inflate performance. We introduce Impermanent, a live benchmark that evaluates forecasting models under open-world temporal change by scoring forecasts sequentially over time on continuously updated data streams, enabling the study of temporal robustness, distributional shift, and performance stability rather than one-off accuracy on a frozen test set. Impermanent is instantiated on GitHub open-source activity, providing a naturally live and highly non-stationary dataset shaped by releases, shifting contributor behavior, platform/tooling changes, and external events. We focus on the top 400 repositories by star count and construct time series from issues opened, pull requests opened, push events, and new stargazers, evaluated over a rolling window with daily updates, alongside standardized protocols and leaderboards for reproducible, ongoing comparison. By shifting evaluation from static accuracy to sustained performance, Impermanent takes a concrete step toward assessing when and whether foundation-level generalization in time-series forecasting can be meaningfully claimed. Code and a live dashboard are available at https://github.com/TimeCopilot/impermanent and https://impermanent.timecopilot.dev.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2603.08707"
+  },
+  "2606.28670": {
+    "arxiv_id": "2606.28670",
+    "title": "MACROCAST: A Vintage-Consistent Time Series Foundation Model for Real-Time Macroeconomic Forecasting",
+    "authors": [
+      "Carriero, Andrea",
+      "Pettenuzzo, Davide",
+      "Shekhar, Shubhranshu"
+    ],
+    "release_date": "2026-06-27",
+    "summary": "We introduce MACROCAST, a lightweight Time Series Foundation Model (TSFM) for real-time macroeconomic forecasting. Existing TSFMs suffer from data leakage in two forms: temporal contamination, as the model may have seen the realized values of the series it forecasts, and revision bias, as training on fully revised data diverges from the preliminary, vintage-specific releases available to real-time forecasters. MACROCAST is, to our knowledge, the first TSFM that rules out both forms of leakage entirely: at no stage of training is the model exposed to information that would not have been available to a forecaster in real time. We train MACROCAST first on purely synthetic time series in approximately one GPU-day and then fine-tune it on synthetic time series drawn from Bayesian VARs, dynamic factor models, and ARIMA specifications estimated on vintage-specific ALFRED data. Because pretraining uses only simulated data and fine-tuning uses only real-time vintages, no observed future or revised value ever enters the model; each fine-tuning run takes nine minutes. Evaluated on the FRED-MD database in a genuine real-time out-of-sample exercise, MACROCAST improves on the AR(1) benchmark for roughly 80% of series-horizon pairs, matches or surpasses Chronos-2 -- the strongest currently available TSFM -- and outperforms the Bayesian VAR and dynamic factor model benchmarks, all in a data-leakage-free manner.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2606.28670"
+  },
+  "2606.13300": {
+    "arxiv_id": "2606.13300",
+    "title": "Quantizing Time-Series Models As Dynamical Systems: Trajectory-Based Quantization Sensitivity Score",
+    "authors": [
+      "Pavlova, Mariya",
+      "Zhu, Harrison Bo Hua",
+      "Vitanova, Lidia",
+      "Semenova, Elizaveta",
+      "Li, Yingzhen"
+    ],
+    "release_date": "2026-06-11",
+    "summary": "We introduce the Trajectory-based Quantization Sensitivity Score (TQS), a metric that reframes post-training quantization (PTQ) through the lens of dynamical-systems stability. By modeling the network's rollout as a discrete-time dynamical system, TQS characterizes how quantization-induced errors propagate and amplify over the rollout horizon. Unlike conventional PTQ methods, where sensitivity analysis is often coupled to the quantization procedure, TQS enables a priori sensitivity estimation decoupled from quantizer selection and bit-width assignment. This separation allows for quantization budget planning even for black-box or compiled networks with fused operators. Building on this, we present TQS-PTQ, a flexible mixed-precision framework that requires no calibration data or costly second-order approximations. Our experiments show that a dynamical-systems perspective provides a robust, high-performing pathway for low-precision deployment in resource-constrained settings.",
+    "comment": "ICML 2026, Workshop on Forecasting as a New Frontier of Intelligence",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2606.13300"
+  },
+  "2608.12259": {
+    "arxiv_id": "2608.12259",
+    "title": "Calibration Bets on the Past: Post-Training Quantization for Financial Time-Series Forecasting",
+    "authors": [
+      "Ye, Junyi",
+      "Wanjiku, Ivy Gateri"
+    ],
+    "release_date": "2026-08-12",
+    "summary": "Financial forecasting models are typically developed in full precision, yet production deployment often requires low-precision inference to reduce memory and computational cost. Post-training quantization (PTQ) enables such deployment without retraining. However, reliable activation quantization requires calibration: activation ranges are estimated from historical data before deployment and then remain fixed during future inference. The importance of this deployment choice for financial forecasting remains poorly understood. We present a systematic study of activation calibration for PTQ in cross-sectional volatility forecasting on the S&P 500. Our evaluation covers seven representative neural architectures, eight walk-forward test years (2018-2025), and 560 trained models. We find that activation calibration has little effect at 8 bits but becomes the primary determinant of predictive performance at 4 bits. Under default absolute-maximum (abs-max) calibration, static 4-bit quantization of both weights and activations removes 11-62% of the full-precision mean information coefficient in affected architectures. Replacing abs-max with percentile calibration recovers 53-94% of this degradation in the four most affected architectures. The preferred activation range also varies across market periods. Narrow ranges improve resolution under typical market conditions but lose part of their advantage when test-period market dispersion exceeds the calibration history. These findings show that activation calibration is a first-class deployment decision for reliable 4-bit PTQ in financial forecasting. When substantial degradation remains, 8-bit activations or weight-only 4-bit quantization provide more robust deployment choices.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2608.12259"
+  },
+  "2407.10734": {
+    "arxiv_id": "2407.10734",
+    "title": "On-Device Training of Fully Quantized Deep Neural Networks on Cortex-M Microcontrollers",
+    "authors": [
+      "Deutel, Mark",
+      "Hannig, Frank",
+      "Mutschler, Christopher",
+      "Teich, Jürgen"
+    ],
+    "release_date": "2024-07-15",
+    "summary": "On-device training of DNNs allows models to adapt and fine-tune to newly collected data or changing domains while deployed on microcontroller units (MCUs). However, DNN training is a resource-intensive task, making the implementation and execution of DNN training algorithms on MCUs challenging due to low processor speeds, constrained throughput, limited floating-point support, and memory constraints. In this work, we explore on-device training of DNNs for Cortex-M MCUs. We present a method that enables efficient training of DNNs completely in place on the MCU using fully quantized training (FQT) and dynamic partial gradient updates. We demonstrate the feasibility of our approach on multiple vision and time-series datasets and provide insights into the tradeoff between training accuracy, memory overhead, energy, and latency on real hardware.",
+    "comment": "12 pages, 9 figures",
+    "journal_ref": null,
+    "doi": "10.1109/TCAD.2024.3484354"
   }
 }

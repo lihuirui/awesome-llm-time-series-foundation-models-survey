@@ -51,17 +51,17 @@ def generate_taxonomy_figure():
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
             ("Autoregressive & Patch Decoders", "Chronos, TimesFM-3, Timer,\nSundial, TiRex, Toto, Tabby, Cadence"),
             ("TTA & Causal Foundation Models", "TSF-TTA, AdaNODEs, RG-TTA,\nCausalTimePrior, Causal-PT, CaTSG"),
-            ("Spatio-Temporal & Edge Models", "OpenCity, UniST, UrbanFM, TiMo,\nTiny-TSM, APEX, Cheraghinia MLP")
+            ("Spatio-Temporal & Microcontrollers", "OpenCity, UniST, UrbanFM, MACROCAST,\nTiny-TSM, MCU-FQT, TQS-PTQ, Cheraghinia")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
             ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
-            ("Prompting & Spatio-Temporal", "PromptCast, LLMTime, UniTime,\nUrbanGPT, ST-LLM, AutoTimes"),
+            ("Interactive Reasoning & Tool Agents", "TimeInteract, Cast-R1, TimeART,\nTS-Reasoner, DCATS, TimeAgent"),
             ("Omni-Modal & Joint Pretraining", "Chronicle, VLT, VisionTS++,\nChronoSteer, Time-VLM, TimeOmni")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Standardized & Living Benchmarks", "TIME Leaderboard, GIFT-Eval,\nfev-bench, TimesX, SciTS, CausalTime"),
+            ("Living & Multi-Turn Benchmarks", "Impermanent, TimeSage-MT, TIME,\nGIFT-Eval, fev-bench, CausalTime"),
             ("Leakage, TTA & Causal Audits", "Jander Causal Audit, FAC TTA Bench,\nLiveHouse-TS, Probabilistic Reliab."),
-            ("Energy, Edge & Agentic Suites", "HoliBench, FM-CAC, Ling et al.,\nBeyond Numerical, AION, WorkflowBench")
+            ("Energy, Quantization & Edge Suites", "HoliBench, FM-CAC, QuantCalibration,\nBeyond Numerical, AION, WorkflowBench")
         ])
     ]
 
@@ -143,7 +143,7 @@ def generate_prisma_figure():
     ax.add_patch(b_exc1)
     ax.text(0.775, 0.485, f"Excluded at Stage 1 (N = {counts['screening']['excluded_title_abstract']})\n"
                            f"• EC1 (Narrow / non-foundation): 5\n"
-                           f"• EC1 (Review / tutorial without artifact): 5",
+                           f"• EC1 (Review / tutorial without artifact): 4",
             ha='center', va='center', fontsize=8, color='#9b2c2c')
 
     # Eligibility
@@ -254,12 +254,19 @@ def generate_timeline_figure():
         (2026.72, 3.5, "Tabby", "Huawei", "#1f77b4"),
         (2026.75, 2.6, "TAC-Time", "ECNU", "#d62728"),
         (2026.78, 4.4, "WorkflowBench", "Tokyo", "#2ca02c"),
-        (2026.82, 1.2, "Causal Audit", "Twente", "#2ca02c")
+        (2026.82, 1.2, "Causal Audit", "Twente", "#2ca02c"),
+        (2026.83, 2.0, "TimeInteract", "Ming Jin", "#d62728"),
+        (2026.85, 3.4, "Cast-R1", "USTC", "#d62728"),
+        (2026.86, 4.6, "TimeSage-MT", "Ming Jin", "#2ca02c"),
+        (2026.88, 1.6, "Impermanent", "TimeCopilot", "#2ca02c"),
+        (2026.90, 2.8, "TimeART", "Aalborg", "#d62728"),
+        (2026.92, 4.1, "MACROCAST", "QMUL", "#1f77b4"),
+        (2026.94, 2.3, "TQS-PTQ", "Imperial", "#1f77b4")
     ]
 
     # Draw timeline line
     ax.axhline(0, color='#444444', lw=2, zorder=1)
-    ax.set_xlim(2022.4, 2026.98)
+    ax.set_xlim(2022.4, 2027.02)
     ax.set_ylim(-0.8, 5.3)
 
     # Years markers
@@ -345,6 +352,10 @@ def generate_params_corpus_figure():
         ("TimeOmni-1", 2025.75, 8.0e9, "LLM4TS", "#d62728", (-14, 8)),
         ("TimeOmni-VL", 2026.15, 9.0e9, "LLM4TS", "#d62728", (8, 7)),
         ("Timer-S1", 2026.20, 8.3e9, "Native TSFM", "#1f77b4", (8, -10)),
+        ("MACROCAST", 2026.48, 1.5e7, "Native TSFM", "#1f77b4", (8, -8)),
+        ("Cast-R1", 2026.15, 7.0e9, "LLM4TS", "#d62728", (8, 0)),
+        ("TimeInteract", 2026.72, 7.0e9, "LLM4TS", "#d62728", (8, 6)),
+        ("TimeART", 2026.08, 8.0e9, "LLM4TS", "#d62728", (8, -9))
     ]
 
     for name, date, p_cnt, cat, col, offset in param_data:
@@ -356,10 +367,12 @@ def generate_params_corpus_figure():
     ax1.set_ylabel("Reported Parameters (Log Scale)", weight='bold', labelpad=8)
     ax1.set_title("(a) Model Parameter Count vs. Release Date", fontsize=11, weight='bold', color='#1f4e78')
     ax1.grid(True, linestyle=':', alpha=0.6)
-    ax1.set_xlim(2022.6, 2026.98)
+    ax1.set_xlim(2022.6, 2027.02)
 
     # Panel B: Stated Pretraining Corpus Size (Points / Observations)
     corpus_data = [
+        ("StreamTSI-34K (TimeInteract)", 2026.72, 3.45e4, "#d62728", (8, 0)),
+        ("TimeToolBench (TimeART)", 2026.08, 1.0e5, "#d62728", (8, 0)),
         ("MillionST (TiMo)", 2025.38, 1e6, "#1f77b4", (8, 0)),
         ("Causal-PT Prior Graphs", 2024.12, 1e7, "#1f77b4", (8, 0)),
         ("CausalTimePrior Priors", 2026.20, 5e8, "#1f77b4", (8, 0)),
@@ -388,7 +401,7 @@ def generate_params_corpus_figure():
     ax2.set_ylabel("Pretraining Corpus Size (Data Points, Log Scale)", weight='bold', labelpad=8)
     ax2.set_title("(b) Stated Pretraining Corpus Size vs. Release Date", fontsize=11, weight='bold', color='#1f4e78')
     ax2.grid(True, linestyle=':', alpha=0.6)
-    ax2.set_xlim(2023.5, 2026.95)
+    ax2.set_xlim(2023.5, 2027.02)
 
     plt.tight_layout()
     plt.savefig(os.path.join(FIGURES_DIR, "fig_params_corpus.png"), dpi=300)

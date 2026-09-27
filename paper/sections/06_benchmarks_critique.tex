@@ -434,8 +434,63 @@ Table~\ref{tab:posttrain_conformal_physics_synthesis} provides a unified synthes
 }
 \end{table*}
 
+\subsection{Differentially Private Generative Twins and Provable Leakage-Free Benchmark Curation}
+\label{sec:dp_generative_twins}
 
+As foundation models scale to ingest petabytes of uncurated web and institutional telemetry, benchmark data contamination and sensitive training leakage emerge as primary obstacles to empirical evaluation. Evaluating models on real-world industrial, financial, and medical time series risks not only memorization bias, but also severe privacy violations through membership and attribute inference attacks. Constructing synthetic generative data twins with provable $(\epsilon, \delta)$-Differential Privacy (DP) guarantees provides a principled pathway toward guaranteed leak-free benchmark curation:
 
+Formally, a randomized generative or forecasting algorithm $\mathcal{M}$ satisfies $(\epsilon, \delta)$-Differential Privacy if, for all neighboring sequential datasets $\mathcal{D}, \mathcal{D}'$ differing by at most one individual's temporal trajectory, and for all measurable output subsets $\mathcal{S} \subseteq \text{Range}(\mathcal{M})$:
+\begin{equation}
+    \mathbb{P}(\mathcal{M}(\mathcal{D}) \in \mathcal{S}) \le e^\epsilon \, \mathbb{P}(\mathcal{M}(\mathcal{D}') \in \mathcal{S}) + \delta.
+\end{equation}
+In continuous and autoregressive time series, achieving meaningful privacy guarantees is notoriously difficult due to strong temporal autocorrelation: naive step-wise Gaussian noise injection destroys multi-step dynamical coherence, whereas trajectory-level clipping yields catastrophically loose privacy budgets $\epsilon$. Recent breakthroughs systematically bridge this tension:
+\begin{itemize}[leftmargin=*]
+    \item \emph{Privacy Amplification by Structured Subsampling for Time Series (Schuchardt et al., 2025)}~\cite{schuchardt2025privacy}: Accepted as an ICML 2025 Spotlight, Schuchardt et al. establish the first mathematically rigorous framework for training deep foundation forecasting models under Differential Privacy with structured temporal subsampling. Standard DP-SGD assumes independent uniform Poisson subsampling, which completely violates sequential temporal dependencies when dividing long series into sliding training windows. Schuchardt et al. develop a novel Rényi Differential Privacy (RDP) accountant specifically designed for structured overlapping subsampling schemes. By accounting for cross-window temporal correlations, their framework enables deep patch transformers to train with strictly amplified privacy budgets ($\epsilon < 2.0$), maintaining high forecasting utility across electricity, traffic, and clinical EHR datasets while mathematically proving that sensitive temporal history cannot be reconstructed by an adversary.
+    \item \emph{TSGBench: Standardized Benchmarking of Generative Time Series (Ang et al., 2024)}~\cite{ang2024tsgbench}: In VLDB 2024, Ang et al. introduce TSGBench, the first unified empirical benchmark specifically assessing time series generation methods across fidelity, privacy preservation, and domain adaptation. TSGBench establishes the rigorous ``Train on Synthetic, Test on Real'' (TSTR) protocol alongside ``Train on Real, Test on Synthetic'' (TRTS), evaluating 15 generative paradigms across 12 diverse real-world datasets using 12 complementary metrics (including Maximum Mean Discrepancy (MMD), discriminative classifier error, predictive autocorrelation fidelity, and empirical distance-to-closest-record membership inference risk). TSGBench reveals that generative foundation models paired with privacy-preserving regularization produce synthetic data twins that match real-world forecasting utility while provably defending against downstream data extraction, paving the way for standardized leak-free benchmark distribution.
+\end{itemize}
 
-
-
+\begin{table*}[t]
+\centering
+\small
+\caption{Architectural, privacy, and symbolic characteristics of representative Earth Observation, Differentially Private, and Neuro-Symbolic temporal foundation models (2023--2026).}
+\label{tab:eo_dp_symbolic_synthesis}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllll}
+\toprule
+\textbf{Model / Framework} & \textbf{Key Reference} & \textbf{Core Category \& Paradigm} & \textbf{Architectural \& Theoretical Mechanism} & \textbf{Modalities / Constraints / Privacy Guarantee} & \textbf{Key Empirical Finding / Formal Result} \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category A: Earth Observation, Satellite Radar, and Planetary Remote Sensing Foundations}} \\
+\midrule
+\textbf{Prithvi WxC} & Schmude et al.~\cite{schmude2024prithviwxc} (arXiv'24) & Planetary Atmosphere & 2.3B Scaled Encoder-Decoder on spherical harmonic grids & MERRA-2, ERA5 (160 atmospheric variables) & $1000\times$ faster than numerical weather prediction; SOTA hurricane tracking \\
+\midrule
+\textbf{EarthPT} & Smith et al.~\cite{smith2023earthpt} (NeurIPS-W'23) & Pixel-Level Remote Sensing & 700M Autoregressive Decoder over Sentinel-2 pixel series & Optical \& Near-Infrared surface reflectance ($>10\text{B}$ tokens) & Unsupervised cloud inpainting; zero-shot vegetation biomass forecasting \\
+\midrule
+\textbf{Prithvi-EO-2.0} & Szwarcman et al.~\cite{szwarcman2024prithvieo2} (arXiv'24) & Multi-Temporal Geospatial & 300M Spatio-Temporal ViT with 3D attention factorization & Harmonized Landsat \& Sentinel-2 (HLS; 4.2M global scenes) & SOTA transfer in flood inundation, crop mapping, and planetary burn scar delineation \\
+\midrule
+\textbf{AgriFM} & Li et al.~\cite{li2025agrifm} (arXiv'25) & Radar-Optical Agricultural & 86M Hierarchical Cross-Modal Multimodal Transformer & Sentinel-1 SAR (VV/VH backscatter) + Sentinel-2 optical & Bypasses cloud occlusions; accurate zero-shot agricultural crop phenology tracking \\
+\midrule
+\textbf{SpectralGPT} & Hong et al.~\cite{hong2024spectralgpt} (IEEE TPAMI'24) & 3D Spatial-Spectral-Temporal & 600M 3D Masked Autoencoder tensor reconstruction & Hyperspectral \& Multispectral image cubes ($>1\text{M}$ cubes) & SOTA 3D spectral-temporal change detection; models non-linear spectral signatures \\
+\midrule
+\textbf{Changen2} & Zheng et al.~\cite{zheng2024changen2} (arXiv'24) & Generative Remote Sensing & 120M Continuous Flow / Diffusion Generative Transformer & Multi-temporal satellite pairs ($>100\text{k}$ bi-temporal scenes) & Unsupervised change detection; synthesizes realistic counterfactual terrain evolutions \\
+\midrule
+\textbf{Presto} & Tseng et al.~\cite{tseng2023presto} (NeurIPS'23) & Compact Sensor-Agnostic & 4.8M Channel-Time Masked Pixel Transformer & Sentinel-1, Sentinel-2, Landsat, ERA5 weather series & Matches models $100\times$ larger on fuel moisture and crop type classification \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category B: Differentially Private Generative Twins and Leakage-Free Benchmarks}} \\
+\midrule
+\textbf{DP-StructuredSub} & Schuchardt et al.~\cite{schuchardt2025privacy} (ICML'25) & Provable Privacy Forecasting & Rényi DP accountant for sliding-window structured subsampling & Provable $(\epsilon, \delta)$-DP bounds ($\epsilon < 2.0$) on sequential data & Prevents temporal training leakage without catastrophic downstream utility degradation \\
+\midrule
+\textbf{TSGBench} & Ang et al.~\cite{ang2024tsgbench} (VLDB'24) & Synthetic Benchmark Suite & Train-on-Synthetic Test-on-Real (TSTR) standardized evaluation & 15 Generative architectures across 12 multi-domain datasets & Rigorously benchmarks fidelity, domain adaptation, and membership inference risks \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category C: Neuro-Symbolic Temporal Logic and Differentiable Verifiable Specifications}} \\
+\midrule
+\textbf{LogicDecoder} & Candussio et al.~\cite{candussio2025decoding} (ECML-PKDD'25) & Logic Inversion Transformer & Autoregressive transformer decoding continuous embeddings to STL syntax & Signal Temporal Logic grammar tokens over continuous latent vectors & Guarantees syntactically valid STL formulas; enables latent gradient optimization \\
+\midrule
+\textbf{STARS} & Ferfoglia et al.~\cite{ferfoglia2025stars} (arXiv'25) & Concept Bottleneck Model & Neural representations constrained to STL robustness degrees $\rho(\varphi, \mathbf{x}, t)$ & Naval ship telemetry, ICU patient streams, automotive sensors & Matches deep baseline accuracy while providing mathematically verifiable concept explanations \\
+\midrule
+\textbf{Confidence-STL} & Mao et al.~\cite{mao2026confidence} (arXiv'26) & LLM Reasoning Monitor & Signal Temporal Logic trajectory mining over token-level logit confidence & Dynamic confidence traces across 7B to 70B LLMs (Llama, Qwen) & Detects reasoning hallucinations up to $40\%$ earlier than static logit thresholds \\
+\midrule
+\textbf{ReasonSTL} & Ye et al.~\cite{ye2026reasonstl} (arXiv'26) & Tool-Augmented Agent & 8B LLM with Process-Supervised RL (PRM) + SMT / dReal solvers & Natural Language requirements to executable STL specifications & $91.4\%$ semantic correctness rate; eliminates syntax hallucinations in formal verification \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

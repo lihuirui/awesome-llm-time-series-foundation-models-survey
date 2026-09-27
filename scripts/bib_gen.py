@@ -41,6 +41,16 @@ def generate_bib():
         else:
             authors_str = str(authors_list)
 
+        char_map = {
+            'Þ': 'Th', 'þ': 'th',
+            'í': "{\\'i}", 'ü': '{\\"u}', 'ö': '{\\"o}',
+            'é': "{\\'e}", 'á': "{\\'a}", 'ł': '{\\l}',
+            'ź': "{\\'z}", 'š': '{\\v{s}}'
+        }
+        for k, v in char_map.items():
+            authors_str = authors_str.replace(k, v)
+            title = title.replace(k, v)
+
         rel_date = p.get("release_date") or "2024-01-01"
         year = rel_date.split("-")[0] if "-" in rel_date else "2024"
 

@@ -2551,5 +2551,283 @@
     "comment": null,
     "journal_ref": null,
     "doi": "10.48550/arXiv.2504.04011"
+  },
+  "2409.13598": {
+    "arxiv_id": "2409.13598",
+    "title": "Prithvi WxC: Foundation Model for Weather and Climate",
+    "authors": [
+      "Schmude, Johannes",
+      "Roy, Sujit",
+      "Trojak, Will",
+      "Jakubik, Johannes",
+      "Civitarese, Daniel Salles",
+      "Singh, Shraddha",
+      "Kuehnert, Julian",
+      "Ankur, Kumar",
+      "Gupta, Aman",
+      "Phillips, Christopher E",
+      "Kienzler, Romeo",
+      "Szwarcman, Daniela",
+      "Gaur, Vishal",
+      "Shinde, Rajat",
+      "Lal, Rohit",
+      "Da Silva, Arlindo",
+      "Diaz, Jorge Luis Guevara",
+      "Jones, Anne",
+      "Pfreundschuh, Simon",
+      "Lin, Amy",
+      "Sheshadri, Aditi",
+      "Nair, Udaysankar",
+      "Anantharaj, Valentine",
+      "Hamann, Hendrik",
+      "Watson, Campbell",
+      "Maskey, Manil",
+      "Lee, Tsengdar J",
+      "Moreno, Juan Bernabe",
+      "Ramachandran, Rahul"
+    ],
+    "release_date": "2024-09-20",
+    "summary": "Triggered by the realization that AI emulators can rival the performance of traditional numerical weather prediction models running on HPC systems, there is now an increasing number of large AI models that address use cases such as forecasting, downscaling, or nowcasting. While the parallel developments in the AI literature focus on foundation models -- models that can be effectively tuned to address multiple, different use cases -- the developments on the weather and climate side largely focus on single-use cases with particular emphasis on mid-range forecasting. We close this gap by introducing Prithvi WxC, a 2.3 billion parameter foundation model developed using 160 variables from the Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2). Prithvi WxC employs an encoder-decoder-based architecture, incorporating concepts from various recent transformer models to effectively capture both regional and global dependencies in the input data. The model has been designed to accommodate large token counts to model weather phenomena in different topologies at fine resolutions. Furthermore, it is trained with a mixed objective that combines the paradigms of masked reconstruction with forecasting. We test the model on a set of challenging downstream tasks namely: Autoregressive rollout forecasting, Downscaling, Gravity wave flux parameterization, and Extreme events estimation. The pretrained model with 2.3 billion parameters, along with the associated fine-tuning workflows, has been publicly released as an open-source contribution via Hugging Face.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2409.13598"
+  },
+  "2309.07207": {
+    "arxiv_id": "2309.07207",
+    "title": "EarthPT: a time series foundation model for Earth Observation",
+    "authors": [
+      "Smith, Michael J.",
+      "Fleming, Luke",
+      "Geach, James E."
+    ],
+    "release_date": "2023-09-13",
+    "summary": "We introduce EarthPT -- an Earth Observation (EO) pretrained transformer. EarthPT is a 700 million parameter decoding transformer foundation model trained in an autoregressive self-supervised manner and developed specifically with EO use-cases in mind. We demonstrate that EarthPT is an effective forecaster that can accurately predict future pixel-level surface reflectances across the 400-2300 nm range well into the future. For example, forecasts of the evolution of the Normalised Difference Vegetation Index (NDVI) have a typical error of approximately 0.05 (over a natural range of -1 -> 1) at the pixel level over a five month test set horizon, out-performing simple phase-folded models based on historical averaging. We also demonstrate that embeddings learnt by EarthPT hold semantically meaningful information and could be exploited for downstream tasks such as highly granular, dynamic land use classification. Excitingly, we note that the abundance of EO data provides us with -- in theory -- quadrillions of training tokens. Therefore, if we assume that EarthPT follows neural scaling laws akin to those derived for Large Language Models (LLMs), there is currently no data-imposed limit to scaling EarthPT and other similar `Large Observation Models.'",
+    "comment": "7 pages, 4 figures, accepted to NeurIPS CCAI workshop at <a href=\"https://www.climatechange.ai/papers/neurips2023/2\" rel=\"external noopener nofollow\" class=\"link-external link-https\">this https URL</a> . Code available at <a href=\"https://github.com/aspiaspace/EarthPT\" rel=\"external noopener nofollow\" class=\"link-external link-https\">this https URL</a>",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2309.07207"
+  },
+  "2412.02732": {
+    "arxiv_id": "2412.02732",
+    "title": "Prithvi-EO-2.0: A Versatile Multi-Temporal Foundation Model for Earth Observation Applications",
+    "authors": [
+      "Szwarcman, Daniela",
+      "Roy, Sujit",
+      "Fraccaro, Paolo",
+      "Gíslason, Þorsteinn Elí",
+      "Blumenstiel, Benedikt",
+      "Ghosal, Rinki",
+      "de Oliveira, Pedro Henrique",
+      "Almeida, Joao Lucas de Sousa",
+      "Sedona, Rocco",
+      "Kang, Yanghui",
+      "Chakraborty, Srija",
+      "Wang, Sizhe",
+      "Gomes, Carlos",
+      "Kumar, Ankur",
+      "Truong, Myscon",
+      "Godwin, Denys",
+      "Lee, Hyunho",
+      "Hsu, Chia-Yu",
+      "Lal, Rohit",
+      "Asanjan, Ata Akbari",
+      "Mujeci, Besart",
+      "Shidham, Disha",
+      "Keenan, Trevor",
+      "Arevalo, Paulo",
+      "Li, Wenwen",
+      "Alemohammad, Hamed",
+      "Olofsson, Pontus",
+      "Hain, Christopher",
+      "Kennedy, Robert",
+      "Zadrozny, Bianca",
+      "Bell, David",
+      "Cavallaro, Gabriele",
+      "Watson, Campbell",
+      "Maskey, Manil",
+      "Ramachandran, Rahul",
+      "Moreno, Juan Bernabe"
+    ],
+    "release_date": "2024-12-03",
+    "summary": "This paper presents Prithvi-EO-2.0, a new geospatial foundation model that offers significant improvements over its predecessor, Prithvi-EO-1.0. Trained on 4.2 million global time series samples from NASA's Harmonized Landsat and Sentinel-2 data archive at 30-m resolution, the new model incorporates temporal and location embeddings for enhanced performance across various geospatial tasks. Through extensive benchmarking with GEO-Bench, the model outperforms the previous Prithvi-EO model by 8% across a range of tasks. It also outperforms six other geospatial foundation models when benchmarked on remote sensing tasks from different domains and resolutions (i.e. from 0.1 m to 15 m). The results demonstrate the versatility of the model in both classical Earth observation and high-resolution applications. Early involvement of end-users and subject matter experts (SMEs) allowed constant feedback on model and dataset design, enabling customization across diverse SME-led applications in disaster response, land cover and crop mapping, and ecosystem dynamics monitoring. Prithvi-EO-2.0 is available as an open-source model on Hugging Face and IBM TerraTorch, with additional resources on GitHub. The project exemplifies the Trusted Open Science approach embraced by all involved organizations.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2412.02732"
+  },
+  "2505.21357": {
+    "arxiv_id": "2505.21357",
+    "title": "AgriFM: A Multi-source Temporal Remote Sensing Foundation Model for Agriculture Mapping",
+    "authors": [
+      "Li, Wenyuan",
+      "Liang, Shunlin",
+      "Chen, Keyan",
+      "Chen, Yongzhe",
+      "Ma, Han",
+      "Xu, Jianglei",
+      "Ma, Yichuan",
+      "Guan, Shikang",
+      "Fang, Husheng",
+      "Shi, Zhenwei"
+    ],
+    "release_date": "2025-05-27",
+    "summary": "Accurate crop mapping fundamentally relies on modeling multi-scale spatiotemporal patterns, where spatial scales range from individual field textures to landscape-level context, and temporal scales capture both short-term phenological transitions and full growing-season dynamics. Transformer-based remote sensing foundation models (RSFMs) offer promising potential for crop mapping due to their innate ability for unified spatiotemporal processing. However, current RSFMs remain suboptimal for crop mapping: they either employ fixed spatiotemporal windows that ignore the multi-scale nature of crop systems or completely disregard temporal information by focusing solely on spatial patterns. To bridge these gaps, we present AgriFM, a multi-source remote sensing foundation model specifically designed for agricultural crop mapping. Our approach begins by establishing the necessity of simultaneous hierarchical spatiotemporal feature extraction, leading to the development of a modified Video Swin Transformer architecture where temporal down-sampling is synchronized with spatial scaling operations. This modified backbone enables efficient unified processing of long time-series satellite inputs. AgriFM leverages temporally rich data streams from three satellite sources including MODIS, Landsat-8/9 and Sentinel-2, and is pre-trained on a global representative dataset comprising over 25 million image samples supervised by land cover products. The resulting framework incorporates a versatile decoder architecture that dynamically fuses these learned spatiotemporal representations, supporting diverse downstream tasks. Comprehensive evaluations demonstrate AgriFM's superior performance over conventional deep learning approaches and state-of-the-art general-purpose RSFMs across all downstream tasks. Codes will be available at https://github.com/flyakon/AgriFM.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2505.21357"
+  },
+  "2311.07113": {
+    "arxiv_id": "2311.07113",
+    "title": "SpectralGPT: Spectral Remote Sensing Foundation Model",
+    "authors": [
+      "Hong, Danfeng",
+      "Zhang, Bing",
+      "Li, Xuyang",
+      "Li, Yuxuan",
+      "Li, Chenyu",
+      "Yao, Jing",
+      "Yokoya, Naoto",
+      "Li, Hao",
+      "Ghamisi, Pedram",
+      "Jia, Xiuping",
+      "Plaza, Antonio",
+      "Gamba, Paolo",
+      "Benediktsson, Jon Atli",
+      "Chanussot, Jocelyn"
+    ],
+    "release_date": "2023-11-13",
+    "summary": "The foundation model has recently garnered significant attention due to its potential to revolutionize the field of visual representation learning in a self-supervised manner. While most foundation models are tailored to effectively process RGB images for various visual tasks, there is a noticeable gap in research focused on spectral data, which offers valuable information for scene understanding, especially in remote sensing (RS) applications. To fill this gap, we created for the first time a universal RS foundation model, named SpectralGPT, which is purpose-built to handle spectral RS images using a novel 3D generative pretrained transformer (GPT). Compared to existing foundation models, SpectralGPT 1) accommodates input images with varying sizes, resolutions, time series, and regions in a progressive training fashion, enabling full utilization of extensive RS big data; 2) leverages 3D token generation for spatial-spectral coupling; 3) captures spectrally sequential patterns via multi-target reconstruction; 4) trains on one million spectral RS images, yielding models with over 600 million parameters. Our evaluation highlights significant performance improvements with pretrained SpectralGPT models, signifying substantial potential in advancing spectral RS big data applications within the field of geoscience across four downstream tasks: single/multi-label scene classification, semantic segmentation, and change detection.",
+    "comment": "Accepted by IEEE TPAMI",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2311.07113"
+  },
+  "2406.17998": {
+    "arxiv_id": "2406.17998",
+    "title": "Changen2: Multi-Temporal Remote Sensing Generative Change Foundation Model",
+    "authors": [
+      "Zheng, Zhuo",
+      "Ermon, Stefano",
+      "Kim, Dongjun",
+      "Zhang, Liangpei",
+      "Zhong, Yanfei"
+    ],
+    "release_date": "2024-06-26",
+    "summary": "Our understanding of the temporal dynamics of the Earth's surface has been advanced by deep vision models, which often require lots of labeled multi-temporal images for training. However, collecting, preprocessing, and annotating multi-temporal remote sensing images at scale is non-trivial since it is expensive and knowledge-intensive. In this paper, we present change data generators based on generative models, which are cheap and automatic, alleviating these data problems. Our main idea is to simulate a stochastic change process over time. We describe the stochastic change process as a probabilistic graphical model (GPCM), which factorizes the complex simulation problem into two more tractable sub-problems, i.e., change event simulation and semantic change synthesis. To solve these two problems, we present Changen2, a GPCM with a resolution-scalable diffusion transformer which can generate time series of images and their semantic and change labels from labeled or unlabeled single-temporal images. Changen2 is a generative change foundation model that can be trained at scale via self-supervision, and can produce change supervisory signals from unlabeled single-temporal images. Unlike existing foundation models, Changen2 synthesizes change data to train task-specific foundation models for change detection. The resulting model possesses inherent zero-shot change detection capabilities and excellent transferability. Experiments suggest Changen2 has superior spatiotemporal scalability, e.g., Changen2 model trained on 256$^2$ pixel single-temporal images can yield time series of any length and resolutions of 1,024$^2$ pixels. Changen2 pre-trained models exhibit superior zero-shot performance (narrowing the performance gap to 3% on LEVIR-CD and approximately 10% on both S2Looking and SECOND, compared to fully supervised counterparts) and transferability across multiple types of change tasks.",
+    "comment": "The enhanced extension of our ICCV 2023 (Changen)",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2406.17998"
+  },
+  "2304.14065": {
+    "arxiv_id": "2304.14065",
+    "title": "Lightweight, Pre-trained Transformers for Remote Sensing Timeseries",
+    "authors": [
+      "Tseng, Gabriel",
+      "Cartuyvels, Ruben",
+      "Zvonkov, Ivan",
+      "Purohit, Mirali",
+      "Rolnick, David",
+      "Kerner, Hannah"
+    ],
+    "release_date": "2023-04-27",
+    "summary": "Machine learning methods for satellite data have a range of societally relevant applications, but labels used to train models can be difficult or impossible to acquire. Self-supervision is a natural solution in settings with limited labeled data, but current self-supervised models for satellite data fail to take advantage of the characteristics of that data, including the temporal dimension (which is critical for many applications, such as monitoring crop growth) and availability of data from many complementary sensors (which can significantly improve a model's predictive performance). We present Presto (the Pretrained Remote Sensing Transformer), a model pre-trained on remote sensing pixel-timeseries data. By designing Presto specifically for remote sensing data, we can create a significantly smaller but performant model. Presto excels at a wide variety of globally distributed remote sensing tasks and performs competitively with much larger models while requiring far less compute. Presto can be used for transfer learning or as a feature extractor for simple models, enabling efficient deployment at scale.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2304.14065"
+  },
+  "2502.02410": {
+    "arxiv_id": "2502.02410",
+    "title": "Privacy Amplification by Structured Subsampling for Deep Differentially Private Time Series Forecasting",
+    "authors": [
+      "Schuchardt, Jan",
+      "Dalirrooyfard, Mina",
+      "Guzelkabaagac, Jed",
+      "Schneider, Anderson",
+      "Nevmyvaka, Yuriy",
+      "Günnemann, Stephan"
+    ],
+    "release_date": "2025-02-04",
+    "summary": "Many forms of sensitive data, such as web traffic, mobility data, or hospital occupancy, are inherently sequential. The standard method for training machine learning models while ensuring privacy for units of sensitive information, such as individual hospital visits, is differentially private stochastic gradient descent (DP-SGD). However, we observe in this work that the formal guarantees of DP-SGD are incompatible with time series specific tasks like forecasting, since they rely on the privacy amplification attained by training on small, unstructured batches sampled from an unstructured dataset. In contrast, batches for forecasting are generated by (1) sampling sequentially structured time series from a dataset, (2) sampling contiguous subsequences from these series, and (3) partitioning them into context and ground-truth forecast windows. We theoretically analyze the privacy amplification attained by this structured subsampling to enable the training of forecasting models with sound and tight event- and user-level privacy guarantees. Towards more private models, we additionally prove how data augmentation amplifies privacy in self-supervised training of sequence models. Our empirical evaluation demonstrates that amplification by structured subsampling enables the training of forecasting models with strong formal privacy guarantees.",
+    "comment": "Accepted as ICML 2025 Spotlight",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2502.02410"
+  },
+  "2309.03755": {
+    "arxiv_id": "2309.03755",
+    "title": "TSGBench: Time Series Generation Benchmark",
+    "authors": [
+      "Ang, Yihao",
+      "Huang, Qiang",
+      "Bao, Yifan",
+      "Tung, Anthony K. H.",
+      "Huang, Zhiyong"
+    ],
+    "release_date": "2023-09-07",
+    "summary": "Synthetic Time Series Generation (TSG) is crucial in a range of applications, including data augmentation, anomaly detection, and privacy preservation. Although significant strides have been made in this field, existing methods exhibit three key limitations: (1) They often benchmark against similar model types, constraining a holistic view of performance capabilities. (2) The use of specialized synthetic and private datasets introduces biases and hampers generalizability. (3) Ambiguous evaluation measures, often tied to custom networks or downstream tasks, hinder consistent and fair comparison. To overcome these limitations, we introduce \\textsf{TSGBench}, the inaugural Time Series Generation Benchmark, designed for a unified and comprehensive assessment of TSG methods. It comprises three modules: (1) a curated collection of publicly available, real-world datasets tailored for TSG, together with a standardized preprocessing pipeline; (2) a comprehensive evaluation measures suite including vanilla measures, new distance-based assessments, and visualization tools; (3) a pioneering generalization test rooted in Domain Adaptation (DA), compatible with all methods. We have conducted comprehensive experiments using \\textsf{TSGBench} across a spectrum of ten real-world datasets from diverse domains, utilizing ten advanced TSG methods and twelve evaluation measures. The results highlight the reliability and efficacy of \\textsf{TSGBench} in evaluating TSG methods. Crucially, \\textsf{TSGBench} delivers a statistical analysis of the performance rankings of these methods, illuminating their varying performance across different datasets and measures and offering nuanced insights into the effectiveness of each method.",
+    "comment": "Accepted and to appear in VLDB 2024",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2309.03755"
+  },
+  "2507.07808": {
+    "arxiv_id": "2507.07808",
+    "title": "Bridging Logic and Learning: Decoding Temporal Logic Embeddings via Transformers",
+    "authors": [
+      "Candussio, Sara",
+      "Saveri, Gaia",
+      "Sarti, Gabriele",
+      "Bortolussi, Luca"
+    ],
+    "release_date": "2025-07-10",
+    "summary": "Continuous representations of logic formulae allow us to integrate symbolic knowledge into data-driven learning algorithms. If such embeddings are semantically consistent, i.e. if similar specifications are mapped into nearby vectors, they enable continuous learning and optimization directly in the semantic space of formulae. However, to translate the optimal continuous representation into a concrete requirement, such embeddings must be invertible. We tackle this issue by training a Transformer-based decoder-only model to invert semantic embeddings of Signal Temporal Logic (STL) formulae. STL is a powerful formalism that allows us to describe properties of signals varying over time in an expressive yet concise way. By constructing a small vocabulary from STL syntax, we demonstrate that our proposed model is able to generate valid formulae after only 1 epoch and to generalize to the semantics of the logic in about 10 epochs. Additionally, the model is able to decode a given embedding into formulae that are often simpler in terms of length and nesting while remaining semantically close (or equivalent) to gold references. We show the effectiveness of our methodology across various levels of training formulae complexity to assess the impact of training data on the model's ability to effectively capture the semantic information contained in the embeddings and generalize out-of-distribution. Finally, we deploy our model for solving a requirement mining task, i.e. inferring STL specifications that solve a classification task on trajectories, performing the optimization directly in the semantic space.",
+    "comment": "16 pages, 3 figures, to be published in ECML-PKDD",
+    "journal_ref": "Machine Learning and Knowledge Discovery in Databases. Research Track, ECML PKDD 2023, Lecture Notes in Computer Science, volume 14224, pages 3-20, Springer, 2023",
+    "doi": "10.48550/arXiv.2507.07808"
+  },
+  "2508.03269": {
+    "arxiv_id": "2508.03269",
+    "title": "Towards Interpretable Concept Learning over Time Series via Temporal Logic Semantics",
+    "authors": [
+      "Ferfoglia, Irene",
+      "Silvetti, Simone",
+      "Saveri, Gaia",
+      "Nenzi, Laura",
+      "Bortolussi, Luca"
+    ],
+    "release_date": "2025-08-05",
+    "summary": "Time series classification is a task of paramount importance, as this kind of data often arises in safety-critical applications. However, it is typically tackled with black-box deep learning methods, making it hard for humans to understand the rationale behind their output. To take on this challenge, we propose a neuro-symbolic framework that unifies classification and explanation through direct embedding of trajectories into a space of Signal Temporal Logic (STL) concepts. By introducing a novel STL-inspired kernel that maps raw time series to their alignment with predefined STL formulae, our model jointly optimises for accuracy and interpretability, as each prediction is accompanied by the most relevant logical concepts that characterise it. This enables classification grounded in human-interpretable temporal patterns and produces both local and global symbolic explanations. Early results show competitive performance while offering high-quality logical justifications for model decisions.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2508.03269"
+  },
+  "2601.13387": {
+    "arxiv_id": "2601.13387",
+    "title": "Confidence over Time: Confidence Calibration with Temporal Logic for Large Language Model Reasoning",
+    "authors": [
+      "Mao, Zhenjiang",
+      "Venkat, Anirudhh",
+      "Bisliouk, Artem",
+      "Kothiyal, Akshat",
+      "Subramanian, Sindhura Kumbakonam",
+      "Singhu, Saithej",
+      "Ruchkin, Ivan"
+    ],
+    "release_date": "2026-01-19",
+    "summary": "Large Language Models (LLMs) increasingly rely on long-form, multi-step reasoning to solve complex tasks such as mathematical problem solving and scientific question answering. Despite strong performance, existing confidence estimation methods typically reduce an entire reasoning process to a single scalar score, ignoring how confidence evolves throughout the generation. As a result, these methods are often sensitive to superficial factors such as response length or verbosity, and struggle to distinguish correct reasoning from confidently stated errors. We propose to characterize the stepwise confidence signal using Signal Temporal Logic (STL). Using a discriminative STL mining procedure, we discover temporal formulas that distinguish confidence signals of correct and incorrect responses. Our analysis found that the STL patterns generalize across tasks, and numeric parameters exhibit sensitivity to individual questions. Based on these insights, we develop a confidence estimation approach that informs STL blocks with parameter hypernetworks. Experiments on multiple reasoning tasks show our confidence scores are more calibrated than the baselines.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2601.13387"
+  },
+  "2605.06483": {
+    "arxiv_id": "2605.06483",
+    "title": "ReasonSTL: Bridging Natural Language and Signal Temporal Logic via Tool-Augmented Process-Rewarded Learning",
+    "authors": [
+      "Ye, Bowen",
+      "Li, Zhijian",
+      "Huang, Junyue",
+      "Ma, Junkai",
+      "Yin, Xiang"
+    ],
+    "release_date": "2026-05-07",
+    "summary": "Signal Temporal Logic (STL) is an expressive formal language for specifying spatio-temporal requirements over real-valued, real-time signals. It has been widely used for the verification and synthesis of autonomous systems and cyber-physical systems. In practice, however, users often express their requirements in natural language rather than in structured STL formulas, making natural-language-to-STL translation a critical yet challenging task. Manual specification requires temporal-logic expertise and cannot scale, while prompting commercial LLM APIs incurs substantial token costs and may expose sensitive system requirements to third-party services, raising privacy concerns for industrial deployment. To address these challenges, we present \\textsc{ReasonSTL}, a tool-augmented framework that adapts local open-source language models for natural-language-to-STL generation. \\textsc{ReasonSTL} decomposes the translation process into explicit reasoning, deterministic tool calls, and structured formula construction. We further introduce process-rewarded training to supervise both tool-use trajectories and final formulas, together with \\textsc{STL-Bench}, a bilingual, computation-aware benchmark grounded in real-world signals. Experiments show that a 4B model trained with \\textsc{ReasonSTL} achieves state-of-the-art performance in both automatic metrics and human evaluations, demonstrating that \\textsc{ReasonSTL} provides a transparent, low-cost, and privacy-preserving alternative for formal specification drafting.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2605.06483"
   }
 }

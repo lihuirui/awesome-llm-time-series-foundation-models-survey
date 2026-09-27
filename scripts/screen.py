@@ -1008,6 +1008,103 @@ SPECS = {
         "tokenization": "Scale-Invariant Universal Order-Flow Tokenization", "prediction_head": "Autoregressive Trade-Event Probability Distribution",
         "params": "524M", "pretrain_corpus": "Billions of Trade-Flow Events across 9,000+ Equities (US & APAC)", "tasks": ["Market Microstructure Simulation", "Zero-Shot Cross-Market Rollouts", "Order Flow Modeling"],
         "open_weights": False, "venue": "arXiv 2026", "code_url": None
+    },
+
+    # Iteration 10: Earth Observation & Satellite Radar Foundations
+    "2409.13598": {
+        "bibkey": "schmude2024prithviwxc",
+        "group": "NASA / IBM", "paradigm": "Native TSFM", "architecture": "Encoder-Decoder Scaled Vision/Temporal Transformer",
+        "tokenization": "Gridded Spatial-Temporal Patching", "prediction_head": "Spherical Grid Prognostic Regression",
+        "params": "2.3B", "pretrain_corpus": "MERRA-2 & ERA5 Global Planetary Reanalysis (160 variables, 40+ years)", "tasks": ["Global Weather Forecasting", "Downscaling", "Hurricane Tracking"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": "https://github.com/NASA-IMPACT/Prithvi-WxC"
+    },
+    "2309.07207": {
+        "bibkey": "smith2023earthpt",
+        "group": "Aspia Space / Oxford", "paradigm": "Native TSFM", "architecture": "Decoder-only Autoregressive Transformer",
+        "tokenization": "Pixel-level Multi-spectral Temporal Tokenization", "prediction_head": "Autoregressive Next-Token Continuous Prediction",
+        "params": "700M", "pretrain_corpus": "Sentinel-2 Earth Observation time series (>10B pixel timesteps)", "tasks": ["Surface Reflectance Forecasting", "Cloud Clearing", "Carbon Estimation"],
+        "open_weights": True, "venue": "NeurIPS 2023 CCAI", "code_url": "https://github.com/aspiaspace/EarthPT"
+    },
+    "2412.02732": {
+        "bibkey": "szwarcman2024prithvieo2",
+        "group": "NASA / IBM", "paradigm": "Native TSFM", "architecture": "Multi-temporal Vision Transformer (ViT)",
+        "tokenization": "3D Spatio-Temporal Patch Embeddings", "prediction_head": "Multi-task Downstream Decoders",
+        "params": "300M", "pretrain_corpus": "4.2M global multi-temporal samples from HLS (Harmonized Landsat Sentinel-2)", "tasks": ["Multi-Temporal Land Cover", "Crop Classification", "Flood Mapping"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": "https://github.com/NASA-IMPACT/Prithvi-EO-2.0"
+    },
+    "2505.21357": {
+        "bibkey": "li2025agrifm",
+        "group": "HKU / Maryland", "paradigm": "Native TSFM", "architecture": "Multi-Source Hierarchical Spatio-Temporal Transformer",
+        "tokenization": "Joint SAR (Sentinel-1) + Optical (Sentinel-2) Multimodal Patching", "prediction_head": "Phenological Classification & Mapping Heads",
+        "params": "86M", "pretrain_corpus": "Multi-source SAR-Optical global agricultural time series (50M+ patch series)", "tasks": ["Agricultural Crop Mapping", "Phenology Tracking", "Yield Prediction"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2311.07113": {
+        "bibkey": "hong2024spectralgpt",
+        "group": "Aerospace Information Research Institute", "paradigm": "Native TSFM", "architecture": "3D Masked Autoencoder / Generative Transformer",
+        "tokenization": "3D Spatial-Spectral-Temporal Patch Cubes", "prediction_head": "3D Spectral Masked Autoencoder Reconstruction",
+        "params": "600M", "pretrain_corpus": "1M+ multispectral/hyperspectral image time-cubes", "tasks": ["Spectral Time-Series Classification", "Change Detection"],
+        "open_weights": True, "venue": "IEEE TPAMI 2024", "code_url": None
+    },
+    "2406.17998": {
+        "bibkey": "zheng2024changen2",
+        "group": "Stanford / Wuhan Univ", "paradigm": "Native TSFM", "architecture": "Multi-Temporal Continuous Flow / Diffusion Transformer",
+        "tokenization": "Bitemporal / Multi-temporal Patch Concatenation", "prediction_head": "Generative Change Denoising Score Head",
+        "params": "120M", "pretrain_corpus": "Multi-temporal bi-temporal satellite pairs (>100K scenes)", "tasks": ["Remote Sensing Change Detection", "Counterfactual Synthesis"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": None
+    },
+    "2304.14065": {
+        "bibkey": "tseng2023presto",
+        "group": "NASA Harvest", "paradigm": "Native TSFM", "architecture": "Lightweight Encoder Transformer with Channel-Time Masking",
+        "tokenization": "Pixel-Level Sensor-Agnostic Channel Masked Tokens", "prediction_head": "Masked Value Reconstruction / Linear Downstream Head",
+        "params": "4.8M", "pretrain_corpus": "Global multi-sensor pixel time series (Sentinel-1, Sentinel-2, ERA5, Dynamic World)", "tasks": ["Crop Type Classification", "Fuel Moisture Estimation", "Land Cover"],
+        "open_weights": True, "venue": "NeurIPS 2023", "code_url": "https://github.com/nasaharvest/presto"
+    },
+
+    # Iteration 10: Differentially Private Benchmarking & Synthetic Twins
+    "2502.02410": {
+        "bibkey": "schuchardt2025privacy",
+        "group": "TUM / Amazon", "paradigm": "Evaluation & Benchmark", "architecture": "Differentially Private TSFM (DP-SGD with Structured Subsampling)",
+        "tokenization": "Subseries Patching with Privacy-Preserving Renyi DP Bounds", "prediction_head": "Privacy-Bounded Forecasting Heads",
+        "params": "Evaluated on 10M-100M Patch Transformers", "pretrain_corpus": "Electricity, Traffic, Medical EHR Sequential Benchmarks", "tasks": ["Differentially Private Forecasting", "Leakage-Free Horizon Prediction"],
+        "open_weights": True, "venue": "ICML 2025 Spotlight", "code_url": None
+    },
+    "2309.03755": {
+        "bibkey": "ang2024tsgbench",
+        "group": "NUS", "paradigm": "Evaluation & Benchmark", "architecture": "Benchmark Suite & Standardization Framework",
+        "tokenization": "Cross-Domain Time-Series Normalization & Evaluation Suite", "prediction_head": "12 Downstream Quality & Fidelity Metrics (TSTR, MMD, Discriminative)",
+        "params": "Benchmarked across 15 Generative Architectures", "pretrain_corpus": "12 Multi-domain Benchmark Datasets", "tasks": ["Generative Fidelity Evaluation", "Privacy Risk Assessment", "Domain Adaptation"],
+        "open_weights": True, "venue": "VLDB 2024", "code_url": None
+    },
+
+    # Iteration 10: Neuro-Symbolic Hybrid Foundations & Temporal Logic
+    "2507.07808": {
+        "bibkey": "candussio2025decoding",
+        "group": "Univ of Trieste", "paradigm": "LLM4TS", "architecture": "Autoregressive Decoder Transformer for Logic Formula Synthesis",
+        "tokenization": "Continuous Semantic Logic Vectors to Discrete Grammar Tokens", "prediction_head": "Discrete Syntax Tree Next-Token Classification",
+        "params": "28M", "pretrain_corpus": "Synthetically sampled Signal Temporal Logic (STL) specification graphs", "tasks": ["Semantic Logic Inversion", "Requirement Mining", "Interpretable Control"],
+        "open_weights": True, "venue": "ECML-PKDD 2025", "code_url": None
+    },
+    "2508.03269": {
+        "bibkey": "ferfoglia2025stars",
+        "group": "Univ of Trieste", "paradigm": "LLM4TS", "architecture": "Concept Bottleneck Transformer with STL Quantitative Semantics",
+        "tokenization": "Robustness Valuations over Signal Temporal Logic Predicates", "prediction_head": "Concept-Constrained Linear Classifier",
+        "params": "14M", "pretrain_corpus": "Safety-critical time series (Naval, Healthcare, Automotive)", "tasks": ["Interpretable Time-Series Classification", "Concept Verification"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2601.13387": {
+        "bibkey": "mao2026confidence",
+        "group": "ETH Zurich", "paradigm": "Evaluation & Benchmark", "architecture": "LLM Dynamic Trajectory Monitor with Temporal Logic",
+        "tokenization": "Token-level Logit Confidence Sequences mapped to Temporal Traces", "prediction_head": "STL Verification Engine for Reasoning Path Selection",
+        "params": "Evaluated on 7B to 70B LLMs (Llama-3, Qwen)", "pretrain_corpus": "GSM8K, MATH, StrategyQA Multi-step Reasoning Traces", "tasks": ["Multi-Step Reasoning Calibration", "Hallucination Prevention"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2605.06483": {
+        "bibkey": "ye2026reasonstl",
+        "group": "Zhejiang Univ / Westlake", "paradigm": "LLM4TS", "architecture": "Tool-Augmented LLM with Process-Supervised RL (PRM)",
+        "tokenization": "Natural Language Requirements to STL Grammar Trees", "prediction_head": "Syntax-Guided Step-by-Step Generation with Formal Model Checker",
+        "params": "8B", "pretrain_corpus": "15,000 Verified NL-STL Pairs with Formal SMT Solver Feedback", "tasks": ["Natural Language Specification Translation", "Formal Temporal Verification"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
     }
 }
 

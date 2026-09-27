@@ -2,11 +2,11 @@
 
 [![Survey Paper](https://img.shields.io/badge/Survey%20Paper-PDF-red?style=flat&logo=adobeacrobatreader)](paper/main.pdf)
 [![PRISMA 2020](https://img.shields.io/badge/PRISMA%202020-Reproducible-green?style=flat)](docs/PROTOCOL.md)
-[![Total Included](https://img.shields.io/badge/Included%20Studies-137-blue?style=flat)](data/papers.json)
+[![Total Included](https://img.shields.io/badge/Included%20Studies-150-blue?style=flat)](data/papers.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 8 (Multi-Agent Swarms, 1-Bit Transformers & Continuous Contamination Auditing)** · Last Updated: **2026-09-26**
+> Latest Iteration: **Iteration 10 (Earth Observation Foundations, DP Generative Twins & Neuro-Symbolic Temporal Logic)** · Last Updated: **2026-09-27**
 
 ---
 
@@ -14,11 +14,13 @@
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **原生与极端1-Bit端侧基座模型 (Native & 1-Bit Edge TSFMs)**：在海量跨域时序数据集上进行从头预训练的模型，涵盖单步/自回归预测、混合专家架构 (MoE)、流匹配与极端端侧低比特量化模型，如 Chronos-2、TimesFM-3 (330M原生多变量预测与1T训练集)、Sparse Binary Transformers (首创1-bit权重多变量时序架构，将浮点乘法转化为纯加减累加)、Q-DEQ (量化深度平衡模型，0.3M参数与75KB内存占用，Picard-Broyden收缩映射解算器)、SGA (状态引导自回归隐空间曲率不确定度校准)、Cadence (时序有损压缩)、MACROCAST (15M纯合成BVAR/DFM模拟预训练、零未来与修正泄露的实时宏观经济基座模型)、MOIRAI、MOMENT、TTM、Timer-S1、Time-MoE、Toto 2.0、$t_0$、Tiny-TSM (23M单卡训练)、TQS-PTQ (动力学系统轨迹量化敏感度预算)、4-Bit激活校准 (Ye & Wanjiku 2026)、MCU-FQT (Cortex-M微控制器全量化端侧训练) 等。
-2. **多智能体协作蜂群、群体辩论与自演化推理 (Multi-Agent Swarms & Self-Evolution)**：从单智能体工具调用迈向多智能体群体协商、模态辩论与技能自进化，如 MC-Debate (KAIST，视觉-数值-文本多模态协作辩论框架，错误率下降14.2%并消除76%的反向幻觉)、TimeEvo (天津大学，任务失败驱动的动态工具代码自演化与技能库扩展)、自演化时序预测策略 (北京大学，基于实现遗憾度动态自适应更新仲裁策略)、可追溯多智能体系统 (首尔大学，穿透非结构化文档、数据转换与代码执行的不可篡改DAG因果审计)、MetaCaster (康涅狄格大学，基于时序统计指纹指导轻量级模型架构搜索与少样本自适应)、TimeInteract (Ming Jin 团队，首创流式实时交互范式与解耦流式推理)、Cast-R1、TimeART、TS-Reasoner、DCATS、TimeAgent 等。
-3. **数据污染审计、预训练熟悉度偏差与零泄露重放基准 (Data Contamination & Replayable Gyms)**：揭示当前基座模型评测中普遍存在的测试集泄露与虚假泛化，如 TSFMAudit (浙江大学，分位数N-Gram散列与互信息置换检验，首次对主流开源基座模型开展系统性数据污染扫描，揭示高达18.4%的记忆泄露)、预训练熟悉度偏差评估 (Sharif大学，严谨证明时间切分仍保留域内吸引子先验熟悉度，与真跨域零样本存在高达42%的性能虚高)、极端电力市场波动应力测试 (Rutgers大学，揭示单变量基座模型面对极端尖峰与协变量缺失的系统性劣化)、Forecast-Dojo (宾夕法尼亚州立大学，预测市场与历史新闻流配对的零泄露可重放多智能体对抗评测环境)、Impermanent (GitHub 实时流式评测)、TimeSage-MT 等。
-4. **非平稳时序漂移与测试时自适应 (Test-Time Adaptation, TTA)**：无监督应对测试期分布偏移与概念漂移，如 TSF-TTA (AAAI'25无源测试时自适应与一致性损失)、AdaNODEs (ICASSP'26连续神经ODE自适应)、RG-TTA (流式机制引导元控制与动态梯度调节)、FAC (频域感知校准与防高频噪声发散)。
-5. **因果发现、先验拟合与反事实基座模型 (Causal Discovery & Structural Priors)**：融合结构因果模型 (SCMs)，如 Causal-PT (深度因果预训练单步DAG重构)、CausalTimePrior (首个基于先验数据拟合网络PFN的因果干预时序模型，支持即时反事实预测)、CaTSG (结构因果扩散生成)、CausalTime (NeurIPS'23真实动力学流因果评测基准)、Jander 因果审计 (揭示主流时序基座模型顽固的滞后惯性偏差)。
+1. **遥感雷达与行星级地球观测时序基座 (Earth Observation & Satellite Radar Foundations)**：将时序基座模型拓展至行星级空间-光谱-时间连续张量，涵盖多时相卫星影像、合成孔径雷达 (SAR) 微波回波与全球气象重分析场，如 Prithvi WxC (NASA/IBM 2.3B参数全球天气与气候基座模型，覆盖40+年MERRA-2与ERA5的160个大气变量)、EarthPT (700M参数自回归解码器，在Sentinel-2超百亿像素时序上无监督预训练)、Prithvi-EO-2.0 (300M参数多时相ViT，420万全球场景预训练)、AgriFM (86M参数全天候Sentinel-1 SAR与Sentinel-2光学跨模态融合农业基座模型)、SpectralGPT (600M参数3D空-谱-时张量掩码自编码器)、Changen2 (120M参数连续流生成扩散变化检测模型)、Presto (4.8M紧凑型多传感器像素时序Transformer) 等。
+2. **差分隐私生成孪生与零泄露基准评测 (Differentially Private Generative Twins & Zero-Leakage Benchmarks)**：攻克真实工业、医疗与电力时序评测中的数据污染与隐私逆向泄露难题，构建严格数学证明的 $(\epsilon, \delta)$-差分隐私生成孪生，如 Schuchardt et al. (ICML 2025 Spotlight，针对自相关滑动窗口创立结构化子采样 Rényi 差分隐私计算体系，首次证明时序深度基座模型的无界隐私放大与 $\epsilon < 2.0$ 强保障)、TSGBench (VLDB 2024，提出严格的 Train-on-Synthetic Test-on-Real (TSTR) 统一评估框架与成员推理防御评测) 等。
+3. **神经符号时间逻辑与可微形式化约束 (Neuro-Symbolic Temporal Logic & Verifiable Constraints)**：将连续神经网络表征与形式化信号时序逻辑 (Signal Temporal Logic, STL) 的定量鲁棒度语义 $ho(arphi, x, t)$ 深度融合，如 Candussio et al. (ECML-PKDD 2025，首创 Transformer 自回归解码器将连续逻辑嵌入逆映射为人类可读离散 STL 语法树)、STARS (Ferfoglia et al. 2025，基于 STL 鲁棒性概念瓶颈层的可解释安全关键分类器)、Confidence over Time (ETH Zurich 2026，将 LLM 多步推理置信度轨迹建模为连续时序并挖掘 STL 异常行为模板以校准幻觉)、ReasonSTL (浙江大学/西湖大学 2026，过程监督强化学习结合 SMT/dReal 求解器实现 91.4% 高准确度自然语言到可执行 STL 规约转化)。
+4. **人类与物理反馈强化学习策略优化 (RLHF/RLPF Policy Optimization)**：TimeRFT (HKUST'26 质量与拐点感知分步奖励 $r_t$ 结合高熵样本挑选，OOD误差降低18.6%)、TimeHF (京东 6B 基座模型引入时序策略优化 TPO 与专家偏好对齐，补货决策精度提升33.21%)、COUNTS (JHU NeurIPS'25 RVQ-VAE离散符号化结合分组相对策略优化 GRPO 激发可验证思维链推理)、TimeMaster (浙江大学多模态生理波形分步诊断奖励消减幻觉)、LAST SToP (Vector/Guelph ICML'25 异步时序随机软提示)。
+5. **免分布保形预测与有限样本统计覆盖保证 (Distribution-Free Conformal Prediction)**：Achour et al. (零样本基座模型实现 $100\%$ 目标数据投入校准，获得严格 $1-lpha$ 边际覆盖且置信区间优于 GBDT/ARIMA)、Adaptive Conformal Anomaly Detection (IBM Research ICLR'26 工业 IoT 严格虚警率受控 p 值输出)、RareCP (柏林自由大学 GIFT-Eval 上基于余弦注意力检索 MoE 缩窄区间达22%)。
+6. **物理引导基座模型与连续时间异步事件流 (Physics Foundations & Continuous Event Streams)**：GridSFM (UW/微软 2026，内置非线性牛顿潮流方程的物理图网络，万节点电网零样本计算误差仅2.45%)、SurF (多伦多大学/Vector 2026，时间尺度重整化定理 TRT 连续流双射实现多数据集联合预训练)、TradeFM (摩根大通 524M 订单流生成基座模型)。
+7. **极端1-Bit端侧量化与多智能体协作辩论 (1-Bit Quantization & Multi-Agent Swarms)**：Sparse Binary Transformers (1-bit权重纯加减累加)、Q-DEQ (0.3M深度平衡Picard-Broyden收缩映射解算器)、MC-Debate (KAIST 多模态多智能体协商)、TimeEvo (动态代码与技能自演化)、TSFMAudit (分位数N-Gram污染扫描器)。
 
 ---
 
@@ -34,16 +36,16 @@ graph TD
     Root --> P3["Evaluations, Benchmarks & Critiques"]
 
     P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM-3, Timer, Sundial, TiRex, Toto, Tabby, Cadence, SGA)"]
-    P1 --> P1_TTA["Test-Time Adaptation & Causal Models<br/>(TSF-TTA, AdaNODEs, RG-TTA, CausalTimePrior, Causal-PT, CaTSG)"]
-    P1 --> P1_Edge["1-Bit, Quantization & Microcontrollers<br/>(Sparse Binary, Q-DEQ, TQS-PTQ, MCU-FQT, OpenCity, UrbanFM, MACROCAST)"]
+    P1 --> P1_EO["Earth Observation & Planetary Foundations<br/>(Prithvi WxC, EarthPT, Prithvi-EO-2.0, AgriFM, SpectralGPT, Changen2, Presto)"]
+    P1 --> P1_Phys["Physics, 1-Bit & Continuous Streams<br/>(GridSFM, SurF, TradeFM, Sparse Binary, Q-DEQ, TQS-PTQ, MCU-FQT)"]
 
     P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
-    P2 --> P2_Agent["Multi-Agent Swarms & Consensus<br/>(MC-Debate, TimeEvo, TimeInteract, Cast-R1, TimeART, Traceable-Agent)"]
-    P2 --> P2_Omni["Omni-Modal & Few-Shot Agents<br/>(Chronicle, VLT, VisionTS++, MetaCaster, ChronoSteer, TimeOmni-VL)"]
+    P2 --> P2_Logic["Neuro-Symbolic & Temporal Logic<br/>(ReasonSTL, STARS, Candussio et al., Confidence-STL)"]
+    P2 --> P2_Agent["Policy Optimization & Swarms<br/>(TimeRFT, TimeHF, COUNTS, TimeMaster, TimeEvo, MC-Debate)"]
 
-    P3 --> P3_Bench["Living & Replayable Benchmarks<br/>(Forecast-Dojo, Impermanent, TimeSage-MT, TIME, GIFT-Eval, fev-bench)"]
-    P3 --> P3_Audit["Contamination & Leakage Audits<br/>(TSFMAudit, Familiarity Bias, Jander, FAC TTA Bench, LiveHouse-TS)"]
-    P3 --> P3_Energy["Energy, Quantization & Edge Suites<br/>(HoliBench, FM-CAC, QuantCalibration, Table 5, Table 7, Table 8)"]
+    P3 --> P3_Bench["DP Twins & Living Benchmarks<br/>(TSGBench, DP-Subsampling, Forecast-Dojo, Impermanent, TimeSage, GIFT-Eval)"]
+    P3 --> P3_Conf["Conformal Coverage & Statistical Audits<br/>(Achour et al., Adaptive-CAD, RareCP, TSFMAudit, Familiarity Bias)"]
+    P3 --> P3_Energy["Energy, Quantization & Edge Suites<br/>(HoliBench, FM-CAC, QuantCalibration, Table 5, Table 8, Table 10)"]
 ```
 
 ---
@@ -54,13 +56,13 @@ graph TD
 
 | Phase | Metric | Count | Description |
 | :--- | :--- | :---: | :--- |
-| **Identification** | Total records retrieved | **153** | Systematic queries across arXiv and Crossref APIs |
+| **Identification** | Total records retrieved | **166** | Systematic queries across arXiv and Crossref APIs |
 | | Duplicates removed | **5** | Deduplication via DOI and arXiv identifiers |
-| **Screening** | Title & abstract screened | **148** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
+| **Screening** | Title & abstract screened | **161** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
 | | Excluded at Stage 1 | **10** | Out of domain / pre-2021 releases |
-| **Eligibility** | Full-text assessed | **138** | Assessed for architectural details and experimental rigor |
+| **Eligibility** | Full-text assessed | **151** | Assessed for architectural details and experimental rigor |
 | | Deferred for P2 extraction | **1** | Candidates queued for detailed extraction in upcoming iteration |
-| **Included** | **Total Synthesized Studies** | **137** | **Core benchmark and foundation models synthesized** |
+| **Included** | **Total Synthesized Studies** | **150** | **Core benchmark and foundation models synthesized** |
 
 ---
 
@@ -144,6 +146,13 @@ graph TD
 | **Time series Foundation Models based on Physics-Informed Synthetic Histories for Cold-Start Photovoltaic Forecasting** | Marche Polytechnic University | ICML 2026 Workshop | Evaluated across TabPFN-TS, Chronos-2, TimesFM | 440 Commercial Photovoltaic Sites (synthetic model chains via pvlib) | Synthetic History & Meteorological Covariate Patch Tokens; Zero-Shot Foundation Model Pipeline Conditioned on Physical Synthetic Histories | [📄 Paper](https://arxiv.org/abs/2606.07457)<br/>🔒 Proprietary |
 | **SurF** | University of Toronto / Vector Institute | arXiv 2026 | 12M | Earthquake, Retweet, Taobao, and Synthetic Poisson Point Process Streams | Continuous-Time Event Tuples & Scalable Cumulative Intensity Parameterization; Generative Continuous-Time Transformer with Time Rescaling Theorem Bijection | [📄 Paper](https://arxiv.org/abs/2605.14069)<br/>[💻 Code](https://github.com/mohammadrezaei/surf) |
 | **TradeFM** | J.P. Morgan AI Research | arXiv 2026 | 524M | Billions of Trade-Flow Events across 9,000+ Equities (US & APAC) | Scale-Invariant Universal Order-Flow Tokenization; 524M Generative Order Flow Transformer coupled with Deterministic Market Simulator | [📄 Paper](https://arxiv.org/abs/2602.23784)<br/>🔒 Proprietary |
+| **Prithvi WxC** | NASA / IBM | arXiv 2024 | 2.3B | MERRA-2 & ERA5 Global Planetary Reanalysis (160 variables, 40+ years) | Gridded Spatial-Temporal Patching; Encoder-Decoder Scaled Vision/Temporal Transformer | [📄 Paper](https://arxiv.org/abs/2409.13598)<br/>[💻 Code](https://github.com/NASA-IMPACT/Prithvi-WxC) |
+| **EarthPT** | Aspia Space / Oxford | NeurIPS 2023 CCAI | 700M | Sentinel-2 Earth Observation time series (>10B pixel timesteps) | Pixel-level Multi-spectral Temporal Tokenization; Decoder-only Autoregressive Transformer | [📄 Paper](https://arxiv.org/abs/2309.07207)<br/>[💻 Code](https://github.com/aspiaspace/EarthPT) |
+| **Prithvi-EO-2.0** | NASA / IBM | arXiv 2024 | 300M | 4.2M global multi-temporal samples from HLS (Harmonized Landsat Sentinel-2) | 3D Spatio-Temporal Patch Embeddings; Multi-temporal Vision Transformer (ViT) | [📄 Paper](https://arxiv.org/abs/2412.02732)<br/>[💻 Code](https://github.com/NASA-IMPACT/Prithvi-EO-2.0) |
+| **AgriFM** | HKU / Maryland | arXiv 2025 | 86M | Multi-source SAR-Optical global agricultural time series (50M+ patch series) | Joint SAR (Sentinel-1) + Optical (Sentinel-2) Multimodal Patching; Multi-Source Hierarchical Spatio-Temporal Transformer | [📄 Paper](https://arxiv.org/abs/2505.21357)<br/>🔒 Proprietary |
+| **SpectralGPT** | Aerospace Information Research Institute | IEEE TPAMI 2024 | 600M | 1M+ multispectral/hyperspectral image time-cubes | 3D Spatial-Spectral-Temporal Patch Cubes; 3D Masked Autoencoder / Generative Transformer | [📄 Paper](https://arxiv.org/abs/2311.07113)<br/>🔒 Proprietary |
+| **Changen2** | Stanford / Wuhan Univ | arXiv 2024 | 120M | Multi-temporal bi-temporal satellite pairs (>100K scenes) | Bitemporal / Multi-temporal Patch Concatenation; Multi-Temporal Continuous Flow / Diffusion Transformer | [📄 Paper](https://arxiv.org/abs/2406.17998)<br/>🔒 Proprietary |
+| **Lightweight, Pre-trained Transformers for Remote Sensing Timeseries** | NASA Harvest | NeurIPS 2023 | 4.8M | Global multi-sensor pixel time series (Sentinel-1, Sentinel-2, ERA5, Dynamic World) | Pixel-Level Sensor-Agnostic Channel Masked Tokens; Lightweight Encoder Transformer with Channel-Time Masking | [📄 Paper](https://arxiv.org/abs/2304.14065)<br/>[💻 Code](https://github.com/nasaharvest/presto) |
 
 ### 2. Repurposed Large Language Models (LLM4TS)
 
@@ -191,6 +200,9 @@ graph TD
 | **Eliciting Chain-of-Thought Reasoning for Time Series Analysis using Reinforcement Learning** | Johns Hopkins University | NeurIPS 2025 | 7B (Llama / Mistral Backbones) | Discrete Tokenized LLM with Group Relative Policy Optimization (GRPO) | Residual Vector-Quantized VAE (RVQ-VAE) Discrete Tokens | [📄 Paper](https://arxiv.org/abs/2510.01116)<br/>[💻 Code](https://github.com/flxprkr/counts) |
 | **TimeMaster** | Zhejiang University | arXiv 2025 | 3B (Qwen2.5-VL-3B Backbone) | Multimodal LLM with Reinforcement Learning Reasoner | Visualized Signal Spectrograms & Waveform Embeddings | [📄 Paper](https://arxiv.org/abs/2506.13705)<br/>[💻 Code](https://github.com/zjr2000/TimeMaster) |
 | **LAST SToP For Modeling Asynchronous Time Series** | University of Guelph / Vector Institute | ICML 2025 | 7B (Llama-2, Mistral Backbones) | Language-modeled Asynchronous Time Series (LASTS) + Stochastic Soft Prompting (StoP) | Natural Language Prompting of Irregular Timestamped Tuples | [📄 Paper](https://arxiv.org/abs/2502.01922)<br/>[💻 Code](https://github.com/shubhamgupta1404/LASTS) |
+| **Bridging Logic and Learning** | Univ of Trieste | ECML-PKDD 2025 | 28M | Autoregressive Decoder Transformer for Logic Formula Synthesis | Continuous Semantic Logic Vectors to Discrete Grammar Tokens | [📄 Paper](https://arxiv.org/abs/2507.07808)<br/>🔒 Proprietary |
+| **Towards Interpretable Concept Learning over Time Series via Temporal Logic Semantics** | Univ of Trieste | arXiv 2025 | 14M | Concept Bottleneck Transformer with STL Quantitative Semantics | Robustness Valuations over Signal Temporal Logic Predicates | [📄 Paper](https://arxiv.org/abs/2508.03269)<br/>🔒 Proprietary |
+| **ReasonSTL** | Zhejiang Univ / Westlake | arXiv 2026 | 8B | Tool-Augmented LLM with Process-Supervised RL (PRM) | Natural Language Requirements to STL Grammar Trees | [📄 Paper](https://arxiv.org/abs/2605.06483)<br/>🔒 Proprietary |
 
 ### 3. Evaluations, Benchmarks, Scaling Laws & Critiques
 
@@ -227,6 +239,9 @@ graph TD
 | **Foundation models for time series forecasting** | IMT Atlantique | Conformal Prediction Intervals, Zero-Shot Uncertainty Calibration, Coverage Guarantee Auditing | The zero-shot capabilities of foundation models (FMs) for time series forecasting offer promising potentials in conforma... | [📄 Paper](https://arxiv.org/abs/2507.08858) [💻 Code](https://github.com/sami-achour/tsfm-conformal) |
 | **Adaptive Conformal Anomaly Detection with Time Series Foundation Models for Signal Monitoring** | IBM Research | Adaptive Conformal Anomaly Detection, False-Alarm Rate Control, Distribution Shift Monitoring | We propose a post-hoc adaptive conformal anomaly detection method for monitoring time series that leverages predictions ... | [📄 Paper](https://arxiv.org/abs/2604.20122) — |
 | **RareCP** | Freie Universität Berlin | Regime-Aware Conformal Prediction, Asymmetric Prediction Intervals, Uncertainty Calibration | Recent advances in uncertainty quantification for time series forecasting show that conformal prediction can provide rel... | [📄 Paper](https://arxiv.org/abs/2605.08857) [💻 Code](https://github.com/mheurich/rarecp) |
+| **Privacy Amplification by Structured Subsampling for Deep Differentially Private Time Series Forecasting** | TUM / Amazon | Differentially Private Forecasting, Leakage-Free Horizon Prediction | Many forms of sensitive data, such as web traffic, mobility data, or hospital occupancy, are inherently sequential. The ... | [📄 Paper](https://arxiv.org/abs/2502.02410) — |
+| **TSGBench** | NUS | Generative Fidelity Evaluation, Privacy Risk Assessment, Domain Adaptation | Synthetic Time Series Generation (TSG) is crucial in a range of applications, including data augmentation, anomaly detec... | [📄 Paper](https://arxiv.org/abs/2309.03755) — |
+| **Confidence over Time** | ETH Zurich | Multi-Step Reasoning Calibration, Hallucination Prevention | Large Language Models (LLMs) increasingly rely on long-form, multi-step reasoning to solve complex tasks such as mathema... | [📄 Paper](https://arxiv.org/abs/2601.13387) — |
 
 ---
 

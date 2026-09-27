@@ -50,16 +50,16 @@ def generate_taxonomy_figure():
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
             ("Autoregressive & Patch Decoders", "Chronos, TimesFM-3, Timer, Sundial,\nTiRex, Toto, Tabby, Cadence, SGA"),
-            ("Physics & Continuous Event Streams", "GridSFM, SurF, TradeFM,\nLongarini et al., Causal-PT, CaTSG"),
-            ("1-Bit, Quantization & Edge MCU", "Sparse Binary, Q-DEQ, TQS-PTQ,\nMCU-FQT, OpenCity, UrbanFM, MACROCAST")
+            ("Earth Observation & Planetary", "Prithvi WxC, EarthPT, Prithvi-EO-2,\nAgriFM, SpectralGPT, Changen2, Presto"),
+            ("Physics, 1-Bit & Continuous Streams", "GridSFM, SurF, TradeFM, Sparse Binary,\nQ-DEQ, TQS-PTQ, MCU-FQT, OpenCity")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
             ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
-            ("Policy Optimization & CoT Reasoning", "TimeRFT, TimeHF, COUNTS,\nTimeMaster, LAST SToP, MC-Debate"),
-            ("Multi-Agent Swarms & Autonomous Tools", "TimeEvo, TimeInteract, Cast-R1,\nTimeART, Traceable-Agent, MetaCaster")
+            ("Neuro-Symbolic & Temporal Logic", "ReasonSTL, STARS, Candussio et al.,\nConfidence-STL, PromptCast"),
+            ("Multi-Agent & Policy Optimization", "TimeRFT, TimeHF, COUNTS, TimeMaster,\nTimeEvo, TimeInteract, Cast-R1")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Living & Replayable Benchmarks", "Forecast-Dojo, Impermanent, TimeSage,\nTIME, GIFT-Eval, fev-bench"),
+            ("DP Twins & Living Benchmarks", "TSGBench, DP-Subsampling, Forecast-Dojo,\nImpermanent, TimeSage, GIFT-Eval"),
             ("Conformal Coverage & Statistical Audits", "Achour, Adaptive-CAD, RareCP,\nTSFMAudit, Familiarity Bias, Pan"),
             ("Energy, Quantization & Edge Suites", "HoliBench, FM-CAC, QuantCalibration,\nBeyond Numerical, AION, WorkflowBench")
         ])
@@ -279,7 +279,12 @@ def generate_timeline_figure():
         (2026.72, 2.2, "Q-DEQ", "HIT", "#1f77b4"),
         (2026.73, 4.3, "Forecast-Dojo", "PSU", "#2ca02c"),
         (2026.74, 1.5, "SGA", "NJU", "#1f77b4"),
-        (2026.74, 4.7, "GridSFM", "UW/MSFT", "#1f77b4")
+        (2026.74, 4.7, "GridSFM", "UW/MSFT", "#1f77b4"),
+        (2023.70, 4.7, "EarthPT", "Aspia/Oxford", "#1f77b4"),
+        (2024.72, 4.9, "Prithvi WxC", "NASA/IBM", "#1f77b4"),
+        (2025.42, 4.8, "AgriFM", "HKU/UMD", "#1f77b4"),
+        (2025.60, 1.4, "TSGBench", "NUS", "#2ca02c"),
+        (2026.35, 2.9, "ReasonSTL", "ZJU/Westlake", "#d62728")
     ]
 
     # Draw timeline line
@@ -381,7 +386,12 @@ def generate_params_corpus_figure():
         ("MACROCAST", 2026.48, 1.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("Cast-R1", 2026.15, 7.0e9, "LLM4TS", "#d62728", (8, 0)),
         ("TimeInteract", 2026.72, 7.0e9, "LLM4TS", "#d62728", (8, 6)),
-        ("TimeART", 2026.08, 8.0e9, "LLM4TS", "#d62728", (8, -9))
+        ("TimeART", 2026.08, 8.0e9, "LLM4TS", "#d62728", (8, -9)),
+        ("Presto", 2023.32, 4.8e6, "Native TSFM", "#1f77b4", (8, -8)),
+        ("AgriFM", 2025.40, 8.6e7, "Native TSFM", "#1f77b4", (8, 6)),
+        ("EarthPT", 2023.70, 7.0e8, "Native TSFM", "#1f77b4", (8, -8)),
+        ("Prithvi WxC", 2024.72, 2.3e9, "Native TSFM", "#1f77b4", (8, -8)),
+        ("ReasonSTL", 2026.35, 8.0e9, "LLM4TS", "#d62728", (8, 6))
     ]
 
     for name, date, p_cnt, cat, col, offset in param_data:
@@ -406,6 +416,7 @@ def generate_params_corpus_figure():
         ("Time-series Pile (MOMENT)", 2024.15, 1e9, "#1f77b4", (8, -9)),
         ("APEX Telemetry", 2026.46, 5e9, "#1f77b4", (8, -3)),
         ("UTSD-3 (Sundial)", 2025.10, 1e10, "#1f77b4", (8, -3)),
+        ("Sentinel-2 Pixel TS (EarthPT)", 2023.70, 1e10, "#1f77b4", (8, 6)),
         ("LOTSA (Moirai)", 2024.15, 2.7e10, "#1f77b4", (8, -3)),
         ("TiRex Corpus", 2025.40, 5e10, "#1f77b4", (8, -3)),
         ("TSMix (Chronos)", 2024.20, 8.4e10, "#1f77b4", (8, -3)),
@@ -413,6 +424,7 @@ def generate_params_corpus_figure():
         ("TradeFM LOB Events", 2026.12, 1e11, "#1f77b4", (8, 0)),
         ("$t_0$ Corpus", 2026.70, 1.2e11, "#1f77b4", (8, -12)),
         ("Tabby Open Corpus", 2026.70, 1.5e11, "#1f77b4", (8, 6)),
+        ("MERRA-2/ERA5 (Prithvi WxC)", 2024.72, 2.5e11, "#1f77b4", (8, -8)),
         ("Time-300B (Time-MoE)", 2024.70, 3e11, "#1f77b4", (8, -3)),
         ("Toto Telemetry (Toto 1.0)", 2025.38, 1e12, "#1f77b4", (-12, 7)),
         ("Google 1T (TimesFM-3)", 2026.65, 1e12, "#1f77b4", (8, -8)),

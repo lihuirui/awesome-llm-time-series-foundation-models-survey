@@ -2829,5 +2829,202 @@
     "comment": null,
     "journal_ref": null,
     "doi": "10.48550/arXiv.2605.06483"
+  },
+  "2403.11144": {
+    "arxiv_id": "2403.11144",
+    "title": "Is Mamba Effective for Time Series Forecasting?",
+    "authors": [
+      "Wang, Zihan",
+      "Kong, Fanheng",
+      "Feng, Shi",
+      "Wang, Ming",
+      "Yang, Xiaocui",
+      "Zhao, Han",
+      "Wang, Daling",
+      "Zhang, Yifei"
+    ],
+    "release_date": "2024-03-17",
+    "summary": "In the realm of time series forecasting (TSF), it is imperative for models to adeptly discern and distill hidden patterns within historical time series data to forecast future states. Transformer-based models exhibit formidable efficacy in TSF, primarily attributed to their advantage in apprehending these patterns. However, the quadratic complexity of the Transformer leads to low computational efficiency and high costs, which somewhat hinders the deployment of the TSF model in real-world scenarios. Recently, Mamba, a selective state space model, has gained traction due to its ability to process dependencies in sequences while maintaining near-linear complexity. For TSF tasks, these characteristics enable Mamba to comprehend hidden patterns as the Transformer and reduce computational overhead compared to the Transformer. Therefore, we propose a Mamba-based model named Simple-Mamba (S-Mamba) for TSF. Specifically, we tokenize the time points of each variate autonomously via a linear layer. A bidirectional Mamba layer is utilized to extract inter-variate correlations and a Feed-Forward Network is set to learn temporal dependencies. Finally, the generation of forecast outcomes through a linear mapping layer. Experiments on thirteen public datasets prove that S-Mamba maintains low computational overhead and achieves leading performance. Furthermore, we conduct extensive experiments to explore Mamba's potential in TSF tasks. Our code is available at https://github.com/wzhwzhwzh0921/S-D-Mamba.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2403.11144"
+  },
+  "2403.09898": {
+    "arxiv_id": "2403.09898",
+    "title": "TimeMachine: A Time Series is Worth 4 Mambas for Long-term Forecasting",
+    "authors": [
+      "Ahamed, Md Atik",
+      "Cheng, Qiang"
+    ],
+    "release_date": "2024-03-14",
+    "summary": "Long-term time-series forecasting remains challenging due to the difficulty in capturing long-term dependencies, achieving linear scalability, and maintaining computational efficiency. We introduce TimeMachine, an innovative model that leverages Mamba, a state-space model, to capture long-term dependencies in multivariate time series data while maintaining linear scalability and small memory footprints. TimeMachine exploits the unique properties of time series data to produce salient contextual cues at multi-scales and leverage an innovative integrated quadruple-Mamba architecture to unify the handling of channel-mixing and channel-independence situations, thus enabling effective selection of contents for prediction against global and local contexts at different scales. Experimentally, TimeMachine achieves superior performance in prediction accuracy, scalability, and memory efficiency, as extensively validated using benchmark datasets. Code availability: https://github.com/Atik-Ahamed/TimeMachine",
+    "comment": "27TH EUROPEAN CONFERENCE ON ARTIFICIAL INTELLIGENCE (ECAI-2024)",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2403.09898"
+  },
+  "2404.15772": {
+    "arxiv_id": "2404.15772",
+    "title": "Bi-Mamba+: Bidirectional Mamba for Time Series Forecasting",
+    "authors": [
+      "Liang, Aobo",
+      "Jiang, Xingguo",
+      "Sun, Yan",
+      "Shi, Xiaohou",
+      "Li, Ke"
+    ],
+    "release_date": "2024-04-24",
+    "summary": "Long-term time series forecasting (LTSF) provides longer insights into future trends and patterns. Over the past few years, deep learning models especially Transformers have achieved advanced performance in LTSF tasks. However, LTSF faces inherent challenges such as long-term dependencies capturing and sparse semantic characteristics. Recently, a new state space model (SSM) named Mamba is proposed. With the selective capability on input data and the hardware-aware parallel computing algorithm, Mamba has shown great potential in balancing predicting performance and computational efficiency compared to Transformers. To enhance Mamba's ability to preserve historical information in a longer range, we design a novel Mamba+ block by adding a forget gate inside Mamba to selectively combine the new features with the historical features in a complementary manner. Furthermore, we apply Mamba+ both forward and backward and propose Bi-Mamba+, aiming to promote the model's ability to capture interactions among time series elements. Additionally, multivariate time series data in different scenarios may exhibit varying emphasis on intra- or inter-series dependencies. Therefore, we propose a series-relation-aware decider that controls the utilization of channel-independent or channel-mixing tokenization strategy for specific datasets. Extensive experiments on 8 real-world datasets show that our model achieves more accurate predictions compared with state-of-the-art methods.",
+    "comment": "New Mamba-based architecture. All experiments rerun",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2404.15772"
+  },
+  "2607.02632": {
+    "arxiv_id": "2607.02632",
+    "title": "QuantFlow: A Federated Mamba-Based Post-Transformer Foundation Model for Time-Series Forecasting",
+    "authors": [
+      "Haider, Shah Nawaz",
+      "Austin, Steve",
+      "Barua, Arnab",
+      "Shawon, Sarowar Morshed",
+      "Ullah, Hadaate"
+    ],
+    "release_date": "2026-07-02",
+    "summary": "Time-series forecasting supports decisions in finance, en-ergy, transportation, public health, and industrial monitoring. Recent foundation models improve transfer across forecast-ing tasks, but many depend on centralized data and Trans-former attention, which restricts their use for long, high-di-mensional, and privacy-sensitive signals. This paper presents QuantFlow, a probabilistic forecasting framework that com-bines inverted sequence embedding, bidirectional Mamba state-space decoders, quantile regression, and federated learning. Each variable is embedded over the complete ob-servation window, processed in forward and reverse direc-tions, and projected to five conditional quantiles. TSMixup expands temporal diversity through Dirichlet-weighted inter-polation while preserving sequence structure. Experiments cover cryptocurrency, traffic, electricity, Electricity Trans-former Temperature, influenza, and weather data. QuantFlow obtains mean squared errors of 0.2834 on ETTm1 and 0.2218 on Weather, and a 20-client non-IID deployment retains use-ful accuracy after three communication rounds without cen-tralizing raw records. The results indicate that selective state-space modelling is a promising basis for scalable, uncer-tainty-aware, and privacy-conscious time-series prediction, while also revealing limitations on irregular epidemiological signals and long-horizon generalization.",
+    "comment": "9 pages, 4 figures",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2607.02632"
+  },
+  "2609.06006": {
+    "arxiv_id": "2609.06006",
+    "title": "Memory in Deep Time-Series Models",
+    "authors": [
+      "Nguyen, Minh Hoang",
+      "Nguyen, Huu Hiep",
+      "Nguyen, Manh",
+      "Do, Van Dai",
+      "Nguyen, Dung",
+      "Le, Hung"
+    ],
+    "release_date": "2026-09-05",
+    "summary": "Deep learning for time series has progressed through successive architectural paradigms, from recurrent networks and transformers to structured state-space models, retrieval-augmented predictors, foundation models, and tool-using agents. These developments are typically studied in isolation, organized by architecture or modeling era. We argue that they can instead be viewed through a common question of \\emph{how does a time-series model retain and access information beyond its immediate input?} This question is motivated by a fundamental limitation of conventional time-series modeling: information relevant to a prediction may lie far beyond a feasible input window, while compressing history into a fixed-size state can discard information that may become useful later. We formulate this challenge as a \\emph{memory} problem and organize existing time-series methods along a spectrum from internal memory, encoded in parameters and fixed-size states, to external memory that is addressable, retrievable, and increasingly maintained by agents. We then develop a unified taxonomy of memory mechanisms and review three classes of external memory, including explicit modules, retrieval augmentation, and agentic stores, under a common framework for what is retained, how it is written and accessed, and how it persists. A cross-cutting analysis maps these mechanisms to time-series tasks and identifies gaps in both methods and evaluation. We conclude by outlining open problems in building memory systems that can selectively retain, retrieve, revise, and forget information as temporal environments evolve. The result is a framework for studying memory as a first-class dimension of time series modeling, independent of the underlying backbone.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.06006"
+  },
+  "2311.04245": {
+    "arxiv_id": "2311.04245",
+    "title": "GPT-ST: Generative Pre-Training of Spatio-Temporal Graph Neural Networks",
+    "authors": [
+      "Li, Zhonghang",
+      "Xia, Lianghao",
+      "Xu, Yong",
+      "Huang, Chao"
+    ],
+    "release_date": "2023-11-07",
+    "summary": "In recent years, there has been a rapid development of spatio-temporal prediction techniques in response to the increasing demands of traffic management and travel planning. While advanced end-to-end models have achieved notable success in improving predictive performance, their integration and expansion pose significant challenges. This work aims to address these challenges by introducing a spatio-temporal pre-training framework that seamlessly integrates with downstream baselines and enhances their performance. The framework is built upon two key designs: (i) We propose a spatio-temporal mask autoencoder as a pre-training model for learning spatio-temporal dependencies. The model incorporates customized parameter learners and hierarchical spatial pattern encoding networks. These modules are specifically designed to capture spatio-temporal customized representations and intra- and inter-cluster region semantic relationships, which have often been neglected in existing approaches. (ii) We introduce an adaptive mask strategy as part of the pre-training mechanism. This strategy guides the mask autoencoder in learning robust spatio-temporal representations and facilitates the modeling of different relationships, ranging from intra-cluster to inter-cluster, in an easy-to-hard training manner. Extensive experiments conducted on representative benchmarks demonstrate the effectiveness of our proposed method. We have made our model implementation publicly available at https://github.com/HKUDS/GPT-ST.",
+    "comment": "This paper has been accepted by NeurIPS 2023",
+    "journal_ref": "Thirty-seventh Conference on Neural Information Processing Systems(NeurIPS 2023)",
+    "doi": "10.48550/arXiv.2311.04245"
+  },
+  "2609.11580": {
+    "arxiv_id": "2609.11580",
+    "title": "A Dataset and Model for Imputing Water Surface Elevation on a Large and Extremely Sparse Spatiotemporal Graph",
+    "authors": [
+      "Cartuyvels, Ruben",
+      "Douch, Karim",
+      "Bertoli, Gabriele",
+      "Baz, Mounia El",
+      "Vrettou, Artemis",
+      "Lefèvre, Sébastien",
+      "Prieto, Diego Fernandez"
+    ],
+    "release_date": "2026-09-10",
+    "summary": "Continuous monitoring of water surface elevation across river networks is critical for flood forecasting, water resource management, and understanding the global water cycle. Yet, the scarcity of in situ gauges across much of the globe constrains the development of reliable modeling frameworks. Satellite altimetry has the potential to alleviate this problem but its use is currently hindered by sparse temporal coverage. To this end, we introduce AmazonSWE, a dataset for training and evaluating large-scale spatiotemporal graph imputation methods that integrates processed satellite altimetry measurements from a range of sources, including the recent wide-swath SWOT sensor. The dataset covers over 19K river sections and 10 years (2016-2026) in the Amazon river basin, with in situ gauges held out for evaluation. Besides contributing a novel real-world use case with the potential for societal impact, AmazonSWE introduces significant technical challenges: with fewer than 1% of sections observed per day, the dataset is far sparser than existing imputation benchmarks, and its directed acyclic river topology is both structurally different from and larger than graphs in existing datasets. We show that prior spatiotemporal graph imputation methods are not adapted to this topology, scale and sparsity, and propose a simple bidirectional selective state space model that outperforms them by sampling connected subgraphs and flattening space and time into a single token sequence with topology-aware positional encodings. Compared to the state-of-the-art published method for SWOT-based WSE densification, which integrates statistics with physical modeling, our model reduces RMSE against in situ gauges by 18-39%, while producing predictions for every river section rather than only those with sufficient nearby satellite coverage.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.11580"
+  },
+  "2609.13868": {
+    "arxiv_id": "2609.13868",
+    "title": "Physically Typed and Geometry-Aware Representations for Earth Foundation Models",
+    "authors": [
+      "Ranjan, Rajiv"
+    ],
+    "release_date": "2026-09-12",
+    "summary": "Earth-observation (EO) foundation models have become exceptionally effective at learning se mantic, high-dimensional geospatial embeddings, while modern weather and climate models have demonstrated that Earth-specific geometry, spherical operators, meshes, and hybrid physical solvers can materially improve prediction. Yet these two advances are not equivalent. A conventional latent embedding has no inherent physical transformation law, whereas scalar fields, tangent polar-vector fields, axial/pseudovector quantities, covectors, and higher-order tensors transform differently under rotations, reflections, and changes of local coordinate frame. This proposal asks whether a general purpose Earth foundation model should preserve those distinctions explicitly, or whether standard embeddings plus augmentation already learn everything that matters. The central contribution is therefore not a more complicated architecture by assumption, but a staged falsification program. A compute-conscious ERA5 dry run first compares conventional, augmentation-matched, typed equivariant, and Hodge/Helmholtz variants under spatial, temporal, orientation, and low-data shifts. Only if explicit geometric typing yields reproducible improvements does the program advance toward a multimodal Earth foundation model in which semantic embeddings coexist with physically typed fields. The proposed gap is narrower and more defensible than claiming that current models ignore geometry entirely: several systems already respect spherical domain geometry, and emerging work explicitly learns scalar/vector fields on spheres. The unresolved question is whether foundation-scale, multimodal, parity-aware field typing produces practical gains beyond those existing approaches.",
+    "comment": "18 pages",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2609.13868"
+  },
+  "2509.04449": {
+    "arxiv_id": "2509.04449",
+    "title": "ChronoGraph: A Real-World Graph-Based Multivariate Time Series Dataset",
+    "authors": [
+      "Lutu, Adrian Catalin",
+      "Pintilie, Ioana",
+      "Burceanu, Elena",
+      "Manolache, Andrei"
+    ],
+    "release_date": "2025-09-04",
+    "summary": "We present ChronoGraph, a graph-structured multivariate time series forecasting dataset built from real-world production microservices. Each node is a service that emits a multivariate stream of system-level performance metrics, capturing CPU, memory, and network usage patterns, while directed edges encode dependencies between services. The primary task is forecasting future values of these signals at the service level. In addition, ChronoGraph provides expert-annotated incident windows as anomaly labels, enabling evaluation of anomaly detection methods and assessment of forecast robustness during operational disruptions. Compared to existing benchmarks from industrial control systems or traffic and air-quality domains, ChronoGraph uniquely combines (i) multivariate time series, (ii) an explicit, machine-readable dependency graph, and (iii) anomaly labels aligned with real incidents. We report baseline results spanning forecasting models, pretrained time-series foundation models, and standard anomaly detectors. ChronoGraph offers a realistic benchmark for studying structure-aware forecasting and incident-aware evaluation in microservice systems.",
+    "comment": "Accepted as an oral presentation at the NeurIPS 2025 Workshop on Recent Advances in Time Series Foundation Models (BERT2S)",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2509.04449"
+  },
+  "2606.31804": {
+    "arxiv_id": "2606.31804",
+    "title": "Relational and Sequential Conformal Inference for Energy Time Series over Graphs via Foundation Models",
+    "authors": [
+      "Niresi, Keivan Faghih",
+      "Cicirello, Alice",
+      "Fink, Olga"
+    ],
+    "release_date": "2026-06-30",
+    "summary": "Accurate energy demand forecasting is essential for the reliable operation and planning of modern sustainable energy systems. Spatial-temporal graph neural networks (STGNNs) have recently achieved strong performance in point forecasting by jointly modeling temporal dynamics and relational dependencies across interconnected energy nodes. However, in real-world energy systems, accurate point forecasts alone are insufficient, as operators also require reliable uncertainty estimates to support risk-aware decision-making, grid stability, and operational planning under uncertainty. Conformal prediction provides a principled and model-agnostic framework for uncertainty quantification with statistical coverage guarantees, making it particularly attractive for safety-critical energy applications. However, existing conformal prediction approaches often fail to fully capture the complex spatial-temporal structure of energy systems. To address these limitations, we propose STOIC (Spatial-Temporal Graph Conformal Prediction with In-Context Learning), a novel framework that integrates graph-based forecasting with the zero-shot calibration capabilities of tabular foundation models. STOIC first generates point forecasts using an STGNN and subsequently reformulates spatial-temporal residuals into a tabular representation suitable for in-context learning. Leveraging a tabular foundation model, STOIC calibrates prediction intervals without task-specific retraining, effectively capturing both sequential and relational dependencies. We evaluate STOIC on five diverse benchmarks, including synthetic simulations as well as real-world electricity and district heating networks. Across all datasets, STOIC consistently outperforms existing conformal prediction baselines, delivering more reliable and robust uncertainty estimates for complex graph-structured energy time series.",
+    "comment": "Under-review",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2606.31804"
+  },
+  "2602.03981": {
+    "arxiv_id": "2602.03981",
+    "title": "DeXposure-FM: A Time-series, Graph Foundation Model for Credit Exposures and Stability on Decentralized Financial Networks",
+    "authors": [
+      "Shu, Aijie",
+      "Wu, Wenbin",
+      "Ibikunle, Gbenga",
+      "He, Fengxiang"
+    ],
+    "release_date": "2026-02-03",
+    "summary": "Credit exposure in Decentralized Finance (DeFi) is often implicit and token-mediated, creating a dense web of inter-protocol dependencies. Thus, a shock to one token may result in significant and uncontrolled contagion effects. As the DeFi ecosystem becomes increasingly linked with traditional financial infrastructure through instruments, such as stablecoins, the risk posed by this dynamic demands more powerful quantification tools. We introduce DeXposure-FM, the first time-series, graph foundation model for measuring and forecasting inter-protocol credit exposure on DeFi networks, to the best of our knowledge. Employing a graph-tabular encoder, with pre-trained weight initialization, and multiple task-specific heads, DeXposure-FM is trained on the DeXposure dataset that has 43.7 million data entries, across 4,300+ protocols on 602 blockchains, covering 24,300+ unique tokens. The training is operationalized for credit-exposure forecasting, predicting the joint dynamics of (1) protocol-level flows, and (2) the topology and weights of credit-exposure links. The DeXposure-FM is empirically validated on two machine learning benchmarks; it consistently outperforms the state-of-the-art approaches, including a graph foundation model and temporal graph neural networks. DeXposure-FM further produces financial economics tools that support macroprudential monitoring and scenario-based DeFi stress testing, by enabling protocol-level systemic-importance scores, sector-level spillover and concentration measures via a forecast-then-measure pipeline. Empirical verification fully supports our financial economics tools. The model and code have been publicly available. Model: https://huggingface.co/EVIEHub/DeXposure-FM. Code: https://github.com/EVIEHub/DeXposure-FM.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2602.03981"
+  },
+  "2405.10093": {
+    "arxiv_id": "2405.10093",
+    "title": "LaT-PFN: A Joint Embedding Predictive Architecture for In-context Time-series Forecasting",
+    "authors": [
+      "Verdenius, Stijn",
+      "Zerio, Andrea",
+      "Wang, Roy L. M."
+    ],
+    "release_date": "2024-05-16",
+    "summary": "We introduce LatentTimePFN (LaT-PFN), a foundational Time Series model with a strong embedding space that enables zero-shot forecasting. To achieve this, we perform in-context learning in latent space utilizing a novel integration of the Prior-data Fitted Networks (PFN) and Joint Embedding Predictive Architecture (JEPA) frameworks. We leverage the JEPA framework to create a prediction-optimized latent representation of the underlying stochastic process that generates time series and combines it with contextual learning, using a PFN. Furthermore, we improve on preceding works by utilizing related time series as a context and introducing a normalized abstract time axis. This reduces training time and increases the versatility of the model by allowing any time granularity and forecast horizon. We show that this results in superior zero-shot predictions compared to established baselines. We also demonstrate our latent space produces informative embeddings of both individual time steps and fixed-length summaries of entire series. Finally, we observe the emergence of multi-step patch embeddings without explicit training, suggesting the model actively learns discrete tokens that encode local structures in the data, analogous to vision transformers.",
+    "comment": "9 pages plus references and appendix, 2 tables, 11 figures, added seeds, corrections",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2405.10093"
+  },
+  "2603.27385": {
+    "arxiv_id": "2603.27385",
+    "title": "Active In-Context Learning for Tabular Foundation Models",
+    "authors": [
+      "Treerath, Wilailuck",
+      "Pittorino, Fabrizio"
+    ],
+    "release_date": "2026-03-28",
+    "summary": "Active learning (AL) reduces labeling cost by querying informative samples, but in tabular settings its cold-start gains are often limited because uncertainty estimates are unreliable when models are trained on very few labels. Tabular foundation models such as TabPFN provide calibrated probabilistic predictions via in-context learning (ICL), i.e., without task-specific weight updates, enabling an AL regime in which the labeled context - rather than parameters - is iteratively optimized. We formalize Tabular Active In-Context Learning (Tab-AICL) and instantiate it with four acquisition rules: uncertainty (TabPFN-Margin), diversity (TabPFN-Coreset), an uncertainty-diversity hybrid (TabPFN-Hybrid), and a scalable two-stage method (TabPFN-Proxy-Hybrid) that shortlists candidates using a lightweight linear proxy before TabPFN-based selection. Across 20 classification benchmarks, Tab-AICL improves cold-start sample efficiency over retrained gradient-boosting baselines (CatBoost-Margin and XGBoost-Margin), measured by normalized AULC up to 100 labeled samples.",
+    "comment": "8 pages, 4 figures, 6 tables",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2603.27385"
   }
 }

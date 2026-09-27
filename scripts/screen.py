@@ -1105,6 +1105,92 @@ SPECS = {
         "tokenization": "Natural Language Requirements to STL Grammar Trees", "prediction_head": "Syntax-Guided Step-by-Step Generation with Formal Model Checker",
         "params": "8B", "pretrain_corpus": "15,000 Verified NL-STL Pairs with Formal SMT Solver Feedback", "tasks": ["Natural Language Specification Translation", "Formal Temporal Verification"],
         "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+
+    # Iteration 11: Quantized State Space Models (Mamba/S4), Hierarchical Spatio-Temporal Graphs & Latent In-Context PFNs
+    "2403.11144": {
+        "bibkey": "wang2024smamba",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Bidirectional Selective State Space Model (S-Mamba)",
+        "tokenization": "Channel-Independent Subseries Patching", "prediction_head": "Linear State Projection Head",
+        "params": "not reported", "pretrain_corpus": "Multi-dataset Benchmarks (ETT, Weather, Electricity, Traffic)", "tasks": ["Long-Term Time Series Forecasting", "Linear-Time Sequence Modeling"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": None
+    },
+    "2403.09898": {
+        "bibkey": "ahamed2024timemachine",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Quadruplet 4-Mamba Architecture",
+        "tokenization": "Multi-scale Channel & Temporal Continuous Tokenization", "prediction_head": "Linear Forecasting Head",
+        "params": "not reported", "pretrain_corpus": "Standard Long-term Benchmarks (ETT, Weather, Electricity)", "tasks": ["Long-Term Forecasting", "Linear Memory Scaling"],
+        "open_weights": True, "venue": "ECAI 2024", "code_url": "https://github.com/Atik-Ahamed/TimeMachine"
+    },
+    "2404.15772": {
+        "bibkey": "liang2024bimamba",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Bidirectional Mamba with Selective State Space (Bi-Mamba+)",
+        "tokenization": "Forward-Backward Subseries Patching", "prediction_head": "Bidirectional State Fusion Linear Head",
+        "params": "not reported", "pretrain_corpus": "Standard LTSF Benchmarks (ETT, Electricity, Exchange, Traffic)", "tasks": ["Long-Term Time Series Forecasting", "Bidirectional Context Modeling"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": None
+    },
+    "2607.02632": {
+        "bibkey": "haider2026quantflow",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Federated Mamba Post-Transformer Foundation Architecture",
+        "tokenization": "Quantized Continuous Residual Patches", "prediction_head": "Federated Selective State Output Head",
+        "params": "not reported", "pretrain_corpus": "Decentralized Multi-domain Telemetry Streams", "tasks": ["Federated Time-Series Forecasting", "Edge-Constrained Foundation Modeling"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.06006": {
+        "bibkey": "nguyen2026memory",
+        "group": "Other", "paradigm": "Evaluation & Benchmark", "architecture": "Unified Memory Taxonomy & Long-Horizon Benchmarking Framework",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "Comprehensive Empirical Audit across RNNs, SSMs, Transformers, and Retrieval Agents", "tasks": ["Memory Retention Evaluation", "KV-Cache vs State Space Profiling", "Long-Context Benchmarking"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2311.04245": {
+        "bibkey": "li2023gptst",
+        "group": "HKUDS", "paradigm": "Native TSFM", "architecture": "Spatio-Temporal Masked Autoencoder with Customized Parameter Learners",
+        "tokenization": "Hierarchical Spatial Clustering & Temporal Masked Patches", "prediction_head": "Adaptive Spatio-Temporal Masked Reconstruction Head",
+        "params": "not reported", "pretrain_corpus": "Multi-City Traffic Sensor Networks (PeMS03, PeMS04, PeMS07, PeMS08)", "tasks": ["Spatio-Temporal Generative Pretraining", "Traffic Flow Forecasting"],
+        "open_weights": True, "venue": "NeurIPS 2023", "code_url": "https://github.com/HKUDS/GPT-ST"
+    },
+    "2609.11580": {
+        "bibkey": "cartuyvels2026hydrology",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Bidirectional Selective State-Space Model with Topology Encodings",
+        "tokenization": "Flattened Spatio-Temporal River Graph Tokens with DAG Positional Encodings", "prediction_head": "Continuous River Surface Elevation Imputation Head",
+        "params": "not reported", "pretrain_corpus": "AmazonSWE (19K river sections over 10 years 2016-2026 from SWOT satellite altimetry)", "tasks": ["Continental Hydrology Imputation", "Sparse Spatio-Temporal Graph Modeling", "Flood Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.13868": {
+        "bibkey": "ranjan2026earthgeometry",
+        "group": "Other", "paradigm": "Survey & Foundations", "architecture": "Physically Typed & Geometry-Aware Coordinate-Invariant Representations",
+        "tokenization": "Spherical Mesh Geometric Operators & Hodge/Helmholtz Decomposed Field Tensors", "prediction_head": "Equivariant Tangent-Vector & Axial-Tensor Projection Heads",
+        "params": "not reported", "pretrain_corpus": "ERA5 Planetary Reanalysis on Spherical Manifolds", "tasks": ["Earth Foundation Representations", "Spherical Geometry Invariance", "Atmospheric Fluid Modeling"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2509.04449": {
+        "bibkey": "lutu2025chronograph",
+        "group": "Other", "paradigm": "Evaluation & Benchmark", "architecture": "Dynamic Graph Benchmark Suite with Directed Dependency Encodings",
+        "tokenization": "Microservice System Telemetry Streams with Directed Graph Adjacency", "prediction_head": "Structure-Aware Service-Level Prediction & Anomaly Scoring",
+        "params": "not reported", "pretrain_corpus": "ChronoGraph (Real-World Production Microservices Telemetry with Expert Incident Labels)", "tasks": ["Graph-Structured Multivariate Forecasting", "Incident-Aware Anomaly Detection", "Robustness Benchmarking"],
+        "open_weights": True, "venue": "NeurIPS 2025 Workshop", "code_url": None
+    },
+    "2606.31804": {
+        "bibkey": "niresi2026graphconformal",
+        "group": "Other", "paradigm": "Evaluation & Benchmark", "architecture": "Spatial-Temporal Graph Conformal In-Context Calibration (STOIC)",
+        "tokenization": "Spatial-Temporal Graph Residuals Formulated as Tabular In-Context Contexts", "prediction_head": "Calibrated Distribution-Free Statistical Coverage Intervals",
+        "params": "Tabular Foundation Model Backbone", "pretrain_corpus": "5 Multi-domain Energy Networks (Electricity & District Heating Graphs)", "tasks": ["Relational Conformal Prediction", "Graph Uncertainty Quantification", "Energy Demand Forecasting"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2602.03981": {
+        "bibkey": "shu2026dexposure",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Graph-Tabular Pretrained Foundation Model (DeXposure-FM)",
+        "tokenization": "Token-Mediated Protocol Flows & Dynamic Interaction Edge Embeddings", "prediction_head": "Joint Protocol Flow & Credit-Exposure Link Topology Prediction Heads",
+        "params": "not reported", "pretrain_corpus": "DeXposure Dataset (43.7M entries across 4,300+ protocols on 602 blockchains, 24,300+ tokens)", "tasks": ["DeFi Credit-Exposure Forecasting", "Systemic Contagion Risk Analysis", "Financial Network Stress Testing"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/EVIEHub/DeXposure-FM"
+    },
+    "2405.10093": {
+        "bibkey": "verdenius2024latpfn",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Latent Prior-Data Fitted Network with JEPA (LaT-PFN)",
+        "tokenization": "Normalized Abstract Time Axis with Prediction-Optimized Latent Representations", "prediction_head": "In-Context Bayesian Next-Step Density Estimator",
+        "params": "not reported", "pretrain_corpus": "Synthetic Stochastic Processes + Contextual Real Series", "tasks": ["Zero-Shot Latent Forecasting", "In-Context Density Estimation", "Emergent Patch Representation"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": "https://github.com/StijnVerdenius/LaT-PFN"
     }
 }
 
@@ -1182,6 +1268,10 @@ def screen_candidates():
                 excluded_title_abstract += 1
                 cand["status"] = "excluded_title"
                 cand["exclusion_reason"] = "EC1: General review/survey without novel empirical model artifact"
+            elif ("tabular" in text or "tabular" in title.lower()) and "time series" not in text:
+                excluded_title_abstract += 1
+                cand["status"] = "excluded_title"
+                cand["exclusion_reason"] = "EC1: Tabular foundation model lacking native temporal sequential dependencies"
             elif not any(w in text for w in ["foundation", "pretrained", "pre-trained", "zero-shot", "reprogramming", "large model", "benchmark", "scaling"]):
                 excluded_title_abstract += 1
                 cand["status"] = "excluded_title"

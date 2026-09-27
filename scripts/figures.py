@@ -49,8 +49,8 @@ def generate_taxonomy_figure():
     # 3 Main Branches
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
-            ("Autoregressive & Patch Decoders", "Chronos, TimesFM-3, Timer, Sundial,\nTiRex, Toto, Tabby, Cadence, SGA"),
-            ("Earth Observation & Planetary", "Prithvi WxC, EarthPT, Prithvi-EO-2,\nAgriFM, SpectralGPT, Changen2, Presto"),
+            ("Autoregressive & State Space (SSM)", "Chronos, TimesFM-3, Timer, S-Mamba,\nTimeMachine, Bi-Mamba+, QuantFlow"),
+            ("Earth, Hydrology & Graph Manifolds", "Prithvi WxC, EarthPT, AmazonSWE,\nAgriFM, SpectralGPT, Changen2, Presto"),
             ("Physics, 1-Bit & Continuous Streams", "GridSFM, SurF, TradeFM, Sparse Binary,\nQ-DEQ, TQS-PTQ, MCU-FQT, OpenCity")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
@@ -59,7 +59,7 @@ def generate_taxonomy_figure():
             ("Multi-Agent & Policy Optimization", "TimeRFT, TimeHF, COUNTS, TimeMaster,\nTimeEvo, TimeInteract, Cast-R1")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("DP Twins & Living Benchmarks", "TSGBench, DP-Subsampling, Forecast-Dojo,\nImpermanent, TimeSage, GIFT-Eval"),
+            ("Hierarchical Graph & Conformal Suites", "GPT-ST, ChronoGraph, STOIC, DeXposure,\nNguyen Memory, TSGBench, GIFT-Eval"),
             ("Conformal Coverage & Statistical Audits", "Achour, Adaptive-CAD, RareCP,\nTSFMAudit, Familiarity Bias, Pan"),
             ("Energy, Quantization & Edge Suites", "HoliBench, FM-CAC, QuantCalibration,\nBeyond Numerical, AION, WorkflowBench")
         ])
@@ -284,7 +284,15 @@ def generate_timeline_figure():
         (2024.72, 4.9, "Prithvi WxC", "NASA/IBM", "#1f77b4"),
         (2025.42, 4.8, "AgriFM", "HKU/UMD", "#1f77b4"),
         (2025.60, 1.4, "TSGBench", "NUS", "#2ca02c"),
-        (2026.35, 2.9, "ReasonSTL", "ZJU/Westlake", "#d62728")
+        (2026.35, 2.9, "ReasonSTL", "ZJU/Westlake", "#d62728"),
+        (2023.85, 1.4, "GPT-ST", "HKUDS", "#1f77b4"),
+        (2024.22, 2.1, "S-Mamba", "Other", "#1f77b4"),
+        (2024.24, 4.4, "TimeMachine", "ECAI", "#1f77b4"),
+        (2024.38, 1.8, "LaT-PFN", "Amsterdam", "#1f77b4"),
+        (2025.72, 1.9, "ChronoGraph", "Bitdefender", "#2ca02c"),
+        (2026.10, 2.6, "DeXposure", "Edinburgh", "#1f77b4"),
+        (2026.52, 4.2, "QuantFlow", "UMBC", "#1f77b4"),
+        (2026.69, 3.1, "AmazonSWE", "Delft", "#1f77b4")
     ]
 
     # Draw timeline line
@@ -428,7 +436,9 @@ def generate_params_corpus_figure():
         ("Time-300B (Time-MoE)", 2024.70, 3e11, "#1f77b4", (8, -3)),
         ("Toto Telemetry (Toto 1.0)", 2025.38, 1e12, "#1f77b4", (-12, 7)),
         ("Google 1T (TimesFM-3)", 2026.65, 1e12, "#1f77b4", (8, -8)),
-        ("Datadog Telemetry (Toto 2.0)", 2026.35, 1.5e12, "#1f77b4", (8, -3))
+        ("Datadog Telemetry (Toto 2.0)", 2026.35, 1.5e12, "#1f77b4", (8, -3)),
+        ("DeXposure DeFi Corpus", 2026.10, 4.37e7, "#1f77b4", (8, -8)),
+        ("AmazonSWE SWOT (Hydrology)", 2026.69, 1.9e8, "#1f77b4", (8, 6))
     ]
 
     for name, date, c_size, col, offset in corpus_data:

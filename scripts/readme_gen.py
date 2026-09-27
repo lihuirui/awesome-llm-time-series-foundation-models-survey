@@ -49,7 +49,7 @@ def generate_readme():
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 10 (Earth Observation Foundations, DP Generative Twins & Neuro-Symbolic Temporal Logic)** · Last Updated: **{today}**
+> Latest Iteration: **Iteration 11 (Selective State Space Models, Hierarchical Spatio-Temporal Graph Manifolds & Latent In-Context PFNs)** · Last Updated: **{today}**
 
 ---
 
@@ -57,13 +57,14 @@ def generate_readme():
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **遥感雷达与行星级地球观测时序基座 (Earth Observation & Satellite Radar Foundations)**：将时序基座模型拓展至行星级空间-光谱-时间连续张量，涵盖多时相卫星影像、合成孔径雷达 (SAR) 微波回波与全球气象重分析场，如 Prithvi WxC (NASA/IBM 2.3B参数全球天气与气候基座模型，覆盖40+年MERRA-2与ERA5的160个大气变量)、EarthPT (700M参数自回归解码器，在Sentinel-2超百亿像素时序上无监督预训练)、Prithvi-EO-2.0 (300M参数多时相ViT，420万全球场景预训练)、AgriFM (86M参数全天候Sentinel-1 SAR与Sentinel-2光学跨模态融合农业基座模型)、SpectralGPT (600M参数3D空-谱-时张量掩码自编码器)、Changen2 (120M参数连续流生成扩散变化检测模型)、Presto (4.8M紧凑型多传感器像素时序Transformer) 等。
-2. **差分隐私生成孪生与零泄露基准评测 (Differentially Private Generative Twins & Zero-Leakage Benchmarks)**：攻克真实工业、医疗与电力时序评测中的数据污染与隐私逆向泄露难题，构建严格数学证明的 $(\epsilon, \delta)$-差分隐私生成孪生，如 Schuchardt et al. (ICML 2025 Spotlight，针对自相关滑动窗口创立结构化子采样 Rényi 差分隐私计算体系，首次证明时序深度基座模型的无界隐私放大与 $\epsilon < 2.0$ 强保障)、TSGBench (VLDB 2024，提出严格的 Train-on-Synthetic Test-on-Real (TSTR) 统一评估框架与成员推理防御评测) 等。
-3. **神经符号时间逻辑与可微形式化约束 (Neuro-Symbolic Temporal Logic & Verifiable Constraints)**：将连续神经网络表征与形式化信号时序逻辑 (Signal Temporal Logic, STL) 的定量鲁棒度语义 $\rho(\varphi, x, t)$ 深度融合，如 Candussio et al. (ECML-PKDD 2025，首创 Transformer 自回归解码器将连续逻辑嵌入逆映射为人类可读离散 STL 语法树)、STARS (Ferfoglia et al. 2025，基于 STL 鲁棒性概念瓶颈层的可解释安全关键分类器)、Confidence over Time (ETH Zurich 2026，将 LLM 多步推理置信度轨迹建模为连续时序并挖掘 STL 异常行为模板以校准幻觉)、ReasonSTL (浙江大学/西湖大学 2026，过程监督强化学习结合 SMT/dReal 求解器实现 91.4% 高准确度自然语言到可执行 STL 规约转化)。
-4. **人类与物理反馈强化学习策略优化 (RLHF/RLPF Policy Optimization)**：TimeRFT (HKUST'26 质量与拐点感知分步奖励 $r_t$ 结合高熵样本挑选，OOD误差降低18.6%)、TimeHF (京东 6B 基座模型引入时序策略优化 TPO 与专家偏好对齐，补货决策精度提升33.21%)、COUNTS (JHU NeurIPS'25 RVQ-VAE离散符号化结合分组相对策略优化 GRPO 激发可验证思维链推理)、TimeMaster (浙江大学多模态生理波形分步诊断奖励消减幻觉)、LAST SToP (Vector/Guelph ICML'25 异步时序随机软提示)。
-5. **免分布保形预测与有限样本统计覆盖保证 (Distribution-Free Conformal Prediction)**：Achour et al. (零样本基座模型实现 $100\%$ 目标数据投入校准，获得严格 $1-\alpha$ 边际覆盖且置信区间优于 GBDT/ARIMA)、Adaptive Conformal Anomaly Detection (IBM Research ICLR'26 工业 IoT 严格虚警率受控 p 值输出)、RareCP (柏林自由大学 GIFT-Eval 上基于余弦注意力检索 MoE 缩窄区间达22%)。
-6. **物理引导基座模型与连续时间异步事件流 (Physics Foundations & Continuous Event Streams)**：GridSFM (UW/微软 2026，内置非线性牛顿潮流方程的物理图网络，万节点电网零样本计算误差仅2.45%)、SurF (多伦多大学/Vector 2026，时间尺度重整化定理 TRT 连续流双射实现多数据集联合预训练)、TradeFM (摩根大通 524M 订单流生成基座模型)。
-7. **极端1-Bit端侧量化与多智能体协作辩论 (1-Bit Quantization & Multi-Agent Swarms)**：Sparse Binary Transformers (1-bit权重纯加减累加)、Q-DEQ (0.3M深度平衡Picard-Broyden收缩映射解算器)、MC-Debate (KAIST 多模态多智能体协商)、TimeEvo (动态代码与技能自演化)、TSFMAudit (分位数N-Gram污染扫描器)。
+1. **选择性状态空间模型 (Mamba/S4) 与长程线性复杂度扩展 (Selective State Space Models & Linear Scaling)**：突破多头自注意力在长序列中的 $O(L^2)$ 计算瓶颈，引入输入自适应选择机制与连续状态空间离散化，如 S-Mamba (跨时间 Patch 与跨变量通道的双向选择性扫描)、TimeMachine (ECAI 2024 四元组 4-Mamba 解耦时序与通道维度)、Bi-Mamba+ (双向状态空间融合消除单向因果扫描缺陷)、QuantFlow (量化轻量化 Mamba 联邦时序基座模型) 等。
+2. **多尺度分层时空图基座与几何流形拓扑 (Hierarchical Spatio-Temporal Graph Foundations & Geometric Mesh Manifolds)**：突破平坦欧氏序列假设，在非欧几何空间构建保持置换等变性与物理守恒的图基座，如 GPT-ST (NeurIPS 2023，时空掩码自编码器与层次空间聚类预训练)、AmazonSWE (2026，亚马逊流域 19,000 河段 10 年 SWOT 卫星雷达高度计超稀疏 DAG 图，双向选择性 SSM + 拓扑位置编码降低 RMSE 达 18-39%)、DeXposure-FM (2026，4,370 万条跨 602 条区块链的 DeFi 金融借贷网络基座模型)、EarthGeometry (2026，球面大地网格上的物理类型与坐标变换不变性表征) 等。
+3. **长程记忆谱系评测、微服务动态图基准与潜在空间上下文学习 (Memory Spectrum, Dynamic Graph Benchmarks & Latent PFNs)**：Nguyen et al. (2026，深度时序记忆谱系统一评测，对比内部隐状态压缩与外部 KV 缓存)、ChronoGraph (NeurIPS 2025 Workshop，生产级微服务动态依赖图基准与真实故障级联定位)、STOIC (2026，结合表格基座模型的图时空免分布保形预测，严格 $1-\alpha$ 统计覆盖保证)、LaT-PFN (2024，联合嵌入预测架构 JEPA 与 PFN 融合，自发涌现离散 Token 表达与零梯度贝叶斯预测)。
+4. **遥感雷达与行星级地球观测时序基座 (Earth Observation & Satellite Radar Foundations)**：Prithvi WxC (NASA/IBM 2.3B 全球天气与气候基座模型，覆盖 160 个大气变量)、EarthPT (700M 纯解码器自回归像素时序模型)、Prithvi-EO-2.0 (300M 多时相 ViT)、AgriFM (86M 全天候穿云 Sentinel-1 SAR + Sentinel-2 光学跨模态农业物候基座)、SpectralGPT (600M 3D 空-谱-时张量掩码基座)、Changen2 (120M 条件扩散变化检测模型)、Presto (4.8M 极轻量传感器无关像素 Transformer)。
+5. **差分隐私生成孪生与零泄露基准评测 (Differentially Private Generative Twins & Zero-Leakage Benchmarks)**：Schuchardt et al. (ICML 2025 Spotlight，针对自相关滑动窗口创立结构化子采样 Rényi 差分隐私计算体系，保证 $\\epsilon < 2.0$)、TSGBench (VLDB 2024，统一 TSTR 评估与成员推理防御评测)。
+6. **神经符号时间逻辑与可微形式化约束 (Neuro-Symbolic Temporal Logic & Verifiable Constraints)**：Candussio et al. (ECML-PKDD 2025，连续逻辑逆向反演为离散 STL 语法树)、STARS (Ferfoglia et al. 2025，STL 鲁棒性概念瓶颈模型)、Confidence over Time (ETH Zurich 2026，推理置信度时序监控校准幻觉)、ReasonSTL (浙江大学/西湖大学 2026，过程监督强化学习转化可执行 STL 规约)。
+7. **人类与物理反馈强化学习策略优化 (RLHF/RLPF Policy Optimization)**：TimeRFT (HKUST'26 质量感知分步奖励 $r_t$ 结合高熵样本挑选)、TimeHF (京东 6B 时序策略优化 TPO 与专家偏好对齐)、COUNTS (JHU NeurIPS'25 RVQ-VAE 结合 GRPO 激发可验证思维链推理)、TimeMaster (多模态分步诊断奖励消减幻觉)。
+8. **免分布保形预测与物理引导基座 (Conformal Coverage & Physics Foundations)**：Achour et al. (100% 目标数据投入校准实现严格 $1-\alpha$ 边际覆盖)、GridSFM (UW/微软 2026，内置牛顿潮流物理图网络)、SurF (时间重缩放定理 TRT 连续流双射预训练)、TradeFM (摩根大通 524M 订单流生成基座)。
 
 ---
 
@@ -78,15 +79,15 @@ graph TD
     Root --> P2["Repurposed LLM4TS (Language Backbones)"]
     Root --> P3["Evaluations, Benchmarks & Critiques"]
 
-    P1 --> P1_Dec["Autoregressive & Patch Decoders<br/>(Chronos, TimesFM-3, Timer, Sundial, TiRex, Toto, Tabby, Cadence, SGA)"]
-    P1 --> P1_EO["Earth Observation & Planetary Foundations<br/>(Prithvi WxC, EarthPT, Prithvi-EO-2.0, AgriFM, SpectralGPT, Changen2, Presto)"]
+    P1 --> P1_SSM["State Space & Autoregressive Decoders<br/>(Chronos, TimesFM-3, Timer, S-Mamba, TimeMachine, Bi-Mamba+, QuantFlow)"]
+    P1 --> P1_Graph["Hierarchical Graphs & Earth Observation<br/>(GPT-ST, AmazonSWE, DeXposure-FM, Prithvi WxC, EarthPT, AgriFM, Presto)"]
     P1 --> P1_Phys["Physics, 1-Bit & Continuous Streams<br/>(GridSFM, SurF, TradeFM, Sparse Binary, Q-DEQ, TQS-PTQ, MCU-FQT)"]
 
     P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
     P2 --> P2_Logic["Neuro-Symbolic & Temporal Logic<br/>(ReasonSTL, STARS, Candussio et al., Confidence-STL)"]
     P2 --> P2_Agent["Policy Optimization & Swarms<br/>(TimeRFT, TimeHF, COUNTS, TimeMaster, TimeEvo, MC-Debate)"]
 
-    P3 --> P3_Bench["DP Twins & Living Benchmarks<br/>(TSGBench, DP-Subsampling, Forecast-Dojo, Impermanent, TimeSage, GIFT-Eval)"]
+    P3 --> P3_Bench["Hierarchical Graphs, Memory & DP Twins<br/>(Nguyen Memory, ChronoGraph, STOIC, TSGBench, DP-Subsampling, GIFT-Eval)"]
     P3 --> P3_Conf["Conformal Coverage & Statistical Audits<br/>(Achour et al., Adaptive-CAD, RareCP, TSFMAudit, Familiarity Bias)"]
     P3 --> P3_Energy["Energy, Quantization & Edge Suites<br/>(HoliBench, FM-CAC, QuantCalibration, Table 5, Table 8, Table 10)"]
 ```

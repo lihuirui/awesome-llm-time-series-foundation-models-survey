@@ -553,3 +553,67 @@ where $\mathcal{M}$ represents the model's memory architecture. In standard self
 }
 \end{table*}
 
+\subsection{Transferability Estimation, Vintage Data Revisions, and Heterogeneous Batch Scheduling}
+\label{sec:transferability_vintages_batch_scheduling}
+
+As the foundation paradigm matures, critical systemic questions shift from ``can foundation models predict time series?'' to: (1) \emph{How can practitioners predict whether a foundation model will transfer positively or negatively to a new target domain without incurring the prohibitive compute cost of full fine-tuning?} (2) \emph{How do real-world revisions and publication lags contaminate historical benchmarks?} and (3) \emph{How should foundation models be scheduled across heterogeneous compute clusters serving multi-tenant closed-loop workloads?}
+
+\begin{itemize}[leftmargin=*]
+    \item \emph{TimeTic: In-Context Transferability Estimation (Yao et al., 2025)}~\cite{yao2025timetic}: While zero-shot performance is widely used as a heuristic proxy for selecting foundation models, Yao et al. demonstrate that zero-shot error correlates poorly with post-fine-tuning adaptation quality. Evaluating 10 foundation models across 10 diverse datasets, they introduce TimeTic. TimeTic reformulates transferability estimation as an in-context learning problem solved by tabular foundation models. By extracting statistical dataset meta-features paired with \emph{layer-wise entropy evolution vectors} (capturing how representation uncertainty shifts across transformer depths), TimeTic predicts the downstream ranking of foundation models before fine-tuning. TimeTic achieves a mean Spearman rank correlation of $\approx 0.60$ with ground-truth fine-tuned accuracy—representing a $30\%$ improvement over zero-shot ranking proxies—effectively preventing costly fine-tuning on ill-suited architectures.
+
+    \item \emph{Diversified Scaling Inference: Expanding Generative Support (Hua et al., 2026)}~\cite{hua2026diversified}: Hua et al. investigate whether computational scaling laws can be unlocked strictly at inference time without modifying model parameters. In standard autoregressive generation, foundation models frequently collapse into conservative mode seeking, under-exploring low-probability but high-impact future branches. Hua et al. propose \emph{Diversified Scaling Inference}, injecting tailored signal perturbations during decoding to broaden generative support. They theoretically establish a \emph{critical sample threshold} beyond which diversified sampling provably outperforms standard temperature sampling. Furthermore, they define the \emph{RobustMSE} metric to quantify the latent headroom performance of frozen TSFMs under fixed inference budgets, proving that controlled diversity scaling yields up to $14.8\%$ error reductions across Chronos, TimesFM, and MOIRAI.
+
+    \item \emph{VINTAGE-TS: Auditing Hindsight Bias in Revised Time Series (Ahmad, 2026)}~\cite{ahmad2026vintagets}: A pervasive but largely unaddressed contamination vector in macroeconomic, climate, and epidemiological forecasting is \emph{data revision}. Statistical agencies routinely revise historical time series months or years after the fact as additional censuses arrive. Foundation models pretrained on contemporary retrospective downloads inadvertently train on ``mature'' data that was fundamentally unavailable to human decision-makers at prediction time, creating artificial performance inflations. Ahmad formulates VINTAGE-TS, building upon a frozen Chronos-2 backbone. VINTAGE-TS introduces dual temporal indexing: distinguishing observation time $t$ from information-availability time $\tau \ge t$. Evaluated on the ALFRED real-time vintage database, VINTAGE-TS isolates the severe performance degradation ($18\%\text{--}35\%$ higher RMSE) that occurs when models forecast unrevised initial releases versus revised mature series, providing a reproducible benchmarking harness for revision-consistent foundation modeling.
+
+    \item \emph{Armory: Lookahead Batch Scheduling for Robot Policy Serving (Bansal et al., 2026)}~\cite{bansal2026armory}: Transitioning foundation models to physical embodiment, Bansal et al. address the challenge of serving large policy models across heterogeneous multi-robot fleets. In closed-loop robotic control, foundation models generate ``action chunks'' (sequences of future motor actions) executed over receding horizons. Because different robots consume actions at varying speeds and experience disparate network latencies, standard naive batching induces either action queue starvation (causing robot stalling) or excessive latency. Bansal et al. propose Armory, formulating action chunk scheduling as a Markov Decision Process (MDP). Armory deploys a Lookahead scheduler that simulates candidate batch execution over a server-side mirror of each robot's queue state, maximizing latency-normalized execution throughput by up to $18\%$ over standard FIFO and priority schedulers.
+\end{itemize}
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Architectural mechanisms, transferability estimation, active information acquisition, and heterogeneous scheduling across Iteration 12 foundation models and frameworks (2025--2026).}
+\label{tab:iter12_synthesis}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllll}
+\toprule
+\textbf{Model / Framework} & \textbf{Key Reference} & \textbf{Core Paradigm \& Topology} & \textbf{Mathematical \& Algorithmic Formulation} & \textbf{Hardware / Latency Envelope} & \textbf{Key Empirical Finding / Formal Result} \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category A: Heterogeneous Multivariate Decoupling, Covariate Homogenization \& Memory Distillation}} \\
+\midrule
+\textbf{Falcon-X} & Liu et al.~\cite{liu2026falconx} (arXiv'26) & Native TSFM (Multivariate) & Unified Prototype Diff-Attention (UPDA) + Variate Reassembly Router & 230M params; parallel prototype projection & Decouples competing physical channels; cuts multivariate zero-shot error by $17.4\%$ \\
+\midrule
+\textbf{UniCA} & Han et al.~\cite{han2025unica} (arXiv'25) & Native TSFM (Covariates) & Covariate Homogenization mapping multimodal features to dense continuous tokens & 120M params; modular Pre/Post-Fusion & Enables zero-shot conditioning on categorical/text covariates; $+22.1\%$ GIFT-Eval gain \\
+\midrule
+\textbf{TS-Memory} & Lyu et al.~\cite{lyu2026tsmemory} (KDD'26) & Memory Adapter (Native TSFM) & Plug-and-play adapter with confidence-gated distillation from $k\text{NN}$ teacher & 0.5M params; constant $O(1)$ inference latency & Prevents negative transfer under domain shift; zero catastrophic forgetting without DB lookup \\
+\midrule
+\textbf{iAmTime} & Saha \& Shmakov~\cite{saha2026iamtime} (arXiv'26) & Native TSFM (In-Context) & Hierarchical Multi-Scope Transformer + Task-Conditioned Patch Decoder & 350M params; zero parameter updates & In-context demonstration adaptation across 120B+ observations; multi-task zero-shot transfer \\
+\midrule
+\textbf{ST-Prune} & Chen et al.~\cite{chen2026stprune} (arXiv'26) & Native TSFM (Spatio-Temporal) & Real-time loss-gradient and complexity-aware dynamic sample pruning & Accelerated pretraining; $46\%$ wall-clock speedup & Eliminates redundant spatial slices without sacrificing downstream generalization \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category B: Active Information Acquisition, Online Deferral \& Temporal Causal PFNs}} \\
+\midrule
+\textbf{STAP} & Kim et al.~\cite{kim2025stap} (ICML'25) & Active Learning (PDE TSFM) & Selective time-step acquisition optimizing expected global variance reduction & 45M params; non-uniform solver querying & Explores $3.4\times$ wider nonlinear physical regimes under fixed trajectory budget \\
+\midrule
+\textbf{L2D-SLDS} & Montreuil et al.~\cite{montreuil2026l2dslds} (arXiv'26) & Streaming Online Deferral & Factorized Switching Linear-Gaussian State Space + Information Query Score & 15M params; hard real-time streaming & Balances cost vs latent information gain; maintains $<2\%$ deferral under concept drift \\
+\midrule
+\textbf{TCPFN} & Talupula \& Sharma~\cite{talupula2026tcpfn} (arXiv'26) & Causal PFN (Native TSFM) & Synthetic SCM pretraining with explicit Causal Judgment Head & 85M params; sub-second zero-shot inference & Outputs calibrated reliability signals \& confounding strength across thousands of industrial series \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category C: Transferability Estimation, Vintage Auditing, Modality Routing \& Batch Scheduling}} \\
+\midrule
+\textbf{TimeTic} & Yao et al.~\cite{yao2025timetic} (arXiv'25) & Transferability Benchmark & In-context transferability predictor via layer-wise entropy evolution & Tabular FM meta-learner; zero-fine-tuning cost & Achieves 0.60 rank correlation with fine-tuned accuracy ($+30\%$ over zero-shot ranking) \\
+\midrule
+\textbf{Diversified Scaling} & Hua et al.~\cite{hua2026diversified} (arXiv'26) & Inference Compute Scaling & Tailored temporal signal perturbations expanding generative support & Evaluated on Chronos, TimesFM, MOIRAI & Proves critical sample threshold; RobustMSE headroom metric reduces error by up to $14.8\%$ \\
+\midrule
+\textbf{VINTAGE-TS} & Ahmad~\cite{ahmad2026vintagets} (arXiv'26) & Contamination Benchmark & Dual temporal indexing (observation time $t$ vs availability time $\tau$) & 120M Chronos-2 joint adapter & Identifies $18\%\text{--}35\%$ error inflation from retrospective data revision contamination \\
+\midrule
+\textbf{Armory} & Bansal et al.~\cite{bansal2026armory} (arXiv'26) & Heterogeneous Scheduling & Lookahead MDP scheduler over temporal action chunk queues for VLA serving & Multi-tenant GPU serving for heterogeneous robots & Improves closed-loop robot execution throughput by up to $18\%$ over FIFO heuristics \\
+\midrule
+\textbf{TSRouter} & Yu et al.~\cite{yu2026tsrouter} (COLM'26) & Multimodal Routing (LLM4TS) & Candidate scoring on heterogeneous bipartite task-query-modality-model graph & 8B parameter routing envelope & $+16\%\text{--}46\%$ relative reasoning accuracy gain while reducing inference dollars by $>60\%$ \\
+\midrule
+\textbf{ZARA} & Li et al.~\cite{li2025zara} (ACL'26) & Agentic Reasoning (LLM4TS) & Placement-specific vector stores + verifiable natural language evidence traces & 7B LLM + frozen MOMENT backbone & Eliminates zero-shot sensor hallucinations across body placement domain shifts \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+

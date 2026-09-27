@@ -1191,6 +1191,105 @@ SPECS = {
         "tokenization": "Normalized Abstract Time Axis with Prediction-Optimized Latent Representations", "prediction_head": "In-Context Bayesian Next-Step Density Estimator",
         "params": "not reported", "pretrain_corpus": "Synthetic Stochastic Processes + Contextual Real Series", "tasks": ["Zero-Shot Latent Forecasting", "In-Context Density Estimation", "Emergent Patch Representation"],
         "open_weights": True, "venue": "arXiv 2024", "code_url": "https://github.com/StijnVerdenius/LaT-PFN"
+    },
+    # Iteration 12: Active Sensor Querying, Cross-Dataset Transferability & Generalization Boundaries, and Heterogeneous Foundation Scheduling
+    "2509.23695": {
+        "bibkey": "yao2025timetic",
+        "group": "Ming Jin", "paradigm": "Evaluation & Benchmark", "architecture": "In-Context Transferability Estimator via Tabular FM (TimeTic)",
+        "tokenization": "Dataset Meta-Features and Layer-Wise Entropy Evolution Embeddings", "prediction_head": "In-Context Fine-Tuned Performance Rank Predictor",
+        "params": "not reported", "pretrain_corpus": "10 Datasets, 10 Foundation Models, 3 Forecasting Tasks", "tasks": ["Transferability Estimation", "Model Selection", "Zero-Shot Rank Correlation"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2602.11550": {
+        "bibkey": "lyu2026tsmemory",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Plug-and-Play Confidence-Gated Memory Adapter (TS-Memory)",
+        "tokenization": "Temporal Patch Embeddings with Parametric Memory Keys", "prediction_head": "Confidence-Gated Quantile Distillation Head",
+        "params": "0.5M", "pretrain_corpus": "Leakage-Safe kNN Teacher on Target Datastores (ChronosBolt Backbone)", "tasks": ["Negative Transfer Prevention", "Constant-Time Retrieval Adaptation", "Probabilistic Forecasting"],
+        "open_weights": True, "venue": "KDD 2026", "code_url": "https://github.com/sisuolv/TS-Memory"
+    },
+    "2605.27286": {
+        "bibkey": "liu2026falconx",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Unified Prototype Diff-Attention + Variate Reassembly Router (Falcon-X)",
+        "tokenization": "Decoupled Cross-Variate Latent Prototypes", "prediction_head": "Request-and-Dispatch Variate Trajectory Head",
+        "params": "230M", "pretrain_corpus": "Cross-Domain Heterogeneous Multivariate Pretraining Corpus", "tasks": ["Heterogeneous Multivariate Forecasting", "Zero-Shot Structural Transfer", "Antagonistic Variate Modeling"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2506.22039": {
+        "bibkey": "han2025unica",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Unified Covariate Adaptation with Pre/Post-Fusion Transformer (UniCA)",
+        "tokenization": "Homogenized Dense Covariate Continuous Tokens", "prediction_head": "Covariate-Conditioned Autoregressive Head",
+        "params": "120M", "pretrain_corpus": "Multi-Modal & Categorical Covariate Series Benchmark", "tasks": ["Heterogeneous Covariate Integration", "Multimodal Forecasting", "Zero-Shot Transfer"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2601.17376": {
+        "bibkey": "hua2026diversified",
+        "group": "Other", "paradigm": "Evaluation & Benchmark", "architecture": "Perturbation-Guided Diversified Scaling Inference Framework",
+        "tokenization": "Tailored Temporal Signal Perturbations and Latent Anchors", "prediction_head": "Pareto-Optimal Diversity-Fidelity Selection Head",
+        "params": "Evaluated on Chronos, TimesFM, MOIRAI", "pretrain_corpus": "Cross-Domain Zero-Shot Benchmark Suite", "tasks": ["Inference-Time Compute Scaling", "RobustMSE Headroom Evaluation", "Diversity-Fidelity Profiling"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2603.22586": {
+        "bibkey": "saha2026iamtime",
+        "group": "Walmart", "paradigm": "Native TSFM", "architecture": "Hierarchical Multi-Scope Transformer + Task-Conditioned Patch Decoder (iAmTime)",
+        "tokenization": "Instruction-Conditioned Semantic Demonstration Tokens", "prediction_head": "Expert-Routed Task-Adaptive Forecasting/Classification Head",
+        "params": "350M", "pretrain_corpus": "Synthesized & Real Multi-Task Time-Series Corpus (>120B observations)", "tasks": ["In-Context Demonstration Adaptation", "Multi-Task Time-Series Inference", "Source De-mixing"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2607.08940": {
+        "bibkey": "yu2026tsrouter",
+        "group": "Other", "paradigm": "LLM4TS", "architecture": "Heterogeneous Graph Dynamic Modality-Model Scoring Router (TSRouter)",
+        "tokenization": "Bipartite Query-Model Graph Node Representations", "prediction_head": "Cost-Performance Pareto Scoring Head",
+        "params": "8B", "pretrain_corpus": "Multi-Modality Time Series Reasoning Benchmark (LLM + VLM + TSFM)", "tasks": ["Dynamic Modality Selection", "Cost-Constrained Routing", "Time Series Reasoning"],
+        "open_weights": True, "venue": "COLM 2026", "code_url": None
+    },
+    "2606.20889": {
+        "bibkey": "talupula2026tcpfn",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Discrete-Token Prior-Data Fitted Network with Causal Head (TCPFN)",
+        "tokenization": "Cross-Attention Masked Panel Tokens on Non-Stationary Dynamics", "prediction_head": "Learned Reliability Signals & Temporal Causal Judgment Head",
+        "params": "85M", "pretrain_corpus": "Synthetic Structural Causal Models with Delayed/Oscillating Regimes", "tasks": ["Zero-Shot Temporal Causal Discovery", "Reliability Signal Estimation", "Industrial Panel Diagnostics"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2609.28576": {
+        "bibkey": "ahmad2026vintagets",
+        "group": "Other", "paradigm": "Evaluation & Benchmark", "architecture": "Revision-Aware Vintage Joint Adapter (VINTAGE-TS / Chronos-2)",
+        "tokenization": "Observation-Time vs Availability-Time Dual-Index Tokenization", "prediction_head": "Dual-Horizon Initial-Release & Mature-Vintage Head",
+        "params": "120M", "pretrain_corpus": "ALFRED Real-Time Macroeconomic Vintage Database", "tasks": ["Hindsight Contamination Auditing", "Real-Time Vintage Forecasting", "Delayed-Label Tracking"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2602.19113": {
+        "bibkey": "chen2026stprune",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Complexity-Aware Dynamic Sample Pruning Framework (ST-Prune)",
+        "tokenization": "Loss-Gradient Spatio-Temporal Information Slices", "prediction_head": "Accelerated Dynamic Convergence Head",
+        "params": "not reported", "pretrain_corpus": "Large-Scale Spatio-Temporal Transportation & Climate Datasets", "tasks": ["Dynamic Sample Pruning", "Hardware-Efficient Pretraining", "Spatio-Temporal Acceleration"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2511.18107": {
+        "bibkey": "kim2025stap",
+        "group": "KAIST", "paradigm": "Native TSFM", "architecture": "Selective Time-Step Acquisition Physical Surrogate Model (STAP)",
+        "tokenization": "Non-Uniform Temporal Discretization Slices", "prediction_head": "Variance-Reduction Information Acquisition Head",
+        "params": "45M", "pretrain_corpus": "Nonlinear Navier-Stokes & Reaction-Diffusion PDE Trajectories", "tasks": ["Active Sensor Acquisition", "Variance Reduction", "PDE Surrogate Acceleration"],
+        "open_weights": True, "venue": "ICML 2025", "code_url": None
+    },
+    "2601.22538": {
+        "bibkey": "montreuil2026l2dslds",
+        "group": "Other", "paradigm": "Native TSFM", "architecture": "Factorized Switching Linear-Gaussian State-Space Model (L2D-SLDS)",
+        "tokenization": "Regime, Shared Global, and Idiosyncratic State Projections", "prediction_head": "Information-Gain Learner-Aware Query Deferral Score",
+        "params": "15M", "pretrain_corpus": "Non-Stationary Streaming Multi-Sensor Telemetry Trajectories", "tasks": ["Online Learning-to-Defer", "Active Sensor Querying", "Switching Dynamics Tracking"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2508.04038": {
+        "bibkey": "li2025zara",
+        "group": "Flora Salim", "paradigm": "LLM4TS", "architecture": "Evidence-Grounded Agentic Reasoning Framework (ZARA / MOMENT)",
+        "tokenization": "Placement-Specific Sensor Anchor Embeddings", "prediction_head": "Verifiable Textual Evidence-Grounded Reasoning Head",
+        "params": "7B", "pretrain_corpus": "UCI-HAR and USC-HAD Inertial Motion Sensor Repositories", "tasks": ["Active Sensor Placement Adaptation", "Zero-Training Motion Reasoning", "Evidence-Grounded HAR"],
+        "open_weights": True, "venue": "ACL 2026", "code_url": "https://github.com/zechenli03/ZARA"
+    },
+    "2608.00337": {
+        "bibkey": "bansal2026armory",
+        "group": "Georgia Tech", "paradigm": "Evaluation & Benchmark", "architecture": "Lookahead MDP Batch Scheduler for Robot Policy Serving (Armory)",
+        "tokenization": "Temporal Action Chunk Queue States & In-Flight Latency Profiles", "prediction_head": "Latency-Normalized Robot Throughput Scheduler",
+        "params": "not reported", "pretrain_corpus": "Real-World and Simulated Multi-Robot VLA Trajectories", "tasks": ["Heterogeneous Hardware Scheduling", "Batched Foundation Model Serving", "Action Chunk Optimization"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://gatech-rl2.github.io/actionchunkscheduling/"
     }
 }
 

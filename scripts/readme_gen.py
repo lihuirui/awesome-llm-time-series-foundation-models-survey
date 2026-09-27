@@ -49,7 +49,7 @@ def generate_readme():
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 11 (Selective State Space Models, Hierarchical Spatio-Temporal Graph Manifolds & Latent In-Context PFNs)** · Last Updated: **{today}**
+> Latest Iteration: **Iteration 12 (Active Sensor Querying, Cross-Dataset Transferability & Generalization Boundaries, and Heterogeneous Foundation Scheduling)** · Last Updated: **{today}**
 
 ---
 
@@ -57,14 +57,14 @@ def generate_readme():
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **选择性状态空间模型 (Mamba/S4) 与长程线性复杂度扩展 (Selective State Space Models & Linear Scaling)**：突破多头自注意力在长序列中的 $O(L^2)$ 计算瓶颈，引入输入自适应选择机制与连续状态空间离散化，如 S-Mamba (跨时间 Patch 与跨变量通道的双向选择性扫描)、TimeMachine (ECAI 2024 四元组 4-Mamba 解耦时序与通道维度)、Bi-Mamba+ (双向状态空间融合消除单向因果扫描缺陷)、QuantFlow (量化轻量化 Mamba 联邦时序基座模型) 等。
-2. **多尺度分层时空图基座与几何流形拓扑 (Hierarchical Spatio-Temporal Graph Foundations & Geometric Mesh Manifolds)**：突破平坦欧氏序列假设，在非欧几何空间构建保持置换等变性与物理守恒的图基座，如 GPT-ST (NeurIPS 2023，时空掩码自编码器与层次空间聚类预训练)、AmazonSWE (2026，亚马逊流域 19,000 河段 10 年 SWOT 卫星雷达高度计超稀疏 DAG 图，双向选择性 SSM + 拓扑位置编码降低 RMSE 达 18-39%)、DeXposure-FM (2026，4,370 万条跨 602 条区块链的 DeFi 金融借贷网络基座模型)、EarthGeometry (2026，球面大地网格上的物理类型与坐标变换不变性表征) 等。
-3. **长程记忆谱系评测、微服务动态图基准与潜在空间上下文学习 (Memory Spectrum, Dynamic Graph Benchmarks & Latent PFNs)**：Nguyen et al. (2026，深度时序记忆谱系统一评测，对比内部隐状态压缩与外部 KV 缓存)、ChronoGraph (NeurIPS 2025 Workshop，生产级微服务动态依赖图基准与真实故障级联定位)、STOIC (2026，结合表格基座模型的图时空免分布保形预测，严格 $1-\alpha$ 统计覆盖保证)、LaT-PFN (2024，联合嵌入预测架构 JEPA 与 PFN 融合，自发涌现离散 Token 表达与零梯度贝叶斯预测)。
-4. **遥感雷达与行星级地球观测时序基座 (Earth Observation & Satellite Radar Foundations)**：Prithvi WxC (NASA/IBM 2.3B 全球天气与气候基座模型，覆盖 160 个大气变量)、EarthPT (700M 纯解码器自回归像素时序模型)、Prithvi-EO-2.0 (300M 多时相 ViT)、AgriFM (86M 全天候穿云 Sentinel-1 SAR + Sentinel-2 光学跨模态农业物候基座)、SpectralGPT (600M 3D 空-谱-时张量掩码基座)、Changen2 (120M 条件扩散变化检测模型)、Presto (4.8M 极轻量传感器无关像素 Transformer)。
-5. **差分隐私生成孪生与零泄露基准评测 (Differentially Private Generative Twins & Zero-Leakage Benchmarks)**：Schuchardt et al. (ICML 2025 Spotlight，针对自相关滑动窗口创立结构化子采样 Rényi 差分隐私计算体系，保证 $\\epsilon < 2.0$)、TSGBench (VLDB 2024，统一 TSTR 评估与成员推理防御评测)。
-6. **神经符号时间逻辑与可微形式化约束 (Neuro-Symbolic Temporal Logic & Verifiable Constraints)**：Candussio et al. (ECML-PKDD 2025，连续逻辑逆向反演为离散 STL 语法树)、STARS (Ferfoglia et al. 2025，STL 鲁棒性概念瓶颈模型)、Confidence over Time (ETH Zurich 2026，推理置信度时序监控校准幻觉)、ReasonSTL (浙江大学/西湖大学 2026，过程监督强化学习转化可执行 STL 规约)。
-7. **人类与物理反馈强化学习策略优化 (RLHF/RLPF Policy Optimization)**：TimeRFT (HKUST'26 质量感知分步奖励 $r_t$ 结合高熵样本挑选)、TimeHF (京东 6B 时序策略优化 TPO 与专家偏好对齐)、COUNTS (JHU NeurIPS'25 RVQ-VAE 结合 GRPO 激发可验证思维链推理)、TimeMaster (多模态分步诊断奖励消减幻觉)。
-8. **免分布保形预测与物理引导基座 (Conformal Coverage & Physics Foundations)**：Achour et al. (100% 目标数据投入校准实现严格 $1-\alpha$ 边际覆盖)、GridSFM (UW/微软 2026，内置牛顿潮流物理图网络)、SurF (时间重缩放定理 TRT 连续流双射预训练)、TradeFM (摩根大通 524M 订单流生成基座)。
+1. **异构多变量解耦、协变量同质化与即插即用记忆蒸馏 (Heterogeneous Multivariate Decoupling, Covariate Homogenization & Memory Distillation)**：针对多变量物理量纲不一致与负迁移挑战，引入原型差分与置信度门控记忆，如 Falcon-X (统一原型差分注意力 UPDA + 变量重组路由 VRR 解耦协同与对抗动力学)、UniCA (多模态与分类协变量同质化转换器 + Pre/Post-Fusion 模块)、TS-Memory (KDD 2026 即插即用 0.5M 记忆适配器，置信度门控 $k$NN 教师蒸馏，消除灾难性遗忘)、iAmTime (Walmart 2026 指令条件上下文元学习基座，350M 参数跨 120B+ 观测零样本任务切换)、ST-Prune (复杂度感知时空动态样本剪枝，节省 46% GPU 预训练耗时)。
+2. **主动传感网络查询、信息增益后验方差缩减与时序因果 PFNs (Active Sensor Querying, Information Acquisition & Temporal Causal PFNs)**：STAP (ICML 2025 偏微分方程非均匀时间步主动采集，全局后验方差缩减目标函数，固定预算下探索 3.4 倍更多非线性动力学体系)、L2D-SLDS (2026 因子化切换线性高斯状态空间模型与在线推迟决策，信息增益与后悔缩减查询评分，维持低于 2% 推迟率)、TCPFN (2026 面板数据先验拟合网络，合成 SCM 动力学预训练与因果判断头，输出零样本混杂强度与可靠性信号)。
+3. **迁移性上下文评估、数据修订事后偏误审计与异构批量调度 (Transferability Estimation, Vintage Auditing, Modality Routing & Batch Scheduling)**：TimeTic (Ming Jin 团队 2025，将模型选择重塑为表格基座上下文学习，提取统计元特征与层级熵演化向量，0.60 秩相关系数领先零样本代理 30%)、Diversified Scaling Inference (2026 推理期计算扩展，证明扰动采样临界阈值，RobustMSE 余量指标降低误差达 14.8%)、VINTAGE-TS (2026 数据修订历史偏误审计，双时间索引解耦观测时间与发布时间，量化事后修正带来的 18-35% 误差膨胀)、Armory (Georgia Tech 2026 多智能体 VLA 机器人动作块 MDP 调度，前瞻模拟消除队列饥饿，吞吐量提升 18%)、TSRouter (COLM 2026 异构图动态模态-模型路由器，Pareto 成本约束下提升推理准确率 16-46%)、ZARA (ACL 2026 证据驱动型运动推理智能体，位置特定向量库消除传感器佩戴位置域漂移)。
+4. **选择性状态空间模型 (Mamba/S4) 与长程线性复杂度扩展 (Selective State Space Models & Linear Scaling)**：突破多头自注意力在长序列中的 $O(L^2)$ 计算瓶颈，如 S-Mamba (跨时间 Patch 与跨通道双向选择性扫描)、TimeMachine (ECAI 2024 四元组 4-Mamba 解耦时序与通道维度)、Bi-Mamba+ (双向状态空间融合消除单向因果扫描缺陷)、QuantFlow (量化轻量化 Mamba 联邦时序基座模型) 等。
+5. **多尺度分层时空图基座与几何流形拓扑 (Hierarchical Spatio-Temporal Graph Foundations & Geometric Mesh Manifolds)**：GPT-ST (NeurIPS 2023 层次空间聚类预训练)、AmazonSWE (2026 亚马逊流域 19,000 河段 10 年 SWOT 卫星雷达高度计超稀疏 DAG 图，双向选择性 SSM + 拓扑位置编码降低 RMSE 达 18-39%)、DeXposure-FM (2026 DeFi 金融网络借贷敞口基座)、EarthGeometry (2026 球面大地网格物理类型与坐标变换不变性表征)。
+6. **长程记忆谱系评测、微服务动态图基准与潜在空间上下文学习 (Memory Spectrum, Dynamic Graph Benchmarks & Latent PFNs)**：Nguyen et al. (2026 深度时序记忆谱系统一评测)、ChronoGraph (NeurIPS 2025 Workshop 生产级微服务动态依赖图基准与真实故障定位)、STOIC (2026 图时空免分布保形预测严格 $1-\\alpha$ 覆盖)、LaT-PFN (2024 JEPA + PFN 融合自发涌现离散 Token 表达)。
+7. **遥感雷达与行星级地球观测时序基座 (Earth Observation & Satellite Radar Foundations)**：Prithvi WxC (NASA/IBM 2.3B 全球天气与气候基座模型)、EarthPT (700M 纯解码器自回归像素时序模型)、Prithvi-EO-2.0 (300M 多时相 ViT)、AgriFM (86M Sentinel-1 SAR + Sentinel-2 光学跨模态农业基座)、SpectralGPT (600M 3D 空-谱-时张量掩码基座)、Changen2 (120M 扩散变化检测)、Presto (4.8M 轻量像素 Transformer)。
+8. **差分隐私生成孪生、神经符号时间逻辑与强化学习策略优化 (DP Twins, Neuro-Symbolic Logic & RLHF)**：Schuchardt et al. (ICML 2025 Spotlight 结构化子采样 Rényi 差分隐私)、TSGBench (VLDB 2024)、ReasonSTL (2026 过程监督强化学习转化可执行 STL 规约)、STARS (2025 STL 概念瓶颈)、TimeRFT (HKUST'26 质量感知分步奖励 $r_t$)、TimeHF (京东 6B 时序策略优化 TPO)、COUNTS (JHU NeurIPS'25 GRPO 可验证思维链推理)。
 
 ---
 
@@ -79,17 +79,17 @@ graph TD
     Root --> P2["Repurposed LLM4TS (Language Backbones)"]
     Root --> P3["Evaluations, Benchmarks & Critiques"]
 
-    P1 --> P1_SSM["State Space & Autoregressive Decoders<br/>(Chronos, TimesFM-3, Timer, S-Mamba, TimeMachine, Bi-Mamba+, QuantFlow)"]
-    P1 --> P1_Graph["Hierarchical Graphs & Earth Observation<br/>(GPT-ST, AmazonSWE, DeXposure-FM, Prithvi WxC, EarthPT, AgriFM, Presto)"]
-    P1 --> P1_Phys["Physics, 1-Bit & Continuous Streams<br/>(GridSFM, SurF, TradeFM, Sparse Binary, Q-DEQ, TQS-PTQ, MCU-FQT)"]
+    P1 --> P1_Multi["Multivariate & Memory Adapters<br/>(Falcon-X, UniCA, TS-Memory, iAmTime, S-Mamba, TimeMachine, Bi-Mamba+)"]
+    P1 --> P1_Active["Active Sensing, PDEs & Causal PFNs<br/>(STAP, L2D-SLDS, TCPFN, LaT-PFN, GridSFM, SurF, TradeFM, OpenCity)"]
+    P1 --> P1_Earth["Earth Observation & Graph Manifolds<br/>(Prithvi WxC, EarthPT, AmazonSWE, AgriFM, SpectralGPT, Changen2, Presto)"]
 
-    P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO)"]
-    P2 --> P2_Logic["Neuro-Symbolic & Temporal Logic<br/>(ReasonSTL, STARS, Candussio et al., Confidence-STL)"]
+    P2 --> P2_Route["Modality Routing & Evidence Agents<br/>(TSRouter, ZARA, PromptCast, TAC-Time, Time-VLM, VisionTS++)"]
+    P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO, LLM-Mixer)"]
     P2 --> P2_Agent["Policy Optimization & Swarms<br/>(TimeRFT, TimeHF, COUNTS, TimeMaster, TimeEvo, MC-Debate)"]
 
-    P3 --> P3_Bench["Hierarchical Graphs, Memory & DP Twins<br/>(Nguyen Memory, ChronoGraph, STOIC, TSGBench, DP-Subsampling, GIFT-Eval)"]
-    P3 --> P3_Conf["Conformal Coverage & Statistical Audits<br/>(Achour et al., Adaptive-CAD, RareCP, TSFMAudit, Familiarity Bias)"]
-    P3 --> P3_Energy["Energy, Quantization & Edge Suites<br/>(HoliBench, FM-CAC, QuantCalibration, Table 5, Table 8, Table 10)"]
+    P3 --> P3_Trans["Transferability, Scaling & Vintages<br/>(TimeTic, Diversified Scaling, VINTAGE-TS, Armory, ST-Prune, GIFT-Eval)"]
+    P3 --> P3_Graph["Hierarchical Graphs & Conformal Suites<br/>(GPT-ST, ChronoGraph, STOIC, DeXposure, Nguyen Memory, TSGBench)"]
+    P3 --> P3_Energy["Energy, Quantization & Edge Suites<br/>(HoliBench, FM-CAC, QuantCalibration, Beyond Numerical, AION, WorkflowBench)"]
 ```
 
 ---

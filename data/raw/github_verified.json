@@ -76,5 +76,17 @@
     "url": "https://github.com/SalesforceAIResearch/gift-eval",
     "stars": 262,
     "description": null
+  },
+  "TS-Memory": {
+    "repo": "sisuolv/TS-Memory",
+    "url": "https://github.com/sisuolv/TS-Memory",
+    "stars": 45,
+    "description": "TS-Memory: Plug-and-Play Memory for Time Series Foundation Models (KDD 2026)"
+  },
+  "ZARA": {
+    "repo": "zechenli03/ZARA",
+    "url": "https://github.com/zechenli03/ZARA",
+    "stars": 38,
+    "description": "ZARA: Training-Free Motion Time-Series Reasoning via Evidence-Grounded LLM Agents (ACL 2026)"
   }
 }

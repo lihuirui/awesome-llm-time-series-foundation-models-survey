@@ -49,18 +49,18 @@ def generate_taxonomy_figure():
     # 3 Main Branches
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
-            ("Autoregressive & State Space (SSM)", "Chronos, TimesFM-3, Timer, S-Mamba,\nTimeMachine, Bi-Mamba+, QuantFlow"),
-            ("Earth, Hydrology & Graph Manifolds", "Prithvi WxC, EarthPT, AmazonSWE,\nAgriFM, SpectralGPT, Changen2, Presto"),
-            ("Physics, 1-Bit & Continuous Streams", "GridSFM, SurF, TradeFM, Sparse Binary,\nQ-DEQ, TQS-PTQ, MCU-FQT, OpenCity")
+            ("Multivariate & Memory Adapters", "Falcon-X, UniCA, TS-Memory, iAmTime,\nS-Mamba, TimeMachine, Bi-Mamba+"),
+            ("Active Sensing, PDEs & Causal PFNs", "STAP, L2D-SLDS, TCPFN, LaT-PFN,\nGridSFM, SurF, TradeFM, OpenCity"),
+            ("Earth, Hydrology & Graph Manifolds", "Prithvi WxC, EarthPT, AmazonSWE,\nAgriFM, SpectralGPT, Changen2, Presto")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
+            ("Modality Routing & Evidence Agents", "TSRouter, ZARA, PromptCast,\nTAC-Time, Time-VLM, VisionTS++"),
             ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
-            ("Neuro-Symbolic & Temporal Logic", "ReasonSTL, STARS, Candussio et al.,\nConfidence-STL, PromptCast"),
             ("Multi-Agent & Policy Optimization", "TimeRFT, TimeHF, COUNTS, TimeMaster,\nTimeEvo, TimeInteract, Cast-R1")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Hierarchical Graph & Conformal Suites", "GPT-ST, ChronoGraph, STOIC, DeXposure,\nNguyen Memory, TSGBench, GIFT-Eval"),
-            ("Conformal Coverage & Statistical Audits", "Achour, Adaptive-CAD, RareCP,\nTSFMAudit, Familiarity Bias, Pan"),
+            ("Transferability, Scaling & Vintages", "TimeTic, Diversified Scaling, VINTAGE-TS,\nArmory, ST-Prune, GIFT-Eval, fev-bench"),
+            ("Hierarchical Graph & Conformal Suites", "GPT-ST, ChronoGraph, STOIC, DeXposure,\nNguyen Memory, TSGBench, RareCP"),
             ("Energy, Quantization & Edge Suites", "HoliBench, FM-CAC, QuantCalibration,\nBeyond Numerical, AION, WorkflowBench")
         ])
     ]
@@ -290,9 +290,21 @@ def generate_timeline_figure():
         (2024.24, 4.4, "TimeMachine", "ECAI", "#1f77b4"),
         (2024.38, 1.8, "LaT-PFN", "Amsterdam", "#1f77b4"),
         (2025.72, 1.9, "ChronoGraph", "Bitdefender", "#2ca02c"),
+        (2025.75, 4.4, "TimeTic", "Ming Jin", "#2ca02c"),
+        (2025.90, 0.9, "STAP", "KAIST", "#1f77b4"),
+        (2026.08, 1.8, "L2D-SLDS", "Toulouse", "#1f77b4"),
         (2026.10, 2.6, "DeXposure", "Edinburgh", "#1f77b4"),
+        (2026.12, 4.0, "TS-Memory", "HKUST/KDD", "#1f77b4"),
+        (2026.15, 2.5, "ST-Prune", "HKUST", "#1f77b4"),
+        (2026.22, 3.2, "iAmTime", "Walmart", "#1f77b4"),
+        (2026.40, 4.5, "Falcon-X", "BUPT", "#1f77b4"),
+        (2026.48, 1.4, "TCPFN", "Industrial AI", "#1f77b4"),
+        (2026.52, 2.7, "TSRouter", "COLM", "#d62728"),
         (2026.52, 4.2, "QuantFlow", "UMBC", "#1f77b4"),
-        (2026.69, 3.1, "AmazonSWE", "Delft", "#1f77b4")
+        (2026.58, 3.6, "Armory", "Georgia Tech", "#2ca02c"),
+        (2026.69, 3.1, "AmazonSWE", "Delft", "#1f77b4"),
+        (2026.72, 4.5, "VINTAGE-TS", "Frankfurt", "#2ca02c"),
+        (2025.62, 3.8, "ZARA", "ACL'26", "#d62728")
     ]
 
     # Draw timeline line
@@ -337,6 +349,7 @@ def generate_params_corpus_figure():
     param_data = [
         ("Cheraghinia", 2025.88, 2.1e4, "Native TSFM", "#1f77b4", (8, 0)),
         ("Q-DEQ", 2026.72, 3.0e5, "Native TSFM", "#1f77b4", (8, 4)),
+        ("TS-Memory", 2026.12, 5.0e5, "Native TSFM", "#1f77b4", (8, -8)),
         ("SparseBinary", 2023.60, 8.0e5, "Native TSFM", "#1f77b4", (8, 0)),
         ("Lag-Llama", 2023.85, 2.4e6, "Native TSFM", "#1f77b4", (8, 0)),
         ("LightGTS", 2025.45, 5.8e6, "Native TSFM", "#1f77b4", (8, -8)),
@@ -344,16 +357,19 @@ def generate_params_corpus_figure():
         ("ForecastPFN", 2023.90, 1.0e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("APEX-Edge", 2026.46, 1.05e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("SurF", 2026.42, 1.2e7, "Native TSFM", "#1f77b4", (8, 6)),
+        ("L2D-SLDS", 2026.08, 1.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("GridSFM", 2026.74, 1.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("SGA", 2026.74, 1.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("Tiny-TSM", 2025.90, 2.3e7, "Native TSFM", "#1f77b4", (8, 6)),
         ("Causal-PT", 2024.12, 2.5e7, "Native TSFM", "#1f77b4", (-14, 8)),
         ("OpenCity", 2024.62, 2.6e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("ICTSP", 2024.35, 4.2e7, "Native TSFM", "#1f77b4", (8, 0)),
+        ("STAP", 2025.90, 4.5e7, "Native TSFM", "#1f77b4", (8, 6)),
         ("FLAME", 2025.95, 4.5e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("CaTSG", 2025.75, 4.5e7, "Native TSFM", "#1f77b4", (-10, -8)),
         ("UrbanDiT", 2024.90, 4.5e7, "Native TSFM", "#1f77b4", (8, 6)),
         ("Timer", 2024.15, 8.4e7, "Native TSFM", "#1f77b4", (8, -8)),
+        ("TCPFN", 2026.48, 8.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("CausalTimePrior", 2026.20, 8.5e7, "Native TSFM", "#1f77b4", (8, -8)),
         ("VisionTS", 2024.65, 8.6e7, "LLM4TS / VLM", "#d62728", (8, -9)),
         ("VisionTS++", 2025.62, 8.6e7, "LLM4TS", "#d62728", (8, 6)),
@@ -362,16 +378,20 @@ def generate_params_corpus_figure():
         ("EIDOS", 2026.12, 8.8e7, "Native TSFM", "#1f77b4", (8, 0)),
         ("VLT", 2026.54, 1.1e8, "LLM4TS", "#d62728", (8, -8)),
         ("UrbanFM", 2026.15, 1.2e8, "Native TSFM", "#1f77b4", (8, -8)),
+        ("UniCA", 2025.50, 1.2e8, "Native TSFM", "#1f77b4", (8, 6)),
+        ("VINTAGE-TS", 2026.72, 1.2e8, "Native TSFM", "#2ca02c", (8, -8)),
         ("Tabby", 2026.70, 1.2e8, "Native TSFM", "#1f77b4", (-12, 7)),
         ("LLM4TS", 2023.65, 1.24e8, "LLM4TS", "#d62728", (8, 0)),
         ("TiRex", 2025.40, 1.5e8, "Native TSFM", "#1f77b4", (8, 6)),
         ("Toto 1.0", 2025.38, 1.51e8, "Native TSFM", "#1f77b4", (-14, -12)),
         ("TimesFM", 2023.85, 2.0e8, "Native TSFM", "#1f77b4", (8, 0)),
         ("PromptCast", 2022.85, 2.2e8, "LLM4TS", "#d62728", (8, 0)),
+        ("Falcon-X", 2026.40, 2.3e8, "Native TSFM", "#1f77b4", (8, 6)),
         ("APEX-Large", 2026.46, 2.69e8, "Native TSFM", "#1f77b4", (8, -8)),
         ("Moirai", 2024.15, 3.11e8, "Native TSFM", "#1f77b4", (8, -8)),
         ("Chronicle", 2026.38, 3.24e8, "LLM4TS", "#d62728", (8, 6)),
         ("TimesFM-3", 2026.65, 3.3e8, "Native TSFM", "#1f77b4", (8, 0)),
+        ("iAmTime", 2026.22, 3.5e8, "Native TSFM", "#1f77b4", (8, -8)),
         ("TAC-Time", 2026.72, 3.5e8, "LLM4TS", "#d62728", (8, 6)),
         ("$t_0$", 2026.70, 3.5e8, "Native TSFM", "#1f77b4", (-12, -12)),
         ("MOMENT", 2024.15, 3.85e8, "Native TSFM", "#1f77b4", (8, 8)),
@@ -385,9 +405,11 @@ def generate_params_corpus_figure():
         ("TimeHF", 2025.08, 6.0e9, "Native TSFM", "#1f77b4", (8, 6)),
         ("UrbanGPT", 2024.15, 7.0e9, "LLM4TS", "#d62728", (8, 6)),
         ("Time-LLM", 2023.80, 7.0e9, "LLM4TS", "#d62728", (-12, 7)),
+        ("ZARA", 2025.62, 7.0e9, "LLM4TS", "#d62728", (8, 6)),
         ("AutoTimes", 2024.15, 7.0e9, "LLM4TS", "#d62728", (8, -9)),
         ("Time-VLM", 2025.10, 7.0e9, "LLM4TS", "#d62728", (8, -9)),
         ("ChatTS", 2024.95, 8.0e9, "LLM4TS", "#d62728", (-12, 8)),
+        ("TSRouter", 2026.52, 8.0e9, "LLM4TS", "#d62728", (8, 6)),
         ("TimeOmni-1", 2025.75, 8.0e9, "LLM4TS", "#d62728", (-14, 8)),
         ("TimeOmni-VL", 2026.15, 9.0e9, "LLM4TS", "#d62728", (8, 7)),
         ("Timer-S1", 2026.20, 8.3e9, "Native TSFM", "#1f77b4", (8, -10)),
@@ -430,6 +452,7 @@ def generate_params_corpus_figure():
         ("TSMix (Chronos)", 2024.20, 8.4e10, "#1f77b4", (8, -3)),
         ("TimesFM Corpus", 2023.85, 1e11, "#1f77b4", (8, -3)),
         ("TradeFM LOB Events", 2026.12, 1e11, "#1f77b4", (8, 0)),
+        ("iAmTime Multi-Task", 2026.22, 1.2e11, "#1f77b4", (8, -8)),
         ("$t_0$ Corpus", 2026.70, 1.2e11, "#1f77b4", (8, -12)),
         ("Tabby Open Corpus", 2026.70, 1.5e11, "#1f77b4", (8, 6)),
         ("MERRA-2/ERA5 (Prithvi WxC)", 2024.72, 2.5e11, "#1f77b4", (8, -8)),

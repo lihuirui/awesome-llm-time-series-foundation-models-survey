@@ -8218,5 +8218,668 @@
     "retrieved_at": "2026-09-27 05:42:05",
     "status": "excluded_title",
     "exclusion_reason": "EC1: Tabular foundation model lacking native temporal sequential dependencies"
+  },
+  {
+    "id": "arxiv:2509.23695",
+    "arxiv_id": "2509.23695",
+    "title": "Estimating Time Series Foundation Model Transferability via In-Context Learning",
+    "authors": [
+      "Yao, Qingren",
+      "Jin, Ming",
+      "Zhang, Chengqi",
+      "Yang, Chao-Han Huck",
+      "Qi, Jun",
+      "Pan, Shirui"
+    ],
+    "release_date": "2025-09-28",
+    "summary": "Time series foundation models (TSFMs) offer strong zero-shot forecasting via large-scale pre-training, yet fine-tuning remains critical for boosting performance in domains with limited public data. With the growing number of TSFMs, efficiently identifying the best model for downstream fine-tuning becomes increasingly challenging. In this work, we introduce TimeTic, a transferability estimation framework that recasts model selection as an in-context-learning problem: given observations on known (source) datasets, it predicts how a TSFM will perform after fine-tuning on a downstream (target) dataset. TimeTic flexibly organizes the observed model-data relationships as contextual information, allowing it to adapt seamlessly to various test-time scenarios. Leveraging the natural tabular structure formed by dataset meta-features, model characteristics, and fine-tuned performance, we employ tabular foundation models to serve as in-context learners. We further introduce a novel model characterization based on entropy evolution across model layers, capturing embedding-space distinctions and enabling TimeTic to generalize across arbitrary model sets. We establish a comprehensive benchmark for transferability estimation including 10 datasets, 10 foundation models, and 3 forecasting tasks. On this benchmark, TimeTic's estimation demonstrates strong alignment with actual fine-tuned performance for previously unseen datasets, achieving a mean rank correlation of approximately 0.6 and a 30% improvement compared to using zero-shot performance as the transferability score.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "yao2025timetic",
+    "group": "Ming Jin",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "In-Context Transferability Estimator via Tabular FM (TimeTic)",
+    "tokenization": "Dataset Meta-Features and Layer-Wise Entropy Evolution Embeddings",
+    "prediction_head": "In-Context Fine-Tuned Performance Rank Predictor",
+    "params": "not reported",
+    "pretrain_corpus": "10 Datasets, 10 Foundation Models, 3 Forecasting Tasks",
+    "tasks": [
+      "Transferability Estimation",
+      "Model Selection",
+      "Zero-Shot Rank Correlation"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2509.23695",
+    "url": "https://arxiv.org/abs/2509.23695"
+  },
+  {
+    "id": "arxiv:2602.11550",
+    "arxiv_id": "2602.11550",
+    "title": "TS-Memory: Plug-and-Play Memory for Time Series Foundation Models",
+    "authors": [
+      "Lyu, Sisuo",
+      "Zhong, Siru",
+      "Chen, Tiegang",
+      "Ruan, Weilin",
+      "Liu, Qingxiang",
+      "Lv, Taiqiang",
+      "Wen, Qingsong",
+      "Wong, Raymond Chi-Wing",
+      "Liang, Yuxuan"
+    ],
+    "release_date": "2026-02-12",
+    "summary": "Time Series Foundation Models (TSFMs) achieve strong zero-shot forecasting through large-scale pre-training, but adapting them to downstream domains under distribution shift remains challenging. Existing solutions face a trade-off: Parametric Adaptation can cause catastrophic forgetting and requires costly multi-domain maintenance, while Non-Parametric Retrieval improves forecasts but incurs high inference latency due to datastore search. We propose Parametric Memory Distillation and implement it as TS-Memory, a lightweight memory adapter that augments frozen TSFMs. TS-Memory is trained in two stages. First, we construct an offline, retrieval-leakage-safe kNN teacher that synthesizes confidence-aware quantile targets from retrieved futures. Second, we distill this retrieval-induced distributional correction into a lightweight memory adapter via confidence-gated supervision. During inference, TS-Memory fuses memory and backbone predictions with constant-time overhead, enabling retrieval-free deployment. Experiments across diverse TSFMs and benchmarks demonstrate consistent improvements in both point and probabilistic forecasting over representative adaptation methods, with efficiency comparable to the frozen backbone. Code: https://github.com/sisuolv/TS-Memory.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "lyu2026tsmemory",
+    "group": "Other",
+    "paradigm": "Native TSFM",
+    "architecture": "Plug-and-Play Confidence-Gated Memory Adapter (TS-Memory)",
+    "tokenization": "Temporal Patch Embeddings with Parametric Memory Keys",
+    "prediction_head": "Confidence-Gated Quantile Distillation Head",
+    "params": "0.5M",
+    "pretrain_corpus": "Leakage-Safe kNN Teacher on Target Datastores (ChronosBolt Backbone)",
+    "tasks": [
+      "Negative Transfer Prevention",
+      "Constant-Time Retrieval Adaptation",
+      "Probabilistic Forecasting"
+    ],
+    "open_weights": true,
+    "venue": "KDD 2026",
+    "code_url": "https://github.com/sisuolv/TS-Memory",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2602.11550",
+    "url": "https://arxiv.org/abs/2602.11550"
+  },
+  {
+    "id": "arxiv:2605.27286",
+    "arxiv_id": "2605.27286",
+    "title": "Falcon-X: A Time Series Foundation Model for Heterogeneous Multivariate Modeling",
+    "authors": [
+      "Liu, Yiding",
+      "Hu, Yifan",
+      "Xia, Hongjie",
+      "Liu, Peiyuan",
+      "Chen, Hongzhou",
+      "Dai, Xilin",
+      "Dong, Zewei",
+      "Yang, Jiang-Ming"
+    ],
+    "release_date": "2026-05-26",
+    "summary": "Time series foundation models (TSFMs) are transforming the forecasting paradigm through large-scale cross-domain pretraining. However, most existing TSFMs remain univariate, and recent efforts to enable cross-variate modeling still operate directly within the raw variate space. This design introduces fundamental limitations in semantic alignment and relational expressivity. Specifically, raw-space group mixing lacks a dedicated mechanism to align heterogeneous physical quantities, while standard non-negative attention fails to capture the complex synergistic and antagonistic interactions ubiquitous in real-world systems. To address these challenges, we propose Falcon-X, decouples variates from the raw space and maps them into a unified latent prototype space. Falcon-X employs a Unified Prototype Diff-Attention mechanism that explicitly evaluates both positive and negative semantic affinities to explicitly align heterogeneous variates. Cross-variate interactions are then efficiently performed within this shared space via Latent Entity Attention, naturally facilitating zero-shot structural transfer. Finally, a Variate Reassembly Router robustly reconstructs variate-specific trajectories via a request-and-dispatch mechanism. Extensive evaluations on the GIFT-Eval and fev-bench benchmarks demonstrate that Falcon-X achieves excellent forecasting performance, offering a principled and scalable paradigm for complex multivariate environments. Falcon-X is publicly released to support future research.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "liu2026falconx",
+    "group": "Other",
+    "paradigm": "Native TSFM",
+    "architecture": "Unified Prototype Diff-Attention + Variate Reassembly Router (Falcon-X)",
+    "tokenization": "Decoupled Cross-Variate Latent Prototypes",
+    "prediction_head": "Request-and-Dispatch Variate Trajectory Head",
+    "params": "230M",
+    "pretrain_corpus": "Cross-Domain Heterogeneous Multivariate Pretraining Corpus",
+    "tasks": [
+      "Heterogeneous Multivariate Forecasting",
+      "Zero-Shot Structural Transfer",
+      "Antagonistic Variate Modeling"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2605.27286",
+    "url": "https://arxiv.org/abs/2605.27286"
+  },
+  {
+    "id": "arxiv:2506.22039",
+    "arxiv_id": "2506.22039",
+    "title": "UniCA: Unified Covariate Adaptation for Time Series Foundation Model",
+    "authors": [
+      "Han, Lu",
+      "Liu, Yu",
+      "Li, Lan",
+      "Deng, Qiwen",
+      "Jiang, Jian",
+      "Sun, Yinbo",
+      "Yu, Zhe",
+      "Wang, Binfeng",
+      "Lu, Xingyu",
+      "Ma, Lintao",
+      "Ye, Han-Jia",
+      "Zhan, De-Chuan"
+    ],
+    "release_date": "2025-06-27",
+    "summary": "Time Series Foundation Models (TSFMs) have achieved remarkable success through large-scale pretraining. However, their design primarily targets real-valued series, limiting their ability to handle general forecasting tasks involving diverse and often heterogeneous covariates -- such as categorical variables and multimodal data (e.g., images, text) -- which are typically task-specific and difficult to leverage during pretraining. To address this gap, we propose Unified Covariate Adaptation (UniCA), a framework to bridge TSFMs with general covariate-aware forecasting. UniCA first performs covariate homogenization to transform heterogeneous covariates into high-level homogeneous series representations and then fuses them via a unified attention-based fusion mechanism. UniCA is compatible and universal for adaptation with both homogeneous and heterogeneous covariates, incorporating extra covariate information while preserving the generalization ability of TSFMs.Extensive experiments on multiple unimodal and multimodal covariate-aware forecasting benchmarks demonstrate the superiority of UniCA, highlighting the promise of covariate-aware TSFM adaptation in real-world forecasting scenarios.Code: https://github.com/hanlu-nju/UniCA.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "han2025unica",
+    "group": "Other",
+    "paradigm": "Native TSFM",
+    "architecture": "Unified Covariate Adaptation with Pre/Post-Fusion Transformer (UniCA)",
+    "tokenization": "Homogenized Dense Covariate Continuous Tokens",
+    "prediction_head": "Covariate-Conditioned Autoregressive Head",
+    "params": "120M",
+    "pretrain_corpus": "Multi-Modal & Categorical Covariate Series Benchmark",
+    "tasks": [
+      "Heterogeneous Covariate Integration",
+      "Multimodal Forecasting",
+      "Zero-Shot Transfer"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2506.22039",
+    "url": "https://arxiv.org/abs/2506.22039"
+  },
+  {
+    "id": "arxiv:2601.17376",
+    "arxiv_id": "2601.17376",
+    "title": "Diversified Scaling Inference in Time Series Foundation Models",
+    "authors": [
+      "Hua, Ruijin",
+      "Liu, Zichuan",
+      "Zhang, Kun",
+      "Yang, Yiyuan"
+    ],
+    "release_date": "2026-01-24",
+    "summary": "The advancement of Time Series Foundation Models (TSFMs) has been driven primarily by large-scale pre-training, but inference-time compute potential remains largely untapped. This work systematically investigates two questions: how do TSFMs behave under standard sampling-based inference scaling, and can controlled sampling diversity enhance performance? We first examine the properties of TSFMs under standard sampling often fail to adhere to scaling laws due to insufficient exploration of the solution space. Building on this, we then delve into diversified inference scaling via tailored time series perturbations to expand the generative distribution's support. We theoretically analyze the diversity-fidelity trade-off and derive a critical sample threshold for diversified sampling to outperform standard sampling. Extensive experiments across various TSFMs and datasets show proper diversified inference scaling yields substantial performance gains without parameter updates, establishing inference design as a critical, compute-efficient dimension of TSFM optimization. As an application, we propose RobustMSE, a rigorous metric to quantify the headroom performance of TSFM under a fixed budget. Overall, our findings clarify these factor interactions, enabling reliable performance via diverse large-scale inference time series in parallel environments without re-training TSFMs.",
+    "comment": "23 pages, 16 figures, 9 tables",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "hua2026diversified",
+    "group": "Other",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Perturbation-Guided Diversified Scaling Inference Framework",
+    "tokenization": "Tailored Temporal Signal Perturbations and Latent Anchors",
+    "prediction_head": "Pareto-Optimal Diversity-Fidelity Selection Head",
+    "params": "Evaluated on Chronos, TimesFM, MOIRAI",
+    "pretrain_corpus": "Cross-Domain Zero-Shot Benchmark Suite",
+    "tasks": [
+      "Inference-Time Compute Scaling",
+      "RobustMSE Headroom Evaluation",
+      "Diversity-Fidelity Profiling"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2601.17376",
+    "url": "https://arxiv.org/abs/2601.17376"
+  },
+  {
+    "id": "arxiv:2603.22586",
+    "arxiv_id": "2603.22586",
+    "title": "A Foundation Model for Instruction-Conditioned In-Context Time Series Tasks",
+    "authors": [
+      "Saha, Anish",
+      "Shmakov, Konstantin"
+    ],
+    "release_date": "2026-03-23",
+    "summary": "In-context learning (ICL) enables task adaptation at inference time by conditioning on demonstrations rather than updating model parameters. Although recent time-series foundation models incorporate contextual conditioning, retrieval, or example-based prompting, they typically rely on implicit positional structure or task-specific objectives rather than explicit instruction-conditioned input-output demonstrations. We introduce iAmTime, a time-series foundation model trained with instruction-conditioned amortized meta-learning to infer tasks directly from example demonstrations. iAmTime represents each episode as a structured prompt over historical context and future-known variables using specialized semantic tokens that attend to designated time-series regions, exchange information across demonstrations, and inject task information into the query representation. The model combines a Hierarchical Multi-Scope Transformer Encoder, which captures temporal and covariate dynamics while inferring latent task structure from demonstrated input-output mappings, with a Task-Conditioned Patch Decoder, which adapts decoding through expert-based routing. We train iAmTime on large-scale real and synthetic corpora using supervised and self-supervised instruction-conditioned tasks, including forecasting, imputation, reconstruction, classification, anomaly detection, and source de-mixing. Across diverse domains, frequencies, and horizons, iAmTime improves zero-shot adaptation over strong time-series foundation baselines on probabilistic and point forecasting benchmarks, while achieving competitive or superior performance on four non-forecasting tasks.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "saha2026iamtime",
+    "group": "Walmart",
+    "paradigm": "Native TSFM",
+    "architecture": "Hierarchical Multi-Scope Transformer + Task-Conditioned Patch Decoder (iAmTime)",
+    "tokenization": "Instruction-Conditioned Semantic Demonstration Tokens",
+    "prediction_head": "Expert-Routed Task-Adaptive Forecasting/Classification Head",
+    "params": "350M",
+    "pretrain_corpus": "Synthesized & Real Multi-Task Time-Series Corpus (>120B observations)",
+    "tasks": [
+      "In-Context Demonstration Adaptation",
+      "Multi-Task Time-Series Inference",
+      "Source De-mixing"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2603.22586",
+    "url": "https://arxiv.org/abs/2603.22586"
+  },
+  {
+    "id": "arxiv:2607.08940",
+    "arxiv_id": "2607.08940",
+    "title": "TSRouter: Dynamic Modality-Model Selection for Time Series Reasoning",
+    "authors": [
+      "Yu, Fangxu",
+      "Feng, Tao",
+      "Min, Dehai",
+      "Cheng, Lu",
+      "Liu, Ge",
+      "Zhou, Tianyi"
+    ],
+    "release_date": "2026-07-09",
+    "summary": "Time series reasoning is essential for real-world problem-solving. While both Large Language Models (LLMs) and Vision-Language Models (VLMs) can reason about time-series data, their capabilities are complementary: LLMs process time series as text sequences and thus preserve exact numerical understanding, but struggle with global patterns, whereas VLMs efficiently capture these patterns by visualizing time series but may lose fine-grained details. Moreover, models vary significantly in task-specific expertise and inference costs. Dynamically selecting the most suitable modality and model for each query is therefore crucial, yet challenging because it requires modeling the complex interactions among tasks, queries, modalities, and models, which carry rich contextual signals. To this end, we introduce TSRouter, a graph-based dynamic routing framework. TSRouter constructs a heterogeneous graph of task, query, modality, and model nodes to contextualize the interactions among query characteristics, modality attributes, and model capabilities. TSRouter formulates routing as a candidate scoring problem, where each modality-model pair is evaluated based on user-defined performance-cost preferences to select the optimal candidate. Comprehensive evaluations on 4 distinct time series reasoning tasks reveal that TSRouter substantially outperforms diverse baselines with 16\\% to 46\\% relative improvements. Furthermore, TSRouter demonstrates robust zero-shot plug-and-play generalization to unseen models and novel tasks and preserves high performance while reducing computational overhead through cost-aware optimization. Our code is available at https://github.com/tianyi-lab/TSRouter.",
+    "comment": "Accepted to COLM 2026",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "yu2026tsrouter",
+    "group": "Other",
+    "paradigm": "LLM4TS",
+    "architecture": "Heterogeneous Graph Dynamic Modality-Model Scoring Router (TSRouter)",
+    "tokenization": "Bipartite Query-Model Graph Node Representations",
+    "prediction_head": "Cost-Performance Pareto Scoring Head",
+    "params": "8B",
+    "pretrain_corpus": "Multi-Modality Time Series Reasoning Benchmark (LLM + VLM + TSFM)",
+    "tasks": [
+      "Dynamic Modality Selection",
+      "Cost-Constrained Routing",
+      "Time Series Reasoning"
+    ],
+    "open_weights": true,
+    "venue": "COLM 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2607.08940",
+    "url": "https://arxiv.org/abs/2607.08940"
+  },
+  {
+    "id": "arxiv:2606.20889",
+    "arxiv_id": "2606.20889",
+    "title": "Temporal Causal Prior-Data Fitted Networks for Panel Data with Learned Reliability Signals",
+    "authors": [
+      "Talupula, Shravan",
+      "Sharma, Saurabh"
+    ],
+    "release_date": "2026-06-18",
+    "summary": "Estimating causal effects in industrial time series requires handling temporal dynamics, time-varying treatments, and unobserved confounders. Existing causal foundation models (CausalPFN, CausalFM) operate only on static cross-sectional data; neural temporal methods (CRN, G-Net) require per-dataset training; and concurrent temporal-PFN proposals have not been demonstrated at industrial scale. None output explicit per-pair reliability signals alongside their CATE estimates. We introduce Temporal Causal Prior-Data Fitted Networks (TCPFN), a foundation model for zero-shot temporal causal discovery with learned reliability signals. TCPFN makes four contributions: (1) a Causal Judgment Head that jointly predicts null-effect probability, confounding strength, identifiability, mediation fraction, and causal regime; (2) a mixed training prior covering six causal regimes (independent, direct, confounded, mediated, time-varying confounded, feedback) plus CausalFM-style front-door and instrumental-variable priors; (3) a discrete-token panel-data architecture with cross-attention masking that prevents inter-horizon leakage; (4) zero-shot inference at industrial scale via FAISS-based context selection and one-step posterior correction. On 19 benchmark datasets across five domains, TCPFN achieves competitive zero-shot causal discovery: AUROC 0.96 on Tennessee Eastman, 0.93 on SWaT, 0.98 on Causal Rivers, 0.97 on CAUSRCA. The null detector reaches NullF1 0.94, AUROC 0.99. TCPFN scales to V=1,275 on a proprietary Kraft pulp-and-paper dataset in 6 hours on a single GPU; PCMCI, a CPU-only library, on a V=666 sub-panel of the same data took 81.5 hours, extrapolating by O(V^2) to ~12.5 days at V=1,275. TCPFN's top edges identify cross-subsystem causal relationships while PCMCI's surface within-instrument controller-measurement coupling -- a scalability case study.",
+    "comment": "42 pages, 6 figures, 9 tables. Code and pretrained checkpoint to be released",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "talupula2026tcpfn",
+    "group": "Other",
+    "paradigm": "Native TSFM",
+    "architecture": "Discrete-Token Prior-Data Fitted Network with Causal Head (TCPFN)",
+    "tokenization": "Cross-Attention Masked Panel Tokens on Non-Stationary Dynamics",
+    "prediction_head": "Learned Reliability Signals & Temporal Causal Judgment Head",
+    "params": "85M",
+    "pretrain_corpus": "Synthetic Structural Causal Models with Delayed/Oscillating Regimes",
+    "tasks": [
+      "Zero-Shot Temporal Causal Discovery",
+      "Reliability Signal Estimation",
+      "Industrial Panel Diagnostics"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2606.20889",
+    "url": "https://arxiv.org/abs/2606.20889"
+  },
+  {
+    "id": "arxiv:2609.28576",
+    "arxiv_id": "2609.28576",
+    "title": "Time-Series Foundation Models That Understand Data Revisions",
+    "authors": [
+      "Ahmad, Taimoor"
+    ],
+    "release_date": "2026-09-23",
+    "summary": "Historical observations are not always fixed: statistical agencies revise previously published values as new evidence arrives. Forecasting from a contemporary download can therefore expose a model to information unavailable at the date it purportedly made a prediction. We propose VINTAGE-TS, a revision-aware adaptation of a time-series foundation model that distinguishes observation time from information-availability time. Its targets are the next period's first-published value and the value available a fixed number of days after that publication; neither is declared final truth. A joint predictive distribution preserves dependence between these targets and exposes uncertainty about their difference. We specify an ALFRED-based rolling evaluation, a matched Chronos-2 comparison, conventional and revision-aware baselines, and a separate audit of pretraining overlap. The accompanying software implements validity-interval reconstruction, delayed-label filtering, a frozen-backbone adapter interface, and reproducible diagnostics. An executed synthetic demonstration and a 25-configuration sensitivity suite verify the workflow, expose variation across seeds and revision regimes, and illustrate how hindsight contamination changes measured performance. Thirty one automated tests check temporal and integration contracts. Real ALFRED and Chronos-2 experiments have not been executed; no empirical foundation-model advantage is claimed.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "ahmad2026vintagets",
+    "group": "Other",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Revision-Aware Vintage Joint Adapter (VINTAGE-TS / Chronos-2)",
+    "tokenization": "Observation-Time vs Availability-Time Dual-Index Tokenization",
+    "prediction_head": "Dual-Horizon Initial-Release & Mature-Vintage Head",
+    "params": "120M",
+    "pretrain_corpus": "ALFRED Real-Time Macroeconomic Vintage Database",
+    "tasks": [
+      "Hindsight Contamination Auditing",
+      "Real-Time Vintage Forecasting",
+      "Delayed-Label Tracking"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2609.28576",
+    "url": "https://arxiv.org/abs/2609.28576"
+  },
+  {
+    "id": "arxiv:2602.19113",
+    "arxiv_id": "2602.19113",
+    "title": "Learning from Complexity: Exploring Dynamic Sample Pruning of Spatio-Temporal Training",
+    "authors": [
+      "Chen, Wei",
+      "Chen, Junle",
+      "Wu, Yuqian",
+      "Liang, Yuxuan",
+      "Zhou, Xiaofang"
+    ],
+    "release_date": "2026-02-22",
+    "summary": "Spatio-temporal forecasting is fundamental to intelligent systems in transportation, climate science, and urban planning. However, training deep learning models on the massive, often redundant, datasets from these domains presents a significant computational bottleneck. Existing solutions typically focus on optimizing model architectures or optimizers, while overlooking the inherent inefficiency of the training data itself. This conventional approach of iterating over the entire static dataset each epoch wastes considerable resources on easy-to-learn or repetitive samples. In this paper, we explore a novel training-efficiency techniques, namely learning from complexity with dynamic sample pruning, ST-Prune, for spatio-temporal forecasting. Through dynamic sample pruning, we aim to intelligently identify the most informative samples based on the model's real-time learning state, thereby accelerating convergence and improving training efficiency. Extensive experiments conducted on real-world spatio-temporal datasets show that ST-Prune significantly accelerates the training speed while maintaining or even improving the model performance, and it also has scalability and universality.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "chen2026stprune",
+    "group": "Other",
+    "paradigm": "Native TSFM",
+    "architecture": "Complexity-Aware Dynamic Sample Pruning Framework (ST-Prune)",
+    "tokenization": "Loss-Gradient Spatio-Temporal Information Slices",
+    "prediction_head": "Accelerated Dynamic Convergence Head",
+    "params": "not reported",
+    "pretrain_corpus": "Large-Scale Spatio-Temporal Transportation & Climate Datasets",
+    "tasks": [
+      "Dynamic Sample Pruning",
+      "Hardware-Efficient Pretraining",
+      "Spatio-Temporal Acceleration"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2602.19113",
+    "url": "https://arxiv.org/abs/2602.19113"
+  },
+  {
+    "id": "arxiv:2511.18107",
+    "arxiv_id": "2511.18107",
+    "title": "Active Learning with Selective Time-Step Acquisition for PDEs",
+    "authors": [
+      "Kim, Yegon",
+      "Kim, Hyunsu",
+      "Ko, Gyeonghoon",
+      "Lee, Juho"
+    ],
+    "release_date": "2025-11-22",
+    "summary": "Accurately solving partial differential equations (PDEs) is critical to understanding complex scientific and engineering phenomena, yet traditional numerical solvers are computationally expensive. Surrogate models offer a more efficient alternative, but their development is hindered by the cost of generating sufficient training data from numerical solvers. In this paper, we present a novel framework for active learning in PDE surrogate modeling that reduces this cost. Unlike the existing AL methods for PDEs that always acquire entire PDE trajectories, our approach, STAP (**S**elective **T**ime-Step **A**cquisition for **P**DEs), strategically generates only the most important time steps with the numerical solver, while employing the surrogate model to approximate the remaining steps. This reduces the cost incurred by each trajectory and thus allows the active learning algorithm to try out a more diverse set of trajectories given the same budget. To accommodate this novel framework, we develop an acquisition function that estimates the utility of a set of time steps by approximating its resulting variance reduction. We demonstrate the effectiveness of our method on several benchmark PDEs.",
+    "comment": "This manuscript is an improvement over the camera-ready version in ICML 2025. We have added a clearer motivation for our acquisition function. (See Sections 2.3 and 3.2)",
+    "journal_ref": "ICML 2025",
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "kim2025stap",
+    "group": "KAIST",
+    "paradigm": "Native TSFM",
+    "architecture": "Selective Time-Step Acquisition Physical Surrogate Model (STAP)",
+    "tokenization": "Non-Uniform Temporal Discretization Slices",
+    "prediction_head": "Variance-Reduction Information Acquisition Head",
+    "params": "45M",
+    "pretrain_corpus": "Nonlinear Navier-Stokes & Reaction-Diffusion PDE Trajectories",
+    "tasks": [
+      "Active Sensor Acquisition",
+      "Variance Reduction",
+      "PDE Surrogate Acceleration"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2511.18107",
+    "url": "https://arxiv.org/abs/2511.18107"
+  },
+  {
+    "id": "arxiv:2601.22538",
+    "arxiv_id": "2601.22538",
+    "title": "Learning-to-Defer in Non-Stationary Time Series via Switching State-Space Models",
+    "authors": [
+      "Montreuil, Yannis",
+      "Yu, Letian",
+      "Carlier, Axel",
+      "Ng, Lai Xing",
+      "Ooi, Wei Tsang"
+    ],
+    "release_date": "2026-01-30",
+    "summary": "Learning-to-defer (L2D) routes each decision to a system's own predictor or to an external expert. Streaming time-series settings break the offline-L2D assumptions: the data are non-stationary, expert availability shifts over time, and the internal predictor is trained online. We propose L2D-SLDS, a one-stage online L2D framework based on a factorized switching linear-Gaussian state-space model over all potential residuals: a discrete regime, a shared global factor, and per-expert idiosyncratic states. The always-observed internal residual continuously updates beliefs about every unqueried expert through the shared factor, and a learner-aware query score balances immediate cost against latent-state information gain and one-step learner improvement. We prove an oracle inequality against a time-varying learn-and-defer comparator, decomposing regret into a query-bonus budget, an SLDS predictive-cost-error term~$\\mathcal{E}_{\\mathrm{SLDS}}$, and the internal learner's interval dynamic regret. On synthetic, Melbourne, Jena, and 24-expert Delhi benchmarks, L2D-SLDS is competitive with or improves on contextual- and non-stationary-bandit baselines while deferring on ${<}2\\%$ of real-data rounds.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "montreuil2026l2dslds",
+    "group": "Other",
+    "paradigm": "Native TSFM",
+    "architecture": "Factorized Switching Linear-Gaussian State-Space Model (L2D-SLDS)",
+    "tokenization": "Regime, Shared Global, and Idiosyncratic State Projections",
+    "prediction_head": "Information-Gain Learner-Aware Query Deferral Score",
+    "params": "15M",
+    "pretrain_corpus": "Non-Stationary Streaming Multi-Sensor Telemetry Trajectories",
+    "tasks": [
+      "Online Learning-to-Defer",
+      "Active Sensor Querying",
+      "Switching Dynamics Tracking"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2601.22538",
+    "url": "https://arxiv.org/abs/2601.22538"
+  },
+  {
+    "id": "arxiv:2508.04038",
+    "arxiv_id": "2508.04038",
+    "title": "ZARA: Training-Free Motion Time-Series Reasoning via Evidence-Grounded LLM Agents",
+    "authors": [
+      "Li, Zechen",
+      "Chen, Baiyu",
+      "Xue, Hao",
+      "Salim, Flora D."
+    ],
+    "release_date": "2025-08-06",
+    "summary": "Motion sensor time-series are central to Human Activity Recognition (HAR), yet conventional approaches are constrained to fixed activity sets and typically require costly parameter retraining to adapt to new behaviors. While Large Language Models (LLMs) offer promising open-set reasoning capabilities, applying them directly to numerical time-series often leads to hallucinations and weak grounding. To address this challenge, we propose ZARA (Zero-training Activity Reasoning Agents), a knowledge- and retrieval-augmented agentic framework for motion time-series reasoning in a training-free inference setting. Rather than relying on black-box projections, ZARA distills reference data into a statistically grounded textual knowledge base that transforms implicit signal patterns into verifiable natural-language priors. Guided by retrieved evidence, ZARA iteratively selects discriminative cues and performs grounded reasoning over candidate activities. Extensive experiments on eight benchmarks show that ZARA generalizes robustly to unseen subjects and across datasets, demonstrating strong transferability across heterogeneous sensor domains. These results mark a step toward trustworthy, plug-and-play motion understanding beyond dataset-specific artifacts. Our code is available at https://github.com/zechenli03/ZARA.",
+    "comment": "Accepted by ACL 2026 Main Conference",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "li2025zara",
+    "group": "Flora Salim",
+    "paradigm": "LLM4TS",
+    "architecture": "Evidence-Grounded Agentic Reasoning Framework (ZARA / MOMENT)",
+    "tokenization": "Placement-Specific Sensor Anchor Embeddings",
+    "prediction_head": "Verifiable Textual Evidence-Grounded Reasoning Head",
+    "params": "7B",
+    "pretrain_corpus": "UCI-HAR and USC-HAD Inertial Motion Sensor Repositories",
+    "tasks": [
+      "Active Sensor Placement Adaptation",
+      "Zero-Training Motion Reasoning",
+      "Evidence-Grounded HAR"
+    ],
+    "open_weights": true,
+    "venue": "ACL 2026",
+    "code_url": "https://github.com/zechenli03/ZARA",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2508.04038",
+    "url": "https://arxiv.org/abs/2508.04038"
+  },
+  {
+    "id": "arxiv:2608.00337",
+    "arxiv_id": "2608.00337",
+    "title": "Action Chunk Scheduling for Batched Robot Policy Serving",
+    "authors": [
+      "Bansal, Rohan",
+      "He, David",
+      "Arachchige, Nadun Ranawaka",
+      "Chen, Zhenyang",
+      "Kim, Soobum",
+      "Rong, Kexin",
+      "Xu, Danfei"
+    ],
+    "release_date": "2026-07-31",
+    "summary": "Deploying robot foundation models at scale is the next step towards realizing the potential of general-purpose robots. However, Vision-Language-Action (VLA) and other foundation models are computationally demanding, and on-device compute is constrained by power and space. In this paper, we introduce the problem of serving a robot policy to multiple robots from a remote GPU and formulate it as a scheduling problem. We build Armory, a serving system validated on fleets of both simulated and real robots. Our experiments show that naive scheduling heuristics perform well when all robots are the same, but fall short when robots consume action chunks at different rates, uncovering a mismatch between conventional batching methods and the closed-loop requirements of robot policy execution. To address this, we propose a scheduling algorithm that accounts for this heterogeneity and improves overall system throughput by up to $18\\%$ in real-world experiments. Additional details are available at https://gatech-rl2.github.io/actionchunkscheduling.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-27 10:44:46",
+    "status": "included",
+    "screen_date": "2026-09-27",
+    "bibkey": "bansal2026armory",
+    "group": "Georgia Tech",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Lookahead MDP Batch Scheduler for Robot Policy Serving (Armory)",
+    "tokenization": "Temporal Action Chunk Queue States & In-Flight Latency Profiles",
+    "prediction_head": "Latency-Normalized Robot Throughput Scheduler",
+    "params": "not reported",
+    "pretrain_corpus": "Real-World and Simulated Multi-Robot VLA Trajectories",
+    "tasks": [
+      "Heterogeneous Hardware Scheduling",
+      "Batched Foundation Model Serving",
+      "Action Chunk Optimization"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": "https://gatech-rl2.github.io/actionchunkscheduling/",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2608.00337",
+    "url": "https://arxiv.org/abs/2608.00337"
   }
 ]

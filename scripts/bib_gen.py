@@ -59,7 +59,7 @@ def generate_bib():
         url = p.get("url") or f"https://arxiv.org/abs/{aid}"
         doi = p.get("doi") or f"10.48550/arXiv.{aid}"
 
-        if venue and any(v in venue.lower() for v in ["neurips", "icml", "iclr", "kdd", "acl", "ijcai"]):
+        if venue and any(v in venue.lower() for v in ["neurips", "icml", "iclr", "kdd", "acl", "ijcai", "aaai", "ijcnn", "icra"]):
             entry = f"""@inproceedings{{{key},
   author    = {{{authors_str}}},
   title     = {{{{{title}}}}},
@@ -68,7 +68,7 @@ def generate_bib():
   doi       = {{{doi}}},
   url       = {{{url}}}
 }}"""
-        elif venue and any(j in venue.lower() for j in ["tist", "tkde", "computing surveys", "tmlr", "nature"]):
+        elif venue and any(j in venue.lower() for j in ["tist", "tkde", "computing surveys", "tmlr", "nature", "tii"]):
             entry = f"""@article{{{key},
   author    = {{{authors_str}}},
   title     = {{{{{title}}}}},

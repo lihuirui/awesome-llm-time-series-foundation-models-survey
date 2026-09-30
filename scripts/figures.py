@@ -49,19 +49,19 @@ def generate_taxonomy_figure():
     # 3 Main Branches
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
-            ("Multivariate & Memory Adapters", "Falcon-X, UniCA, TS-Memory, iAmTime,\nS-Mamba, TimeMachine, Bi-Mamba+"),
-            ("Active Sensing, PDEs & Causal PFNs", "STAP, L2D-SLDS, TCPFN, LaT-PFN,\nGridSFM, SurF, TradeFM, OpenCity"),
+            ("Continual & Black-Box Adapters", "ELF, ORCA, NatSR, TS-Memory,\niAmTime, S-Mamba, TimeMachine"),
+            ("Cross-Sensory & Industrial Telemetry", "FISHER, PowerPM, FTP-1, TouchWorld,\nTS-JEPA, RATFM, STAP, OpenCity"),
             ("Earth, Hydrology & Graph Manifolds", "Prithvi WxC, EarthPT, AmazonSWE,\nAgriFM, SpectralGPT, Changen2, Presto")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
-            ("Modality Routing & Evidence Agents", "TSRouter, ZARA, PromptCast,\nTAC-Time, Time-VLM, VisionTS++"),
+            ("Decoupled Formal Safety & Routing", "PEACE, ReasonSTL, STARS, Confidence,\nTSRouter, ZARA, PromptCast"),
             ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
             ("Multi-Agent & Policy Optimization", "TimeRFT, TimeHF, COUNTS, TimeMaster,\nTimeEvo, TimeInteract, Cast-R1")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Transferability, Scaling & Vintages", "TimeTic, Diversified Scaling, VINTAGE-TS,\nArmory, ST-Prune, GIFT-Eval, fev-bench"),
-            ("Hierarchical Graph & Conformal Suites", "GPT-ST, ChronoGraph, STOIC, DeXposure,\nNguyen Memory, TSGBench, RareCP"),
-            ("Energy, Quantization & Edge Suites", "HoliBench, FM-CAC, QuantCalibration,\nBeyond Numerical, AION, WorkflowBench")
+            ("Anytime Auditing & Category Critique", "Bet on Features, Category Error Position,\nTemporal Plasticity, TimeTic, VINTAGE-TS"),
+            ("Distribution-Free Conformal Suites", "RareCP, STOIC, ACAD, TSGBench,\nChronoGraph, GIFT-Eval, fev-bench"),
+            ("Operational Profiling & Edge Suites", "Armory, ST-Prune, HoliBench, FM-CAC,\nQuantCalibration, Beyond Numerical")
         ])
     ]
 
@@ -304,7 +304,12 @@ def generate_timeline_figure():
         (2026.58, 3.6, "Armory", "Georgia Tech", "#2ca02c"),
         (2026.69, 3.1, "AmazonSWE", "Delft", "#1f77b4"),
         (2026.72, 4.5, "VINTAGE-TS", "Frankfurt", "#2ca02c"),
-        (2025.62, 3.8, "ZARA", "ACL'26", "#d62728")
+        (2025.62, 3.8, "ZARA", "ACL'26", "#d62728"),
+        (2025.13, 2.8, "ELF", "Edinburgh", "#1f77b4"),
+        (2026.45, 1.9, "ORCA", "CUHK", "#1f77b4"),
+        (2026.46, 3.8, "FTP-1", "Stanford", "#1f77b4"),
+        (2026.54, 4.3, "PEACE", "Zurich", "#d62728"),
+        (2026.10, 1.1, "CategoryError", "CUHK", "#2ca02c")
     ]
 
     # Draw timeline line

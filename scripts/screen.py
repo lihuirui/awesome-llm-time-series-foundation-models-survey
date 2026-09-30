@@ -1290,6 +1290,99 @@ SPECS = {
         "tokenization": "Temporal Action Chunk Queue States & In-Flight Latency Profiles", "prediction_head": "Latency-Normalized Robot Throughput Scheduler",
         "params": "not reported", "pretrain_corpus": "Real-World and Simulated Multi-Robot VLA Trajectories", "tasks": ["Heterogeneous Hardware Scheduling", "Batched Foundation Model Serving", "Action Chunk Optimization"],
         "open_weights": True, "venue": "arXiv 2026", "code_url": "https://gatech-rl2.github.io/actionchunkscheduling/"
+    },
+
+    # Iteration 15: Continual Learning, Cross-Sensory Telemetry, Provable Safety & Category Error
+    "2502.12920": {
+        "bibkey": "lee2025elf",
+        "group": "Univ. of Edinburgh", "paradigm": "Native TSFM", "architecture": "Dual-Module Online Adapter (ELF-Forecaster + ELF-Weighter)",
+        "tokenization": "Subseries Frequency-Domain Patching", "prediction_head": "Ensemble Softmax Adaptive Weighting Head",
+        "params": "<1M", "pretrain_corpus": "Plug-and-play adapter on frozen TSFMs (Chronos/TimesFM/Moirai)", "tasks": ["Forecasting", "Online Adaptation"],
+        "open_weights": True, "venue": "ICML 2025", "code_url": None
+    },
+    "2606.14222": {
+        "bibkey": "dai2026orca",
+        "group": "CUHK", "paradigm": "Native TSFM", "architecture": "Online Residual Contextual Adaptation (ORCA) Linear Adapter + Boltzmann Router",
+        "tokenization": "Predictive Residual Context Patching", "prediction_head": "Bayesian Predictive-Space Loss Head",
+        "params": "<2M", "pretrain_corpus": "Black-Box API TSFMs (Chronos-Bolt, TimesFM, Time-MoE across 8 datasets)", "tasks": ["Forecasting", "Online Adaptation", "Black-Box Serving"],
+        "open_weights": True, "venue": "NeurIPS 2026", "code_url": "https://github.com/Fifthky/ORCA"
+    },
+    "2504.14677": {
+        "bibkey": "liu2025temporalplasticity",
+        "group": "Tongji Univ", "paradigm": "Evaluation & Benchmark", "architecture": "Continual Fine-Tuning Plasticity Benchmark Framework",
+        "tokenization": "Sequential Patch Increments", "prediction_head": "Autoregressive / Masked Output Heads",
+        "params": "Evaluated up to 2.4B (Time-MoE, Chronos-Large)", "pretrain_corpus": "Multi-domain streaming distribution shifts", "tasks": ["Continual Learning", "Forecasting", "Plasticity Evaluation"],
+        "open_weights": True, "venue": "IJCNN 2025", "code_url": None
+    },
+    "2601.12931": {
+        "bibkey": "urettini2026natsr",
+        "group": "Univ. of Pisa", "paradigm": "Native TSFM", "architecture": "Natural Score-driven Replay (NatSR) Online Continual Transformer",
+        "tokenization": "Continuous Scalar & Patch Streams", "prediction_head": "Student-t Likelihood Score-driven Head",
+        "params": "not reported", "pretrain_corpus": "Non-stationary streaming benchmarks with regime shifts", "tasks": ["Forecasting", "Continual Learning", "Regime Shift Adaptation"],
+        "open_weights": True, "venue": "ICLR 2026", "code_url": None
+    },
+    "2509.25449": {
+        "bibkey": "ennadir2025tsjepa",
+        "group": "Flatiron Institute", "paradigm": "Native TSFM", "architecture": "Time-Series Joint-Embedding Predictive Architecture (TS-JEPA)",
+        "tokenization": "Multi-Block Masked Latent Temporal Patches", "prediction_head": "Latent-Space Energy-Based Predictor",
+        "params": "22M", "pretrain_corpus": "UCR/UEA archives & Monash time series repository", "tasks": ["Forecasting", "Classification", "Latent Representation Learning"],
+        "open_weights": True, "venue": "NeurIPS 2024 Workshop", "code_url": "https://github.com/Sennadir/TS_JEPA"
+    },
+    "2506.02081": {
+        "bibkey": "maru2025ratfm",
+        "group": "Preferred Networks", "paradigm": "Native TSFM", "architecture": "Retrieval-Augmented Time Series Foundation Model (RATFM)",
+        "tokenization": "In-Domain Subsequence Retrieval Patch Tokens", "prediction_head": "Reconstruction-Discrepancy Anomaly Head",
+        "params": "110M", "pretrain_corpus": "UCR Anomaly Archive across 9 physical domains", "tasks": ["Anomaly Detection", "Test-Time Retrieval Adaptation"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": None
+    },
+    "2606.13102": {
+        "bibkey": "yuan2026ftp1",
+        "group": "Stanford / UC Berkeley", "paradigm": "Native TSFM", "architecture": "Foundation Tactile Policy (FTP-1) Sensor-Agnostic Transformer",
+        "tokenization": "Morphology-Aware Tactile Latent Unified Tokens", "prediction_head": "Diffusion Policy Action Generation Head",
+        "params": "180M", "pretrain_corpus": "3,000 hours of tactile manipulation across 21 sensors", "tasks": ["Tactile Manipulation", "Cross-Sensor Generalization", "Contact Dynamics"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": "https://github.com/michaelyuancb/ftp1-policy"
+    },
+    "2607.07287": {
+        "bibkey": "zhou2026touchworld",
+        "group": "Tsinghua Univ / Shanghai AI Lab", "paradigm": "Native TSFM", "architecture": "TouchWorld Hierarchical Predictive World Model + High-Frequency Reactive Policy",
+        "tokenization": "Multimodal Visual-Tactile Patch Tokens", "prediction_head": "Autoregressive Tactile World Predictor & Reactive Residual Head",
+        "params": "350M", "pretrain_corpus": "EgoTouch bimanual contact manipulation dataset", "tasks": ["Tactile Manipulation", "Contact World Modeling", "Reactive Control"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2507.16696": {
+        "bibkey": "fan2025fisher",
+        "group": "Tsinghua Univ", "paradigm": "Native TSFM", "architecture": "FISHER Sub-Band Hierarchical Transformer Encoder",
+        "tokenization": "Multi-rate Sub-band Spectral Tokens", "prediction_head": "Teacher-Student Contrastive Representation Head",
+        "params": "28M", "pretrain_corpus": "RMIS Benchmark (19 datasets across vibration, acoustic, current, pressure)", "tasks": ["Fault Diagnosis", "Industrial Signal Anomaly Detection", "Prognostics"],
+        "open_weights": True, "venue": "IEEE TII 2025", "code_url": "https://github.com/jianganbai/FISHER"
+    },
+    "2606.00104": {
+        "bibkey": "uysal2026peace",
+        "group": "Univ. of Zurich", "paradigm": "LLM4TS", "architecture": "PEACE Decoupled Planner-Executor Agent with Formal Constraint Enforcement",
+        "tokenization": "Structured Temporal Tool-Call Action Tokens", "prediction_head": "Formal Safety Verification & Geofence Filter Head",
+        "params": "Pretrained LLM backbone", "pretrain_corpus": "Real-world UAV flight telemetries and spatial trajectory missions", "tasks": ["Trajectory Planning", "Safe Autonomous Control", "Constraint Enforcement"],
+        "open_weights": True, "venue": "ICRA 2026 Workshop", "code_url": None
+    },
+    "2408.04057": {
+        "bibkey": "tu2024powerpm",
+        "group": "State Grid / Tsinghua Univ", "paradigm": "Native TSFM", "architecture": "PowerPM Hierarchical Relational-GCN + Temporal Transformer",
+        "tokenization": "Masked Electricity Time Series Subseries Patching", "prediction_head": "Dual-View Contrastive & Next-Patch Predictor",
+        "params": "115M", "pretrain_corpus": "Massive provincial electricity grid telemetry across 3 hierarchy levels", "tasks": ["Forecasting", "Grid Stability", "Consumer Behavior Analysis"],
+        "open_weights": True, "venue": "NeurIPS 2024", "code_url": None
+    },
+    "2607.11653": {
+        "bibkey": "antonov2026betonfeatures",
+        "group": "Univ. of Wuerzburg / Univ. of Iowa", "paradigm": "Evaluation & Benchmark", "architecture": "Feature-Aware Online Game-Theoretic Betting Martingale Framework",
+        "tokenization": "Feature-Conditioned Sequential Observations", "prediction_head": "Anytime-Valid E-Value / Martingale Head",
+        "params": "Model-Agnostic Auditor", "pretrain_corpus": "Supply chain demand & sequential decision streams", "tasks": ["Anytime-Valid Auditing", "Quantile Calibration Verification"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2602.05287": {
+        "bibkey": "dai2026categoryerror",
+        "group": "CUHK", "paradigm": "Survey & Foundations", "architecture": "Causal Control Agent & Just-in-Time (JIT) Specialist Hierarchy",
+        "tokenization": "Structural Container vs Semantic Modality Taxonomy", "prediction_head": "Autoregressive Blindness Bound Formalism",
+        "params": "N/A", "pretrain_corpus": "Theoretical Proofs & Intervention Benchmark Suite", "tasks": ["Foundational Critique", "Causal Recovery Benchmarking"],
+        "open_weights": None, "venue": "arXiv 2026", "code_url": None
     }
 }
 

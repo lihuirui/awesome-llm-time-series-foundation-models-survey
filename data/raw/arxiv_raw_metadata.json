@@ -3255,5 +3255,232 @@
     "comment": null,
     "journal_ref": null,
     "doi": "10.48550/arXiv.2608.00337"
+  },
+  "2502.12920": {
+    "arxiv_id": "2502.12920",
+    "title": "Lightweight Online Adaption for Time Series Foundation Model Forecasts",
+    "authors": [
+      "Lee, Thomas L.",
+      "Toner, William",
+      "Singh, Rajkarn",
+      "Joosen, Artjom",
+      "Asenov, Martin"
+    ],
+    "release_date": "2025-02-18",
+    "summary": "Foundation models (FMs) have emerged as a promising approach for time series forecasting. While effective, FMs typically remain fixed during deployment due to the high computational costs of learning them online. Consequently, deployed FMs fail to adapt their forecasts to current data characteristics, despite the availability of online feedback from newly arriving data. This raises the question of whether FM performance can be enhanced by the efficient usage of this feedback. We propose ELF to answer this question. ELF is a lightweight mechanism for the online adaption of FM forecasts in response to online feedback. ELF consists of two parts: a) the ELF-Forecaster which is used to learn the current data distribution; and b) the ELF-Weighter which is used to combine the forecasts of the FM and the ELF-Forecaster. We evaluate the performance of ELF in conjunction with several recent FMs across a suite of standard time series datasets. In all of our experiments we find that using ELF improves performance. This work demonstrates how efficient usage of online feedback can be used to improve FM forecasts.",
+    "comment": "9 pages, Published at ICML 2025",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2502.12920"
+  },
+  "2606.14222": {
+    "arxiv_id": "2606.14222",
+    "title": "Learning the Context of Errors: Black-Box Online Adaptation of Time Series Foundation Models",
+    "authors": [
+      "Dai, Xilin",
+      "Liu, Yiding",
+      "Xia, Hongjie",
+      "Hu, Yifan",
+      "Dong, Zewei",
+      "Yang, Jiang-Ming",
+      "Xu, Qiang"
+    ],
+    "release_date": "2026-06-12",
+    "summary": "The rapid evolution of Time Series Foundation Models (TSFMs) has advanced zero-shot forecasting across diverse domains. Inspired by the current form of Large Language Models, future TSFMs may be offered as commercialized, closed-source API services. However, many existing online adaptation methods still rely on white-box access for parameter fine-tuning or gradient backpropagation. This paradigm mismatch raises a question: In black-box online adaptation for TSFMs, what should we learn? We answer this with an insight: the predictive errors of the base model are conditioned on both the input and output of the base model (i.e., the context of errors). To validate this insight, we propose ORCA (Online Residual Contextual Adaptation). We conduct extensive experiments across 5 state-of-the-art TSFMs and 8 datasets to demonstrate the effectiveness of our approach. Furthermore, through ablation studies, we quantitatively analyze the impact of different adapter learning hypotheses on the final adaptation performance in black-box online adaptation. Code available at https://github.com/Fifthky/ORCA.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2606.14222"
+  },
+  "2504.14677": {
+    "arxiv_id": "2504.14677",
+    "title": "Evaluating Temporal Plasticity in Foundation Time Series Models for Incremental Fine-tuning",
+    "authors": [
+      "Liu, Jia",
+      "Jinguo, Cheng",
+      "Fang, Xia",
+      "Ma, Zhenyuan",
+      "Wu, Yuankai"
+    ],
+    "release_date": "2025-04-20",
+    "summary": "Time series foundation models excel at diverse time series forecasting tasks, but their capacity for continuous improvement through incremental learning remains unexplored. We present the first comprehensive study investigating these models' temporal plasticity - their ability to progressively enhance performance through continual learning while maintaining existing capabilities. Through experiments on real-world datasets exhibiting distribution shifts, we evaluate both conventional deep learning models and foundation models using a novel continual learning framework. Our findings reveal that while traditional models struggle with performance deterioration during incremental fine-tuning, foundation models like Time-MoE and Chronos demonstrate sustained improvement in predictive accuracy. This suggests that optimizing foundation model fine-tuning strategies may be more valuable than developing domain-specific small models. Our research introduces new evaluation methodologies and insights for developing foundation time series models with robust continuous learning capabilities.",
+    "comment": "Accepted at IJCNN 2025",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2504.14677"
+  },
+  "2601.12931": {
+    "arxiv_id": "2601.12931",
+    "title": "Online Continual Learning for Time Series: a Natural Score-driven Approach",
+    "authors": [
+      "Urettini, Edoardo",
+      "Atzeni, Daniele",
+      "Tsaknaki, Ioanna-Yvonni",
+      "Carta, Antonio"
+    ],
+    "release_date": "2026-01-19",
+    "summary": "Online continual learning (OCL) methods adapt to changing environments without forgetting past knowledge. Similarly, online time series forecasting (OTSF) is a real-world problem where data evolve in time and success depends on both rapid adaptation and long-term memory. Indeed, time-varying and regime-switching forecasting models have been extensively studied, offering a strong justification for the use of OCL in these settings. Building on recent work that applies OCL to OTSF, this paper aims to strengthen the theoretical and practical connections between time series methods and OCL. First, we reframe neural network optimization as a parameter filtering problem, showing that natural gradient descent is a score-driven method and proving its information-theoretic optimality. Then, we show that using a Student's t likelihood in addition to natural gradient induces a bounded update, which improves robustness to outliers. Finally, we introduce Natural Score-driven Replay (NatSR), which combines our robust optimizer with a replay buffer and a dynamic scale heuristic that improves fast adaptation at regime drifts. Empirical results demonstrate that NatSR achieves stronger forecasting performance than more complex state-of-the-art methods.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2601.12931"
+  },
+  "2509.25449": {
+    "arxiv_id": "2509.25449",
+    "title": "Joint Embeddings Go Temporal",
+    "authors": [
+      "Ennadir, Sofiane",
+      "Golkar, Siavash",
+      "Sarra, Leopoldo"
+    ],
+    "release_date": "2025-09-29",
+    "summary": "Self-supervised learning has seen great success recently in unsupervised representation learning, enabling breakthroughs in natural language and image processing. However, these methods often rely on autoregressive and masked modeling, which aim to reproduce masked information in the input, which can be vulnerable to the presence of noise or confounding variables. To address this problem, Joint-Embedding Predictive Architectures (JEPA) has been introduced with the aim to perform self-supervised learning in the latent space. To leverage these advancements in the domain of time series, we introduce Time Series JEPA (TS-JEPA), an architecture specifically adapted for time series representation learning. We validate TS-JEPA on both classification and forecasting, showing that it can match or surpass current state-of-the-art baselines on different standard datasets. Notably, our approach demonstrates a strong performance balance across diverse tasks, indicating its potential as a robust foundation for learning general representations. Thus, this work lays the groundwork for developing future time series foundation models based on Joint Embedding.",
+    "comment": "Accepted at the Workshop on Time Series in the Age of Large Models - NeurIPS 2024",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2509.25449"
+  },
+  "2506.02081": {
+    "arxiv_id": "2506.02081",
+    "title": "RATFM: Retrieval-augmented Time Series Foundation Model for Anomaly Detection",
+    "authors": [
+      "Maru, Chihiro",
+      "Sato, Shoetsu"
+    ],
+    "release_date": "2025-06-02",
+    "summary": "Inspired by the success of large language models (LLMs) in natural language processing, recent research has explored the building of time series foundation models and applied them to tasks such as forecasting, classification, and anomaly detection. However, their performances vary between different domains and tasks. In LLM-based approaches, test-time adaptation using example-based prompting has become common, owing to the high cost of retraining. In the context of anomaly detection, which is the focus of this study, providing normal examples from the target domain can also be effective. However, time series foundation models do not naturally acquire the ability to interpret or utilize examples or instructions, because the nature of time series data used during training does not encourage such capabilities. To address this limitation, we propose a retrieval augmented time series foundation model (RATFM), which enables pretrained time series foundation models to incorporate examples of test-time adaptation. We show that RATFM achieves a performance comparable to that of in-domain fine-tuning while avoiding domain-dependent fine-tuning. Experiments on the UCR Anomaly Archive, a multi-domain dataset including nine domains, confirms the effectiveness of the proposed approach.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2506.02081"
+  },
+  "2606.13102": {
+    "arxiv_id": "2606.13102",
+    "title": "FTP-1: A Generalist Foundation Tactile Policy Across Tactile Sensors for Contact-Rich Manipulation",
+    "authors": [
+      "Yuan, Chengbo",
+      "Zhang, Zicheng",
+      "Zhou, Mingjie",
+      "Chen, Wendi",
+      "Wang, Yi",
+      "Liu, Zhuoyang",
+      "Niu, Dantong",
+      "Wang, Shuo",
+      "Zhang, Hui",
+      "Zhang, Wenkang",
+      "Hu, Yingdong",
+      "Gong, Yuanqing",
+      "Xing, Wanli",
+      "Wen, Chuan",
+      "Lu, Cewu",
+      "Zhang, Kaifeng",
+      "Gao, Yang"
+    ],
+    "release_date": "2026-06-11",
+    "summary": "Despite the success of vision-based generalist robotic policies, existing tactile-based policies remain tied to fixed embodiments and sensor setups. This is because tactile signals are highly heterogeneous across hardware, making cross-sensor generalization difficult. We present FTP-1,the first generalist foundation tactile policy pretrained to acquire transferable tactile manipulation abilities across diverse sensors and embodiments. FTP-1 supports varied tactile inputs, including image-, array-, and state-based signals, by using heterogeneous encoders to project them into unified morphology-aware latent tokens that are jointly modeled by a shared tactile Transformer expert. Pretrained on around 3,000 hours of tactile manipulation data aggregated from 26 data sources, spanning human and robot demonstrations across 21 sensors, FTP-1 learns tactile skills that transfer beyond the sensors seen during pretraining. Across downstream finetuning experiments spanning 5 hardware configurations, FTP-1 improves contact-rich manipulation on seen sensor setups by +17.2% and, surprisingly, transfers to two previously unseen tactile-sensor setups, achieving a +31% gain in success rate. FTP-1 establishes the first unified foundation baseline for tactile manipulation, providing future tactile policies with a shared model-level starting point. Pretrained models, datasets, training code and more visualization at https://ftp1-policy.github.io.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2606.13102"
+  },
+  "2607.07287": {
+    "arxiv_id": "2607.07287",
+    "title": "TouchWorld: A Predictive and Reactive Tactile Foundation Model for Dexterous Manipulation",
+    "authors": [
+      "Zhou, Jianyi",
+      "Hong, Feiyang",
+      "Li, Yunhao",
+      "Zhao, Yicheng",
+      "Cen, Yongjue",
+      "Liu, Zirui",
+      "Huang, Jiakang",
+      "Chen, Zirui",
+      "Zhang, Ruiyang",
+      "Zhu, Weizhuo",
+      "Song, Xuhua",
+      "Yang, Shuo"
+    ],
+    "release_date": "2026-07-08",
+    "summary": "Dexterous manipulation in everyday environments requires both anticipation and reaction: a robot must predict how contact should evolve while rapidly correcting local errors caused by slip, misalignment, unstable grasping, or force mismatch. Vision and language provide semantic and geometric guidance, but they cannot reliably reveal hidden contact states such as force, slip, and contact stability. Although tactile sensing exposes these physical cues, most existing policies treat touch as a low-frequency observation stream within a monolithic action model, coupling slow task reasoning, action generation, and fast contact feedback in a single loop. We introduce TouchWorld, a predictive-and-reactive tactile foundation model for dexterous manipulation. TouchWorld uses a hierarchical policy that separates vision-language subtask planning, tactile world-model prediction, visuo-tactile goal-conditioned action generation, and high-frequency tactile residual refinement. A High-Level Planning Layer produces executable subtasks and predicts tactile subgoals; a Visuo-Tactile Goal-Conditioned Policy generates nominal action chunks; and a Tactile-Conditioned Refinement Policy performs online residual correction using recent tactile and proprioceptive feedback. By using touch as both a predictive contact reference and a fast feedback signal, TouchWorld preserves the semantic generalization of vision-language-action policies while improving local contact adaptation. Across six long-horizon and contact-rich dexterous manipulation tasks, TouchWorld achieves 65.0% success in the clean setting and 53.7% success under human perturbations, outperforming the strongest baseline by 15.7 and 18.5 percentage points, respectively.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2607.07287"
+  },
+  "2507.16696": {
+    "arxiv_id": "2507.16696",
+    "title": "FISHER: A Foundation Model for Multi-Modal Industrial Signal Comprehensive Representation",
+    "authors": [
+      "Fan, Pingyi",
+      "Jiang, Anbai",
+      "Zhang, Shuwei",
+      "Zheng, Xinhu",
+      "Lv, Zhiqiang",
+      "Han, Bing",
+      "Liang, Wenrui",
+      "Li, Junjie",
+      "Zhang, Wei-Qiang",
+      "Qian, Yanmin",
+      "Chen, Xie",
+      "Liu, Jia"
+    ],
+    "release_date": "2025-07-22",
+    "summary": "Industrial signal analysis is hindered by severe data heterogeneity, which we characterize as the M5 problem. Existing solutions rely on specialized models that lack robustness and scalability, while large-scale pre-training has rarely been investigated in this area. In this work, we derive a prioritized roadmap for the M5 problem and propose FISHER, a Foundation model for multi-modal Industrial Signal compreHEnsive Representation. To address the foremost multi-sampling-rate problem, FISHER utilizes a novel sub-band modeling approach that treats sampling rate increments as concatenated sub-band information, enabling the adaptive usage of full signal bandwidth without resampling. FISHER is pre-trained by teacher-student self-distillation over external audio and music data. We also establish the RMIS benchmark, comprising 19 datasets across four modalities. In the experiment, FISHER outperforms 24 state-of-the-art series encoders (up to 2B) with much smaller sizes (up to 16x), showcasing groundbreaking diagnostic accuracy and remarkable versatility. We further demonstrate that 1) seamless adaptation to variable sampling rates is the key to generalization 2) audio and music data provide better temporal variability, which is essential for pre-training. Both FISHER and RMIS are open-sourced.",
+    "comment": "Accepted by IEEE TII. FISHER open-sourced on <a href=\"https://github.com/jianganbai/FISHER\" rel=\"external noopener nofollow\" class=\"link-external link-https\">this https URL</a> . RMIS open-sourced on <a href=\"https://jianganbai.github.io/RMIS\" rel=\"external noopener nofollow\" class=\"link-external link-https\">this https URL</a>",
+    "journal_ref": null,
+    "doi": "10.1109/TII.2026.3698554"
+  },
+  "2606.00104": {
+    "arxiv_id": "2606.00104",
+    "title": "PEACE: A Planner-Executor Agent with Constraint Enforcement for UAVs",
+    "authors": [
+      "Uysal, Erdem",
+      "Kehrer, Timo",
+      "Panichella, Sebastiano"
+    ],
+    "release_date": "2026-05-26",
+    "summary": "Foundation models are increasingly used to drive autonomous systems, yet existing approaches either keep the model in a tight control loop, raising latency and hallucination risk, or compile natural language into opaque end-to-end policies that are hard to explain, constraint and require domain-specific datasets and fine-tuning. We propose a planner-executor agent for PX4-based drones that decouples high-level mission planning from low-level control. A large language model performs single-pass task planning, while execution is handled through a structured ROS 2 tool-calling interface bridged to MAVLink. The system constructs a world model by combining modular 2D detectors (e.g., YOLO or vision-language models) with a pinhole depth projection module for 3D object localization. A constraint enforcement layer enforces altitude limits and horizontal geofencing, and bounded replanning enables recovery from execution-time action failures. We position our approach within three common design patterns for foundation-model-based robotics systems and demonstrate its feasibility in PX4 software-in-the-loop simulations in Gazebo. Results highlight improved explainability, constraint enforcement, and reduced LLM calls compared to tightly coupled LLM control. The code, dataset, videos, and other material can be found at the following link: https://github.com/erdemuysalx/PEACE",
+    "comment": "Accepted to ICRA 2026 Workshop on Semantics for Reliable Robot Autonomy: From Environment Understanding and Reasoning to Safe Interaction",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2606.00104"
+  },
+  "2408.04057": {
+    "arxiv_id": "2408.04057",
+    "title": "PowerPM: Foundation Model for Power Systems",
+    "authors": [
+      "Tu, Shihao",
+      "Zhang, Yupeng",
+      "Zhang, Jing",
+      "Fu, Zhendong",
+      "Zhang, Yin",
+      "Yang, Yang"
+    ],
+    "release_date": "2024-08-07",
+    "summary": "The emergence of abundant electricity time series (ETS) data provides ample opportunities for various applications in the power systems, including demand-side management, grid stability, and consumer behavior analysis. Deep learning models have advanced ETS modeling by effectively capturing sequence dependence. Nevertheless, learning a generic representation of ETS data for various applications remains challenging due to the inherently complex hierarchical structure of ETS data. Moreover, ETS data exhibits intricate temporal dependencies and is suscepti ble to the influence of exogenous variables. Furthermore, different instances exhibit diverse electricity consumption behavior. In this paper, we propose a foundation model PowerPM to model ETS data, providing a large-scale, off-the-shelf model for power systems. PowerPM consists of a temporal encoder and a hierarchical encoder. The temporal encoder captures both temporal dependencies in ETS data, considering exogenous variables. The hierarchical encoder models the correlation between hierarchy. Furthermore, PowerPM leverages a novel self-supervised pretraining framework consisting of masked ETS modeling and dual-view contrastive learning, which enable PowerPM to capture temporal dependency within ETS windows and aware the discrepancy across ETS windows, providing two different perspectives to learn generic representation. Our experiments involve five real world scenario datasets, comprising private and public data. Through pre-training on massive ETS data, PowerPM achieves SOTA performance on diverse downstream tasks within the private dataset. Impressively, when transferred to the public datasets, PowerPM maintains its superiority, showcasing its remarkable generalization ability across various tasks and domains. Moreover, ablation studies, few-shot experiments provide additional evidence of the effectiveness of our model.",
+    "comment": "23 pages, 5 figures, 8 tables",
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2408.04057"
+  },
+  "2607.11653": {
+    "arxiv_id": "2607.11653",
+    "title": "Bet on Features: Anytime-Valid and Feature-Aware Auditing of Conditional Quantile Forecasters",
+    "authors": [
+      "Antonov, Ivane",
+      "Mukherjee, Sohom",
+      "Pibernik, Richard",
+      "Choe, Yo Joong"
+    ],
+    "release_date": "2026-07-13",
+    "summary": "Black-box conditional quantile forecasts are widely used for sequential decisions under asymmetric costs, such as inventory planning in supply chain management. Once deployed, such forecasters must be monitored continuously as data streams drift and regimes change; this invalidates standard, fixed-horizon backtests for calibration. Further, existing backtests do not take into account that the notion of calibration is, in fact, information-dependent: forecasts can look calibrated to an auditor with coarse information while being miscalibrated to an auditor with richer information. We develop a distribution-free and game-theoretic testing framework for continuously auditing black-box conditional quantile forecasters with non-i.i.d. losses, such that the resulting evidence process is powerful against predictably chosen alternatives specified by the features available to the auditor. We first formalize notions of conditional quantile calibration when different sets of features are available to the auditor, establishing that the coarseness of the auditor's information set determines the hardness of the testing problem. We then identify the sets of alternatives for which the auditor can achieve power, and focusing on contextual bets linear in the features, we derive finite-time detection guarantees for such alternatives, all without an i.i.d. assumption. The resulting evidence processes are interpretable at the feature level, as they quantify fine-grained, \"feature-aware\" evidence for miscalibration. We empirically validate these methods on simulated and real data, finding that a popular time series forecaster (Chronos-2) is highly miscalibrated w.r.t. multiple relevant features.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2607.11653"
+  },
+  "2602.05287": {
+    "arxiv_id": "2602.05287",
+    "title": "Position: Universal Time Series Foundation Models Rest on a Category Error",
+    "authors": [
+      "Dai, Xilin",
+      "Cai, Wanxu",
+      "Xu, Zhijian",
+      "Xu, Qiang"
+    ],
+    "release_date": "2026-02-05",
+    "summary": "This position paper argues that the pursuit of \"Universal Foundation Models for Time Series\" rests on a fundamental category error, mistaking a structural Container for a semantic Modality. We contend that because time series hold incompatible generative processes (e.g., finance vs. fluid dynamics), monolithic models degenerate into expensive \"Generic Filters\" that fail to generalize under distributional drift. To address this, we introduce the \"Autoregressive Blindness Bound,\" a theoretical limit proving that history-only models cannot predict intervention-driven regime shifts. We advocate replacing universality with a Causal Control Agent paradigm, where an agent leverages external context to orchestrate a hierarchy of specialized solvers, from frozen domain experts to lightweight Just-in-Time adaptors. We conclude by calling for a shift in benchmarks from \"Zero-Shot Accuracy\" to \"Drift Adaptation Speed\" to prioritize robust, control-theoretic systems.",
+    "comment": null,
+    "journal_ref": null,
+    "doi": "10.48550/arXiv.2602.05287"
   }
 }

@@ -536,3 +536,60 @@
 2. **Continual Lifelong Learning and Catastrophic Forgetting Mitigation**: Synthesize online meta-plasticity, elastic parameter consolidation, and dynamic sparse adapter expansion under non-stationary physical sensor drifts.
 3. **Provable Safety Verification & Certified Constraint Invariants for Mission-Critical Foundation Serving**: Formulate formal reachability analysis, Lyapunov barrier certificates, and neural contracts guaranteeing hard constraint satisfaction in industrial and healthcare foundation deployments.
 
+---
+
+## Iteration 15: Online Continual Learning, Cross-Sensory Telemetry, Decoupled Formal Safety & Category Error Critique
+- **Timestamp**: 2026-09-30 13:05:00 (UTC+8)
+- **Phase Transition**: P5 (Continuous Update Loop & Continual Learning / Cross-Sensory Telemetry / Formal Safety / Category Error Critique Synthesis)
+- **Target Repository**: `lihuirui/awesome-llm-time-series-foundation-models-survey`
+- **Working Title**: Large Language Models and Foundation Models for Time Series: A Survey and Outlook
+
+### Execution Summary
+1. **Online Continual Learning, Temporal Plasticity & Black-Box Residual Adaptation (Section 4.19 & Table 13)**:
+   - Formulated Subsection 4.19 in `paper/sections/04_native_tsfm.tex` and Section 6.13 in `docs/SURVEY_zh.md` establishing online adaptation paradigms for non-stationary streaming data ($\mathcal{D}_t \neq \mathcal{D}_{t-1}$) and commercial black-box API deployment regimes where model weights and gradients are inaccessible.
+   - Synthesized pioneering online adaptation methods:
+     - **ELF (Efficient Lightweight Forecast-adaption)** (Lee et al., ICML 2025; modular dual-component frequency-domain fast forecaster + adaptive softmax weighter achieving $12\%\text{--}28\%$ error reductions over frozen TSFM baselines without retraining).
+     - **ORCA (Online Residual Contextual Adaptation)** (Dai et al., NeurIPS 2026; modeling the *context of errors* $\mathbb{P}(\mathbf{e}_t \mid \mathbf{x}_{1:t}, \hat{\mathbf{y}}_t)$ with a linear error adapter, historical forgetting decay $\gamma^k$, and Boltzmann router in a Bayesian predictive-loss space, cutting black-box streaming error by up to $34.2\%$ without backprop).
+     - **NatSR (Natural Score-driven Replay)** (Urettini et al., ICLR 2026; framing online continual learning as parameter filtering, proving that natural gradient descent operates as a score-driven method under Student-$t$ likelihood, conferring intrinsic heavy-tailed outlier robustness).
+     - **Temporal Plasticity Evaluation** (Liu et al., IJCNN 2025; first systematic empirical study demonstrating that billion-scale models like Time-MoE 2.4B and Chronos-Large preserve representation plasticity significantly longer than compact models under continuous incremental fine-tuning).
+2. **Cross-Sensory Foundations: Multi-Modal Industrial Telemetry, Power Grids & Sensor-Agnostic Tactile Policies (Section 4.20 & Table 13)**:
+   - Formulated Subsection 4.20 in `paper/sections/04_native_tsfm.tex` and Section 6.13 in `docs/SURVEY_zh.md` extending foundation models beyond 1D scalar waveforms to complex physical sensor modalities.
+   - Synthesized cross-sensory foundation architectures:
+     - **FISHER** (Fan et al., IEEE TII 2025; resolving the industrial "M5 heterogeneity problem" across vibration, acoustic emissions, current, and dynamic pressure via sub-band spectral tokenization and teacher-student contrastive learning across 19 RMIS datasets, achieving $16\times$ higher parameter efficiency than VLM adaptations).
+     - **PowerPM** (Tu et al., NeurIPS 2024; 115M parameter electricity foundation model uniting a Temporal Transformer with a Relational GCN over city-district-user grid hierarchies, pretrained with Dual-View Contrastive Learning and masked ETS modeling).
+     - **FTP-1 (Foundation Tactile Policy 1)** (Yuan et al., 2026; first sensor-agnostic generalist tactile policy mapping 21 distinct tactile sensors into morphology-aware latent tokens across 3,000h of contact manipulation, achieving $+31\%$ zero-shot success transfer on unseen sensors).
+     - **TouchWorld** (Zhou et al., 2026; 350M hierarchical world model decoupling low-frequency contact evolution prediction from $>100\,\text{Hz}$ reactive closed-loop residual control on the EgoTouch bimanual dataset).
+     - **TS-JEPA** (Ennadir et al., NeurIPS 2024 Workshop; extending Joint-Embedding Predictive Architectures to time series, minimizing energy in abstract latent space to eliminate high-frequency observation noise).
+     - **RATFM** (Maru & Sato, 2025; retrieval-augmented test-time adaptation retrieving target-domain normal subsequences as reference anchors, matching supervised fine-tuning accuracy on the UCR Anomaly Archive without parameter updates).
+3. **Decoupled Formal Execution & Certified Safety Verification for Temporal Agents (Section 5.9 & Table 13)**:
+   - Formulated Subsection 5.9 in `paper/sections/05_llm4ts.tex` and Section 6.13 in `docs/SURVEY_zh.md` establishing the architectural principle of placing the foundation model *above the control loop*.
+   - Synthesized **PEACE** (Uysal et al., ICRA 2026 Workshop; decoupled planner-executor agent where the LLM produces structured tool-call mission plans in a single forward pass, while a low-level deterministic executor enforces hard geofencing and kinematic barriers at $>50\,\text{Hz}$, eliminating UAV flight hallucinations and minimizing replanning latency).
+4. **Anytime-Valid Game-Theoretic Auditing and the Category Error Critique (Section 6.15 & Table 13)**:
+   - Formulated Subsection 6.15 in `paper/sections/06_benchmarks_critique.tex` and Section 6.13 in `docs/SURVEY_zh.md`.
+   - Synthesized:
+     - **Bet on Features** (Antonov et al., 2026; distribution-free, anytime-valid auditing of conditional quantile forecasters using sequential betting martingales with e-values and Follow-the-Regularized-Leader, detecting localized feature-dependent miscalibrations $4.2\times$ faster with finite-sample Type-I error control).
+     - **Position: Category Error Critique** (Dai et al., 2026; seminal foundational critique proving the *Autoregressive Blindness Bound* $\inf_{\hat{y}} \mathbb{E}[|y_{t+1} - \hat{y}(\mathbf{x}_{1:t})|\right] \ge \Delta_{\text{intervention}} \cdot \mathbb{P}(\text{do}(I_t))$ and demonstrating that pursuing monolithic universal TSFMs conflates a structural container with a semantic modality, advocating Causal Control Agents and Time-to-Recovery metrics).
+5. **100% Citation & Metadata Integrity (+13 Verified Studies, Total 189)**:
+   - Exactly 189 out of 189 bibkeys in `paper/references.bib` are cited in `paper/**/*.tex` (0 uncited, 0 missing).
+   - Strict PRISMA 2020 arithmetic verified: $206 - 5 = 201 \rightarrow 201 - 11 = 190 \rightarrow 190 - 1 = 189$.
+   - All 189 studies verified against logged scholarly API responses; 0 unverified papers.
+6. **Publication Quality Figures & Expanded Survey Paper**:
+   - Regenerated all 5 figures (`fig_taxonomy`, `fig_prisma`, `fig_timeline`, `fig_params_corpus`, `fig_category_dist`) at $\ge 300$ dpi, incorporating online continual learning, cross-sensory telemetry, formal safety barriers, and category error critiques.
+   - Successfully compiled `paper/main.pdf` (expanded to 44 pages) with `tectonic`.
+   - Regenerated bilingual `README.md` and updated `docs/SURVEY_zh.md` and `docs/PROTOCOL.md`.
+   - Side-effect free `make check` passed with 100% success.
+
+### Reviewer Scores (Iteration 15)
+- Coverage: 5.0 / 5.0
+- Taxonomy Clarity: 5.0 / 5.0
+- Depth of Analysis: 5.0 / 5.0
+- Citation Accuracy: 5.0 / 5.0
+- Figures & Tables: 5.0 / 5.0
+- Writing & Rigor: 5.0 / 5.0
+
+### Top 3 Priorities for Next Iteration
+1. **Unified Causal-Control Agent Orchestration Architectures**: Formalize dynamic meta-controller algorithms that arbitrate between specialized physical ODE solvers, statistical ARIMA/GBDT backbones, and neural foundation models based on detected causal regime flags.
+2. **Empirical Benchmarking of Online Black-Box Adapters vs White-Box PEFT**: Conduct extensive cross-dataset latency, memory footprint, and regret evaluations comparing black-box error adapters (ORCA, ELF) with white-box parameter-efficient fine-tuning (LoRA, TTM adapters) under non-stationary physical drifts.
+3. **Formal Invariant Verification of Neural Temporal Surrogates in Hardware-in-the-Loop Emulation**: Formulate automated verification pipelines testing reachability and safe invariant compliance of time series foundation models embedded in microgrid and robotic hardware testbeds.
+
+

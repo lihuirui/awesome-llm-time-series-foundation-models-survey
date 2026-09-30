@@ -616,4 +616,71 @@ As the foundation paradigm matures, critical systemic questions shift from ``can
 }
 \end{table*}
 
+\subsection{Anytime-Valid Game-Theoretic Auditing and the Category Error Critique}
+\label{sec:anytime_auditing_category_error}
+
+As foundation models transition into automated industrial control, financial risk assessment, and clinical monitoring, the fundamental limits of offline empirical evaluation have become apparent. Static test-set benchmarks provide no finite-sample safety certificates once models encounter non-stationary streaming distributions, while the overarching philosophy of building a single ``universal'' foundation model for all temporal data has drawn rigorous foundational critique:
+
+\begin{itemize}[leftmargin=*]
+    \item \emph{Bet on Features: Anytime-Valid Auditing of Quantile Forecasters (Antonov et al., 2026)}~\cite{antonov2026betonfeatures}: In risk-sensitive decision pipelines (such as inventory replenishment and grid dispatch under asymmetric underage/overage costs), forecasters output conditional quantiles $\hat{q}_\alpha(\mathbf{x})$. Standard conformal prediction and batch quantile tests require fixed sample sizes and exchangeability, failing to detect localized drifts in streaming deployments. Antonov et al. formulate a distribution-free, game-theoretic auditing framework. An auditor bets against the forecaster's conditional validity using a sequential betting martingale:
+    \begin{equation}
+        M_t = \prod_{i=1}^t \left(1 + \boldsymbol{\lambda}_i(\mathbf{x}_i)^\top \mathbf{s}_i\right), \quad \mathbf{s}_i = \mathbb{I}\left(y_i \le \hat{q}_\alpha(\mathbf{x}_i)\right) - \alpha,
+    \end{equation}
+    where betting vectors $\boldsymbol{\lambda}_i(\mathbf{x}_i)$ are optimized online via Follow-the-Regularized-Leader (FTRL). Under the null hypothesis of perfect conditional calibration, $M_t$ is a non-negative test martingale with $\mathbb{E}[M_t] = 1$. By Ville's inequality, $\mathbb{P}(\exists t \ge 1: M_t \ge 1/\delta) \le \delta$, guaranteeing finite-sample Type-I error control at any arbitrary stopping time. Crucially, by parameterizing bets as functions of contextual features $\mathbf{x}_i$, Antonov et al. demonstrate that their auditor detects localized subgroup miscalibrations (e.g., severe under-coverage in specific supply chain tiers) up to $4.2\times$ faster than standard unconditioned scalar tests.
+
+    \item \emph{Position: Universal TSFMs Rest on a Category Error (Dai et al., 2026)}~\cite{dai2026categoryerror}: In a seminal position paper, Dai et al. challenge the prevailing consensus that time series analysis should pursue a monolithic, multi-billion-parameter ``Universal Foundation Model'' analogous to GPT-4 in natural language processing. They argue that this pursuit conflates a \emph{structural container} (sequentially ordered real numbers $(t, \mathbf{x}_t)$) with a \emph{semantic modality} (a shared linguistic or perceptual space governed by common generative rules). While text corpora across medicine, law, and literature share common semantic syntax and world knowledge, the physical data-generating processes of distinct time series domains—such as Navier-Stokes turbulence in fluid dynamics, chaotic Navier-Stokes weather flows, high-frequency limit order book market microstructure, and cardiac electrophysiology—are governed by fundamentally incompatible, non-transferable differential laws. Forcing disparate physical domains into a unified transformer backbone creates an ill-posed optimization task, causing models to collapse into high-cost ``generic low-pass filters''.
+    
+    Dai et al. formalize this limitation via the \emph{Autoregressive Blindness Bound}:
+    \begin{equation}
+        \inf_{\hat{y}} \mathbb{E}\left[|y_{t+1} - \hat{y}(\mathbf{x}_{1:t})|\right] \ge \Delta_{\text{intervention}} \cdot \mathbb{P}\left(\text{do}(I_t)\right),
+    \end{equation}
+    which proves that any history-only foundation model is fundamentally blind to causal interventions and regime shifts ($\text{do}(I_t)$) that lack historical precedent. As an alternative to monolithic universality, they advocate the \emph{Causal Control Agent} paradigm: an intelligent meta-orchestrator that dynamically leverages domain context to coordinate specialized solvers, lightweight Just-in-Time (JIT) adapters, and physics-informed models, replacing stationary zero-shot MSE benchmarks with \emph{Time-to-Recovery (TTR)} adaptation metrics.
+\end{itemize}
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Architectural mechanisms, continual adaptation, cross-sensory telemetry, and formal verification across Iteration 15 foundation models and frameworks (2024--2026).}
+\label{tab:iter15_synthesis}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllll}
+\toprule
+\textbf{Model / Framework} & \textbf{Key Reference} & \textbf{Core Paradigm \& Topology} & \textbf{Mathematical \& Algorithmic Formulation} & \textbf{Hardware / Scale Envelope} & \textbf{Key Empirical Finding / Formal Result} \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category A: Online Continual Learning, Temporal Plasticity \& Black-Box Error Adaptation}} \\
+\midrule
+\textbf{ELF} & Lee et al.~\cite{lee2025elf} (ICML'25) & Native TSFM (Online Adapter) & Dual-module fast frequency forecaster + softmax gating & $<$1M adapter; frozen FM backbone & $12\%\text{--}28\%$ error reduction over static FMs; zero full retraining \\
+\midrule
+\textbf{ORCA} & Dai et al.~\cite{dai2026orca} (NeurIPS'26) & Native TSFM (Black-Box) & Context of errors $\mathbb{P}(\mathbf{e}_t \mid \mathbf{x}_{1:t}, \hat{\mathbf{y}}_t)$ + Boltzmann router & $<$2M adapter; API serving mode & Cuts black-box streaming error by up to $34.2\%$ with zero gradient backprop \\
+\midrule
+\textbf{NatSR} & Urettini et al.~\cite{urettini2026natsr} (ICLR'26) & Native TSFM (Score-Driven) & Natural gradient descent with Student-$t$ score-driven replay & Standard transformer footprint & Robust tracking under heavy-tailed spikes; prevents catastrophic forgetting \\
+\midrule
+\textbf{Temporal Plasticity} & Liu et al.~\cite{liu2025temporalplasticity} (IJCNN'25) & Evaluation \& Benchmark & Continual incremental fine-tuning plasticity evaluation suite & Evaluated on Time-MoE 2.4B, Chronos & Discovers emergent scaling resilience: billion-scale TSFMs retain plasticity longer \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category B: Cross-Sensory Telemetry, Industrial Multimodality \& Tactile Generalist Policies}} \\
+\midrule
+\textbf{FISHER} & Fan et al.~\cite{fan2025fisher} (IEEE TII'25) & Native TSFM (Industrial) & Sub-band spectral tokenization mapping variable $f_s$ to sub-bands & 28M params; RMIS benchmark & Solves M5 heterogeneity; $16\times$ more parameter-efficient than VLMs \\
+\midrule
+\textbf{PowerPM} & Tu et al.~\cite{tu2024powerpm} (NeurIPS'24) & Native TSFM (Power Systems) & Relational GCN over grid hierarchy + Temporal Transformer & 115M params; city-district-user grid & SOTA transfer on electricity forecasting, stability, and customer profiling \\
+\midrule
+\textbf{FTP-1} & Yuan et al.~\cite{yuan2026ftp1} (arXiv'26) & Native TSFM (Tactile Policy) & Morphology-aware unified latent tokens across 21 sensors & 180M params; 3,000h tactile corpus & $+17.2\%$ seen sensor gain; $+31\%$ zero-shot success gain on unseen sensors \\
+\midrule
+\textbf{TouchWorld} & Zhou et al.~\cite{zhou2026touchworld} (arXiv'26) & Native TSFM (Tactile World) & Decoupled predictive contact world model + $>100\,\text{Hz}$ reactive policy & 350M params; EgoTouch dataset & Resolves millisecond slip and tactile hysteresis in bimanual manipulation \\
+\midrule
+\textbf{TS-JEPA} & Ennadir et al.~\cite{ennadir2025tsjepa} (NeurIPS'24W) & Native TSFM (JEPA) & Latent-space energy minimization discarding observation reconstruction & 22M params; UCR/UEA, Monash & Filters high-frequency sensor noise; superior linear probing and zero-shot transfer \\
+\midrule
+\textbf{RATFM} & Maru \& Sato~\cite{maru2025ratfm} (arXiv'25) & Native TSFM (Retrieval) & Test-time nearest-neighbor retrieval of in-domain normal prototypes & 110M params; UCR Anomaly Archive & Matches in-domain fine-tuning accuracy without updating a single weight \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category C: Decoupled Formal Safety, Anytime Auditing \& Foundational Critique}} \\
+\midrule
+\textbf{PEACE} & Uysal et al.~\cite{uysal2026peace} (ICRA'26W) & LLM4TS (Formal Agent) & Decoupled Planner above the loop + Deterministic Kinematic Barrier & 7B LLM planner + real-time filter & Eliminates UAV flight hallucinations; guaranteed geofencing; $O(1)$ real-time execution \\
+\midrule
+\textbf{Bet on Features} & Antonov et al.~\cite{antonov2026betonfeatures} (arXiv'26) & Evaluation \& Benchmark & Game-theoretic betting martingales with e-values and FTRL & Model-agnostic sequential auditor & Anytime-valid finite-sample Type-I error control; detects localized drift $4.2\times$ faster \\
+\midrule
+\textbf{Category Error} & Dai et al.~\cite{dai2026categoryerror} (arXiv'26) & Survey \& Foundations & Autoregressive Blindness Bound: structural container vs semantic modality & Theoretical proof \& benchmark harness & Proves history-only TSFMs blind to interventions; advocates Causal Control Agents \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
 

@@ -49,19 +49,19 @@ def generate_taxonomy_figure():
     # 3 Main Branches
     branches = [
         ("Native TSFMs\n(Pretrained ab initio)", 0.80, c_p1, [
-            ("Continual & Black-Box Adapters", "ELF, ORCA, NatSR, TS-Memory,\niAmTime, S-Mamba, TimeMachine"),
-            ("Cross-Sensory & Industrial Telemetry", "FISHER, PowerPM, FTP-1, TouchWorld,\nTS-JEPA, RATFM, STAP, OpenCity"),
-            ("Earth, Hydrology & Graph Manifolds", "Prithvi WxC, EarthPT, AmazonSWE,\nAgriFM, SpectralGPT, Changen2, Presto")
+            ("Post-Training &\nTest-Time Adaptation", "PETSA, Xie et al., Aurora, ELF, ORCA,\nNatSR, TS-Memory, TimeMachine"),
+            ("Cross-Sensory &\nIndustrial Telemetry", "FISHER, PowerPM, FTP-1, TouchWorld,\nTS-JEPA, RATFM, STAP, OpenCity"),
+            ("Earth, Hydrology &\nGraph Manifolds", "Prithvi WxC, EarthPT, AmazonSWE,\nAgriFM, SpectralGPT, Changen2")
         ]),
         ("Repurposed LLM4TS\n(Cross-Modal & Adapters)", 0.50, c_p2, [
-            ("Decoupled Formal Safety & Routing", "PEACE, ReasonSTL, STARS, Confidence,\nTSRouter, ZARA, PromptCast"),
-            ("Reprogramming & Prototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
-            ("Multi-Agent & Policy Optimization", "TimeRFT, TimeHF, COUNTS, TimeMaster,\nTimeEvo, TimeInteract, Cast-R1")
+            ("Autonomous Agents &\nCausal Orchestration", "TimeSeriesScientist, Chang et al.,\nCausal Agent, Nexus, PEACE, InvarLLM"),
+            ("Reprogramming &\nPrototyping", "Time-LLM, GPT4TS / OFA,\nTEST, CALF, TEMPO, LLM-Mixer"),
+            ("Multi-Agent &\nPolicy Optimization", "TimeRFT, TimeHF, COUNTS, TimeMaster,\nTimeEvo, TimeInteract, Cast-R1")
         ]),
         ("Evaluations, Scaling &\nEmpirical Critiques", 0.20, c_p3, [
-            ("Anytime Auditing & Category Critique", "Bet on Features, Category Error Position,\nTemporal Plasticity, TimeTic, VINTAGE-TS"),
-            ("Distribution-Free Conformal Suites", "RareCP, STOIC, ACAD, TSGBench,\nChronoGraph, GIFT-Eval, fev-bench"),
-            ("Operational Profiling & Edge Suites", "Armory, ST-Prune, HoliBench, FM-CAC,\nQuantCalibration, Beyond Numerical")
+            ("Formal Reachability &\nInvariant Mining", "TNODEV, INVARLLM, Time-RA,\nBet on Features, Category Error Position"),
+            ("Distribution-Free\nConformal Suites", "RareCP, STOIC, ACAD, TSGBench,\nChronoGraph, GIFT-Eval, fev-bench"),
+            ("Operational Profiling\n& Edge Suites", "Armory, ST-Prune, HoliBench, FM-CAC,\nQuantCalibration, Beyond Numerical")
         ])
     ]
 
@@ -309,7 +309,13 @@ def generate_timeline_figure():
         (2026.45, 1.9, "ORCA", "CUHK", "#1f77b4"),
         (2026.46, 3.8, "FTP-1", "Stanford", "#1f77b4"),
         (2026.54, 4.3, "PEACE", "Zurich", "#d62728"),
-        (2026.10, 1.1, "CategoryError", "CUHK", "#2ca02c")
+        (2026.10, 1.1, "CategoryError", "CUHK", "#2ca02c"),
+        (2025.50, 4.1, "PETSA", "Borealis", "#1f77b4"),
+        (2025.74, 2.7, "TSci", "Y-Research", "#d62728"),
+        (2025.75, 4.4, "Aurora", "Aurora Team", "#1f77b4"),
+        (2025.58, 3.4, "Time-RA", "MSFT/THU", "#d62728"),
+        (2026.36, 2.5, "Nexus", "USC/Amazon", "#d62728"),
+        (2026.46, 1.5, "TNODEV", "CNRS", "#2ca02c")
     ]
 
     # Draw timeline line

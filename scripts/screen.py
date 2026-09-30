@@ -1383,6 +1383,76 @@ SPECS = {
         "tokenization": "Structural Container vs Semantic Modality Taxonomy", "prediction_head": "Autoregressive Blindness Bound Formalism",
         "params": "N/A", "pretrain_corpus": "Theoretical Proofs & Intervention Benchmark Suite", "tasks": ["Foundational Critique", "Causal Recovery Benchmarking"],
         "open_weights": None, "venue": "arXiv 2026", "code_url": None
+    },
+    "2510.01538": {
+        "bibkey": "zhao2025timeseriesscientist",
+        "group": "Y-Research-SBU", "paradigm": "LLM4TS", "architecture": "Multi-Agent System (Curator-Planner-Forecaster-Reporter)",
+        "tokenization": "Adaptive Statistical Profiling + Multi-modal Diagnostic Embeddings", "prediction_head": "Ensemble / Foundation & Statistical Model Selection Head",
+        "params": "not reported (LLM agentic backbone)", "pretrain_corpus": "Pretrained LLM backbone + 8 Benchmark suites", "tasks": ["Forecasting", "Model Selection", "Automated Diagnostics", "Reporting"],
+        "open_weights": True, "venue": "arXiv 2025", "code_url": "https://github.com/Y-Research-SBU/TimeSeriesScientist"
+    },
+    "2509.11575": {
+        "bibkey": "chang2026reasoningsurvey",
+        "group": "USC / NYCU", "paradigm": "Survey & Foundations", "architecture": "Agentic Topology Taxonomy (Direct / Linear Chain / Graph / Multi-Agent)",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Survey", "Reasoning Taxonomy", "Agentic Systems"],
+        "open_weights": None, "venue": "TMLR 2026", "code_url": None
+    },
+    "2506.23424": {
+        "bibkey": "medeiros2025petsa",
+        "group": "Borealis AI", "paradigm": "Native TSFM", "architecture": "Parameter-Efficient TTA Adapter with Dynamic Gating",
+        "tokenization": "Patch-based Latent Normalization", "prediction_head": "Linear Gated Projection",
+        "params": "0.2M (adapter)", "pretrain_corpus": "Pretrained Forecaster Baselines (PatchTST, DLinear, TimesNet)", "tasks": ["Forecasting", "Test-Time Adaptation"],
+        "open_weights": True, "venue": "ICML 2025 Workshop", "code_url": None
+    },
+    "2607.20002": {
+        "bibkey": "xie2026posttraining",
+        "group": "Huawei Noah's Ark / Univ. Paris Cité", "paradigm": "Survey & Foundations", "architecture": "Post-Training Conceptual Framework (Parameter / Context / Composition / Uncertainty / Specialization)",
+        "tokenization": "N/A", "prediction_head": "N/A",
+        "params": "not reported", "pretrain_corpus": "N/A", "tasks": ["Survey", "Post-Training Taxonomy", "Uncertainty & Specialization"],
+        "open_weights": None, "venue": "arXiv 2026", "code_url": None
+    },
+    "2411.10918": {
+        "bibkey": "abshari2025invarllm",
+        "group": "Stevens / Temple", "paradigm": "LLM4TS", "architecture": "Hybrid LLM Semantic Extractor + PCMCI+/K-Means Invariant Verifier",
+        "tokenization": "System Documentation Prompting + Temporal State Sequences", "prediction_head": "Invariant Inconsistency Anomaly Score",
+        "params": "not reported", "pretrain_corpus": "Pretrained LLM + SWaT/WADI CPS logs", "tasks": ["Anomaly Detection", "Invariant Mining", "Safety Auditing"],
+        "open_weights": True, "venue": "NDSS 2025", "code_url": None
+    },
+    "2606.16567": {
+        "bibkey": "sayed2026tnodev",
+        "group": "Univ. Gustave Eiffel / CNRS", "paradigm": "Evaluation & Benchmark", "architecture": "Continuous-Time Mixed-Monotonicity (CTMM) Reachability Pipeline",
+        "tokenization": "Continuous State Trajectory Partitioning", "prediction_head": "Hyper-rectangular Reachable Set / Safety Certificate",
+        "params": "not reported", "pretrain_corpus": "Continuous dynamical systems & closed-loop controllers", "tasks": ["Formal Verification", "Reachability Analysis", "Safety Certification"],
+        "open_weights": True, "venue": "arXiv 2026 (TMLR under review)", "code_url": None
+    },
+    "2509.22295": {
+        "bibkey": "wu2026aurora",
+        "group": "Aurora Team", "paradigm": "Native TSFM", "architecture": "Generative Multimodal Diffusion / Cross-Modality Transformer",
+        "tokenization": "Continuous Waveform Patching + Textual Modality Distillation", "prediction_head": "Generative Probabilistic Diffusion Head",
+        "params": "not reported", "pretrain_corpus": "Cross-Domain Multimodal Time Series Corpus (CD-MTSC)", "tasks": ["Forecasting", "Multimodal Generative Modeling"],
+        "open_weights": True, "venue": "ICLR 2026", "code_url": None
+    },
+    "2408.06849": {
+        "bibkey": "han2024causalagent",
+        "group": "Zhejiang Univ.", "paradigm": "LLM4TS", "architecture": "Tool-Augmented Causal Agent (Tool, Reasoning, Memory modules)",
+        "tokenization": "Tabular Causal Graph Encoding + Natural Language Prompts", "prediction_head": "Iterative ReAct Causal Inference / Graph Prediction Head",
+        "params": "not reported", "pretrain_corpus": "Pretrained LLM backbone + CausalTQA benchmark", "tasks": ["Causal Discovery", "Causal Effect Estimation", "Reasoning"],
+        "open_weights": True, "venue": "arXiv 2024", "code_url": None
+    },
+    "2605.14389": {
+        "bibkey": "das2026nexus",
+        "group": "USC / Amazon", "paradigm": "LLM4TS", "architecture": "Decomposed Multi-Agent Framework (Macro/Micro Forecaster + Context Reasoner)",
+        "tokenization": "Hierarchical Numerical Tokens + Contextual Event Text Embeddings", "prediction_head": "Reasoning-Guided Forecast Synthesizer",
+        "params": "not reported", "pretrain_corpus": "Pretrained LLM backbones + Financial & Real Estate Series", "tasks": ["Forecasting", "Contextual Reasoning", "Reasoning Traces"],
+        "open_weights": True, "venue": "arXiv 2026", "code_url": None
+    },
+    "2507.15066": {
+        "bibkey": "yang2026timera",
+        "group": "Microsoft Research / Tsinghua", "paradigm": "LLM4TS", "architecture": "Multimodal Diagnostic Reasoner (Time-LLM + Visual Plot Feedback)",
+        "tokenization": "Multimodal Patch + Plot Embedding + Structured Prompt", "prediction_head": "Fine-grained Explanatory Diagnostic Text Generator",
+        "params": "7B (LLaMA/Mistral SFT)", "pretrain_corpus": "RATs40K (40,000 multi-domain diagnostic instances across 10 domains)", "tasks": ["Anomaly Diagnosis", "Explanatory Reasoning", "Multimodal Feedback"],
+        "open_weights": True, "venue": "ACL 2026 Findings", "code_url": None
     }
 }
 

@@ -9507,5 +9507,494 @@
     },
     "doi": "10.48550/arXiv.2602.05287",
     "url": "https://arxiv.org/abs/2602.05287"
+  },
+  {
+    "id": "arxiv:2510.01538",
+    "arxiv_id": "2510.01538",
+    "title": "TimeSeriesScientist: A General-Purpose AI Agent for Time Series Analysis",
+    "authors": [
+      "Zhao, Haokun",
+      "Zhang, Xiang",
+      "Wei, Jiaqi",
+      "Xu, Yiwei",
+      "He, Yuting",
+      "Sun, Siqi",
+      "You, Chenyu"
+    ],
+    "release_date": "2025-10-02",
+    "summary": "Time series forecasting is central to decision-making in domains as diverse as energy, finance, climate, and public health. In practice, forecasters face thousands of short, noisy series that vary in frequency, quality, and horizon, where the dominant cost lies not in model fitting, but in the labor-intensive preprocessing, validation, and ensembling required to obtain reliable predictions. Prevailing statistical and deep learning models are tailored to specific datasets or domains and generalize poorly. A general, domain-agnostic framework that minimizes human intervention is urgently in demand. In this paper, we introduce TimeSeriesScientist (TSci), the first LLM-driven agentic framework for general time series forecasting. The framework comprises four specialized agents: Curator performs LLM-guided diagnostics augmented by external tools that reason over data statistics to choose targeted preprocessing; Planner narrows the hypothesis space of model choice by leveraging multi-modal diagnostics and self-planning over the input; Forecaster performs model fitting and validation and, based on the results, adaptively selects the best model configuration as well as ensemble strategy to make final predictions; and Reporter synthesizes the whole process into a comprehensive, transparent report. With transparent natural-language rationales and comprehensive reports, TSci transforms the forecasting workflow into a white-box system that is both interpretable and extensible across tasks. Empirical results on eight established benchmarks demonstrate that TSci consistently outperforms both statistical and LLM-based baselines, reducing forecast error by an average of 10.4% and 38.2%, respectively. Moreover, TSci produces a clear and rigorous report that makes the forecasting workflow more transparent and interpretable.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "zhao2025timeseriesscientist",
+    "group": "Y-Research-SBU",
+    "paradigm": "LLM4TS",
+    "architecture": "Multi-Agent System (Curator-Planner-Forecaster-Reporter)",
+    "tokenization": "Adaptive Statistical Profiling + Multi-modal Diagnostic Embeddings",
+    "prediction_head": "Ensemble / Foundation & Statistical Model Selection Head",
+    "params": "not reported (LLM agentic backbone)",
+    "pretrain_corpus": "Pretrained LLM backbone + 8 Benchmark suites",
+    "tasks": [
+      "Forecasting",
+      "Model Selection",
+      "Automated Diagnostics",
+      "Reporting"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2025",
+    "code_url": "https://github.com/Y-Research-SBU/TimeSeriesScientist",
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2510.01538",
+    "url": "https://arxiv.org/abs/2510.01538"
+  },
+  {
+    "id": "arxiv:2509.11575",
+    "arxiv_id": "2509.11575",
+    "title": "A Survey of Reasoning and Agentic Systems in Time Series with Large Language Models",
+    "authors": [
+      "Chang, Ching",
+      "Shi, Yidan",
+      "Cao, Defu",
+      "Yang, Wei",
+      "Hwang, Jeehyun",
+      "Wang, Haixin",
+      "Pang, Jiacheng",
+      "Wang, Wei",
+      "Liu, Yan",
+      "Peng, Wen-Chih",
+      "Chen, Tien-Fu"
+    ],
+    "release_date": "2025-09-15",
+    "summary": "Time series reasoning treats time as a first-class axis and incorporates intermediate evidence directly into the answer. This survey defines the problem and organizes the literature by reasoning topology with three families: direct reasoning in one step, linear chain reasoning with explicit intermediates, and branch-structured reasoning that explores, revises, and aggregates. The topology is crossed with the main objectives of the field, including traditional time series analysis, explanation and understanding, causal inference and decision making, and time series generation, while a compact tag set spans these axes and captures decomposition and verification, ensembling, tool use, knowledge access, multimodality, agent loops, and LLM alignment regimes. Methods and systems are reviewed across domains, showing what each topology enables and where it breaks down in faithfulness or robustness, along with curated datasets, benchmarks, and resources that support study and deployment (https://github.com/blacksnail789521/Time-Series-Reasoning-Survey). Evaluation practices that keep evidence visible and temporally aligned are highlighted, and guidance is distilled on matching topology to uncertainty, grounding with observable artifacts, planning for shift and streaming, and treating cost and latency as design budgets. We emphasize that reasoning structures must balance capacity for grounding and self-correction against computational cost and reproducibility, while future progress will likely depend on benchmarks that tie reasoning quality to utility and on closed-loop testbeds that trade off cost and risk under shift-aware, streaming, and long-horizon settings. Taken together, these directions mark a shift from narrow accuracy toward reliability at scale, enabling systems that not only analyze but also understand, explain, and act on dynamic worlds with traceable evidence and credible outcomes.",
+    "comment": "Accepted to Transactions on Machine Learning Research (TMLR)",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "chang2026reasoningsurvey",
+    "group": "USC / NYCU",
+    "paradigm": "Survey & Foundations",
+    "architecture": "Agentic Topology Taxonomy (Direct / Linear Chain / Graph / Multi-Agent)",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Survey",
+      "Reasoning Taxonomy",
+      "Agentic Systems"
+    ],
+    "open_weights": null,
+    "venue": "TMLR 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 2,
+      "total": 11
+    },
+    "doi": "10.48550/arXiv.2509.11575",
+    "url": "https://arxiv.org/abs/2509.11575"
+  },
+  {
+    "id": "arxiv:2506.23424",
+    "arxiv_id": "2506.23424",
+    "title": "Accurate Parameter-Efficient Test-Time Adaptation for Time Series Forecasting",
+    "authors": [
+      "Medeiros, Heitor R.",
+      "Sharifi-Noghabi, Hossein",
+      "Oliveira, Gabriel L.",
+      "Irandoust, Saghar"
+    ],
+    "release_date": "2025-06-29",
+    "summary": "Real-world time series often exhibit a non-stationary nature, degrading the performance of pre-trained forecasting models. Test-Time Adaptation (TTA) addresses this by adjusting models during inference, but existing methods typically update the full model, increasing memory and compute costs. We propose PETSA, a parameter-efficient method that adapts forecasters at test time by only updating small calibration modules on the input and output. PETSA uses low-rank adapters and dynamic gating to adjust representations without retraining. To maintain accuracy despite limited adaptation capacity, we introduce a specialized loss combining three components: (1) a robust term, (2) a frequency-domain term to preserve periodicity, and (3) a patch-wise structural term for structural alignment. PETSA improves the adaptability of various forecasting backbones while requiring fewer parameters than baselines. Experimental results on benchmark datasets show that PETSA achieves competitive or better performance across all horizons. Our code is available at: https://github.com/BorealisAI/PETSA",
+    "comment": "Second Workshop on Test-Time Adaptation: Putting Updates to the Test! at ICML 2025, Vancouver, Canada. 2025",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "medeiros2025petsa",
+    "group": "Borealis AI",
+    "paradigm": "Native TSFM",
+    "architecture": "Parameter-Efficient TTA Adapter with Dynamic Gating",
+    "tokenization": "Patch-based Latent Normalization",
+    "prediction_head": "Linear Gated Projection",
+    "params": "0.2M (adapter)",
+    "pretrain_corpus": "Pretrained Forecaster Baselines (PatchTST, DLinear, TimesNet)",
+    "tasks": [
+      "Forecasting",
+      "Test-Time Adaptation"
+    ],
+    "open_weights": true,
+    "venue": "ICML 2025 Workshop",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2506.23424",
+    "url": "https://arxiv.org/abs/2506.23424"
+  },
+  {
+    "id": "arxiv:2607.20002",
+    "arxiv_id": "2607.20002",
+    "title": "Post-Training in Time Series Foundation Models: A Unifying Framework",
+    "authors": [
+      "Xie, Shifeng",
+      "Odonnat, Ambroise",
+      "Xiao, Zehao",
+      "Zan, Lei",
+      "Tiomoko, Malik",
+      "Pan, Lujia",
+      "Palpanas, Themis",
+      "Oreshkin, Boris N.",
+      "Liu, Chenghao",
+      "Zhang, Keli"
+    ],
+    "release_date": "2026-07-22",
+    "summary": "Time series foundation models (TSFMs) have emerged as general-purpose models for time series analysis, but pretraining alone is often insufficient for reliable downstream deployment. Bridging this gap requires further intervention to handle domain shift, task heterogeneity, limited supervision, and computational constraints, which motivates post-training as a broad class of methods to adapt, augment, compose, calibrate, or specialize pretrained TSFMs for downstream tasks. In this work, we analyze TSFM post-training methods based on their locus of intervention in the prediction pipeline, yielding five categories: parameter adaptation, context augmentation, model composition, output processing and uncertainty control, and compression and specialization. Within each category, we study main representative methods and discuss their current limitations. We further identify future directions toward controlled adaptation, reliable context construction, uncertainty-aware model composition, calibrated output processing, and deployment-aware specialization. Overall, by providing a unifying framework for the emerging TSFM post-training landscape, this work aims to support future research to navigate the design space between a pretrained TSFM and its reliable downstream deployment.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "xie2026posttraining",
+    "group": "Huawei Noah's Ark / Univ. Paris Cité",
+    "paradigm": "Survey & Foundations",
+    "architecture": "Post-Training Conceptual Framework (Parameter / Context / Composition / Uncertainty / Specialization)",
+    "tokenization": "N/A",
+    "prediction_head": "N/A",
+    "params": "not reported",
+    "pretrain_corpus": "N/A",
+    "tasks": [
+      "Survey",
+      "Post-Training Taxonomy",
+      "Uncertainty & Specialization"
+    ],
+    "open_weights": null,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 2,
+      "total": 11
+    },
+    "doi": "10.48550/arXiv.2607.20002",
+    "url": "https://arxiv.org/abs/2607.20002"
+  },
+  {
+    "id": "arxiv:2411.10918",
+    "arxiv_id": "2411.10918",
+    "title": "INVARLLM: LLM-assisted Physical Invariant Extraction for Cyber-Physical Systems Anomaly Detection",
+    "authors": [
+      "Abshari, Danial",
+      "Shi, Peiran",
+      "Fu, Chenglong",
+      "Sridhar, Meera",
+      "Du, Xiaojiang"
+    ],
+    "release_date": "2024-11-17",
+    "summary": "Cyber-Physical Systems (CPS) are vulnerable to cyber-physical attacks that violate physical laws. While invariant-based anomaly detection is effective, existing methods are limited: data-driven approaches lack semantic context, and physics-based models require extensive manual work. We propose INVARLLM, a hybrid framework that uses large language models (LLMs) to extract semantic information from CPS documentation and generate physical invariants, then validates these against real system data using a PCMCI+-inspired K-means method. This approach combines LLM semantic understanding with empirical validation to ensure both interpretability and reliability. We evaluate INVARLLM on SWaT and WADI datasets, achieving 100% precision in anomaly detection with no false alarms, outperforming all existing methods. Our results demonstrate that integrating LLM-derived semantics with statistical validation provides a scalable and dependable solution for CPS security.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "abshari2025invarllm",
+    "group": "Stevens / Temple",
+    "paradigm": "LLM4TS",
+    "architecture": "Hybrid LLM Semantic Extractor + PCMCI+/K-Means Invariant Verifier",
+    "tokenization": "System Documentation Prompting + Temporal State Sequences",
+    "prediction_head": "Invariant Inconsistency Anomaly Score",
+    "params": "not reported",
+    "pretrain_corpus": "Pretrained LLM + SWaT/WADI CPS logs",
+    "tasks": [
+      "Anomaly Detection",
+      "Invariant Mining",
+      "Safety Auditing"
+    ],
+    "open_weights": true,
+    "venue": "NDSS 2025",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2411.10918",
+    "url": "https://arxiv.org/abs/2411.10918"
+  },
+  {
+    "id": "arxiv:2606.16567",
+    "arxiv_id": "2606.16567",
+    "title": "TNODEV: Toolbox for Neural ODE Verification",
+    "authors": [
+      "Sayed, Abdelrahman Sayed",
+      "Meyer, Pierre-Jean",
+      "Ghazel, Mohamed"
+    ],
+    "release_date": "2026-06-15",
+    "summary": "Neural ordinary differential equations (neural ODE) gained attention in safety critical settings such as continuous-time controllers for cyber-physical systems and classifiers integrated into automated decision pipelines, raising the question whether their behavior can be formally verified. Existing tools dedicated to neural ODE provide only a single reachability call without iterative input-set refinement, limiting the precision of their verdicts to whatever one reachability call can deliver. We present TNODEV, the first formal verifier for neural ODE that integrates a falsification checker, a fast interval-based reachability backend based on continuous-time mixed monotonicity, a verification and refinement loop with three input-set splitting heuristics, and a parallel scheduler in a single end-to-end pipeline. TNODEV supports safe-set inclusion verification on pure neural ODE, neural ODE in closed loop with a neural network controller and general neural ODE (GNODE), with the safe set specified either as an interval or as the half-space intersection induced by a target classification label. We evaluate TNODEV on a range of benchmarks across safe-set inclusion and classification-robustness properties, including a direct reachability comparison against NNV 2.0 and CORA and a verification comparison against NNV 2.0 on MNIST general neural ODE classifiers.",
+    "comment": "30 pages, 7 figures, Under review in TMLR",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "sayed2026tnodev",
+    "group": "Univ. Gustave Eiffel / CNRS",
+    "paradigm": "Evaluation & Benchmark",
+    "architecture": "Continuous-Time Mixed-Monotonicity (CTMM) Reachability Pipeline",
+    "tokenization": "Continuous State Trajectory Partitioning",
+    "prediction_head": "Hyper-rectangular Reachable Set / Safety Certificate",
+    "params": "not reported",
+    "pretrain_corpus": "Continuous dynamical systems & closed-loop controllers",
+    "tasks": [
+      "Formal Verification",
+      "Reachability Analysis",
+      "Safety Certification"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026 (TMLR under review)",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2606.16567",
+    "url": "https://arxiv.org/abs/2606.16567"
+  },
+  {
+    "id": "arxiv:2509.22295",
+    "arxiv_id": "2509.22295",
+    "title": "Aurora: Towards Universal Generative Multimodal Time Series Forecasting",
+    "authors": [
+      "Wu, Xingjian",
+      "Jin, Jianxin",
+      "Qiu, Wanghui",
+      "Chen, Peng",
+      "Shu, Yang",
+      "Yang, Bin",
+      "Guo, Chenjuan"
+    ],
+    "release_date": "2025-09-26",
+    "summary": "Cross-domain generalization is very important in Time Series Forecasting because similar historical information may lead to distinct future trends due to the domain-specific characteristics. Recent works focus on building unimodal time series foundation models and end-to-end multimodal supervised models. Since domain-specific knowledge is often contained in modalities like texts, the former lacks the explicit utilization of them, thus hindering the performance. The latter is tailored for end-to-end scenarios and does not support zero-shot inference for cross-domain scenarios. In this work, we introduce Aurora, a Multimodal Time Series Foundation Model, which supports multimodal inputs and zero-shot inference. Pretrained on Cross-domain Multimodal Time Series Corpus, Aurora can adaptively extract and focus on key domain knowledge contained in corresponding text or image modalities, thus possessing strong cross-domain generalization capability. Through tokenization, encoding, and distillation, Aurora can extract multimodal domain knowledge as guidance and then utilizes a Modality-Guided Multi-head Self-Attention to inject them into the modeling of temporal representations. In the decoding phase, the multimodal representations are used to generate the conditions and prototypes of future tokens, contributing to a novel Prototype-Guided Flow Matching for generative probabilistic forecasting. Comprehensive experiments on 5 well-recognized benchmarks, including TimeMMD, TSFM-Bench, ProbTS, TFB, and EPF, demonstrate the consistent state-of-the-art performance of Aurora on both unimodal and multimodal scenarios.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "wu2026aurora",
+    "group": "Aurora Team",
+    "paradigm": "Native TSFM",
+    "architecture": "Generative Multimodal Diffusion / Cross-Modality Transformer",
+    "tokenization": "Continuous Waveform Patching + Textual Modality Distillation",
+    "prediction_head": "Generative Probabilistic Diffusion Head",
+    "params": "not reported",
+    "pretrain_corpus": "Cross-Domain Multimodal Time Series Corpus (CD-MTSC)",
+    "tasks": [
+      "Forecasting",
+      "Multimodal Generative Modeling"
+    ],
+    "open_weights": true,
+    "venue": "ICLR 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2509.22295",
+    "url": "https://arxiv.org/abs/2509.22295"
+  },
+  {
+    "id": "arxiv:2408.06849",
+    "arxiv_id": "2408.06849",
+    "title": "Causal Agent based on Large Language Model",
+    "authors": [
+      "Han, Kairong",
+      "Kuang, Kun",
+      "Zhao, Ziyu",
+      "Ye, Junjian",
+      "Wu, Fei"
+    ],
+    "release_date": "2024-08-13",
+    "summary": "The large language model (LLM) has achieved significant success across various domains. However, the inherent complexity of causal problems and causal theory poses challenges in accurately describing them in natural language, making it difficult for LLM to comprehend and use them effectively. Causal methods are not easily conveyed through natural language, which hinders LLM's ability to apply them accurately. Additionally, causal datasets are typically tabular, while LLM excels in handling natural language data, creating a structural mismatch that impedes effective reasoning with tabular data. To address these challenges, we have equipped the LLM with causal tools within an agent framework, named the Causal Agent, enabling it to tackle causal problems. The causal agent comprises tools, memory, and reasoning modules. In the tool module, the causal agent calls Python code and uses the encapsulated causal function module to align tabular data with natural language. In the reasoning module, the causal agent performs reasoning through multiple iterations with the tools. In the memory module, the causal agent maintains a dictionary instance where the keys are unique names and the values are causal graphs. To verify the causal ability of the causal agent, we established a Causal Tabular Question Answer (CausalTQA) benchmark consisting of four levels of causal problems: variable level, edge level, causal graph level, and causal effect level. CausalTQA consists of about 1.4K for these four levels questions. Causal agent demonstrates remarkable efficacy on the four-level causal problems, with accuracy rates all above 80\\%. Through verification on the real-world dataset QRData, the causal agent is 6\\% higher than the original SOTA. For further insights and implementation details, our code is accessible via the GitHub repository https://github.com/kairong-han/causal_agent.",
+    "comment": null,
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "han2024causalagent",
+    "group": "Zhejiang Univ.",
+    "paradigm": "LLM4TS",
+    "architecture": "Tool-Augmented Causal Agent (Tool, Reasoning, Memory modules)",
+    "tokenization": "Tabular Causal Graph Encoding + Natural Language Prompts",
+    "prediction_head": "Iterative ReAct Causal Inference / Graph Prediction Head",
+    "params": "not reported",
+    "pretrain_corpus": "Pretrained LLM backbone + CausalTQA benchmark",
+    "tasks": [
+      "Causal Discovery",
+      "Causal Effect Estimation",
+      "Reasoning"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2024",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2408.06849",
+    "url": "https://arxiv.org/abs/2408.06849"
+  },
+  {
+    "id": "arxiv:2605.14389",
+    "arxiv_id": "2605.14389",
+    "title": "Nexus : An Agentic Framework for Time Series Forecasting",
+    "authors": [
+      "Das, Sarkar Snigdha Sarathi",
+      "Goyal, Palash",
+      "Parmar, Mihir",
+      "Peng, Nanyun",
+      "Tirumalashetty, Vishy",
+      "Li, Chun-Liang",
+      "Zhang, Rui",
+      "Yoon, Jinsung",
+      "Pfister, Tomas"
+    ],
+    "release_date": "2026-05-14",
+    "summary": "Time series forecasting is not just numerical extrapolation, but often requires reasoning with unstructured contextual data such as news or events. While specialized Time Series Foundation Models (TSFMs) excel at forecasting based on numerical patterns, they remain unaware to real-world textual signals. Conversely, while LLMs are emerging as zero-shot forecasters, their performance remains uneven across domains and contextual grounding. To bridge this gap, we introduce Nexus, a multi-agent forecasting framework that decomposes prediction into specialized stages: isolating macro-level and micro-level temporal fluctuations, and integrating contextual information when available before synthesizing a final forecast. This decomposition enables Nexus to adapt from seasonal signals to volatile, event-driven information without relying on external statistical anchors or monolithic prompting. We show that current-generation LLMs possess substantially stronger intrinsic forecasting ability than previously recognized, depending critically on how numerical and contextual reasoning are organized. Evaluated on data strictly succeeding LLM knowledge cutoffs spanning Zillow real estate metrics and volatile stock market equities, Nexus consistently matches or outperforms state-of-the-art TSFMs and strong LLM baselines. Beyond numerical accuracy, Nexus produces high-quality reasoning traces that explicitly show the fundamental drivers behind each forecast. Our results establish that real-world forecasting is an agentic reasoning problem extending well beyond only sequence modeling.",
+    "comment": "30 Pages, 3 figures, 5 Tables",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "das2026nexus",
+    "group": "USC / Amazon",
+    "paradigm": "LLM4TS",
+    "architecture": "Decomposed Multi-Agent Framework (Macro/Micro Forecaster + Context Reasoner)",
+    "tokenization": "Hierarchical Numerical Tokens + Contextual Event Text Embeddings",
+    "prediction_head": "Reasoning-Guided Forecast Synthesizer",
+    "params": "not reported",
+    "pretrain_corpus": "Pretrained LLM backbones + Financial & Real Estate Series",
+    "tasks": [
+      "Forecasting",
+      "Contextual Reasoning",
+      "Reasoning Traces"
+    ],
+    "open_weights": true,
+    "venue": "arXiv 2026",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2605.14389",
+    "url": "https://arxiv.org/abs/2605.14389"
+  },
+  {
+    "id": "arxiv:2507.15066",
+    "arxiv_id": "2507.15066",
+    "title": "Time-RA: Towards Time Series Reasoning for Anomaly Diagnosis with LLM Feedback",
+    "authors": [
+      "Yang, Yiyuan",
+      "Liu, Zichuan",
+      "Song, Lei",
+      "Ying, Kai",
+      "Wang, Zhiguang",
+      "Bamford, Tom",
+      "Vyetrenko, Svitlana",
+      "Bian, Jiang",
+      "Wen, Qingsong"
+    ],
+    "release_date": "2025-07-20",
+    "summary": "Time series anomaly detection (TSAD) has traditionally focused on binary classification and often lacks the fine-grained categorization and explanatory reasoning required for transparent decision-making. To address these limitations, we propose Time-series Reasoning for Anomaly (Time-RA), a novel task that reformulates TSAD from a discriminative into a generative, reasoning-intensive paradigm. To facilitate this, we introduce RATs40K, the first real-world large-scale multimodal benchmark with ~40,000 samples across 10 domains, integrating raw time series, textual context, and visual plots with structured reasoning annotations. Extensive benchmarking shows that while supervised fine-tuning and visual representations boost diagnostic accuracy and reasoning consistency, performance varies across complex scenarios. Notably, fine-tuned models demonstrate strong \"plug-and-play\" transferability, outperforming traditional baselines on unseen real-world datasets. Our work establishes a foundation for interpretable, multimodal time series analysis. All code (https://github.com/yyysjz1997/Time-RA) and the RATs40K dataset (https://huggingface.co/datasets/Time-RA/RATs40K) are fully open-sourced to facilitate future research.",
+    "comment": "ACL 2026 Findings. 27 pages, 11 figures, 15 tables. Code and dataset are publicly available",
+    "journal_ref": null,
+    "matched_queries": [
+      "Q6_snowballing_iteration4"
+    ],
+    "retrieved_at": "2026-09-30 12:59:32",
+    "status": "included",
+    "screen_date": "2026-09-30",
+    "bibkey": "yang2026timera",
+    "group": "Microsoft Research / Tsinghua",
+    "paradigm": "LLM4TS",
+    "architecture": "Multimodal Diagnostic Reasoner (Time-LLM + Visual Plot Feedback)",
+    "tokenization": "Multimodal Patch + Plot Embedding + Structured Prompt",
+    "prediction_head": "Fine-grained Explanatory Diagnostic Text Generator",
+    "params": "7B (LLaMA/Mistral SFT)",
+    "pretrain_corpus": "RATs40K (40,000 multi-domain diagnostic instances across 10 domains)",
+    "tasks": [
+      "Anomaly Diagnosis",
+      "Explanatory Reasoning",
+      "Multimodal Feedback"
+    ],
+    "open_weights": true,
+    "venue": "ACL 2026 Findings",
+    "code_url": null,
+    "quality_score": {
+      "methodological_soundness": 3,
+      "empirical_evaluation": 3,
+      "clarity_reproducibility": 3,
+      "open_science": 3,
+      "total": 12
+    },
+    "doi": "10.48550/arXiv.2507.15066",
+    "url": "https://arxiv.org/abs/2507.15066"
   }
 ]

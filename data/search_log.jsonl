@@ -30,3 +30,4 @@
 {"timestamp": "2026-09-27 05:42:05", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 13", "hits": 13, "new_candidates": 13}
 {"timestamp": "2026-09-27 10:44:46", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 14", "hits": 14, "new_candidates": 14}
 {"timestamp": "2026-09-30 05:00:11", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 13", "hits": 13, "new_candidates": 13}
+{"timestamp": "2026-09-30 12:59:32", "source": "Automated Snowballing Pipeline (arXiv / Semantic Scholar)", "query": "Seeds: 11 foundation models; Targets: 10", "hits": 10, "new_candidates": 10}

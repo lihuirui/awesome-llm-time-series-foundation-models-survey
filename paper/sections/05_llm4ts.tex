@@ -195,3 +195,33 @@ While foundation models and large language models exhibit remarkable capabilitie
     where $h_{\text{geo}}$ enforces hard geofencing, no-fly zones, and minimum terrain clearance, while $h_{\text{kin}}$ bounds velocity and acceleration envelopes. The executor runs in hard real-time ($>50\,\text{Hz}$) without waiting for LLM responses. Crucially, the LLM is only re-invoked asynchronously when a hard constraint violation or unrecoverable environmental anomaly occurs, triggering a localized, bounded replanning pass. By keeping the foundation model above the control loop while enforcing rigid mathematical barriers below it, PEACE eliminates flight hallucinations, ensures provable barrier safety, and achieves an order-of-magnitude reduction in mission execution latency.
 \end{itemize}
 
+\subsection{Autonomous Agentic Architectures, Causal Tool Orchestration, and Diagnostic Reasoning}
+\label{sec:agentic_causal_orchestration}
+
+Moving beyond passive sequence-to-sequence fine-tuning and reprogramming, the frontier of LLM-based time series research in 2025--2026 focuses on \emph{agentic systems}: autonomous, multi-agent frameworks capable of tool execution, causal graph reasoning, hypothesis testing, and verifiable diagnostic reporting:
+
+\begin{itemize}[leftmargin=*]
+    \item \emph{TimeSeriesScientist: General-Purpose AI Agent for Automated Forecasting (Zhao et al., 2025)}~\cite{zhao2025timeseriesscientist}: Zhao et al. identify that in operational enterprise settings, the dominant expense of time series forecasting stems not from model training compute, but from intensive human engineering: data profiling, non-stationarity diagnostics, model architecture selection, and post-hoc validation. They formulate TimeSeriesScientist (TSci), an autonomous multi-agent system organized into four collaborative roles:
+    (1)~\emph{Curator}: executes statistical diagnostics (ADF unit root tests, seasonal decomposition, STL filtering) to quantify missingness, trend strength, and concept drift;
+    (2)~\emph{Planner}: formulates a targeted hypothesis space and prunes candidate model classes (arbitrating between classical ARIMA/ETS, tree ensembles, and pretrained foundation models);
+    (3)~\emph{Forecaster}: orchestrates model fitting, dynamic cross-validation, and loss-weighted ensembling;
+    (4)~\emph{Reporter}: synthesizes transparent natural-language diagnostic narratives explaining regime shifts and failure modes. Across 8 benchmark suites, TSci outperforms classical statistical baselines by $10.4\%$ and raw LLM prompting by $38.2\%$ in forecasting accuracy while producing fully transparent audit trails.
+
+    \item \emph{A Survey of Reasoning and Agentic Systems in Time Series with LLMs (Chang et al., TMLR 2026)}~\cite{chang2026reasoningsurvey}: In a landmark foundational survey accepted at TMLR, Chang et al. establish a rigorous taxonomy categorizing reasoning and agentic workflows in temporal data. They formalize four structural reasoning topologies:
+    (1)~\emph{Direct Reasoning}: single-step zero-shot inference mapping observations directly to conclusions;
+    (2)~\emph{Linear Chain Reasoning}: sequential multi-step Chain-of-Thought (CoT) decomposing temporal analysis into ordered sub-goals;
+    (3)~\emph{Graph-Structured Reasoning}: branching exploratory graphs (e.g., Tree-of-Thoughts and Monte Carlo state-space search) that explore alternate dynamical hypotheses;
+    (4)~\emph{Multi-Agent Collaboration}: decentralized networks of specialized agents interacting through structured message-passing protocols. They define the \emph{T-Agent} (Tool-integrated Agent) and \emph{T-Align} (Temporal-Semantic Alignment) formalisms, analyzing how execution actors coordinate deterministic numerical solvers and knowledge bases to overcome foundational hallucinations.
+
+    \item \emph{Causal Agent Based on Large Language Models (Han et al., 2024)}~\cite{han2024causalagent}: Han et al. address the structural mismatch between natural-language LLMs and tabular temporal causal discovery. Causal inference requires manipulating structural causal models (SCMs) and directed acyclic graphs (DAGs), which are poorly captured by plain text prompts. The authors formulate the Causal Agent framework, consisting of:
+    (1) a \emph{Tool Module} that encapsulates deterministic causal discovery algorithms (PC, GES, LiNGAM, Backdoor adjustment) as executable Python routines;
+    (2) an iterative \emph{Reasoning Module} operating under a multi-turn ReAct paradigm to propose, test, and critique causal hypotheses; and
+    (3) a \emph{Memory Module} utilizing dictionary-based graph data structures to store and update active causal graphs $\mathcal{G} = (\mathcal{V}, \mathcal{E})$. Introducing the Causal Tabular Question Answering (CausalTQA) benchmark across 4 causal problem levels (variable, edge, graph, and interventional effect), the Causal Agent achieves $>80\%$ accuracy and outperforms existing LLM baselines by $6\%$ on the empirical QRData benchmark.
+
+    \item \emph{Nexus: An Agentic Framework for Time Series Forecasting (Das et al., 2026)}~\cite{das2026nexus}: Das et al. argue that real-world time series forecasting is fundamentally an agentic reasoning problem rather than purely numerical extrapolation. Real-world dynamics—such as equity pricing and real estate trends—are heavily driven by unstructured events (earnings calls, regulatory filings, central bank announcements). Nexus decomposes forecasting into specialized multi-agent stages:
+    (1) a \emph{Macro/Micro Fluctuations Decomposer} that isolates long-term trends from high-frequency volatility;
+    (2) a \emph{Contextual News Reasoner} that extracts structured temporal events and sentiment shocks from raw textual streams; and
+    (3) a \emph{Synthesis Forecaster} that fuses numeric and textual features while emitting verifiable \emph{reasoning traces}. On volatile equities and macroeconomic series, Nexus matches or exceeds specialized TSFMs, demonstrating that agentic reasoning over contextual event streams bridges the gap between pure numeric modeling and domain semantics.
+\end{itemize}
+
+

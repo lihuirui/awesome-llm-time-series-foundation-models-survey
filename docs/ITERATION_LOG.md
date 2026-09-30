@@ -593,3 +593,53 @@
 3. **Formal Invariant Verification of Neural Temporal Surrogates in Hardware-in-the-Loop Emulation**: Formulate automated verification pipelines testing reachability and safe invariant compliance of time series foundation models embedded in microgrid and robotic hardware testbeds.
 
 
+---
+
+## Iteration 16: Unified Post-Training Paradigms, Autonomous Causal Agents & Formal Reachability Verification
+- **Timestamp**: 2026-09-30 21:05:00 (UTC+8)
+- **Phase Transition**: P5 (Continuous Update Loop & Post-Training / Agentic Causal Orchestration / Formal Reachability Synthesis)
+- **Target Repository**: `lihuirui/awesome-llm-time-series-foundation-models-survey`
+- **Working Title**: Large Language Models and Foundation Models for Time Series: A Survey and Outlook
+
+### Execution Summary
+1. **Unified Post-Training Paradigms, Parameter-Efficient Test-Time Adaptation & Multimodal Foundations (Section 4.21 & Table 14)**:
+   - Formulated Subsection 4.21 in `paper/sections/04_native_tsfm.tex` and Section 6.14 in `docs/SURVEY_zh.md` establishing the 5 core post-training pillars across parameter adaptation, context augmentation, model composition, uncertainty control, and compression/specialization.
+   - Synthesized:
+     - **Post-Training TSFM Framework** (Xie et al., 2026; "Post-Training in Time Series Foundation Models: A Unifying Framework", establishing the 5 core post-training pillars across parameter adaptation, context augmentation, model composition, uncertainty control, and compression/specialization, formalizing downstream risk minimization).
+     - **PETSA (Parameter-Efficient Test-Time Adaptation)** (Medeiros et al., ICML 2025 PUT Workshop; PETSA updating $<0.2$M parameters with dynamic low-rank gated adapters and multi-objective loss combining Huber, spectral FFT power penalty, and patch latent consistency, reducing MSE by $31.8\%$ and accelerating runtime by $4.8\times$).
+     - **Aurora** (Wu et al., ICLR 2026; Aurora universal generative multimodal foundation model with textual token distillation and continuous diffusion score matching on CD-MTSC, overcoming unimodal forecasting ambiguity).
+2. **Autonomous Agentic Workflows, Causal Tool Orchestration & Reasoning Topologies (Section 5.10 & Table 14)**:
+   - Formulated Subsection 5.10 in `paper/sections/05_llm4ts.tex` and Section 6.14 in `docs/SURVEY_zh.md`.
+   - Synthesized:
+     - **TimeSeriesScientist (TSci)** (Zhao et al., 2025; 4-agent collaborative pipeline: Curator, Planner, Forecaster, Reporter automating diagnostics, model selection between statistical and neural backbones, cross-validation, and reporting, cutting error by $10.4\%$ vs statistical baselines and $38.2\%$ vs direct prompting).
+     - **Reasoning & Agentic Systems Survey** (Chang et al., TMLR 2026; landmark survey establishing 4 reasoning topologies—direct, linear chain CoT, graph/tree search, multi-agent—and defining T-Agent and T-Align formalisms).
+     - **Causal Agent** (Han et al., 2024; Causal Agent equipping LLMs with causal tool modules, ReAct reasoning, and dictionary graph memory on the CausalTQA benchmark, achieving $>80\%$ accuracy and $+6\%$ on QRData).
+     - **Nexus** (Das et al., 2026; Nexus multi-agent framework decomposing real-world forecasting into macro/micro fluctuation analysis, contextual event reasoning from unstructured news/reports, and verifiable reasoning traces).
+3. **Formal Reachability Verification, Physical Invariant Mining & Generative Diagnostic Benchmarking (Section 6.16 & Table 14)**:
+   - Formulated Subsection 6.16 in `paper/sections/06_benchmarks_critique.tex` and Section 6.14 in `docs/SURVEY_zh.md`.
+   - Synthesized:
+     - **TNODEV** (Sayed et al., 2026; TNODEV end-to-end verification toolbox for neural ODEs utilizing continuous-time mixed-monotonicity CTMM reachability analysis and adaptive hyper-rectangular partitioning without unrolling).
+     - **INVARLLM** (Abshari et al., NDSS 2025; INVARLLM neuro-symbolic physical invariant extraction from CPS engineering documentation verified by PCMCI+ causal discovery and temporal clustering, detecting stealthy physical attacks on SWaT/WADI with zero false alarms).
+     - **Time-RA** (Yang et al., ACL 2026; Time-RA transforming binary anomaly detection into multimodal generative diagnostic reasoning across 40,000 multi-domain instances in RATs40K).
+4. **100% Citation & Metadata Integrity (+10 Verified Studies, Total 199)**:
+   - Exactly 199 out of 199 bibkeys in `paper/references.bib` are cited in `paper/**/*.tex` (0 uncited, 0 missing).
+   - Strict PRISMA 2020 arithmetic verified: $216 - 5 = 211 \rightarrow 211 - 11 = 200 \rightarrow 200 - 1 = 199$.
+   - All 199 studies verified against logged scholarly API responses; 0 unverified papers.
+5. **Publication Quality Figures & Expanded Survey Paper**:
+   - Regenerated all 5 figures (`fig_taxonomy`, `fig_prisma`, `fig_timeline`, `fig_params_corpus`, `fig_category_dist`) at $\ge 300$ dpi, incorporating post-training adaptation, autonomous agents, causal tool orchestration, and neural reachability verification.
+   - Successfully compiled `paper/main.pdf` (expanded to 46 pages) with `tectonic`.
+   - Regenerated bilingual `README.md` and updated `docs/SURVEY_zh.md` and `docs/PROTOCOL.md` (v1.12.0).
+   - Side-effect free `make check` passed with 100% success.
+
+### Reviewer Scores (Iteration 16)
+- Coverage: 5.0 / 5.0
+- Taxonomy Clarity: 5.0 / 5.0
+- Depth of Analysis: 5.0 / 5.0
+- Citation Accuracy: 5.0 / 5.0
+- Figures & Tables: 5.0 / 5.0
+- Writing & Rigor: 5.0 / 5.0
+
+### Top 3 Priorities for Next Iteration
+1. **Dynamic Hybrid Symbolic-Neural Foundation Orchestration**: Formalize real-time meta-arbitrators that switch between formal verified neural ODE surrogates and statistical models based on runtime Lyapunov barrier stability checks.
+2. **Standardized Benchmarking of Autonomous Time-Series Agent Protocols**: Construct empirical latency, token-cost, and tool-call precision evaluations comparing TSci, Causal Agent, and Nexus against human data scientist baselines across multi-domain datasets.
+3. **Zero-Leakage Multi-Modal Generative Pretraining Protocols**: Develop formal temporal provenance hashing and diffusion watermark verification protocols to audit synthetic and multimodal pretraining corpora against test-set contamination.

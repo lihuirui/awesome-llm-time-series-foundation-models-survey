@@ -1,24 +1,24 @@
 {
   "date": "2026-09-30",
   "identification": {
-    "records_identified_arxiv": 201,
+    "records_identified_arxiv": 211,
     "records_identified_crossref": 4,
-    "total_records_identified": 206,
+    "total_records_identified": 216,
     "duplicates_removed": 5
   },
   "screening": {
-    "screened_title_abstract": 201,
+    "screened_title_abstract": 211,
     "excluded_title_abstract": 11,
-    "fulltext_assessed": 190,
+    "fulltext_assessed": 200,
     "excluded_fulltext": 1
   },
   "included": {
-    "total_included": 189,
+    "total_included": 199,
     "by_paradigm": {
-      "Native TSFM": 94,
-      "LLM4TS": 48,
-      "Evaluation & Benchmark": 43,
-      "Survey & Foundations": 4
+      "Native TSFM": 96,
+      "LLM4TS": 53,
+      "Evaluation & Benchmark": 44,
+      "Survey & Foundations": 6
     }
   }
 }

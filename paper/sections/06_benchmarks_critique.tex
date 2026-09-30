@@ -683,4 +683,66 @@ As foundation models transition into automated industrial control, financial ris
 }
 \end{table*}
 
+\subsection{Formal Reachability Verification, Physical Invariant Mining, and Generative Diagnostic Benchmarking}
+\label{sec:formal_reachability_invariants_timera}
+
+As time series foundation models and neural dynamical surrogates enter safety-critical cyber-physical infrastructures (power grids, water networks, autonomous robotics, and clinical ICU monitoring), empirical validation over historical holdout sets provides insufficient safety guarantees. Unseen perturbations or out-of-distribution physical states can drive neural controllers into catastrophic violation states. Recent 2024--2026 advances pioneer formal reachability analysis, neuro-symbolic physical invariant extraction, and multimodal generative diagnostic benchmarks:
+
+\begin{itemize}[leftmargin=*]
+    \item \emph{TNODEV: Formal Verification Toolbox for Neural ODEs (Sayed et al., 2026)}~\cite{sayed2026tnodev}: Neural ordinary differential equations (neural ODEs) represent a foundational class of continuous-time dynamical surrogates $\dot{\mathbf{x}}(t) = f_\theta(\mathbf{x}(t), \mathbf{u}(t))$. While discrete feedforward networks can be verified via piecewise linear relaxations (e.g., Star sets or Reluplex), verifying continuous-time trajectories over unbounded time horizons requires formal reachability analysis. Sayed et al. establish TNODEV, the first end-to-end verification pipeline designed specifically for neural ODEs. TNODEV integrates:
+    (1) a falsification engine that searches for property-violating initial conditions;
+    (2) a reachability engine based on continuous-time mixed-monotonicity (CTMM) that bounds the reachable tube $[\underline{\mathbf{x}}(t), \overline{\mathbf{x}}(t)]$ via auxiliary decomposition functions without unrolling; and
+    (3) an adaptive hyper-rectangular input-partitioning loop with parallel scheduling.
+    TNODEV formally verifies safe-set inclusion and Lipschitz stability for pure neural ODEs, closed-loop neural feedback controllers, and General Neural ODE (GNODE) architectures on benchmark control benchmarks, bridging the gap between deep continuous models and certified formal safety.
+
+    \item \emph{INVARLLM: Neuro-Symbolic Invariant Mining for Cyber-Physical Systems (Abshari et al., NDSS 2025)}~\cite{abshari2025invarllm}: Presented at the Network and Distributed System Security (NDSS) Symposium, Abshari et al. resolve the trade-off between semantic context and mathematical rigor in cyber-physical anomaly detection. Physical assets (e.g., municipal water treatment plants) operate under strict physical conservation laws (flow conservation, pressure bounds, chemical balance). Pure data-driven models lack domain semantics, while first-principles physical modeling requires months of human engineering. INVARLLM leverages LLMs to ingest unstructured plant manuals, P\&ID diagrams, and operational specifications to formulate hypothetical physical invariants:
+    \begin{equation}
+        \mathcal{I}_k: \quad \phi_k(\mathbf{s}_t) \equiv f_k(s_{t, i_1}, \dots, s_{t, i_m}) \bowtie 0, \quad \bowtie \in \{=, \le, \ge\}.
+    \end{equation}
+    To eliminate LLM hallucinations, INVARLLM validates these candidate symbolic expressions against empirical time-series sensor streams using causal discovery (PCMCI+) and temporal $k$-means clustering, filtering out spurious correlations. Validated invariants serve as hard mathematical checks against stealthy cyber-attacks on the SWaT and WADI physical testbeds, detecting physical manipulation attacks that evade deep learning and TSFM baselines with zero false alarms.
+
+    \item \emph{Time-RA: Reasoning-Driven Anomaly Diagnosis with LLM Feedback (Yang et al., ACL 2026)}~\cite{yang2026timera}: Published at ACL 2026, Yang et al. challenge the conventional formulation of time series anomaly detection (TSAD) as binary classification ($y_t \in \{0, 1\}$). Binary labels provide zero diagnostic insight into root-cause failure mechanisms, leaving human operators unable to take corrective action. Time-RA (Time-series Reasoning for Anomaly) transforms TSAD into a generative, multi-modal diagnostic reasoning task. The authors establish RATs40K, a multimodal benchmark comprising 40,000 real-world anomaly instances across 10 mission-critical domains (AIOps, Cloud Telemetry, Healthcare, Industrial Manufacturing, Transportation). Each instance pairs high-frequency numerical sensor streams with contextual logs and visual plot representations. By instruction-tuning LLMs with multimodal visual-temporal feedback, Time-RA generates structured causal narratives detailing anomaly classification, root-cause propagation paths, and actionable mitigation protocols, bridging the gap between numerical anomaly scoring and human-interpretable root-cause diagnosis.
+\end{itemize}
+
+\begin{table*}[t]
+\centering
+\small
+\caption{Architectural mechanisms, post-training adaptation, causal-agent orchestration, and formal reachability verification across Iteration 16 foundation models and frameworks (2024--2026).}
+\label{tab:iter16_synthesis}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{llllll}
+\toprule
+\textbf{Model / Framework} & \textbf{Key Reference} & \textbf{Core Paradigm \& Topology} & \textbf{Mathematical \& Algorithmic Formulation} & \textbf{Hardware / Scale Envelope} & \textbf{Key Empirical Finding / Formal Result} \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category A: Unified Post-Training Paradigms, Test-Time Adaptation \& Multimodal Foundations}} \\
+\midrule
+\textbf{Post-Training TSFM} & Xie et al.~\cite{xie2026posttraining} (arXiv'26) & Survey \& Foundations & 5-pillar taxonomy: parameter, context, composition, output, compression & Conceptual meta-framework & Unified mathematical framework for downstream TSFM adaptation \\
+\midrule
+\textbf{PETSA} & Medeiros et al.~\cite{medeiros2025petsa} (ICML'25W) & Native TSFM (PEFT TTA) & Dynamic low-rank gated adapters + multi-objective loss ($\mathcal{L}_{\text{Huber}} + \mathcal{L}_{\text{freq}} + \mathcal{L}_{\text{patch}}$) & $<0.2$M adapter; $<1\%$ parameters & $31.8\%$ MSE reduction; $4.8\times$ faster runtime than full-model TTA \\
+\midrule
+\textbf{Aurora} & Wu et al.~\cite{wu2026aurora} (ICLR'26) & Native TSFM (Multimodal) & Cross-modality token distillation + continuous generative score diffusion head & Multimodal cross-attention & SOTA zero-shot probabilistic forecasting on CD-MTSC multimodal corpus \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category B: Autonomous Time-Series Agents, Causal Tool Orchestration \& Reasoning Topologies}} \\
+\midrule
+\textbf{TimeSeriesScientist} & Zhao et al.~\cite{zhao2025timeseriesscientist} (arXiv'25) & LLM4TS (Autonomous Agent) & 4-agent collaborative pipeline: Curator, Planner, Forecaster, Reporter & LLM agentic orchestrator & $-10.4\%$ error vs statistical; $-38.2\%$ vs LLM prompting; white-box audit \\
+\midrule
+\textbf{Reasoning Survey} & Chang et al.~\cite{chang2026reasoningsurvey} (TMLR'26) & Survey \& Foundations & Topologies: direct, linear CoT, graph search, multi-agent (T-Agent, T-Align) & Comprehensive survey taxonomy & First rigorous formalization of reasoning topologies in time series agents \\
+\midrule
+\textbf{Causal Agent} & Han et al.~\cite{han2024causalagent} (arXiv'24) & LLM4TS (Causal Tool Agent) & Tool module (PC/LiNGAM) + ReAct reasoning + dictionary graph memory & CausalTQA benchmark & $>80\%$ accuracy across 4 causal problem levels; $+6\%$ on QRData \\
+\midrule
+\textbf{Nexus} & Das et al.~\cite{das2026nexus} (arXiv'26) & LLM4TS (Contextual Agent) & Multi-agent decomposition: macro/micro dynamics + textual event reasoner & Equities \& real estate series & Matches/exceeds TSFMs by grounding forecasts in verifiable reasoning traces \\
+\midrule
+\multicolumn{6}{l}{\textbf{Category C: Formal Reachability Verification, Physical Invariant Mining \& Diagnostic Benchmarking}} \\
+\midrule
+\textbf{TNODEV} & Sayed et al.~\cite{sayed2026tnodev} (arXiv'26) & Evaluation \& Benchmark & Continuous-time mixed-monotonicity (CTMM) reachability + falsification & Neural ODE verification toolbox & Certified safety-set inclusion proofs for continuous dynamical surrogates \\
+\midrule
+\textbf{INVARLLM} & Abshari et al.~\cite{abshari2025invarllm} (NDSS'25) & LLM4TS (Neuro-Symbolic) & LLM documentation invariant extraction + PCMCI+/k-means temporal auditing & SWaT \& WADI CPS testbeds & Zero false alarms; detects stealthy physical attacks bypassing deep TSFMs \\
+\midrule
+\textbf{Time-RA} & Yang et al.~\cite{yang2026timera} (ACL'26) & LLM4TS (Diagnostic Reasoner) & Generative diagnostic reasoning with visual-temporal feedback on RATs40K & 7B SFT multimodal LLM & Replaces binary anomaly scoring with root-cause diagnostic explanations \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+
 

@@ -2,11 +2,11 @@
 
 [![Survey Paper](https://img.shields.io/badge/Survey%20Paper-PDF-red?style=flat&logo=adobeacrobatreader)](paper/main.pdf)
 [![PRISMA 2020](https://img.shields.io/badge/PRISMA%202020-Reproducible-green?style=flat)](docs/PROTOCOL.md)
-[![Total Included](https://img.shields.io/badge/Included%20Studies-189-blue?style=flat)](data/papers.json)
+[![Total Included](https://img.shields.io/badge/Included%20Studies-199-blue?style=flat)](data/papers.json)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > Working Title: **Large Language Models and Foundation Models for Time Series: A Survey and Outlook**  
-> Latest Iteration: **Iteration 15 (Online Continual Learning, Cross-Sensory Telemetry, Decoupled Formal Safety & Category Error Critique)** · Last Updated: **2026-09-30**
+> Latest Iteration: **Iteration 16 (Unified Post-Training Paradigms, Autonomous Causal Agents & Formal Reachability Verification)** · Last Updated: **2026-09-30**
 
 ---
 
@@ -14,13 +14,13 @@
 本项目致力于对 **时间序列大语言模型 (LLM4TS)** 与 **原生时间序列基座模型 (Native TSFMs)**（2021–2026年）开展系统性文献综述与前沿追踪。遵循 **PRISMA 2020** 规范，严格保证学术真实性：所有收录论文均通过权威学术数据库（arXiv API、Crossref、OpenAlex、Semantic Scholar、DBLP）接口实时检索与元数据交叉校验，开源代码均通过 GitHub 官方 API 验证。
 
 核心覆盖范围包括：
-1. **在线持续学习、时序可塑性与黑盒残差情境自适应 (Online Continual Learning, Temporal Plasticity & Black-Box Residual Adaptation)**：针对非平稳流式时序漂移与商业黑盒 API 无法反向传播的现实约束，引入新型自适应范式：ELF (ICML 2025 频域双模块快速预测器 + 动态加权网关，零微调降噪 12-28%)、ORCA (NeurIPS 2026 黑盒 API 误差情境建模 P(e_t | x_1:t, y_t_hat) 与 Boltzmann 路由器，实现零梯度回传下流式跟踪误差降低 34.2%)、NatSR (ICLR 2026 自然梯度评分驱动重放与 Student-$t$ 似然，具备极强的异常脉冲抗噪性)、Temporal Plasticity (IJCNN 2025 首次实证百亿级基座模型在序列微调中具备更持久的表示可塑性，克服灾难性遗忘)。
-2. **跨感官时序基座：工业多模态遥测、电力拓扑基座与传感器无关触觉通用策略 (Cross-Sensory Telemetry, Power Grids & Sensor-Agnostic Tactile Policies)**：FISHER (IEEE TII 2025 针对工业 M5 异构性的子带频谱 Token 化与教师-学生对比学习，统一振动、声发射、电流与动压)、PowerPM (NeurIPS 2024 融合时序 Transformer 与关系图卷积 R-GCN 的 115M 城市-区域-用户层级电力基座)、FTP-1 (2026 统一 21 类触觉传感器与 3000 小时操作数据的形态感知潜在 Token，实现未知触觉传感器 +31% 零样本迁移)、TouchWorld (2026 解耦毫秒级滑移的高频闭环响应与前瞻性多模态视触觉世界模型)、TS-JEPA (NeurIPS 2024 Workshop 时序联合嵌入预测架构，在潜在度量空间最小化能量，剔除高频观测噪声)、RATFM (2025 测试时检索正常原型，无需微调在 UCR 异常档案上匹配监督微调性能)。
-3. **解耦形式化执行与可验证安全性屏障 (Decoupled Formal Execution & Certified Safety Verification)**：PEACE (ICRA 2026 Workshop 解耦规划器与执行器，将 LLM 置于控制闭环之上，由确定性运动学屏障与地理围栏实现硬实时安全约束与毫秒级执行)。
-4. **任意时刻有效博弈论审计与“范畴错误”根本性质疑 (Anytime-Valid Game-Theoretic Auditing & Category Error Critique)**：Bet on Features (Antonov et al. 2026 基于在线凸优化 FTRL 与鞅 e-值检验，在任意停止时刻提供无分布假阳性控制与局部漂移检测)、Position: Category Error (Dai et al. 2026 严谨剖析“通用时序基座模型”将结构容器误作语义模态的范畴错误，形式化自回归盲区界，提出因果控制智能体与 Time-to-Recovery 新范式)。
-5. **异构多变量解耦、协变量同质化与即插即用记忆蒸馏 (Heterogeneous Multivariate Decoupling, Covariate Homogenization & Memory Distillation)**：Falcon-X (统一原型差分注意力 UPDA)、UniCA (多模态与分类协变量同质化转换器)、TS-Memory (KDD 2026 即插即用 0.5M 记忆适配器)、iAmTime (Walmart 2026 指令条件上下文元学习基座)、ST-Prune (复杂度感知时空动态样本剪枝)。
-6. **主动传感网络查询、信息增益后验方差缩减与时序因果 PFNs (Active Sensor Querying, Information Acquisition & Temporal Causal PFNs)**：STAP (ICML 2025 偏微分方程非均匀时间步主动采集)、L2D-SLDS (2026 因子化切换线性高斯状态空间模型与在线推迟决策)、TCPFN (2026 面板数据先验拟合网络，合成 SCM 动力学预训练与因果判断头)。
-7. **选择性状态空间模型 (Mamba/S4)、多尺度时空图与行星级地球观测 (SSMs, Spatio-Temporal Graphs & Earth Observation)**：S-Mamba、TimeMachine、Bi-Mamba+、QuantFlow、Prithvi WxC (NASA/IBM 2.3B)、EarthPT (700M)、AmazonSWE (19,000 河段 SWOT 卫星雷达)。
+1. **统一后训练范式、参数高效测试时自适应与多模态扩散基座 (Unified Post-Training Paradigms, PEFT TTA & Multimodal Diffusion)**：建立涵盖参数自适应、情境增强、模型组合、不确定性控制与模型压缩的五大后训练支柱（Xie et al., 2026）；引入 PETSA（ICML 2025 PUT，参数量 <0.2M 的动态低秩门控适配器结合 Huber、频谱 FFT 惩罚与 Patch 潜在一致性损失，MSE 降低 31.8%，提速 4.8 倍）；引入 Aurora（ICLR 2026 通用生成式多模态基座，基于文本蒸馏与连续扩散得分匹配统一时序预测与跨模态生成）。
+2. **自主智能体工作流、因果工具编排与多智能体推理拓扑 (Autonomous Agentic Workflows, Causal Tool Orchestration & Reasoning Topologies)**：TimeSeriesScientist / TSci（Zhao et al., 2025，Curator/Planner/Forecaster/Reporter 四智能体全流程自动化建模与双向反思，相对提示词基准降噪 38.2%）；Chang et al.（TMLR 2026，系统界定直接预测、链式思维 CoT、图/树搜索与多智能体四大推理拓扑，确立 T-Agent 与 T-Align 形式化框架）；Causal Agent（Han et al., 2024，集成因果图探索与字典检索工具模块）；Nexus（Das et al., 2026，宏微观波动解耦与非结构化财经新闻事件因果溯源）。
+3. **形式化可达性验证、物理不变量挖掘与生成式诊断基准 (Formal Reachability Verification, Physical Invariant Mining & Generative Diagnostic Benchmarking)**：TNODEV（Sayed et al., 2026，连续时间混合单调性 CTMM 神经 ODE 端到端可达管集验证工具箱）；INVARLLM（NDSS 2025，工程文档自然语言神经符号物理不变量挖掘与 PCMCI+ 因果交叉验证，工业水处理系统零误报防御）；Time-RA（ACL 2026，4万实例多领域多模态生成式诊断推理基准 RATs40K）。
+4. **在线持续学习、时序可塑性与黑盒残差情境自适应 (Online Continual Learning, Temporal Plasticity & Black-Box Residual Adaptation)**：ELF (ICML 2025 频域双模块快速预测器 + 动态加权网关)、ORCA (NeurIPS 2026 黑盒 API 误差情境建模与 Boltzmann 路由器)、NatSR (ICLR 2026 自然梯度评分驱动重放与 Student-$t$ 似然)、Temporal Plasticity (IJCNN 2025 实证超大模型抗遗忘时序可塑性)。
+5. **跨感官时序基座：工业多模态遥测、电力拓扑基座与传感器无关触觉通用策略 (Cross-Sensory Telemetry, Power Grids & Sensor-Agnostic Tactile Policies)**：FISHER (IEEE TII 2025 统一工业 M5 异构性)、PowerPM (NeurIPS 2024 115M 城市电力图变换器)、FTP-1 (2026 统一 21 类触觉传感器形态感知 Token)、TouchWorld (2026 毫秒级触觉滑移高频闭环响应与前瞻性视触觉世界模型)、TS-JEPA 与 RATFM。
+6. **解耦形式化执行与可验证安全性屏障 (Decoupled Formal Execution & Certified Safety Verification)**：PEACE (ICRA 2026 Workshop 解耦规划器与执行器，将 LLM 置于控制闭环之上，由确定性运动学屏障与地理围栏实现硬实时安全约束)。
+7. **任意时刻有效博弈论审计与“范畴错误”根本性质疑 (Anytime-Valid Game-Theoretic Auditing & Category Error Critique)**：Bet on Features (Antonov et al. 2026 基于 FTRL 与鞅 e-值检验的无分布局部漂移审计)、Position: Category Error (Dai et al. 2026 自回归盲区界证明与范畴错误批判)。
 
 ---
 
@@ -35,17 +35,17 @@ graph TD
     Root --> P2["Repurposed LLM4TS (Language Backbones)"]
     Root --> P3["Evaluations, Benchmarks & Critiques"]
 
-    P1 --> P1_Cont["Continual & Black-Box Adapters<br/>(ELF, ORCA, NatSR, TS-Memory, iAmTime, S-Mamba, TimeMachine)"]
+    P1 --> P1_Post["Post-Training & TTA<br/>(PETSA, Xie et al., Aurora, ELF, ORCA, NatSR, TS-Memory)"]
     P1 --> P1_Cross["Cross-Sensory & Industrial Telemetry<br/>(FISHER, PowerPM, FTP-1, TouchWorld, TS-JEPA, RATFM, STAP)"]
-    P1 --> P1_Earth["Earth Observation & Graph Manifolds<br/>(Prithvi WxC, EarthPT, AmazonSWE, AgriFM, SpectralGPT, Changen2, Presto)"]
+    P1 --> P1_Earth["Earth Observation & Graph Manifolds<br/>(Prithvi WxC, EarthPT, AmazonSWE, AgriFM, SpectralGPT, Changen2)"]
 
-    P2 --> P2_Safe["Decoupled Formal Safety & Routing<br/>(PEACE, ReasonSTL, STARS, Confidence, TSRouter, ZARA, PromptCast)"]
+    P2 --> P2_Agent["Autonomous Agents & Causal Orchestration<br/>(TimeSeriesScientist, Chang et al., Causal Agent, Nexus, PEACE)"]
     P2 --> P2_Reprog["Cross-Modal Reprogramming<br/>(Time-LLM, GPT4TS/OFA, TEST, CALF, TEMPO, LLM-Mixer)"]
-    P2 --> P2_Agent["Policy Optimization & Swarms<br/>(TimeRFT, TimeHF, COUNTS, TimeMaster, TimeEvo, MC-Debate)"]
+    P2 --> P2_Policy["Multi-Agent & Policy Optimization<br/>(TimeRFT, TimeHF, COUNTS, TimeMaster, TimeEvo, Cast-R1)"]
 
-    P3 --> P3_Critique["Anytime Auditing & Category Critique<br/>(Bet on Features, Category Error Position, Temporal Plasticity, TimeTic)"]
-    P3 --> P3_Graph["Hierarchical Graphs & Conformal Suites<br/>(GPT-ST, ChronoGraph, STOIC, DeXposure, Nguyen Memory, TSGBench)"]
-    P3 --> P3_Energy["Operational Profiling & Edge Suites<br/>(Armory, ST-Prune, HoliBench, FM-CAC, QuantCalibration, Beyond Numerical)"]
+    P3 --> P3_Reach["Formal Reachability & Invariant Mining<br/>(TNODEV, INVARLLM, Time-RA, Bet on Features, Category Error)"]
+    P3 --> P3_Conf["Distribution-Free Conformal Suites<br/>(RareCP, STOIC, ACAD, TSGBench, ChronoGraph, GIFT-Eval, fev-bench)"]
+    P3 --> P3_Edge["Operational Profiling & Edge Suites<br/>(Armory, ST-Prune, HoliBench, FM-CAC, QuantCalibration, Beyond Numerical)"]
 ```
 
 ---
@@ -56,13 +56,13 @@ graph TD
 
 | Phase | Metric | Count | Description |
 | :--- | :--- | :---: | :--- |
-| **Identification** | Total records retrieved | **206** | Systematic queries across arXiv and Crossref APIs |
+| **Identification** | Total records retrieved | **216** | Systematic queries across arXiv and Crossref APIs |
 | | Duplicates removed | **5** | Deduplication via DOI and arXiv identifiers |
-| **Screening** | Title & abstract screened | **201** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
+| **Screening** | Title & abstract screened | **211** | Screened against IC1–IC4 and EC1–EC4 eligibility criteria |
 | | Excluded at Stage 1 | **11** | Out of domain / pre-2021 releases |
-| **Eligibility** | Full-text assessed | **190** | Assessed for architectural details and experimental rigor |
+| **Eligibility** | Full-text assessed | **200** | Assessed for architectural details and experimental rigor |
 | | Deferred for P2 extraction | **1** | Candidates queued for detailed extraction in upcoming iteration |
-| **Included** | **Total Synthesized Studies** | **189** | **Core benchmark and foundation models synthesized** |
+| **Included** | **Total Synthesized Studies** | **199** | **Core benchmark and foundation models synthesized** |
 
 ---
 
@@ -178,6 +178,8 @@ graph TD
 | **TouchWorld** | Tsinghua Univ / Shanghai AI Lab | arXiv 2026 | 350M | EgoTouch bimanual contact manipulation dataset | Multimodal Visual-Tactile Patch Tokens; TouchWorld Hierarchical Predictive World Model + High-Frequency Reactive Policy | [📄 Paper](https://arxiv.org/abs/2607.07287)<br/>🔒 Proprietary |
 | **FISHER** | Tsinghua Univ | IEEE TII 2025 | 28M | RMIS Benchmark (19 datasets across vibration, acoustic, current, pressure) | Multi-rate Sub-band Spectral Tokens; FISHER Sub-Band Hierarchical Transformer Encoder | [📄 Paper](https://arxiv.org/abs/2507.16696)<br/>[💻 Code](https://github.com/jianganbai/FISHER) |
 | **PowerPM** | State Grid / Tsinghua Univ | NeurIPS 2024 | 115M | Massive provincial electricity grid telemetry across 3 hierarchy levels | Masked Electricity Time Series Subseries Patching; PowerPM Hierarchical Relational-GCN + Temporal Transformer | [📄 Paper](https://arxiv.org/abs/2408.04057)<br/>🔒 Proprietary |
+| **Accurate Parameter-Efficient Test-Time Adaptation for Time Series Forecasting** | Borealis AI | ICML 2025 Workshop | 0.2M (adapter) | Pretrained Forecaster Baselines (PatchTST, DLinear, TimesNet) | Patch-based Latent Normalization; Parameter-Efficient TTA Adapter with Dynamic Gating | [📄 Paper](https://arxiv.org/abs/2506.23424)<br/>🔒 Proprietary |
+| **Aurora** | Aurora Team | ICLR 2026 | not reported | Cross-Domain Multimodal Time Series Corpus (CD-MTSC) | Continuous Waveform Patching + Textual Modality Distillation; Generative Multimodal Diffusion / Cross-Modality Transformer | [📄 Paper](https://arxiv.org/abs/2509.22295)<br/>🔒 Proprietary |
 
 ### 2. Repurposed Large Language Models (LLM4TS)
 
@@ -231,6 +233,11 @@ graph TD
 | **TSRouter** | Other | COLM 2026 | 8B | Heterogeneous Graph Dynamic Modality-Model Scoring Router (TSRouter) | Bipartite Query-Model Graph Node Representations | [📄 Paper](https://arxiv.org/abs/2607.08940)<br/>🔒 Proprietary |
 | **ZARA** | Flora Salim | ACL 2026 | 7B | Evidence-Grounded Agentic Reasoning Framework (ZARA / MOMENT) | Placement-Specific Sensor Anchor Embeddings | [📄 Paper](https://arxiv.org/abs/2508.04038)<br/>[💻 Code](https://github.com/zechenli03/ZARA) |
 | **PEACE** | Univ. of Zurich | ICRA 2026 Workshop | Pretrained LLM backbone | PEACE Decoupled Planner-Executor Agent with Formal Constraint Enforcement | Structured Temporal Tool-Call Action Tokens | [📄 Paper](https://arxiv.org/abs/2606.00104)<br/>🔒 Proprietary |
+| **TimeSeriesScientist** | Y-Research-SBU | arXiv 2025 | not reported (LLM agentic backbone) | Multi-Agent System (Curator-Planner-Forecaster-Reporter) | Adaptive Statistical Profiling + Multi-modal Diagnostic Embeddings | [📄 Paper](https://arxiv.org/abs/2510.01538)<br/>[💻 Code](https://github.com/Y-Research-SBU/TimeSeriesScientist) |
+| **INVARLLM** | Stevens / Temple | NDSS 2025 | not reported | Hybrid LLM Semantic Extractor + PCMCI+/K-Means Invariant Verifier | System Documentation Prompting + Temporal State Sequences | [📄 Paper](https://arxiv.org/abs/2411.10918)<br/>🔒 Proprietary |
+| **Causal Agent based on Large Language Model** | Zhejiang Univ. | arXiv 2024 | not reported | Tool-Augmented Causal Agent (Tool, Reasoning, Memory modules) | Tabular Causal Graph Encoding + Natural Language Prompts | [📄 Paper](https://arxiv.org/abs/2408.06849)<br/>🔒 Proprietary |
+| **Nexus ** | USC / Amazon | arXiv 2026 | not reported | Decomposed Multi-Agent Framework (Macro/Micro Forecaster + Context Reasoner) | Hierarchical Numerical Tokens + Contextual Event Text Embeddings | [📄 Paper](https://arxiv.org/abs/2605.14389)<br/>🔒 Proprietary |
+| **Time-RA** | Microsoft Research / Tsinghua | ACL 2026 Findings | 7B (LLaMA/Mistral SFT) | Multimodal Diagnostic Reasoner (Time-LLM + Visual Plot Feedback) | Multimodal Patch + Plot Embedding + Structured Prompt | [📄 Paper](https://arxiv.org/abs/2507.15066)<br/>🔒 Proprietary |
 
 ### 3. Evaluations, Benchmarks, Scaling Laws & Critiques
 
@@ -279,6 +286,7 @@ graph TD
 | **Action Chunk Scheduling for Batched Robot Policy Serving** | Georgia Tech | Heterogeneous Hardware Scheduling, Batched Foundation Model Serving, Action Chunk Optimization | Deploying robot foundation models at scale is the next step towards realizing the potential of general-purpose robots. H... | [📄 Paper](https://arxiv.org/abs/2608.00337) [💻 Code](https://gatech-rl2.github.io/actionchunkscheduling/) |
 | **Evaluating Temporal Plasticity in Foundation Time Series Models for Incremental Fine-tuning** | Tongji Univ | Continual Learning, Forecasting, Plasticity Evaluation | Time series foundation models excel at diverse time series forecasting tasks, but their capacity for continuous improvem... | [📄 Paper](https://arxiv.org/abs/2504.14677) — |
 | **Bet on Features** | Univ. of Wuerzburg / Univ. of Iowa | Anytime-Valid Auditing, Quantile Calibration Verification | Black-box conditional quantile forecasts are widely used for sequential decisions under asymmetric costs, such as invent... | [📄 Paper](https://arxiv.org/abs/2607.11653) — |
+| **TNODEV** | Univ. Gustave Eiffel / CNRS | Formal Verification, Reachability Analysis, Safety Certification | Neural ordinary differential equations (neural ODE) gained attention in safety critical settings such as continuous-time... | [📄 Paper](https://arxiv.org/abs/2606.16567) — |
 
 ---
 
